@@ -235,6 +235,12 @@ def api_download_zip(project_id: str):
                 fpath = os.path.join(renders_dir, fname)
                 if os.path.isfile(fpath) and not fname.startswith("video_mudo"):
                     zf.write(fpath, arcname=f"renders/{fname}")
+            sub_dir = os.path.join(renders_dir, "subtitulos")
+            if os.path.exists(sub_dir):
+                for fname in os.listdir(sub_dir):
+                    fpath = os.path.join(sub_dir, fname)
+                    if os.path.isfile(fpath):
+                        zf.write(fpath, arcname=f"renders/subtitulos/{fname}")
         for doc in ("YOUTUBE_PACK.md", "script_full.json", "script_full_en.json", "script_full_pt.json"):
             dpath = os.path.join(pdir, doc)
             if os.path.isfile(dpath):

@@ -212,8 +212,8 @@ def build_short(lang="es"):
         srt_lines.append(f"{idx_srt}\n{_fmt_srt_time(st)} --> {_fmt_srt_time(en)}\n{sub_txt}\n")
         idx_srt += 1
 
-    os.makedirs(os.path.join(ROOT, "renders"), exist_ok=True)
-    srt_out = os.path.join(ROOT, "renders", f"Short_Vertical_{lang.upper()}.srt")
+    os.makedirs(os.path.join(ROOT, "renders", "subtitulos"), exist_ok=True)
+    srt_out = os.path.join(ROOT, "renders", "subtitulos", f"Short_Vertical_{lang.upper()}.srt")
     open(srt_out, "w", encoding="utf-8").write("\n".join(srt_lines))
 
     cta_dur = 3.4

@@ -59,13 +59,14 @@ def generate_srt(lang, script_file, vo_dir, out_file):
                 i += 1
             start = end
 
-    os.makedirs(os.path.join(ROOT, "renders"), exist_ok=True)
-    out_path = os.path.join(ROOT, "renders", out_file)
+    sub_dir = os.path.join(ROOT, "renders", "subtitulos")
+    os.makedirs(sub_dir, exist_ok=True)
+    out_path = os.path.join(sub_dir, out_file)
     open(out_path, "w", encoding="utf-8").write("\n".join(out))
-    alias_path = os.path.join(ROOT, "renders", f"Master_PixelArt_{lang.upper()}.srt")
+    alias_path = os.path.join(sub_dir, f"Master_PixelArt_{lang.upper()}.srt")
     if os.path.abspath(out_path) != os.path.abspath(alias_path):
         shutil.copyfile(out_path, alias_path)
-    print(f"[{lang.upper()}] Generated {i - 1} subtitles in {out_file}")
+    print(f"[{lang.upper()}] Generated {i - 1} subtitles in subtitulos/{out_file}")
 
 
 if __name__ == "__main__":

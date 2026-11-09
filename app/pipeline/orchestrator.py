@@ -110,6 +110,18 @@ def list_deliverables(project_id: str) -> dict:
             elif fname.lower().endswith(".png") or fname.lower().endswith(".jpg"):
                 out["thumbnails"].append(item)
 
+        sub_dir = os.path.join(renders_dir, "subtitulos")
+        if os.path.exists(sub_dir):
+            for fname in sorted(os.listdir(sub_dir)):
+                fpath = os.path.join(sub_dir, fname)
+                if os.path.isfile(fpath) and fname.lower().endswith(".srt"):
+                    size_mb = round(os.path.getsize(fpath) / (1024 * 1024), 2)
+                    out["subtitles"].append({
+                        "name": fname,
+                        "url": f"/api/projects/{project_id}/file/renders/subtitulos/{fname}",
+                        "size_mb": size_mb,
+                    })
+
     if os.path.exists(frames_dir):
         for fname in sorted(os.listdir(frames_dir)):
             if fname.lower().endswith(".png"):
