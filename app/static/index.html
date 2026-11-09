@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixeloide Studio Server — Producción Documental 16-Bit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Press+Start+2P&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --px-ink: #070A1F;
+      --px-surface: #0D1132;
+      --px-surface-hover: #141A46;
+      --px-paper: #F4F3EE;
+      --px-cyan: #28DCE0;
+      --px-magenta: #E732B6;
+      --px-gold: #E9C27A;
+      --px-green: #64FF8C;
+      --px-muted: #A5ACC4;
+      --px-border: rgba(244, 243, 238, 0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--px-ink);
+      color: var(--px-paper);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    /* Header Oficial Manual de Marca Pixeloide */
+    header {
+      background: rgba(13, 17, 50, 0.92);
+      border-bottom: 1px solid var(--px-border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+    }
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .brand-titles {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .brand-name {
+      font-family: 'Press Start 2P', monospace;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      color: var(--px-paper);
+    }
+    .brand-name span {
+      color: var(--px-cyan);
+    }
+    .brand-claim {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      color: var(--px-muted);
+      text-transform: uppercase;
+    }
+    .brand-claim b { color: var(--px-cyan); }
+    .brand-claim i { color: var(--px-magenta); font-style: normal; font-weight: 700; }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--px-border);
+      background: var(--px-surface);
+      color: var(--px-paper);
+      cursor: pointer;
+      transition: all 0.18s cubic-bezier(.2, .7, .2, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+    }
+    .btn:hover {
+      border-color: var(--px-cyan);
+      background: var(--px-surface-hover);
+      transform: translateY(-1px);
+    }
+    .btn-primary {
+      background: var(--px-cyan);
+      color: var(--px-ink);
+      border-color: var(--px-cyan);
+      font-weight: 700;
+    }
+    .btn-primary:hover {
+      background: #4ef2f5;
+      color: var(--px-ink);
+      box-shadow: 0 0 18px rgba(40, 220, 224, 0.35);
+    }
+    .btn-magenta {
+      background: var(--px-magenta);
+      color: var(--px-paper);
+      border-color: var(--px-magenta);
+    }
+    .btn-magenta:hover {
+      background: #f24cc5;
+      box-shadow: 0 0 18px rgba(231, 50, 182, 0.35);
+    }
+    /* Layout principal */
+    .workspace {
+      display: grid;
+      grid-template-columns: 330px 1fr;
+      flex: 1;
+      min-height: calc(100vh - 65px);
+    }
+    aside {
+      background: rgba(13, 17, 50, 0.65);
+      border-right: 1px solid var(--px-border);
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .section-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: var(--px-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow-y: auto;
+    }
+    .project-item {
+      background: var(--px-surface);
+      border: 1px solid var(--px-border);
+      border-left: 3px solid transparent;
+      border-radius: 6px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+    .project-item:hover {
+      background: var(--px-surface-hover);
+      border-color: rgba(40, 220, 224, 0.4);
+    }
+    .project-item.active {
+      border-left-color: var(--px-cyan);
+      background: var(--px-surface-hover);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    .project-item h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--px-paper);
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+    .project-item p {
+      font-size: 11px;
+      color: var(--px-muted);
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .badge {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .badge-completed { background: rgba(100, 255, 140, 0.15); color: var(--px-green); border: 1px solid rgba(100, 255, 140, 0.4); }
+    .badge-running { background: rgba(40, 220, 224, 0.18); color: var(--px-cyan); border: 1px solid var(--px-cyan); }
+    .badge-failed { background: rgba(231, 50, 182, 0.2); color: #ff6b8b; border: 1px solid #ff6b8b; }
+    .badge-queued { background: rgba(233, 194, 122, 0.18); color: var(--px-gold); border: 1px solid var(--px-gold); }
+
+    main {
+      padding: 24px 32px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .px-card {
+      background: var(--px-surface);
+      border: 1px solid var(--px-border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      position: relative;
+    }
+    .px-card.accent-cyan {
+      border-left: 3px solid var(--px-cyan);
+    }
+    .px-card.accent-magenta {
+      border-left: 3px solid var(--px-magenta);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--px-border);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--px-paper);
+    }
+    .progress-wrap {
+      background: rgba(7, 10, 31, 0.8);
+      border: 1px solid var(--px-border);
+      border-radius: 6px;
+      height: 14px;
+      overflow: hidden;
+      margin: 10px 0;
+    }
+    .progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--px-cyan), var(--px-magenta));
+      transition: width 0.4s ease;
+    }
+    .stages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .stage-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      padding: 8px 10px;
+      border-radius: 5px;
+      background: rgba(7, 10, 31, 0.6);
+      border: 1px solid var(--px-border);
+      color: var(--px-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+    .stage-pill.done {
+      border-color: rgba(100, 255, 140, 0.45);
+      color: var(--px-paper);
+    }
+    .stage-pill.active {
+      border-color: var(--px-cyan);
+      background: rgba(40, 220, 224, 0.12);
+      color: var(--px-cyan);
+      font-weight: 700;
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid var(--px-border);
+      padding-bottom: 10px;
+    }
+    .tab-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      padding: 8px 14px;
+      border-radius: 5px;
+      background: transparent;
+      color: var(--px-muted);
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      background: rgba(40, 220, 224, 0.14);
+      color: var(--px-cyan);
+      border-color: var(--px-cyan);
+      font-weight: 700;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.35fr 1fr;
+      gap: 20px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 16px;
+    }
+    video, img.preview-img {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid var(--px-border);
+      background: #000;
+      image-rendering: pixelated;
+    }
+    .file-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .file-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(7, 10, 31, 0.65);
+      border: 1px solid var(--px-border);
+      padding: 9px 12px;
+      border-radius: 5px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+    }
+    textarea, input[type="text"], input[type="password"], input[type="number"], select {
+      width: 100%;
+      background: rgba(7, 10, 31, 0.85);
+      border: 1px solid var(--px-border);
+      border-radius: 6px;
+      padding: 10px 12px;
+      color: var(--px-paper);
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+    }
+    textarea:focus, input:focus, select:focus {
+      outline: none;
+      border-color: var(--px-cyan);
+    }
+    .log-box {
+      background: #040614;
+      border: 1px solid var(--px-border);
+      border-radius: 6px;
+      padding: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      color: #b8c4e0;
+      height: 320px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      line-height: 1.5;
+    }
+    /* Modal */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 10, 31, 0.82);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 20px;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-content {
+      background: var(--px-surface);
+      border: 1px solid var(--px-cyan);
+      border-radius: 8px;
+      max-width: 720px;
+      width: 100%;
+      padding: 24px;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .form-group {
+      margin-bottom: 14px;
+    }
+    .form-group label {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--px-cyan);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+    @media (max-width: 960px) {
+      .workspace { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand-lockup">
+      <!-- Isotipo Oficial Pixeloide Studios: «Una P que es un play» -->
+      <svg width="42" height="42" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="8,4 58,31 32,50 8,37" fill="#28DCE0"/>
+        <polygon points="61,33 88,48 8,84 8,60" fill="#F4F3EE"/>
+        <polygon points="10,85 35,68 35,98" fill="#E732B6"/>
+      </svg>
+      <div class="brand-titles">
+        <div class="brand-name">PIXELOIDE <span>STUDIOS</span></div>
+        <div class="brand-claim">STUDIO SERVER · JUGAMOS <b>EN SERIO</b><i>.</i></div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn" onclick="openSettingsModal()">⚙️ API Keys &amp; Motor</button>
+      <button class="btn btn-primary" onclick="showNewProjectView()">＋ NUEVO VIDEO DESDE GUIÓN</button>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <aside>
+      <div class="section-eyebrow">
+        <span>01 — PRODUCCIONES</span>
+        <button class="btn" style="padding:4px 8px;font-size:10px;" onclick="loadProjects()">↻</button>
+      </div>
+      <div id="projectList" class="project-list"></div>
+    </aside>
+
+    <main id="mainContent">
+      <!-- Vista Crear Nuevo Proyecto -->
+      <div id="newProjectView" class="px-card accent-cyan" style="display:none;">
+        <div class="card-header">
+          <div>
+            <div class="section-eyebrow">NUEVA PRODUCCIÓN AUTOMÁTICA 16-BIT</div>
+            <h2 class="card-title" style="margin-top:4px;">Subí o pegá tu guion y generá todo el pack multilingüe</h2>
+          </div>
+        </div>
+        <form id="createProjectForm" onsubmit="submitNewProject(event)">
+          <div class="form-group">
+            <label>Título del Documental / Episodio</label>
+            <input type="text" id="npTitle" placeholder="Ej: PARA QUE NO SE ABURRAN — Historia de los Videojuegos" required />
+          </div>
+          <div class="grid-2" style="margin-bottom:14px;">
+            <div class="form-group" style="margin-bottom:0;">
+              <label>Subir archivo de guion (.PDF, .TXT, .MD) — Opcional</label>
+              <input type="file" id="npFile" accept=".pdf,.txt,.md" style="padding:8px;color:var(--px-paper);" />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label>Idiomas a producir (Narrador ES: Carlos Aguilar + EN/PT 1.0x)</label>
+              <div style="display:flex;gap:16px;padding-top:8px;font-family:'JetBrains Mono',monospace;font-size:12px;">
+                <label style="display:inline-flex;align-items:center;gap:6px;color:var(--px-paper);">
+                  <input type="checkbox" id="langEs" checked disabled /> Español (Master)
+                </label>
+                <label style="display:inline-flex;align-items:center;gap:6px;color:var(--px-paper);">
+                  <input type="checkbox" id="langEn" checked /> Inglés (EN 1.0x)
+                </label>
+                <label style="display:inline-flex;align-items:center;gap:6px;color:var(--px-paper);">
+                  <input type="checkbox" id="langPt" checked /> Portugués (PT 1.0x)
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Texto del Guion (podés pegarlo directamente acá o combinarlo con el PDF)</label>
+            <textarea id="npScript" rows="12" placeholder="CAPÍTULO 1: EL PUNTO DE LUZ&#10;Octubre de 1958. En un laboratorio nuclear de Nueva York, William Higinbotham conecta un osciloscopio..."></textarea>
+          </div>
+          <div style="display:flex;justify-content:flex-end;gap:12px;">
+            <button type="button" class="btn" onclick="cancelNewProject()">Cancelar</button>
+            <button type="submit" class="btn btn-primary" id="btnLaunch">🚀 GENERAR DOCUMENTAL COMPLETO (ES / EN / PT)</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Vista Detalle de Proyecto Seleccionado -->
+      <div id="projectDetailView" style="display:none;flex-direction:column;gap:20px;">
+        <div class="px-card accent-cyan">
+          <div class="card-header">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+                <span id="detBadge" class="badge badge-completed">COMPLETED</span>
+                <span id="detId" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--px-muted);"></span>
+              </div>
+              <h2 id="detTitle" class="card-title">—</h2>
+              <p id="detSubtitle" style="font-size:13px;color:var(--px-muted);margin-top:2px;"></p>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <button class="btn" onclick="rerunStage(6)" title="Re-mezclar audio y volver a renderizar">🔄 Re-Renderizar Video</button>
+              <button class="btn" onclick="rerunStage(1)" title="Ejecutar todo el pipeline desde el paso 1">⚡ Re-Ejecutar Todo</button>
+              <a id="btnDownloadZip" href="#" class="btn btn-magenta">📦 DESCARGAR PACK COMPLETO (.ZIP)</a>
+            </div>
+          </div>
+
+          <div>
+            <div style="display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:12px;">
+              <span id="detStageName" style="color:var(--px-cyan);">Etapa 8/8</span>
+              <span id="detProgressPct">100%</span>
+            </div>
+            <div class="progress-wrap">
+              <div id="detProgressBar" class="progress-bar" style="width:100%;"></div>
+            </div>
+            <div id="detStagesGrid" class="stages-grid"></div>
+          </div>
+        </div>
+
+        <!-- Pestañas del Proyecto -->
+        <div class="tabs">
+          <button class="tab-btn active" onclick="switchTab('tabRenders', this)">🎬 Videos 16:9 &amp; Subtítulos .SRT</button>
+          <button class="tab-btn" onclick="switchTab('tabShorts', this)">📱 Shorts 9:16 &amp; Miniaturas</button>
+          <button class="tab-btn" onclick="switchTab('tabSheet', this)">🖼️ Hoja de Contacto QA</button>
+          <button class="tab-btn" onclick="switchTab('tabScript', this)">📝 Guion &amp; YouTube Pack</button>
+          <button class="tab-btn" onclick="switchTab('tabLogs', this)">💻 Consola de Producción</button>
+        </div>
+
+        <!-- TAB 1: Videos Completos 16:9 + Subtítulos .SRT separados -->
+        <div id="tabRenders" class="tab-pane">
+          <div class="grid-2">
+            <div class="px-card">
+              <div class="card-header">
+                <span class="section-eyebrow">REPRODUCTOR MASTER 1080P (SIN SUBTÍTULOS QUEMADOS)</span>
+                <div id="videoLangButtons" style="display:flex;gap:6px;"></div>
+              </div>
+              <video id="mainVideoPlayer" controls preload="metadata"></video>
+              <p style="font-size:12px;color:var(--px-muted);margin-top:10px;font-family:'JetBrains Mono',monospace;">
+                ✔ Cierre oficial <b>Pixeloide Studios</b> + Créditos (Idea Original y Producción: <b>Braian Greno</b>) · Audio normalizado a <b>-14 LUFS</b>.
+              </p>
+            </div>
+            <div class="px-card">
+              <div class="card-header">
+                <span class="section-eyebrow">ARCHIVOS .MP4 Y SUBTÍTULOS EXTERNOS .SRT</span>
+              </div>
+              <h4 style="font-size:12px;color:var(--px-gold);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">VIDEOS MASTER 16:9 (.MP4)</h4>
+              <div id="videoFilesList" class="file-list" style="margin-bottom:16px;"></div>
+              <h4 style="font-size:12px;color:var(--px-cyan);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">SUBTÍTULOS SEPARADOS (.SRT — SIN PEGAR AL VIDEO)</h4>
+              <div id="srtFilesList" class="file-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: Shorts Verticales 9:16 & Miniaturas 16:9 -->
+        <div id="tabShorts" class="tab-pane" style="display:none;">
+          <div class="px-card" style="margin-bottom:20px;">
+            <div class="card-header">
+              <span class="section-eyebrow">MINIATURAS OFICIALES DE YOUTUBE (1920x1080 — ES / EN / PT)</span>
+            </div>
+            <div id="thumbsGallery" class="grid-3"></div>
+          </div>
+          <div class="px-card">
+            <div class="card-header">
+              <span class="section-eyebrow">SHORTS VERTICALES 9:16 (1080x1920 — SIN SUBTÍTULOS QUEMADOS + .SRT)</span>
+            </div>
+            <div id="shortsGallery" class="grid-3"></div>
+          </div>
+        </div>
+
+        <!-- TAB 3: Hoja de Contacto QA -->
+        <div id="tabSheet" class="tab-pane" style="display:none;">
+          <div class="px-card">
+            <div class="card-header">
+              <span class="section-eyebrow">AUDITORÍA VISUAL DE ESCENAS, CAJAS Y MÁRGENES (HOJA DE CONTACTO)</span>
+            </div>
+            <div id="sheetsGallery" style="display:flex;flex-direction:column;gap:16px;"></div>
+          </div>
+        </div>
+
+        <!-- TAB 4: Editor de Guion y YouTube Pack -->
+        <div id="tabScript" class="tab-pane" style="display:none;">
+          <div class="grid-2">
+            <div class="px-card">
+              <div class="card-header">
+                <span class="section-eyebrow">LÍNEAS DEL GUIÓN MAESTRO (script_full.json)</span>
+                <button class="btn btn-primary" style="padding:6px 12px;font-size:11px;" onclick="saveScriptChanges()">💾 Guardar y Re-Sintetizar</button>
+              </div>
+              <textarea id="scriptJsonEditor" rows="20" style="font-family:'JetBrains Mono',monospace;font-size:12px;"></textarea>
+            </div>
+            <div class="px-card">
+              <div class="card-header">
+                <span class="section-eyebrow">PACK DE YOUTUBE (TÍTULOS, DESCRIPCIÓN, TIMESTAMPS Y TAGS)</span>
+              </div>
+              <textarea id="youtubePackViewer" rows="20" readonly style="font-family:'JetBrains Mono',monospace;font-size:12px;"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: Consola de Logs -->
+        <div id="tabLogs" class="tab-pane" style="display:none;">
+          <div class="px-card">
+            <div class="card-header">
+              <span class="section-eyebrow">CONSOLA DE PRODUCCIÓN EN TIEMPO REAL (build.log)</span>
+              <button class="btn" style="padding:4px 10px;font-size:11px;" onclick="refreshLogs()">↻ Actualizar</button>
+            </div>
+            <div id="logTerminal" class="log-box">Cargando logs...</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal de Configuración (API Keys y Voces) -->
+  <div id="settingsModal" class="modal-backdrop">
+    <div class="modal-content">
+      <div class="card-header">
+        <div>
+          <div class="section-eyebrow">CONFIGURACIÓN DEL SERVIDOR PIXELOIDE</div>
+          <h3 class="card-title">API Keys, Proveedores de IA y Narradores</h3>
+        </div>
+        <button class="btn" onclick="closeSettingsModal()">✕</button>
+      </div>
+      <form onsubmit="saveServerSettings(event)">
+        <div class="form-group">
+          <label>ElevenLabs API Key (Locución Carlos Aguilar ES + EN/PT 1.0x)</label>
+          <input type="password" id="cfgEleven" placeholder="xi-api-key..." />
+          <small id="cfgElevenStatus" style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--px-green);"></small>
+        </div>
+        <div class="grid-2">
+          <div class="form-group">
+            <label>Google Gemini API Key (Director de Guion + Imagen 3 Pixel Art)</label>
+            <input type="password" id="cfgGemini" placeholder="AIzaSy..." />
+          </div>
+          <div class="form-group">
+            <label>Anthropic Claude API Key (Opcional — Director / Animador)</label>
+            <input type="password" id="cfgAnthropic" placeholder="sk-ant-..." />
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="form-group">
+            <label>OpenAI API Key (Opcional — GPT-4o / Imágenes)</label>
+            <input type="password" id="cfgOpenai" placeholder="sk-..." />
+          </div>
+          <div class="form-group">
+            <label>Workers de Render Paralelo (CPU Cores)</label>
+            <input type="number" id="cfgWorkers" min="1" max="32" value="6" />
+          </div>
+        </div>
+        <div class="grid-2">
+          <div class="form-group">
+            <label>Narrador Oficial Español (Fijo por Manual de Marca)</label>
+            <input type="text" id="cfgVoiceEs" value="8MeTTgXVwMEhRVfblXOj" readonly style="opacity:0.8;" />
+            <small style="font-size:11px;color:var(--px-muted);">Carlos Aguilar (`8MeTTgXVwMEhRVfblXOj`) · speed=1.08x</small>
+          </div>
+          <div class="form-group">
+            <label>Cadencia Inglés (EN) y Portugués (PT)</label>
+            <input type="text" value="Velocidad Natural 1.0x (Sincronización inteligente avail_dur)" readonly style="opacity:0.8;" />
+          </div>
+        </div>
+        <div style="display:flex;justify-content:flex-end;gap:10px;margin-top:16px;">
+          <button type="button" class="btn" onclick="closeSettingsModal()">Cancelar</button>
+          <button type="submit" class="btn btn-primary">💾 Guardar Configuración</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    let PROJECTS = [];
+    let STAGES = {};
+    let CURRENT_ID = null;
+    let POLL_TIMER = null;
+
+    async function loadProjects(selectId = null) {
+      const res = await fetch('/api/projects');
+      const data = await res.json();
+      PROJECTS = data.projects || [];
+      STAGES = data.stages || {};
+      renderProjectSidebar();
+      if (selectId) {
+        selectProject(selectId);
+      } else if (!CURRENT_ID && PROJECTS.length > 0) {
+        selectProject(PROJECTS[0].id);
+      } else if (CURRENT_ID) {
+        const cur = PROJECTS.find(p => p.id === CURRENT_ID);
+        if (cur) updateDetailHeader(cur);
+      }
+    }
+
+    function renderProjectSidebar() {
+      const box = document.getElementById('projectList');
+      box.innerHTML = '';
+      PROJECTS.forEach(p => {
+        const div = document.createElement('div');
+        div.className = 'project-item' + (p.id === CURRENT_ID ? ' active' : '');
+        div.onclick = () => selectProject(p.id);
+        const stClass = 'badge-' + (p.status || 'queued');
+        div.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+            <span class="badge ${stClass}">${(p.status || 'queued').toUpperCase()}</span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--px-muted);">${p.progress || 0}%</span>
+          </div>
+          <h4>${p.title}</h4>
+          <p>${p.subtitle || ''}</p>
+        `;
+        box.appendChild(div);
+      });
+    }
+
+    async function selectProject(id) {
+      CURRENT_ID = id;
+      document.getElementById('newProjectView').style.display = 'none';
+      document.getElementById('projectDetailView').style.display = 'flex';
+      renderProjectSidebar();
+
+      const res = await fetch(`/api/projects/${id}`);
+      const p = await res.json();
+      updateDetailHeader(p);
+      renderDeliverables(p);
+      document.getElementById('scriptJsonEditor').value = JSON.stringify(p.script_lines || [], null, 2);
+      document.getElementById('youtubePackViewer').value = p.youtube_pack || '';
+      refreshLogs();
+
+      if (POLL_TIMER) clearInterval(POLL_TIMER);
+      POLL_TIMER = setInterval(async () => {
+        if (!CURRENT_ID) return;
+        const r = await fetch(`/api/projects/${CURRENT_ID}`);
+        const up = await r.json();
+        updateDetailHeader(up);
+        if (up.status === 'running' || up.status === 'queued') {
+          refreshLogs();
+        } else {
+          renderDeliverables(up);
+        }
+      }, 3000);
+    }
+
+    function updateDetailHeader(p) {
+      const badge = document.getElementById('detBadge');
+      badge.className = 'badge badge-' + (p.status || 'queued');
+      badge.textContent = (p.status || 'queued').toUpperCase();
+      document.getElementById('detId').textContent = p.id;
+      document.getElementById('detTitle').textContent = p.title;
+      document.getElementById('detSubtitle').textContent = p.subtitle || '';
+      document.getElementById('detStageName').textContent = p.stage_name || '';
+      document.getElementById('detProgressPct').textContent = (p.progress || 0) + '%';
+      document.getElementById('detProgressBar').style.width = (p.progress || 0) + '%';
+      document.getElementById('btnDownloadZip').href = `/api/projects/${p.id}/download-zip`;
+
+      const sg = document.getElementById('detStagesGrid');
+      sg.innerHTML = '';
+      Object.entries(STAGES).forEach(([num, label]) => {
+        const n = parseInt(num, 10);
+        let cls = 'stage-pill';
+        let icon = '○';
+        if (p.status === 'completed' || n < (p.stage || 0)) {
+          cls += ' done';
+          icon = '✔';
+        } else if (n === (p.stage || 0) && p.status === 'running') {
+          cls += ' active';
+          icon = '⚙';
+        }
+        const el = document.createElement('div');
+        el.className = cls;
+        el.innerHTML = `<span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${label}</span><span>${icon}</span>`;
+        sg.appendChild(el);
+      });
+    }
+
+    function renderDeliverables(p) {
+      const del = p.deliverables || {};
+      const vids = del.videos || [];
+      const srts = del.subtitles || [];
+      const shorts = del.shorts || [];
+      const thumbs = del.thumbnails || [];
+      const sheets = del.sheets || [];
+
+      // Botones de cambio de idioma en el reproductor principal
+      const langBtns = document.getElementById('videoLangButtons');
+      langBtns.innerHTML = '';
+      const player = document.getElementById('mainVideoPlayer');
+
+      // Filtramos los videos principales (Para_Que_No_Se_Aburran o Master_PixelArt o Historia_)
+      const primaryVids = vids.filter(v => !v.name.includes('Aburrieran'));
+      const displayVids = primaryVids.length ? primaryVids : vids;
+
+      displayVids.forEach((v, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'btn' + (idx === 0 ? ' btn-primary' : '');
+        btn.style.padding = '5px 10px';
+        btn.style.fontSize = '11px';
+        btn.textContent = v.name.replace('.mp4', '');
+        btn.onclick = () => {
+          player.src = v.url;
+          player.play();
+          Array.from(langBtns.children).forEach(b => b.classList.remove('btn-primary'));
+          btn.classList.add('btn-primary');
+        };
+        langBtns.appendChild(btn);
+        if (idx === 0 && (!player.src || !player.src.includes(p.id))) {
+          player.src = v.url;
+        }
+      });
+
+      const vList = document.getElementById('videoFilesList');
+      vList.innerHTML = displayVids.map(v => `
+        <div class="file-row">
+          <span>🎬 ${v.name} <small style="color:var(--px-muted);">(${v.size_mb} MB)</small></span>
+          <a href="${v.url}" download class="btn" style="padding:4px 10px;font-size:11px;">⬇ MP4</a>
+        </div>
+      `).join('') || '<p style="font-size:12px;color:var(--px-muted);">En proceso de renderizado...</p>';
+
+      const sList = document.getElementById('srtFilesList');
+      const displaySrts = srts.filter(s => !s.name.includes('Aburrieran'));
+      sList.innerHTML = (displaySrts.length ? displaySrts : srts).map(s => `
+        <div class="file-row">
+          <span>💬 ${s.name}</span>
+          <a href="${s.url}" download class="btn" style="padding:4px 10px;font-size:11px;">⬇ SRT</a>
+        </div>
+      `).join('') || '<p style="font-size:12px;color:var(--px-muted);">Sin subtítulos generados aún.</p>';
+
+      // Miniaturas
+      const tg = document.getElementById('thumbsGallery');
+      tg.innerHTML = thumbs.map(t => `
+        <div style="background:rgba(7,10,31,0.6);border:1px solid var(--px-border);border-radius:6px;padding:10px;">
+          <img class="preview-img" src="${t.url}" alt="${t.name}" />
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:11px;">
+            <span>${t.name}</span>
+            <a href="${t.url}" download class="btn" style="padding:4px 8px;font-size:10px;">⬇ PNG</a>
+          </div>
+        </div>
+      `).join('') || '<p style="font-size:12px;color:var(--px-muted);">Sin miniaturas aún.</p>';
+
+      // Shorts 9:16
+      const sg = document.getElementById('shortsGallery');
+      sg.innerHTML = shorts.map(sh => {
+        const srtName = sh.name.replace('.mp4', '.srt');
+        const srtItem = srts.find(s => s.name === srtName);
+        return `
+          <div style="background:rgba(7,10,31,0.6);border:1px solid var(--px-border);border-radius:6px;padding:12px;">
+            <video src="${sh.url}" controls preload="metadata" style="max-height:440px;object-fit:contain;"></video>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:11px;gap:6px;">
+              <span>📱 ${sh.name}</span>
+              <div style="display:flex;gap:6px;">
+                <a href="${sh.url}" download class="btn" style="padding:4px 8px;font-size:10px;">⬇ MP4</a>
+                ${srtItem ? `<a href="${srtItem.url}" download class="btn" style="padding:4px 8px;font-size:10px;">⬇ SRT</a>` : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('') || '<p style="font-size:12px;color:var(--px-muted);">Sin Shorts verticales aún.</p>';
+
+      // Hojas de Contacto
+      const shg = document.getElementById('sheetsGallery');
+      shg.innerHTML = sheets.map(sh => `
+        <div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--px-cyan);margin-bottom:6px;">${sh.name}</div>
+          <img class="preview-img" src="${sh.url}" alt="${sh.name}" />
+        </div>
+      `).join('') || '<p style="font-size:12px;color:var(--px-muted);">Sin hojas de contacto aún.</p>';
+    }
+
+    function switchTab(tabId, btn) {
+      document.querySelectorAll('.tab-pane').forEach(el => el.style.display = 'none');
+      document.getElementById(tabId).style.display = 'block';
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function showNewProjectView() {
+      document.getElementById('projectDetailView').style.display = 'none';
+      document.getElementById('newProjectView').style.display = 'block';
+    }
+
+    function cancelNewProject() {
+      document.getElementById('newProjectView').style.display = 'none';
+      if (CURRENT_ID) document.getElementById('projectDetailView').style.display = 'flex';
+    }
+
+    async function submitNewProject(e) {
+      e.preventDefault();
+      const btn = document.getElementById('btnLaunch');
+      btn.disabled = true;
+      btn.textContent = '⏳ Iniciando Pipeline Pixeloide...';
+      try {
+        const fd = new FormData();
+        fd.append('title', document.getElementById('npTitle').value);
+        fd.append('script_text', document.getElementById('npScript').value);
+        const langs = ['es'];
+        if (document.getElementById('langEn').checked) langs.push('en');
+        if (document.getElementById('langPt').checked) langs.push('pt');
+        fd.append('languages', langs.join(','));
+        const fileInput = document.getElementById('npFile');
+        if (fileInput.files.length > 0) {
+          fd.append('file', fileInput.files[0]);
+        }
+        const res = await fetch('/api/projects', { method: 'POST', body: fd });
+        if (!res.ok) {
+          const err = await res.json();
+          alert('Error: ' + (err.detail || 'No se pudo crear el proyecto'));
+          return;
+        }
+        const created = await res.json();
+        document.getElementById('createProjectForm').reset();
+        await loadProjects(created.id);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '🚀 GENERAR DOCUMENTAL COMPLETO (ES / EN / PT)';
+      }
+    }
+
+    async function rerunStage(stageNum) {
+      if (!CURRENT_ID) return;
+      await fetch(`/api/projects/${CURRENT_ID}/run`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ start_stage: stageNum })
+      });
+      await selectProject(CURRENT_ID);
+    }
+
+    async function saveScriptChanges() {
+      if (!CURRENT_ID) return;
+      try {
+        const lines = JSON.parse(document.getElementById('scriptJsonEditor').value);
+        await fetch(`/api/projects/${CURRENT_ID}/script`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ lines_es: lines, rerun_from_stage: 2 })
+        });
+        alert('Guion guardado. Re-iniciando síntesis de voz y render...');
+        await selectProject(CURRENT_ID);
+      } catch (e) {
+        alert('JSON inválido: ' + e.message);
+      }
+    }
+
+    async function refreshLogs() {
+      if (!CURRENT_ID) return;
+      const res = await fetch(`/api/projects/${CURRENT_ID}/logs`);
+      const data = await res.json();
+      const box = document.getElementById('logTerminal');
+      box.textContent = data.logs || 'Sin registros aún.';
+      box.scrollTop = box.scrollHeight;
+    }
+
+    async function openSettingsModal() {
+      const res = await fetch('/api/settings');
+      const cfg = await res.json();
+      document.getElementById('cfgEleven').value = cfg.elevenlabs_api_key_masked || '';
+      document.getElementById('cfgElevenStatus').textContent = cfg.has_elevenlabs
+        ? '✔ ElevenLabs API Key activa y configurada'
+        : '⚠ Sin API Key (usará sintetizador local de respaldo)';
+      document.getElementById('cfgGemini').value = cfg.gemini_api_key_masked || '';
+      document.getElementById('cfgAnthropic').value = cfg.anthropic_api_key_masked || '';
+      document.getElementById('cfgOpenai').value = cfg.openai_api_key_masked || '';
+      document.getElementById('cfgWorkers').value = cfg.render_workers || 6;
+      document.getElementById('cfgVoiceEs').value = cfg.voice_es_id || '8MeTTgXVwMEhRVfblXOj';
+      document.getElementById('settingsModal').classList.add('open');
+    }
+
+    function closeSettingsModal() {
+      document.getElementById('settingsModal').classList.remove('open');
+    }
+
+    async function saveServerSettings(e) {
+      e.preventDefault();
+      const body = {
+        elevenlabs_api_key: document.getElementById('cfgEleven').value,
+        gemini_api_key: document.getElementById('cfgGemini').value,
+        anthropic_api_key: document.getElementById('cfgAnthropic').value,
+        openai_api_key: document.getElementById('cfgOpenai').value,
+        render_workers: parseInt(document.getElementById('cfgWorkers').value, 10) || 6,
+      };
+      await fetch('/api/settings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      closeSettingsModal();
+    }
+
+    window.addEventListener('DOMContentLoaded', () => loadProjects());
+  </script>
+</body>
+</html>

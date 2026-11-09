@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  pixeloide-studio:
+    build: .
+    container_name: pixeloide-studio-server
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    volumes:
+      - ./projects:/app/projects
+      - ./data:/app/data
