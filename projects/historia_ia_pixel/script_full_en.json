@@ -1,0 +1,352 @@
+[
+  {
+    "id": "s01",
+    "speak": "In nineteen fifty-five, four scientists asked for funding for an audacious plan.",
+    "text": "In nineteen fifty-five, four scientists asked for funding for an audacious plan."
+  },
+  {
+    "id": "s02",
+    "speak": "Two summer months, and ten people, to teach a machine how to think.",
+    "text": "Two summer months, and ten people, to teach a machine how to think."
+  },
+  {
+    "id": "s03",
+    "speak": "They believed one summer was enough.",
+    "text": "They believed one summer was enough."
+  },
+  {
+    "id": "s04",
+    "speak": "Seventy years have passed. And the story is far from over.",
+    "text": "Seventy years have passed. And the story is far from over."
+  },
+  {
+    "id": "s05",
+    "speak": "This is the story of artificial intelligence.",
+    "text": "This is the story of artificial intelligence."
+  },
+  {
+    "id": "s06",
+    "speak": "Chapter one. The question.",
+    "text": "Chapter one. The question."
+  },
+  {
+    "id": "s07",
+    "speak": "Nineteen fifty. British mathematician Alan Turing publishes a paper opening with an uncomfortable question: can machines think?",
+    "text": "Nineteen fifty. British mathematician Alan Turing publishes a paper opening with an uncomfortable question: can machines think?"
+  },
+  {
+    "id": "s08",
+    "speak": "Instead of answering it, he proposes a game. If you talk with a machine and cannot tell it apart from a person, does it really matter how it does it?",
+    "text": "Instead of answering it, he proposes a game. If you talk with a machine and cannot tell it apart from a person, does it really matter how it does it?"
+  },
+  {
+    "id": "s09",
+    "speak": "Five years later, John McCarthy, Marvin Minsky, Claude Shannon, and Nathaniel Rochester sign the proposal for a summer workshop at Dartmouth.",
+    "text": "Five years later, John McCarthy, Marvin Minsky, Claude Shannon, and Nathaniel Rochester sign the proposal for a summer workshop at Dartmouth."
+  },
+  {
+    "id": "s10",
+    "speak": "And in that document appears, for the first time, a name: artificial intelligence.",
+    "text": "And in that document appears, for the first time, a name: artificial intelligence."
+  },
+  {
+    "id": "s11",
+    "speak": "They were optimistic. Far too optimistic.",
+    "text": "They were optimistic. Far too optimistic."
+  },
+  {
+    "id": "s12",
+    "speak": "And what followed came close to burying the idea forever.",
+    "text": "And what followed came close to burying the idea forever."
+  },
+  {
+    "id": "s13",
+    "speak": "Chapter two. The machine that was going to be conscious.",
+    "text": "Chapter two. The machine that was going to be conscious."
+  },
+  {
+    "id": "c2_01",
+    "speak": "July, nineteen fifty-eight. The United States Navy presents to the press an invention by thirty-year-old psychologist Frank Rosenblatt: the perceptron.",
+    "text": "July, nineteen fifty-eight. The United States Navy presents to the press an invention by thirty-year-old psychologist Frank Rosenblatt: the perceptron."
+  },
+  {
+    "id": "c2_02",
+    "speak": "A machine that isn't programmed: it learns from its mistakes.",
+    "text": "A machine that isn't programmed: it learns from its mistakes."
+  },
+  {
+    "id": "c2_03",
+    "speak": "The next day, The New York Times writes that the Navy expects it will walk, talk, see, write, and be conscious of its existence.",
+    "text": "The next day, The New York Times writes that the Navy expects it will walk, talk, see, write, and be conscious of its existence."
+  },
+  {
+    "id": "c2_04",
+    "speak": "Reality was more modest. The perceptron learned to recognize simple shapes on a grid of twenty by twenty photocells.",
+    "text": "Reality was more modest. The perceptron learned to recognize simple shapes on a grid of twenty by twenty photocells."
+  },
+  {
+    "id": "c2_05",
+    "speak": "Yet the idea was immense: a network of artificial neurons adjusting its connections through experience.",
+    "text": "Yet the idea was immense: a network of artificial neurons adjusting its connections through experience."
+  },
+  {
+    "id": "c2_06",
+    "speak": "In nineteen sixty-nine, Marvin Minsky and Seymour Papert publish a book titled Perceptrons.",
+    "text": "In nineteen sixty-nine, Marvin Minsky and Seymour Papert publish a book titled Perceptrons."
+  },
+  {
+    "id": "c2_07",
+    "speak": "They prove that a single-layer network cannot solve basic problems like exclusive OR.",
+    "text": "They prove that a single-layer network cannot solve basic problems like exclusive OR."
+  },
+  {
+    "id": "c2_08",
+    "speak": "The blow is devastating. Funding for neural networks evaporates.",
+    "text": "The blow is devastating. Funding for neural networks evaporates."
+  },
+  {
+    "id": "c2_09",
+    "speak": "The idea powering everything today becomes, for years, an abandoned curiosity.",
+    "text": "The idea powering everything today becomes, for years, an abandoned curiosity."
+  },
+  {
+    "id": "c3_00",
+    "speak": "Chapter three. The first winter.",
+    "text": "Chapter three. The first winter."
+  },
+  {
+    "id": "c3_01",
+    "speak": "Promises kept growing. In nineteen seventy, Minsky predicts that in three to eight years we will have a machine with the general intelligence of an average human being.",
+    "text": "Promises kept growing. In nineteen seventy, Minsky predicts that in three to eight years we will have a machine with the general intelligence of an average human being."
+  },
+  {
+    "id": "c3_02",
+    "speak": "Yet results failed to arrive. In nineteen sixty-six, the ALPAC report had already concluded that machine translation was nowhere near matching a human translator.",
+    "text": "Yet results failed to arrive. In nineteen sixty-six, the ALPAC report had already concluded that machine translation was nowhere near matching a human translator."
+  },
+  {
+    "id": "c3_03",
+    "speak": "In nineteen seventy-three, mathematician James Lighthill delivers a devastating report to the British government:",
+    "text": "In nineteen seventy-three, mathematician James Lighthill delivers a devastating report to the British government:"
+  },
+  {
+    "id": "c3_04",
+    "speak": "artificial intelligence failed to meet its goals, and its programs drown in what he calls a combinatorial explosion.",
+    "text": "artificial intelligence failed to meet its goals, and its programs drown in what he calls a combinatorial explosion."
+  },
+  {
+    "id": "c3_05",
+    "speak": "The United Kingdom slashes funding. The following year, in the United States, DARPA also reduces its support.",
+    "text": "The United Kingdom slashes funding. The following year, in the United States, DARPA also reduces its support."
+  },
+  {
+    "id": "c3_06",
+    "speak": "Laboratories empty out. Researchers switch fields, or change the name of what they do.",
+    "text": "Laboratories empty out. Researchers switch fields, or change the name of what they do."
+  },
+  {
+    "id": "c3_07",
+    "speak": "The first winter of artificial intelligence had arrived.",
+    "text": "The first winter of artificial intelligence had arrived."
+  },
+  {
+    "id": "c4_00",
+    "speak": "Chapter four. Rules, experts, and the second winter.",
+    "text": "Chapter four. Rules, experts, and the second winter."
+  },
+  {
+    "id": "c4_01",
+    "speak": "In the eighties, artificial intelligence returns in a different form: expert systems.",
+    "text": "In the eighties, artificial intelligence returns in a different form: expert systems."
+  },
+  {
+    "id": "c4_02",
+    "speak": "Instead of learning, they follow thousands of rules hand-coded by human specialists.",
+    "text": "Instead of learning, they follow thousands of rules hand-coded by human specialists."
+  },
+  {
+    "id": "c4_03",
+    "speak": "They diagnose infections, configure computers, and companies invest fortunes. Japan launches its ambitious Fifth Generation project.",
+    "text": "They diagnose infections, configure computers, and companies invest fortunes. Japan launches its ambitious Fifth Generation project."
+  },
+  {
+    "id": "c4_04",
+    "speak": "Yet the rules are brittle: they work only for the exact cases they were written for, and fail at everything else. Maintaining them costs more than they are worth.",
+    "text": "Yet the rules are brittle: they work only for the exact cases they were written for, and fail at everything else. Maintaining them costs more than they are worth."
+  },
+  {
+    "id": "c4_05",
+    "speak": "In nineteen eighty-seven, the market for specialized Lisp machines crashes, bringing about the second winter.",
+    "text": "In nineteen eighty-seven, the market for specialized Lisp machines crashes, bringing about the second winter."
+  },
+  {
+    "id": "c4_06",
+    "speak": "Yet amidst the cold, something happens that almost no one celebrates.",
+    "text": "Yet amidst the cold, something happens that almost no one celebrates."
+  },
+  {
+    "id": "c4_07",
+    "speak": "In nineteen eighty-six, David Rumelhart, Geoffrey Hinton, and Ronald Williams publish in Nature how to train multi-layer networks: backpropagation.",
+    "text": "In nineteen eighty-six, David Rumelhart, Geoffrey Hinton, and Ronald Williams publish in Nature how to train multi-layer networks: backpropagation."
+  },
+  {
+    "id": "c4_08",
+    "speak": "The idea Minsky had buried had, once again, a pulse.",
+    "text": "The idea Minsky had buried had, once again, a pulse."
+  },
+  {
+    "id": "c5_00",
+    "speak": "Chapter five. Video game cards.",
+    "text": "Chapter five. Video game cards."
+  },
+  {
+    "id": "c5_01",
+    "speak": "May, nineteen ninety-seven. IBM's Deep Blue computer defeats world chess champion Garry Kasparov.",
+    "text": "May, nineteen ninety-seven. IBM's Deep Blue computer defeats world chess champion Garry Kasparov."
+  },
+  {
+    "id": "c5_02",
+    "speak": "It is a milestone, but it doesn't learn: it calculates millions of moves by brute force.",
+    "text": "It is a milestone, but it doesn't learn: it calculates millions of moves by brute force."
+  },
+  {
+    "id": "c5_03",
+    "speak": "The real breakthrough arrives from somewhere else. In two thousand nine, Fei-Fei Li and her team launch ImageNet, a dataset with millions of labeled images.",
+    "text": "The real breakthrough arrives from somewhere else. In two thousand nine, Fei-Fei Li and her team launch ImageNet, a dataset with millions of labeled images."
+  },
+  {
+    "id": "c5_04",
+    "speak": "And in twenty twelve, three researchers from the University of Toronto, Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton, enter AlexNet into the competition.",
+    "text": "And in twenty twelve, three researchers from the University of Toronto, Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton, enter AlexNet into the competition."
+  },
+  {
+    "id": "c5_05",
+    "speak": "A deep neural network, trained on two gamer graphics cards in Krizhevsky's parents' house.",
+    "text": "A deep neural network, trained on two gamer graphics cards in Krizhevsky's parents' house."
+  },
+  {
+    "id": "c5_06",
+    "speak": "The result silences the field: an error rate of fifteen point three percent, against twenty-six point two for second place.",
+    "text": "The result silences the field: an error rate of fifteen point three percent, against twenty-six point two for second place."
+  },
+  {
+    "id": "c5_07",
+    "speak": "Neural networks, the very ones left for dead, had just won.",
+    "text": "Neural networks, the very ones left for dead, had just won."
+  },
+  {
+    "id": "c6_00",
+    "speak": "Chapter six. Move thirty-seven.",
+    "text": "Chapter six. Move thirty-seven."
+  },
+  {
+    "id": "c6_01",
+    "speak": "Go is an ancient Chinese game with more possible board positions than atoms in the observable universe. For decades, it was believed no machine could ever defeat a master.",
+    "text": "Go is an ancient Chinese game with more possible board positions than atoms in the observable universe. For decades, it was believed no machine could ever defeat a master."
+  },
+  {
+    "id": "c6_02",
+    "speak": "In March twenty sixteen, in Seoul, DeepMind's AlphaGo faces Lee Sedol, one of the greatest players in the world.",
+    "text": "In March twenty sixteen, in Seoul, DeepMind's AlphaGo faces Lee Sedol, one of the greatest players in the world."
+  },
+  {
+    "id": "c6_03",
+    "speak": "In game two, the machine makes move thirty-seven: placing a stone where no human professional would ever play.",
+    "text": "In game two, the machine makes move thirty-seven: placing a stone where no human professional would ever play."
+  },
+  {
+    "id": "c6_04",
+    "speak": "Commentators believe it is a mistake. It is not. That single move decides the game. AlphaGo wins the match four to one.",
+    "text": "Commentators believe it is a mistake. It is not. That single move decides the game. AlphaGo wins the match four to one."
+  },
+  {
+    "id": "c6_05",
+    "speak": "Yet in game four, Lee Sedol responds with his own impossible move, number seventy-eight, handing the machine its only defeat.",
+    "text": "Yet in game four, Lee Sedol responds with his own impossible move, number seventy-eight, handing the machine its only defeat."
+  },
+  {
+    "id": "c6_06",
+    "speak": "For the first time, artificial intelligence wasn't just calculating. It appeared to have intuition.",
+    "text": "For the first time, artificial intelligence wasn't just calculating. It appeared to have intuition."
+  },
+  {
+    "id": "c7_00",
+    "speak": "Chapter seven. Attention.",
+    "text": "Chapter seven. Attention."
+  },
+  {
+    "id": "c7_01",
+    "speak": "In twenty seventeen, eight researchers at Google publish a paper with a nearly arrogant title: Attention Is All You Need.",
+    "text": "In twenty seventeen, eight researchers at Google publish a paper with a nearly arrogant title: Attention Is All You Need."
+  },
+  {
+    "id": "c7_02",
+    "speak": "They introduce the transformer, an architecture that reads all words in a text at once and learns what to pay attention to. It was the missing piece.",
+    "text": "They introduce the transformer, an architecture that reads all words in a text at once and learns what to pay attention to. It was the missing piece."
+  },
+  {
+    "id": "c7_03",
+    "speak": "Upon it, ever-larger language models are built, trained on a massive portion of the internet's text.",
+    "text": "Upon it, ever-larger language models are built, trained on a massive portion of the internet's text."
+  },
+  {
+    "id": "c7_04",
+    "speak": "On November thirtieth, twenty twenty-two, OpenAI quietly releases a research preview called ChatGPT.",
+    "text": "On November thirtieth, twenty twenty-two, OpenAI quietly releases a research preview called ChatGPT."
+  },
+  {
+    "id": "c7_05",
+    "speak": "Five days later, it reaches one million users. According to UBS estimates, in two months it surpasses one hundred million. No consumer application had ever grown so fast.",
+    "text": "Five days later, it reaches one million users. According to UBS estimates, in two months it surpasses one hundred million. No consumer application had ever grown so fast."
+  },
+  {
+    "id": "c7_06",
+    "speak": "Suddenly, Turing's question ceased to be philosophy: millions of people were having conversations with a machine.",
+    "text": "Suddenly, Turing's question ceased to be philosophy: millions of people were having conversations with a machine."
+  },
+  {
+    "id": "c8_00",
+    "speak": "Chapter eight. The summer that never ended.",
+    "text": "Chapter eight. The summer that never ended."
+  },
+  {
+    "id": "c8_01",
+    "speak": "In October twenty twenty-four, artificial intelligence reaches the highest pinnacle of science.",
+    "text": "In October twenty twenty-four, artificial intelligence reaches the highest pinnacle of science."
+  },
+  {
+    "id": "c8_02",
+    "speak": "John Hopfield and Geoffrey Hinton receive the Nobel Prize in Physics for foundational discoveries enabling neural network learning.",
+    "text": "John Hopfield and Geoffrey Hinton receive the Nobel Prize in Physics for foundational discoveries enabling neural network learning."
+  },
+  {
+    "id": "c8_03",
+    "speak": "One day later, Demis Hassabis and John Jumper from DeepMind share the Nobel Prize in Chemistry with David Baker: their AlphaFold system predicts protein structures, solving a challenge biology pursued for half a century.",
+    "text": "One day later, Demis Hassabis and John Jumper from DeepMind share the Nobel Prize in Chemistry with David Baker: their AlphaFold system predicts protein structures, solving a challenge biology pursued for half a century."
+  },
+  {
+    "id": "c8_04",
+    "speak": "Hinton, the very man who kept betting on neural networks when nobody else believed.",
+    "text": "Hinton, the very man who kept betting on neural networks when nobody else believed."
+  },
+  {
+    "id": "c8_05",
+    "speak": "Today, machines write, code, compose music, and generate imagery like the ones in this video.",
+    "text": "Today, machines write, code, compose music, and generate imagery like the ones in this video."
+  },
+  {
+    "id": "c8_06",
+    "speak": "Seventy years after that summer at Dartmouth, artificial intelligence is everywhere.",
+    "text": "Seventy years after that summer at Dartmouth, artificial intelligence is everywhere."
+  },
+  {
+    "id": "c8_07",
+    "speak": "And yet, Turing's question remains open. Can machines think?",
+    "text": "And yet, Turing's question remains open. Can machines think?"
+  },
+  {
+    "id": "c8_08",
+    "speak": "Perhaps the answer will arrive next summer. Or perhaps it will take another seventy years.",
+    "text": "Perhaps the answer will arrive next summer. Or perhaps it will take another seventy years."
+  }
+]

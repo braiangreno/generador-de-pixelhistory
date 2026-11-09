@@ -1,0 +1,15 @@
+[
+ {"id": "s01", "speak": "En mil novecientos cincuenta y cinco, cuatro científicos pidieron dinero para un plan audaz."},
+ {"id": "s02", "speak": "Dos meses de verano, y diez personas, para enseñarle a una máquina a pensar."},
+ {"id": "s03", "speak": "Creían que un verano alcanzaba."},
+ {"id": "s04", "speak": "Ya pasaron setenta años. Y la historia todavía no terminó."},
+ {"id": "s05", "speak": "Esta es la historia de la inteligencia artificial."},
+ {"id": "s06", "speak": "Capítulo uno. La pregunta."},
+ {"id": "s07", "speak": "Mil novecientos cincuenta. El matemático británico Alan Turing publica un artículo que arranca con una pregunta incómoda: ¿pueden pensar las máquinas?"},
+ {"id": "s08", "speak": "En lugar de responderla, propone un juego. Si conversas con una máquina y no puedes distinguirla de una persona, ¿importa realmente cómo lo hace?"},
+ {"id": "s09", "speak": "Cinco años después, John McCarthy, Marvin Minsky, Claude Shannon y Nathaniel Rochester firman la propuesta para un taller de verano en Dartmouth."},
+ {"id": "s10", "speak": "Y en ese documento aparece, por primera vez, un nombre: inteligencia artificial."},
+ {"id": "s11", "speak": "Eran optimistas. Demasiado optimistas."},
+ {"id": "s12", "speak": "Y lo que vino después estuvo a punto de enterrar la idea para siempre."},
+ {"id": "s13", "speak": "Capítulo dos. La máquina que iba a ser consciente."}
+]

@@ -1,0 +1,32 @@
+# Secrets & Environment
+.env
+*.env
+!.env.example
+
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# OS artifacts
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.swp
+*~
+
+# Temporary render artifacts & scratch logs
+renders/segments*/
+renders/archive/
+*.tmp
+*.log

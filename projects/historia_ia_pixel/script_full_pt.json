@@ -1,0 +1,352 @@
+[
+  {
+    "id": "s01",
+    "speak": "Em mil novecentos e cinquenta e cinco, quatro cientistas pediram financiamento para um plano audacioso.",
+    "text": "Em mil novecentos e cinquenta e cinco, quatro cientistas pediram financiamento para um plano audacioso."
+  },
+  {
+    "id": "s02",
+    "speak": "Dois meses de verão, e dez pessoas, para ensinar uma máquina a pensar.",
+    "text": "Dois meses de verão, e dez pessoas, para ensinar uma máquina a pensar."
+  },
+  {
+    "id": "s03",
+    "speak": "Acreditavam que um verão seria suficiente.",
+    "text": "Acreditavam que um verão seria suficiente."
+  },
+  {
+    "id": "s04",
+    "speak": "Setenta anos se passaram. E a história ainda não terminou.",
+    "text": "Setenta anos se passaram. E a história ainda não terminou."
+  },
+  {
+    "id": "s05",
+    "speak": "Esta é a história da inteligência artificial.",
+    "text": "Esta é a história da inteligência artificial."
+  },
+  {
+    "id": "s06",
+    "speak": "Capítulo um. A pergunta.",
+    "text": "Capítulo um. A pergunta."
+  },
+  {
+    "id": "s07",
+    "speak": "Mil novecentos e cinquenta. O matemático britânico Alan Turing publica um artigo que começa com uma pergunta desconfortável: as máquinas podem pensar?",
+    "text": "Mil novecentos e cinquenta. O matemático britânico Alan Turing publica um artigo que começa com uma pergunta desconfortável: as máquinas podem pensar?"
+  },
+  {
+    "id": "s08",
+    "speak": "Em vez de responder, ele propõe um jogo. Se você conversar com uma máquina e não puder distingui-la de uma pessoa, realmente importa como ela faz isso?",
+    "text": "Em vez de responder, ele propõe um jogo. Se você conversar com uma máquina e não puder distingui-la de uma pessoa, realmente importa como ela faz isso?"
+  },
+  {
+    "id": "s09",
+    "speak": "Cinco anos depois, John McCarthy, Marvin Minsky, Claude Shannon e Nathaniel Rochester assinam a proposta para uma oficina de verão em Dartmouth.",
+    "text": "Cinco anos depois, John McCarthy, Marvin Minsky, Claude Shannon e Nathaniel Rochester assinam a proposta para uma oficina de verão em Dartmouth."
+  },
+  {
+    "id": "s10",
+    "speak": "E nesse documento aparece, pela primeira vez, um nome: inteligência artificial.",
+    "text": "E nesse documento aparece, pela primeira vez, um nome: inteligência artificial."
+  },
+  {
+    "id": "s11",
+    "speak": "Eles eram otimistas. Otimistas demais.",
+    "text": "Eles eram otimistas. Otimistas demais."
+  },
+  {
+    "id": "s12",
+    "speak": "E o que veio a seguir quase enterrou a ideia para sempre.",
+    "text": "E o que veio a seguir quase enterrou a ideia para sempre."
+  },
+  {
+    "id": "s13",
+    "speak": "Capítulo dois. A máquina que seria consciente.",
+    "text": "Capítulo dois. A máquina que seria consciente."
+  },
+  {
+    "id": "c2_01",
+    "speak": "Julho de mil novecentos e cinquenta e oito. A Marinha dos Estados Unidos apresenta à imprensa uma invenção de Frank Rosenblatt, um psicólogo de trinta anos: o perceptron.",
+    "text": "Julho de mil novecentos e cinquenta e oito. A Marinha dos Estados Unidos apresenta à imprensa uma invenção de Frank Rosenblatt, um psicólogo de trinta anos: o perceptron."
+  },
+  {
+    "id": "c2_02",
+    "speak": "Uma máquina que não se programa: ela aprende com seus próprios erros.",
+    "text": "Uma máquina que não se programa: ela aprende com seus próprios erros."
+  },
+  {
+    "id": "c2_03",
+    "speak": "No dia seguinte, o The New York Times escreve que a Marinha espera que ela possa andar, falar, ver, escrever e ter consciência de sua própria existência.",
+    "text": "No dia seguinte, o The New York Times escreve que a Marinha espera que ela possa andar, falar, ver, escrever e ter consciência de sua própria existência."
+  },
+  {
+    "id": "c2_04",
+    "speak": "A realidade era bem mais modesta. O perceptron aprendia a distinguir formas simples numa grade de vinte por vinte fotocélulas.",
+    "text": "A realidade era bem mais modesta. O perceptron aprendia a distinguir formas simples numa grade de vinte por vinte fotocélulas."
+  },
+  {
+    "id": "c2_05",
+    "speak": "Mas a ideia era gigantesca: uma rede de neurônios artificiais ajustando suas conexões através da experiência.",
+    "text": "Mas a ideia era gigantesca: uma rede de neurônios artificiais ajustando suas conexões através da experiência."
+  },
+  {
+    "id": "c2_06",
+    "speak": "Em mil novecentos e sessenta e nove, Marvin Minsky e Seymour Papert publicam um livro chamado Perceptrons.",
+    "text": "Em mil novecentos e sessenta e nove, Marvin Minsky e Seymour Papert publicam um livro chamado Perceptrons."
+  },
+  {
+    "id": "c2_07",
+    "speak": "Eles provam que uma rede de apenas uma camada não consegue resolver problemas básicos como o ou-exclusivo.",
+    "text": "Eles provam que uma rede de apenas uma camada não consegue resolver problemas básicos como o ou-exclusivo."
+  },
+  {
+    "id": "c2_08",
+    "speak": "O golpe é devastador. Os recursos para redes neurais simplesmente evaporam.",
+    "text": "O golpe é devastador. Os recursos para redes neurais simplesmente evaporam."
+  },
+  {
+    "id": "c2_09",
+    "speak": "A ideia que hoje move o mundo torna-se, por anos, apenas uma curiosidade abandonada.",
+    "text": "A ideia que hoje move o mundo torna-se, por anos, apenas uma curiosidade abandonada."
+  },
+  {
+    "id": "c3_00",
+    "speak": "Capítulo três. O primeiro inverno.",
+    "text": "Capítulo três. O primeiro inverno."
+  },
+  {
+    "id": "c3_01",
+    "speak": "As promessas continuavam crescendo. Em mil novecentos e setenta, Minsky prevê que em três a oito anos teremos uma máquina com a inteligência geral de um ser humano comum.",
+    "text": "As promessas continuavam crescendo. Em mil novecentos e setenta, Minsky prevê que em três a oito anos teremos uma máquina com a inteligência geral de um ser humano comum."
+  },
+  {
+    "id": "c3_02",
+    "speak": "Mas os resultados não chegam. Em mil novecentos e sessenta e seis, o relatório ALPAC já havia concluído que a tradução automática estava longe de igualar um tradutor humano.",
+    "text": "Mas os resultados não chegam. Em mil novecentos e sessenta e seis, o relatório ALPAC já havia concluído que a tradução automática estava longe de igualar um tradutor humano."
+  },
+  {
+    "id": "c3_03",
+    "speak": "Em mil novecentos e setenta e três, o matemático James Lighthill entrega ao governo britânico um relatório demolidor:",
+    "text": "Em mil novecentos e setenta e três, o matemático James Lighthill entrega ao governo britânico um relatório demolidor:"
+  },
+  {
+    "id": "c3_04",
+    "speak": "a inteligência artificial não cumpriu seus objetivos, e seus programas se afogam no que ele chama de explosão combinatória.",
+    "text": "a inteligência artificial não cumpriu seus objetivos, e seus programas se afogam no que ele chama de explosão combinatória."
+  },
+  {
+    "id": "c3_05",
+    "speak": "O Reino Unido corta as verbas. No ano seguinte, nos Estados Unidos, a DARPA também reduz seu apoio.",
+    "text": "O Reino Unido corta as verbas. No ano seguinte, nos Estados Unidos, a DARPA também reduz seu apoio."
+  },
+  {
+    "id": "c3_06",
+    "speak": "Os laboratórios se esvaziam. Os pesquisadores mudam de área, ou mudam o nome daquilo que fazem.",
+    "text": "Os laboratórios se esvaziam. Os pesquisadores mudam de área, ou mudam o nome daquilo que fazem."
+  },
+  {
+    "id": "c3_07",
+    "speak": "Havia chegado o primeiro inverno da inteligência artificial.",
+    "text": "Havia chegado o primeiro inverno da inteligência artificial."
+  },
+  {
+    "id": "c4_00",
+    "speak": "Capítulo quatro. Regras, especialistas e o segundo inverno.",
+    "text": "Capítulo quatro. Regras, especialistas e o segundo inverno."
+  },
+  {
+    "id": "c4_01",
+    "speak": "Nos anos oitenta, a inteligência artificial ressurge sob outra forma: os sistemas especialistas.",
+    "text": "Nos anos oitenta, a inteligência artificial ressurge sob outra forma: os sistemas especialistas."
+  },
+  {
+    "id": "c4_02",
+    "speak": "Em vez de aprender, eles seguem milhares de regras escritas à mão por profissionais especializados.",
+    "text": "Em vez de aprender, eles seguem milhares de regras escritas à mão por profissionais especializados."
+  },
+  {
+    "id": "c4_03",
+    "speak": "Eles diagnosticam infecções, configuram computadores, e empresas investem fortunas. O Japão lança seu ambicioso projeto de Quinta Geração.",
+    "text": "Eles diagnosticam infecções, configuram computadores, e empresas investem fortunas. O Japão lança seu ambicioso projeto de Quinta Geração."
+  },
+  {
+    "id": "c4_04",
+    "speak": "Mas as regras são frágeis: funcionam para os casos específicos e falham em todo o resto. Mantê-las custa mais do que elas valem.",
+    "text": "Mas as regras são frágeis: funcionam para os casos específicos e falham em todo o resto. Mantê-las custa mais do que elas valem."
+  },
+  {
+    "id": "c4_05",
+    "speak": "Em mil novecentos e oitenta e sete, o mercado dessas máquinas especializadas desaba, trazendo o segundo inverno.",
+    "text": "Em mil novecentos e oitenta e sete, o mercado dessas máquinas especializadas desaba, trazendo o segundo inverno."
+  },
+  {
+    "id": "c4_06",
+    "speak": "Contudo, em meio ao frio, acontece algo que quase ninguém comemora.",
+    "text": "Contudo, em meio ao frio, acontece algo que quase ninguém comemora."
+  },
+  {
+    "id": "c4_07",
+    "speak": "Em mil novecentos e oitenta e seis, David Rumelhart, Geoffrey Hinton e Ronald Williams publicam na Nature como treinar redes de várias camadas: a retropropagação.",
+    "text": "Em mil novecentos e oitenta e seis, David Rumelhart, Geoffrey Hinton e Ronald Williams publicam na Nature como treinar redes de várias camadas: a retropropagação."
+  },
+  {
+    "id": "c4_08",
+    "speak": "A ideia que Minsky havia enterrado voltava a ter pulso.",
+    "text": "A ideia que Minsky havia enterrado voltava a ter pulso."
+  },
+  {
+    "id": "c5_00",
+    "speak": "Capítulo cinco. Placas de videogame.",
+    "text": "Capítulo cinco. Placas de videogame."
+  },
+  {
+    "id": "c5_01",
+    "speak": "Maio de mil novecentos e noventa e sete. O computador Deep Blue, da IBM, vence o campeão mundial de xadrez Garry Kasparov.",
+    "text": "Maio de mil novecentos e noventa e sete. O computador Deep Blue, da IBM, vence o campeão mundial de xadrez Garry Kasparov."
+  },
+  {
+    "id": "c5_02",
+    "speak": "É um marco histórico, mas ele não aprende: calcula milhões de jogadas por força bruta.",
+    "text": "É um marco histórico, mas ele não aprende: calcula milhões de jogadas por força bruta."
+  },
+  {
+    "id": "c5_03",
+    "speak": "A verdadeira virada vem de outro lugar. Em dois mil e nove, Fei-Fei Li e sua equipe lançam o ImageNet, uma base com milhões de imagens catalogadas.",
+    "text": "A verdadeira virada vem de outro lugar. Em dois mil e nove, Fei-Fei Li e sua equipe lançam o ImageNet, uma base com milhões de imagens catalogadas."
+  },
+  {
+    "id": "c5_04",
+    "speak": "E em dois mil e doze, três pesquisadores da Universidade de Toronto, Alex Krizhevsky, Ilya Sutskever e Geoffrey Hinton, apresentam a AlexNet na competição.",
+    "text": "E em dois mil e doze, três pesquisadores da Universidade de Toronto, Alex Krizhevsky, Ilya Sutskever e Geoffrey Hinton, apresentam a AlexNet na competição."
+  },
+  {
+    "id": "c5_05",
+    "speak": "Uma rede neural profunda, treinada com duas placas de vídeo de videogame, na casa dos pais de Krizhevsky.",
+    "text": "Uma rede neural profunda, treinada com duas placas de vídeo de videogame, na casa dos pais de Krizhevsky."
+  },
+  {
+    "id": "c5_06",
+    "speak": "O resultado deixa o mundo acadêmico mudo: erro de quinze vírgula três por cento, contra vinte e seis vírgula dois do segundo colocado.",
+    "text": "O resultado deixa o mundo acadêmico mudo: erro de quinze vírgula três por cento, contra vinte e seis vírgula dois do segundo colocado."
+  },
+  {
+    "id": "c5_07",
+    "speak": "As redes neurais, as mesmas que todos davam como mortas, acabavam de triunfar.",
+    "text": "As redes neurais, as mesmas que todos davam como mortas, acabavam de triunfar."
+  },
+  {
+    "id": "c6_00",
+    "speak": "Capítulo seis. A jogada trinta e sete.",
+    "text": "Capítulo seis. A jogada trinta e sete."
+  },
+  {
+    "id": "c6_01",
+    "speak": "O go é um jogo milenar com mais posições possíveis do que átomos no universo observável. Por décadas, acreditava-se que máquina alguma venceria um mestre.",
+    "text": "O go é um jogo milenar com mais posições possíveis do que átomos no universo observável. Por décadas, acreditava-se que máquina alguma venceria um mestre."
+  },
+  {
+    "id": "c6_02",
+    "speak": "Em março de dois mil e dezesseis, em Seul, o AlphaGo da DeepMind enfrenta Lee Sedol, um dos maiores mestres do planeta.",
+    "text": "Em março de dois mil e dezesseis, em Seul, o AlphaGo da DeepMind enfrenta Lee Sedol, um dos maiores mestres do planeta."
+  },
+  {
+    "id": "c6_03",
+    "speak": "Na segunda partida, a máquina faz a jogada trinta e sete: uma pedra colocada onde nenhum profissional jogaria.",
+    "text": "Na segunda partida, a máquina faz a jogada trinta e sete: uma pedra colocada onde nenhum profissional jogaria."
+  },
+  {
+    "id": "c6_04",
+    "speak": "Os comentaristas acham que é um erro. Não é. Esse único lance define a partida. O AlphaGo vence a série por quatro a um.",
+    "text": "Os comentaristas acham que é um erro. Não é. Esse único lance define a partida. O AlphaGo vence a série por quatro a um."
+  },
+  {
+    "id": "c6_05",
+    "speak": "Mas na quarta partida, Lee Sedol responde com sua jogada divina, a número setenta e oito, arrancando a única derrota da máquina.",
+    "text": "Mas na quarta partida, Lee Sedol responde com sua jogada divina, a número setenta e oito, arrancando a única derrota da máquina."
+  },
+  {
+    "id": "c6_06",
+    "speak": "Pela primeira vez, uma inteligência artificial não apenas calculava. Parecia ter intuição.",
+    "text": "Pela primeira vez, uma inteligência artificial não apenas calculava. Parecia ter intuição."
+  },
+  {
+    "id": "c7_00",
+    "speak": "Capítulo sete. Atenção.",
+    "text": "Capítulo sete. Atenção."
+  },
+  {
+    "id": "c7_01",
+    "speak": "Em dois mil e dezessete, oito pesquisadores do Google publicam um artigo com um título quase arrogante: Attention Is All You Need.",
+    "text": "Em dois mil e dezessete, oito pesquisadores do Google publicam um artigo com um título quase arrogante: Attention Is All You Need."
+  },
+  {
+    "id": "c7_02",
+    "speak": "Eles apresentam o transformer, uma arquitetura que lê todas as palavras do texto simultaneamente e aprende onde focar a atenção. Era a peça que faltava.",
+    "text": "Eles apresentam o transformer, uma arquitetura que lê todas as palavras do texto simultaneamente e aprende onde focar a atenção. Era a peça que faltava."
+  },
+  {
+    "id": "c7_03",
+    "speak": "Sobre ela se constroem modelos de linguagem cada vez maiores, alimentados com boa parte dos textos da internet.",
+    "text": "Sobre ela se constroem modelos de linguagem cada vez maiores, alimentados com boa parte dos textos da internet."
+  },
+  {
+    "id": "c7_04",
+    "speak": "Em trinta de novembro de dois mil e vinte e dois, a OpenAI lança, quase sem alarde, uma prévia de pesquisa chamada ChatGPT.",
+    "text": "Em trinta de novembro de dois mil e vinte e dois, a OpenAI lança, quase sem alarde, uma prévia de pesquisa chamada ChatGPT."
+  },
+  {
+    "id": "c7_05",
+    "speak": "Cinco dias depois, alcança um milhão de usuários. Segundo o UBS, em dois meses supera cem milhões. Nenhum aplicativo na história cresceu tão rápido.",
+    "text": "Cinco dias depois, alcança um milhão de usuários. Segundo o UBS, em dois meses supera cem milhões. Nenhum aplicativo na história cresceu tão rápido."
+  },
+  {
+    "id": "c7_06",
+    "speak": "De repente, a pergunta de Turing deixou de ser filosofia: milhões de pessoas conversavam com uma máquina.",
+    "text": "De repente, a pergunta de Turing deixou de ser filosofia: milhões de pessoas conversavam com uma máquina."
+  },
+  {
+    "id": "c8_00",
+    "speak": "Capítulo oito. O verão que não acabou.",
+    "text": "Capítulo oito. O verão que não acabou."
+  },
+  {
+    "id": "c8_01",
+    "speak": "Em outubro de dois mil e vinte e quatro, a inteligência artificial atinge o ponto mais alto de toda a ciência.",
+    "text": "Em outubro de dois mil e vinte e quatro, a inteligência artificial atinge o ponto mais alto de toda a ciência."
+  },
+  {
+    "id": "c8_02",
+    "speak": "John Hopfield e Geoffrey Hinton recebem o Nobel de Física pelas descobertas fundamentais para o aprendizado com redes neurais.",
+    "text": "John Hopfield e Geoffrey Hinton recebem o Nobel de Física pelas descobertas fundamentais para o aprendizado com redes neurais."
+  },
+  {
+    "id": "c8_03",
+    "speak": "No dia seguinte, Demis Hassabis e John Jumper, da DeepMind, dividem o Nobel de Química com David Baker: o AlphaFold prevê o formato das proteínas, resolvendo um enigma biológico de meio século.",
+    "text": "No dia seguinte, Demis Hassabis e John Jumper, da DeepMind, dividem o Nobel de Química com David Baker: o AlphaFold prevê o formato das proteínas, resolvendo um enigma biológico de meio século."
+  },
+  {
+    "id": "c8_04",
+    "speak": "Hinton, aquele mesmo que continuou acreditando nas redes neurais quando ninguém mais acreditava.",
+    "text": "Hinton, aquele mesmo que continuou acreditando nas redes neurais quando ninguém mais acreditava."
+  },
+  {
+    "id": "c8_05",
+    "speak": "Hoje, as máquinas escrevem, programam, compõem música e geram imagens como as deste vídeo.",
+    "text": "Hoje, as máquinas escrevem, programam, compõem música e geram imagens como as deste vídeo."
+  },
+  {
+    "id": "c8_06",
+    "speak": "Setenta anos depois daquele verão em Dartmouth, a inteligência artificial está em todos os lugares.",
+    "text": "Setenta anos depois daquele verão em Dartmouth, a inteligência artificial está em todos os lugares."
+  },
+  {
+    "id": "c8_07",
+    "speak": "E no entanto, a pergunta de Turing continua aberta. As máquinas podem pensar?",
+    "text": "E no entanto, a pergunta de Turing continua aberta. As máquinas podem pensar?"
+  },
+  {
+    "id": "c8_08",
+    "speak": "Talvez a resposta chegue no próximo verão. Ou talvez leve outros setenta anos.",
+    "text": "Talvez a resposta chegue no próximo verão. Ou talvez leve outros setenta anos."
+  }
+]

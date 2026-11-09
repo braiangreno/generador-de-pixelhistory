@@ -1,0 +1,819 @@
+1
+00:00:00,800 --> 00:00:03,404
+In nineteen fifty-five, four scientists
+
+2
+00:00:03,424 --> 00:00:06,128
+asked for funding for an audacious plan.
+
+3
+00:00:06,332 --> 00:00:08,773
+Two summer months, and ten people, to
+
+4
+00:00:08,793 --> 00:00:10,684
+teach a machine how to think.
+
+5
+00:00:11,723 --> 00:00:13,753
+They believed one summer was enough.
+
+6
+00:00:14,055 --> 00:00:16,543
+Seventy years have passed. And the story
+
+7
+00:00:16,563 --> 00:00:18,129
+is far from over.
+
+8
+00:00:19,255 --> 00:00:20,721
+This is the story of artificial
+
+9
+00:00:20,741 --> 00:00:22,029
+intelligence.
+
+10
+00:00:23,255 --> 00:00:27,143
+Chapter one. The question.
+
+11
+00:00:26,245 --> 00:00:28,791
+Nineteen fifty. British mathematician
+
+12
+00:00:28,811 --> 00:00:30,776
+Alan Turing publishes a paper opening
+
+13
+00:00:30,796 --> 00:00:32,819
+with an uncomfortable question: can
+
+14
+00:00:32,839 --> 00:00:34,545
+machines think?
+
+15
+00:00:36,286 --> 00:00:37,984
+Instead of answering it, he proposes a
+
+16
+00:00:38,004 --> 00:00:39,981
+game. If you talk with a machine and
+
+17
+00:00:40,001 --> 00:00:41,885
+cannot tell it apart from a person, does
+
+18
+00:00:41,905 --> 00:00:43,657
+it really matter how it does it?
+
+19
+00:00:45,891 --> 00:00:48,216
+Five years later, John McCarthy, Marvin
+
+20
+00:00:48,236 --> 00:00:50,608
+Minsky, Claude Shannon, and Nathaniel
+
+21
+00:00:50,628 --> 00:00:52,953
+Rochester sign the proposal for a summer
+
+22
+00:00:52,973 --> 00:00:54,609
+workshop at Dartmouth.
+
+23
+00:00:54,841 --> 00:00:56,632
+And in that document appears, for the
+
+24
+00:00:56,652 --> 00:00:59,140
+first time, a name: artificial
+
+25
+00:00:59,160 --> 00:01:00,447
+intelligence.
+
+26
+00:01:00,914 --> 00:01:04,105
+They were optimistic. Far too optimistic.
+
+27
+00:01:04,336 --> 00:01:06,534
+And what followed came close to burying
+
+28
+00:01:06,554 --> 00:01:08,688
+the idea forever.
+
+29
+00:01:09,573 --> 00:01:12,212
+Chapter two. The machine that was going
+
+30
+00:01:12,232 --> 00:01:13,879
+to be conscious.
+
+31
+00:01:13,582 --> 00:01:15,988
+July, nineteen fifty-eight. The United
+
+32
+00:01:16,008 --> 00:01:17,625
+States Navy presents to the press an
+
+33
+00:01:17,645 --> 00:01:19,924
+invention by thirty-year-old psychologist
+
+34
+00:01:19,944 --> 00:01:22,857
+Frank Rosenblatt: the perceptron.
+
+35
+00:01:24,786 --> 00:01:26,937
+A machine that isn't programmed: it
+
+36
+00:01:26,957 --> 00:01:29,649
+learns from its mistakes.
+
+37
+00:01:29,009 --> 00:01:30,707
+The next day, The New York Times writes
+
+38
+00:01:30,727 --> 00:01:33,227
+that the Navy expects it will walk, talk,
+
+39
+00:01:33,247 --> 00:01:35,200
+see, write, and be conscious of its
+
+40
+00:01:35,220 --> 00:01:36,287
+existence.
+
+41
+00:01:38,177 --> 00:01:40,816
+Reality was more modest. The perceptron
+
+42
+00:01:40,836 --> 00:01:42,952
+learned to recognize simple shapes on a
+
+43
+00:01:42,972 --> 00:01:45,687
+grid of twenty by twenty photocells.
+
+44
+00:01:46,691 --> 00:01:48,819
+Yet the idea was immense: a network of
+
+45
+00:01:48,839 --> 00:01:50,723
+artificial neurons adjusting its
+
+46
+00:01:50,743 --> 00:01:53,319
+connections through experience.
+
+47
+00:01:53,023 --> 00:01:55,325
+In nineteen sixty-nine, Marvin Minsky and
+
+48
+00:01:55,345 --> 00:01:57,438
+Seymour Papert publish a book titled
+
+49
+00:01:57,458 --> 00:01:59,047
+Perceptrons.
+
+50
+00:01:59,573 --> 00:02:01,376
+They prove that a single-layer network
+
+51
+00:02:01,396 --> 00:02:03,164
+cannot solve basic problems like
+
+52
+00:02:03,184 --> 00:02:04,901
+exclusive OR.
+
+53
+00:02:06,341 --> 00:02:08,306
+The blow is devastating. Funding for
+
+54
+00:02:08,326 --> 00:02:10,322
+neural networks evaporates.
+
+55
+00:02:11,582 --> 00:02:13,176
+The idea powering everything today
+
+56
+00:02:13,196 --> 00:02:15,370
+becomes, for years, an abandoned
+
+57
+00:02:15,390 --> 00:02:17,188
+curiosity.
+
+58
+00:02:18,127 --> 00:02:21,272
+Chapter three. The first winter.
+
+59
+00:02:21,627 --> 00:02:24,196
+Promises kept growing. In nineteen
+
+60
+00:02:24,216 --> 00:02:26,437
+seventy, Minsky predicts that in three to
+
+61
+00:02:26,457 --> 00:02:28,677
+eight years we will have a machine with
+
+62
+00:02:28,697 --> 00:02:30,814
+the general intelligence of an average
+
+63
+00:02:30,834 --> 00:02:32,156
+human being.
+
+64
+00:02:32,759 --> 00:02:36,083
+Yet results failed to arrive. In nineteen
+
+65
+00:02:36,103 --> 00:02:38,265
+sixty-six, the ALPAC report had already
+
+66
+00:02:38,285 --> 00:02:40,169
+concluded that machine translation was
+
+67
+00:02:40,189 --> 00:02:42,499
+nowhere near matching a human translator.
+
+68
+00:02:44,109 --> 00:02:46,144
+In nineteen seventy-three, mathematician
+
+69
+00:02:46,164 --> 00:02:48,152
+James Lighthill delivers a devastating
+
+70
+00:02:48,172 --> 00:02:50,040
+report to the British government:
+
+71
+00:02:51,459 --> 00:02:53,111
+artificial intelligence failed to meet
+
+72
+00:02:53,131 --> 00:02:55,723
+its goals, and its programs drown in what
+
+73
+00:02:55,743 --> 00:02:58,969
+he calls a combinatorial explosion.
+
+74
+00:02:59,318 --> 00:03:01,783
+The United Kingdom slashes funding. The
+
+75
+00:03:01,803 --> 00:03:03,687
+following year, in the United States,
+
+76
+00:03:03,707 --> 00:03:05,946
+DARPA also reduces its support.
+
+77
+00:03:06,377 --> 00:03:08,679
+Laboratories empty out. Researchers
+
+78
+00:03:08,699 --> 00:03:11,024
+switch fields, or change the name of what
+
+79
+00:03:11,044 --> 00:03:12,216
+they do.
+
+80
+00:03:12,855 --> 00:03:14,135
+The first winter of artificial
+
+81
+00:03:14,155 --> 00:03:16,372
+intelligence had arrived.
+
+82
+00:03:17,582 --> 00:03:21,161
+Chapter four. Rules, experts, and the
+
+83
+00:03:21,181 --> 00:03:22,538
+second winter.
+
+84
+00:03:22,682 --> 00:03:24,380
+In the eighties, artificial intelligence
+
+85
+00:03:24,400 --> 00:03:26,482
+returns in a different form: expert
+
+86
+00:03:26,502 --> 00:03:27,360
+systems.
+
+87
+00:03:28,650 --> 00:03:30,035
+Instead of learning, they follow
+
+88
+00:03:30,055 --> 00:03:32,276
+thousands of rules hand-coded by human
+
+89
+00:03:32,296 --> 00:03:33,235
+specialists.
+
+90
+00:03:33,527 --> 00:03:35,457
+They diagnose infections, configure
+
+91
+00:03:35,477 --> 00:03:38,406
+computers, and companies invest fortunes.
+
+92
+00:03:38,426 --> 00:03:40,252
+Japan launches its ambitious Fifth
+
+93
+00:03:40,272 --> 00:03:42,013
+Generation project.
+
+94
+00:03:43,205 --> 00:03:45,797
+Yet the rules are brittle: they work only
+
+95
+00:03:45,817 --> 00:03:47,957
+for the exact cases they were written for,
+
+96
+00:03:47,977 --> 00:03:50,952
+and fail at everything else. Maintaining
+
+97
+00:03:50,972 --> 00:03:53,548
+them costs more than they are worth.
+
+98
+00:03:52,664 --> 00:03:54,246
+In nineteen eighty-seven, the market for
+
+99
+00:03:54,266 --> 00:03:56,603
+specialized Lisp machines crashes,
+
+100
+00:03:56,623 --> 00:03:58,503
+bringing about the second winter.
+
+101
+00:04:01,177 --> 00:04:03,270
+Yet amidst the cold, something happens
+
+102
+00:04:03,290 --> 00:04:05,715
+that almost no one celebrates.
+
+103
+00:04:06,055 --> 00:04:08,392
+In nineteen eighty-six, David Rumelhart,
+
+104
+00:04:08,412 --> 00:04:10,075
+Geoffrey Hinton, and Ronald Williams
+
+105
+00:04:10,095 --> 00:04:11,677
+publish in Nature how to train
+
+106
+00:04:11,697 --> 00:04:14,819
+multi-layer networks: backpropagation.
+
+107
+00:04:16,314 --> 00:04:18,279
+The idea Minsky had buried had, once
+
+108
+00:04:18,299 --> 00:04:20,434
+again, a pulse.
+
+109
+00:04:21,259 --> 00:04:25,008
+Chapter five. Video game cards.
+
+110
+00:04:24,759 --> 00:04:27,479
+May, nineteen ninety-seven. IBM's Deep
+
+111
+00:04:27,499 --> 00:04:29,058
+Blue computer defeats world chess
+
+112
+00:04:29,078 --> 00:04:30,969
+champion Garry Kasparov.
+
+113
+00:04:34,000 --> 00:04:37,184
+It is a milestone, but it doesn't learn:
+
+114
+00:04:37,204 --> 00:04:39,576
+it calculates millions of moves by brute
+
+115
+00:04:39,596 --> 00:04:40,535
+force.
+
+116
+00:04:39,314 --> 00:04:40,815
+The real breakthrough arrives from
+
+117
+00:04:40,835 --> 00:04:43,416
+somewhere else. In two thousand nine,
+
+118
+00:04:43,436 --> 00:04:46,039
+Fei-Fei Li and her team launch ImageNet,
+
+119
+00:04:46,059 --> 00:04:48,589
+a dataset with millions of labeled images.
+
+120
+00:04:49,500 --> 00:04:51,407
+And in twenty twelve, three researchers
+
+121
+00:04:51,427 --> 00:04:53,602
+from the University of Toronto, Alex
+
+122
+00:04:53,622 --> 00:04:56,179
+Krizhevsky, Ilya Sutskever, and Geoffrey
+
+123
+00:04:56,199 --> 00:04:58,396
+Hinton, enter AlexNet into the
+
+124
+00:04:58,416 --> 00:04:59,704
+competition.
+
+125
+00:04:59,250 --> 00:05:01,691
+A deep neural network, trained on two
+
+126
+00:05:01,711 --> 00:05:03,549
+gamer graphics cards in Krizhevsky's
+
+127
+00:05:03,569 --> 00:05:04,810
+parents' house.
+
+128
+00:05:06,236 --> 00:05:08,666
+The result silences the field: an error
+
+129
+00:05:08,686 --> 00:05:10,500
+rate of fifteen point three percent,
+
+130
+00:05:10,520 --> 00:05:12,346
+against twenty-six point two for second
+
+131
+00:05:12,366 --> 00:05:13,746
+place.
+
+132
+00:05:14,023 --> 00:05:16,371
+Neural networks, the very ones left for
+
+133
+00:05:16,391 --> 00:05:19,722
+dead, had just won.
+
+134
+00:05:20,059 --> 00:05:23,668
+Chapter six. Move thirty-seven.
+
+135
+00:05:23,777 --> 00:05:25,963
+Go is an ancient Chinese game with more
+
+136
+00:05:25,983 --> 00:05:28,413
+possible board positions than atoms in
+
+137
+00:05:28,433 --> 00:05:31,083
+the observable universe. For decades, it
+
+138
+00:05:31,103 --> 00:05:33,138
+was believed no machine could ever defeat
+
+139
+00:05:33,158 --> 00:05:34,167
+a master.
+
+140
+00:05:34,255 --> 00:05:36,534
+In March twenty sixteen, in Seoul,
+
+141
+00:05:36,554 --> 00:05:39,343
+DeepMind's AlphaGo faces Lee Sedol, one
+
+142
+00:05:39,363 --> 00:05:41,394
+of the greatest players in the world.
+
+143
+00:05:43,205 --> 00:05:45,461
+In game two, the machine makes move
+
+144
+00:05:45,481 --> 00:05:47,655
+thirty-seven: placing a stone where no
+
+145
+00:05:47,675 --> 00:05:49,926
+human professional would ever play.
+
+146
+00:05:50,845 --> 00:05:53,925
+Commentators believe it is a mistake. It
+
+147
+00:05:53,945 --> 00:05:57,559
+is not. That single move decides the game.
+
+148
+00:05:57,579 --> 00:06:00,538
+AlphaGo wins the match four to one.
+
+149
+00:05:59,505 --> 00:06:02,306
+Yet in game four, Lee Sedol responds with
+
+150
+00:06:02,326 --> 00:06:04,257
+his own impossible move, number
+
+151
+00:06:04,277 --> 00:06:06,335
+seventy-eight, handing the machine its
+
+152
+00:06:06,355 --> 00:06:07,851
+only defeat.
+
+153
+00:06:08,818 --> 00:06:10,319
+For the first time, artificial
+
+154
+00:06:10,339 --> 00:06:12,478
+intelligence wasn't just calculating. It
+
+155
+00:06:12,498 --> 00:06:15,121
+appeared to have intuition.
+
+156
+00:06:15,873 --> 00:06:19,390
+Chapter seven. Attention.
+
+157
+00:06:18,718 --> 00:06:21,008
+In twenty seventeen, eight researchers at
+
+158
+00:06:21,028 --> 00:06:22,692
+Google publish a paper with a nearly
+
+159
+00:06:22,712 --> 00:06:26,368
+arrogant title: Attention Is All You Need.
+
+160
+00:06:26,941 --> 00:06:28,651
+They introduce the transformer, an
+
+161
+00:06:28,671 --> 00:06:30,683
+architecture that reads all words in a
+
+162
+00:06:30,703 --> 00:06:32,854
+text at once and learns what to pay
+
+163
+00:06:32,874 --> 00:06:35,659
+attention to. It was the missing piece.
+
+164
+00:06:36,836 --> 00:06:39,277
+Upon it, ever-larger language models are
+
+165
+00:06:39,297 --> 00:06:41,425
+built, trained on a massive portion of
+
+166
+00:06:41,445 --> 00:06:43,093
+the internet's text.
+
+167
+00:06:43,895 --> 00:06:46,011
+On November thirtieth, twenty twenty-two,
+
+168
+00:06:46,031 --> 00:06:48,159
+OpenAI quietly releases a research
+
+169
+00:06:48,179 --> 00:06:50,709
+preview called ChatGPT.
+
+170
+00:06:52,555 --> 00:06:54,451
+Five days later, it reaches one million
+
+171
+00:06:54,471 --> 00:06:57,551
+users. According to UBS estimates, in two
+
+172
+00:06:57,571 --> 00:07:00,244
+months it surpasses one hundred million.
+
+173
+00:07:00,264 --> 00:07:02,229
+No consumer application had ever grown so
+
+174
+00:07:02,249 --> 00:07:03,363
+fast.
+
+175
+00:07:04,341 --> 00:07:06,504
+Suddenly, Turing's question ceased to be
+
+176
+00:07:06,524 --> 00:07:08,686
+philosophy: millions of people were
+
+177
+00:07:08,706 --> 00:07:11,805
+having conversations with a machine.
+
+178
+00:07:12,486 --> 00:07:14,834
+Chapter eight. The summer that never
+
+179
+00:07:14,854 --> 00:07:16,421
+ended.
+
+180
+00:07:16,277 --> 00:07:18,428
+In October twenty twenty-four, artificial
+
+181
+00:07:18,448 --> 00:07:20,379
+intelligence reaches the highest pinnacle
+
+182
+00:07:20,399 --> 00:07:21,558
+of science.
+
+183
+00:07:22,391 --> 00:07:24,914
+John Hopfield and Geoffrey Hinton receive
+
+184
+00:07:24,934 --> 00:07:26,585
+the Nobel Prize in Physics for
+
+185
+00:07:26,605 --> 00:07:29,186
+foundational discoveries enabling neural
+
+186
+00:07:29,206 --> 00:07:30,970
+network learning.
+
+187
+00:07:30,614 --> 00:07:32,858
+One day later, Demis Hassabis and John
+
+188
+00:07:32,878 --> 00:07:35,017
+Jumper from DeepMind share the Nobel
+
+189
+00:07:35,037 --> 00:07:37,444
+Prize in Chemistry with David Baker:
+
+190
+00:07:37,464 --> 00:07:39,580
+their AlphaFold system predicts protein
+
+191
+00:07:39,600 --> 00:07:41,867
+structures, solving a challenge biology
+
+192
+00:07:41,887 --> 00:07:43,744
+pursued for half a century.
+
+193
+00:07:44,873 --> 00:07:47,221
+Hinton, the very man who kept betting on
+
+194
+00:07:47,241 --> 00:07:50,015
+neural networks when nobody else believed.
+
+195
+00:07:50,405 --> 00:07:53,462
+Today, machines write, code, compose
+
+196
+00:07:53,482 --> 00:07:55,563
+music, and generate imagery like the ones
+
+197
+00:07:55,583 --> 00:07:56,987
+in this video.
+
+198
+00:07:57,027 --> 00:07:58,644
+Seventy years after that summer at
+
+199
+00:07:58,664 --> 00:08:00,374
+Dartmouth, artificial intelligence is
+
+200
+00:08:00,394 --> 00:08:01,287
+everywhere.
+
+201
+00:08:03,636 --> 00:08:05,984
+And yet, Turing's question remains open.
+
+202
+00:08:06,004 --> 00:08:08,035
+Can machines think?
+
+203
+00:08:09,618 --> 00:08:11,328
+Perhaps the answer will arrive next
+
+204
+00:08:11,348 --> 00:08:12,988
+summer. Or perhaps it will take another
+
+205
+00:08:13,008 --> 00:08:14,156
+seventy years.

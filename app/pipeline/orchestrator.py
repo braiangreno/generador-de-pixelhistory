@@ -37,15 +37,13 @@ def _meta_path(project_id: str) -> str:
 
 
 def get_project_dir(project_id: str) -> str:
-    pmeta = _meta_path(project_id)
-    if os.path.exists(pmeta):
-        try:
-            data = json.load(open(pmeta, encoding="utf-8"))
-            if data.get("external_path") and os.path.exists(data["external_path"]):
-                return data["external_path"]
-        except Exception:
-            pass
-    return os.path.join(PROJECTS_DIR, project_id)
+    local_dir = os.path.join(PROJECTS_DIR, project_id)
+    # Si existe un directorio hermano en la máquina local con los masters completos (>100MB), usar ese si faltan en local_dir
+    sibling_dir = os.path.join(os.path.dirname(BASE_DIR), project_id)
+    if os.path.exists(os.path.join(sibling_dir, "renders")) and not os.path.exists(os.path.join(local_dir, "renders", "Para_Que_No_Se_Aburran_ES.mp4")) and not os.path.exists(os.path.join(local_dir, "renders", "Historia_IA_PixelArt_ES.mp4")):
+        if os.path.exists(os.path.join(sibling_dir, "renders", "Para_Que_No_Se_Aburran_ES.mp4")) or os.path.exists(os.path.join(sibling_dir, "renders", "Historia_IA_PixelArt_ES.mp4")):
+            return sibling_dir
+    return local_dir
 
 
 def load_meta(project_id: str) -> dict:

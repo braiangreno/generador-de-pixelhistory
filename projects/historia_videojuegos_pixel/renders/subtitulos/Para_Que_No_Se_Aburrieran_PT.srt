@@ -1,0 +1,735 @@
+1
+00:00:00,800 --> 00:00:03,079
+Dezoito de outubro de mil novecentos e
+
+2
+00:00:03,099 --> 00:00:06,081
+cinquenta e oito. Long Island, Nova York.
+
+3
+00:00:05,961 --> 00:00:08,066
+Um físico que trabalhou na bomba atômica
+
+4
+00:00:08,086 --> 00:00:10,155
+tem um problema muito menor: os
+
+5
+00:00:10,175 --> 00:00:12,280
+visitantes do seu laboratório ficam
+
+6
+00:00:12,300 --> 00:00:13,564
+entediados.
+
+7
+00:00:13,959 --> 00:00:15,808
+Então ele conecta um computador a uma
+
+8
+00:00:15,828 --> 00:00:18,850
+tela de cinco polegadas... e desenha uma
+
+9
+00:00:18,870 --> 00:00:19,751
+bola.
+
+10
+00:00:19,951 --> 00:00:21,703
+Formam-se filas imensas.
+
+11
+00:00:23,091 --> 00:00:25,075
+Ele nunca o patenteia.
+
+12
+00:00:25,978 --> 00:00:28,129
+Sessenta e oito anos depois, esse ponto
+
+13
+00:00:28,149 --> 00:00:30,498
+de luz movimenta mais de duzentos bilhões
+
+14
+00:00:30,518 --> 00:00:31,724
+de dólares por ano.
+
+15
+00:00:33,026 --> 00:00:34,956
+E o mundo inteiro conta os dias para um
+
+16
+00:00:34,976 --> 00:00:36,125
+único jogo.
+
+17
+00:00:37,249 --> 00:00:40,023
+Esta é a história dos videogames.
+
+18
+00:00:40,917 --> 00:00:43,783
+Capítulo um. O jogo que ninguém patenteou.
+
+19
+00:00:44,840 --> 00:00:48,001
+Chamava-se Tennis for Two. Uma linha era
+
+20
+00:00:48,021 --> 00:00:50,857
+a quadra. Outra, a rede. E um ponto de
+
+21
+00:00:50,877 --> 00:00:52,211
+luz, a bola.
+
+22
+00:00:52,945 --> 00:00:54,817
+Um botão giratório para o ângulo, um
+
+23
+00:00:54,837 --> 00:00:57,112
+botão para rebater. Nada mais.
+
+24
+00:00:57,426 --> 00:00:59,240
+No ano seguinte, já se podia jogar com a
+
+25
+00:00:59,260 --> 00:01:01,686
+gravidade da Lua... ou de Júpiter.
+
+26
+00:01:02,814 --> 00:01:05,859
+E depois, eles o desmontaram. As peças
+
+27
+00:01:05,879 --> 00:01:07,635
+voltaram para as prateleiras do
+
+28
+00:01:07,655 --> 00:01:08,885
+laboratório.
+
+29
+00:01:08,797 --> 00:01:10,688
+Mas a ideia já estava solta.
+
+30
+00:01:10,939 --> 00:01:13,729
+Em mil novecentos e sessenta e dois, no M
+
+31
+00:01:13,749 --> 00:01:16,527
+I T, um grupo de programadores escreveu
+
+32
+00:01:16,547 --> 00:01:20,242
+Spacewar: duas naves, uma estrela no meio,
+
+33
+00:01:20,262 --> 00:01:21,793
+torpedos.
+
+34
+00:01:20,855 --> 00:01:22,611
+Não era vendido. Era copiado. De
+
+35
+00:01:22,631 --> 00:01:24,237
+computador em computador... Foi o
+
+36
+00:01:24,257 --> 00:01:26,136
+primeiro jogo que viajou.
+
+37
+00:01:28,598 --> 00:01:31,186
+Capítulo dois. A caixa de moedas.
+
+38
+00:01:32,144 --> 00:01:34,040
+Ralph Baer era engenheiro e tinha uma
+
+39
+00:01:34,060 --> 00:01:36,338
+pergunta: se em quase todas as casas
+
+40
+00:01:36,358 --> 00:01:38,591
+havia uma televisão... por que ela só
+
+41
+00:01:38,611 --> 00:01:40,351
+servia para assistir?
+
+42
+00:01:41,078 --> 00:01:43,403
+Em mil novecentos e sessenta e oito ele
+
+43
+00:01:43,423 --> 00:01:45,981
+já tinha um protótipo. Em mil novecentos
+
+44
+00:01:46,001 --> 00:01:48,477
+e setenta e dois saiu à venda como
+
+45
+00:01:48,497 --> 00:01:51,484
+Magnavox Odyssey: o primeiro console
+
+46
+00:01:51,504 --> 00:01:52,489
+doméstico.
+
+47
+00:01:51,598 --> 00:01:53,784
+Um de seus jogos era um pingue-pongue. Um
+
+48
+00:01:53,804 --> 00:01:56,547
+jovem chamado Nolan Bushnell o testou em
+
+49
+00:01:56,567 --> 00:01:59,322
+uma demonstração. Semanas depois, fundou
+
+50
+00:01:59,342 --> 00:02:00,734
+a Atari.
+
+51
+00:02:00,986 --> 00:02:04,507
+Seu engenheiro, Al Alcorn, montou sua
+
+52
+00:02:04,527 --> 00:02:06,957
+própria versão em uma caixa de madeira.
+
+53
+00:02:06,977 --> 00:02:09,906
+Eles a deixaram em um bar da Califórnia,
+
+54
+00:02:09,926 --> 00:02:11,701
+para ver o que acontecia.
+
+55
+00:02:09,468 --> 00:02:12,060
+Poucos dias depois ligaram: a máquina não
+
+56
+00:02:12,080 --> 00:02:13,263
+funcionava.
+
+57
+00:02:14,018 --> 00:02:16,715
+Alcorn a abriu. Não estava quebrada...
+
+58
+00:02:16,735 --> 00:02:18,788
+Estava cheia de moedas.
+
+59
+00:02:19,498 --> 00:02:21,018
+Chamava-se Pong.
+
+60
+00:02:21,732 --> 00:02:24,459
+Capítulo três. A febre e o enterro.
+
+61
+00:02:25,579 --> 00:02:28,369
+Em mil novecentos e setenta e sete, a
+
+62
+00:02:28,389 --> 00:02:31,132
+Atari lançou um console com cartuchos:
+
+63
+00:02:31,152 --> 00:02:33,349
+uma única máquina, todos os jogos que
+
+64
+00:02:33,369 --> 00:02:34,808
+você quisesse.
+
+65
+00:02:33,910 --> 00:02:35,957
+Os fliperamas se encheram de luzes e
+
+66
+00:02:35,977 --> 00:02:38,569
+barulho. Em mil novecentos e oitenta e
+
+67
+00:02:38,589 --> 00:02:40,717
+três, os videogames domésticos já
+
+68
+00:02:40,737 --> 00:02:42,760
+movimentavam três bilhões e duzentos
+
+69
+00:02:42,780 --> 00:02:45,461
+milhões de dólares nos Estados Unidos.
+
+70
+00:02:45,932 --> 00:02:48,055
+E então, tudo desmoronou.
+
+71
+00:02:48,979 --> 00:02:51,444
+Consoles demais. Jogos demais feitos às
+
+72
+00:02:51,464 --> 00:02:54,091
+pressas. As pessoas deixaram de confiar...
+
+73
+00:02:54,111 --> 00:02:55,607
+e deixaram de comprar.
+
+74
+00:02:56,858 --> 00:02:59,497
+Em setembro de mil novecentos e oitenta e
+
+75
+00:02:59,517 --> 00:03:01,563
+três, caminhões da Atari despejaram
+
+76
+00:03:01,583 --> 00:03:03,955
+cartuchos encalhados de E. T. e outros
+
+77
+00:03:03,975 --> 00:03:05,975
+jogos em um aterro no deserto do Novo
+
+78
+00:03:05,995 --> 00:03:06,969
+México.
+
+79
+00:03:07,000 --> 00:03:09,499
+Em mil novecentos e oitenta e cinco, o
+
+80
+00:03:09,519 --> 00:03:12,657
+mercado havia caído quase noventa e sete
+
+81
+00:03:12,677 --> 00:03:13,535
+por cento.
+
+82
+00:03:13,863 --> 00:03:16,026
+Os analistas disseram que era apenas uma
+
+83
+00:03:16,046 --> 00:03:19,469
+moda... E que tinha acabado.
+
+84
+00:03:18,889 --> 00:03:22,824
+Capítulo quatro. O cavalo de Troia.
+
+85
+00:03:22,435 --> 00:03:24,958
+Do outro lado do mundo, a Nintendo vendia
+
+86
+00:03:24,978 --> 00:03:27,860
+desde mil novecentos e oitenta e três um
+
+87
+00:03:27,880 --> 00:03:30,363
+console familiar: o Famicom.
+
+88
+00:03:30,162 --> 00:03:32,255
+Ela queria chegar aos Estados Unidos. Mas
+
+89
+00:03:32,275 --> 00:03:34,635
+lá, depois do desastre, as lojas não
+
+90
+00:03:34,655 --> 00:03:37,487
+queriam nem ouvir a palavra videogame.
+
+91
+00:03:38,636 --> 00:03:41,112
+Então a Nintendo não vendeu um videogame..
+
+92
+00:03:41,132 --> 00:03:43,128
+. Vendeu um brinquedo.
+
+93
+00:03:43,269 --> 00:03:45,977
+Mudou o formato, mudou o nome, e colocou
+
+94
+00:03:45,997 --> 00:03:49,217
+um robô ao lado. Em dezoito de outubro de
+
+95
+00:03:49,237 --> 00:03:52,084
+mil novecentos e oitenta e cinco, testou
+
+96
+00:03:52,104 --> 00:03:53,984
+o aparelho em Nova York.
+
+97
+00:03:53,185 --> 00:03:55,545
+Vinte e sete anos exatos depois de Tennis
+
+98
+00:03:55,565 --> 00:03:56,330
+for Two.
+
+99
+00:03:56,988 --> 00:03:59,255
+Entre seus jogos havia um com um
+
+100
+00:03:59,275 --> 00:04:02,018
+encanador. Super Mario Bros vendeu mais
+
+101
+00:04:02,038 --> 00:04:03,848
+de quarenta milhões de cópias.
+
+102
+00:04:03,960 --> 00:04:06,726
+E em mil novecentos e oitenta e nove, a
+
+103
+00:04:06,746 --> 00:04:09,164
+Nintendo colocou os videogames no bolso:
+
+104
+00:04:09,184 --> 00:04:12,492
+o Game Boy. Com Tetris na caixa.
+
+105
+00:04:12,685 --> 00:04:15,226
+Capítulo cinco. A traição.
+
+106
+00:04:15,853 --> 00:04:17,760
+No início dos anos noventa, Sony e
+
+107
+00:04:17,780 --> 00:04:20,152
+Nintendo trabalhavam juntas em um leitor
+
+108
+00:04:20,172 --> 00:04:22,620
+de C D para o Super Nintendo.
+
+109
+00:04:22,750 --> 00:04:24,936
+Em mil novecentos e noventa e um, a
+
+110
+00:04:24,956 --> 00:04:27,734
+Nintendo anunciou que faria isso... com a
+
+111
+00:04:27,754 --> 00:04:28,774
+Philips.
+
+112
+00:04:27,986 --> 00:04:30,857
+Na Sony, muitos queriam virar a página.
+
+113
+00:04:30,877 --> 00:04:34,521
+Um engenheiro, Ken Kutaragi, não.
+
+114
+00:04:34,279 --> 00:04:36,430
+Em três de dezembro de mil novecentos e
+
+115
+00:04:36,450 --> 00:04:39,170
+noventa e quatro, a Sony lançou no Japão
+
+116
+00:04:39,190 --> 00:04:42,920
+seu próprio console. Usava C D. Apostava
+
+117
+00:04:42,940 --> 00:04:44,669
+tudo no três D.
+
+118
+00:04:43,818 --> 00:04:45,981
+Chamava-se PlayStation. Vendeu mais de
+
+119
+00:04:46,001 --> 00:04:47,195
+cento e dois milhões.
+
+120
+00:04:49,298 --> 00:04:52,506
+A Nintendo havia perdido um parceiro... E
+
+121
+00:04:52,526 --> 00:04:53,976
+ganhado um rival.
+
+122
+00:04:54,626 --> 00:04:57,492
+Capítulo seis. A cidade aberta.
+
+123
+00:04:57,794 --> 00:05:00,630
+No ano dois mil chegou o PlayStation dois.
+
+124
+00:05:00,650 --> 00:05:04,322
+Além de jogos, lia D V D, justo quando o
+
+125
+00:05:04,342 --> 00:05:07,069
+D V D se tornava o formato dos filmes.
+
+126
+00:05:07,559 --> 00:05:11,034
+Vendeu mais de cento e sessenta milhões:
+
+127
+00:05:11,054 --> 00:05:13,100
+até hoje é o console mais vendido da
+
+128
+00:05:13,120 --> 00:05:13,908
+história.
+
+129
+00:05:14,079 --> 00:05:16,996
+E em outubro de dois mil e um, um estúdio
+
+130
+00:05:17,016 --> 00:05:19,330
+de Edimburgo lançou um jogo que mudou as
+
+131
+00:05:19,350 --> 00:05:22,240
+regras: Grand Theft Auto três.
+
+132
+00:05:21,806 --> 00:05:24,398
+Uma cidade inteira, em três D, onde você
+
+133
+00:05:24,418 --> 00:05:26,778
+podia ir aonde quisesse. Já não era uma
+
+134
+00:05:26,798 --> 00:05:28,295
+fase. Era um mundo.
+
+135
+00:05:30,179 --> 00:05:32,395
+Guarde esse nome. Ele vai voltar.
+
+136
+00:05:33,696 --> 00:05:35,587
+Capítulo sete. Todos jogam.
+
+137
+00:05:36,864 --> 00:05:38,539
+Em dois mil e seis, o Wii fez o
+
+138
+00:05:38,559 --> 00:05:41,070
+impensável: colocou para jogar pessoas
+
+139
+00:05:41,090 --> 00:05:43,079
+que nunca tinham tocado num controle.
+
+140
+00:05:43,099 --> 00:05:46,747
+Avós. Pais. Crianças. Todos mexendo o
+
+141
+00:05:46,767 --> 00:05:48,554
+braço em frente à televisão.
+
+142
+00:05:49,496 --> 00:05:52,455
+Mais de cento e um milhões de consoles.
+
+143
+00:05:52,695 --> 00:05:55,682
+Depois vieram os celulares. Hoje, mais da
+
+144
+00:05:55,702 --> 00:05:57,783
+metade do que a indústria fatura sai de
+
+145
+00:05:57,803 --> 00:05:59,787
+uma tela que levamos no bolso.
+
+146
+00:06:00,951 --> 00:06:03,067
+Em dois mil e onze, um jogo feito de
+
+147
+00:06:03,087 --> 00:06:05,529
+blocos deixou de ser uma versão de testes.
+
+148
+00:06:05,549 --> 00:06:09,023
+Minecraft. Mais de trezentos e cinquenta
+
+149
+00:06:09,043 --> 00:06:12,471
+milhões de cópias: o jogo mais vendido da
+
+150
+00:06:12,491 --> 00:06:13,477
+história.
+
+151
+00:06:12,602 --> 00:06:15,008
+E em dezessete de setembro de dois mil e
+
+152
+00:06:15,028 --> 00:06:19,973
+treze, aquele nome voltou. G T A cinco.
+
+153
+00:06:19,115 --> 00:06:21,568
+Em três dias arrecadou um bilhão de
+
+154
+00:06:21,588 --> 00:06:24,192
+dólares... Nenhum filme, nenhum disco,
+
+155
+00:06:24,212 --> 00:06:26,131
+nenhum produto de entretenimento havia
+
+156
+00:06:26,151 --> 00:06:27,786
+feito isso tão rápido.
+
+157
+00:06:29,726 --> 00:06:31,942
+Capítulo oito. Treze anos.
+
+158
+00:06:32,969 --> 00:06:35,016
+Em dois mil e dezessete, o Nintendo
+
+159
+00:06:35,036 --> 00:06:37,071
+Switch apagou a linha entre o console de
+
+160
+00:06:37,091 --> 00:06:38,993
+mesa e o portátil.
+
+161
+00:06:39,036 --> 00:06:42,162
+Já soma mais de cento e cinquenta e sete
+
+162
+00:06:42,182 --> 00:06:44,554
+milhões: faltam menos de três para
+
+163
+00:06:44,574 --> 00:06:46,500
+alcançar o PlayStation dois.
+
+164
+00:06:45,631 --> 00:06:48,397
+Seu sucessor, o Switch dois, vendeu três
+
+165
+00:06:48,417 --> 00:06:50,917
+milhões e meio em seus primeiros quatro
+
+166
+00:06:50,937 --> 00:06:53,378
+dias. Nenhum console da Nintendo havia
+
+167
+00:06:53,398 --> 00:06:55,138
+começado tão rápido.
+
+168
+00:06:55,396 --> 00:06:58,023
+Em dois mil e vinte e cinco, a indústria
+
+169
+00:06:58,043 --> 00:07:00,345
+superou pela primeira vez os duzentos
+
+170
+00:07:00,365 --> 00:07:02,163
+bilhões de dólares.
+
+171
+00:07:02,067 --> 00:07:06,528
+E enquanto isso, G T A cinco nunca deixou
+
+172
+00:07:06,548 --> 00:07:09,338
+de vender: mais de duzentos e trinta
+
+173
+00:07:09,358 --> 00:07:10,878
+milhões de cópias.
+
+174
+00:07:09,341 --> 00:07:12,223
+Seu sucessor foi anunciado. Foi adiado
+
+175
+00:07:12,243 --> 00:07:14,158
+uma vez. E outra.
+
+176
+00:07:14,200 --> 00:07:17,338
+Agora tem data: dezenove de novembro de
+
+177
+00:07:17,358 --> 00:07:20,542
+dois mil e vinte e seis. Treze anos
+
+178
+00:07:20,562 --> 00:07:21,478
+depois.
+
+179
+00:07:21,341 --> 00:07:23,213
+Tudo começou com um ponto de luz numa
+
+180
+00:07:23,233 --> 00:07:25,257
+tela de cinco polegadas, para que os
+
+181
+00:07:25,277 --> 00:07:28,090
+visitantes não fiquem entediados. Hoje é
+
+182
+00:07:28,110 --> 00:07:29,548
+uma cidade inteira.
+
+183
+00:07:30,694 --> 00:07:32,926
+E o próximo capítulo desta história...
+
+184
+00:07:32,946 --> 00:07:34,907
+está prestes a começar.

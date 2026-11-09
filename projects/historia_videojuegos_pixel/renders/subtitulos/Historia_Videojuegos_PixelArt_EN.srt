@@ -1,0 +1,699 @@
+1
+00:00:00,800 --> 00:00:03,694
+October eighteenth, nineteen fifty-eight.
+
+2
+00:00:03,714 --> 00:00:05,803
+Long Island, New York.
+
+3
+00:00:05,961 --> 00:00:08,309
+A physicist who worked on the atomic bomb
+
+4
+00:00:08,329 --> 00:00:11,073
+has a much smaller problem: visitors to
+
+5
+00:00:11,093 --> 00:00:13,425
+his laboratory are getting bored.
+
+6
+00:00:13,959 --> 00:00:16,098
+So he connects a computer to a five-inch
+
+7
+00:00:16,118 --> 00:00:18,776
+screen... and draws a ball.
+
+8
+00:00:19,951 --> 00:00:22,678
+Massive lines begin to form.
+
+9
+00:00:23,091 --> 00:00:24,889
+He never patents it.
+
+10
+00:00:25,978 --> 00:00:27,885
+Sixty-eight years later, that dot of
+
+11
+00:00:27,905 --> 00:00:30,091
+light moves more than two hundred billion
+
+12
+00:00:30,111 --> 00:00:31,631
+dollars a year.
+
+13
+00:00:33,026 --> 00:00:35,189
+And the entire world is counting down the
+
+14
+00:00:35,209 --> 00:00:37,425
+days for a single game.
+
+15
+00:00:37,249 --> 00:00:40,487
+This is the history of video games.
+
+16
+00:00:40,917 --> 00:00:45,130
+Chapter one. The game nobody patented.
+
+17
+00:00:44,840 --> 00:00:47,827
+It was called Tennis for Two. One line
+
+18
+00:00:47,847 --> 00:00:50,520
+was the court. Another, the net. And a
+
+19
+00:00:50,540 --> 00:00:52,629
+dot of light, the ball.
+
+20
+00:00:52,945 --> 00:00:56,245
+A knob for the angle, a button to hit.
+
+21
+00:00:56,265 --> 00:00:57,297
+Nothing else.
+
+22
+00:00:57,426 --> 00:00:59,705
+The following year, you could play with
+
+23
+00:00:59,725 --> 00:01:02,707
+the gravity of the Moon... or Jupiter.
+
+24
+00:01:02,814 --> 00:01:06,219
+And afterwards, they dismantled it. The
+
+25
+00:01:06,239 --> 00:01:09,024
+parts went back to the laboratory shelves.
+
+26
+00:01:08,797 --> 00:01:10,967
+But the idea was already out.
+
+27
+00:01:10,939 --> 00:01:13,427
+In nineteen sixty-two, at M I T, a group
+
+28
+00:01:13,447 --> 00:01:16,654
+of programmers wrote Spacewar: two ships,
+
+29
+00:01:16,674 --> 00:01:19,564
+a star in the middle, torpedoes.
+
+30
+00:01:20,855 --> 00:01:24,063
+It wasn't sold. It was copied. From
+
+31
+00:01:24,083 --> 00:01:26,686
+computer to computer... It was the first
+
+32
+00:01:26,706 --> 00:01:28,923
+game that traveled.
+
+33
+00:01:28,598 --> 00:01:32,161
+Chapter two. The coin box.
+
+34
+00:01:32,144 --> 00:01:34,191
+Ralph Baer was an engineer with a
+
+35
+00:01:34,211 --> 00:01:36,698
+question: if almost every home had a
+
+36
+00:01:36,718 --> 00:01:38,869
+television... why was it only used for
+
+37
+00:01:38,889 --> 00:01:39,840
+watching?
+
+38
+00:01:41,078 --> 00:01:43,450
+By nineteen sixty-eight he had a
+
+39
+00:01:43,470 --> 00:01:46,375
+prototype. In nineteen seventy-two it
+
+40
+00:01:46,395 --> 00:01:49,557
+went on sale as the Magnavox Odyssey: the
+
+41
+00:01:49,577 --> 00:01:51,468
+first home console.
+
+42
+00:01:51,598 --> 00:01:54,306
+One of its games was ping-pong. A young
+
+43
+00:01:54,326 --> 00:01:56,977
+man named Nolan Bushnell tried it at a
+
+44
+00:01:56,997 --> 00:01:59,751
+demonstration. Weeks later, he founded
+
+45
+00:01:59,771 --> 00:02:00,827
+Atari.
+
+46
+00:02:00,986 --> 00:02:04,112
+His engineer, Al Alcorn, built his own
+
+47
+00:02:04,132 --> 00:02:06,910
+version inside a wooden cabinet. They
+
+48
+00:02:06,930 --> 00:02:09,465
+left it in a California bar, just to see
+
+49
+00:02:09,485 --> 00:02:10,958
+what would happen.
+
+50
+00:02:09,468 --> 00:02:11,840
+A few days later they got a call: the
+
+51
+00:02:11,860 --> 00:02:13,820
+machine wasn't working.
+
+52
+00:02:14,018 --> 00:02:17,144
+Alcorn opened it up. It wasn't broken...
+
+53
+00:02:17,164 --> 00:02:19,903
+It was overflowing with coins.
+
+54
+00:02:19,498 --> 00:02:21,993
+It was called Pong.
+
+55
+00:02:21,732 --> 00:02:26,363
+Chapter three. The fever and the burial.
+
+56
+00:02:25,579 --> 00:02:28,090
+In nineteen seventy-seven, Atari launched
+
+57
+00:02:28,110 --> 00:02:31,167
+a cartridge console: one machine, all the
+
+58
+00:02:31,187 --> 00:02:32,486
+games you could want.
+
+59
+00:02:33,910 --> 00:02:36,932
+Arcades filled with lights and noise. By
+
+60
+00:02:36,952 --> 00:02:39,161
+nineteen eighty-three, home video games
+
+61
+00:02:39,181 --> 00:02:41,228
+were generating three point two billion
+
+62
+00:02:41,248 --> 00:02:43,417
+dollars in the United States.
+
+63
+00:02:45,932 --> 00:02:49,634
+And then, everything came crashing down.
+
+64
+00:02:48,979 --> 00:02:52,291
+Too many consoles. Too many rushed games.
+
+65
+00:02:52,311 --> 00:02:56,397
+People lost trust... and stopped buying.
+
+66
+00:02:56,858 --> 00:02:59,624
+In September nineteen eighty-three, Atari
+
+67
+00:02:59,644 --> 00:03:02,492
+trucks dumped unsold cartridges of E. T.
+
+68
+00:03:02,512 --> 00:03:05,267
+and other games into a landfill in the
+
+69
+00:03:05,287 --> 00:03:07,108
+New Mexico desert.
+
+70
+00:03:07,000 --> 00:03:08,989
+By nineteen eighty-five, the market had
+
+71
+00:03:09,009 --> 00:03:11,863
+plunged nearly ninety-seven percent.
+
+72
+00:03:13,863 --> 00:03:16,885
+Analysts said it was just a fad... And
+
+73
+00:03:16,905 --> 00:03:18,587
+that it was over.
+
+74
+00:03:18,889 --> 00:03:22,498
+Chapter four. The Trojan horse.
+
+75
+00:03:22,435 --> 00:03:24,911
+On the other side of the world, Nintendo
+
+76
+00:03:24,931 --> 00:03:27,071
+had been selling a family console since
+
+77
+00:03:27,091 --> 00:03:30,178
+nineteen eighty-three: the Famicom.
+
+78
+00:03:30,162 --> 00:03:32,452
+It wanted to reach the United States. But
+
+79
+00:03:32,472 --> 00:03:34,577
+there, after the crash, stores didn't
+
+80
+00:03:34,597 --> 00:03:37,347
+even want to hear the words video game.
+
+81
+00:03:38,636 --> 00:03:41,484
+So Nintendo didn't sell a video game...
+
+82
+00:03:41,504 --> 00:03:43,128
+It sold a toy.
+
+83
+00:03:43,269 --> 00:03:45,815
+They changed its shape, changed its name,
+
+84
+00:03:45,835 --> 00:03:48,799
+and packed a robot next to it. On October
+
+85
+00:03:48,819 --> 00:03:51,341
+eighteenth, nineteen eighty-five, they
+
+86
+00:03:51,361 --> 00:03:53,287
+tested it in New York.
+
+87
+00:03:53,185 --> 00:03:55,255
+Exactly twenty-seven years after Tennis
+
+88
+00:03:55,275 --> 00:03:56,284
+for Two.
+
+89
+00:03:56,988 --> 00:03:58,965
+Among its games was one starring a
+
+90
+00:03:58,985 --> 00:04:01,937
+plumber. Super Mario Bros sold over forty
+
+91
+00:04:01,957 --> 00:04:03,291
+million copies.
+
+92
+00:04:03,960 --> 00:04:06,738
+And in nineteen eighty-nine, Nintendo put
+
+93
+00:04:06,758 --> 00:04:10,128
+video games in your pocket: the Game Boy.
+
+94
+00:04:10,148 --> 00:04:12,213
+With Tetris in the box.
+
+95
+00:04:12,685 --> 00:04:16,341
+Chapter five. The betrayal.
+
+96
+00:04:15,853 --> 00:04:18,410
+In the early nineties, Sony and Nintendo
+
+97
+00:04:18,430 --> 00:04:20,965
+were working together on a C D drive for
+
+98
+00:04:20,985 --> 00:04:22,713
+the Super Nintendo.
+
+99
+00:04:22,750 --> 00:04:25,191
+In nineteen ninety-one, Nintendo
+
+100
+00:04:25,211 --> 00:04:27,107
+announced it would build it... with
+
+101
+00:04:27,127 --> 00:04:28,217
+Philips.
+
+102
+00:04:27,986 --> 00:04:30,613
+At Sony, many wanted to move on. One
+
+103
+00:04:30,633 --> 00:04:33,732
+engineer, Ken Kutaragi, did not.
+
+104
+00:04:34,279 --> 00:04:36,906
+On December third, nineteen ninety-four,
+
+105
+00:04:36,926 --> 00:04:39,809
+Sony launched its own console in Japan.
+
+106
+00:04:39,829 --> 00:04:42,560
+It used C Ds. It bet everything on three
+
+107
+00:04:42,580 --> 00:04:43,415
+D.
+
+108
+00:04:43,818 --> 00:04:46,062
+It was called PlayStation. It sold over
+
+109
+00:04:46,082 --> 00:04:48,263
+one hundred and two million units.
+
+110
+00:04:49,298 --> 00:04:52,796
+Nintendo had lost a partner... And gained
+
+111
+00:04:52,816 --> 00:04:54,347
+a rival.
+
+112
+00:04:54,626 --> 00:04:57,957
+Chapter six. The open city.
+
+113
+00:04:57,794 --> 00:04:59,748
+In the year two thousand came the
+
+114
+00:04:59,768 --> 00:05:03,045
+PlayStation two. Beyond games, it played
+
+115
+00:05:03,065 --> 00:05:06,064
+D V Ds, right as D V D became the
+
+116
+00:05:06,084 --> 00:05:07,719
+standard for movies.
+
+117
+00:05:07,559 --> 00:05:09,397
+It sold over one hundred and sixty
+
+118
+00:05:09,417 --> 00:05:12,287
+million units: even today, it remains the
+
+119
+00:05:12,307 --> 00:05:15,116
+best-selling console in history.
+
+120
+00:05:14,079 --> 00:05:16,613
+And in October two thousand and one, an
+
+121
+00:05:16,633 --> 00:05:18,900
+Edinburgh studio released a game that
+
+122
+00:05:18,920 --> 00:05:23,168
+changed the rules: Grand Theft Auto three.
+
+123
+00:05:21,806 --> 00:05:24,654
+An entire city, in three D, where you
+
+124
+00:05:24,674 --> 00:05:26,941
+could go anywhere you wanted. It was no
+
+125
+00:05:26,961 --> 00:05:29,688
+longer a level. It was a world.
+
+126
+00:05:30,179 --> 00:05:34,485
+Remember that name. It will return.
+
+127
+00:05:33,696 --> 00:05:37,120
+Chapter seven. Everyone plays.
+
+128
+00:05:36,864 --> 00:05:39,329
+In two thousand and six, the Wii did the
+
+129
+00:05:39,349 --> 00:05:41,790
+unthinkable: it got people playing who
+
+130
+00:05:41,810 --> 00:05:43,856
+had never touched a controller.
+
+131
+00:05:43,876 --> 00:05:46,712
+Grandparents. Parents. Kids. Everyone
+
+132
+00:05:46,732 --> 00:05:49,483
+swinging their arm in front of the T V.
+
+133
+00:05:49,496 --> 00:05:52,409
+Over one hundred and one million consoles.
+
+134
+00:05:52,695 --> 00:05:55,845
+Then came smartphones. Today, more than
+
+135
+00:05:55,865 --> 00:05:57,946
+half of the industry's revenue comes from
+
+136
+00:05:57,966 --> 00:06:00,530
+a screen we carry in our pocket.
+
+137
+00:06:00,951 --> 00:06:03,729
+In two thousand and eleven, a game made
+
+138
+00:06:03,749 --> 00:06:07,642
+of blocks left beta behind. Minecraft.
+
+139
+00:06:07,662 --> 00:06:09,371
+Over three hundred and fifty million
+
+140
+00:06:09,391 --> 00:06:13,105
+copies: the best-selling game in history.
+
+141
+00:06:12,602 --> 00:06:14,602
+And on September seventeenth, two
+
+142
+00:06:14,622 --> 00:06:17,946
+thousand and thirteen, that name returned.
+
+143
+00:06:17,966 --> 00:06:20,763
+G T A five.
+
+144
+00:06:19,115 --> 00:06:21,858
+In three days it grossed one billion
+
+145
+00:06:21,878 --> 00:06:25,039
+dollars... No movie, no album, no
+
+146
+00:06:25,059 --> 00:06:26,920
+entertainment product had ever done it
+
+147
+00:06:26,940 --> 00:06:28,947
+that fast.
+
+148
+00:06:29,726 --> 00:06:32,639
+Chapter eight. Thirteen years.
+
+149
+00:06:32,969 --> 00:06:35,201
+In two thousand and seventeen, the
+
+150
+00:06:35,221 --> 00:06:37,872
+Nintendo Switch erased the line between
+
+151
+00:06:37,892 --> 00:06:40,433
+home console and handheld.
+
+152
+00:06:39,036 --> 00:06:40,734
+It has sold over one hundred and
+
+153
+00:06:40,754 --> 00:06:43,381
+fifty-seven million units: less than
+
+154
+00:06:43,401 --> 00:06:45,111
+three million away from catching the
+
+155
+00:06:45,131 --> 00:06:46,686
+PlayStation two.
+
+156
+00:06:45,631 --> 00:06:48,316
+Its successor, the Switch two, sold three
+
+157
+00:06:48,336 --> 00:06:50,928
+and a half million in its first four days.
+
+158
+00:06:50,948 --> 00:06:54,214
+No Nintendo console had ever launched
+
+159
+00:06:54,234 --> 00:06:55,881
+that fast.
+
+160
+00:06:55,396 --> 00:06:57,512
+In two thousand and twenty-five, the
+
+161
+00:06:57,532 --> 00:06:59,846
+industry surpassed two hundred billion
+
+162
+00:06:59,866 --> 00:07:01,792
+dollars for the first time.
+
+163
+00:07:02,067 --> 00:07:05,344
+And meanwhile, G T A five never stopped
+
+164
+00:07:05,364 --> 00:07:07,527
+selling: over two hundred and thirty
+
+165
+00:07:07,547 --> 00:07:09,159
+million copies.
+
+166
+00:07:09,341 --> 00:07:13,361
+Its successor was announced. Delayed once.
+
+167
+00:07:13,381 --> 00:07:16,015
+And again.
+
+168
+00:07:14,200 --> 00:07:16,502
+Now it has a date: November nineteenth,
+
+169
+00:07:16,522 --> 00:07:18,731
+two thousand and twenty-six. Thirteen
+
+170
+00:07:18,751 --> 00:07:19,713
+years later.
+
+171
+00:07:21,341 --> 00:07:23,318
+It all started with a dot of light on a
+
+172
+00:07:23,338 --> 00:07:25,907
+five-inch screen, so lab visitors don't
+
+173
+00:07:25,927 --> 00:07:30,105
+get bored. Today, it is an entire city.
+
+174
+00:07:30,694 --> 00:07:33,820
+And the next chapter of this story... is
+
+175
+00:07:33,840 --> 00:07:35,139
+about to begin.

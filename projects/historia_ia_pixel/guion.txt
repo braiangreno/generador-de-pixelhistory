@@ -1,0 +1,323 @@
+Le dieron un verano. Tardó 70 años — Guion:
+La historia de la IA
+ Nov 5, 2026  ·  @Braian Greno
+Concepto
+El gancho elegido es "Le dieron un verano. Tardó 70 años.": en 1955 cuatro científicos
+pidieron dos meses y diez personas para empezar a enseñarle a una máquina a pensar, y la
+historia todavía no terminó. Funciona porque abre con una apuesta concreta y fallida, y le
+da al video un hilo narrativo: optimismo, inviernos, resurrección.
+Formato: canal de documentales sin rostro, 16:9 para YouTube, 9 a 10 minutos, 8 capítulos.
+Tono sobrio y cinematográfico, con voz en off en español neutro. Visual en 3D oscuro,
+tipografía dorada y acentos cian, años gigantes como hitos. Los ángulos 2 a 10 quedan
+adentro del guion como capítulos y sirven como Shorts derivados.
+#
+Ángulo
+Gancho de apertura
+1
+Un verano que duró 70 años
+(elegido)
+Pidieron dos meses para enseñarle a pensar a
+una máquina
+2
+La idea que todos dieron por
+muerta
+Las redes neuronales fueron ridiculizadas en
+1969 y hoy mueven todo
+3
+Los dos inviernos de la IA
+Dos veces se cortó la plata y casi desaparece el
+campo
+4
+¿Pueden pensar las máquinas?
+Una pregunta de 1950 que seguimos sin cerrar
+5
+La promesa de la Marina de 1958
+Anunciaron una máquina que "sería consciente
+de su existencia"
+6
+Placas de videojuegos
+Dos GPU de gamer en un dormitorio cambiaron
+la visión artificial
+7
+La jugada 37
+Una máquina hizo una jugada que ningún
+humano habría hecho
+8
+Ocho autores, un paper
+"Attention Is All You Need" y el origen del
+ChatGPT
+9
+Cinco días
+Un millón de usuarios en cinco días: el producto
+más rápido de la historia
+10
+Del Nobel al bolsillo
+En 2024 la IA ganó dos premios Nobel
+Le dieron un verano. Tardó 70 años — Guion: La historia de la IA
+Page 1 of 8
+
+Guion completo
+Son unas 1.300 palabras de locución, entre 9 y 10 minutos a ritmo documental. Cada
+capítulo lleva la narración tal cual se graba, el plano 3D y el texto en pantalla. La apertura y
+el capítulo 1 son el piloto ya renderizado.
+Apertura · Un verano (0:00–0:24)
+Visual 3D: "1955" en oro gigante y diez esferas cian que se encienden. Después, una fila de
+70 luces de 1956 a 2026 y el título en oro. En pantalla: DOS MESES · DIEZ PERSONAS / 70
+AÑOS / LA HISTORIA DE LA INTELIGENCIA ARTIFICIAL
+En 1955, cuatro científicos pidieron dinero para un plan audaz. Dos meses de verano,
+y diez personas, para enseñarle a una máquina a pensar. Creían que un verano
+alcanzaba. Ya pasaron setenta años. Y la historia todavía no terminó. Esta es la
+historia de la inteligencia artificial.
+Capítulo 1 · La pregunta (1950–1956)
+Visual 3D: "1950" en oro; la cámara sube hasta la pregunta flotando en cian. Dos monolitos
+con pantallas, uno cálido y uno frío, que terminan iguales. Los cuatro nombres en el
+espacio y el título que se enciende. En pantalla: ALAN TURING · 1950 / EL JUEGO DE LA
+IMITACIÓN / DARTMOUTH COLLEGE · VERANO DE 1956
+Mil novecientos cincuenta. El matemático británico Alan Turing publica un artículo
+que arranca con una pregunta incómoda: ¿pueden pensar las máquinas? En lugar de
+responderla, propone un juego. Si conversas con una máquina y no puedes
+distinguirla de una persona, ¿importa realmente cómo lo hace? Cinco años después,
+John McCarthy, Marvin Minsky, Claude Shannon y Nathaniel Rochester firman la
+propuesta para un taller de verano en Dartmouth. Y en ese documento aparece, por
+primera vez, un nombre: inteligencia artificial. Eran optimistas. Demasiado optimistas.
+Y lo que vino después estuvo a punto de enterrar la idea para siempre.
+Capítulo 2 · La máquina que iba a ser consciente (1958–1969)
+Visual 3D: una cuadrícula de 20 × 20 fotocélulas que se encienden y una neurona artificial
+con cables que convergen. Después, el libro "Perceptrons" cae y apaga la red. En pantalla:
+EL PERCEPTRÓN · 1958 / "CONSCIENTE DE SU EXISTENCIA" — THE NEW YORK TIMES /
+MINSKY Y PAPERT · 1969
+Le dieron un verano. Tardó 70 años — Guion: La historia de la IA
+Page 2 of 8
+
+Julio de 1958. La Marina de Estados Unidos presenta ante la prensa un invento de
+Frank Rosenblatt, un psicólogo de 30 años: el perceptrón. Una máquina que no se
+programa: aprende de sus errores. Al día siguiente, The New York Times escribe que
+la Marina espera que pueda caminar, hablar, ver, escribir y ser consciente de su
+existencia. La realidad era más modesta. El perceptrón aprendía a distinguir figuras
+simples en una cuadrícula de veinte por veinte fotocélulas. Pero la idea era enorme:
+una red de neuronas artificiales que ajusta sus conexiones con la experiencia. En
+1969, Marvin Minsky y Seymour Papert publican un libro llamado "Perceptrons".
+Demuestran que una red de una sola capa no puede resolver problemas tan básicos
+como el "o exclusivo". El golpe es devastador. El dinero para redes neuronales se
+evapora. La idea que hoy mueve todo pasa a ser, durante años, una curiosidad
+abandonada.
+Capítulo 3 · El primer invierno (1966–1980)
+Visual 3D: la escena se congela: luz azul, escarcha sobre los años, un medidor de
+financiamiento que cae a cero. En pantalla: INFORME ALPAC · 1966 / "DE 3 A 8 AÑOS" —
+MINSKY, 1970 / INFORME LIGHTHILL · 1973
+Las promesas seguían creciendo. En 1970, Minsky predice que en tres a ocho años
+habrá una máquina con la inteligencia general de un ser humano promedio. Pero los
+resultados no llegan. En 1966, el informe ALPAC ya había concluido que la traducción
+automática no estaba ni cerca de igualar a un traductor humano. En 1973, el
+matemático James Lighthill entrega al gobierno británico un informe demoledor: la
+inteligencia artificial no cumplió sus objetivos, y sus programas se ahogan en lo que
+llama una explosión combinatoria. El Reino Unido recorta los fondos. Al año siguiente,
+en Estados Unidos, DARPA también reduce su apoyo. Los laboratorios se vacían. Los
+investigadores cambian de campo, o cambian el nombre de lo que hacen. Había
+llegado el primer invierno de la inteligencia artificial.
+Capítulo 4 · Reglas, expertos y el segundo invierno (1980–1993)
+Visual 3D: árboles de reglas "SI… ENTONCES…" que se ramifican hasta colapsar;
+máquinas Lisp como monolitos que se apagan; en un rincón, una pequeña red que sigue
+brillando. En pantalla: SISTEMAS EXPERTOS / 1987: COLAPSA EL MERCADO / 1986:
+RETROPROPAGACIÓN
+Le dieron un verano. Tardó 70 años — Guion: La historia de la IA
+Page 3 of 8
+
+En los ochenta, la inteligencia artificial vuelve con otra cara: los sistemas expertos. En
+vez de aprender, siguen miles de reglas escritas a mano por especialistas.
+Diagnostican infecciones, configuran computadoras, y las empresas invierten
+fortunas. Japón lanza su ambicioso proyecto de Quinta Generación. Pero las reglas
+son frágiles: funcionan con los casos para los que fueron escritas y fallan con todo lo
+demás. Mantenerlas cuesta más de lo que valen. En 1987, el mercado de las máquinas
+especializadas en estos sistemas se derrumba, y llega el segundo invierno. Sin
+embargo, en medio del frío, pasa algo que casi nadie celebra. En 1986, David
+Rumelhart, Geoffrey Hinton y Ronald Williams publican en Nature cómo entrenar
+redes de varias capas: la retropropagación. La idea que Minsky había enterrado tenía,
+otra vez, pulso.
+Capítulo 5 · Placas de videojuegos (1997–2012)
+Visual 3D: un tablero de ajedrez de mármol con un rey que cae. Después, un mosaico de
+millones de miniaturas de imágenes y dos placas gráficas brillando en la oscuridad. En
+pantalla: DEEP BLUE · 1997 / IMAGENET / ERROR: 26,2 % → 15,3 %
+Mayo de 1997. La computadora Deep Blue, de IBM, derrota al campeón mundial de
+ajedrez Garry Kasparov. Es un hito, pero no aprende: calcula millones de jugadas por
+fuerza bruta. El verdadero cambio llega desde otro lugar. En 2009, Fei-Fei Li y su
+equipo lanzan ImageNet, una base con millones de imágenes etiquetadas. Y en 2012,
+tres investigadores de la Universidad de Toronto, Alex Krizhevsky, Ilya Sutskever y
+Geoffrey Hinton, presentan AlexNet a su competencia. Una red neuronal profunda,
+entrenada con dos placas de video para gamers, en la casa de los padres de
+Krizhevsky. El resultado deja mudo al campo: un error del 15,3 por ciento, contra el
+26,2 del segundo. Las redes neuronales, las mismas que habían dado por muertas,
+acababan de ganar.
+Capítulo 6 · La jugada 37 (2016)
+Visual 3D: un tablero de go infinito; una piedra blanca cae en la quinta línea y la cámara
+gira alrededor de ella. En pantalla: SEÚL · MARZO DE 2016 / ALPHAGO 4 – LEE SEDOL 1 /
+JUGADA 37
+Le dieron un verano. Tardó 70 años — Guion: La historia de la IA
+Page 4 of 8
+
+El go es un juego chino con más posiciones posibles que átomos en el universo
+observable. Durante décadas se pensó que ninguna máquina podría vencer a un
+maestro. En marzo de 2016, en Seúl, AlphaGo, de DeepMind, se enfrenta a Lee Sedol,
+uno de los mejores jugadores del mundo. En la segunda partida, la máquina hace la
+jugada 37: una piedra en un lugar donde ningún profesional jugaría. Los comentaristas
+creen que es un error. No lo es. Esa jugada define la partida. AlphaGo gana la serie
+cuatro a uno. Pero en la cuarta partida, Lee Sedol responde con su propia jugada
+imposible, la 78, y le arranca a la máquina su única derrota. Por primera vez, una
+inteligencia artificial no solo calculaba. Parecía tener intuición.
+Capítulo 7 · Atención (2017–2022)
+Visual 3D: palabras flotando en el espacio, unidas por hilos de luz que se tensan según su
+relación. Luego, un contador que sube de 0 a 1.000.000 en cinco días. En pantalla:
+"ATTENTION IS ALL YOU NEED" · 2017 / 30 DE NOVIEMBRE DE 2022 / 1 MILLÓN DE
+USUARIOS EN 5 DÍAS
+En 2017, ocho investigadores de Google publican un artículo con un título casi
+arrogante: "Attention Is All You Need". Presentan el transformer, una arquitectura que
+lee todas las palabras de un texto a la vez y aprende a qué prestarle atención. Es la
+pieza que faltaba. Sobre ella se construyen modelos de lenguaje cada vez más
+grandes, entrenados con buena parte del texto de internet. El 30 de noviembre de
+2022, OpenAI lanza, casi sin anuncio, una vista previa de investigación llamada
+ChatGPT. Cinco días después tiene un millón de usuarios. Según estimaciones de
+UBS, en dos meses supera los cien millones. Ninguna aplicación de consumo había
+crecido tan rápido. De golpe, la pregunta de Turing dejó de ser filosofía: millones de
+personas estaban conversando con una máquina.
+Capítulo 8 · El verano que no terminó (2024–hoy)
+Visual 3D: dos medallas doradas girando; después, la fila de 70 luces de la apertura vista
+desde 2026, con "1955" brillando al fondo. En pantalla: NOBEL DE FÍSICA 2024 ·
+HOPFIELD Y HINTON / NOBEL DE QUÍMICA 2024 · HASSABIS Y JUMPER / ¿PUEDEN
+PENSAR LAS MÁQUINAS?
+Le dieron un verano. Tardó 70 años — Guion: La historia de la IA
+Page 5 of 8
+
+En octubre de 2024, la inteligencia artificial llega al lugar más alto de la ciencia. John
+Hopfield y Geoffrey Hinton reciben el Nobel de Física por los descubrimientos que
+hicieron posible el aprendizaje con redes neuronales. Un día después, Demis
+Hassabis y John Jumper, de DeepMind, comparten el Nobel de Química con David
+Baker: su sistema AlphaFold predice la forma de las proteínas, un problema que la
+biología perseguía desde hacía medio siglo. Hinton, el mismo que siguió apostando
+por las redes neuronales cuando nadie lo hacía. Hoy, las máquinas escriben,
+programan, componen música y generan imágenes como las de este video. Setenta
+años después de aquel verano en Dartmouth, la inteligencia artificial está en todas
+partes. Y sin embargo, la pregunta de Turing sigue abierta. ¿Pueden pensar las
+máquinas? Tal vez la respuesta llegue en el próximo verano. O tal vez nos lleve otros
+setenta años.
+Piloto renderizado
+El piloto cubre la apertura y el capítulo 1: 72,5 segundos en 1920 × 1080 a 30 fps, con 8
+escenas 3D, 11 textos animados, voz en off y música. Se armó en dos proyectos de
+Tesseract editables.
+Tiempo
+Locución
+Escena 3D
+Texto en pantalla
+0:00–
+0:12
+"En 1955… a pensar."
+"1955" en oro; aparecen
+diez esferas cian
+DOS MESES · DIEZ
+PERSONAS
+0:12–
+0:20
+"Creían que un
+verano alcanzaba…"
+Fila de 70 barras de luz
+de 1956 a 2026
+1956 → 2026
+0:20–
+0:24
+"Esta es la historia…"
+Título en oro
+LA HISTORIA DE LA / UN
+VERANO QUE DURÓ 70
+AÑOS
+0:24–
+0:27
+"Capítulo uno. La
+pregunta."
+Placa de capítulo
+CAPÍTULO 1 · LA PREGUNTA
+0:27–
+0:37
+Turing y la pregunta
+"1950"; la cámara sube a
+la pregunta en cian
+ALAN TURING
+0:37–
+0:47
+El juego de la
+imitación
+Dos monolitos cuyas
+pantallas terminan
+iguales
+EL JUEGO DE LA
+IMITACIÓN
+0:47–
+0:56
+Los cuatro firmantes
+Los cuatro nombres en
+3D
+DARTMOUTH COLLEGE
+Le dieron un verano. Tardó 70 años — Guion: La historia de la IA
+Page 6 of 8
+
+Cómo se hizo (v2). Escenas3D_v2/Escenas3D.tsrct  tiene las escenas 3D en una sola
+línea de tiempo, con cámaras físicas, desenfoque de lente, niebla volumétrica, piso
+reflectante y luces animadas. Se renderizó con path tracing (32 muestras con denoiser)
+en la RTX 4090, a 1080p y 24 fps: 1.740 fotogramas en 12,8 minutos.
+final/Piloto_Historia_IA_v2.tsrct  monta encima los textos animados, la voz de
+ElevenLabs (Damián, eleven_v4) cortada frase por frase y la música. El pasillo de los 70
+años lleva una corrección de contraste en posproducción.
+Producción
+Para pasar del piloto a los 9–10 minutos faltan tres cosas: la voz definitiva, el render 3D en
+movimiento real y cuidar la monetización.
+1. Voz en ElevenLabs. Pegá cada capítulo del guion por separado: una toma por capítulo
+es más fácil de corregir. Elegí una voz grave y pausada en español neutro, con
+estabilidad media. Exportá en WAV. Después reemplazás la capa "Voz en off" del
+proyecto de montaje y ajustás los cortes a los nuevos tiempos.
+2. Render 3D en tu Mac. Instalá Tesseract con npx skills add mirage-hq/Tesseract ,
+o pedíselo a Claude Code. Abrí Escenas3D.tsrct : cada escena ya tiene la cámara, las
+luces y las animaciones con keyframes. Exportá con tsrct export --project
+Escenas3D.tsrct --output escenas.mp4 , o sumá --renderer path-tracer  para ray
+tracing real. Con GPU sale en minutos; acá, sin GPU, cada fotograma tardaba entre 20
+y 130 segundos.
+3. Montaje. En Piloto_Historia_IA.tsrct  reemplazás las imágenes fijas por los clips
+3D renderizados. Los textos, fundidos y tiempos quedan como están.
+4. Capítulos 2 a 8. Mismo método: un plano 3D por idea, un año gigante por hito y un
+zócalo por dato. Cada capítulo puede salir también como Short vertical de 45 a 60
+segundos.
+Sobre la monetización. La cifra de "+10K/mes" del post es marketing, no un promedio.
+YouTube sí paga videos hechos con IA si aportan valor original, pero desde julio de 2025 su
+política de "contenido no auténtico" desmonetiza el contenido repetitivo o producido en
+masa. Puede aplicarse a todo el canal, no solo a un video. En julio de 2026 la política se
+endureció contra los videos de plantilla con guiones copiados. Para este canal conviene:
+Tiempo
+Locución
+Escena 3D
+Texto en pantalla
+0:56–
+1:10
+"…un nombre:
+inteligencia artificial"
+El título oscuro se
+enciende, se enfría y cae
+CAPÍTULO 2 · EL PRIMER
+INVIERNO
+Investigación y guion propios, con datos verificados y fuentes en la descripción
+Planos diseñados por video, no una plantilla con el texto cambiado
+Le dieron un verano. Tardó 70 años — Guion: La historia de la IA
+Page 7 of 8
+
+Fuentes
+Propuesta de Dartmouth y el nombre "inteligencia artificial"
+Perceptrón y la nota de The New York Times de 1958
+Inviernos de la IA: ALPAC, Lighthill, sistemas expertos y máquinas Lisp
+Los inviernos y la retropropagación de 1986
+AlexNet: error de 15,3 % contra 26,2 % y dos GTX 580
+AlphaGo contra Lee Sedol, 4–1 en marzo de 2016
+ChatGPT: un millón de usuarios en cinco días
+Nobel 2024 de Física y de Química
+Política de contenido no auténtico, julio de 2025
+Actualización de julio de 2026
+Tesseract de Mirage
+Marcar el contenido sintético en YouTube Studio cuando corresponda
+Mantener una voz y un punto de vista de autor reconocibles
+Le dieron un verano. Tardó 70 años — Guion: La historia de la IA
+Page 8 of 8
