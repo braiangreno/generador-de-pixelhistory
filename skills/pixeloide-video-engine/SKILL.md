@@ -93,8 +93,12 @@ Genera a la vez `script_full_en.json` y `script_full_pt.json` con los mismos `id
    - `scenes()`: lista de tuplas `(t_inicio, funcion_escena, funcion_camara_opcional)` sincronizadas al milisegundo con `TL.s(lid)`, `TL.e(lid)` y `TL.word(lid, "palabra")`.
    - `music(A)`: composición chiptune procedural acorde al tono emocional del capítulo.
    - `sfx(A)`: efectos de sonido sincronizados con las apariciones de ventanas, golpes, alertas o revelaciones.
-2. En el último capítulo (`chNN.py`), define `T_END = TL.e("ultima_linea") + 2.8` para que `engine/outro.py` tome el relevo inmediatamente después.
-3. Registra todas las cadenas en mayúsculas de los capítulos dentro de `engine/i18n.py` (`EN_MAP` y `PT_MAP`).
+2. **Reglas de Animación, Personajes y Ritmo Visual**:
+   - **PROHIBIDO incluir `robot(...)` ("La Máquina")** en documentales cuya temática no sea Inteligencia Artificial.
+   - **Personajes siempre vivos y en movimiento**: usa `walk(t, t0, t1, x0, x1)` para que los personajes entren caminando o se desplacen por la escena, interactúen entre sí (`look`, `facing`, `talk_v`), y cambien de postura (`arms="work"`, `"note"`, `"type"`, `"point"`, `"cheer"`, `"wave"`, `"shrug"`). Nunca dejes sprites estáticos durante toda la escena.
+   - **Ritmo y Cámara**: incluye siempre funciones de cámara (`cam_push` y `cam_punch`) en `scenes()`, apariciones con rebote `pop(t, t0)`, sacudidas `shake()` en impactos/rechazos y revelado progresivo `reveal=` en titulares. No repitas un mismo recurso visual (como una línea/gusano en el piso) en todas las escenas.
+3. En el último capítulo (`chNN.py`), define `T_END = TL.e("ultima_linea") + 2.8` para que `engine/outro.py` tome el relevo inmediatamente después.
+4. Registra todas las cadenas en mayúsculas de los capítulos dentro de `engine/i18n.py` (`EN_MAP` y `PT_MAP`).
 
 ### Paso 5 — Verificación Automática de Márgenes y Cajas (QA Visual)
 Antes de renderizar el video final, **siempre** verifica que ningún texto en `es`, `en` o `pt` se salga de su caja (`win` / `panel` / `banner`) ni de los márgenes seguros (`x in [4..476]`, `y in [4..266]`):

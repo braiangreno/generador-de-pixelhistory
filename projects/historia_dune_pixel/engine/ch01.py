@@ -5,27 +5,32 @@ from common import *  # noqa
 
 # Cast de sprites para Dune
 HERBERT = {
+    "name": "Frank Herbert",
     "skin": (235, 192, 152), "hair": (110, 74, 46), "hair_style": "parted",
     "beard": (105, 70, 42), "glasses": True,
     "shirt": (236, 226, 200), "jacket": (132, 96, 62),
     "tie": (158, 62, 44), "pants": (68, 56, 46),
 }
 USDA_WORKER_1 = {
+    "name": "USDA Worker 1",
     "skin": (228, 182, 144), "hair": (70, 52, 38), "hair_style": "short",
     "shirt": (196, 178, 132), "jacket": (76, 112, 68),
     "pants": (62, 78, 54),
 }
 USDA_WORKER_2 = {
+    "name": "USDA Worker 2",
     "skin": (214, 166, 128), "hair": (50, 40, 32), "hair_style": "short",
     "shirt": (210, 194, 150), "jacket": (88, 124, 76),
     "pants": (58, 74, 52),
 }
 READER_1 = {
+    "name": "Reader 1",
     "skin": (236, 194, 158), "hair": (64, 44, 32), "hair_style": "parted",
     "shirt": (220, 230, 245), "jacket": (54, 82, 134),
     "pants": (46, 54, 76),
 }
 READER_2 = {
+    "name": "Reader 2",
     "skin": (224, 178, 142), "hair": (148, 72, 42), "hair_style": "long",
     "shirt": (244, 214, 168), "jacket": (164, 88, 52),
     "pants": (64, 52, 48),
@@ -33,9 +38,14 @@ READER_2 = {
 
 
 def _draw_biplane(cv, cx, cy, t):
-    """Avioneta de los años 50 sobrevolando las dunas de Oregón."""
+    """Avioneta de los años 50 sobrevolando las dunas de Oregón con estela de aire."""
     d = ImageDraw.Draw(cv)
-    by = cy + int(round(math.sin(t * 4.2) * 2))
+    by = cy + int(round(math.sin(t * 5.2) * 3))
+    # Estela de viento detrás de la avioneta
+    for k in range(3):
+        sx = cx - 28 - k * 14 - int((t * 45) % 12)
+        sy = by - 2 + (k - 1) * 4
+        d.line([(sx, sy), (sx + 8, sy)], fill=(255, 244, 210, 150 - k * 40), width=1)
     # Fuselaje amarillo/crema con franja roja
     d.rectangle([cx - 22, by - 4, cx + 16, by + 4], fill=(242, 202, 78, 255), outline=(*INK, 255))
     d.line([(cx - 20, by + 1), (cx + 14, by + 1)], fill=(208, 62, 48, 255), width=2)
@@ -45,12 +55,12 @@ def _draw_biplane(cv, cx, cy, t):
     d.rectangle([cx - 12, by - 8, cx + 10, by - 5], fill=(248, 232, 170, 255), outline=(*INK, 255))
     # Cabina
     d.rectangle([cx - 4, by - 4, cx + 6, by - 1], fill=(130, 205, 245, 255), outline=(*INK, 255))
-    # Hélice girando
-    ph = int(t * 28) % 2
+    # Hélice girando rápido
+    ph = int(t * 30) % 2
     if ph == 0:
-        d.line([(cx + 18, by - 8), (cx + 18, by + 8)], fill=(220, 230, 240, 230), width=2)
+        d.line([(cx + 18, by - 8), (cx + 18, by + 8)], fill=(220, 230, 240, 235), width=2)
     else:
-        d.line([(cx + 18, by - 4), (cx + 18, by + 4)], fill=(180, 195, 210, 200), width=2)
+        d.line([(cx + 18, by - 4), (cx + 18, by + 4)], fill=(180, 195, 210, 210), width=2)
 
 
 # ===========================================================================
@@ -58,42 +68,48 @@ def _draw_biplane(cv, cx, cy, t):
 # ===========================================================================
 def scene_oregon_flight(t):
     t0 = TL.s("s01")
+    t2 = TL.s("s02")
     dt = max(0.0, t - t0)
-
-    # Primeros 0.55s: pantalla oscura con la ondulación de arena abriendo el documental
-    if dt < 0.55:
-        cv = new_canvas((10, 12, 18))
-        draw_sand_ripple(cv, t, y_base=145, x_start=30, x_end=450, progress=dt / 0.55)
-        draw_text(cv, "1957 · FLORENCE, OREGÓN", 240, 108, "press", 8, GOLD, align="center")
-        return cv
 
     cv = bg("bg_oregon_dunes_1957").copy()
     d = ImageDraw.Draw(cv)
-    draw_sand_wind(cv, t, density=34, color=(236, 210, 155), y_min=95, y_max=260)
+    draw_sand_wind(cv, t, density=46, color=(236, 210, 155), y_min=85, y_max=262)
 
-    # Ondulación bajo la arena avanzando hacia los pinos de la derecha
-    u_rip = clamp01((t - t0) / max(1.0, TL.e("s02") - t0))
-    draw_sand_ripple(cv, t, y_base=242, x_start=60, x_end=445, progress=u_rip)
+    # Avioneta cruzando el cielo con banqueo dinámico y cámara aérea
+    u_flight = clamp01((t - t0) / max(1.0, TL.e("s02") - t0))
+    px = int(60 + u_flight * 340)
+    py = 66 + int(round(math.sin(t * 2.8) * 6))
+    _draw_biplane(cv, px, py, t)
 
-    # Avioneta cruzando el cielo de izquierda a derecha
-    px = int(90 + u_rip * 290)
-    _draw_biplane(cv, px, 64, t)
+    # Líneas de avance de las dunas hacia el bosque (flechas tácticas animadas)
+    for idx, ay in enumerate((198, 218, 238)):
+        ax = 160 + idx * 45 + int((t * 36) % 28)
+        d.line([(ax, ay), (ax + 22, ay)], fill=(*GOLD, 210), width=2)
+        d.polygon([(ax + 22, ay - 3), (ax + 28, ay), (ax + 22, ay + 3)], fill=(*GOLD, 230))
 
-    # Encabezado superior
-    window(cv, 20, 10, 440, 36, fill=(14, 22, 36), border=GOLD, alpha=0.94)
-    draw_text(cv, "1957 · FLORENCE, OREGÓN", 240, 16, "press", 8, GOLD, align="center")
-    draw_text(cv, "DUNAS QUE AVANZAN SOBRE RUTAS, BOSQUES Y CASAS", 240, 30, "silk", 8, CYAN, align="center")
+    # Encabezado superior con reveal progresivo
+    a_top, dy_top = pop(t, t0 + 0.05)
+    window(cv, 20, 10 + dy_top, 440, 36, fill=(14, 22, 36), border=GOLD, alpha=0.94 * a_top)
+    draw_text(cv, "1957 · FLORENCE, OREGÓN", 240, 16 + dy_top, "press", 8, GOLD, align="center", reveal=(t - t0) * 28)
+    draw_text(cv, "DUNAS QUE AVANZAN SOBRE RUTAS, BOSQUES Y CASAS", 240, 30 + dy_top, "silk", 8, CYAN, align="center",
+              reveal=(t - t0 - 0.35) * 36)
 
-    # Recuadro inferior: Frank Herbert tomando notas desde el avión
-    if t >= TL.s("s02") - 0.1:
-        window(cv, 18, 186, 236, 72, fill=(16, 22, 36), border=CREAM, alpha=0.94)
-        portrait(cv, "herbert", 26, 194, 56)
-        draw_text(cv, "FRANK HERBERT", 92, 196, "press", 8, GOLD)
-        draw_text(cv, "PERIODISTA EN VUELO", 92, 210, "silk", 8, CYAN)
-        draw_text(cv, "«UN MAR DE ARENA EN", 92, 226, "silk", 8, CREAM)
-        draw_text(cv, "MOVIMIENTO...»", 92, 238, "silk", 8, CREAM)
+    # En el suelo: dos trabajadores caminando y señalando el avance de la arena hacia el bosque
+    w1x, w1ph, w1lk = pace(t, t0, 290, 365, period=2.8)
+    w2x, w2ph, w2lk = pace(t, t0 + 0.6, 420, 355, period=3.1)
+    char(cv, USDA_WORKER_1, w1x, 258, t, scale=2, walk=w1ph, arms="point" if w1ph is None else "down", look=w1lk, mood="worried")
+    char(cv, USDA_WORKER_2, w2x, 258, t, scale=2, walk=w2ph, arms="wave" if w2ph is None else "down", look=w2lk, mood="focused")
 
-    robot(cv, 436, 258, t, face="surprised", scale=1)
+    # Recuadro inferior: Frank Herbert tomando notas desde el avión (con entrada pop)
+    if t >= t2 - 0.15:
+        a_box, dy_box = pop(t, t2 - 0.15)
+        window(cv, 18, 184 + dy_box, 236, 72, fill=(16, 22, 36), border=CREAM, alpha=0.95 * a_box)
+        portrait(cv, "herbert", 26, 192 + dy_box, 56)
+        draw_text(cv, "FRANK HERBERT", 92, 194 + dy_box, "press", 8, GOLD)
+        draw_text(cv, "PERIODISTA EN VUELO", 92, 208 + dy_box, "silk", 8, CYAN)
+        draw_text(cv, "«UN MAR DE ARENA EN", 92, 224 + dy_box, "silk", 8, CREAM, reveal=(t - t2) * 26)
+        draw_text(cv, "MOVIMIENTO...»", 92, 236 + dy_box, "silk", 8, CREAM, reveal=(t - t2 - 0.4) * 26)
+
     return cv
 
 
@@ -104,33 +120,38 @@ def scene_planting_grass(t):
     t0 = TL.s("s03")
     cv = bg("bg_grass_planting_1957").copy()
     d = ImageDraw.Draw(cv)
-    draw_sand_wind(cv, t, density=38, color=(238, 212, 158), y_min=110, y_max=262)
+    draw_sand_wind(cv, t, density=42, color=(238, 212, 158), y_min=110, y_max=262)
 
-    # Hileras de pasto europeo plantadas progresivamente en el suelo
     u = clamp01((t - t0) / max(1.0, TL.e("s03") - t0))
-    n_tufts = int(3 + u * 9)
+
+    # Hileras de pasto europeo que brotan con rebote a medida que los trabajadores avanzan
+    n_tufts = int(3 + u * 10)
     for i in range(n_tufts):
-        gx = 56 + i * 24
+        gx = 48 + i * 24
         gy = 252 + (i % 2) * 5
         for blade in (-4, -1, 2, 5):
-            sway = int(round(math.sin(t * 4.0 + i) * 2))
-            d.line([(gx, gy), (gx + blade + sway, gy - 11)], fill=(68, 156, 78, 255), width=2)
+            sway = int(round(math.sin(t * 5.0 + i) * 2.5))
+            d.line([(gx, gy), (gx + blade + sway, gy - 12)], fill=(68, 166, 78, 255), width=2)
 
-    # Dos trabajadores del Departamento de Agricultura plantando pasto en el piso (feet=258)
-    char(cv, USDA_WORKER_1, 108, 258, t, scale=2, arms="work", look=1, mood="focused")
-    char(cv, USDA_WORKER_2, 196, 258, t, scale=2, arms="point", look=1, mood="neutral")
+    # Dos trabajadores caminando y plantando activamente de punta a punta de la duna
+    w1_x, w1_ph, w1_lk = pace(t, t0, 68, 178, period=2.6, pause=0.25)
+    w2_x, w2_ph, w2_lk = pace(t, t0 + 0.4, 184, 286, period=2.8, pause=0.25)
+    char(cv, USDA_WORKER_1, w1_x, 258, t, scale=2, walk=w1_ph,
+         arms="work" if int(t * 3) % 2 == 0 else "point", look=w1_lk, mood="focused")
+    char(cv, USDA_WORKER_2, w2_x, 258, t, scale=2, walk=w2_ph,
+         arms="work" if int(t * 3) % 2 == 1 else "wave", look=w2_lk, mood="happy")
 
-    # Frank Herbert de pie a la derecha tomando apuntes en su libreta (feet=258)
-    char(cv, HERBERT, 344, 258, t, scale=2, arms="note", look=-1, talk=talk_v(t, True))
-    robot(cv, 424, 258, t, face="question", scale=1)
+    # Frank Herbert recorre la duna tomando apuntes en su libreta
+    hx, hph, hlk = pace(t, t0, 424, 336, period=3.0, pause=0.3)
+    char(cv, HERBERT, hx, 258, t, scale=2, walk=hph,
+         arms="note" if int(t * 2.5) % 2 == 0 else "point_l", look=-1, talk=talk_v(t, True))
 
-    # Ondulación bajo la arena debajo de los pies
-    draw_sand_ripple(cv, t, y_base=263, x_start=40, x_end=440, progress=u)
-
-    # Placa superior
-    window(cv, 20, 10, 440, 36, fill=(14, 24, 34), border=GOLD, alpha=0.94)
-    draw_text(cv, "FLORENCE, OREGÓN · PROYECTO DEL DEPTO. DE AGRICULTURA", 240, 16, "silk", 8, CYAN, align="center")
-    draw_text(cv, "FRENAR LAS DUNAS PLANTANDO PASTO", 240, 30, "press", 8, GOLD, align="center")
+    # Placa superior con pop
+    a_w, dy_w = pop(t, t0)
+    window(cv, 20, 10 + dy_w, 440, 36, fill=(14, 24, 34), border=GOLD, alpha=0.94 * a_w)
+    draw_text(cv, "FLORENCE, OREGÓN · PROYECTO DEL DEPTO. DE AGRICULTURA", 240, 16 + dy_w, "silk", 8, CYAN, align="center")
+    draw_text(cv, "FRENAR LAS DUNAS PLANTANDO PASTO", 240, 30 + dy_w, "press", 8, GOLD, align="center",
+              reveal=(t - t0 - 0.15) * 28)
 
     return cv
 
@@ -141,6 +162,7 @@ def scene_planting_grass(t):
 def scene_typewriter_notes(t):
     t0 = TL.s("s04")
     t5 = TL.s("s05")
+    dx, dy = shake(t, t0 + 1.1, dur=0.28, amp=3)
     cv = bg("bg_herbert_study_1960").copy()
     d = ImageDraw.Draw(cv)
 
@@ -148,40 +170,54 @@ def scene_typewriter_notes(t):
     window(cv, 20, 10, 440, 36, fill=(24, 18, 12), border=GOLD, alpha=0.95)
     if t < t5:
         draw_text(cv, "EL ARTÍCULO PERIODÍSTICO: «STOPPING THE MOVING SANDS»", 240, 16, "silk", 8, CYAN, align="center")
-        draw_text(cv, "NUNCA LO TERMINÓ", 240, 30, "press", 8, RED, align="center")
+        draw_text(cv, "NUNCA LO TERMINÓ", 240, 30, "press", 8, RED, align="center", reveal=(t - t0 - 0.4) * 26)
     else:
         draw_text(cv, "DE UN ARTÍCULO INCONCLUSO A UNA OBRA MONUMENTAL", 240, 16, "silk", 8, CYAN, align="center")
-        draw_text(cv, "LA NOVELA DE CIENCIA FICCIÓN MÁS VENDIDA", 240, 30, "press", 8, GOLD, align="center")
+        draw_text(cv, "LA NOVELA DE CIENCIA FICCIÓN MÁS VENDIDA", 240, 30, "press", 8, GOLD, align="center",
+                  reveal=(t - t5) * 30)
 
-    # Frank Herbert en su estudio (feet=260)
-    char(cv, HERBERT, 108, 260, t, scale=2, arms="point" if t >= t5 else "cross", look=1, talk=talk_v(t, True))
-    robot(cv, 46, 260, t, face="excited" if t >= t5 else "surprised", scale=1)
+    # Frank Herbert caminando con ritmo en su estudio mientras tipea y revisa carpetas
+    hx, hph, _ = pace(t, t0, 56, 134, period=2.7, pause=0.25)
+    if t < t5:
+        char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
+             arms="type" if int(t * 2.2) % 2 == 0 else "note", look=1, talk=talk_v(t, True))
+    else:
+        char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
+             arms="cheer" if int(t * 2.2) % 2 == 0 else "point", look=1, mood="happy", talk=talk_v(t, True))
 
     # Tarjeta central: Hoja de máquina de escribir (s04) -> Pila de notas y novela Dune (s05)
     window(cv, 168, 56, 290, 162, fill=(28, 22, 16), border=GOLD, alpha=0.95)
     draw_paper(cv, 182, 68, 122, 136, color=(244, 236, 212))
     draw_text(cv, "OREGON DUNES", 243, 78, "press", 8, INK, align="center", outline=False)
-    for row in range(5):
+
+    # Líneas tipeándose en vivo
+    u_type = clamp01((t - t0) / 1.1)
+    n_lines = int(1 + u_type * 4)
+    for row in range(n_lines):
         d.line([(192, 96 + row * 10), (290 - (row % 2) * 18, 96 + row * 10)], fill=(70, 62, 52, 255), width=2)
-    # Sello rojo INCOMPLETO
-    window(cv, 190, 154, 106, 24, fill=(140, 28, 28), border=RED, alpha=0.96)
-    draw_text(cv, "SIN TERMINAR", 243, 162, "press", 8, CREAM, align="center")
+
+    # Sello rojo INCOMPLETO que cae con golpe
+    if t >= t0 + 1.0:
+        a_st, dy_st = pop(t, t0 + 1.0, dur=0.25)
+        window(cv, 190, 154 + dy_st, 106, 24, fill=(140, 28, 28), border=RED, alpha=0.96 * a_st)
+        draw_text(cv, "SIN TERMINAR", 243, 162 + dy_st, "press", 8, CREAM, align="center")
 
     if t >= t5:
         u5 = clamp01((t - t5) / max(1.0, TL.e("s05") - t5))
-        # Carpetas amarillas creciendo y libro dorado DUNE a la derecha
-        n_folders = int(2 + u5 * 8)
+        # Carpetas amarillas apilándose rápidamente y libro dorado DUNE brillando a la derecha
+        n_folders = int(2 + u5 * 10)
         for k in range(n_folders):
-            fy = 192 - k * 7
-            d.rectangle([318, fy, 442, fy + 6], fill=(238, 198, 96, 255), outline=(*INK, 255))
-        window(cv, 318, 68, 126, 66, fill=(44, 26, 12), border=GOLD, alpha=0.98)
-        draw_text(cv, "DUNE", 381, 78, "press", 16, GOLD, align="center", outline_w=2)
-        draw_text(cv, "Nº 1 EN VENTAS", 381, 102, "silk", 8, CREAM, align="center")
-        draw_text(cv, "CIENCIA FICCIÓN", 381, 116, "silk", 8, CYAN, align="center")
+            fy = 196 - k * 6
+            d.rectangle([318, fy, 442, fy + 5], fill=(238, 198, 96, 255), outline=(*INK, 255))
+        a_bk, dy_bk = pop(t, t5 + 0.25)
+        window(cv, 318, 68 + dy_bk, 126, 66, fill=(44, 26, 12), border=GOLD, alpha=0.98 * a_bk)
+        draw_text(cv, "DUNE", 381, 78 + dy_bk, "press", 16, GOLD, align="center", outline_w=2)
+        draw_text(cv, "Nº 1 EN VENTAS", 381, 102 + dy_bk, "silk", 8, CREAM, align="center")
+        draw_text(cv, "CIENCIA FICCIÓN", 381, 116 + dy_bk, "silk", 8, CYAN, align="center")
+        sparkle(cv, 330, 76 + dy_bk, t, 3)
+        sparkle(cv, 432, 82 + dy_bk, t + 1.1, 3)
 
-    # La ondulación bajo la arena cruza la parte inferior del estudio
-    draw_sand_ripple(cv, t, y_base=254, x_start=150, x_end=456)
-    return cv
+    return offset_canvas(cv, dx, dy)
 
 
 # ===========================================================================
@@ -192,7 +228,7 @@ def scene_title_card(t):
     t7 = TL.s("s07")
 
     if t < t7 - 0.15:
-        # Pantalla dividida: Oregón 1957 (izquierda) vs Sala de cine IMAX 2026 (derecha)
+        # Pantalla dividida dinámica: Oregón 1957 (izquierda) vs Sala de cine IMAX 2026 (derecha)
         bg_left = bg("bg_oregon_dunes_1957").copy()
         bg_right = bg("bg_imax_2026").copy()
         cv = new_canvas(INK)
@@ -201,36 +237,48 @@ def scene_title_card(t):
         d = ImageDraw.Draw(cv)
         d.line([(240, 0), (240, H)], fill=(*GOLD, 255), width=3)
 
-        window(cv, 16, 14, 208, 34, fill=(14, 24, 34), border=CYAN, alpha=0.94)
-        draw_text(cv, "1957 · OREGÓN", 120, 20, "press", 8, CYAN, align="center")
-        draw_text(cv, "UN ARTÍCULO SIN TERMINAR", 120, 34, "silk", 8, CREAM, align="center")
+        # Izquierda: Herbert en Oregón 1957 tomando notas
+        hx, hph = walk(t, t6, t6 + 1.2, 40, 110)
+        char(cv, HERBERT, hx, 252, t, scale=2, walk=hph, arms="note", look=1, talk=talk_v(t, True))
+        # Derecha: Espectadores de 2026 entrando a la sala IMAX
+        r1x, r1ph = walk(t, t6 + 0.3, t6 + 1.5, 430, 330)
+        r2x, r2ph = walk(t, t6 + 0.5, t6 + 1.7, 460, 390)
+        char(cv, READER_1, r1x, 252, t, scale=2, walk=r1ph, arms="cheer", look=-1, mood="happy")
+        char(cv, READER_2, r2x, 252, t, scale=2, walk=r2ph, arms="point_l", look=-1, mood="happy")
 
-        window(cv, 256, 14, 208, 34, fill=(32, 18, 10), border=GOLD, alpha=0.94)
-        draw_text(cv, "2026 · EN CINES", 360, 20, "press", 8, GOLD, align="center")
-        draw_text(cv, "EL MESÍAS DE DUNE", 360, 34, "silk", 8, CREAM, align="center")
+        a1, dy1 = pop(t, t6 + 0.05)
+        window(cv, 16, 14 + dy1, 208, 34, fill=(14, 24, 34), border=CYAN, alpha=0.94 * a1)
+        draw_text(cv, "1957 · OREGÓN", 120, 20 + dy1, "press", 8, CYAN, align="center")
+        draw_text(cv, "UN ARTÍCULO SIN TERMINAR", 120, 34 + dy1, "silk", 8, CREAM, align="center")
 
-        window(cv, 44, 206, 392, 46, fill=(16, 14, 28), border=GOLD, alpha=0.95)
-        draw_text(cv, "CASI 70 AÑOS DESPUÉS", 240, 214, "press", 8, GOLD, align="center")
-        draw_text(cv, "EL CAPÍTULO QUE SUS LECTORES NO QUISIERON VER", 240, 232, "silk", 8, CREAM, align="center")
+        a2, dy2 = pop(t, t6 + 0.35)
+        window(cv, 256, 14 + dy2, 208, 34, fill=(32, 18, 10), border=GOLD, alpha=0.94 * a2)
+        draw_text(cv, "2026 · EN CINES", 360, 20 + dy2, "press", 8, GOLD, align="center")
+        draw_text(cv, "EL MESÍAS DE DUNE", 360, 34 + dy2, "silk", 8, CREAM, align="center")
 
-        draw_sand_ripple(cv, t, y_base=196, x_start=20, x_end=460)
+        a3, dy3 = pop(t, t6 + 0.75)
+        window(cv, 44, 206 + dy3, 392, 46, fill=(16, 14, 28), border=GOLD, alpha=0.95 * a3)
+        draw_text(cv, "CASI 70 AÑOS DESPUÉS", 240, 214 + dy3, "press", 8, GOLD, align="center")
+        draw_text(cv, "EL CAPÍTULO QUE SUS LECTORES NO QUISIERON VER", 240, 232 + dy3, "silk", 8, CREAM, align="center",
+                  reveal=(t - t6 - 0.85) * 32)
         return cv
 
     # Tarjeta de Título Principal (s07: "Esta es la historia de Dune.")
     cv = bg("bg_wadi_rum_2019").copy()
     cv = grade(cv, mul=(0.85, 0.78, 0.68), add=(12, 6, 0), sat=1.1, k=0.85)
-    draw_sand_wind(cv, t, density=48, color=(248, 214, 142))
+    draw_sand_wind(cv, t, density=52, color=(248, 214, 142))
 
-    window(cv, 24, 42, 432, 168, fill=(20, 14, 10), border=GOLD, alpha=0.95)
-    draw_text(cv, "PIXELOIDE STUDIOS PRESENTA", 240, 56, "silk", 8, CYAN, align="center")
-    draw_text(cv, "LA ARENA QUE NUNCA", 240, 78, "press", 16, align="center", gradient=GOLD_RAMP, outline_w=2)
-    draw_text(cv, "SE DETUVO", 240, 102, "press", 16, align="center", gradient=GOLD_RAMP, outline_w=2)
-    draw_text(cv, "LA HISTORIA DE DUNE", 240, 134, "press", 8, CREAM, align="center")
-    draw_text(cv, "1957 → 2026", 240, 154, "press", 16, GOLD, align="center", outline_w=2)
-
-    u_rip = clamp01((t - t7) / max(0.8, TL.e("s07") - t7))
-    draw_sand_ripple(cv, t, y_base=192, x_start=44, x_end=436, progress=u_rip)
-    robot(cv, 240, 260, t, face="excited", scale=1)
+    a_t, dy_t = pop(t, t7 - 0.1)
+    window(cv, 24, 42 + dy_t, 432, 168, fill=(20, 14, 10), border=GOLD, alpha=0.95 * a_t)
+    draw_text(cv, "PIXELOIDE STUDIOS PRESENTA", 240, 56 + dy_t, "silk", 8, CYAN, align="center")
+    draw_text(cv, "LA ARENA QUE NUNCA", 240, 78 + dy_t, "press", 16, align="center", gradient=GOLD_RAMP, outline_w=2,
+              reveal=(t - t7 + 0.1) * 24)
+    draw_text(cv, "SE DETUVO", 240, 102 + dy_t, "press", 16, align="center", gradient=GOLD_RAMP, outline_w=2,
+              reveal=(t - t7 - 0.25) * 24)
+    draw_text(cv, "LA HISTORIA DE DUNE", 240, 134 + dy_t, "press", 8, CREAM, align="center")
+    draw_text(cv, "1957 → 2026", 240, 154 + dy_t, "press", 16, GOLD, align="center", outline_w=2)
+    sparkle(cv, 104, 86 + dy_t, t, 3)
+    sparkle(cv, 376, 108 + dy_t, t + 1.4, 3)
     return cv
 
 
@@ -248,57 +296,68 @@ def scene_six_years_study(t):
     window(cv, 16, 10, 448, 34, fill=(24, 18, 12), border=GOLD, alpha=0.94)
     if t < t2:
         draw_text(cv, "FRANK HERBERT · PERIODISTA Y ESCRITOR", 240, 16, "press", 8, GOLD, align="center")
-        draw_text(cv, "LA ARENA SE MOVÍA COMO UN MAR MUY LENTO", 240, 29, "silk", 8, CYAN, align="center")
+        draw_text(cv, "LA ARENA SE MOVÍA COMO UN MAR MUY LENTO", 240, 29, "silk", 8, CYAN, align="center",
+                  reveal=(t - t1) * 30)
     elif t < t3:
         draw_text(cv, "6 AÑOS DE INVESTIGACIÓN Y ESCRITURA (1959 - 1965)", 240, 16, "press", 8, GOLD, align="center")
-        draw_text(cv, "DESIERTOS · ECOLOGÍA · RELIGIÓN · PODER", 240, 29, "silk", 8, CYAN, align="center")
+        draw_text(cv, "DESIERTOS · ECOLOGÍA · RELIGIÓN · PODER", 240, 29, "silk", 8, CYAN, align="center",
+                  reveal=(t - t2) * 30)
     else:
         draw_text(cv, "NACE UN PLANETA DESIERTO: ARRAKIS", 240, 16, "press", 8, GOLD, align="center")
-        draw_text(cv, "DONDE EL AGUA VALE MÁS QUE CUALQUIER RIQUEZA", 240, 29, "silk", 8, CYAN, align="center")
+        draw_text(cv, "DONDE EL AGUA VALE MÁS QUE CUALQUIER RIQUEZA", 240, 29, "silk", 8, CYAN, align="center",
+                  reveal=(t - t3) * 30)
 
-    # Frank Herbert en su estudio (feet=260)
-    char(cv, HERBERT, 96, 260, t, scale=2, arms="note" if t < t3 else "point", look=1, talk=talk_v(t, True))
-    robot(cv, 38, 260, t, face="question" if t < t3 else "surprised", scale=1)
+    # Frank Herbert recorriendo su estudio de punta a punta mientras investiga y expone las ideas
+    hx, hph, _ = pace(t, t1, 52, 134, period=2.8, pause=0.25)
+    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
+         arms="note" if t < t2 else ("point" if t < t3 else "cheer"),
+         look=1, mood="happy" if t >= t3 else "focused", talk=talk_v(t, True))
 
     if t < t3:
-        # Los 4 pilares temáticos de Dune en cajas limpias
+        # Los 4 pilares temáticos de Dune entrando uno por uno con rebote pop()
         pillars = [
-            ("DESIERTOS", (238, 186, 92)),
-            ("ECOLOGÍA", (98, 214, 132)),
-            ("RELIGIÓN", (196, 148, 245)),
-            ("PODER", (245, 112, 102)),
+            ("DESIERTOS", (238, 186, 92), t1 + 0.3),
+            ("ECOLOGÍA", (98, 214, 132), t2 + 0.1),
+            ("RELIGIÓN", (196, 148, 245), t2 + 0.55),
+            ("PODER", (245, 112, 102), t2 + 1.0),
         ]
-        for idx, (label, col) in enumerate(pillars):
-            px = 164 + (idx % 2) * 150
-            py = 62 + (idx // 2) * 58
-            window(cv, px, py, 140, 46, fill=(28, 22, 18), border=col, alpha=0.94)
-            draw_text(cv, f"PILAR {idx + 1}", px + 70, py + 10, "silk", 8, col, align="center")
-            draw_text(cv, label, px + 70, py + 24, "press", 8, CREAM, align="center")
+        for idx, (label, col, t_appear) in enumerate(pillars):
+            if t >= t_appear:
+                ap, dyp = pop(t, t_appear)
+                px = 164 + (idx % 2) * 150
+                py = 62 + (idx // 2) * 58 + dyp
+                window(cv, px, py, 140, 46, fill=(28, 22, 18), border=col, alpha=0.95 * ap)
+                draw_text(cv, f"PILAR {idx + 1}", px + 70, py + 10, "silk", 8, col, align="center")
+                draw_text(cv, label, px + 70, py + 24, "press", 8, CREAM, align="center")
 
         window(cv, 164, 182, 290, 32, fill=(36, 26, 16), border=GOLD, alpha=0.95)
         draw_text(cv, "6 AÑOS ESCRIBIENDO · 1959 → 1965", 309, 194, "press", 8, GOLD, align="center")
     else:
-        # Proyección del planeta desierto y una gota de agua preciosa
-        window(cv, 164, 56, 292, 160, fill=(20, 16, 24), border=GOLD, alpha=0.95)
-        # Planeta ocre a la izquierda del panel
-        pcx, pcy, pr = 236, 134, 42
+        # Proyección animada del planeta desierto rotando y la gota de agua
+        ap, dyp = pop(t, t3)
+        window(cv, 164, 56 + dyp, 292, 160, fill=(20, 16, 24), border=GOLD, alpha=0.95 * ap)
+        pcx, pcy, pr = 236, 134 + dyp, 42
         d.ellipse([pcx - pr - 4, pcy - pr - 4, pcx + pr + 4, pcy + pr + 4], fill=(240, 175, 75, 55))
         d.ellipse([pcx - pr, pcy - pr, pcx + pr, pcy + pr], fill=(214, 138, 54, 255), outline=(*GOLD, 255), width=2)
         for band in (-18, -6, 8, 20):
-            d.line([(pcx - pr + 8, pcy + band), (pcx + pr - 8, pcy + band)], fill=(176, 98, 34, 255), width=2)
-        # Dos lunas pequeñas
-        d.ellipse([pcx + 44, pcy - 38, pcx + 54, pcy - 28], fill=(242, 232, 200, 255))
+            shift = int(round(math.sin(t * 2.5 + band) * 4))
+            d.line([(pcx - pr + 8 + shift, pcy + band), (pcx + pr - 8 + shift, pcy + band)], fill=(176, 98, 34, 255), width=2)
+        # Dos lunas orbitando suavemente
+        m1_ang = t * 1.4
+        m1x = pcx + int(math.cos(m1_ang) * 52)
+        m1y = pcy - int(math.sin(m1_ang) * 36)
+        d.ellipse([m1x - 5, m1y - 5, m1x + 5, m1y + 5], fill=(242, 232, 200, 255))
         d.ellipse([pcx - 54, pcy + 22, pcx - 46, pcy + 30], fill=(210, 220, 235, 255))
 
-        # Gota de agua azul brillante a la derecha del panel
-        wcx, wcy = 376, 118
+        # Gota de agua azul brillante pulsando a la derecha del panel
+        wcx = 376
+        wcy = 118 + dyp + int(round(math.sin(t * 4.0) * 3))
         d.polygon([(wcx, wcy - 22), (wcx - 16, wcy + 4), (wcx + 16, wcy + 4)], fill=(72, 195, 255, 255))
         d.ellipse([wcx - 16, wcy - 6, wcx + 16, wcy + 22], fill=(72, 195, 255, 255), outline=(210, 245, 255, 255))
-        draw_text(cv, "EL AGUA", 376, 152, "press", 8, CYAN, align="center")
-        draw_text(cv, "TESORO SUPREMO", 376, 168, "silk", 8, CREAM, align="center")
-        draw_text(cv, "PLANETA DESIERTO", 236, 188, "silk", 8, GOLD, align="center")
+        draw_text(cv, "EL AGUA", 376, 152 + dyp, "press", 8, CYAN, align="center")
+        draw_text(cv, "TESORO SUPREMO", 376, 168 + dyp, "silk", 8, CREAM, align="center")
+        draw_text(cv, "PLANETA DESIERTO", 236, 188 + dyp, "silk", 8, GOLD, align="center")
 
-    draw_sand_ripple(cv, t, y_base=255, x_start=150, x_end=456)
     return cv
 
 
@@ -315,46 +374,54 @@ def scene_newsstand_serial(t):
     window(cv, 16, 10, 448, 36, fill=(24, 18, 14), border=GOLD, alpha=0.95)
     if t < t5:
         draw_text(cv, "REVISTA ANALOG · 1963 A 1965", 240, 16, "press", 8, GOLD, align="center")
-        draw_text(cv, "PUBLICADA PRIMERO POR ENTREGAS DE CIENCIA FICCIÓN", 240, 30, "silk", 8, CYAN, align="center")
+        draw_text(cv, "PUBLICADA PRIMERO POR ENTREGAS DE CIENCIA FICCIÓN", 240, 30, "silk", 8, CYAN, align="center",
+                  reveal=(t - t4) * 30)
     else:
         draw_text(cv, "1965 · EL GRAN DESAFÍO EDITORIAL", 240, 16, "press", 8, GOLD, align="center")
-        draw_text(cv, "FALTABA LO DIFÍCIL: CONVERTIRLA EN LIBRO", 240, 30, "silk", 8, CREAM, align="center")
+        draw_text(cv, "FALTABA LO DIFÍCIL: CONVERTIRLA EN LIBRO", 240, 30, "silk", 8, CREAM, align="center",
+                  reveal=(t - t5) * 30)
 
-    # Tres ejemplares de revista en exhibición (1963, 1964, 1965)
-    years_mag = [("1963", "PARTE 1"), ("1964", "PARTE 2"), ("1965", "PARTE 3")]
-    for idx, (yr, pt_lbl) in enumerate(years_mag):
-        mx = 136 + idx * 74
-        my = 60
-        window(cv, mx, my, 64, 84, fill=(196, 88, 34), border=GOLD, alpha=0.96)
-        draw_text(cv, "ANALOG", mx + 32, my + 8, "silk", 8, CREAM, align="center")
-        # Duna ilustrada en la tapa
-        d.polygon([(mx + 6, my + 54), (mx + 26, my + 34), (mx + 58, my + 54)], fill=(238, 182, 82, 255))
-        draw_text(cv, yr, mx + 32, my + 58, "press", 8, GOLD, align="center")
-        draw_text(cv, pt_lbl, mx + 32, my + 70, "silk", 8, CYAN, align="center")
+    # Tres ejemplares de revista que aparecen secuencialmente con pop()
+    years_mag = [("1963", "PARTE 1", t4 + 0.1), ("1964", "PARTE 2", t4 + 0.55), ("1965", "PARTE 3", t4 + 1.0)]
+    for idx, (yr, pt_lbl, t_mag) in enumerate(years_mag):
+        if t >= t_mag:
+            am, dym = pop(t, t_mag)
+            mx = 136 + idx * 74
+            my = 60 + dym
+            window(cv, mx, my, 64, 84, fill=(196, 88, 34), border=GOLD, alpha=0.96 * am)
+            draw_text(cv, "ANALOG", mx + 32, my + 8, "silk", 8, CREAM, align="center")
+            d.polygon([(mx + 6, my + 54), (mx + 26, my + 34), (mx + 58, my + 54)], fill=(238, 182, 82, 255))
+            draw_text(cv, yr, mx + 32, my + 58, "press", 8, GOLD, align="center")
+            draw_text(cv, pt_lbl, mx + 32, my + 70, "silk", 8, CYAN, align="center")
 
-    # Personajes en la vereda del kiosco (feet=260)
-    char(cv, HERBERT, 82, 260, t, scale=2, arms="point", look=1, talk=talk_v(t, True))
-    char(cv, READER_1, 376, 260, t, scale=2, arms="note", look=-1, mood="happy")
-    char(cv, READER_2, 434, 260, t, scale=2, arms="hips", look=-1, mood="happy")
-    robot(cv, 30, 260, t, face="happy" if t < t5 else "question", scale=1)
+    # Personajes caminando continuamente frente al kiosco y comentando los ejemplares
+    hx, hph, _ = pace(t, t4, 44, 114, period=2.8, pause=0.25)
+    r1x, r1ph, r1lk = pace(t, t4 + 0.2, 436, 362, period=2.6, pause=0.25)
+    r2x, r2ph, r2lk = pace(t, t4 + 0.5, 386, 446, period=3.0, pause=0.25)
+    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
+         arms="point" if t < t5 else "shrug", look=1, talk=talk_v(t, True))
+    char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph,
+         arms="note" if int(t * 2) % 2 == 0 else "wave", look=-1, mood="happy")
+    char(cv, READER_2, r2x, 260, t, scale=2, walk=r2ph,
+         arms="point_l" if int(t * 2) % 2 == 1 else "cheer", look=-1, mood="happy")
 
     if t >= t5:
-        # Gran bloque del manuscrito buscando editorial
-        window(cv, 136, 154, 212, 54, fill=(32, 22, 16), border=RED, alpha=0.96)
-        draw_text(cv, "MANUSCRITO COMPLETO", 242, 164, "silk", 8, CYAN, align="center")
-        draw_text(cv, "¿QUIÉN PUBLICA ESTO?", 242, 180, "press", 8, GOLD, align="center")
+        ab, dyb = pop(t, t5)
+        window(cv, 136, 154 + dyb, 212, 54, fill=(32, 22, 16), border=RED, alpha=0.96 * ab)
+        draw_text(cv, "MANUSCRITO COMPLETO", 242, 164 + dyb, "silk", 8, CYAN, align="center")
+        draw_text(cv, "¿QUIÉN PUBLICA ESTO?", 242, 180 + dyb, "press", 8, GOLD, align="center",
+                  reveal=(t - t5 - 0.15) * 26)
 
-    draw_sand_ripple(cv, t, y_base=262, x_start=30, x_end=450)
     return cv
 
 
 def scenes():
     return [
-        (0.0, scene_oregon_flight),
-        (TL.s("s03") - 0.15, scene_planting_grass),
-        (TL.s("s04") - 0.15, scene_typewriter_notes),
-        (TL.s("s06") - 0.15, scene_title_card),
-        (TL.chapter_start(1) - 0.3, make_card(1, ["EL ARTÍCULO QUE", "NUNCA TERMINÓ"], "1957 - 1965 · DE OREGÓN A LA REVISTA")),
-        (TL.s("c1_01") - 0.15, scene_six_years_study),
-        (TL.s("c1_04") - 0.15, scene_newsstand_serial),
+        (0.0, scene_oregon_flight, lambda t: cam_push(t, 0.0, TL.s("s03"), 1.0, 1.10, (240, 135), (225, 145))),
+        (TL.s("s03") - 0.15, scene_planting_grass, lambda t: cam_push(t, TL.s("s03"), TL.s("s04"), 1.0, 1.08, (240, 145), (255, 155))),
+        (TL.s("s04") - 0.15, scene_typewriter_notes, lambda t: (1.0 + cam_punch(t, [TL.s("s04") + 1.0, TL.s("s05") + 0.25], 0.06), 240, 140)),
+        (TL.s("s06") - 0.15, scene_title_card, lambda t: (1.0 + cam_punch(t, [TL.s("s07")], 0.07), 240, 135)),
+        (TL.chapter_start(1) - 0.3, make_card(1, ["EL ARTÍCULO QUE", "NUNCA TERMINÓ"], "1957 - 1965 · DE OREGÓN A LA REVISTA"), None),
+        (TL.s("c1_01") - 0.15, scene_six_years_study, lambda t: cam_push(t, TL.s("c1_01"), TL.s("c1_04"), 1.0, 1.09, (240, 140), (260, 140))),
+        (TL.s("c1_04") - 0.15, scene_newsstand_serial, lambda t: (1.0 + cam_punch(t, [TL.s("c1_05")], 0.06), 240, 145)),
     ]

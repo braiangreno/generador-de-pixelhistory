@@ -1,12 +1,13 @@
 """Diccionario de traducción visual (ES -> EN / PT) para todos los textos en pantalla de Dune."""
 import os
 
-LANG = os.environ.get("VIDEO_LANG", "es").lower()
+LANG = (os.environ.get("VIDEO_LANG") or os.environ.get("PIXELOIDE_LANG") or "es").lower()
 
 
 def set_lang(lang: str):
     global LANG
     LANG = (lang or "es").lower()
+    os.environ["VIDEO_LANG"] = LANG
 
 
 def get_lang() -> str:

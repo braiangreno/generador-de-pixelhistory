@@ -5,6 +5,7 @@ from common import *  # noqa
 from ch01 import HERBERT, READER_1, READER_2
 
 EDITOR_CAMPBELL = {
+    "name": "John W. Campbell",
     "skin": (232, 188, 150), "hair": (165, 165, 172), "hair_style": "parted",
     "glasses": True,
     "shirt": (238, 238, 242), "jacket": (82, 54, 48),
@@ -23,30 +24,38 @@ def scene_cult_and_messiah(t):
     window(cv, 16, 10, 448, 36, fill=(22, 18, 14), border=GOLD, alpha=0.95)
     if t < t2:
         draw_text(cv, "FINES DE LOS AÑOS 60 · FENÓMENO CONTRACULTURAL", 240, 16, "silk", 8, CYAN, align="center")
-        draw_text(cv, "DUNE YA ERA UN LIBRO DE CULTO ENTRE LOS JÓVENES", 240, 30, "press", 8, GOLD, align="center")
+        draw_text(cv, "DUNE YA ERA UN LIBRO DE CULTO ENTRE LOS JÓVENES", 240, 30, "press", 8, GOLD, align="center",
+                  reveal=(t - t1) * 30)
     else:
         draw_text(cv, "1969 · FRANK HERBERT PUBLICA LA CONTINUACIÓN", 240, 16, "silk", 8, CYAN, align="center")
-        draw_text(cv, "EL MESÍAS DE DUNE", 240, 30, "press", 8, GOLD, align="center")
+        draw_text(cv, "EL MESÍAS DE DUNE", 240, 30, "press", 8, GOLD, align="center",
+                  reveal=(t - t2) * 30)
 
-    # Jóvenes universitarios y Herbert en el campus (feet=260)
-    char(cv, READER_1, 88, 260, t, scale=2, arms="point", look=1, mood="happy")
-    char(cv, READER_2, 168, 260, t, scale=2, arms="note", look=1, mood="happy")
-    char(cv, HERBERT, 368, 260, t, scale=2, arms="point", look=-1, talk=talk_v(t, True))
-    robot(cv, 430, 260, t, face="question" if t >= t2 else "happy", scale=1)
+    # Jóvenes universitarios caminando por el campus y Herbert presentando El Mesías de Dune
+    r1x, r1ph, _ = pace(t, t1, 44, 112, period=2.6, pause=0.2)
+    r2x, r2ph, _ = pace(t, t1 + 0.3, 128, 198, period=2.8, pause=0.2)
+    hx, hph, _ = pace(t, t1 + 0.15, 428, 362, period=2.7, pause=0.2)
+    char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph,
+         arms="cheer" if t < t2 else "think", look=1, mood="happy" if t < t2 else "worried")
+    char(cv, READER_2, r2x, 260, t, scale=2, walk=r2ph,
+         arms="note" if t < t2 else "shrug", look=1, mood="happy" if t < t2 else "neutral")
+    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
+         arms="point_l", look=-1, talk=talk_v(t, True))
 
     if t < t2:
-        window(cv, 140, 64, 200, 68, fill=(24, 32, 22), border=GREEN, alpha=0.95)
-        draw_text(cv, "FENÓMENO EN CAMPUS", 240, 76, "press", 8, GOLD, align="center")
-        draw_text(cv, "ECOLOGÍA Y REBELDÍA", 240, 94, "silk", 8, CREAM, align="center")
-        draw_text(cv, "FINES DE LOS 60", 240, 110, "silk", 8, CYAN, align="center")
+        a_c, dy_c = pop(t, t1 + 0.1)
+        window(cv, 140, 64 + dy_c, 200, 68, fill=(24, 32, 22), border=GREEN, alpha=0.95 * a_c)
+        draw_text(cv, "FENÓMENO EN CAMPUS", 240, 76 + dy_c, "press", 8, GOLD, align="center")
+        draw_text(cv, "ECOLOGÍA Y REBELDÍA", 240, 94 + dy_c, "silk", 8, CREAM, align="center")
+        draw_text(cv, "FINES DE LOS 60", 240, 110 + dy_c, "silk", 8, CYAN, align="center")
     else:
-        window(cv, 128, 58, 224, 88, fill=(38, 18, 24), border=GOLD, alpha=0.96)
-        draw_text(cv, "SEGUNDA NOVELA (1969)", 240, 68, "silk", 8, CYAN, align="center")
-        draw_text(cv, "EL MESÍAS DE DUNE", 240, 88, "press", 8, GOLD, align="center")
-        draw_text(cv, "EL PROTAGONISTA VISTO", 240, 110, "silk", 8, CREAM, align="center")
-        draw_text(cv, "DESDE SU LADO MÁS OSCURO", 240, 124, "silk", 8, RED, align="center")
+        a_m, dy_m = pop(t, t2 + 0.05)
+        window(cv, 128, 58 + dy_m, 224, 88, fill=(38, 18, 24), border=GOLD, alpha=0.96 * a_m)
+        draw_text(cv, "SEGUNDA NOVELA (1969)", 240, 68 + dy_m, "silk", 8, CYAN, align="center")
+        draw_text(cv, "EL MESÍAS DE DUNE", 240, 88 + dy_m, "press", 8, GOLD, align="center")
+        draw_text(cv, "EL PROTAGONISTA VISTO", 240, 110 + dy_m, "silk", 8, CREAM, align="center")
+        draw_text(cv, "DESDE SU LADO MÁS OSCURO", 240, 124 + dy_m, "silk", 8, RED, align="center")
 
-    draw_sand_ripple(cv, t, y_base=262, x_start=36, x_end=444)
     return cv
 
 
@@ -57,43 +66,55 @@ def scene_hero_warning(t):
     t3 = TL.s("c3_03")
     t4 = TL.s("c3_04")
     t5 = TL.s("c3_05")
+    dx, dy = shake(t, t3 + 0.3, dur=0.25, amp=3)
     cv = bg("bg_herbert_study_1960").copy()
 
     window(cv, 16, 10, 448, 36, fill=(28, 16, 18), border=GOLD, alpha=0.95)
     if t < t4:
         draw_text(cv, "EL EDITOR DE LA PRIMERA HISTORIA LA RECHAZÓ", 240, 16, "press", 8, RED, align="center")
-        draw_text(cv, "«LOS LECTORES QUIEREN HÉROES, NO ANTIHÉROES»", 240, 30, "silk", 8, CREAM, align="center")
+        draw_text(cv, "«LOS LECTORES QUIEREN HÉROES, NO ANTIHÉROES»", 240, 30, "silk", 8, CREAM, align="center",
+                  reveal=(t - t3) * 32)
     elif t < t5:
         draw_text(cv, "EL MENSAJE CENTRAL DE FRANK HERBERT", 240, 16, "silk", 8, CYAN, align="center")
-        draw_text(cv, "EL HÉROE ERA UNA ADVERTENCIA", 240, 30, "press", 8, GOLD, align="center")
+        draw_text(cv, "EL HÉROE ERA UNA ADVERTENCIA", 240, 30, "press", 8, GOLD, align="center",
+                  reveal=(t - t4) * 30)
     else:
         draw_text(cv, "RECUERDA ESE LIBRO", 240, 16, "press", 8, GOLD, align="center")
-        draw_text(cv, "ES EL QUE LLEGA AL CINE EN DICIEMBRE", 240, 30, "silk", 8, CYAN, align="center")
+        draw_text(cv, "ES EL QUE LLEGA AL CINE EN DICIEMBRE", 240, 30, "silk", 8, CYAN, align="center",
+                  reveal=(t - t5) * 32)
 
-    char(cv, HERBERT, 100, 260, t, scale=2, arms="point", look=1, talk=talk_v(t, True))
-    char(cv, EDITOR_CAMPBELL, 392, 260, t, scale=2, arms="cross", look=-1, mood="angry" if t < t4 else "neutral")
-    robot(cv, 38, 260, t, face="surprised" if t >= t5 else "question", scale=1)
+    # Debate con movimiento continuo entre Herbert y el editor Campbell
+    hx, hph, _ = pace(t, t3, 52, 118, period=2.6, pause=0.2)
+    cx, cph, _ = pace(t, t3 + 0.3, 432, 376, period=2.6, pause=0.2)
+    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
+         arms="point" if t >= t4 else "hold", look=1, talk=talk_v(t, t >= t4))
+    char(cv, EDITOR_CAMPBELL, cx, 260, t, scale=2, walk=cph,
+         arms="point_l" if t < t4 else "cross", look=-1,
+         mood="angry" if t < t4 else "neutral", talk=talk_v(t, t < t4))
 
     if t < t4:
-        window(cv, 148, 66, 196, 84, fill=(64, 18, 22), border=RED, alpha=0.96)
-        draw_text(cv, "REVISTA ANALOG · 1969", 246, 78, "silk", 8, GOLD, align="center")
-        draw_text(cv, "RECHAZADO", 246, 98, "press", 16, RED, align="center", outline_w=2)
-        draw_text(cv, "NO QUERÍA UN ANTIHÉROE", 246, 126, "silk", 8, CREAM, align="center")
+        a_r, dy_r = pop(t, t3 + 0.15)
+        window(cv, 148, 66 + dy_r, 196, 84, fill=(64, 18, 22), border=RED, alpha=0.96 * a_r)
+        draw_text(cv, "REVISTA ANALOG · 1969", 246, 78 + dy_r, "silk", 8, GOLD, align="center")
+        draw_text(cv, "RECHAZADO", 246, 98 + dy_r, "press", 16, RED, align="center", outline_w=2)
+        draw_text(cv, "NO QUERÍA UN ANTIHÉROE", 246, 126 + dy_r, "silk", 8, CREAM, align="center")
     elif t < t5:
-        window(cv, 138, 62, 216, 94, fill=(24, 18, 34), border=GOLD, alpha=0.96)
-        draw_text(cv, "LA TESIS DE HERBERT", 246, 74, "press", 8, GOLD, align="center")
-        draw_text(cv, "UN LÍDER CARISMÁTICO", 246, 96, "press", 8, CREAM, align="center")
-        draw_text(cv, "PUEDE SER EL MAYOR", 246, 114, "press", 8, RED, align="center")
-        draw_text(cv, "DE LOS PELIGROS", 246, 132, "press", 8, RED, align="center")
+        a_w, dy_w = pop(t, t4 + 0.05)
+        window(cv, 138, 62 + dy_w, 216, 94, fill=(24, 18, 34), border=GOLD, alpha=0.96 * a_w)
+        draw_text(cv, "LA TESIS DE HERBERT", 246, 74 + dy_w, "press", 8, GOLD, align="center")
+        draw_text(cv, "UN LÍDER CARISMÁTICO", 246, 96 + dy_w, "press", 8, CREAM, align="center")
+        draw_text(cv, "PUEDE SER EL MAYOR", 246, 114 + dy_w, "press", 8, RED, align="center")
+        draw_text(cv, "DE LOS PELIGROS", 246, 132 + dy_w, "press", 8, RED, align="center")
     else:
-        window(cv, 132, 60, 228, 98, fill=(36, 24, 12), border=GOLD, alpha=0.98)
-        draw_text(cv, "EL MESÍAS DE DUNE (1969)", 246, 74, "press", 8, GOLD, align="center")
-        draw_text(cv, "BASE DE LA 3ª PELÍCULA", 246, 96, "silk", 8, CYAN, align="center")
-        window(cv, 152, 114, 188, 30, fill=(78, 42, 14), border=CREAM, alpha=0.98)
-        draw_text(cv, "ESTRENO: DICIEMBRE", 246, 125, "press", 8, CREAM, align="center")
+        a_m, dy_m = pop(t, t5 + 0.05)
+        window(cv, 132, 60 + dy_m, 228, 98, fill=(36, 24, 12), border=GOLD, alpha=0.98 * a_m)
+        draw_text(cv, "EL MESÍAS DE DUNE (1969)", 246, 74 + dy_m, "press", 8, GOLD, align="center")
+        draw_text(cv, "BASE DE LA 3ª PELÍCULA", 246, 96 + dy_m, "silk", 8, CYAN, align="center")
+        window(cv, 152, 114 + dy_m, 188, 30, fill=(78, 42, 14), border=CREAM, alpha=0.98 * a_m)
+        draw_text(cv, "ESTRENO: DICIEMBRE", 246, 125 + dy_m, "press", 8, CREAM, align="center")
+        sparkle(cv, 142, 72 + dy_m, t, 3)
 
-    draw_sand_ripple(cv, t, y_base=262, x_start=36, x_end=444)
-    return cv
+    return offset_canvas(cv, dx, dy)
 
 
 # ===========================================================================
@@ -104,52 +125,59 @@ def scene_six_novels_and_titan(t):
     t7 = TL.s("c3_07")
     cv = bg("bg_saturn_titan_2009").copy()
     d = ImageDraw.Draw(cv)
-    STARS.draw(cv, t * 0.4, alpha=0.75)
+    STARS.draw(cv, t * 0.6, alpha=0.8)
 
     window(cv, 16, 10, 448, 36, fill=(12, 18, 34), border=GOLD, alpha=0.95)
     if t < t7:
         draw_text(cv, "EL LEGADO LITERARIO DE FRANK HERBERT (1920 - 1986)", 240, 16, "silk", 8, CYAN, align="center")
-        draw_text(cv, "ESCRIBIÓ SEIS NOVELAS DE DUNE", 240, 30, "press", 8, GOLD, align="center")
+        draw_text(cv, "ESCRIBIÓ SEIS NOVELAS DE DUNE", 240, 30, "press", 8, GOLD, align="center",
+                  reveal=(t - t6) * 32)
     else:
         draw_text(cv, "2009 · TITÁN, LA LUNA DE SATURNO", 240, 16, "press", 8, GOLD, align="center")
-        draw_text(cv, "HOY HAY UNA ARRAKIS DE VERDAD EN EL SISTEMA SOLAR", 240, 30, "silk", 8, CYAN, align="center")
+        draw_text(cv, "HOY HAY UNA ARRAKIS DE VERDAD EN EL SISTEMA SOLAR", 240, 30, "silk", 8, CYAN, align="center",
+                  reveal=(t - t7) * 32)
 
     if t < t7:
-        # Los 6 tomos dorados de la saga original de Frank Herbert
+        # Los 6 tomos dorados aparecen uno tras otro con rebote pop()
         window(cv, 36, 62, 408, 124, fill=(16, 20, 38), border=GOLD, alpha=0.94)
         draw_text(cv, "LAS 6 CRÓNICAS DE DUNE (1965 - 1985)", 240, 74, "press", 8, GOLD, align="center")
         yrs = ["1965", "1969", "1976", "1981", "1984", "1985"]
         for i, yr in enumerate(yrs):
-            bx = 56 + i * 62
-            by = 94
-            d.rectangle([bx, by, bx + 48, by + 68], fill=(184, 112, 38, 255), outline=(*GOLD, 255), width=2)
-            draw_text(cv, f"TOMO {i + 1}", bx + 24, by + 16, "silk", 8, CREAM, align="center")
-            draw_text(cv, yr, bx + 24, by + 38, "press", 8, GOLD, align="center")
+            t_b = t6 + 0.1 + i * 0.22
+            if t >= t_b:
+                ab, dyb = pop(t, t_b)
+                bx = 56 + i * 62
+                by = 94 + dyb
+                d.rectangle([bx, by, bx + 48, by + 68], fill=(184, 112, 38, 255), outline=(*GOLD, 255), width=2)
+                draw_text(cv, f"TOMO {i + 1}", bx + 24, by + 16, "silk", 8, CREAM, align="center")
+                draw_text(cv, yr, bx + 24, by + 38, "press", 8, GOLD, align="center")
         portrait(cv, "herbert", 208, 192, 64)
     else:
-        # Retícula astronómica sobre las llanuras de Titán: ARRAKIS PLANITIA
-        cx, cy = 240, 184
-        r = 34 + int(round(math.sin(t * 4.0) * 3))
+        # Retícula astronómica escaneando las llanuras de Titán: ARRAKIS PLANITIA
+        u_scan = clamp01((t - t7) / 1.2)
+        cx = int(160 + 80 * ease_out(u_scan))
+        cy = 184
+        r = 34 + int(round(math.sin(t * 5.0) * 3))
         d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=(*CYAN, 235), width=2)
         d.line([(cx - r - 10, cy), (cx - r + 8, cy)], fill=(*CYAN, 235), width=2)
         d.line([(cx + r - 8, cy), (cx + r + 10, cy)], fill=(*CYAN, 235), width=2)
         d.line([(cx, cy - r - 10), (cx, cy - r + 8)], fill=(*CYAN, 235), width=2)
         d.line([(cx, cy + r - 8), (cx, cy + r + 10)], fill=(*CYAN, 235), width=2)
 
-        window(cv, 84, 62, 312, 74, fill=(12, 22, 42), border=CYAN, alpha=0.95)
-        draw_text(cv, "UNIÓN ASTRONÓMICA INTERNACIONAL", 240, 72, "silk", 8, CYAN, align="center")
-        draw_text(cv, "ARRAKIS PLANITIA", 240, 90, "press", 16, GOLD, align="center", outline_w=2)
-        draw_text(cv, "LLANURA REAL EN LA LUNA TITÁN (SATURNO)", 240, 116, "silk", 8, CREAM, align="center")
+        a_t, dy_t = pop(t, t7 + 0.1)
+        window(cv, 84, 62 + dy_t, 312, 74, fill=(12, 22, 42), border=CYAN, alpha=0.95 * a_t)
+        draw_text(cv, "UNIÓN ASTRONÓMICA INTERNACIONAL", 240, 72 + dy_t, "silk", 8, CYAN, align="center")
+        draw_text(cv, "ARRAKIS PLANITIA", 240, 90 + dy_t, "press", 16, GOLD, align="center", outline_w=2,
+                  reveal=(t - t7 - 0.15) * 26)
+        draw_text(cv, "LLANURA REAL EN LA LUNA TITÁN (SATURNO)", 240, 116 + dy_t, "silk", 8, CREAM, align="center")
 
-    robot(cv, 428, 258, t, face="excited", scale=1)
-    draw_sand_ripple(cv, t, y_base=262, x_start=40, x_end=440)
     return cv
 
 
 def scenes():
     return [
-        (TL.chapter_start(3) - 0.3, make_card(3, ["EL HÉROE ERA", "UNA ADVERTENCIA"], "1968 - 2009 · EL MESÍAS Y TITÁN")),
-        (TL.s("c3_01") - 0.15, scene_cult_and_messiah),
-        (TL.s("c3_03") - 0.15, scene_hero_warning),
-        (TL.s("c3_06") - 0.15, scene_six_novels_and_titan),
+        (TL.chapter_start(3) - 0.3, make_card(3, ["EL HÉROE ERA", "UNA ADVERTENCIA"], "1968 - 2009 · EL MESÍAS Y TITÁN"), None),
+        (TL.s("c3_01") - 0.15, scene_cult_and_messiah, lambda t: cam_push(t, TL.s("c3_01"), TL.s("c3_03"), 1.0, 1.08, (240, 140), (240, 130))),
+        (TL.s("c3_03") - 0.15, scene_hero_warning, lambda t: (1.0 + cam_punch(t, [TL.s("c3_03") + 0.15, TL.s("c3_04") + 0.05, TL.s("c3_05") + 0.05], 0.06), 240, 135)),
+        (TL.s("c3_06") - 0.15, scene_six_novels_and_titan, lambda t: cam_push(t, TL.s("c3_06"), TL.e("c3_07"), 1.0, 1.10, (240, 135), (240, 150))),
     ]

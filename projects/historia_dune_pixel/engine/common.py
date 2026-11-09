@@ -29,10 +29,53 @@ def upscale(arr, k):
 def char(cv, key, x, feet, t, alpha=1.0, shadow=True, scale=1, **pose):
     """Dibuja un personaje con los pies en (x, feet). scale = 1, 2 o 3 (píxeles enteros)."""
     spec = S.CAST[key] if isinstance(key, str) else key  # clave del reparto o dict propio
+    seed = (hash(str(spec.get("name", spec.get("jacket", "")))) % 89) / 89.0
+
+    # Si el personaje habla o tiene una pose estática, alterna gestos con ritmo natural
+    arms = pose.get("arms", "down")
+    if pose.get("talk") and arms in ("point", "down", "hips", "hold"):
+        gestures = ("point", "wave", "note", "hold") if pose.get("look", 1) >= 0 else ("point_l", "wave", "hold", "shrug")
+        arms = gestures[int((t * 1.35) + seed * 4.0) % len(gestures)]
+        pose["arms"] = arms
+    elif arms in ("down", "hips") and pose.get("walk") is None:
+        # Micro cambio de postura cada ~2 segundos para que nunca parezca una estatua
+        alt = ("hips", "down", "hold", "think")
+        arms = alt[int((t * 0.75) + seed * 5.0) % len(alt)]
+        pose["arms"] = arms
+
+    bob_y = 0
+    if pose.get("walk") is not None:
+        bob_y = -abs(int(round(math.sin(pose["walk"] * 2 * math.pi) * (2 if scale >= 2 else 1))))
+    else:
+        bob_y = -int(round(abs(math.sin((t * 5.6) + seed * 6.0)) * (2 if scale >= 2 else 1)))
+
     arr = upscale(S.render(spec, t, **pose), scale)
     if shadow and alpha > 0.3:
         shadow_ellipse(cv, int(x), int(feet), 18 * scale, 4 * scale, 80)
-    paste_arr(cv, arr, int(x) - S.SW * scale // 2, int(feet) - FEET_OFFSET * scale, alpha)
+    paste_arr(cv, arr, int(x) - S.SW * scale // 2, int(feet) + bob_y - FEET_OFFSET * scale, alpha)
+
+
+def pace(t, t0, x_a, x_b, period=3.6, pause=0.28):
+    """Hace que un personaje camine con ritmo entre x_a y x_b, deteniéndose brevemente en cada extremo.
+    Devuelve (x, walk_phase, look_dir)."""
+    if t <= t0:
+        return x_a, None, (1 if x_b >= x_a else -1)
+    dt = t - t0
+    leg = (dt / period) % 2.0
+    going_b = leg < 1.0
+    u_raw = leg if going_b else (leg - 1.0)
+    move_frac = max(0.2, 1.0 - pause)
+    if u_raw < move_frac:
+        p = ease_in_out(u_raw / move_frac)
+        x = (x_a + (x_b - x_a) * p) if going_b else (x_b + (x_a - x_b) * p)
+        wph = (t * 3.4) % 1.0
+        look = (1 if x_b >= x_a else -1) if going_b else (-1 if x_b >= x_a else 1)
+        return x, wph, look
+    else:
+        x = x_b if going_b else x_a
+        # Al detenerse en el extremo, mira hacia el centro de la escena (x=240)
+        look = 1 if x < 240 else -1
+        return x, None, look
 
 
 def silhouette(cv, key, x, feet, t, color=(12, 10, 22), scale=1, **pose):
@@ -45,13 +88,8 @@ def silhouette(cv, key, x, feet, t, color=(12, 10, 22), scale=1, **pose):
 
 
 def robot(cv, x, feet, t, face="happy", frozen=False, alpha=1.0, sil=False, scale=1):
-    blink = (t % 3.1) < 0.12
-    arr = S.render_robot(face, int(t * 30) % 90, frozen, blink)
-    if sil:
-        arr = arr.copy(); m = arr[..., 3] > 0; arr[m, :3] = (12, 10, 22)
-    arr = upscale(arr, scale)
-    shadow_ellipse(cv, int(x), int(feet), 26 * scale, 4 * scale, 80)
-    paste_arr(cv, arr, int(x) - 15 * scale, int(feet) - 39 * scale, alpha)
+    """Desactivado en Dune: el robot retro pertenece únicamente al documental de IA."""
+    return
 
 
 # --------------------------------------------------------------------------- cámara
@@ -75,21 +113,21 @@ def cam_punch(t, beats, amp=0.06, dur=0.35):
 
 
 def apply_cam(img, cam):
-    """Devuelve el fotograma final 1920x1080 aplicando la cámara (zoom, cx, cy)."""
+    """Devuelve el fotograma final 1920x1080 aplicando la cámara (zoom, cx, cy) sin cortar los carteles superiores."""
     if not cam or abs(cam[0] - 1.0) < 1e-3:
         return img.resize((1920, 1080), Image.NEAREST)
     z, cx, cy = cam
-    z = max(1.0, z)
+    z = min(1.035, max(1.0, z))
     w, h = W / z, H / z
     x0 = min(max(0, cx - w / 2), W - w)
-    y0 = min(max(0, cy - h / 2), H - h)
+    y0 = min(4.0, max(0, cy - h / 2), H - h)
     return img.resize((1920, 1080), Image.NEAREST, box=(x0, y0, x0 + w, y0 + h))
 
 
 def walk(t, t0, t1, x0, x1):
     p = prog(t, t0, t1)
-    x = x0 + (x1 - x0) * ease_in_out(p) if False else x0 + (x1 - x0) * p
-    return x, ((t * 2.6) % 1.0 if 0 < p < 1 else None)
+    x = x0 + (x1 - x0) * ease_in_out(p)
+    return x, ((t * 3.2) % 1.0 if 0 < p < 1 else None)
 
 
 def pop(t, t0, dur=0.35):
@@ -338,51 +376,25 @@ CARD_YEARS = {}
 
 def draw_sand_ripple(cv, t, y_base=248, x_start=10, x_end=470, progress=None,
                      color=(238, 194, 110), highlight=(255, 232, 168), shadow=(138, 96, 42)):
-    """Motivo visual de Dune: la ondulación bajo la arena que avanza de izquierda a derecha
-    levantando granos de arena a su paso (sin mostrar nunca una criatura)."""
+    """Brisa de arena suave al ras del suelo (sin forma de gusano), usada solo en desierto."""
     d = ImageDraw.Draw(cv)
     span = max(1, x_end - x_start)
-    if progress is None:
-        u = (t * 0.28) % 1.0
-    else:
-        u = clamp01(progress)
-    head_x = x_start + int(span * u)
-
-    # Estela ondulante bajo la superficie
-    trail_len = 135
-    x0 = max(x_start, head_x - trail_len)
-    for x in range(x0, head_x + 8, 2):
-        dist = head_x - x
-        if dist < -6:
-            continue
-        env = math.exp(-(dist / 52.0) ** 2) if dist >= 0 else math.exp(-(dist / 6.0) ** 2)
-        crest = int(round(math.sin((x * 0.14) - t * 9.0) * 3.0 * env - 6.0 * env))
-        yy = y_base + crest
-        # Sombra de la duna desplazada
-        d.rectangle([x, yy + 3, x + 2, yy + 5], fill=(*shadow, int(190 * env)))
-        # Cresta de arena levantada
-        d.rectangle([x, yy, x + 2, yy + 2], fill=(*color, int(240 * env)))
-        if env > 0.55:
-            d.point((x + 1, yy - 1), fill=(*highlight, int(255 * env)))
-
-    # Granos de arena saltando alrededor de la cabeza de la ondulación
-    for k in range(14):
-        ang = (k * 1.7 + t * 7.5)
-        gx = head_x - int((k * 7) % 48) + int(math.cos(ang) * 4)
-        gy = y_base - 3 - int(abs(math.sin(ang * 1.3)) * (12 - k * 0.6))
-        if x_start <= gx <= x_end and 0 <= gy < H:
-            col_g = highlight if k % 3 == 0 else color
-            d.rectangle([gx, gy, gx + 1, gy + 1], fill=(*col_g, 225))
+    for i in range(18):
+        speed = 54 + (i % 4) * 18
+        gx = x_start + int((i * 37 + t * speed) % span)
+        gy = y_base - 6 + int(round(math.sin(t * 3.5 + i * 0.9) * 4))
+        col_g = highlight if i % 3 == 0 else color
+        d.line([(gx, gy), (min(x_end, gx + 5 + (i % 3) * 2), gy)], fill=(*col_g, 165), width=1)
 
 
 def draw_sand_wind(cv, t, density=42, color=(238, 202, 132), y_min=20, y_max=265):
     """Granos de arena llevados por el viento de izquierda a derecha."""
     d = ImageDraw.Draw(cv)
     for i in range(density):
-        speed = 38 + (i % 5) * 14
+        speed = 46 + (i % 5) * 16
         x = int((i * 47 + t * speed) % W)
-        y = y_min + int((i * 29 + math.sin(t * 2.2 + i) * 5) % max(1, (y_max - y_min)))
-        a = 110 + (i % 4) * 32
+        y = y_min + int((i * 29 + math.sin(t * 2.5 + i) * 5) % max(1, (y_max - y_min)))
+        a = 115 + (i % 4) * 32
         d.rectangle([x, y, x + (1 if i % 3 else 2), y], fill=(*color, a))
 
 
@@ -400,18 +412,31 @@ def draw_phosphor_dot(cv, x, y, r=3, trail=None, color=(245, 200, 110)):
 
 
 def make_card(num, lines, years, snow=False, robot_face="question"):
-    """Escena de placa de capítulo de Dune: ventana RPG + la ondulación bajo la arena."""
+    """Escena de placa de capítulo de Dune: horizonte de dunas al atardecer + ventana RPG."""
     def sc(t):
-        cv = vgradient((18, 12, 8), (46, 30, 16), 10) if not snow else vgradient((8, 12, 24), (24, 34, 58), 10)
-        draw_sand_wind(cv, t, density=36, color=(235, 195, 115))
+        cv = vgradient((18, 12, 8), (52, 32, 16), 10) if not snow else vgradient((8, 12, 24), (24, 34, 58), 10)
+        d = ImageDraw.Draw(cv)
+        # Dos lunas sobre el horizonte de Arrakis
+        if not snow:
+            d.ellipse([66, 22, 84, 40], fill=(244, 218, 162, 210))
+            d.ellipse([396, 34, 408, 46], fill=(225, 232, 245, 190))
+            # Siluetas de dunas desplazándose suavemente en el horizonte inferior
+            pts1 = [(0, H)]
+            pts2 = [(0, H)]
+            for x in range(0, W + 16, 16):
+                y1 = 224 + int(round(math.sin(x * 0.018 + t * 0.6) * 8 + math.cos(x * 0.035 - t * 0.4) * 4))
+                y2 = 240 + int(round(math.cos(x * 0.022 - t * 0.9) * 6))
+                pts1.append((x, y1))
+                pts2.append((x, y2))
+            pts1.append((W, H))
+            pts2.append((W, H))
+            d.polygon(pts1, fill=(76, 46, 22, 230))
+            d.polygon(pts2, fill=(104, 64, 30, 245))
+        else:
+            SNOW.draw(cv, t, density=0.6)
+        draw_sand_wind(cv, t, density=38, color=(235, 195, 115))
         t0 = TL.chapter_start(num) - 0.3
         chapter_card(cv, t, t0, num, lines, years, ramp_title=GOLD_RAMP)
-        # El motivo: la ondulación bajo la arena cruza de izquierda a derecha debajo de la tarjeta
-        dt = max(0.0, t - t0)
-        u_rip = clamp01(dt / 2.2)
-        draw_sand_ripple(cv, t, y_base=218, x_start=30, x_end=450, progress=u_rip)
-        if t > t0 + 0.5:
-            robot(cv, 420, 256, t, face=robot_face, alpha=prog(t, t0 + 0.5, t0 + 0.9))
         return cv
     return sc
 
