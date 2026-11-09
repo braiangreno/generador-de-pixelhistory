@@ -115,8 +115,15 @@ Antes de renderizar el video final, **siempre** verifica que ningún texto en `e
    python engine/video.py render 8
    python tools/render_multilingual.py
    ```
-4. Une video + audio normalizado a `-14 LUFS` (estándar broadcast/YouTube):
+4. Une video + audio normalizado a `-14 LUFS` (estándar broadcast/YouTube) **sin quemar subtítulos en ningún `.mp4`** y guardando todos los archivos `.srt` dentro de `renders/subtitulos/`:
    ```powershell
    python tools/mux_all.py
    ```
-5. Limpia archivos temporales y deja todo versionado con `git commit`.
+
+### Paso 7 — Miniaturas 16:9 y Shorts Verticales 9:16 por Cada Capítulo (`renders/shorts/`)
+1. **Regla obligatoria**: Además del documental 16:9 completo, **siempre** se debe generar por separado la versión vertical `9:16` (`1080x1920`, 30fps, sin subtítulos pegados) de **cada capítulo del episodio** (`Cap 00 Apertura` + `Cap 01` a `Cap 08`) en Español, Inglés y Portugués dentro de `renders/shorts/` (`Short_Cap00_Apertura_{LANG}.mp4`, `Short_Cap01_{LANG}.mp4`, ..., `Short_Cap08_{LANG}.mp4`), junto con sus `.srt` independientes en `renders/subtitulos/`:
+   ```powershell
+   python tools/make_thumbnails_and_shorts.py
+   python tools/make_chapter_shorts.py
+   ```
+2. Limpia archivos temporales y deja todo versionado con `git commit`.

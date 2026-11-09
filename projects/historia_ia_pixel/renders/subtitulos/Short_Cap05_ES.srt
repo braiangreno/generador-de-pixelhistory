@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,350
+Capítulo cinco. Placas de videojuegos.
+
+2
+00:00:03,650 --> 00:00:12,741
+Mayo de mil novecientos noventa y siete. La computadora Deep Blue, de IBM, derrota al campeón mundial de ajedrez Garry Kasparov.
+
+3
+00:00:12,891 --> 00:00:18,055
+Es un hito, pero no aprende: calcula millones de jugadas por fuerza bruta.
+
+4
+00:00:18,205 --> 00:00:28,241
+El verdadero cambio llega desde otro lugar. En dos mil nueve, Fei-Fei Li y su equipo lanzan ImageNet, una base con millones de imágenes etiquetadas.
+
+5
+00:00:28,391 --> 00:00:37,991
+Y en dos mil doce, tres investigadores de la Universidad de Toronto, Alex Krizhevsky, Ilya Sutskever y Geoffrey Hinton, presentan AlexNet a su competencia.
+
+6
+00:00:38,141 --> 00:00:44,977
+Una red neuronal profunda, entrenada con dos placas de video para gamers, en la casa de los padres de Krizhevsky.
+
+7
+00:00:45,127 --> 00:00:52,764
+El resultado deja mudo al campo: un error del quince coma tres por ciento, contra el veintiséis coma dos del segundo.
+
+8
+00:00:52,914 --> 00:00:58,150
+Las redes neuronales, las mismas que habían dado por muertas, acababan de ganar.

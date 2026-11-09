@@ -40,8 +40,16 @@ def get_project_dir(project_id: str) -> str:
     local_dir = os.path.join(PROJECTS_DIR, project_id)
     # Si existe un directorio hermano en la máquina local con los masters completos (>100MB), usar ese si faltan en local_dir
     sibling_dir = os.path.join(os.path.dirname(BASE_DIR), project_id)
-    if os.path.exists(os.path.join(sibling_dir, "renders")) and not os.path.exists(os.path.join(local_dir, "renders", "Para_Que_No_Se_Aburran_ES.mp4")) and not os.path.exists(os.path.join(local_dir, "renders", "Historia_IA_PixelArt_ES.mp4")):
-        if os.path.exists(os.path.join(sibling_dir, "renders", "Para_Que_No_Se_Aburran_ES.mp4")) or os.path.exists(os.path.join(sibling_dir, "renders", "Historia_IA_PixelArt_ES.mp4")):
+    master_candidates = (
+        "Para_Que_No_Se_Aburran_ES.mp4",
+        "Historia_IA_PixelArt_ES.mp4",
+        "La_Arena_Que_Nunca_Se_Detuvo_ES.mp4",
+        "Historia_Dune_PixelArt_ES.mp4",
+    )
+    if os.path.exists(os.path.join(sibling_dir, "renders")):
+        has_local = any(os.path.exists(os.path.join(local_dir, "renders", m)) for m in master_candidates)
+        has_sibling = any(os.path.exists(os.path.join(sibling_dir, "renders", m)) for m in master_candidates)
+        if not has_local and has_sibling:
             return sibling_dir
     return local_dir
 
@@ -108,6 +116,18 @@ def list_deliverables(project_id: str) -> dict:
             elif fname.lower().endswith(".png") or fname.lower().endswith(".jpg"):
                 out["thumbnails"].append(item)
 
+        shorts_sub = os.path.join(renders_dir, "shorts")
+        if os.path.exists(shorts_sub):
+            for fname in sorted(os.listdir(shorts_sub)):
+                fpath = os.path.join(shorts_sub, fname)
+                if os.path.isfile(fpath) and fname.lower().endswith(".mp4"):
+                    size_mb = round(os.path.getsize(fpath) / (1024 * 1024), 2)
+                    out["shorts"].append({
+                        "name": fname,
+                        "url": f"/api/projects/{project_id}/file/renders/shorts/{fname}",
+                        "size_mb": size_mb,
+                    })
+
         sub_dir = os.path.join(renders_dir, "subtitulos")
         if os.path.exists(sub_dir):
             for fname in sorted(os.listdir(sub_dir)):
@@ -142,6 +162,11 @@ def bootstrap_existing_projects():
     al catálogo del servidor para que estén disponibles desde el primer arranque."""
     scratch_root = os.path.dirname(BASE_DIR)
     candidates = [
+        (
+            "historia_dune_pixel",
+            "LA ARENA QUE NUNCA SE DETUVO — La historia de Dune (1957 → 2026)",
+            "De un artículo sin terminar sobre las dunas de Oregón a la saga más grande del cine.",
+        ),
         (
             "historia_videojuegos_pixel",
             "PARA QUE NO SE ABURRAN — Historia de los Videojuegos (1958 → 2026)",
@@ -321,11 +346,13 @@ def _pipeline_worker(project_id: str, start_stage: int = 1):
             append_log(project_id, "[Stage 7] Generando subtítulos externos .SRT sincronizados...")
             _run_cmd([py, "tools/make_multilingual_subtitles.py"], pdir, project_id)
 
-        # STAGE 8: Miniaturas de YouTube 16:9 y Shorts Verticales 9:16 + .SRT
+        # STAGE 8: Miniaturas de YouTube 16:9 y Shorts Verticales 9:16 por Capítulo + .SRT
         if start_stage <= 8:
             _update_stage(project_id, 8, 94)
-            append_log(project_id, "[Stage 8] Generando Miniaturas 1080p y Shorts Verticales 9:16 (1080x1920)...")
+            append_log(project_id, "[Stage 8] Generando Miniaturas 1080p y Shorts Verticales 9:16 por cada capítulo (1080x1920)...")
             _run_cmd([py, "tools/make_thumbnails_and_shorts.py", *langs], pdir, project_id)
+            if os.path.exists(os.path.join(pdir, "tools", "make_chapter_shorts.py")):
+                _run_cmd([py, "tools/make_chapter_shorts.py", *langs], pdir, project_id)
 
         _update_stage(project_id, 8, 100, status="completed", extra={
             "stage_name": "¡Producción completada con éxito!",

@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:02,840
+Capítulo uno. La pregunta.
+
+2
+00:00:03,140 --> 00:00:13,031
+Mil novecientos cincuenta. El matemático británico Alan Turing publica un artículo que arranca con una pregunta incómoda: ¿pueden pensar las máquinas?
+
+3
+00:00:13,181 --> 00:00:22,636
+En lugar de responderla, propone un juego. Si conversas con una máquina y no puedes distinguirla de una persona, ¿importa realmente cómo lo hace?
+
+4
+00:00:22,786 --> 00:00:31,586
+Cinco años después, John McCarthy, Marvin Minsky, Claude Shannon y Nathaniel Rochester firman la propuesta para un taller de verano en Dartmouth.
+
+5
+00:00:31,736 --> 00:00:37,409
+Y en ese documento aparece, por primera vez, un nombre: inteligencia artificial.
+
+6
+00:00:37,809 --> 00:00:41,081
+Eran optimistas. Demasiado optimistas.
+
+7
+00:00:41,231 --> 00:00:45,668
+Y lo que vino después estuvo a punto de enterrar la idea para siempre.

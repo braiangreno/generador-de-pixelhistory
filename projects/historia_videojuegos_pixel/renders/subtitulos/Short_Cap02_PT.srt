@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,396
+Capítulo 2. A caixa de moedas.
+
+2
+00:00:03,696 --> 00:00:12,450
+Ralph Baer era engenheiro e tinha uma pergunta: se em quase todas as casas havia uma televisão… por que ela só servia para assistir?
+
+3
+00:00:12,630 --> 00:00:22,970
+Em 1968 ele já tinha um protótipo. Em 1972 saiu à venda como Magnavox Odyssey: o primeiro console doméstico.
+
+4
+00:00:23,150 --> 00:00:32,358
+Um de seus jogos era um pingue-pongue. Um jovem chamado Nolan Bushnell o testou em uma demonstração. Semanas depois, fundou a Atari.
+
+5
+00:00:32,538 --> 00:00:40,840
+Seu engenheiro, Al Alcorn, montou sua própria versão em uma caixa de madeira. Eles a deixaram em um bar da Califórnia, para ver o que acontecia.
+
+6
+00:00:41,020 --> 00:00:45,020
+Poucos dias depois ligaram: a máquina não funcionava.
+
+7
+00:00:45,570 --> 00:00:50,400
+Alcorn a abriu. Não estava quebrada. Estava cheia de moedas.
+
+8
+00:00:51,050 --> 00:00:52,484
+Chamava-se Pong.

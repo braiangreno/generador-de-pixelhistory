@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:03,568
+Chapter six. Move thirty-seven.
+
+2
+00:00:03,868 --> 00:00:14,196
+Go is an ancient Chinese game with more possible board positions than atoms in the observable universe. For decades, it was believed no machine could ever defeat a master.
+
+3
+00:00:14,346 --> 00:00:23,146
+In March twenty sixteen, in Seoul, DeepMind's AlphaGo faces Lee Sedol, one of the greatest players in the world.
+
+4
+00:00:23,296 --> 00:00:30,786
+In game two, the machine makes move thirty-seven: placing a stone where no human professional would ever play.
+
+5
+00:00:30,936 --> 00:00:39,446
+Commentators believe it is a mistake. It is not. That single move decides the game. AlphaGo wins the match four to one.
+
+6
+00:00:39,596 --> 00:00:48,759
+Yet in game four, Lee Sedol responds with his own impossible move, number seventy-eight, handing the machine its only defeat.
+
+7
+00:00:48,909 --> 00:00:55,164
+For the first time, artificial intelligence wasn't just calculating. It appeared to have intuition.

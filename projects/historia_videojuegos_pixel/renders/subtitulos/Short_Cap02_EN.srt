@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,396
+Chapter 2. The coin box.
+
+2
+00:00:03,696 --> 00:00:12,450
+Ralph Baer was an engineer with a question: if almost every home had a television… why was it only used for watching?
+
+3
+00:00:12,630 --> 00:00:22,970
+By 1968 he had a prototype. In 1972 it went on sale as the Magnavox Odyssey: the first home console.
+
+4
+00:00:23,150 --> 00:00:32,358
+One of its games was ping-pong. A young man named Nolan Bushnell tried it at a demonstration. Weeks later, he founded Atari.
+
+5
+00:00:32,538 --> 00:00:40,840
+His engineer, Al Alcorn, built his own version inside a wooden cabinet. They left it in a California bar, just to see what would happen.
+
+6
+00:00:41,020 --> 00:00:45,020
+A few days later they got a call: the machine wasn't working.
+
+7
+00:00:45,570 --> 00:00:50,400
+Alcorn opened it up. It wasn't broken. It was overflowing with coins.
+
+8
+00:00:51,050 --> 00:00:52,484
+It was called Pong.

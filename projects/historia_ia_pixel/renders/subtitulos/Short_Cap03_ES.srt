@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,350
+Capítulo tres. El primer invierno.
+
+2
+00:00:03,650 --> 00:00:14,632
+Las promesas seguían creciendo. En mil novecientos setenta, Minsky predice que en tres a ocho años habrá una máquina con la inteligencia general de un ser humano promedio.
+
+3
+00:00:14,782 --> 00:00:25,982
+Pero los resultados no llegan. En mil novecientos sesenta y seis, el informe ALPAC ya había concluido que la traducción automática no estaba ni cerca de igualar a un traductor humano.
+
+4
+00:00:26,132 --> 00:00:33,332
+En mil novecientos setenta y tres, el matemático James Lighthill entrega al gobierno británico un informe demoledor:
+
+5
+00:00:33,482 --> 00:00:41,191
+la inteligencia artificial no cumplió sus objetivos, y sus programas se ahogan en lo que llama una explosión combinatoria.
+
+6
+00:00:41,341 --> 00:00:48,250
+El Reino Unido recorta los fondos. Al año siguiente, en Estados Unidos, DARPA también reduce su apoyo.
+
+7
+00:00:48,400 --> 00:00:54,728
+Los laboratorios se vacían. Los investigadores cambian de campo, o cambian el nombre de lo que hacen.
+
+8
+00:00:54,878 --> 00:00:58,805
+Había llegado el primer invierno de la inteligencia artificial.

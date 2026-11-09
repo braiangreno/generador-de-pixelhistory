@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:04,950
+Chapter four. Rules, experts, and the second winter.
+
+2
+00:00:05,250 --> 00:00:11,068
+In the eighties, artificial intelligence returns in a different form: expert systems.
+
+3
+00:00:11,218 --> 00:00:15,945
+Instead of learning, they follow thousands of rules hand-coded by human specialists.
+
+4
+00:00:16,095 --> 00:00:25,623
+They diagnose infections, configure computers, and companies invest fortunes. Japan launches its ambitious Fifth Generation project.
+
+5
+00:00:25,773 --> 00:00:35,082
+Yet the rules are brittle: they work only for the exact cases they were written for, and fail at everything else. Maintaining them costs more than they are worth.
+
+6
+00:00:35,232 --> 00:00:43,595
+In nineteen eighty-seven, the market for specialized Lisp machines crashes, bringing about the second winter.
+
+7
+00:00:43,745 --> 00:00:48,473
+Yet amidst the cold, something happens that almost no one celebrates.
+
+8
+00:00:48,623 --> 00:00:58,732
+In nineteen eighty-six, David Rumelhart, Geoffrey Hinton, and Ronald Williams publish in Nature how to train multi-layer networks: backpropagation.
+
+9
+00:00:58,882 --> 00:01:03,027
+The idea Minsky had buried had, once again, a pulse.

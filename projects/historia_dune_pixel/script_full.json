@@ -1,0 +1,443 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.35,
+    "speak": "Mil novecientos cincuenta y siete. Florence, Oregón.",
+    "sub": "1957. Florence, Oregón."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.35,
+    "speak": "Un periodista sobrevuela unas dunas que se tragan rutas, bosques y casas.",
+    "sub": "Un periodista sobrevuela unas dunas que se tragan rutas, bosques y casas."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.65,
+    "speak": "Vino a escribir un artículo sobre los hombres que intentan frenarlas... con pasto.",
+    "sub": "Vino a escribir un artículo sobre los hombres que intentan frenarlas… con pasto."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 1.0,
+    "speak": "Nunca lo terminó.",
+    "sub": "Nunca lo terminó."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "Las notas siguieron creciendo hasta convertirse en otra cosa: una de las novelas de ciencia ficción más vendidas de la historia.",
+    "sub": "Las notas siguieron creciendo hasta convertirse en otra cosa: una de las novelas de ciencia ficción más vendidas de la historia."
+  },
+  {
+    "id": "s06",
+    "ch": 0,
+    "pause": 0.55,
+    "speak": "Casi setenta años después, el cine se prepara para el capítulo que sus lectores no quisieron ver.",
+    "sub": "Casi setenta años después, el cine se prepara para el capítulo que sus lectores no quisieron ver."
+  },
+  {
+    "id": "s07",
+    "ch": 0,
+    "pause": 1.1,
+    "speak": "Esta es la historia de Dune.",
+    "sub": "Esta es la historia de Dune."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Capítulo uno. El artículo que nunca terminó.",
+    "sub": "CAPÍTULO 1 — EL ARTÍCULO QUE NUNCA TERMINÓ"
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Frank Herbert era periodista y escribía cuentos. En Oregón vio algo que no lo soltó: la arena se movía como un mar muy lento.",
+    "sub": "Frank Herbert era periodista y escribía cuentos. En Oregón vio algo que no lo soltó: la arena se movía como un mar muy lento."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Empezó a leer sobre desiertos, ecología, religión y poder. Pasó seis años escribiendo.",
+    "sub": "Empezó a leer sobre desiertos, ecología, religión y poder. Pasó seis años escribiendo."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "De ahí salió un planeta desierto, donde el agua vale más que cualquier riqueza.",
+    "sub": "De ahí salió un planeta desierto, donde el agua vale más que cualquier riqueza."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.65,
+    "speak": "La historia salió primero por entregas, en una revista de ciencia ficción, entre mil novecientos sesenta y tres y mil novecientos sesenta y cinco.",
+    "sub": "La historia salió primero por entregas, en una revista de ciencia ficción, entre 1963 y 1965."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 1.0,
+    "speak": "Faltaba lo difícil: convertirla en libro.",
+    "sub": "Faltaba lo difícil: convertirla en libro."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Capítulo dos. Más de veinte rechazos.",
+    "sub": "CAPÍTULO 2 — MÁS DE VEINTE RECHAZOS"
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Más de veinte editoriales la rechazaron. Era demasiado larga. Demasiado complicada. Demasiado rara.",
+    "sub": "Más de veinte editoriales la rechazaron. Era demasiado larga. Demasiado complicada. Demasiado rara."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Al final dijo que sí una editorial inesperada: Chilton, famosa por sus manuales para arreglar autos.",
+    "sub": "Al final dijo que sí una editorial inesperada: Chilton, famosa por sus manuales para arreglar autos."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Su editor, Sterling Lanier, había leído la revista y apostó siete mil quinientos dólares.",
+    "sub": "Su editor, Sterling Lanier, había leído la revista y apostó 7.500 dólares."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.65,
+    "speak": "El libro salió en agosto de mil novecientos sesenta y cinco. Era caro y se vendió poco.",
+    "sub": "El libro salió en agosto de 1965. Era caro y se vendió poco."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.9,
+    "speak": "A Lanier lo despidieron.",
+    "sub": "A Lanier lo despidieron."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 1.0,
+    "speak": "Pero al año siguiente ganó los dos premios más importantes del género. Y empezó a pasar de mano en mano.",
+    "sub": "Pero al año siguiente ganó los dos premios más importantes del género. Y empezó a pasar de mano en mano."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Capítulo tres. El héroe era una advertencia.",
+    "sub": "CAPÍTULO 3 — EL HÉROE ERA UNA ADVERTENCIA"
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "A fines de los sesenta, Dune ya era un libro de culto entre los jóvenes.",
+    "sub": "A fines de los sesenta, Dune ya era un libro de culto entre los jóvenes."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Pero Herbert tenía algo que decir sobre su propio protagonista. En mil novecientos sesenta y nueve publicó la continuación: El mesías de Dune.",
+    "sub": "Pero Herbert tenía algo que decir sobre su propio protagonista. En 1969 publicó la continuación: El mesías de Dune."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "El editor que había publicado la primera historia la rechazó. Dijo que los lectores querían héroes, no antihéroes.",
+    "sub": "El editor que había publicado la primera historia la rechazó. Dijo que los lectores querían héroes, no antihéroes."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.65,
+    "speak": "Para Herbert, ese era justamente el punto: un líder carismático puede ser el mayor de los peligros.",
+    "sub": "Para Herbert, ese era justamente el punto: un líder carismático puede ser el mayor de los peligros."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "Recuerda ese libro. Es el que llega al cine en diciembre.",
+    "sub": "Recuerda ese libro. Es el que llega al cine en diciembre."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Herbert escribió seis novelas de Dune. Murió en mil novecientos ochenta y seis.",
+    "sub": "Herbert escribió seis novelas de Dune. Murió en 1986."
+  },
+  {
+    "id": "c3_07",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "En dos mil nueve, los astrónomos empezaron a bautizar las llanuras de Titán, la luna de Saturno, con los planetas de Dune. Hoy hay una Arrakis de verdad.",
+    "sub": "En 2009, los astrónomos empezaron a bautizar las llanuras de Titán, la luna de Saturno, con los planetas de Dune. Hoy hay una Arrakis de verdad."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Capítulo cuatro. La mejor película que nunca se hizo.",
+    "sub": "CAPÍTULO 4 — LA MEJOR PELÍCULA QUE NUNCA SE HIZO"
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "A mediados de los setenta, el director chileno Alejandro Jodorowsky quiso llevar Dune al cine. Y lo quiso hacer a lo grande.",
+    "sub": "A mediados de los setenta, el director chileno Alejandro Jodorowsky quiso llevar Dune al cine. Y lo quiso hacer a lo grande."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "El dibujante Moebius hizo unos tres mil dibujos para planificar cada escena.",
+    "sub": "El dibujante Moebius hizo unos 3.000 dibujos para planificar cada escena."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Sumó al artista suizo H. R. Giger, a Pink Floyd para la música y a Salvador Dalí como emperador. Dalí pedía cien mil dólares por hora.",
+    "sub": "Sumó al artista suizo H. R. Giger, a Pink Floyd para la música y a Salvador Dalí como emperador. Dalí pedía 100.000 dólares por hora."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "El guion daba para una película de más de diez horas. Ningún estudio de Hollywood quiso pagarla.",
+    "sub": "El guion daba para una película de más de diez horas. Ningún estudio de Hollywood quiso pagarla."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 0.65,
+    "speak": "Gastaron dos millones de dólares y el proyecto se cayó.",
+    "sub": "Gastaron 2 millones de dólares y el proyecto se cayó."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "pause": 1.0,
+    "speak": "Pero parte de ese equipo siguió junto. Unos años después se reencontraron en Alien.",
+    "sub": "Pero parte de ese equipo siguió junto. Unos años después se reencontraron en Alien."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Capítulo cinco. El desierto en México.",
+    "sub": "CAPÍTULO 5 — EL DESIERTO EN MÉXICO"
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "En mil novecientos ochenta y cuatro llegó por fin la primera película. La dirigió David Lynch y se filmó en estudios de Ciudad de México.",
+    "sub": "En 1984 llegó por fin la primera película. La dirigió David Lynch y se filmó en estudios de Ciudad de México."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Costó unos cuarenta millones de dólares y en Estados Unidos recaudó menos de treinta y uno.",
+    "sub": "Costó unos 40 millones de dólares y en Estados Unidos recaudó menos de 31."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.55,
+    "speak": "La crítica la destrozó. Lynch terminó renegando de ella.",
+    "sub": "La crítica la destrozó. Lynch terminó renegando de ella."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Pero el día del estreno, adelante en la fila, había un chico canadiense de diecisiete años que había leído el libro a los trece.",
+    "sub": "Pero el día del estreno, adelante en la fila, había un chico canadiense de 17 años que había leído el libro a los 13."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.75,
+    "speak": "Salió pensando que algún día alguien lo iba a volver a intentar.",
+    "sub": "Salió pensando que algún día alguien lo iba a volver a intentar."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 1.1,
+    "speak": "Ese alguien iba a ser él.",
+    "sub": "Ese alguien iba a ser él."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Capítulo seis. El chico de trece años.",
+    "sub": "CAPÍTULO 6 — EL CHICO DE TRECE AÑOS"
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "En dos mil dieciséis, en el Festival de Venecia, le preguntaron a Denis Villeneuve cuál era su proyecto soñado. Respondió: Dune.",
+    "sub": "En 2016, en el Festival de Venecia, le preguntaron a Denis Villeneuve cuál era su proyecto soñado. Respondió: Dune."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Una productora que acababa de comprar los derechos leyó la entrevista y lo llamó.",
+    "sub": "Una productora que acababa de comprar los derechos leyó la entrevista y lo llamó."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Durante la preparación aparecieron, en el escritorio de su padre, los dibujos de Dune que había hecho a los trece años.",
+    "sub": "Durante la preparación aparecieron, en el escritorio de su padre, los dibujos de Dune que había hecho a los 13 años."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Filmó en los desiertos de Jordania y Abu Dabi. Y dividió el libro en dos películas.",
+    "sub": "Filmó en los desiertos de Jordania y Abu Dabi. Y dividió el libro en dos películas."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 0.55,
+    "speak": "La pandemia demoró el estreno casi un año. El estudio la lanzó en cines y en streaming el mismo día. Villeneuve protestó.",
+    "sub": "La pandemia demoró el estreno casi un año. El estudio la lanzó en cines y en streaming el mismo día. Villeneuve protestó."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "pause": 1.0,
+    "speak": "Igual recaudó más de cuatrocientos millones de dólares. Y ganó seis premios Óscar, más que ninguna otra película esa noche.",
+    "sub": "Igual recaudó más de 400 millones de dólares. Y ganó 6 premios Óscar, más que ninguna otra película esa noche."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Capítulo siete. La segunda mitad.",
+    "sub": "CAPÍTULO 7 — LA SEGUNDA MITAD"
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "En marzo de dos mil veinticuatro llegó la segunda parte. Esta vez, solo en cines.",
+    "sub": "En marzo de 2024 llegó la segunda parte. Esta vez, solo en cines."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Recaudó más de setecientos millones de dólares, casi trescientos millones más que la primera.",
+    "sub": "Recaudó más de 700 millones de dólares, casi 300 millones más que la primera."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Y la novela de mil novecientos sesenta y cinco ya sumaba casi veinte millones de ejemplares.",
+    "sub": "Y la novela de 1965 ya sumaba casi 20 millones de ejemplares."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.75,
+    "speak": "Unas notas para un artículo sin terminar se habían convertido en una de las sagas más grandes del cine.",
+    "sub": "Unas notas para un artículo sin terminar se habían convertido en una de las sagas más grandes del cine."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 1.1,
+    "speak": "Pero faltaba la parte incómoda.",
+    "sub": "Pero faltaba la parte incómoda."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Capítulo ocho. Dunesday.",
+    "sub": "CAPÍTULO 8 — DUNESDAY"
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "La tercera película adapta El mesías de Dune: el libro que aquel editor no quiso publicar.",
+    "sub": "La tercera película adapta El mesías de Dune: el libro que aquel editor no quiso publicar."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Villeneuve dijo que será su última película de Dune.",
+    "sub": "Villeneuve dijo que será su última película de Dune."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Se estrena a mediados de diciembre. En Estados Unidos, el día dieciocho... el mismo día que Avengers: Doomsday.",
+    "sub": "Se estrena a mediados de diciembre. En Estados Unidos, el día 18… el mismo día que Avengers: Doomsday."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Internet ya le puso nombre a ese día: Dunesday.",
+    "sub": "Internet ya le puso nombre a ese día: Dunesday."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.55,
+    "speak": "Y Dune se quedó con las pantallas IMAX de su estreno.",
+    "sub": "Y Dune se quedó con las pantallas IMAX de su estreno."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 0.75,
+    "speak": "En mil novecientos cincuenta y siete, los hombres de Florence lograron frenar la arena con pasto.",
+    "sub": "En 1957, los hombres de Florence lograron frenar la arena con pasto."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 1.2,
+    "speak": "La de Herbert, en cambio, nunca dejó de moverse.",
+    "sub": "La de Herbert, en cambio, nunca dejó de moverse."
+  }
+]

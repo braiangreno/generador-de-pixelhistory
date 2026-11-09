@@ -1,0 +1,443 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.35,
+    "speak": "Mil novecentos e cinquenta e sete. Florence, Oregon.",
+    "sub": "1957. Florence, Oregon."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.35,
+    "speak": "Um jornalista sobrevoa dunas costeiras que engolem estradas, florestas e casas.",
+    "sub": "Um jornalista sobrevoa dunas costeiras que engolem estradas, florestas e casas."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.65,
+    "speak": "Ele veio escrever um artigo sobre os homens que tentam pará-las... com grama.",
+    "sub": "Ele veio escrever um artigo sobre os homens que tentam pará-las… com grama."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 1.0,
+    "speak": "Nunca o terminou.",
+    "sub": "Nunca o terminou."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "As anotações continuaram crescendo até se tornarem outra coisa: um dos romances de ficção científica mais vendidos da história.",
+    "sub": "As anotações continuaram crescendo até se tornarem outra coisa: um dos romances de ficção científica mais vendidos da história."
+  },
+  {
+    "id": "s06",
+    "ch": 0,
+    "pause": 0.55,
+    "speak": "Quase setenta anos depois, o cinema se prepara para o capítulo que seus leitores não quiseram ver.",
+    "sub": "Quase 70 anos depois, o cinema se prepara para o capítulo que seus leitores não quiseram ver."
+  },
+  {
+    "id": "s07",
+    "ch": 0,
+    "pause": 1.1,
+    "speak": "Esta é a história de Duna.",
+    "sub": "Esta é a história de Duna."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Capítulo um. O artigo que ele nunca terminou.",
+    "sub": "CAPÍTULO 1 — O ARTIGO QUE NUNCA TERMINOU"
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Frank Herbert era jornalista e escrevia contos. No Oregon, viu algo que não o largou: a areia se movia como um mar muito lento.",
+    "sub": "Frank Herbert era jornalista e escrevia contos. No Oregon, viu algo que não o largou: a areia se movia como um mar muito lento."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Começou a ler sobre desertos, ecologia, religião e poder. Passou seis anos escrevendo.",
+    "sub": "Começou a ler sobre desertos, ecologia, religião e poder. Passou seis anos escrevendo."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Daí saiu um planeta deserto, onde a água vale mais que qualquer riqueza.",
+    "sub": "Daí saiu um planeta deserto, onde a água vale mais que qualquer riqueza."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.65,
+    "speak": "A história saiu primeiro em partes, numa revista de ficção científica, entre mil novecentos e sessenta e três e mil novecentos e sessenta e cinco.",
+    "sub": "A história saiu primeiro em partes, numa revista de ficção científica, entre 1963 e 1965."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 1.0,
+    "speak": "Faltava o mais difícil: transformá-la em livro.",
+    "sub": "Faltava o mais difícil: transformá-la em livro."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Capítulo dois. Mais de vinte rejeições.",
+    "sub": "CAPÍTULO 2 — MAIS DE VINTE REJEIÇÕES"
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Mais de vinte editoras a recusaram. Era longa demais. Complicada demais. Estranha demais.",
+    "sub": "Mais de vinte editoras a recusaram. Era longa demais. Complicada demais. Estranha demais."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "No final, uma editora inesperada disse sim: a Chilton, famosa por seus manuais de conserto de carros.",
+    "sub": "No final, uma editora inesperada disse sim: a Chilton, famosa por seus manuais de conserto de carros."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Seu editor, Sterling Lanier, tinha lido a revista e apostou sete mil e quinhentos dólares.",
+    "sub": "Seu editor, Sterling Lanier, tinha lido a revista e apostou US$ 7.500."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.65,
+    "speak": "O livro saiu em agosto de mil novecentos e sessenta e cinco. Era caro e vendeu pouco.",
+    "sub": "O livro saiu em agosto de 1965. Era caro e vendeu pouco."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.9,
+    "speak": "Lanier foi demitido.",
+    "sub": "Lanier foi demitido."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 1.0,
+    "speak": "Mas no ano seguinte ganhou os dois prêmios mais importantes do gênero. E começou a passar de mão em mão.",
+    "sub": "Mas no ano seguinte ganhou os dois prêmios mais importantes do gênero. E começou a passar de mão em mão."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Capítulo três. O herói era um aviso.",
+    "sub": "CAPÍTULO 3 — O HERÓI ERA UM AVISO"
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "No final dos anos sessenta, Duna já era um livro cult entre os jovens.",
+    "sub": "No final dos anos sessenta, Duna já era um livro cult entre os jovens."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Mas Herbert tinha algo a dizer sobre seu próprio protagonista. Em mil novecentos e sessenta e nove publicou a continuação: O Messias de Duna.",
+    "sub": "Mas Herbert tinha algo a dizer sobre seu próprio protagonista. Em 1969 publicou a continuação: O Messias de Duna."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "O editor que havia publicado a primeira história a recusou. Disse que os leitores queriam heróis, não anti-heróis.",
+    "sub": "O editor que havia publicado a primeira história a recusou. Disse que os leitores queriam heróis, não anti-heróis."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.65,
+    "speak": "Para Herbert, esse era justamente o ponto: um líder carismático pode ser o maior dos perigos.",
+    "sub": "Para Herbert, esse era justamente o ponto: um líder carismático pode ser o maior dos perigos."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "Lembre-se desse livro. É o que chega aos cinemas em dezembro.",
+    "sub": "Lembre-se desse livro. É o que chega aos cinemas em dezembro."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Herbert escreveu seis romances de Duna. Morreu em mil novecentos e oitenta e seis.",
+    "sub": "Herbert escreveu seis romances de Duna. Morreu em 1986."
+  },
+  {
+    "id": "c3_07",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "Em dois mil e nove, os astrônomos começaram a batizar as planícies de Titã, a lua de Saturno, com os planetas de Duna. Hoje existe uma Arrakis de verdade.",
+    "sub": "Em 2009, os astrônomos começaram a batizar as planícies de Titã, a lua de Saturno, com os planetas de Duna. Hoje existe uma Arrakis de verdade."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Capítulo quatro. O melhor filme que nunca foi feito.",
+    "sub": "CAPÍTULO 4 — O MELHOR FILME QUE NUNCA FOI FEITO"
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Em meados dos anos setenta, o diretor chileno Alejandro Jodorowsky quis levar Duna ao cinema. E quis fazer isso em grande estilo.",
+    "sub": "Em meados dos anos setenta, o diretor chileno Alejandro Jodorowsky quis levar Duna ao cinema. E quis fazer isso em grande estilo."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "O desenhista Moebius fez cerca de três mil desenhos para planejar cada cena.",
+    "sub": "O desenhista Moebius fez cerca de 3.000 desenhos para planejar cada cena."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Trouxe o artista suíço H. R. Giger, o Pink Floyd para a música e Salvador Dalí como imperador. Dalí pedia cem mil dólares por hora.",
+    "sub": "Trouxe o artista suíço H. R. Giger, o Pink Floyd para a música e Salvador Dalí como imperador. Dalí pedia US$ 100.000 por hora."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "O roteiro daria um filme de mais de dez horas. Nenhum estúdio de Hollywood quis pagar por ele.",
+    "sub": "O roteiro daria um filme de mais de dez horas. Nenhum estúdio de Hollywood quis pagar por ele."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 0.65,
+    "speak": "Gastaram dois milhões de dólares e o projeto caiu.",
+    "sub": "Gastaram US$ 2 milhões e o projeto caiu."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "pause": 1.0,
+    "speak": "Mas parte dessa equipe continuou junta. Alguns anos depois, eles se reencontraram em Alien.",
+    "sub": "Mas parte dessa equipe continuou junta. Alguns anos depois, eles se reencontraram em Alien."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Capítulo cinco. O deserto no México.",
+    "sub": "CAPÍTULO 5 — O DESERTO NO MÉXICO"
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Em mil novecentos e oitenta e quatro finalmente chegou o primeiro filme. Dirigido por David Lynch, foi filmado em estúdios na Cidade do México.",
+    "sub": "Em 1984 finalmente chegou o primeiro filme. Dirigido por David Lynch, foi filmado em estúdios na Cidade do México."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Custou cerca de quarenta milhões de dólares e nos Estados Unidos arrecadou menos de trinta e um.",
+    "sub": "Custou cerca de US$ 40 milhões e nos Estados Unidos arrecadou menos de US$ 31 milhões."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.55,
+    "speak": "A crítica o destruiu. Lynch acabou renegando o filme.",
+    "sub": "A crítica o destruiu. Lynch acabou renegando o filme."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Mas no dia da estreia, bem na frente da fila, havia um garoto canadense de dezessete anos que tinha lido o livro aos treze.",
+    "sub": "Mas no dia da estreia, bem na frente da fila, havia um garoto canadense de 17 anos que tinha lido o livro aos 13."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.75,
+    "speak": "Ele saiu pensando que algum dia alguém iria tentar de novo.",
+    "sub": "Ele saiu pensando que algum dia alguém iria tentar de novo."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 1.1,
+    "speak": "Esse alguém seria ele.",
+    "sub": "Esse alguém seria ele."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Capítulo seis. O garoto de treze anos.",
+    "sub": "CAPÍTULO 6 — O GAROTO DE TREZE ANOS"
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Em dois mil e dezesseis, no Festival de Veneza, perguntaram a Denis Villeneuve qual era seu projeto dos sonhos. Ele respondeu: Duna.",
+    "sub": "Em 2016, no Festival de Veneza, perguntaram a Denis Villeneuve qual era seu projeto dos sonhos. Ele respondeu: Duna."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Uma produtora que acabara de comprar os direitos leu a entrevista e ligou para ele.",
+    "sub": "Uma produtora que acabara de comprar os direitos leu a entrevista e ligou para ele."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Durante a preparação apareceram, na escrivaninha de seu pai, os desenhos de Duna que ele havia feito aos treze anos.",
+    "sub": "Durante a preparação apareceram, na escrivaninha de seu pai, os desenhos de Duna que ele havia feito aos 13 anos."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Ele filmou nos desertos da Jordânia e de Abu Dhabi, e dividiu o livro em dois filmes.",
+    "sub": "Ele filmou nos desertos da Jordânia e de Abu Dhabi, e dividiu o livro em dois filmes."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 0.55,
+    "speak": "A pandemia atrasou a estreia em quase um ano. O estúdio o lançou nos cinemas e no streaming no mesmo dia. Villeneuve protestou.",
+    "sub": "A pandemia atrasou a estreia em quase um ano. O estúdio o lançou nos cinemas e no streaming no mesmo dia. Villeneuve protestou."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "pause": 1.0,
+    "speak": "Mesmo assim arrecadou mais de quatrocentos milhões de dólares. E ganhou seis prêmios Oscar, mais do que qualquer outro filme naquela noite.",
+    "sub": "Mesmo assim arrecadou mais de US$ 400 milhões. E ganhou 6 prêmios Oscar, mais do que qualquer outro filme naquela noite."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Capítulo sete. A segunda metade.",
+    "sub": "CAPÍTULO 7 — A SEGUNDA METADE"
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Em março de dois mil e vinte e quatro chegou a segunda parte. Desta vez, só nos cinemas.",
+    "sub": "Em março de 2024 chegou a segunda parte. Desta vez, só nos cinemas."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Arrecadou mais de setecentos milhões de dólares, quase trezentos milhões a mais que o primeiro.",
+    "sub": "Arrecadou mais de US$ 700 milhões, quase US$ 300 milhões a mais que o primeiro."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "E o romance de mil novecentos e sessenta e cinco já somava quase vinte milhões de exemplares.",
+    "sub": "E o romance de 1965 já somava quase 20 milhões de exemplares."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.75,
+    "speak": "Anotações para um artigo inacabado haviam se tornado uma das maiores sagas do cinema.",
+    "sub": "Anotações para um artigo inacabado haviam se tornado uma das maiores sagas do cinema."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 1.1,
+    "speak": "Mas faltava a parte incômoda.",
+    "sub": "Mas faltava a parte incômoda."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Capítulo oito. Dunesday.",
+    "sub": "CAPÍTULO 8 — DUNESDAY"
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "O terceiro filme adapta O Messias de Duna: o livro que aquele editor não quis publicar.",
+    "sub": "O terceiro filme adapta O Messias de Duna: o livro que aquele editor não quis publicar."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Villeneuve disse que será seu último filme de Duna.",
+    "sub": "Villeneuve disse que será seu último filme de Duna."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Estreia em meados de dezembro. Nos Estados Unidos, no dia dezoito... no mesmo dia que Vingadores: Doomsday.",
+    "sub": "Estreia em meados de dezembro. Nos Estados Unidos, no dia 18… no mesmo dia que Vingadores: Doomsday."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "A internet já deu nome a esse dia: Dunesday.",
+    "sub": "A internet já deu nome a esse dia: Dunesday."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.55,
+    "speak": "E Duna ficou com as salas IMAX da estreia.",
+    "sub": "E Duna ficou com as salas IMAX da estreia."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 0.75,
+    "speak": "Em mil novecentos e cinquenta e sete, os homens de Florence conseguiram frear a areia com grama.",
+    "sub": "Em 1957, os homens de Florence conseguiram frear a areia com grama."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 1.2,
+    "speak": "A de Herbert, por outro lado, nunca parou de se mover.",
+    "sub": "A de Herbert, por outro lado, nunca parou de se mover."
+  }
+]

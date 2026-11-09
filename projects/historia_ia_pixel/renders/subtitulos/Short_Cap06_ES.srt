@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:03,568
+Capítulo seis. La jugada treinta y siete.
+
+2
+00:00:03,868 --> 00:00:14,196
+El go es un juego chino con más posiciones posibles que átomos en el universo observable. Durante décadas se pensó que ninguna máquina podría vencer a un maestro.
+
+3
+00:00:14,346 --> 00:00:23,146
+En marzo de dos mil dieciséis, en Seúl, AlphaGo, de DeepMind, se enfrenta a Lee Sedol, uno de los mejores jugadores del mundo.
+
+4
+00:00:23,296 --> 00:00:30,786
+En la segunda partida, la máquina hace la jugada treinta y siete: una piedra en un lugar donde ningún profesional jugaría.
+
+5
+00:00:30,936 --> 00:00:39,446
+Los comentaristas creen que es un error. No lo es. Esa jugada define la partida. AlphaGo gana la serie cuatro a uno.
+
+6
+00:00:39,596 --> 00:00:48,759
+Pero en la cuarta partida, Lee Sedol responde con su propia jugada imposible, la setenta y ocho, y le arranca a la máquina su única derrota.
+
+7
+00:00:48,909 --> 00:00:55,164
+Por primera vez, una inteligencia artificial no solo calculaba. Parecía tener intuición.

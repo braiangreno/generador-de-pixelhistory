@@ -1,0 +1,39 @@
+1
+00:00:00,150 --> 00:00:03,859
+Chapter two. The machine that was going to be conscious.
+
+2
+00:00:04,159 --> 00:00:15,213
+July, nineteen fifty-eight. The United States Navy presents to the press an invention by thirty-year-old psychologist Frank Rosenblatt: the perceptron.
+
+3
+00:00:15,363 --> 00:00:19,436
+A machine that isn't programmed: it learns from its mistakes.
+
+4
+00:00:19,586 --> 00:00:28,604
+The next day, The New York Times writes that the Navy expects it will walk, talk, see, write, and be conscious of its existence.
+
+5
+00:00:28,754 --> 00:00:37,118
+Reality was more modest. The perceptron learned to recognize simple shapes on a grid of twenty by twenty photocells.
+
+6
+00:00:37,268 --> 00:00:43,450
+Yet the idea was immense: a network of artificial neurons adjusting its connections through experience.
+
+7
+00:00:43,600 --> 00:00:50,000
+In nineteen sixty-nine, Marvin Minsky and Seymour Papert publish a book titled Perceptrons.
+
+8
+00:00:50,150 --> 00:00:56,768
+They prove that a single-layer network cannot solve basic problems like exclusive OR.
+
+9
+00:00:56,918 --> 00:01:02,009
+The blow is devastating. Funding for neural networks evaporates.
+
+10
+00:01:02,159 --> 00:01:07,904
+The idea powering everything today becomes, for years, an abandoned curiosity.

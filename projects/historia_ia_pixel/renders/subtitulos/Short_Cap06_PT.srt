@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:03,568
+Capítulo seis. A jogada trinta e sete.
+
+2
+00:00:03,868 --> 00:00:14,196
+O go é um jogo milenar com mais posições possíveis do que átomos no universo observável. Por décadas, acreditava-se que máquina alguma venceria um mestre.
+
+3
+00:00:14,346 --> 00:00:23,146
+Em março de dois mil e dezesseis, em Seul, o AlphaGo da DeepMind enfrenta Lee Sedol, um dos maiores mestres do planeta.
+
+4
+00:00:23,296 --> 00:00:30,786
+Na segunda partida, a máquina faz a jogada trinta e sete: uma pedra colocada onde nenhum profissional jogaria.
+
+5
+00:00:30,936 --> 00:00:39,446
+Os comentaristas acham que é um erro. Não é. Esse único lance define a partida. O AlphaGo vence a série por quatro a um.
+
+6
+00:00:39,596 --> 00:00:48,759
+Mas na quarta partida, Lee Sedol responde com sua jogada divina, a número setenta e oito, arrancando a única derrota da máquina.
+
+7
+00:00:48,909 --> 00:00:55,164
+Pela primeira vez, uma inteligência artificial não apenas calculava. Parecia ter intuição.

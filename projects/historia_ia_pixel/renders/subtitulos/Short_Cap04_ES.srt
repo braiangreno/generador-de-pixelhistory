@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:04,950
+Capítulo cuatro. Reglas, expertos y el segundo invierno.
+
+2
+00:00:05,250 --> 00:00:11,068
+En los ochenta, la inteligencia artificial vuelve con otra cara: los sistemas expertos.
+
+3
+00:00:11,218 --> 00:00:15,945
+En vez de aprender, siguen miles de reglas escritas a mano por especialistas.
+
+4
+00:00:16,095 --> 00:00:25,623
+Diagnostican infecciones, configuran computadoras, y las empresas invierten fortunas. Japón lanza su ambicioso proyecto de Quinta Generación.
+
+5
+00:00:25,773 --> 00:00:35,082
+Pero las reglas son frágiles: funcionan con los casos para los que fueron escritas y fallan con todo lo demás. Mantenerlas cuesta más de lo que valen.
+
+6
+00:00:35,232 --> 00:00:43,595
+En mil novecientos ochenta y siete, el mercado de las máquinas especializadas en estos sistemas se derrumba, y llega el segundo invierno.
+
+7
+00:00:43,745 --> 00:00:48,473
+Sin embargo, en medio del frío, pasa algo que casi nadie celebra.
+
+8
+00:00:48,623 --> 00:00:58,732
+En mil novecientos ochenta y seis, David Rumelhart, Geoffrey Hinton y Ronald Williams publican en Nature cómo entrenar redes de varias capas: la retropropagación.
+
+9
+00:00:58,882 --> 00:01:03,027
+La idea que Minsky había enterrado tenía, otra vez, pulso.

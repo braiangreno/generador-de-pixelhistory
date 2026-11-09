@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:02,695
+Capítulo sete. Atenção.
+
+2
+00:00:02,995 --> 00:00:11,068
+Em dois mil e dezessete, oito pesquisadores do Google publicam um artigo com um título quase arrogante: Attention Is All You Need.
+
+3
+00:00:11,218 --> 00:00:20,963
+Eles apresentam o transformer, uma arquitetura que lê todas as palavras do texto simultaneamente e aprende onde focar a atenção. Era a peça que faltava.
+
+4
+00:00:21,113 --> 00:00:28,022
+Sobre ela se constroem modelos de linguagem cada vez maiores, alimentados com boa parte dos textos da internet.
+
+5
+00:00:28,172 --> 00:00:36,682
+Em trinta de novembro de dois mil e vinte e dois, a OpenAI lança, quase sem alarde, uma prévia de pesquisa chamada ChatGPT.
+
+6
+00:00:36,832 --> 00:00:48,468
+Cinco dias depois, alcança um milhão de usuários. Segundo o UBS, em dois meses supera cem milhões. Nenhum aplicativo na história cresceu tão rápido.
+
+7
+00:00:48,618 --> 00:00:55,963
+De repente, a pergunta de Turing deixou de ser filosofia: milhões de pessoas conversavam com uma máquina.

@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,350
+Chapter three. The first winter.
+
+2
+00:00:03,650 --> 00:00:14,632
+Promises kept growing. In nineteen seventy, Minsky predicts that in three to eight years we will have a machine with the general intelligence of an average human being.
+
+3
+00:00:14,782 --> 00:00:25,982
+Yet results failed to arrive. In nineteen sixty-six, the ALPAC report had already concluded that machine translation was nowhere near matching a human translator.
+
+4
+00:00:26,132 --> 00:00:33,332
+In nineteen seventy-three, mathematician James Lighthill delivers a devastating report to the British government:
+
+5
+00:00:33,482 --> 00:00:41,191
+artificial intelligence failed to meet its goals, and its programs drown in what he calls a combinatorial explosion.
+
+6
+00:00:41,341 --> 00:00:48,250
+The United Kingdom slashes funding. The following year, in the United States, DARPA also reduces its support.
+
+7
+00:00:48,400 --> 00:00:54,728
+Laboratories empty out. Researchers switch fields, or change the name of what they do.
+
+8
+00:00:54,878 --> 00:00:58,805
+The first winter of artificial intelligence had arrived.

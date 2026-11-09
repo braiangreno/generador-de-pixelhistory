@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:03,641
+Capítulo oito. O verão que não acabou.
+
+2
+00:00:03,941 --> 00:00:09,905
+Em outubro de dois mil e vinte e quatro, a inteligência artificial atinge o ponto mais alto de toda a ciência.
+
+3
+00:00:10,055 --> 00:00:18,128
+John Hopfield e Geoffrey Hinton recebem o Nobel de Física pelas descobertas fundamentais para o aprendizado com redes neurais.
+
+4
+00:00:18,278 --> 00:00:32,387
+No dia seguinte, Demis Hassabis e John Jumper, da DeepMind, dividem o Nobel de Química com David Baker: o AlphaFold prevê o formato das proteínas, resolvendo um enigma biológico de meio século.
+
+5
+00:00:32,537 --> 00:00:37,919
+Hinton, aquele mesmo que continuou acreditando nas redes neurais quando ninguém mais acreditava.
+
+6
+00:00:38,069 --> 00:00:44,541
+Hoje, as máquinas escrevem, programam, compõem música e geram imagens como as deste vídeo.
+
+7
+00:00:44,691 --> 00:00:50,800
+Setenta anos depois daquele verão em Dartmouth, a inteligência artificial está em todos os lugares.
+
+8
+00:00:51,300 --> 00:00:56,682
+E no entanto, a pergunta de Turing continua aberta. As máquinas podem pensar?
+
+9
+00:00:57,282 --> 00:01:02,882
+Talvez a resposta chegue no próximo verão. Ou talvez leve outros setenta anos.

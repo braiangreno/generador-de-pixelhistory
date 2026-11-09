@@ -1,0 +1,39 @@
+1
+00:00:00,150 --> 00:00:03,859
+Capítulo dos. La máquina que iba a ser consciente.
+
+2
+00:00:04,159 --> 00:00:15,213
+Julio de mil novecientos cincuenta y ocho. La Marina de Estados Unidos presenta ante la prensa un invento de Frank Rosenblatt, un psicólogo de treinta años: el perceptrón.
+
+3
+00:00:15,363 --> 00:00:19,436
+Una máquina que no se programa: aprende de sus errores.
+
+4
+00:00:19,586 --> 00:00:28,604
+Al día siguiente, The New York Times escribe que la Marina espera que pueda caminar, hablar, ver, escribir y ser consciente de su existencia.
+
+5
+00:00:28,754 --> 00:00:37,118
+La realidad era más modesta. El perceptrón aprendía a distinguir figuras simples en una cuadrícula de veinte por veinte fotocélulas.
+
+6
+00:00:37,268 --> 00:00:43,450
+Pero la idea era enorme: una red de neuronas artificiales que ajusta sus conexiones con la experiencia.
+
+7
+00:00:43,600 --> 00:00:50,000
+En mil novecientos sesenta y nueve, Marvin Minsky y Seymour Papert publican un libro llamado Perceptrons.
+
+8
+00:00:50,150 --> 00:00:56,768
+Demuestran que una red de una sola capa no puede resolver problemas tan básicos como el o exclusivo.
+
+9
+00:00:56,918 --> 00:01:02,009
+El golpe es devastador. El dinero para redes neuronales se evapora.
+
+10
+00:01:02,159 --> 00:01:07,904
+La idea que hoy mueve todo pasa a ser, durante años, una curiosidad abandonada.

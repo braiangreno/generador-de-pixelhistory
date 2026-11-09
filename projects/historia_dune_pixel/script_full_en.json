@@ -1,0 +1,443 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.35,
+    "speak": "Nineteen fifty-seven. Florence, Oregon.",
+    "sub": "1957. Florence, Oregon."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.35,
+    "speak": "A journalist flies over coastal dunes that swallow highways, forests, and houses.",
+    "sub": "A journalist flies over coastal dunes that swallow highways, forests, and houses."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.65,
+    "speak": "He came to write an article about the men trying to stop them... with grass.",
+    "sub": "He came to write an article about the men trying to stop them… with grass."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 1.0,
+    "speak": "He never finished it.",
+    "sub": "He never finished it."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "His notes kept growing until they became something else: one of the best-selling science fiction novels in history.",
+    "sub": "His notes kept growing until they became something else: one of the best-selling science fiction novels in history."
+  },
+  {
+    "id": "s06",
+    "ch": 0,
+    "pause": 0.55,
+    "speak": "Nearly seventy years later, cinemas are preparing for the chapter his own readers didn't want to see.",
+    "sub": "Nearly 70 years later, cinemas are preparing for the chapter his own readers didn't want to see."
+  },
+  {
+    "id": "s07",
+    "ch": 0,
+    "pause": 1.1,
+    "speak": "This is the story of Dune.",
+    "sub": "This is the story of Dune."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Chapter one. The article he never finished.",
+    "sub": "CHAPTER 1 — THE ARTICLE HE NEVER FINISHED"
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Frank Herbert was a journalist and short-story writer. In Oregon, he saw something that wouldn't let him go: the sand moved like a very slow sea.",
+    "sub": "Frank Herbert was a journalist and short-story writer. In Oregon, he saw something that wouldn't let him go: the sand moved like a very slow sea."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "He began reading about deserts, ecology, religion, and power. He spent six years writing.",
+    "sub": "He began reading about deserts, ecology, religion, and power. He spent six years writing."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Out of that came a desert planet, where water is worth more than any treasure.",
+    "sub": "Out of that came a desert planet, where water is worth more than any treasure."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.65,
+    "speak": "The story came out first as a serial in a science fiction magazine, between nineteen sixty-three and nineteen sixty-five.",
+    "sub": "The story came out first as a serial in a science fiction magazine, between 1963 and 1965."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 1.0,
+    "speak": "The hardest part was still ahead: turning it into a book.",
+    "sub": "The hardest part was still ahead: turning it into a book."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Chapter two. More than twenty rejections.",
+    "sub": "CHAPTER 2 — MORE THAN TWENTY REJECTIONS"
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "More than twenty publishers rejected it. It was too long. Too complicated. Too strange.",
+    "sub": "More than twenty publishers rejected it. It was too long. Too complicated. Too strange."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Finally, an unexpected publisher said yes: Chilton, famous for its auto repair manuals.",
+    "sub": "Finally, an unexpected publisher said yes: Chilton, famous for its auto repair manuals."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "His editor, Sterling Lanier, had read the magazine serial and bet seven thousand five hundred dollars on it.",
+    "sub": "His editor, Sterling Lanier, had read the magazine serial and bet $7,500 on it."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.65,
+    "speak": "The book came out in August nineteen sixty-five. It was expensive and sold poorly.",
+    "sub": "The book came out in August 1965. It was expensive and sold poorly."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.9,
+    "speak": "Lanier was fired.",
+    "sub": "Lanier was fired."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 1.0,
+    "speak": "But the following year, it won the two biggest awards in science fiction. And it began passing from hand to hand.",
+    "sub": "But the following year, it won the two biggest awards in science fiction. And it began passing from hand to hand."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Chapter three. The hero was a warning.",
+    "sub": "CHAPTER 3 — THE HERO WAS A WARNING"
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "By the late sixties, Dune was already a cult book among young readers.",
+    "sub": "By the late sixties, Dune was already a cult book among young readers."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "But Herbert had something to say about his own protagonist. In nineteen sixty-nine, he published the sequel: Dune Messiah.",
+    "sub": "But Herbert had something to say about his own protagonist. In 1969, he published the sequel: Dune Messiah."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "The editor who had published the first story rejected it. He said readers wanted heroes, not antiheroes.",
+    "sub": "The editor who had published the first story rejected it. He said readers wanted heroes, not antiheroes."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.65,
+    "speak": "For Herbert, that was the entire point: a charismatic leader can be the greatest danger of all.",
+    "sub": "For Herbert, that was the entire point: a charismatic leader can be the greatest danger of all."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "Remember that book. It is the one arriving in theaters in December.",
+    "sub": "Remember that book. It is the one arriving in theaters in December."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Herbert wrote six Dune novels. He died in nineteen eighty-six.",
+    "sub": "Herbert wrote six Dune novels. He died in 1986."
+  },
+  {
+    "id": "c3_07",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "In two thousand nine, astronomers began naming the plains of Titan, Saturn's moon, after the planets of Dune. Today, there is a real Arrakis.",
+    "sub": "In 2009, astronomers began naming the plains of Titan, Saturn's moon, after the planets of Dune. Today, there is a real Arrakis."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Chapter four. The greatest movie never made.",
+    "sub": "CHAPTER 4 — THE GREATEST MOVIE NEVER MADE"
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "In the mid-seventies, Chilean director Alejandro Jodorowsky wanted to bring Dune to the big screen. And he wanted to do it on a massive scale.",
+    "sub": "In the mid-seventies, Chilean director Alejandro Jodorowsky wanted to bring Dune to the big screen. And he wanted to do it on a massive scale."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Comic artist Moebius drew some three thousand storyboards to plan every single shot.",
+    "sub": "Comic artist Moebius drew some 3,000 storyboards to plan every single shot."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "He recruited Swiss artist H. R. Giger, Pink Floyd for the music, and Salvador Dalí as the Emperor. Dalí asked for one hundred thousand dollars an hour.",
+    "sub": "He recruited Swiss artist H. R. Giger, Pink Floyd for the music, and Salvador Dalí as the Emperor. Dalí asked for $100,000 an hour."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "The script would have run for more than ten hours. No Hollywood studio was willing to pay for it.",
+    "sub": "The script would have run for more than ten hours. No Hollywood studio was willing to pay for it."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 0.65,
+    "speak": "They spent two million dollars, and the project collapsed.",
+    "sub": "They spent $2 million, and the project collapsed."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "pause": 1.0,
+    "speak": "But part of that team stayed together. A few years later, they reunited to make Alien.",
+    "sub": "But part of that team stayed together. A few years later, they reunited to make Alien."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Chapter five. The desert in Mexico.",
+    "sub": "CHAPTER 5 — THE DESERT IN MEXICO"
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "In nineteen eighty-four, the first movie finally arrived. Directed by David Lynch, it was filmed in studios in Mexico City.",
+    "sub": "In 1984, the first movie finally arrived. Directed by David Lynch, it was filmed in studios in Mexico City."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "It cost around forty million dollars, and in the United States it grossed less than thirty-one.",
+    "sub": "It cost around $40 million, and in the United States it grossed less than $31 million."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.55,
+    "speak": "Critics tore it apart. Lynch ended up disowning it.",
+    "sub": "Critics tore it apart. Lynch ended up disowning it."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "But on opening day, right at the front of the line, stood a seventeen-year-old Canadian kid who had read the book at thirteen.",
+    "sub": "But on opening day, right at the front of the line, stood a 17-year-old Canadian kid who had read the book at 13."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.75,
+    "speak": "He walked out thinking that someday, someone would try again.",
+    "sub": "He walked out thinking that someday, someone would try again."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 1.1,
+    "speak": "That someone was going to be him.",
+    "sub": "That someone was going to be him."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Chapter six. The thirteen-year-old boy.",
+    "sub": "CHAPTER 6 — THE THIRTEEN-YEAR-OLD BOY"
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "In two thousand sixteen, at the Venice Film Festival, Denis Villeneuve was asked what his dream project was. He answered: Dune.",
+    "sub": "In 2016, at the Venice Film Festival, Denis Villeneuve was asked what his dream project was. He answered: Dune."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "A production company that had just bought the rights read the interview and called him.",
+    "sub": "A production company that had just bought the rights read the interview and called him."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "During pre-production, inside his father's old desk, they found the Dune storyboards he had drawn when he was thirteen.",
+    "sub": "During pre-production, inside his father's old desk, they found the Dune storyboards he had drawn when he was 13."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "He filmed in the deserts of Jordan and Abu Dhabi, and split the novel into two movies.",
+    "sub": "He filmed in the deserts of Jordan and Abu Dhabi, and split the novel into two movies."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 0.55,
+    "speak": "The pandemic delayed the release by nearly a year. The studio released it in theaters and on streaming the same day. Villeneuve protested.",
+    "sub": "The pandemic delayed the release by nearly a year. The studio released it in theaters and on streaming the same day. Villeneuve protested."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "pause": 1.0,
+    "speak": "Even so, it grossed over four hundred million dollars. And it won six Oscars, more than any other film that night.",
+    "sub": "Even so, it grossed over $400 million. And it won 6 Oscars, more than any other film that night."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Chapter seven. The second half.",
+    "sub": "CHAPTER 7 — THE SECOND HALF"
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "In March two thousand twenty-four, Part Two arrived. This time, exclusively in theaters.",
+    "sub": "In March 2024, Part Two arrived. This time, exclusively in theaters."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "It grossed over seven hundred million dollars, nearly three hundred million more than the first.",
+    "sub": "It grossed over $700 million, nearly $300 million more than the first."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "And the nineteen sixty-five novel had now sold nearly twenty million copies.",
+    "sub": "And the 1965 novel had now sold nearly 20 million copies."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.75,
+    "speak": "Notes for an unfinished magazine article had turned into one of the biggest sagas in cinema.",
+    "sub": "Notes for an unfinished magazine article had turned into one of the biggest sagas in cinema."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 1.1,
+    "speak": "But the uncomfortable part was still missing.",
+    "sub": "But the uncomfortable part was still missing."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Chapter eight. Dunesday.",
+    "sub": "CHAPTER 8 — DUNESDAY"
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "The third movie adapts Dune Messiah: the book that original editor refused to publish.",
+    "sub": "The third movie adapts Dune Messiah: the book that original editor refused to publish."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Villeneuve said it will be his final Dune film.",
+    "sub": "Villeneuve said it will be his final Dune film."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "It opens in mid-December. In the United States, on the eighteenth... the exact same day as Avengers: Doomsday.",
+    "sub": "It opens in mid-December. In the United States, on the 18th… the exact same day as Avengers: Doomsday."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "The internet already named that day: Dunesday.",
+    "sub": "The internet already named that day: Dunesday."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.55,
+    "speak": "And Dune locked down the IMAX screens for its premiere.",
+    "sub": "And Dune locked down the IMAX screens for its premiere."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 0.75,
+    "speak": "In nineteen fifty-seven, the men of Florence managed to stop the sand with grass.",
+    "sub": "In 1957, the men of Florence managed to stop the sand with grass."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 1.2,
+    "speak": "Herbert's sand, however, never stopped moving.",
+    "sub": "Herbert's sand, however, never stopped moving."
+  }
+]

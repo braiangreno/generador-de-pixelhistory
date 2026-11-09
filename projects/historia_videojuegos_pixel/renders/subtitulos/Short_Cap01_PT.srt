@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,773
+Capítulo 1. O jogo que ninguém patenteou.
+
+2
+00:00:04,073 --> 00:00:11,998
+Chamava-se Tennis for Two. Uma linha era a quadra. Outra, a rede. E um ponto de luz, a bola.
+
+3
+00:00:12,178 --> 00:00:16,479
+Um botão giratório para o ângulo, um botão para rebater. Nada mais.
+
+4
+00:00:16,659 --> 00:00:21,867
+No ano seguinte, já se podia jogar com a gravidade da Lua… ou de Júpiter.
+
+5
+00:00:22,047 --> 00:00:27,330
+E depois, eles o desmontaram. As peças voltaram para as prateleiras do laboratório.
+
+6
+00:00:28,030 --> 00:00:29,992
+Mas a ideia já estava solta.
+
+7
+00:00:30,172 --> 00:00:39,908
+Em 1962, no MIT, um grupo de programadores escreveu Spacewar!: duas naves, uma estrela no meio, torpedos.
+
+8
+00:00:40,088 --> 00:00:47,031
+Não era vendido. Era copiado. De computador em computador. Foi o primeiro jogo que viajou.

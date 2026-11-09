@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,350
+Capítulo cinco. Placas de videogame.
+
+2
+00:00:03,650 --> 00:00:12,741
+Maio de mil novecentos e noventa e sete. O computador Deep Blue, da IBM, vence o campeão mundial de xadrez Garry Kasparov.
+
+3
+00:00:12,891 --> 00:00:18,055
+É um marco histórico, mas ele não aprende: calcula milhões de jogadas por força bruta.
+
+4
+00:00:18,205 --> 00:00:28,241
+A verdadeira virada vem de outro lugar. Em dois mil e nove, Fei-Fei Li e sua equipe lançam o ImageNet, uma base com milhões de imagens catalogadas.
+
+5
+00:00:28,391 --> 00:00:37,991
+E em dois mil e doze, três pesquisadores da Universidade de Toronto, Alex Krizhevsky, Ilya Sutskever e Geoffrey Hinton, apresentam a AlexNet na competição.
+
+6
+00:00:38,141 --> 00:00:44,977
+Uma rede neural profunda, treinada com duas placas de vídeo de videogame, na casa dos pais de Krizhevsky.
+
+7
+00:00:45,127 --> 00:00:52,764
+O resultado deixa o mundo acadêmico mudo: erro de quinze vírgula três por cento, contra vinte e seis vírgula dois do segundo colocado.
+
+8
+00:00:52,914 --> 00:00:58,150
+As redes neurais, as mesmas que todos davam como mortas, acabavam de triunfar.

@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:02,840
+Chapter one. The question.
+
+2
+00:00:03,140 --> 00:00:13,031
+Nineteen fifty. British mathematician Alan Turing publishes a paper opening with an uncomfortable question: can machines think?
+
+3
+00:00:13,181 --> 00:00:22,636
+Instead of answering it, he proposes a game. If you talk with a machine and cannot tell it apart from a person, does it really matter how it does it?
+
+4
+00:00:22,786 --> 00:00:31,586
+Five years later, John McCarthy, Marvin Minsky, Claude Shannon, and Nathaniel Rochester sign the proposal for a summer workshop at Dartmouth.
+
+5
+00:00:31,736 --> 00:00:37,409
+And in that document appears, for the first time, a name: artificial intelligence.
+
+6
+00:00:37,809 --> 00:00:41,081
+They were optimistic. Far too optimistic.
+
+7
+00:00:41,231 --> 00:00:45,668
+And what followed came close to burying the idea forever.

@@ -1,0 +1,19 @@
+1
+00:00:00,800 --> 00:00:06,182
+Em mil novecentos e cinquenta e cinco, quatro cientistas pediram financiamento para um plano audacioso.
+
+2
+00:00:06,332 --> 00:00:11,423
+Dois meses de verão, e dez pessoas, para ensinar uma máquina a pensar.
+
+3
+00:00:11,723 --> 00:00:13,905
+Acreditavam que um verão seria suficiente.
+
+4
+00:00:14,055 --> 00:00:18,855
+Setenta anos se passaram. E a história ainda não terminou.
+
+5
+00:00:19,255 --> 00:00:22,455
+Esta é a história da inteligência artificial.
