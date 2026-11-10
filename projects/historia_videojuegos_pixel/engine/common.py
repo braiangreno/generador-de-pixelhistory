@@ -45,13 +45,8 @@ def silhouette(cv, key, x, feet, t, color=(12, 10, 22), scale=1, **pose):
 
 
 def robot(cv, x, feet, t, face="happy", frozen=False, alpha=1.0, sil=False, scale=1):
-    blink = (t % 3.1) < 0.12
-    arr = S.render_robot(face, int(t * 30) % 90, frozen, blink)
-    if sil:
-        arr = arr.copy(); m = arr[..., 3] > 0; arr[m, :3] = (12, 10, 22)
-    arr = upscale(arr, scale)
-    shadow_ellipse(cv, int(x), int(feet), 26 * scale, 4 * scale, 80)
-    paste_arr(cv, arr, int(x) - 15 * scale, int(feet) - 39 * scale, alpha)
+    # Sin robot de IA en La Historia de los Videojuegos
+    return
 
 
 # --------------------------------------------------------------------------- cámara

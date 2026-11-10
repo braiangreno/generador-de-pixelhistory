@@ -27,14 +27,16 @@ def scene_part_two_boxoffice(t):
         draw_text(cv, "RECAUDÓ MÁS DE US$ 700 MILLONES (+US$ 300M QUE LA 1ª)", 240, 30, "press", 8, GOLD, align="center",
                   reveal=(t - t2) * 32)
 
-    # Villeneuve y espectadores recorriendo la sala y festejando frente a la pantalla gigante
-    vx, vph, _ = pace(t, t1, 38, 108, period=2.5, pause=0.2)
-    r1x, r1ph, _ = pace(t, t1 + 0.2, 432, 362, period=2.6, pause=0.2)
-    r2x, r2ph, _ = pace(t, t1 + 0.4, 384, 444, period=2.8, pause=0.2)
-    char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph,
-         arms="cheer" if t >= t2 else "point", look=1, mood="happy", talk=talk_v(t, True))
-    char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph, arms="cheer", look=-1, mood="happy")
-    char(cv, READER_2, r2x, 260, t, scale=2, walk=r2ph, arms="wave", look=-1, mood="happy")
+    # Villeneuve presenta Parte Dos; los espectadores entran a la sala en "solo en cines" y celebran en "+US$ 700M"
+    t_cines = TL.word("c7_01", "cines")
+    r1x, r1ph = walk(t, t1 + 0.1, t_cines + 0.4, 438, 368)
+    r2x, r2ph = walk(t, t1 + 0.25, t_cines + 0.55, 464, 418)
+    char(cv, VILLENEUVE, 84, 260, t, scale=2,
+         arms="cheer" if t >= t2 else "point", look=1, mood="happy")
+    char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph,
+         arms="cheer" if t >= t2 else "point_l", look=-1, mood="happy")
+    char(cv, READER_2, r2x, 260, t, scale=2, walk=r2ph,
+         arms="wave" if t >= t2 else "hold", look=-1, mood="happy")
 
     # Panel comparativo de taquilla con barras animadas
     a_b, dy_b = pop(t, t1 + 0.05)
@@ -77,12 +79,11 @@ def scene_twenty_million_and_turn(t):
             draw_text(cv, "UNA DE LAS SAGAS MÁS GRANDES DE LA HISTORIA", 240, 30, "press", 8, GOLD, align="center",
                       reveal=(t - t4) * 32)
 
-        hx, hph, _ = pace(t, t3, 42, 114, period=2.6, pause=0.2)
-        vx, vph, _ = pace(t, t3 + 0.3, 436, 366, period=2.6, pause=0.2)
-        char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-             arms="cheer" if t >= t4 else "point", look=1, mood="happy", talk=talk_v(t, t < t4))
-        char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph,
-             arms="cheer" if t >= t4 else "point_l", look=-1, mood="happy", talk=talk_v(t, t >= t4))
+        t_sagas = TL.word("c7_04", "sagas")
+        char(cv, HERBERT, 88, 260, t, scale=2,
+             arms="point" if t >= t4 else "note", look=1, mood="happy")
+        char(cv, VILLENEUVE, 392, 260, t, scale=2,
+             arms="cheer" if t >= t_sagas else "point_l", look=-1, mood="happy")
 
         a_m, dy_m = pop(t, t3 + 0.05)
         window(cv, 144, 62 + dy_m, 192, 104, fill=(32, 22, 14), border=GOLD, alpha=0.96 * a_m)
@@ -107,10 +108,8 @@ def scene_twenty_million_and_turn(t):
     draw_text(cv, "PARTE INCÓMODA", 240, 130 + dy_t, "press", 16, RED, align="center", outline_w=2,
               reveal=(t - t5 - 0.15) * 26)
 
-    vx, vph, _ = pace(t, t5, 48, 126, period=2.4, pause=0.2)
-    hx, hph, _ = pace(t, t5 + 0.2, 432, 356, period=2.4, pause=0.2)
-    char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph, arms="think", look=1, mood="focused")
-    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph, arms="point_l", look=-1, mood="worried")
+    char(cv, VILLENEUVE, 88, 260, t, scale=2, arms="think", look=1, mood="focused")
+    char(cv, HERBERT, 392, 260, t, scale=2, arms="point_l", look=-1, mood="worried")
     return offset_canvas(cv, dx, dy)
 
 

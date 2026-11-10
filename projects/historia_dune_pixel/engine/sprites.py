@@ -423,51 +423,41 @@ def draw_arms(spec, pose, t=0.0):
     phase = pose.get("walk")
     sw = 0
     if phase is not None:
-        sw = round(math.sin(phase * 2 * math.pi) * 3)
-    else:
-        # Sutil balanceo natural para que nunca queden rígidos
-        sw = round(math.sin(t * 4.5) * 1)
+        sw = round(math.sin(phase * 2 * math.pi) * 2)
 
     if arms == "down":
-        hl, hr = (6 - sw, 31), (21 + sw, 31)
+        hl, hr = (6 - sw // 2, 31), (21 + sw // 2, 31)
     elif arms == "type":
         j = int(t * 14) % 2
         hl, hr = (10, 27 + j), (17, 28 - j)
     elif arms in ("write", "note"):
-        j = round(math.sin(t * 10) * 1.6)
-        hl, hr = (9, 27), (18 + j, 26 - (j % 2))
+        j = round(math.sin(t * 9) * 1.5)
+        hl, hr = (9, 27), (18 + j, 26)
     elif arms == "work":
-        j = round(math.sin(t * 8.5) * 2.5)
+        j = round(math.sin(t * 7.5) * 2)
         hl, hr = (9, 28 + j), (18, 29 + j)
     elif arms == "hips":
-        j = round(math.sin(t * 4.0) * 1)
-        hl, hr = (5, 27 + j), (22, 27 - j)
+        hl, hr = (5, 27), (22, 27)
     elif arms == "wave":
-        j = round(math.sin(t * 10) * 2)
+        j = round(math.sin(t * 9) * 2)
         hl, hr = (6, 31), (25 + j, 11)
     elif arms == "point":
-        j = round(math.sin(t * 6.5) * 1.5)
-        hl, hr = (6, 30), (26, 19 + j)
+        hl, hr = (6, 31), (27, 20)
     elif arms == "point_l":
-        j = round(math.sin(t * 6.5) * 1.5)
-        hl, hr = (1, 19 + j), (21, 30)
+        hl, hr = (0, 20), (21, 31)
     elif arms == "cheer":
-        j = round(math.sin(t * 12) * 1.8)
+        j = round(math.sin(t * 10) * 1.5)
         hl, hr = (3, 9 + j), (24, 9 - j)
     elif arms == "hold":
-        j = round(math.sin(t * 5.0) * 1)
-        hl, hr = (10, 26 + j), (17, 26 + j)
+        hl, hr = (10, 26), (17, 26)
     elif arms == "think":
-        j = round(math.sin(t * 4.0) * 1)
-        hl, hr = (6, 31), (15, 16 + j)
+        hl, hr = (6, 31), (15, 16)
     elif arms == "shrug":
-        j = round(math.sin(t * 6.0) * 1.5)
-        hl, hr = (3, 21 + j), (24, 21 + j)
+        hl, hr = (3, 22), (24, 22)
     elif arms == "cross":
-        j = round(math.sin(t * 3.8) * 1)
-        hl, hr = (17, 25 + j), (10, 26 + j)
+        hl, hr = (17, 25), (10, 26)
     else:
-        hl, hr = (6 - sw, 31), (21 + sw, 31)
+        hl, hr = (6, 31), (21, 31)
 
     # brazo izquierdo (luz) y derecho (sombra)
     L.thick_line(sl[0], sl[1], hl[0], hl[1], sleeve, 3)
@@ -475,7 +465,6 @@ def draw_arms(spec, pose, t=0.0):
     for (hx, hy), c in ((hl, skin), (hr, shade(skin, 0.86))):
         L.rect(hx - 1, hy, hx + 1, hy + 1, c)
 
-    # Pequeña libreta en mano cuando arms == "note"
     if arms == "note":
         L.rect(7, 24, 12, 28, hexc("f4ecd2"))
         L.rect(7, 24, 12, 24, hexc("c84a32"))
@@ -495,7 +484,7 @@ def _render(spec_key, pose_key, tq):
     if spec.get("glasses") is True:
         spec["glasses"] = "black"
     pose = dict(pose_key)
-    t_sec = tq / 12.0
+    t_sec = tq / 30.0
     order = [draw_legs(spec, pose), draw_torso(spec, pose), draw_head(spec, pose)]
     arms = draw_arms(spec, pose, t_sec)
     if pose.get("arms") in ("think", "type", "write", "note", "work", "hold", "cross", "hips"):
@@ -503,7 +492,7 @@ def _render(spec_key, pose_key, tq):
     else:
         order.insert(1, arms) if pose.get("arms") == "down_back" else order.append(arms)
     img = composite(order)
-    if pose.get("facing", pose.get("look", 1)) < 0:
+    if pose.get("facing", 1) < 0:
         img = img[:, ::-1]
     return img
 
@@ -514,15 +503,12 @@ def _freeze(d):
 
 def render(spec, t=0.0, **pose):
     """Devuelve un array RGBA (SH, SW, 4) del personaje en la pose pedida.
-    Parpadeo y micro-animación continua para que ningún personaje quede estático."""
+    Parpadeo automático salvo que se pase blink explícito."""
     seed = (hash(str(spec.get("name", spec.get("jacket", "")))) % 97) / 97.0
     if "blink" not in pose:
-        cyc = (t + seed * 3.7) % 3.2
-        pose["blink"] = cyc < 0.13
-    # Si no está caminando, le damos un micro-paso o ritmo de cuerpo cuando habla o gesticula
-    if pose.get("walk") is None and (pose.get("talk") or pose.get("arms") in ("cheer", "wave", "work", "point")):
-        pose["walk"] = ((t * 1.8 + seed) % 1.0) * 0.25
-    tq = int((t + seed * 2.0) * 12)
+        cyc = (t + seed * 3.7) % 3.4
+        pose["blink"] = cyc < 0.12
+    tq = int(t * 30) if pose.get("arms") in ("type", "write", "note", "work", "wave", "cheer") else 0
     return _render(_freeze(spec), _freeze(pose), tq)
 
 

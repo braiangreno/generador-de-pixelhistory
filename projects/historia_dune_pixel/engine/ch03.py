@@ -31,16 +31,15 @@ def scene_cult_and_messiah(t):
         draw_text(cv, "EL MESÍAS DE DUNE", 240, 30, "press", 8, GOLD, align="center",
                   reveal=(t - t2) * 30)
 
-    # Jóvenes universitarios caminando por el campus y Herbert presentando El Mesías de Dune
-    r1x, r1ph, _ = pace(t, t1, 44, 112, period=2.6, pause=0.2)
-    r2x, r2ph, _ = pace(t, t1 + 0.3, 128, 198, period=2.8, pause=0.2)
-    hx, hph, _ = pace(t, t1 + 0.15, 428, 362, period=2.7, pause=0.2)
-    char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph,
-         arms="cheer" if t < t2 else "think", look=1, mood="happy" if t < t2 else "worried")
-    char(cv, READER_2, r2x, 260, t, scale=2, walk=r2ph,
-         arms="note" if t < t2 else "shrug", look=1, mood="happy" if t < t2 else "neutral")
+    # Jóvenes universitarios leyendo en el campus (c3_01); en c3_02 Herbert da un paso al frente y presenta El Mesías de Dune
+    t_mesias = TL.word("c3_02", "mesias")
+    hx, hph = walk(t, t2 - 0.1, t2 + 0.75, 424, 384)
+    char(cv, READER_1, 68, 260, t, scale=2,
+         arms="think" if t >= t_mesias else "note", look=1, mood="worried" if t >= t_mesias else "happy")
+    char(cv, READER_2, 128, 260, t, scale=2,
+         arms="shrug" if t >= t_mesias else "hold", look=1, mood="neutral" if t >= t_mesias else "happy")
     char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-         arms="point_l", look=-1, talk=talk_v(t, True))
+         arms="point_l" if t >= t2 else "note", look=-1, talk=talk_v(t, t >= t2))
 
     if t < t2:
         a_c, dy_c = pop(t, t1 + 0.1)
@@ -83,13 +82,14 @@ def scene_hero_warning(t):
         draw_text(cv, "ES EL QUE LLEGA AL CINE EN DICIEMBRE", 240, 30, "silk", 8, CYAN, align="center",
                   reveal=(t - t5) * 32)
 
-    # Debate con movimiento continuo entre Herbert y el editor Campbell
-    hx, hph, _ = pace(t, t3, 52, 118, period=2.6, pause=0.2)
-    cx, cph, _ = pace(t, t3 + 0.3, 432, 376, period=2.6, pause=0.2)
-    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-         arms="point" if t >= t4 else "hold", look=1, talk=talk_v(t, t >= t4))
-    char(cv, EDITOR_CAMPBELL, cx, 260, t, scale=2, walk=cph,
-         arms="point_l" if t < t4 else "cross", look=-1,
+    # En c3_03 habla el editor Campbell ("la rechazó"); en c3_04 y c3_05 habla Herbert explicando su advertencia
+    t_rechazo = TL.word("c3_03", "rechazo")
+    t_lider = TL.word("c3_04", "lider")
+    char(cv, HERBERT, 88, 260, t, scale=2,
+         arms="point" if t >= t_lider else ("think" if t >= t4 else "hold"),
+         look=1, talk=talk_v(t, t >= t4))
+    char(cv, EDITOR_CAMPBELL, 396, 260, t, scale=2,
+         arms="point_l" if (t_rechazo <= t < t4) else "cross", look=-1,
          mood="angry" if t < t4 else "neutral", talk=talk_v(t, t < t4))
 
     if t < t4:

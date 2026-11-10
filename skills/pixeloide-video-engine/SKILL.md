@@ -93,9 +93,10 @@ Genera a la vez `script_full_en.json` y `script_full_pt.json` con los mismos `id
    - `scenes()`: lista de tuplas `(t_inicio, funcion_escena, funcion_camara_opcional)` sincronizadas al milisegundo con `TL.s(lid)`, `TL.e(lid)` y `TL.word(lid, "palabra")`.
    - `music(A)`: composición chiptune procedural acorde al tono emocional del capítulo.
    - `sfx(A)`: efectos de sonido sincronizados con las apariciones de ventanas, golpes, alertas o revelaciones.
-2. **Reglas de Animación, Personajes y Ritmo Visual**:
+2. **Reglas de Animación, Personajes y Coreografía con el Audio**:
    - **PROHIBIDO incluir `robot(...)` ("La Máquina")** en documentales cuya temática no sea Inteligencia Artificial.
-   - **Personajes siempre vivos y en movimiento**: usa `walk(t, t0, t1, x0, x1)` para que los personajes entren caminando o se desplacen por la escena, interactúen entre sí (`look`, `facing`, `talk_v`), y cambien de postura (`arms="work"`, `"note"`, `"type"`, `"point"`, `"cheer"`, `"wave"`, `"shrug"`). Nunca dejes sprites estáticos durante toda la escena.
+   - **PROHIBIDO usar loops continuos sin sentido (`pace()` infinito, rebote continuo o rotación automática de brazos)**. Los personajes no deben moverse todo el tiempo sin motivo.
+   - **Coreografía sincronizada con las palabras del narrador (`TL.word`)**: cada entrada caminando (`walk(t, t0, t1, x0, x1)` una sola vez para entrar o desplazarse a un punto), gesto de brazos (`arms="type"`, `"write"`, `"note"`, `"work"`, `"point"`, `"cheer"`, `"shrug"`, `"think"`, `"hold"`) y aparición de tarjetas (`pop(t, t_word)`) debe dispararse en el instante exacto en que el audio pronuncia la acción o concepto (`TL.word(lid, "...")` y `TL.s(lid)`).
    - **Ritmo y Cámara**: incluye siempre funciones de cámara (`cam_push` y `cam_punch`) en `scenes()`, apariciones con rebote `pop(t, t0)`, sacudidas `shake()` en impactos/rechazos y revelado progresivo `reveal=` en titulares. No repitas un mismo recurso visual (como una línea/gusano en el piso) en todas las escenas.
 3. En el último capítulo (`chNN.py`), define `T_END = TL.e("ultima_linea") + 2.8` para que `engine/outro.py` tome el relevo inmediatamente después.
 4. Registra todas las cadenas en mayúsculas de los capítulos dentro de `engine/i18n.py` (`EN_MAP` y `PT_MAP`).
@@ -124,8 +125,15 @@ Antes de renderizar el video final, **siempre** verifica que ningún texto en `e
    python tools/mux_all.py
    ```
 
-### Paso 7 — Miniaturas 16:9 y Shorts Verticales 9:16 por Cada Capítulo (`renders/shorts/`)
-1. **Regla obligatoria**: Además del documental 16:9 completo, **siempre** se debe generar por separado la versión vertical `9:16` (`1080x1920`, 30fps, sin subtítulos pegados) de **cada capítulo del episodio** (`Cap 00 Apertura` + `Cap 01` a `Cap 08`) en Español, Inglés y Portugués dentro de `renders/shorts/` (`Short_Cap00_Apertura_{LANG}.mp4`, `Short_Cap01_{LANG}.mp4`, ..., `Short_Cap08_{LANG}.mp4`), junto con sus `.srt` independientes en `renders/subtitulos/`:
+### Paso 7 — Miniaturas 16:9 y Shorts Verticales 9:16 a Pantalla Completa por Cada Capítulo (`renders/shorts/`)
+1. **Regla obligatoria (Redibujado 9:16 a pantalla completa, CERO recortes en caja cuadrada)**:
+   - **PROHIBIDO recortar el video 16:9 (`480x270`) dentro de un recuadro cuadrado (`254x254`) con barras estáticas arriba y abajo**.
+   - Todos los videos `9:16` (`1080x1920`, 30fps, sin subtítulos pegados) deben redibujarse **a pantalla completa en resolución nativa `270x480`** (escalada `4x NEAREST` a `1080x1920`) mediante `engine/vertical.py` (`vertical.frame_at_vertical`):
+     - Fondo pixel-art extendido a pantalla completa (`y=0..480`).
+     - Encabezados superiores redibujados en `x=8..262` con ajuste automático de línea (`wrap_text_px`) para que ningún texto se corte jamás.
+     - Paneles centrales, retratos y diagramas centrados en `x=135` en la zona media (`y=72..352`), apilando verticalmente los paneles que en `16:9` estaban lado a lado.
+     - Personajes sobre el piso vertical (`feet=452, x=34..236`) y globos de diálogo ajustados a `VW=270`.
+   - Se debe generar por separado cada capítulo del episodio (`Cap 00 Apertura` + `Cap 01` a `Cap 08`) en Español, Inglés y Portugués dentro de `renders/shorts/` (`Short_Cap00_Apertura_{LANG}.mp4`, `Short_Cap01_{LANG}.mp4`, ..., `Short_Cap08_{LANG}.mp4`), junto con sus `.srt` independientes en `renders/subtitulos/`:
    ```powershell
    python tools/make_thumbnails_and_shorts.py
    python tools/make_chapter_shorts.py

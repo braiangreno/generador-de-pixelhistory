@@ -37,12 +37,15 @@ def scene_venice_2016(t):
         draw_text(cv, "LA PRODUCTORA LEYÓ LA NOTA Y LO LLAMÓ", 240, 30, "press", 8, GREEN, align="center",
                   reveal=(t - t2) * 32)
 
-    vx, vph, _ = pace(t, t1, 48, 128, period=2.6, pause=0.2)
-    char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph,
-         arms="cheer" if t >= t2 else "point", look=1, talk=talk_v(t, True), mood="happy")
+    t_respondio = TL.word("c6_01", "Respondio")
+    t_llamo = TL.word("c6_02", "llamo")
+    char(cv, VILLENEUVE, 94, 260, t, scale=2,
+         arms="cheer" if t >= t_llamo else ("point" if t >= t_respondio else "think"),
+         look=1, talk=talk_v(t, t_respondio <= t < t2), mood="happy")
     if t >= t2:
-        px, pph, _ = pace(t, t2, 442, 368, period=2.5, pause=0.2)
-        char(cv, PRODUCER, px, 260, t, scale=2, walk=pph, arms="wave", look=-1, mood="happy", talk=talk_v(t, True))
+        px, pph = walk(t, t2, t2 + 0.75, 444, 384)
+        char(cv, PRODUCER, px, 260, t, scale=2, walk=pph,
+             arms="wave" if t >= t_llamo else "note", look=-1, mood="happy", talk=talk_v(t, t >= t_llamo))
 
     a_w, dy_w = pop(t, t1 + 0.05)
     window(cv, 172, 58 + dy_w, 268, 98, fill=(26, 16, 22), border=GOLD if t < t2 else GREEN, alpha=0.96 * a_w)
@@ -80,8 +83,10 @@ def scene_drawings_and_desert(t):
         draw_text(cv, "LOS DIBUJOS DE DUNE QUE HABÍA HECHO A LOS 13 AÑOS", 240, 30, "press", 8, GOLD, align="center",
                   reveal=(t - t3) * 32)
 
-        vx, vph, _ = pace(t, t3, 48, 126, period=2.6, pause=0.2)
-        char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph, arms="note", look=1, mood="happy", talk=talk_v(t, True))
+        t_dibujos = TL.word("c6_03", "dibujos")
+        vx, vph = walk(t, t3, t3 + 0.85, 52, 104)
+        char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph,
+             arms="note" if t >= t_dibujos else "hold", look=1, mood="happy")
 
         a_nb, dy_nb = pop(t, t3 + 0.1)
         window(cv, 168, 56 + dy_nb, 286, 142, fill=(32, 24, 18), border=GOLD, alpha=0.96 * a_nb)
@@ -108,21 +113,21 @@ def scene_drawings_and_desert(t):
     draw_text(cv, "DIVIDIÓ LA NOVELA EN DOS PELÍCULAS", 240, 30, "press", 8, GOLD, align="center",
               reveal=(t - t4) * 32)
 
-    # Villeneuve y su camarógrafo recorriendo el desierto de Wadi Rum
-    vx, vph, _ = pace(t, t4, 44, 120, period=2.5, pause=0.2)
-    cx, cph, _ = pace(t, t4 + 0.3, 442, 372, period=2.7, pause=0.2)
-    char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph, arms="point", look=1, mood="focused", talk=talk_v(t, True))
-    char(cv, CREW_CAM, cx, 260, t, scale=2, walk=cph, arms="work", look=-1, mood="focused")
+    # Villeneuve dirige el rodaje en Wadi Rum; señala las dos partes cuando el narrador dice "dividió el libro en dos películas"
+    t_dividio = TL.word("c6_04", "dividio")
+    char(cv, VILLENEUVE, 92, 260, t, scale=2,
+         arms="point" if t >= t_dividio else "hold", look=1, mood="focused", talk=talk_v(t, t < t_dividio))
+    char(cv, CREW_CAM, 396, 260, t, scale=2, arms="work", look=-1, mood="focused")
 
-    # Dos claquetas / bloques con entrada pop()
+    # Dos claquetas / bloques sincronizados con "dividió el libro en dos películas"
     a1, dy1 = pop(t, t4 + 0.1)
     window(cv, 152, 66 + dy1, 134, 84, fill=(34, 22, 12), border=GOLD, alpha=0.96 * a1)
     draw_text(cv, "PELÍCULA 1", 219, 80 + dy1, "silk", 8, CYAN, align="center")
     draw_text(cv, "PARTE UNO", 219, 102 + dy1, "press", 8, GOLD, align="center")
     draw_text(cv, "LA PRIMERA MITAD", 219, 124 + dy1, "silk", 8, CREAM, align="center")
 
-    if t >= t4 + 0.45:
-        a2, dy2 = pop(t, t4 + 0.45)
+    if t >= t_dividio:
+        a2, dy2 = pop(t, t_dividio)
         window(cv, 300, 66 + dy2, 134, 84, fill=(34, 22, 12), border=GOLD, alpha=0.96 * a2)
         draw_text(cv, "PELÍCULA 2", 367, 80 + dy2, "silk", 8, CYAN, align="center")
         draw_text(cv, "PARTE DOS", 367, 102 + dy2, "press", 8, GOLD, align="center")
@@ -151,15 +156,21 @@ def scene_pandemic_and_oscars(t):
         draw_text(cv, "DEMORA DE CASI 1 AÑO", 122, 94 + dy1, "silk", 8, CREAM, align="center")
         draw_text(cv, "VILLENEUVE PROTESTÓ", 122, 110 + dy1, "silk", 8, GOLD, align="center")
 
-        if t >= t5 + 0.45:
-            a2, dy2 = pop(t, t5 + 0.45)
+        t_estudio = TL.word("c6_05", "estudio")
+        t_protesto = TL.word("c6_05", "protesto")
+        if t >= t_estudio:
+            a2, dy2 = pop(t, t_estudio)
             window(cv, 260, 62 + dy2, 196, 68, fill=(16, 24, 42), border=CYAN, alpha=0.95 * a2)
             draw_text(cv, "OCTUBRE DE 2021", 358, 74 + dy2, "press", 8, CYAN, align="center")
             draw_text(cv, "CINES + STREAMING", 358, 94 + dy2, "silk", 8, CREAM, align="center")
             draw_text(cv, "EL MISMO DÍA", 358, 110 + dy2, "silk", 8, GOLD, align="center")
 
-        vx, vph, vlk = pace(t, t5, 168, 312, period=2.4, pause=0.2)
-        char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph, arms="shrug", look=vlk, mood="angry", talk=talk_v(t, True))
+        # Villeneuve protesta en el instante exacto en que el audio dice "Villeneuve protestó"
+        v_arms = "shrug" if t >= t_protesto else ("point" if t >= t_estudio else "cross")
+        char(cv, VILLENEUVE, 240, 260, t, scale=2, arms=v_arms,
+             look=1 if t >= t_estudio else -1,
+             mood="angry" if t >= t_protesto else "worried",
+             talk=talk_v(t, t >= t_protesto))
         return cv
 
     # c6_06: Más de 400 millones de dólares y 6 Premios Óscar
@@ -172,10 +183,11 @@ def scene_pandemic_and_oscars(t):
     draw_text(cv, "GANÓ 6 PREMIOS ÓSCAR · LA MÁS GANADORA DE LA NOCHE", 240, 30, "silk", 8, GREEN, align="center",
               reveal=(t - t6) * 32)
 
-    vx, vph, _ = pace(t, t6, 42, 114, period=2.5, pause=0.2)
-    px, pph, _ = pace(t, t6 + 0.3, 446, 384, period=2.6, pause=0.2)
-    char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph, arms="cheer", look=1, mood="happy")
-    char(cv, PRODUCER, px, 260, t, scale=2, walk=pph, arms="cheer", look=-1, mood="happy")
+    t_seis = TL.word("c6_06", "seis")
+    char(cv, VILLENEUVE, 88, 260, t, scale=2,
+         arms="cheer" if t >= t_seis else "point", look=1, mood="happy")
+    char(cv, PRODUCER, 408, 260, t, scale=2,
+         arms="cheer" if t >= t_seis else "hold", look=-1, mood="happy")
 
     a_o, dy_o = pop(t, t6 + 0.05)
     window(cv, 146, 58 + dy_o, 292, 112, fill=(28, 22, 12), border=GOLD, alpha=0.96 * a_o)

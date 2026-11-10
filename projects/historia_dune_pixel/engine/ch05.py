@@ -48,20 +48,19 @@ def scene_lynch_mexico(t):
         draw_text(cv, "LA CRÍTICA LA DESTROZÓ · LYNCH RENEGÓ DE ELLA", 240, 30, "press", 8, RED, align="center",
                   reveal=(t - t3) * 32)
 
-    # David Lynch y su equipo moviéndose por el set de filmación
+    # David Lynch dirige en c5_01; se preocupa en c5_02 ("menos de 31"); y se da vuelta alejándose cuando dice "Lynch terminó renegando de ella"
+    t_renegando = TL.word("c5_03", "renegando")
     if t < t3:
-        lx, lph, _ = pace(t, t1, 44, 114, period=2.5, pause=0.2)
-        cx, cph, _ = pace(t, t1 + 0.3, 184, 134, period=2.7, pause=0.2)
-        char(cv, LYNCH, lx, 260, t, scale=2, walk=lph,
+        char(cv, LYNCH, 88, 260, t, scale=2,
              arms="point" if t < t2 else "shrug", look=1,
-             mood="focused" if t < t2 else "sad", talk=talk_v(t, True))
-        char(cv, CREW_CAM, cx, 260, t, scale=2, walk=cph,
+             mood="focused" if t < t2 else "sad", talk=talk_v(t, t < t2))
+        char(cv, CREW_CAM, 154, 260, t, scale=2,
              arms="work" if t < t2 else "hips", look=-1, mood="neutral")
     else:
-        lx, lph, _ = pace(t, t3, 114, 42, period=2.2, pause=0.15)
-        cx, cph, _ = pace(t, t3 + 0.2, 134, 182, period=2.6, pause=0.2)
-        char(cv, LYNCH, lx, 260, t, scale=2, walk=lph, arms="cross", look=-1, mood="sad")
-        char(cv, CREW_CAM, cx, 260, t, scale=2, walk=cph, arms="shrug", look=-1, mood="sad")
+        lx, lph = walk(t, t_renegando, TL.e("c5_03"), 88, 42)
+        char(cv, LYNCH, lx, 260, t, scale=2, walk=lph,
+             arms="cross", look=-1 if t >= t_renegando else 1, mood="sad")
+        char(cv, CREW_CAM, 154, 260, t, scale=2, arms="shrug", look=-1, mood="sad")
 
     # Panel derecho con retrato de Lynch y balance de taquilla
     a_p, dy_p = pop(t, t1 + 0.05)
@@ -109,19 +108,18 @@ def scene_young_villeneuve_1984(t):
         draw_text(cv, "ESE ALGUIEN IBA A SER ÉL", 240, 30, "press", 8, GOLD, align="center",
                   reveal=(t - t6) * 32)
 
-    # Fila de espectadores moviéndose en la vereda nevada hacia la boletería
-    r1x, r1ph, _ = pace(t, t4, 42, 108, period=2.8, pause=0.2)
-    r2x, r2ph, _ = pace(t, t4 + 0.3, 124, 192, period=2.6, pause=0.2)
-    ydx, ydph, _ = pace(t, t4 + 0.15, 232, 312, period=2.7, pause=0.2)
-    char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph, arms="cross", look=1)
-    char(cv, READER_2, r2x, 260, t, scale=2, walk=r2ph, arms="wave" if t < t5 else "hips", look=1)
+    # Fila de espectadores en la vereda nevada; el joven Denis da un paso adelante y piensa en "Salió pensando" (c5_05)
+    t_libro = TL.word("c5_04", "libro")
+    ydx, ydph = walk(t, t5, t5 + 0.85, 236, 286)
+    char(cv, READER_1, 74, 260, t, scale=2, arms="cross", look=1)
+    char(cv, READER_2, 142, 260, t, scale=2, arms="hips", look=1)
 
     # El joven Denis Villeneuve adelante en la fila
     if t >= t6:
         cv = spotlight(cv, int(ydx), 48, 266, 36, 110, color=(255, 215, 110), strength=0.35)
+    yd_arms = "point" if t >= t6 else ("think" if t >= t5 else ("note" if t >= t_libro else "hold"))
     char(cv, YOUNG_DENIS, ydx, 260, t, scale=2, walk=ydph,
-         arms="cheer" if t >= t6 else ("think" if t >= t5 else "note"),
-         look=1, mood="happy", talk=talk_v(t, t >= t5))
+         arms=yd_arms, look=1, mood="happy" if t >= t6 else "focused")
 
     # Tarjeta sobre el joven Denis con entrada pop()
     if t < t5:

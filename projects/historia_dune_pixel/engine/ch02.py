@@ -29,10 +29,14 @@ def scene_twenty_rejections(t):
     cv = bg("bg_chilton_office_1965").copy()
     cv = grade(cv, mul=(0.82, 0.78, 0.85), add=(8, 0, 6), sat=0.85, k=0.9)
 
-    # Sacudida en cada golpe de rechazo
+    t_larga = TL.word("c2_01", "larga")
+    t_complicada = TL.word("c2_01", "complicada")
+    t_rara = TL.word("c2_01", "rara")
+
+    # Sacudida en cada golpe de rechazo sincronizado con la palabra exacta del narrador
     dx, dy = 0, 0
-    for th_u in (0.12, 0.40, 0.68):
-        sx, sy = shake(t, t0 + th_u * dur, dur=0.22, amp=3)
+    for t_beat in (t_larga, t_complicada, t_rara):
+        sx, sy = shake(t, t_beat, dur=0.22, amp=3)
         dx += sx
         dy += sy
 
@@ -42,22 +46,21 @@ def scene_twenty_rejections(t):
     draw_text(cv, "EL MANUSCRITO REBOTA DE PUERTA EN PUERTA", 240, 30, "silk", 8, CREAM, align="center",
               reveal=(t - t0) * 32)
 
-    # Frank Herbert caminando con el manuscrito de puerta en puerta y el editor rechazándolo
-    hx, hph, _ = pace(t, t0, 48, 120, period=2.4, pause=0.2)
-    px, pph, _ = pace(t, t0 + 0.3, 430, 372, period=2.6, pause=0.2)
-    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-         arms="shrug" if int(t * 2.5) % 2 == 0 else "hold", look=1, mood="sad")
-    char(cv, PUBLISHER_NO, px, 260, t, scale=2, walk=pph,
-         arms="point_l" if int(t * 3) % 2 == 0 else "cross", look=-1, mood="angry", talk=talk_v(t, True))
+    # Herbert se acerca con el manuscrito al principio; el editor lo rechaza en cada argumento ("larga", "complicada", "rara")
+    hx, hph = walk(t, t0, t0 + 0.85, 52, 98)
+    h_arms = "shrug" if t >= t_rara else "hold"
+    p_arms = "point_l" if (t_larga <= t < t_complicada or t >= t_rara) else "cross"
+    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph, arms=h_arms, look=1, mood="sad")
+    char(cv, PUBLISHER_NO, 392, 260, t, scale=2, arms=p_arms, look=-1, mood="angry",
+         talk=talk_v(t, t >= t_larga))
 
-    # Tres grandes sellos de rechazo en el centro con entrada pop()
+    # Tres grandes sellos de rechazo sincronizados con "larga", "complicada" y "rara"
     reasons = [
-        ("DEMASIADO LARGA", 0.12),
-        ("DEMASIADO COMPLICADA", 0.40),
-        ("DEMASIADO RARA", 0.68),
+        ("DEMASIADO LARGA", t_larga),
+        ("DEMASIADO COMPLICADA", t_complicada),
+        ("DEMASIADO RARA", t_rara),
     ]
-    for idx, (txt, th_u) in enumerate(reasons):
-        t_st = t0 + th_u * dur
+    for idx, (txt, t_st) in enumerate(reasons):
         if t >= t_st:
             ast, dyst = pop(t, t_st, dur=0.25)
             ry = 60 + idx * 46 + dyst
@@ -112,13 +115,15 @@ def scene_chilton_lanier(t):
         draw_text(cv, "US$ 7.500", 371, 121 + dy_dl, "press", 8, GOLD, align="center")
         sparkle(cv, 304, 110 + dy_dl, t, 3)
 
-    # Herbert y Lanier se desplazan con ritmo en la oficina cerrando el contrato
-    hx, hph, _ = pace(t, t2, 92, 178, period=2.8, pause=0.25)
-    lx, lph, _ = pace(t, t2 + 0.3, 348, 254, period=2.8, pause=0.25)
-    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-         arms="cheer" if t >= t3 else "point", look=1, mood="happy", talk=talk_v(t, t < t3))
+    # Herbert presenta el manuscrito; Lanier avanza al ser nombrado ("Sterling Lanier"), lee la revista y cierra el acuerdo en "siete mil quinientos"
+    t_aposto = TL.word("c2_03", "aposto")
+    lx, lph = walk(t, t3 - 0.1, t3 + 0.75, 368, 304)
+    char(cv, HERBERT, 136, 260, t, scale=2,
+         arms="cheer" if t >= t_aposto else ("point" if t >= t3 else "hold"),
+         look=1, mood="happy")
     char(cv, LANIER, lx, 260, t, scale=2, walk=lph,
-         arms="wave" if t >= t3 else "point_l", look=-1, mood="happy", talk=talk_v(t, t >= t3))
+         arms="point_l" if t >= t_aposto else ("note" if t >= t3 else "hips"),
+         look=-1, mood="happy", talk=talk_v(t, t >= t3))
 
     return cv
 
@@ -155,21 +160,26 @@ def scene_release_and_awards(t):
         draw_text(cv, "DUNE (1965)", 240, 68 + dy_w, "press", 8, GOLD, align="center")
         draw_text(cv, "PRECIO: US$ 5,95", 240, 86 + dy_w, "silk", 8, CREAM, align="center")
         if t < t5:
-            draw_text(cv, "VENTAS INICIALES BAJAS", 240, 106 + dy_w, "silk", 8, RED, align="center")
-            lx, lph, _ = pace(t, t4, 58, 122, period=2.6, pause=0.2)
-            hx, hph, _ = pace(t, t4 + 0.3, 412, 348, period=2.6, pause=0.2)
+            t_caro = TL.word("c2_04", "caro")
+            if t >= t_caro:
+                draw_text(cv, "VENTAS INICIALES BAJAS", 240, 106 + dy_w, "silk", 8, RED, align="center")
+            lx, lph = 112, None
+            hx, hph = 368, None
         else:
-            a_f, dy_f = pop(t, t5 + 0.1, dur=0.25)
+            a_f, dy_f = pop(t, t5 + 0.05, dur=0.25)
             window(cv, 164, 102 + dy_f, 152, 28, fill=(130, 22, 22), border=RED, alpha=0.98 * a_f)
             draw_text(cv, "LANIER DESPEDIDO", 240, 112 + dy_f, "press", 8, CREAM, align="center")
-            lx, lph = walk(t, t5 + 0.1, TL.e("c2_05"), 122, 42)
-            hx, hph, _ = pace(t, t5, 348, 398, period=2.4, pause=0.2)
+            lx, lph = walk(t, t5 + 0.1, TL.e("c2_05"), 112, 38)
+            hx, hph = 368, None
 
-        char(cv, LANIER, lx, 260, t, scale=2, walk=lph, arms="shrug" if t < t5 else "down",
+        char(cv, LANIER, lx, 260, t, scale=2, walk=lph,
+             arms="down" if t >= t5 else ("shrug" if t >= TL.word("c2_04", "caro") else "hold"),
              look=-1 if t >= t5 else 1, mood="sad")
-        char(cv, HERBERT, hx, 260, t, scale=2, walk=hph, arms="shrug", look=-1, mood="sad")
+        char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
+             arms="shrug" if t >= TL.word("c2_04", "caro") else "hold", look=-1, mood="sad")
     else:
-        # 1966: Premios Nébula y Hugo + lectores pasándose el libro de mano en mano
+        # 1966: Premios Nébula y Hugo ("ganó los dos premios") + lectores pasándose el libro en "pasar de mano en mano"
+        t_mano = TL.word("c2_06", "mano")
         CONF.draw(cv, t)
         a_n, dy_n = pop(t, t6 + 0.05)
         window(cv, 56, 56 + dy_n, 174, 86, fill=(28, 24, 12), border=GOLD, alpha=0.96 * a_n)
@@ -183,18 +193,18 @@ def scene_release_and_awards(t):
         draw_text(cv, "1966 · MEJOR NOVELA", 337, 86 + dy_h, "silk", 8, CREAM, align="center")
         draw_text(cv, "CONSAGRACIÓN MUNDIAL", 337, 104 + dy_h, "silk", 8, GREEN, align="center")
 
-        # Herbert festeja y los lectores se mueven pasándose el libro de mano en mano
-        hx, hph, _ = pace(t, t6, 54, 118, period=2.5, pause=0.2)
-        r1x, r1ph, _ = pace(t, t6 + 0.2, 196, 254, period=2.4, pause=0.2)
-        r2x, r2ph, _ = pace(t, t6 + 0.4, 412, 342, period=2.4, pause=0.2)
-        char(cv, HERBERT, hx, 260, t, scale=2, walk=hph, arms="cheer", look=1, mood="happy")
-        char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph, arms="point", look=1, mood="happy")
-        char(cv, READER_2, r2x, 260, t, scale=2, walk=r2ph, arms="wave", look=-1, mood="happy")
-        # Libro dorado pasando en arco entre los dos lectores
-        u_pass = 0.5 + 0.5 * math.sin(t * 4.2)
-        bx = int(252 + 64 * u_pass)
-        by = int(206 - math.sin(u_pass * math.pi) * 14)
-        d.rectangle([bx - 10, by, bx + 10, by + 22], fill=(238, 174, 58, 255), outline=(*INK, 255))
+        # Herbert festeja los premios; cuando el audio dice "pasar de mano en mano", el lector 1 le entrega el ejemplar al lector 2
+        r1x, r1ph = walk(t, t_mano - 0.25, t_mano + 0.45, 208, 246)
+        char(cv, HERBERT, 88, 260, t, scale=2, arms="cheer", look=1, mood="happy")
+        char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph,
+             arms="point" if t >= t_mano else "hold", look=1, mood="happy")
+        char(cv, READER_2, 344, 260, t, scale=2,
+             arms="hold" if t >= t_mano else "hips", look=-1, mood="happy")
+        if t >= t_mano - 0.15:
+            u_pass = ease_in_out(prog(t, t_mano - 0.1, TL.e("c2_06") - 0.15))
+            bx = int(260 + 62 * u_pass)
+            by = int(210 - math.sin(u_pass * math.pi) * 14)
+            d.rectangle([bx - 10, by, bx + 10, by + 22], fill=(238, 174, 58, 255), outline=(*INK, 255))
 
     return offset_canvas(cv, dx, dy)
 

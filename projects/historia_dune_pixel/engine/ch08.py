@@ -25,12 +25,12 @@ def scene_messiah_adaptation(t):
         draw_text(cv, "VILLENEUVE DIJO QUE SERÁ SU ÚLTIMA PELÍCULA DE DUNE", 240, 30, "press", 8, GOLD, align="center",
                   reveal=(t - t2) * 32)
 
-    hx, hph, _ = pace(t, t1, 40, 108, period=2.6, pause=0.2)
-    vx, vph, _ = pace(t, t1 + 0.3, 440, 368, period=2.6, pause=0.2)
-    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-         arms="point", look=1, mood="happy", talk=talk_v(t, t < t2))
-    char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph,
-         arms="wave" if t >= t2 else "point_l", look=-1, talk=talk_v(t, t >= t2), mood="happy")
+    t_ultima = TL.word("c8_02", "ultima")
+    char(cv, HERBERT, 84, 260, t, scale=2,
+         arms="point" if t < t2 else "note", look=1, mood="happy")
+    char(cv, VILLENEUVE, 396, 260, t, scale=2,
+         arms="wave" if t >= t_ultima else "point_l", look=-1,
+         talk=talk_v(t, t >= t2), mood="happy")
 
     a_m, dy_m = pop(t, t1 + 0.05)
     window(cv, 136, 58 + dy_m, 208, 108, fill=(32, 20, 14), border=GOLD, alpha=0.96 * a_m)
@@ -72,13 +72,13 @@ def scene_dunesday_imax(t):
         draw_text(cv, "DUNE SE QUEDÓ CON LAS PANTALLAS IMAX DE SU ESTRENO", 240, 30, "press", 8, GREEN, align="center",
                   reveal=(t - t5) * 32)
 
-    vx, vph, _ = pace(t, t3, 38, 102, period=2.5, pause=0.2)
-    r1x, r1ph, _ = pace(t, t3 + 0.2, 436, 372, period=2.6, pause=0.2)
-    r2x, r2ph, _ = pace(t, t3 + 0.4, 390, 446, period=2.8, pause=0.2)
-    char(cv, VILLENEUVE, vx, 260, t, scale=2, walk=vph,
+    t_avengers = TL.word("c8_03", "Avengers")
+    char(cv, VILLENEUVE, 82, 260, t, scale=2,
          arms="cheer" if t >= t5 else "point", look=1, mood="happy")
-    char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph, arms="cheer", look=-1, mood="happy")
-    char(cv, READER_2, r2x, 260, t, scale=2, walk=r2ph, arms="wave", look=-1, mood="happy")
+    char(cv, READER_1, 384, 260, t, scale=2,
+         arms="cheer" if t >= t4 else "point_l", look=-1, mood="happy")
+    char(cv, READER_2, 434, 260, t, scale=2,
+         arms="wave" if t >= t5 else "hips", look=-1, mood="happy")
 
     if t < t4:
         a_v, dy_v = pop(t, t3 + 0.05)
@@ -88,9 +88,11 @@ def scene_dunesday_imax(t):
         draw_text(cv, "DUNE 3", 187, 102 + dy_v, "press", 8, GOLD, align="center")
         draw_text(cv, "EL MESÍAS", 187, 120 + dy_v, "silk", 8, CREAM, align="center")
 
-        window(cv, 246, 88 + dy_v, 94, 52, fill=(18, 44, 34), border=GREEN, alpha=0.98 * a_v)
-        draw_text(cv, "AVENGERS", 293, 102 + dy_v, "press", 8, GREEN, align="center")
-        draw_text(cv, "DOOMSDAY", 293, 120 + dy_v, "silk", 8, CREAM, align="center")
+        if t >= t_avengers - 0.15:
+            a_av, dy_av = pop(t, t_avengers - 0.15)
+            window(cv, 246, 88 + dy_av, 94, 52, fill=(18, 44, 34), border=GREEN, alpha=0.98 * a_av)
+            draw_text(cv, "AVENGERS", 293, 102 + dy_av, "press", 8, GREEN, align="center")
+            draw_text(cv, "DOOMSDAY", 293, 120 + dy_av, "silk", 8, CREAM, align="center")
     elif t < t5:
         a_d, dy_d = pop(t, t4 + 0.05)
         window(cv, 124, 58 + dy_d, 232, 98, fill=(36, 22, 12), border=GOLD, alpha=0.98 * a_d)
@@ -133,12 +135,10 @@ def scene_finale_sand_never_stopped(t):
                 sway = int(round(math.sin(t * 4.5 + i) * 2))
                 d.line([(gx, gy), (gx + blade + sway, gy - 12)], fill=(64, 168, 78, 255), width=2)
 
-        w1x, w1ph, _ = pace(t, t6, 86, 168, period=2.4, pause=0.2)
-        w2x, w2ph, _ = pace(t, t6 + 0.25, 192, 268, period=2.5, pause=0.2)
-        hx, hph, _ = pace(t, t6 + 0.15, 422, 344, period=2.6, pause=0.2)
-        char(cv, USDA_WORKER_1, w1x, 258, t, scale=2, walk=w1ph, arms="hips", look=1, mood="happy")
-        char(cv, USDA_WORKER_2, w2x, 258, t, scale=2, walk=w2ph, arms="cheer", look=1, mood="happy")
-        char(cv, HERBERT, hx, 258, t, scale=2, walk=hph, arms="note", look=-1, mood="happy", talk=talk_v(t, True))
+        t_frenar = TL.word("c8_06", "frenar")
+        char(cv, USDA_WORKER_1, 136, 258, t, scale=2, arms="hips", look=1, mood="happy")
+        char(cv, USDA_WORKER_2, 224, 258, t, scale=2, arms="point" if t >= t_frenar else "work", look=1, mood="happy")
+        char(cv, HERBERT, 368, 258, t, scale=2, arms="note", look=-1, mood="happy")
         return cv
 
     # Escena 28 (c8_07): Match cut — El haz de luz del proyector IMAX ilumina la sala repleta
@@ -163,15 +163,12 @@ def scene_finale_sand_never_stopped(t):
     draw_text(cv, "LA ARENA QUE NUNCA SE DETUVO", 240, 114 + dy_f, "press", 8, CREAM, align="center")
     draw_text(cv, "1957 → 2026", 240, 134 + dy_f, "press", 16, GOLD, align="center", outline_w=2)
 
-    # Frank Herbert, Denis Villeneuve y los lectores celebrando y moviéndose frente a la pantalla IMAX
-    hx, hph, _ = pace(t, t7, 36, 104, period=2.4, pause=0.2)
-    vx, vph, _ = pace(t, t7 + 0.2, 444, 376, period=2.4, pause=0.2)
-    r1x, r1ph, _ = pace(t, t7 + 0.35, 148, 216, period=2.6, pause=0.2)
-    r2x, r2ph, _ = pace(t, t7 + 0.5, 332, 264, period=2.6, pause=0.2)
-    char(cv, HERBERT, hx, 262, t, scale=2, walk=hph, arms="cheer", look=1, mood="happy")
-    char(cv, READER_1, r1x, 262, t, scale=2, walk=r1ph, arms="wave", look=1, mood="happy")
-    char(cv, READER_2, r2x, 262, t, scale=2, walk=r2ph, arms="cheer", look=-1, mood="happy")
-    char(cv, VILLENEUVE, vx, 262, t, scale=2, walk=vph, arms="cheer", look=-1, mood="happy")
+    # Frank Herbert, Denis Villeneuve y los espectadores contemplan la pantalla y celebran en "nunca dejó de moverse"
+    t_moverse = TL.word("c8_07", "moverse")
+    char(cv, HERBERT, 76, 262, t, scale=2, arms="cheer" if t >= t_moverse else "point", look=1, mood="happy")
+    char(cv, READER_1, 178, 262, t, scale=2, arms="cheer" if t >= t_moverse else "hold", look=1, mood="happy")
+    char(cv, READER_2, 302, 262, t, scale=2, arms="wave" if t >= t_moverse else "hold", look=-1, mood="happy")
+    char(cv, VILLENEUVE, 404, 262, t, scale=2, arms="cheer" if t >= t_moverse else "point_l", look=-1, mood="happy")
     return cv
 
 

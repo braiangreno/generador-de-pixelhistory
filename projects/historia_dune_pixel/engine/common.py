@@ -29,30 +29,10 @@ def upscale(arr, k):
 def char(cv, key, x, feet, t, alpha=1.0, shadow=True, scale=1, **pose):
     """Dibuja un personaje con los pies en (x, feet). scale = 1, 2 o 3 (píxeles enteros)."""
     spec = S.CAST[key] if isinstance(key, str) else key  # clave del reparto o dict propio
-    seed = (hash(str(spec.get("name", spec.get("jacket", "")))) % 89) / 89.0
-
-    # Si el personaje habla o tiene una pose estática, alterna gestos con ritmo natural
-    arms = pose.get("arms", "down")
-    if pose.get("talk") and arms in ("point", "down", "hips", "hold"):
-        gestures = ("point", "wave", "note", "hold") if pose.get("look", 1) >= 0 else ("point_l", "wave", "hold", "shrug")
-        arms = gestures[int((t * 1.35) + seed * 4.0) % len(gestures)]
-        pose["arms"] = arms
-    elif arms in ("down", "hips") and pose.get("walk") is None:
-        # Micro cambio de postura cada ~2 segundos para que nunca parezca una estatua
-        alt = ("hips", "down", "hold", "think")
-        arms = alt[int((t * 0.75) + seed * 5.0) % len(alt)]
-        pose["arms"] = arms
-
-    bob_y = 0
-    if pose.get("walk") is not None:
-        bob_y = -abs(int(round(math.sin(pose["walk"] * 2 * math.pi) * (2 if scale >= 2 else 1))))
-    else:
-        bob_y = -int(round(abs(math.sin((t * 5.6) + seed * 6.0)) * (2 if scale >= 2 else 1)))
-
     arr = upscale(S.render(spec, t, **pose), scale)
     if shadow and alpha > 0.3:
         shadow_ellipse(cv, int(x), int(feet), 18 * scale, 4 * scale, 80)
-    paste_arr(cv, arr, int(x) - S.SW * scale // 2, int(feet) + bob_y - FEET_OFFSET * scale, alpha)
+    paste_arr(cv, arr, int(x) - S.SW * scale // 2, int(feet) - FEET_OFFSET * scale, alpha)
 
 
 def pace(t, t0, x_a, x_b, period=3.6, pause=0.28):

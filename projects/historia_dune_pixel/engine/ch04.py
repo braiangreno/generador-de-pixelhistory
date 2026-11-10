@@ -49,17 +49,18 @@ def scene_jodorowsky_team(t):
         draw_text(cv, "GIGER · PINK FLOYD · DALÍ (US$ 100.000 POR HORA)", 240, 30, "press", 8, GOLD, align="center",
                   reveal=(t - t3) * 32)
 
-    # Jodorowsky, Moebius y Dalí moviéndose con energía por el estudio parisino
-    jx, jph, _ = pace(t, t1, 44, 116, period=2.5, pause=0.2)
-    mx, mph, _ = pace(t, t1 + 0.3, 198, 142, period=2.7, pause=0.2)
+    # Jodorowsky entra en c4_01 y levanta los brazos en "a lo grande"; Moebius dibuja en c4_02; Dalí entra al decir "Dalí" en c4_03
+    t_grande = TL.word("c4_01", "grande")
+    t_dali = TL.word("c4_03", "Dali")
+    jx, jph = walk(t, t1, t1 + 0.85, 38, 86)
     char(cv, JODOROWSKY, jx, 260, t, scale=2, walk=jph,
-         arms="cheer" if t >= t3 else "point", look=1, talk=talk_v(t, True), mood="happy")
-    char(cv, MOEBIUS, mx, 260, t, scale=2, walk=mph,
+         arms="cheer" if t >= t_grande else "point", look=1, talk=talk_v(t, t < t2 or t >= t3), mood="happy")
+    char(cv, MOEBIUS, 156, 260, t, scale=2,
          arms="write" if t >= t2 else "note", look=1, mood="happy")
 
-    if t >= t3:
-        dx_dali, dph, _ = pace(t, t3, 444, 382, period=2.4, pause=0.2)
-        char(cv, DALI, dx_dali, 260, t, scale=2, walk=dph, arms="wave", look=-1, mood="happy")
+    if t >= t_dali - 0.1:
+        dx_dali, dph = walk(t, t_dali - 0.1, t_dali + 0.65, 448, 396)
+        char(cv, DALI, dx_dali, 260, t, scale=2, walk=dph, arms="wave" if dph is None else "down", look=-1, mood="happy")
 
     if t < t3:
         a_p, dy_p = pop(t, t1 + 0.1)
@@ -76,12 +77,12 @@ def scene_jodorowsky_team(t):
             draw_text(cv, f"{n_drawings:,}".replace(",", "."), 414, 82 + dy_d, "press", 8, GOLD, align="center")
             draw_text(cv, "DIBUJOS", 414, 100 + dy_d, "silk", 8, CREAM, align="center")
     else:
-        # Grilla psicodélica con los 4 integrantes clave entrando con pop escalonado
+        # Grilla con los 4 integrantes apareciendo en la palabra exacta del narrador
         cards = [
-            ("MOEBIUS", "3.000 DIBUJOS", CYAN, t3 + 0.05),
-            ("H. R. GIGER", "DISEÑO VISUAL", GREEN, t3 + 0.30),
-            ("PINK FLOYD", "BANDA SONORA", (245, 120, 220), t3 + 0.55),
-            ("SALVADOR DALÍ", "US$ 100.000 / HORA", GOLD, t3 + 0.80),
+            ("MOEBIUS", "3.000 DIBUJOS", CYAN, t3),
+            ("H. R. GIGER", "DISEÑO VISUAL", GREEN, TL.word("c4_03", "Giger")),
+            ("PINK FLOYD", "BANDA SONORA", (245, 120, 220), TL.word("c4_03", "Pink")),
+            ("SALVADOR DALÍ", "US$ 100.000 / HORA", GOLD, t_dali),
         ]
         for idx, (who, role, col, t_c) in enumerate(cards):
             if t >= t_c:
@@ -120,14 +121,14 @@ def scene_bible_and_alien(t):
         draw_text(cv, "PARTE DE ESE EQUIPO SE REENCONTRÓ EN ALIEN (1979)", 240, 30, "press", 8, GREEN, align="center",
                   reveal=(t - t6) * 32)
 
-    jx, jph, _ = pace(t, t4, 44, 112, period=2.6, pause=0.2)
-    mx, mph, _ = pace(t, t4 + 0.3, 188, 136, period=2.8, pause=0.2)
-    char(cv, JODOROWSKY, jx, 260, t, scale=2, walk=jph,
-         arms="shrug" if t < t6 else "cheer", look=1,
-         mood="sad" if t < t6 else "happy", talk=talk_v(t, True))
-    char(cv, MOEBIUS, mx, 260, t, scale=2, walk=mph,
-         arms="cross" if t < t6 else "point", look=1,
-         mood="sad" if t < t6 else "happy")
+    t_ningun = TL.word("c4_04", "Ningun")
+    t_alien = TL.word("c4_06", "Alien")
+    char(cv, JODOROWSKY, 84, 260, t, scale=2,
+         arms="point" if t >= t_alien else ("shrug" if t >= t_ningun else "hold"),
+         look=1, mood="sad" if (t_ningun <= t < t6) else "happy")
+    char(cv, MOEBIUS, 152, 260, t, scale=2,
+         arms="cheer" if t >= t_alien else ("cross" if t >= t5 else "note"),
+         look=1, mood="sad" if (t_ningun <= t < t6) else "happy")
 
     if t < t6:
         a_b, dy_b = pop(t, t4 + 0.05)

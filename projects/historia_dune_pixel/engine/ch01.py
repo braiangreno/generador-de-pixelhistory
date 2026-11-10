@@ -94,11 +94,13 @@ def scene_oregon_flight(t):
     draw_text(cv, "DUNAS QUE AVANZAN SOBRE RUTAS, BOSQUES Y CASAS", 240, 30 + dy_top, "silk", 8, CYAN, align="center",
               reveal=(t - t0 - 0.35) * 36)
 
-    # En el suelo: dos trabajadores caminando y señalando el avance de la arena hacia el bosque
-    w1x, w1ph, w1lk = pace(t, t0, 290, 365, period=2.8)
-    w2x, w2ph, w2lk = pace(t, t0 + 0.6, 420, 355, period=3.1)
-    char(cv, USDA_WORKER_1, w1x, 258, t, scale=2, walk=w1ph, arms="point" if w1ph is None else "down", look=w1lk, mood="worried")
-    char(cv, USDA_WORKER_2, w2x, 258, t, scale=2, walk=w2ph, arms="wave" if w2ph is None else "down", look=w2lk, mood="focused")
+    # En el suelo: dos trabajadores observan las dunas; señalan cuando el audio dice "rutas, bosques y casas"
+    t_rutas = TL.word("s02", "rutas")
+    t_casas = TL.word("s02", "casas")
+    w1_arms = "point" if t >= t_rutas else "hips"
+    w2_arms = "shrug" if t >= t_casas else ("point" if t >= t_rutas else "hold")
+    char(cv, USDA_WORKER_1, 316, 258, t, scale=2, arms=w1_arms, look=1, mood="worried")
+    char(cv, USDA_WORKER_2, 388, 258, t, scale=2, arms=w2_arms, look=-1, mood="focused")
 
     # Recuadro inferior: Frank Herbert tomando notas desde el avión (con entrada pop)
     if t >= t2 - 0.15:
@@ -124,27 +126,32 @@ def scene_planting_grass(t):
 
     u = clamp01((t - t0) / max(1.0, TL.e("s03") - t0))
 
-    # Hileras de pasto europeo que brotan con rebote a medida que los trabajadores avanzan
-    n_tufts = int(3 + u * 10)
+    t_hombres = TL.word("s03", "hombres")
+    t_frenar = TL.word("s03", "frenarlas")
+    t_pasto = TL.word("s03", "pasto")
+
+    # Hileras de pasto europeo que brotan cuando el narrador menciona "frenarlas... con pasto"
+    u_grass = clamp01((t - t_hombres) / max(0.6, TL.e("s03") - t_hombres))
+    n_tufts = int(2 + u_grass * 11)
     for i in range(n_tufts):
         gx = 48 + i * 24
         gy = 252 + (i % 2) * 5
         for blade in (-4, -1, 2, 5):
-            sway = int(round(math.sin(t * 5.0 + i) * 2.5))
+            sway = int(round(math.sin(t * 4.2 + i) * 2.0))
             d.line([(gx, gy), (gx + blade + sway, gy - 12)], fill=(68, 166, 78, 255), width=2)
 
-    # Dos trabajadores caminando y plantando activamente de punta a punta de la duna
-    w1_x, w1_ph, w1_lk = pace(t, t0, 68, 178, period=2.6, pause=0.25)
-    w2_x, w2_ph, w2_lk = pace(t, t0 + 0.4, 184, 286, period=2.8, pause=0.25)
+    # Los trabajadores avanzan un paso al decir "hombres" y plantan pasto al decir "frenarlas... con pasto"
+    w1_x, w1_ph = walk(t, t_hombres - 0.1, t_hombres + 0.75, 92, 132)
+    w2_x, w2_ph = walk(t, t_hombres, t_hombres + 0.85, 188, 232)
     char(cv, USDA_WORKER_1, w1_x, 258, t, scale=2, walk=w1_ph,
-         arms="work" if int(t * 3) % 2 == 0 else "point", look=w1_lk, mood="focused")
+         arms="work" if t >= t_frenar else "hold", look=1, mood="focused")
     char(cv, USDA_WORKER_2, w2_x, 258, t, scale=2, walk=w2_ph,
-         arms="work" if int(t * 3) % 2 == 1 else "wave", look=w2_lk, mood="happy")
+         arms="point" if t >= t_pasto else ("work" if t >= t_hombres else "hips"), look=1, mood="happy")
 
-    # Frank Herbert recorre la duna tomando apuntes en su libreta
-    hx, hph, hlk = pace(t, t0, 424, 336, period=3.0, pause=0.3)
+    # Frank Herbert entra al inicio ("Vino a escribir un artículo") y toma notas en su libreta
+    hx, hph = walk(t, t0, t0 + 0.95, 436, 378)
     char(cv, HERBERT, hx, 258, t, scale=2, walk=hph,
-         arms="note" if int(t * 2.5) % 2 == 0 else "point_l", look=-1, talk=talk_v(t, True))
+         arms="note" if hph is None else "hold", look=-1)
 
     # Placa superior con pop
     a_w, dy_w = pop(t, t0)
@@ -176,14 +183,16 @@ def scene_typewriter_notes(t):
         draw_text(cv, "LA NOVELA DE CIENCIA FICCIÓN MÁS VENDIDA", 240, 30, "press", 8, GOLD, align="center",
                   reveal=(t - t5) * 30)
 
-    # Frank Herbert caminando con ritmo en su estudio mientras tipea y revisa carpetas
-    hx, hph, _ = pace(t, t0, 56, 134, period=2.7, pause=0.25)
+    # Frank Herbert en su estudio: se detiene al decir "Nunca lo terminó", toma notas en "Las notas siguieron creciendo" y señala la novela en "novelas"
+    t_termino = TL.word("s04", "termino")
+    t_novelas = TL.word("s05", "novelas")
+    t_vendidas = TL.word("s05", "vendidas")
     if t < t5:
-        char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-             arms="type" if int(t * 2.2) % 2 == 0 else "note", look=1, talk=talk_v(t, True))
+        h_arms = "shrug" if t >= t_termino else "type"
+        char(cv, HERBERT, 96, 260, t, scale=2, arms=h_arms, look=1, mood="worried" if t >= t_termino else "focused")
     else:
-        char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-             arms="cheer" if int(t * 2.2) % 2 == 0 else "point", look=1, mood="happy", talk=talk_v(t, True))
+        h_arms = "cheer" if t >= t_vendidas else ("point" if t >= t_novelas else "note")
+        char(cv, HERBERT, 96, 260, t, scale=2, arms=h_arms, look=1, mood="happy")
 
     # Tarjeta central: Hoja de máquina de escribir (s04) -> Pila de notas y novela Dune (s05)
     window(cv, 168, 56, 290, 162, fill=(28, 22, 16), border=GOLD, alpha=0.95)
@@ -307,19 +316,26 @@ def scene_six_years_study(t):
         draw_text(cv, "DONDE EL AGUA VALE MÁS QUE CUALQUIER RIQUEZA", 240, 29, "silk", 8, CYAN, align="center",
                   reveal=(t - t3) * 30)
 
-    # Frank Herbert recorriendo su estudio de punta a punta mientras investiga y expone las ideas
-    hx, hph, _ = pace(t, t1, 52, 134, period=2.8, pause=0.25)
+    # Frank Herbert en su estudio: escribe en "escribía cuentos", piensa en "vio algo", lee en "Empezó a leer", tipea en "Pasó seis años escribiendo" y señala el planeta en c1_03
+    t_vio = TL.word("c1_01", "vio")
+    t_escribiendo = TL.word("c1_02", "escribiendo")
+    hx, hph = walk(t, t1, t1 + 0.9, 48, 96)
+    if t < t2:
+        h_arms = "think" if t >= t_vio else "write"
+    elif t < t3:
+        h_arms = "type" if t >= t_escribiendo else "note"
+    else:
+        h_arms = "point"
     char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-         arms="note" if t < t2 else ("point" if t < t3 else "cheer"),
-         look=1, mood="happy" if t >= t3 else "focused", talk=talk_v(t, True))
+         arms=h_arms, look=1, mood="happy" if t >= t3 else "focused")
 
     if t < t3:
-        # Los 4 pilares temáticos de Dune entrando uno por uno con rebote pop()
+        # Los 4 pilares temáticos aparecen sincronizados con cada palabra del audio
         pillars = [
-            ("DESIERTOS", (238, 186, 92), t1 + 0.3),
-            ("ECOLOGÍA", (98, 214, 132), t2 + 0.1),
-            ("RELIGIÓN", (196, 148, 245), t2 + 0.55),
-            ("PODER", (245, 112, 102), t2 + 1.0),
+            ("DESIERTOS", (238, 186, 92), TL.word("c1_02", "desiertos")),
+            ("ECOLOGÍA", (98, 214, 132), TL.word("c1_02", "ecologia")),
+            ("RELIGIÓN", (196, 148, 245), TL.word("c1_02", "religion")),
+            ("PODER", (245, 112, 102), TL.word("c1_02", "poder")),
         ]
         for idx, (label, col, t_appear) in enumerate(pillars):
             if t >= t_appear:
@@ -330,8 +346,10 @@ def scene_six_years_study(t):
                 draw_text(cv, f"PILAR {idx + 1}", px + 70, py + 10, "silk", 8, col, align="center")
                 draw_text(cv, label, px + 70, py + 24, "press", 8, CREAM, align="center")
 
-        window(cv, 164, 182, 290, 32, fill=(36, 26, 16), border=GOLD, alpha=0.95)
-        draw_text(cv, "6 AÑOS ESCRIBIENDO · 1959 → 1965", 309, 194, "press", 8, GOLD, align="center")
+        if t >= t_escribiendo - 0.1:
+            ab, dyb = pop(t, t_escribiendo - 0.1)
+            window(cv, 164, 182 + dyb, 290, 32, fill=(36, 26, 16), border=GOLD, alpha=0.95 * ab)
+            draw_text(cv, "6 AÑOS ESCRIBIENDO · 1959 → 1965", 309, 194 + dyb, "press", 8, GOLD, align="center")
     else:
         # Proyección animada del planeta desierto rotando y la gota de agua
         ap, dyp = pop(t, t3)
@@ -381,8 +399,12 @@ def scene_newsstand_serial(t):
         draw_text(cv, "FALTABA LO DIFÍCIL: CONVERTIRLA EN LIBRO", 240, 30, "silk", 8, CREAM, align="center",
                   reveal=(t - t5) * 30)
 
-    # Tres ejemplares de revista que aparecen secuencialmente con pop()
-    years_mag = [("1963", "PARTE 1", t4 + 0.1), ("1964", "PARTE 2", t4 + 0.55), ("1965", "PARTE 3", t4 + 1.0)]
+    # Tres ejemplares de revista que aparecen sincronizados con la narración
+    years_mag = [
+        ("1963", "PARTE 1", TL.word("c1_04", "entregas")),
+        ("1964", "PARTE 2", TL.word("c1_04", "revista")),
+        ("1965", "PARTE 3", TL.word("c1_04", "sesenta")),
+    ]
     for idx, (yr, pt_lbl, t_mag) in enumerate(years_mag):
         if t >= t_mag:
             am, dym = pop(t, t_mag)
@@ -394,16 +416,14 @@ def scene_newsstand_serial(t):
             draw_text(cv, yr, mx + 32, my + 58, "press", 8, GOLD, align="center")
             draw_text(cv, pt_lbl, mx + 32, my + 70, "silk", 8, CYAN, align="center")
 
-    # Personajes caminando continuamente frente al kiosco y comentando los ejemplares
-    hx, hph, _ = pace(t, t4, 44, 114, period=2.8, pause=0.25)
-    r1x, r1ph, r1lk = pace(t, t4 + 0.2, 436, 362, period=2.6, pause=0.25)
-    r2x, r2ph, r2lk = pace(t, t4 + 0.5, 386, 446, period=3.0, pause=0.25)
-    char(cv, HERBERT, hx, 260, t, scale=2, walk=hph,
-         arms="point" if t < t5 else "shrug", look=1, talk=talk_v(t, True))
+    # Herbert presenta las entregas y en c1_05 sostiene el manuscrito ("Faltaba lo difícil: convertirla en libro")
+    r1x, r1ph = walk(t, t4 + 0.2, t4 + 1.1, 438, 376)
+    char(cv, HERBERT, 82, 260, t, scale=2,
+         arms="point" if t < t5 else "shrug", look=1, mood="worried" if t >= t5 else "focused")
     char(cv, READER_1, r1x, 260, t, scale=2, walk=r1ph,
-         arms="note" if int(t * 2) % 2 == 0 else "wave", look=-1, mood="happy")
-    char(cv, READER_2, r2x, 260, t, scale=2, walk=r2ph,
-         arms="point_l" if int(t * 2) % 2 == 1 else "cheer", look=-1, mood="happy")
+         arms="note" if r1ph is None else "down", look=-1, mood="happy")
+    char(cv, READER_2, 428, 260, t, scale=2,
+         arms="point_l" if t >= TL.word("c1_04", "revista") else "hips", look=-1, mood="happy")
 
     if t >= t5:
         ab, dyb = pop(t, t5)

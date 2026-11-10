@@ -45,13 +45,8 @@ def silhouette(cv, key, x, feet, t, color=(12, 10, 22), scale=1, **pose):
 
 
 def robot(cv, x, feet, t, face="happy", frozen=False, alpha=1.0, sil=False, scale=1):
-    blink = (t % 3.1) < 0.12
-    arr = S.render_robot(face, int(t * 30) % 90, frozen, blink)
-    if sil:
-        arr = arr.copy(); m = arr[..., 3] > 0; arr[m, :3] = (12, 10, 22)
-    arr = upscale(arr, scale)
-    shadow_ellipse(cv, int(x), int(feet), 26 * scale, 4 * scale, 80)
-    paste_arr(cv, arr, int(x) - 15 * scale, int(feet) - 39 * scale, alpha)
+    # Sin robot de IA en La Historia de los Videojuegos
+    return
 
 
 # --------------------------------------------------------------------------- cámara
@@ -377,6 +372,5 @@ def make_card(num, lines, years, snow=False, robot_face="question"):
 
 
 def chapter_end(num):
-    """Inicio del capítulo siguiente (o fin del video antes del outro)."""
-    max_ch = max(getattr(TL, "chapters", [8]) or [8])
-    return TL.chapter_start(num + 1) if num < max_ch else (TL.e(TL.order[-1]) + 2.8 if TL.order else TL.total)
+    """Inicio del capítulo siguiente (o fin del video)."""
+    return TL.chapter_start(num + 1) if num < 8 else TL.total
