@@ -61,8 +61,16 @@ def font(name, size):
 
 @lru_cache(maxsize=None)
 def load_rgba(path):
-    full = os.path.join(ROOT, path)
-    if os.path.exists(full):
+    """Una imagen de assets/ del proyecto (o None). Un nombre con ../ (por ejemplo, escrito en un plan) no puede leer
+    nada de afuera de esa carpeta: se trata como un archivo que no existe."""
+    assets = os.path.realpath(os.path.join(ROOT, "assets"))
+    full = os.path.realpath(os.path.join(ROOT, path))
+    try:
+        if os.path.commonpath([full, assets]) != assets:
+            return None
+    except ValueError:  # otra unidad de disco
+        return None
+    if os.path.isfile(full):
         return Image.open(full).convert("RGBA")
     return None
 

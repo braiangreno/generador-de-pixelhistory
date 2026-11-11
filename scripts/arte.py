@@ -54,6 +54,16 @@ def crudo(pdir, carpeta, nombre):
     return None
 
 
+def huella_de(seleccion):
+    """Lo que se va a generar, resumido: tipo, nombre, formato, prompt exacto y la foto de referencia de cada imagen."""
+    import hashlib
+    h = hashlib.sha256()
+    for _idx, tipo, _item, nombre, _destino, prompt, aspect, _carpeta, ref in seleccion:
+        foto = hashlib.sha256(ref[0]).hexdigest() if ref else ""
+        h.update(f"{tipo}|{nombre}|{aspect}|{prompt}|{foto}|".encode("utf-8"))
+    return h.hexdigest()[:32]
+
+
 def referencia(pdir, nombre):
     path = crudo(pdir, "referencias", nombre)
     if not path:
@@ -150,6 +160,9 @@ def main():
     ap.add_argument("--comparar", action="store_true", help="generar con Nano Banana y GPT Image para elegir")
     ap.add_argument("--elegir", action="append", default=[], metavar="NOMBRE=nanobanana|gptimage",
                     help="usar un candidato de --comparar (se puede repetir)")
+    ap.add_argument("--json", action="store_true", help="con --prompts: la lista en JSON (la lee Agent 009 Studio)")
+    ap.add_argument("--huella", default="", help="la huella que dio --prompts: si lo que se va a generar cambió, no gasta nada")
+    ap.add_argument("--max-imagenes", type=int, default=None, help="tope de imágenes aprobado: si se pasa, no gasta nada")
     args = ap.parse_args()
 
     pdir = proyecto_dir(args.proyecto)
@@ -187,6 +200,8 @@ def main():
     if args.comparar and solo:
         args.forzar = True  # comparar algo puntual aunque ya tenga imagen
 
+    # Lo que se va a hacer en esta corrida (el mismo filtro para --prompts y para generar).
+    seleccion = []
     for idx, (tipo, item) in enumerate(trabajos):
         nombre = item.get("name")
         if not nombre or (solo and nombre not in solo):
@@ -199,6 +214,17 @@ def main():
         aspect = "16:9" if tipo == "bg" else "1:1"
         carpeta = "backgrounds_raw" if tipo == "bg" else "portraits_raw"
         ref = referencia(pdir, nombre) if tipo == "retrato" else None
+        seleccion.append((idx, tipo, item, nombre, destino, prompt, aspect, carpeta, ref))
+    huella = huella_de(seleccion)
+    # Lo que se aprobó (Agent 009 Studio pasa la huella y el tope de --prompts): si el plan cambió desde entonces o se
+    # pasa del tope, no se gasta nada.
+    if not args.prompts and args.huella and args.huella != huella:
+        raise SystemExit("El plan de arte cambió desde que se aprobó (lo que se iba a generar ya no es lo mismo). "
+                         "No gasté nada: pedile al equipo que lo estime de nuevo.")
+    if not args.prompts and args.max_imagenes is not None and len(seleccion) > args.max_imagenes:
+        raise SystemExit(f"Son {len(seleccion)} imágenes y lo aprobado era hasta {args.max_imagenes}. No gasté nada.")
+
+    for idx, tipo, item, nombre, destino, prompt, aspect, carpeta, ref in seleccion:
         if args.prompts:
             pendientes.append({"name": nombre, "tipo": tipo, "aspect_ratio": aspect, "prompt": prompt,
                                "destino": f"gen/{carpeta}/{nombre}.png",
@@ -264,6 +290,11 @@ def main():
 
     if args.prompts:
         escribir_json(os.path.join(pdir, "gen", "prompts_pendientes.json"), pendientes)
+        if args.json:
+            import json
+            print(json.dumps({"pendientes": pendientes, "claves": {"gemini": bool(gkey), "openai": bool(okey)},
+                              "huella": huella, "cantidad": len(seleccion)}, ensure_ascii=False))
+            return
         for p in pendientes:
             print(f"\n[{p['tipo']}] {p['name']}  ({p['aspect_ratio']})  ->  {p['destino']}"
                   + ("   (hay foto de referencia en gen/referencias/)" if p["referencia"] else ""))

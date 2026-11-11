@@ -49,7 +49,10 @@ def load_scenes():
         for sc in mod.scenes():
             st, fn = sc[0], sc[1]
             cam = sc[2] if len(sc) > 2 else None
-            out.append((st, fn, cam, name))
+            # Las escenas del plan (declarative_scenes) dicen de qué capítulo son: se marcan como ese chNN, igual que
+            # un capítulo escrito a mano, para que la hoja de un capítulo las encuentre.
+            tag = f"ch{sc[3]:02d}" if len(sc) > 3 and isinstance(sc[3], int) else name
+            out.append((st, fn, cam, tag))
     out.sort(key=lambda s: s[0])
     return out
 

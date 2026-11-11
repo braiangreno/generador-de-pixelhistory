@@ -209,6 +209,10 @@ def main():
     for k, (lid, texto, mp3, js) in enumerate(trabajo, 1):
         oidas = palabras_whisper(modelo, mp3, args.idioma)
         al = alinear(texto, oidas, duracion(mp3))
+        if os.path.exists(js):
+            # Los tiempos anteriores (por ejemplo, los exactos que dio ElevenLabs) quedan en una copia: no se pierden.
+            import shutil
+            shutil.copyfile(js, js + ".anterior")
         with open(js, "w", encoding="utf-8") as f:
             json.dump(al, f, ensure_ascii=False)
         pareadas = len(oidas)

@@ -19,9 +19,11 @@ Qué hay adentro:
 | `.claude/skills/pixeloide-video-engine/SKILL.md` | El manual que sigue el agente: reglas de marca, pasos, comandos y control de calidad (copia en `skills/`) |
 | `.claude/agents/pixeloide-capitulo.md` | Subagente que escribe y revisa un capítulo animado; se lanza uno por capítulo en paralelo |
 | `.claude/agents/pixeloide-arte.md` | Subagente que genera con IA los fondos de época y los retratos de las personas reales, compara Nano Banana y GPT Image y rehace lo que no se parece |
-| `scripts/` | `verificar` (entorno), `claves` (cargar y probar claves), `nuevo_proyecto`, `voces` (ElevenLabs, con `--estimar` y `--prueba`), `arte` (Nano Banana / GPT Image, con `--comparar` y fotos de referencia), `producir` (hojas, audio, render, masters, .srt, miniaturas, Shorts), `transcribir` (Whisper en la GPU) |
+| `scripts/` | `verificar` (entorno), `claves` (cargar y probar claves), `nuevo_proyecto`, `voces` (ElevenLabs, con `--estimar` y `--prueba`), `arte` (Nano Banana / GPT Image, con `--comparar` y fotos de referencia), `producir` (hojas, audio, render, masters, .srt, miniaturas, Shorts), `transcribir` (Whisper en la GPU), `estado` (qué tiene y qué le falta a un proyecto, en texto o JSON), `vista` (achica una hoja, un arte o un cuadro de video para mirarlo) |
 | `engine_template/` | Motor base que se copia a cada proyecto nuevo (con `ENGINE_GUIDE.md` para escribir capítulos) |
 | `remotion-pixeloide/` | Remotion 4 con placas de título 16:9 y 9:16 y un zócalo con transparencia, con la marca Pixeloide |
+
+**También como equipo en Agent 009 Studio.** Si la carpeta `agent-009` está al lado de esta, la plantilla **Documentales pixel art (Pixeloide)** del estudio arma el equipo completo (Director, Guionista, Directora de arte, Locutor, Músico, Animador, Editor y Control de calidad) que maneja este motor desde el chat, con las hojas de contacto y los videos a la vista y un botón para aprobar lo que gasta créditos. Ver el README de Agent 009, sección «Documentales pixel art».
 
 Comandos útiles (desde esta carpeta):
 

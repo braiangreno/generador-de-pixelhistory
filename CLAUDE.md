@@ -14,4 +14,7 @@ documental 16:9 1080p + Shorts 9:16 en español, inglés y portugués.
 - El arte del video final se genera con IA (Gemini/OpenAI, `scripts\arte.py`); el procedural es solo borrador.
 - ElevenLabs y las APIs de imágenes cobran: estimá (`voces.py --estimar`, `arte.py --prompts`) y pedí OK antes de gastar.
 - No hagas commit ni push sin que el usuario lo pida. Los medios (mp4/wav/mp3/gif) van por Git LFS.
+- Agent 009 Studio (`..\agent-009`, módulo `server/pixeloide/`) maneja este motor con un equipo de agentes: corre `scripts\estado.py`,
+  `vista.py`, `voces.py`, `arte.py`, `producir.py`, `transcribir.py` y `nuevo_proyecto.py` y lee su salida `--json`. Si cambiás los
+  argumentos o la salida de uno de esos scripts, actualizá también ese módulo (y sus pruebas, `server/pixeloide.test.mjs`).
 - Respondé en español (el usuario es de Argentina/Uruguay y escribe informal).

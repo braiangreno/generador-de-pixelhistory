@@ -16,6 +16,7 @@ La voz de prueba deja audio/VOZ_DE_PRUEBA.txt; producir.py avisa mientras exista
 """
 import argparse
 import base64
+import hashlib
 import json
 import os
 import sys
@@ -89,6 +90,16 @@ def tts(api_key, voice, model, speed, text, prev_text, next_text):
     raise SystemExit(f"ElevenLabs no respondió bien después de varios intentos: {ultimo}")
 
 
+def huella_de(pendientes, voces):
+    """Lo que se va a generar, resumido: idioma, frase, voz, modelo, velocidad y texto exacto de cada una."""
+    h = hashlib.sha256()
+    for lg in sorted(pendientes):
+        v = voces[lg]
+        for lid, text, _p, _n, _mp3, _js in pendientes[lg]:
+            h.update(f"{lg}|{lid}|{v['voice']}|{v['model']}|{v['speed']}|{text}|".encode("utf-8"))
+    return h.hexdigest()[:32]
+
+
 def marcas_prueba(pdir):
     p = os.path.join(pdir, VOZ_DE_PRUEBA)
     if not os.path.exists(p):
@@ -117,6 +128,9 @@ def main():
     ap.add_argument("--forzar", action="store_true", help="regenera aunque ya exista")
     ap.add_argument("--estimar", action="store_true", help="solo cuenta caracteres, no llama a la API")
     ap.add_argument("--prueba", action="store_true", help="voz sintética local de prueba (sin API)")
+    ap.add_argument("--json", action="store_true", help="con --estimar: el resultado en JSON (lo lee Agent 009 Studio)")
+    ap.add_argument("--huella", default="", help="la huella que dio --estimar: si lo que se va a generar cambió, no gasta nada")
+    ap.add_argument("--max-caracteres", type=int, default=None, help="tope de caracteres aprobado: si se pasa, no gasta nada")
     args = ap.parse_args()
 
     pdir = proyecto_dir(args.proyecto)
@@ -144,6 +158,8 @@ def main():
             js = os.path.join(out_dir, f"{lid}.json")
             existe = os.path.exists(mp3) and os.path.exists(js) and os.path.getsize(mp3) > 800
             es_prueba = f"{lg}:{lid}" in marcas
+            if existe and args.prueba and not es_prueba:
+                continue  # la voz de prueba nunca pisa una voz real (ya pagada), ni con --forzar
             if existe and not args.forzar and not (es_prueba and not args.prueba):
                 continue
             prev_t = lines[i - 1]["speak"] if i > 0 else None
@@ -152,6 +168,18 @@ def main():
         pendientes[lg] = todo
 
     total_chars = sum(len(x[1]) for todo in pendientes.values() for x in todo)
+    huella = huella_de(pendientes, voces)
+    if args.estimar and args.json:
+        print(json.dumps({
+            "idiomas": {lg: {"frases": len(todo), "caracteres": sum(len(x[1]) for x in todo),
+                             "voz": voces[lg]["voice"], "modelo": voces[lg]["model"], "speed": voces[lg]["speed"],
+                             "ids": [x[0] for x in todo]}
+                        for lg, todo in pendientes.items()},
+            "total_caracteres": total_chars,
+            "huella": huella,
+            "frases_de_prueba": len(marcas),
+        }, ensure_ascii=False))
+        return
     for lg, todo in pendientes.items():
         v = voces[lg]
         print(f"[{lg.upper()}] {len(todo)} frases pendientes, {sum(len(x[1]) for x in todo)} caracteres "
@@ -172,6 +200,14 @@ def main():
         guardar_marcas(pdir, marcas)
         print(f"Listo con voz SINTÉTICA DE PRUEBA. No es para entregar: marcado en {VOZ_DE_PRUEBA}.")
         return
+
+    # Lo que se aprobó (Agent 009 Studio pasa la huella y el tope de la estimación): si el guion cambió desde entonces
+    # o se pasa del tope, no se gasta nada.
+    if args.huella and args.huella != huella:
+        raise SystemExit("El guion cambió desde que se aprobaron estas voces (lo que se iba a generar ya no es lo mismo). "
+                         "No gasté nada: pedile al equipo que lo estime de nuevo.")
+    if args.max_caracteres is not None and total_chars > args.max_caracteres:
+        raise SystemExit(f"Esto son {total_chars} caracteres y lo aprobado era hasta {args.max_caracteres}. No gasté nada.")
 
     api_key = (cfg.get("elevenlabs_api_key") or "").strip()
     if not api_key:

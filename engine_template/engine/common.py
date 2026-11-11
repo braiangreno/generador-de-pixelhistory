@@ -365,7 +365,7 @@ def make_card(num, lines, years, snow=False, robot_face="question"):
             ty = int(76 - abs(math.sin(td * 5.8)) * 42 * math.exp(-td * 0.7))
             trail.append((tx, ty))
         draw_phosphor_dot(cv, bx, by, r=3, trail=trail)
-        if t > t0 + 0.8:
+        if robot_face and t > t0 + 0.8:  # sin robot_face (None) no hay robot: va solo en documentales de IA
             robot(cv, 240, 256, t, face=robot_face, alpha=prog(t, t0 + 0.8, t0 + 1.1))
         return cv
     return sc

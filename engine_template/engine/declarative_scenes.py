@@ -27,6 +27,8 @@ def _capitulo(lid):
     return int(m.group(1)) if m else 0
 
 PHOSPHOR = (100, 255, 140)
+# El robot «La Máquina» va solo en documentales de IA: production_plan.json lo pide con "robot": true.
+ROBOT = PLAN.get("robot") is True
 RED_STAMP = (235, 65, 65)
 
 
@@ -128,7 +130,7 @@ def _render_scene_spec(sc_spec):
         ch_num = int(sc_spec.get("chapter", 1))
         ch_lines = sc_spec.get("title_lines") or [header or f"CAPÍTULO {ch_num}"]
         ch_years = sc_spec.get("years") or subheader or year_badge or ""
-        return make_card(ch_num, ch_lines, ch_years, snow=(weather == "snow"), robot_face="happy")
+        return make_card(ch_num, ch_lines, ch_years, snow=(weather == "snow"), robot_face="happy" if ROBOT else None)
 
     def fn(t):
         dt = max(0.0, t - t0)
@@ -154,7 +156,8 @@ def _render_scene_spec(sc_spec):
                 bx = int(240 + math.sin(t * 2.6) * 140)
                 by = int(176 - abs(math.cos(t * 5.2)) * 14)
                 draw_phosphor_dot(cv, bx, by, r=3)
-            robot(cv, 442, 256, t, face="excited", scale=1)
+            if ROBOT:
+                robot(cv, 442, 256, t, face="excited", scale=1)
             return vignette(cv, 0.28)
 
         # 2. Pantalla dividida comparativa (Split VS / 1958 vs 2026)
@@ -288,7 +291,7 @@ def scenes():
                 continue
             if lid.endswith("_00"):
                 ch_n = L["chapter"]
-                out.append((L["start"] - 0.3, make_card(ch_n, [L["sub"].upper()], ""), None))
+                out.append((L["start"] - 0.3, make_card(ch_n, [L["sub"].upper()], "", robot_face="question" if ROBOT else None), None, ch_n))
             else:
                 spec = {
                     "line_id": lid,
@@ -297,7 +300,8 @@ def scenes():
                     "header": L["sub"][:36].upper(),
                     "characters": [{"preset": "inge", "x": 110, "feet": 260, "scale": 2}],
                 }
-                out.append((L["start"], _render_scene_spec(spec), lambda t, s=L["start"], e=L["end"]: cam_push(t, s, e, 1.0, 1.06)))
+                out.append((L["start"], _render_scene_spec(spec), lambda t, s=L["start"], e=L["end"]: cam_push(t, s, e, 1.0, 1.06),
+                            _capitulo(lid)))
         return out
 
     for sc_spec in plan_scenes:
@@ -313,7 +317,8 @@ def scenes():
             cam = None
         else:
             cam = lambda t, a=t0, b=t1: cam_push(t, a, b, 1.0, 1.07)
-        out.append((max(0.0, t0), fn, cam))
+        # El 4.º valor es el capítulo: así `video.py sheet ch03` encuentra también las escenas del plan.
+        out.append((max(0.0, t0), fn, cam, _capitulo(lid)))
     return out
 
 

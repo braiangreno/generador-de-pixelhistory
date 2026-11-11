@@ -88,6 +88,9 @@ Ejecutá los scripts desde la raíz del repo, con `PYTHONUTF8=1` si vas a leer l
   aparece) y `rasgos` (pelo, barba, anteojos, ropa de esa época), en inglés: con eso se arma el prompt de parecido.
   Fondos: lugar y año concretos, en inglés. `creditos.imagenes` = qué IA hizo el arte (sale en los créditos finales).
 - Música: mystery, build, bright, summer, rain, puzzle, triumph, winter.
+- `"robot": true` solo en documentales de IA: sin eso, las placas automáticas (title_card, chapter_card) no dibujan al robot.
+- `scripts\estado.py <slug>` revisa el plan contra el motor del proyecto (frases, fondos, retratos, presets y textos en pantalla sin
+  traducir) y dice qué falta para entregar (`--json` para leerlo desde otro programa).
 - **Escenas automáticas** (`scenes`): sirven para un borrador completo rápido y para capítulos simples. Cada una:
   `line_id`, `end_line`, `layout` (`title_card`, `chapter_card`, `dialogue_scene`, `lab_scene`, `split_vs`, `data_bars`,
   `living_room_tv`, `calendar_stamp`), `bg`, `header`, `subheader`, `year`, `portrait`, `cards` (`title` + `lines`, máx. ~32
@@ -100,7 +103,8 @@ Ejecutá los scripts desde la raíz del repo, con `PYTHONUTF8=1` si vas a leer l
 ### Paso 4 — Voces
 1. `.venv\Scripts\python.exe scripts\voces.py <slug> --estimar` → caracteres por idioma → **pedí OK**.
 2. `.venv\Scripts\python.exe scripts\voces.py <slug>` → `audio/vo*/<id>.mp3` + `.json` (alineación por carácter).
-   Sin `ELEVENLABS_API_KEY`, pedile al usuario que la cargue con `CLAVES.bat`. Mientras tanto: `--prueba`.
+   Sin `ELEVENLABS_API_KEY`, pedile al usuario que la cargue con `CLAVES.bat`. Mientras tanto: `--prueba` (nunca pisa
+   una voz real, ni con `--forzar`). `--huella`/`--max-caracteres` atan una corrida a lo que se estimó (los usa Agent 009).
 3. Si las voces vienen de otro lado (grabación, otro TTS): dejá los mp3 como `audio/vo/<id>.mp3` y corré
    `scripts\transcribir.py <slug>`: Whisper `large-v3-turbo` en la RTX 4090 (9 frases en ~8 s; sin GPU usa la CPU).
 
