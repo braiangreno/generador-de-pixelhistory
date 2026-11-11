@@ -1,141 +1,194 @@
 ---
 name: pixeloide-video-engine
-description: Framework y pipeline oficial de Pixeloide Studios para producir documentales animados en pixel art 16-bit (estilo SNES / Chrono Trigger) a partir de un guion en texto. Úsalo siempre que el usuario entregue un guion o pida crear un video animado en pixel art con narrador en español (Carlos Aguilar), versiones multilingües (EN/PT), música chiptune procedural y cierre oficial de Pixeloide Studios + créditos.
+description: Produce documentales animados en pixel art 16-bit (estilo SNES / Chrono Trigger) de Pixeloide Studios a partir de un guion — video 16:9 1080p y Shorts 9:16 a pantalla completa por capítulo, en español, inglés y portugués, con locución de ElevenLabs sincronizada palabra por palabra, música chiptune procedural, subtítulos .srt externos, miniaturas y el cierre oficial de marca. Usala cuando el usuario entregue un guion, pida un documental, un video o un Short en pixel art, quiera rehacer una parte de un video existente, o necesite placas, zócalos o motion graphics de marca con Remotion.
 ---
 
-# Pixeloide Video Engine — Framework de Producción Documental 16-Bit
+# Pixeloide Video Engine — producción documental 16-bit
 
-Este skill define el estándar de producción de **Pixeloide Studios** (`JUGAMOS EN SERIO.`) para transformar cualquier guion entregado por el usuario en un documental animado 16-bit (`1920x1080` a `30 fps`, lienzo lógico `480x270` escalado `4x` nearest-neighbor) en Español (`ES`), Inglés (`EN`) y Portugués (`PT`).
+Todo vive en este repo (`generador-de-pixelhistory`). Rutas relativas a su raíz:
 
-> **Repositorios base / motores de referencia**:
-> - Motor documental completo: `C:\Users\Braian\.gemini\antigravity\scratch\historia_videojuegos_pixel`
-> - Plataforma Web + API REST instalable en servidor: `C:\Users\Braian\.gemini\antigravity\scratch\pixeloide_studio_server` (`.\start_windows.ps1` o `docker compose up -d --build`)
-> - Proyecto original IA: `C:\Users\Braian\.gemini\antigravity\scratch\historia_ia_pixel`
+| Qué | Dónde |
+|---|---|
+| Motor base (se copia a cada proyecto) | `engine_template/` (`engine/`, `tools/`, `fonts/`, `ENGINE_GUIDE.md`) |
+| Proyectos | `projects/<slug>/` (los 3 de referencia: `historia_ia_pixel`, `historia_videojuegos_pixel`, `historia_dune_pixel`) |
+| Scripts del agente | `scripts/` (`verificar`, `nuevo_proyecto`, `voces`, `arte`, `producir`, `transcribir`) |
+| Motion graphics de marca | `remotion-pixeloide/` (Remotion 4) |
+| Panel web + API REST (opcional) | `app/` (`start_windows.ps1`) |
+| Python | **siempre** `.venv\Scripts\python.exe` (Python 3.12 con Pillow, NumPy, faster-whisper) |
 
----
+Ejecutá los scripts desde la raíz del repo, con `PYTHONUTF8=1` si vas a leer la salida (si no, las tildes salen rotas).
 
-## 1. Reglas Innegociables de Marca y Audio
+## 1. Reglas innegociables
 
-1. **Narrador Oficial en Español (Fijo)**:
-   - Nombre: **Carlos Aguilar** (ElevenLabs)
-   - `VOICE_ID`: `"8MeTTgXVwMEhRVfblXOj"`
-   - Modelo: `"eleven_v4"` (o `"eleven_multilingual_v2"` con `with-timestamps`)
-   - Configuración: `stability=0.45`, `similarity_boost=0.80`, `style=0.35`, `use_speaker_boost=True`, `speed=1.08`.
-   - **Nunca cambies el narrador en español** a menos que el usuario lo pida explícitamente.
+**Marca y audio**
+1. Narrador en español fijo: **Carlos Aguilar** (`8MeTTgXVwMEhRVfblXOj`, speed 1.08). No lo cambies salvo pedido explícito.
+2. Inglés `pNInz6obpgDQGcFmaJgB` y portugués `Rxw6ylGPvxzn3gsuOExL` con `eleven_multilingual_v2` a **speed 1.0** (prohibido 1.15).
+   La mezcla solo los comprime con `atempo` si no entran en su ventana (`tools/mix_multilingual.py` ya lo hace).
+3. **Todo texto en pantalla traducido** a EN y PT (títulos, placas, tarjetas, globos, sellos, créditos).
+4. **Nunca subtítulos quemados**: los `.srt` van aparte en `renders/subtitulos/`.
+5. **Cierre oficial obligatorio** (`engine/outro.py`, 12 s): logo «Una P que es un play», claim `JUGAMOS EN SERIO.`
+   y créditos (Idea original y Producción: **Braian Greno** + stack de IA). No se saca ni se tapa.
+6. Sin el robot «La Máquina» salvo en documentales de IA. Sin loops sin sentido. Coreografía atada a las palabras (`TL.word`).
 
-2. **Narradores en Inglés (`EN`) y Portugués (`PT`) — Cadencia Natural**:
-   - Inglés (`EN`): `VOICE_ID = "pNInz6obpgDQGcFmaJgB"`
-   - Portugués (`PT`): `VOICE_ID = "Rxw6ylGPvxzn3gsuOExL"`
-   - Modelo: `"eleven_multilingual_v2"`
-   - **Velocidad de generación (`speed`)**: **`1.0` (natural)**. **PROHIBIDO usar `speed=1.15`**, ya que acelera artificialmente la locución.
-   - **Sincronización en mezcla (`tools/mix_multilingual.py`)**:
-     - Al alinear cada línea `lid` con el timeline maestro en español, calcula siempre la ventana real disponible hasta la siguiente frase:
-       ```python
-       next_start = TL.s(TL.order[i + 1]) if i + 1 < len(TL.order) else (TL.e(lid) + 1.0)
-       avail_dur = max(slot_dur, next_start - slot_start - 0.08)
-       ```
-     - Solo comprime con `atempo` cuando `d_nat > avail_dur`, evitando que las voces en inglés o portugués suenen apresuradas.
+**Costos, claves y permisos**
+- ElevenLabs cobra por carácter. Antes de generar voces corré `voces.py --estimar`, decile al usuario cuántos caracteres
+  son y **esperá su OK** (salvo que ya lo haya autorizado en el pedido). Lo mismo con imágenes por API (Gemini/OpenAI):
+  `arte.py --prompts` dice cuántas faltan.
+- Las claves van en `.env` en la raíz del repo (`ELEVENLABS_API_KEY`, `GEMINI_API_KEY`, `OPENAI_API_KEY`). Las carga el
+  usuario con **doble clic en `CLAVES.bat`** (las pide sin mostrarlas, las prueba y dice qué modelos de imagen tiene).
+  **Nunca leas, muestres ni copies** `.env` ni `data/settings.json`, y no le pidas que las pegue en el chat;
+  `scripts\claves.py --probar` y `verificar.py` dicen si andan sin mostrarlas.
+- **El arte del video final es generado con IA** (Nano Banana o GPT Image), con retratos que se parecen a las personas
+  reales. El procedural es solo para borradores: deja `assets/ARTE_PROVISORIO.txt` y `producir.py` avisa.
+- `voces.py --prueba` es una voz sintética de prueba: sirve para armar y revisar borradores, **nunca para entregar**
+  (deja `audio/VOZ_DE_PRUEBA.txt` y `producir.py` avisa en grande mientras exista).
+- No hagas `git commit`/`push` sin que el usuario lo pida (los proyectos usan Git LFS para mp4/wav/mp3).
 
-3. **Traducción Total en Pantalla (`engine/i18n.py`)**:
-   - No basta con cambiar el audio: **todos los textos visibles en las escenas** (títulos de capítulos, etiquetas, diagramas, tarjetas, diálogos, banners y créditos) deben traducirse a `en` y `pt` mediante el hook automático de `engine/i18n.py` integrado en `Frame.text()` y `Frame.text_wrap()`.
-   - El motor de fuentes (`engine/core.py`) soporta composición automática de diacríticos en mayúsculas (`Á, É, Í, Ó, Ú, À, Â, Ê, Ô, Ã, Õ, Ç, Ñ, Ü`).
+## 2. Flujo desde un guion nuevo
 
-4. **Cierre Oficial Obligatorio (`engine/outro.py`) — Manual de Marca Pixeloide Studios**:
-   Todo video producido con este framework **debe** cerrar con el módulo `engine/outro.py` (`TAIL = 12.0s` en `engine/timeline.py`), dividido en dos escenas tras el fade-out del último capítulo:
-   - **Escena 1 (`sc_pixeloide_logo`, ~3.8s)**:
-     - Transición de barrido (`wipe`) de `520ms` en **Cyan** (`#28DCE0`) con curva `cubic-bezier(.76, 0, .24, 1)`.
-     - Fondo oscuro **Ink** (`#070A1F`) con el **Campo de píxeles** reactivo iluminándose de **Cyan** (`#28DCE0`) a **Magenta** (`#E732B6`).
-     - Isotipo geométrico exacto: **«Una P que es un play»** (triángulo superior en Cyan `#28DCE0`, franja diagonal en Paper `#F4F3EE` formando la punta derecha del Play, y chispa triangular inferior en Magenta `#E732B6`).
-     - Logotipo **PIXELOIDE** (`#F4F3EE`) + **STUDIOS** (`#28DCE0`) y claim **`JUGAMOS EN SERIO.`** (`JUGAMOS` en Paper, `EN SERIO` en Cyan, punto `.` en Magenta; traducido en EN a `WE PLAY SERIOUSLY.` y en PT a `JOGAMOS A SÉRIO.`).
-   - **Escena 2 (`sc_credits`, ~5.4s)**:
-     - Header con lockup horizontal de **Pixeloide Studios** + `01 — CRÉDITOS DE PRODUCCIÓN`.
-     - Dos tarjetas destacadas de autoría:
-       - **IDEA ORIGINAL**: `BRAIAN GRENO`
-       - **PRODUCCIÓN Y DIRECCIÓN**: `BRAIAN GRENO`
-     - Panel `02 — HERRAMIENTAS DE IA Y TECNOLOGÍA` (`IA + CODE`) listando el stack completo:
-       - `CLAUDE & GEMINI` — Dirección técnica · Código y animación
-       - `ELEVENLABS` — Locución neuronal · Carlos Aguilar
-       - `OPENAI WHISPER` — Alineación fonética y subtítulos
-       - `IMAGEN / NANOBANANA` — Arte pixel base · Fondos y retratos
-       - `PYTHON · PIL · NUMPY` — Motor pixel art 16-bit y chiptune
-       - `FFMPEG` — Masterización 1080p · Audio -14 LUFS
+### Paso 0 — Entorno
+`.venv\Scripts\python.exe scripts\verificar.py` → si falta algo imprescindible, `INSTALAR.bat` (doble clic) lo instala.
+`.venv\Scripts\python.exe scripts\claves.py --probar` → qué claves andan. Si faltan, pedile al usuario `CLAVES.bat`.
 
----
+### Paso 1 — Proyecto
+`.venv\Scripts\python.exe scripts\nuevo_proyecto.py "Título" --guion <archivo .txt/.md/.pdf>` (o pegá el texto en
+`projects/<slug>/guion.txt`). Imprime `SLUG=<slug>`: usalo en todos los pasos.
 
-## 2. Flujo Paso a Paso desde un Guion Nuevo
+### Paso 2 — Guion estructurado (lo escribís vos, en el proyecto)
+`script_full.json` (ES), `script_full_en.json` y `script_full_pt.json`: listas con los **mismos** `id`, `ch` y `pause`.
+```json
+[{"id": "s01", "ch": 0, "pause": 0.35, "speak": "Mil novecientos cincuenta y siete. Florence, Oregón.", "sub": "1957. Florence, Oregón."},
+ {"id": "c1_00", "ch": 1, "pause": 0.35, "speak": "Capítulo uno. El artículo que nunca terminó.", "sub": "CAPÍTULO 1 — EL ARTÍCULO QUE NUNCA TERMINÓ"},
+ {"id": "c1_01", "ch": 1, "pause": 0.35, "speak": "...", "sub": "..."}]
+```
+- `s01, s02...` = apertura (capítulo 0). `cN_00` = placa del capítulo N ("Capítulo N. Título."). `cN_01...` = frases.
+- `speak` es lo que lee la voz: fechas, números y siglas **escritos como se dicen** en ese idioma. `sub` es el texto limpio.
+- Frases de 8 a 25 palabras. `pause` después de la frase: 0.35 normal, 0.65 cierre de idea, 1.0–1.1 fin de capítulo.
+- Respetá el guion del usuario: dividilo y pulilo para voz, pero no inventes datos. Si algo es dudoso, preguntá.
+- Traducciones EN/PT con tono documental natural (no literal).
 
-Cuando el usuario te entregue un guion nuevo, ejecuta este pipeline en orden:
+### Paso 3 — Plan de producción (`production_plan.json`)
+```json
+{"title": "LA HISTORIA DE DUNE", "subtitle": "DE UN ARTÍCULO A UNA SAGA", "slug": "Historia_Dune_PixelArt",
+ "year_start": "1957", "year_end": "2026", "accent": [255, 195, 85],
+ "titles": {"es": "...", "en": "...", "pt": "..."}, "subtitles": {"es": "...", "en": "...", "pt": "..."},
+ "backgrounds": [{"name": "bg_dunas_1957", "theme": "desert",
+                  "prompt": "coastal sand dunes of Florence, Oregon in 1957 swallowing a road, pine trees, warm afternoon light"}],
+ "portraits": [{"name": "frank_herbert", "persona": "Frank Herbert",
+                "quien": "American journalist and science-fiction writer, author of Dune", "anio": 1957,
+                "rasgos": "short dark beard and mustache, receding hair, horn-rimmed glasses, tweed jacket"}],
+ "creditos": {"imagenes": "NANO BANANA / GPT IMAGE"},
+ "chapter_music": {"0": "mystery", "1": "build", "2": "puzzle"},
+ "scenes": [ ...escenas automáticas (opcional, ver abajo)... ],
+ "translations_map": {"en": {"TEXTO EN PANTALLA": "SCREEN TEXT"}, "pt": {"TEXTO EN PANTALLA": "TEXTO NA TELA"}}}
+```
+- `slug` = nombre de los masters (`<slug>_ES.mp4`). `titles`/`subtitles`/`year_*` alimentan miniaturas y Shorts
+  (`titles_2lines: {"es": ["LÍNEA 1", "LÍNEA 2"]}` si el título largo se corta mal en la tarjeta vertical).
+- Retratos = **personas reales de la historia**: `persona` (nombre real), `quien` (por qué es conocido), `anio` (cuándo
+  aparece) y `rasgos` (pelo, barba, anteojos, ropa de esa época), en inglés: con eso se arma el prompt de parecido.
+  Fondos: lugar y año concretos, en inglés. `creditos.imagenes` = qué IA hizo el arte (sale en los créditos finales).
+- Música: mystery, build, bright, summer, rain, puzzle, triumph, winter.
+- **Escenas automáticas** (`scenes`): sirven para un borrador completo rápido y para capítulos simples. Cada una:
+  `line_id`, `end_line`, `layout` (`title_card`, `chapter_card`, `dialogue_scene`, `lab_scene`, `split_vs`, `data_bars`,
+  `living_room_tv`, `calendar_stamp`), `bg`, `header`, `subheader`, `year`, `portrait`, `cards` (`title` + `lines`, máx. ~32
+  letras por línea), `characters` (`preset`, `x`, `feet` 260–264, `scale` 2 o 3, `arms`, `mood`, `bubble`), `lower_third`
+  (`title`, `sub`), `stamp`, `weather` (rain/snow/confetti), `bars` (para data_bars), `chapter`/`title_lines`/`years` (placas).
+  Presets de personaje: inge, prof, estudiante, ejecutivo, mujer_ejecutiva, chica, abuela, nieto, padre, periodista,
+  cientifica, militar.
+- Un capítulo con `engine/chNN.py` escrito a mano **reemplaza** sus escenas automáticas (el resto sigue saliendo del plan).
 
-### Paso 1 — Estructurar el Guion (`script_full.json`, `script_full_en.json`, `script_full_pt.json`)
-Convierte el guion en una lista JSON de líneas narrativas con:
-- `id`: identificador `"c{cap}_{num:02d}"` (ej. `"c1_01"`, `"c1_02"`, ...)
-- `ch`: número de capítulo (`1..N`)
-- `pause`: pausa dramática en segundos después de la línea (`0.35` normal, `0.65` cierre de idea, `1.1` fin de capítulo)
-- `speak`: texto optimizado para fonética TTS (fechas y siglas escritas como se pronuncian en español si hace falta)
-- `sub`: texto limpio para subtítulos en pantalla
+### Paso 4 — Voces
+1. `.venv\Scripts\python.exe scripts\voces.py <slug> --estimar` → caracteres por idioma → **pedí OK**.
+2. `.venv\Scripts\python.exe scripts\voces.py <slug>` → `audio/vo*/<id>.mp3` + `.json` (alineación por carácter).
+   Sin `ELEVENLABS_API_KEY`, pedile al usuario que la cargue con `CLAVES.bat`. Mientras tanto: `--prueba`.
+3. Si las voces vienen de otro lado (grabación, otro TTS): dejá los mp3 como `audio/vo/<id>.mp3` y corré
+   `scripts\transcribir.py <slug>`: Whisper `large-v3-turbo` en la RTX 4090 (9 frases en ~8 s; sin GPU usa la CPU).
 
-Genera a la vez `script_full_en.json` y `script_full_pt.json` con los mismos `id`, `ch` y `pause`, traduciendo `speak` y `sub` con tono documental natural.
+### Paso 5 — Arte con IA (fondos 480x270 y retratos 64x64 de las personas reales)
+Cada `name` del plan termina en `assets/bg/<name>.png` / `assets/portraits/<name>.png`, convertido a pixel art del motor
+(56 colores los fondos, 28 los retratos, sin difuminado). Con varias imágenes, delegalo al subagente **`pixeloide-arte`**
+(en paralelo con los capítulos) pasándole el proyecto y si tiene OK de gasto.
+1. `scripts\arte.py <slug> --prompts` → cuántas faltan y sus prompts → **pedí OK** del gasto.
+2. Retratos: `scripts\arte.py <slug> --comparar --solo <retratos>` genera cada uno con **Nano Banana** (Gemini) y con
+   **GPT Image** (OpenAI) → mirá `frames/arte_candidatos.png` → `scripts\arte.py <slug> --elegir <nombre>=nanobanana|gptimage`
+   con el que más se parece a la persona real. Fondos: `scripts\arte.py <slug>` (Nano Banana primero, GPT Image si falla).
+3. Persona poco conocida (sale una cara genérica): foto de referencia de uso libre en `gen/referencias/<nombre>.jpg` y
+   rehacer con `--solo <nombre> --forzar`: se le pasa al modelo para clavar el parecido.
+4. Sin claves pero con un conector de imágenes en la sesión (Higgsfield: `nano_banana_2`, `gpt_image_2_6`): generá con
+   los prompts de `--prompts` y bajalas con `scripts\arte.py <slug> --traer <nombre>=<url>` (las procesa sola).
+5. Mirá cada PNG ampliado: parecido y edad correctos, época del fondo, piso libre abajo (y≈260), sin texto ni carteles.
+Modelos por defecto: `gemini-3.1-flash-image` (Nano Banana 2) y `gpt-image-2`, con respaldos si la cuenta no los tiene
+(se cambian con `GEMINI_IMAGE_MODEL` / `OPENAI_IMAGE_MODEL` en `.env`). Solo para borradores: `--motor procedural`.
 
-### Paso 2 — Generar Locución + Timestamps (`audio/vo/`, `audio/vo_en/`, `audio/vo_pt/`)
-1. Ejecuta `python batch_tts.py` para generar `audio/vo/{id}.mp3` y `audio/vo/{id}.json` con **Carlos Aguilar** (`8MeTTgXVwMEhRVfblXOj`).
-2. Ejecuta `python tools/batch_tts_multilingual.py` para generar `audio/vo_en/` y `audio/vo_pt/` a velocidad natural (`speed=1.0`).
-3. Verifica que `engine/timeline.py` construya el timeline maestro a partir de `script_full.json` + `audio/vo/*.json` con `TAIL = 12.0` para dar espacio al cierre de **Pixeloide Studios**.
+### Paso 6 — Borrador y revisión
+`.venv\Scripts\python.exe scripts\producir.py <slug> --pasos timeline,hoja`
+→ `frames/sheet_all.png`, `sheet_all_en.png`, `sheet_all_pt.png` (16:9) y `sheet_v_all*.png` (9:16). **Mirá las hojas.**
 
-### Paso 3 — Generar y Preparar Assets 16-Bit (`assets/bgs/` y `assets/portraits/`)
-1. Identifica los personajes clave y escenarios históricos/temáticos del guion.
-2. Usa el subagente `image-generator` para crear:
-   - **Retratos (`64x64`)**: pixel art 16-bit estilo SNES/Chrono Trigger, busto frontal/3-cuartos sobre fondo sólido uniforme para recorte automático.
-   - **Fondos (`480x270`)**: escenarios 16-bit panorámicos sin texto incrustado y con iluminación atmosférica.
-3. Procesa las imágenes con `python prep_assets.py` (escalado pixel-perfect, cuantización de paleta y eliminación de fondo en retratos).
+### Paso 7 — Capítulos a mano (la calidad de los documentales de referencia)
+Para cada capítulo, un `engine/chNN.py` según `ENGINE_GUIDE.md` del proyecto (apertura `s..` en `ch00.py`).
+- Con varios capítulos, lanzá **un subagente `pixeloide-capitulo` por capítulo, en paralelo** (no tocan archivos
+  compartidos; cada uno escribe su `chNN.py` y sus traducciones en `translations/chNN.json`). Pasale: proyecto,
+  capítulo, ids de sus frases, fondos y retratos disponibles, y la idea visual de cada escena.
+- Referencia de estilo aprobada: `projects/historia_dune_pixel/engine/ch01.py` … `ch08.py` y `projects/historia_ia_pixel/engine/ch01.py`
+  (ojo: el `sprites.py` de Dune tiene campos propios; en proyectos nuevos usá el formato de `ENGINE_GUIDE.md`).
+- Después revisá vos: `producir.py <slug> --pasos hoja --capitulo chNN` y corregí lo que haga falta.
 
-### Paso 4 — Programar Capítulos (`engine/ch01.py` .. `engine/chNN.py`) y Traducciones (`engine/i18n.py`)
-1. Cada módulo `chXX.py` debe exponer:
-   - `scenes()`: lista de tuplas `(t_inicio, funcion_escena, funcion_camara_opcional)` sincronizadas al milisegundo con `TL.s(lid)`, `TL.e(lid)` y `TL.word(lid, "palabra")`.
-   - `music(A)`: composición chiptune procedural acorde al tono emocional del capítulo.
-   - `sfx(A)`: efectos de sonido sincronizados con las apariciones de ventanas, golpes, alertas o revelaciones.
-2. **Reglas de Animación, Personajes y Coreografía con el Audio**:
-   - **PROHIBIDO incluir `robot(...)` ("La Máquina")** en documentales cuya temática no sea Inteligencia Artificial.
-   - **PROHIBIDO usar loops continuos sin sentido (`pace()` infinito, rebote continuo o rotación automática de brazos)**. Los personajes no deben moverse todo el tiempo sin motivo.
-   - **Coreografía sincronizada con las palabras del narrador (`TL.word`)**: cada entrada caminando (`walk(t, t0, t1, x0, x1)` una sola vez para entrar o desplazarse a un punto), gesto de brazos (`arms="type"`, `"write"`, `"note"`, `"work"`, `"point"`, `"cheer"`, `"shrug"`, `"think"`, `"hold"`) y aparición de tarjetas (`pop(t, t_word)`) debe dispararse en el instante exacto en que el audio pronuncia la acción o concepto (`TL.word(lid, "...")` y `TL.s(lid)`).
-   - **Ritmo y Cámara**: incluye siempre funciones de cámara (`cam_push` y `cam_punch`) en `scenes()`, apariciones con rebote `pop(t, t0)`, sacudidas `shake()` en impactos/rechazos y revelado progresivo `reveal=` en titulares. No repitas un mismo recurso visual (como una línea/gusano en el piso) en todas las escenas.
-3. En el último capítulo (`chNN.py`), define `T_END = TL.e("ultima_linea") + 2.8` para que `engine/outro.py` tome el relevo inmediatamente después.
-4. Registra todas las cadenas en mayúsculas de los capítulos dentro de `engine/i18n.py` (`EN_MAP` y `PT_MAP`).
+### Paso 8 — Control de calidad (antes del render final)
+- Ningún texto fuera de su caja ni de los márgenes (x 4–476, y 4–266) en **ES, EN y PT**; en 9:16 nada cortado.
+- Personajes grandes y apoyados en el piso; un cambio visual cada 2–4 s; nada que se mueva sin motivo.
+- Palabras de sincronización existentes (la hoja corre en modo estricto: si falta una palabra, falla con su nombre).
+- Fondos y retratos generados con IA (sin `assets/ARTE_PROVISORIO.txt`) y voces reales (sin `audio/VOZ_DE_PRUEBA.txt`).
 
-### Paso 5 — Verificación Automática de Márgenes y Cajas (QA Visual)
-Antes de renderizar el video final, **siempre** verifica que ningún texto en `es`, `en` o `pt` se salga de su caja (`win` / `panel` / `banner`) ni de los márgenes seguros (`x in [4..476]`, `y in [4..266]`):
-1. Usa `check_boxes` o renderiza hojas de contacto (`python engine/video.py sheet`) en los 3 idiomas.
-2. Inspecciona visualmente las hojas con `read_file` y corrige cualquier texto largo ajustando el ancho de la caja, usando `text_wrap` o abreviando la traducción en `engine/i18n.py`.
+### Paso 9 — Producción final
+`.venv\Scripts\python.exe scripts\producir.py <slug> --pasos audio,video,master,srt,miniaturas,shorts --workers 16`
+(o `--pasos todo`). En esta PC (32 núcleos) 1 minuto de video 1080p tarda ~25 s por idioma.
 
-### Paso 6 — Síntesis de Audio, Render Paralelo 1080p y Masterización (`-14 LUFS`)
-1. Genera los stems y mezcla en español:
-   ```powershell
-   python engine/audio.py
-   ```
-2. Genera las mezclas multilingües (`EN` y `PT`) con ducking automático y cadencia natural:
-   ```powershell
-   python tools/mix_multilingual.py
-   ```
-3. Renderiza el video mudo en los 3 idiomas (`renders/video_mudo.mp4`, `renders/video_mudo_en.mp4`, `renders/video_mudo_pt.mp4`) en paralelo (8 workers):
-   ```powershell
-   python engine/video.py render 8
-   python tools/render_multilingual.py
-   ```
-4. Une video + audio normalizado a `-14 LUFS` (estándar broadcast/YouTube) **sin quemar subtítulos en ningún `.mp4`** y guardando todos los archivos `.srt` dentro de `renders/subtitulos/`:
-   ```powershell
-   python tools/mux_all.py
-   ```
+### Paso 10 — Entrega
+- `renders/<slug>_ES|EN|PT.mp4` (1920x1080, 30 fps, audio -14 LUFS), `renders/subtitulos/*.srt`,
+  `renders/Miniatura_YouTube_*.png`, `renders/Short_Vertical_*.mp4` y `renders/shorts/Short_CapNN_*.mp4` (+ sus `.srt`).
+- Escribí `YOUTUBE_PACK.md` (títulos, descripciones con capítulos y tiempos, tags; ES/EN/PT; créditos: Idea original y
+  Producción Braian Greno, narración Carlos Aguilar, "Subtítulos .srt incluidos").
+- Verificá con `ffprobe` duraciones y resolución, y mirá al menos un cuadro de cada master y de un Short.
+- Contale al usuario qué se entregó, dónde, y qué no se pudo verificar.
 
-### Paso 7 — Miniaturas 16:9 y Shorts Verticales 9:16 a Pantalla Completa por Cada Capítulo (`renders/shorts/`)
-1. **Regla obligatoria (Redibujado 9:16 a pantalla completa, CERO recortes en caja cuadrada)**:
-   - **PROHIBIDO recortar el video 16:9 (`480x270`) dentro de un recuadro cuadrado (`254x254`) con barras estáticas arriba y abajo**.
-   - Todos los videos `9:16` (`1080x1920`, 30fps, sin subtítulos pegados) deben redibujarse **a pantalla completa en resolución nativa `270x480`** (escalada `4x NEAREST` a `1080x1920`) mediante `engine/vertical.py` (`vertical.frame_at_vertical`):
-     - Fondo pixel-art extendido a pantalla completa (`y=0..480`).
-     - Encabezados superiores redibujados en `x=8..262` con ajuste automático de línea (`wrap_text_px`) para que ningún texto se corte jamás.
-     - Paneles centrales, retratos y diagramas centrados en `x=135` en la zona media (`y=72..352`), apilando verticalmente los paneles que en `16:9` estaban lado a lado.
-     - Personajes sobre el piso vertical (`feet=452, x=34..236`) y globos de diálogo ajustados a `VW=270`.
-   - Se debe generar por separado cada capítulo del episodio (`Cap 00 Apertura` + `Cap 01` a `Cap 08`) en Español, Inglés y Portugués dentro de `renders/shorts/` (`Short_Cap00_Apertura_{LANG}.mp4`, `Short_Cap01_{LANG}.mp4`, ..., `Short_Cap08_{LANG}.mp4`), junto con sus `.srt` independientes en `renders/subtitulos/`:
-   ```powershell
-   python tools/make_thumbnails_and_shorts.py
-   python tools/make_chapter_shorts.py
-   ```
-2. Limpia archivos temporales y deja todo versionado con `git commit`.
+## 3. Cambios puntuales
+- Rehacer frases: `voces.py <slug> --solo c3_04,c3_05 --forzar` → después `producir.py --pasos hoja` (revisar
+  sincronía) y `audio,video,master,srt,miniaturas,shorts`.
+- Cambiar una escena: editar `chNN.py` → `hoja --capitulo chNN` → render.
+- Un solo idioma: `--idiomas es`.
+- Instantes concretos: en la carpeta del proyecto, `..\..\.venv\Scripts\python.exe engine\video.py times 12.5 30.2`.
+
+## 4. Remotion (motion graphics de marca)
+`remotion-pixeloide/` tiene composiciones con la marca (fuentes Press Start 2P / Silkscreen, colores Ink, Cyan, Magenta,
+Paper e isotipo exportado del motor):
+- `PixeloideTitulo` (1920x1080) y `PixeloideTituloVertical` (1080x1920): placa con campo de píxeles, título que se tipea y claim
+  (props: `titulo`, `subtitulo`, `idioma` es|en|pt).
+- `PixeloideZocalo` (1920x1080, **fondo transparente**): zócalo RPG para usar encima de cualquier video
+  (props: `nombre`, `rol`, `acento` cyan|dorado).
+Comandos (en `remotion-pixeloide/`):
+- Vista previa interactiva: `npm run dev` (Remotion Studio).
+- MP4: `npx remotion render PixeloideTitulo out/titulo.mp4 --props='{"titulo":"...","subtitulo":"...","idioma":"es"}'`
+- Con transparencia para editores: `npx remotion render PixeloideZocalo out/zocalo.mov --codec=prores --prores-profile=4444 --pixel-format=yuva444p10le --image-format=png`
+- Un cuadro: `npx remotion still PixeloideTitulo out/cuadro.png --frame=100`
+Usalo para: intros/placas, zócalos, end screens, promos y anuncios, piezas para redes que no sean pixel art puro.
+Antes de escribir código de Remotion cargá la skill `remotion-best-practices`. Licencia: gratis para personas y empresas de
+hasta 3 personas; empresas más grandes necesitan licencia de Remotion.
+
+## 5. Panel web (opcional)
+`start_windows.ps1` levanta Pixeloide Studio Server en http://localhost:8080 (solo en esta PC): subir un guion y que el
+pipeline automático haga todo con escenas del plan. No tiene usuarios ni contraseña: no lo abras a internet sin ponerle
+autenticación adelante.
+
+## 6. Problemas comunes
+| Síntoma | Qué hacer |
+|---|---|
+| Tildes rotas en la consola | `PYTHONUTF8=1` |
+| `KeyError: TL.word: no encuentro ...` | La palabra no está en el `speak` de esa frase (los números van escritos en letras) |
+| Fondo azul liso con una línea | Falta `assets/bg/<name>.png` (es el provisorio del motor) |
+| `ElevenLabs rechazó la clave (401)` / sin créditos | Que el usuario revise la clave o el plan |
+| Render se corta con muchos workers | Bajar `--workers` (cada encoder ya usa pocos hilos) |
+| GPT Image: HTTP 403 "organization must be verified" | El usuario verifica la organización en platform.openai.com; mientras, Nano Banana |
+| Nano Banana "no devolvió imagen" (filtro) | Reformular sin pedir "foto"/"realista", o probar GPT Image (`--motor openai`) |
+| Retrato con cara genérica | La persona es poco conocida: foto de referencia en `gen/referencias/<nombre>.jpg` |
+| Whisper "usa la CPU" | Faltan cuBLAS/cuDNN: `INSTALAR.bat` los instala si hay placa NVIDIA |
+| Shorts con el título equivocado | Completar `titles` (y `titles_2lines`) en `production_plan.json` |

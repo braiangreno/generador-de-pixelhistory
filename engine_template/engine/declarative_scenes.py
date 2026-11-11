@@ -5,15 +5,26 @@ Lee `production_plan.json` en la raíz del proyecto y construye dinámicamente:
 - Cajas RPG (`window`) auto-ajustadas al ancho real del texto en ES, EN y PT para que jamás desborden
 - Banda sonora chiptune procedural (`music(A)`) y efectos de sonido (`sfx(A)`) sincronizados al milisegundo
 """
+import glob
 import json
 import math
 import os
+import re
 
 from PIL import Image, ImageDraw
 from common import *  # noqa
 
 PLAN_PATH = os.path.join(ROOT, "production_plan.json")
 PLAN = json.load(open(PLAN_PATH, encoding="utf-8")) if os.path.exists(PLAN_PATH) else {}
+
+# Capítulos que ya tienen su módulo escrito a mano (engine/chNN.py): acá no se dibujan ni suenan.
+_HECHOS = {int(os.path.basename(p)[2:4]) for p in
+           glob.glob(os.path.join(os.path.dirname(os.path.abspath(__file__)), "ch[0-9][0-9].py"))}
+
+
+def _capitulo(lid):
+    m = re.match(r"^c(\d+)_", str(lid or ""))
+    return int(m.group(1)) if m else 0
 
 PHOSPHOR = (100, 255, 140)
 RED_STAMP = (235, 65, 65)
@@ -273,6 +284,8 @@ def scenes():
         # Fallback automático: genera 1 escena por línea del guion
         for i, lid in enumerate(TL.order):
             L = TL.lines[lid]
+            if _capitulo(lid) in _HECHOS:
+                continue
             if lid.endswith("_00"):
                 ch_n = L["chapter"]
                 out.append((L["start"] - 0.3, make_card(ch_n, [L["sub"].upper()], ""), None))
@@ -289,6 +302,8 @@ def scenes():
 
     for sc_spec in plan_scenes:
         lid = sc_spec.get("line_id") or sc_spec.get("start_line")
+        if _capitulo(lid) in _HECHOS:
+            continue
         end_lid = sc_spec.get("end_line") or lid
         t0 = (TL.s(lid) - 0.3 if str(lid).endswith("_00") else TL.s(lid)) if lid in TL.lines else float(sc_spec.get("t0", 0.0))
         t1 = TL.e(end_lid) if end_lid in TL.lines else (t0 + 6.0)
@@ -325,6 +340,8 @@ def music(A):
     ch_styles = PLAN.get("chapter_music", {})
     chapters = [0] + list(getattr(TL, "chapters", []))
     for idx, ch in enumerate(chapters):
+        if ch in _HECHOS:
+            continue
         t0 = 0.0 if ch == 0 else TL.chapter_start(ch)
         t1 = TL.chapter_start(chapters[idx + 1]) if idx + 1 < len(chapters) else (TL.e(TL.order[-1]) + 2.4 if TL.order else TL.total - 12.0)
         if t1 <= t0:
@@ -339,7 +356,7 @@ def music(A):
 def sfx(A):
     for sc_spec in PLAN.get("scenes", []):
         lid = sc_spec.get("line_id") or sc_spec.get("start_line")
-        if not lid or lid not in TL.lines:
+        if not lid or lid not in TL.lines or _capitulo(lid) in _HECHOS:
             continue
         t0 = TL.s(lid)
         lay = sc_spec.get("layout", "")

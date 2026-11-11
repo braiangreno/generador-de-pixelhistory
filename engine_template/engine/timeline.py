@@ -24,6 +24,9 @@ for ln in LINES:
         GAP_BEFORE[lid] = float(ln["gap_before"])
 
 TEMPO = float(os.environ.get("PX_TEMPO", "1.06"))
+# PX_STRICT_WORDS=1 (lo usa scripts/producir.py en las hojas de revisión): si TL.word() no encuentra la
+# palabra, falla con un error claro en vez de caer en silencio a la mitad de la frase.
+STRICT_WORDS = os.environ.get("PX_STRICT_WORDS") == "1"
 GAP_CARD = 0.8      # antes de cada placa de capítulo
 GAP_AFTER_CARD = 0.3
 DEFAULT_GAP = 0.18
@@ -136,6 +139,9 @@ class Timeline:
         for _ in range(occurrence):
             idx = text.find(n, idx + 1)
         if idx < 0:
+            if STRICT_WORDS:
+                raise KeyError(f"TL.word: no encuentro {needle!r} (vez {occurrence}) en {lid}: "
+                               f"{''.join(chars)[:90]!r}")
             # Fallback seguro a la mitad de la línea para que nunca falle un render automático
             return L["start"] + L["dur"] * (0.65 if end else 0.35)
         if end:

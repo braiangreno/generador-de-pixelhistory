@@ -67,14 +67,26 @@ BASE_PT = {
 EN_MAP = dict(BASE_EN)
 PT_MAP = dict(BASE_PT)
 
-_map_file = os.path.join(ROOT, "translations_map.json")
-if os.path.exists(_map_file):
+# Traducciones del proyecto, en este orden (cada una pisa a la anterior):
+#   production_plan.json ("translations_map") → translations_map.json → translations/*.json (una por capítulo,
+#   así varios capítulos se escriben en paralelo sin pisarse). Un JSON roto no se ignora en silencio: avisa.
+import glob as _glob
+
+_FUENTES = [("production_plan.json", "translations_map"), ("translations_map.json", None)]
+_FUENTES += [(os.path.relpath(p, ROOT), None) for p in sorted(_glob.glob(os.path.join(ROOT, "translations", "*.json")))]
+for _nombre, _clave in _FUENTES:
+    _map_file = os.path.join(ROOT, _nombre)
+    if not os.path.exists(_map_file):
+        continue
     try:
         _data = json.load(open(_map_file, encoding="utf-8"))
-        EN_MAP.update(_data.get("en", {}))
-        PT_MAP.update(_data.get("pt", {}))
-    except Exception:
-        pass
+    except Exception as _e:
+        print(f"[i18n] AVISO: no pude leer {_nombre}: {_e}")
+        continue
+    if _clave:
+        _data = _data.get(_clave) or {}
+    EN_MAP.update(_data.get("en", {}))
+    PT_MAP.update(_data.get("pt", {}))
 
 
 def tr(text, fname="press"):

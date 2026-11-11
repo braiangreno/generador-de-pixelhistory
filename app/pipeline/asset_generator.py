@@ -1,16 +1,15 @@
 """Stage 3 — Generador de Arte Pixel 16-Bit (`asset_generator.py`).
-Genera fondos (480x270) y retratos (64x64) usando Google Gemini / Imagen API, OpenAI Image API
-o el motor procedural 16-bit de respaldo, y luego los procesa con cuantización pixel-art.
+Genera fondos (480x270) y retratos (64x64) con IA — Nano Banana (Gemini) y GPT Image (OpenAI), los mismos
+generadores y prompts de parecido real que usa el agente (app/pipeline/ia_imagenes.py) — y solo si no hay
+ninguna clave cae al motor procedural 16-bit, que deja el arte marcado como PROVISORIO.
 """
-import base64
-import json
 import math
 import os
 import random
-import urllib.error
-import urllib.request
 
 from PIL import Image, ImageDraw
+
+from app.pipeline.ia_imagenes import a_fondo, a_retrato, gen_gemini, gen_openai, prompt_fondo, prompt_retrato
 
 W, H = 480, 270
 
@@ -21,41 +20,13 @@ def quantize_pixel(im: Image.Image, colors: int = 56) -> Image.Image:
 
 
 def _generate_image_gemini(api_key: str, prompt: str, aspect: str = "16:9") -> Image.Image:
-    """Llama a Imagen 3 / Gemini Image Generation."""
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key={api_key}"
-    body = {
-        "instances": [{"prompt": prompt}],
-        "parameters": {"sampleCount": 1, "aspectRatio": aspect},
-    }
-    req = urllib.request.Request(
-        url, data=json.dumps(body).encode("utf-8"), method="POST",
-        headers={"Content-Type": "application/json"}
-    )
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-    b64 = data["predictions"][0]["bytesBase64Encoded"]
-    import io
-    return Image.open(io.BytesIO(base64.b64decode(b64))).convert("RGB")
+    """Nano Banana (modelos de imagen de Gemini)."""
+    return gen_gemini(api_key, prompt, aspect)[0].convert("RGB")
 
 
 def _generate_image_openai(api_key: str, prompt: str, size: str = "1536x1024") -> Image.Image:
-    url = "https://api.openai.com/v1/images/generations"
-    body = {
-        "model": "dall-e-3",
-        "prompt": prompt,
-        "n": 1,
-        "size": "1792x1024" if size != "1024x1024" else "1024x1024",
-        "response_format": "b64_json",
-    }
-    req = urllib.request.Request(
-        url, data=json.dumps(body).encode("utf-8"), method="POST",
-        headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-    )
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-    b64 = data["data"][0]["b64_json"]
-    import io
-    return Image.open(io.BytesIO(base64.b64decode(b64))).convert("RGB")
+    """GPT Image (OpenAI)."""
+    return gen_openai(api_key, prompt, size)[0].convert("RGB")
 
 
 def _procedural_16bit_bg(name: str, theme: str = "lab", seed: int = 1) -> Image.Image:
@@ -168,33 +139,28 @@ def generate_project_assets(project_dir: str, plan: dict, settings: dict, log_fn
         out_path = os.path.join(bg_dir, f"{b_name}.png")
         if os.path.exists(out_path) and os.path.getsize(out_path) > 500:
             continue
-        prompt = b_item.get("prompt", f"16-bit SNES pixel art background {b_name}, 480x270, no text")
+        prompt = prompt_fondo(b_item)
         theme = b_item.get("theme", "lab")
         raw_im = None
         if img_provider in ("auto", "gemini") and gemini_key:
             try:
                 raw_im = _generate_image_gemini(gemini_key, prompt, aspect="16:9")
             except Exception as e:
-                log_fn(f"  [Aviso Imagen Gemini {b_name}] {e}")
+                log_fn(f"  [Aviso Nano Banana {b_name}] {e}")
         if raw_im is None and img_provider in ("auto", "openai") and openai_key:
             try:
-                raw_im = _generate_image_openai(openai_key, prompt, size="1792x1024")
+                raw_im = _generate_image_openai(openai_key, prompt, size="1536x1024")
             except Exception as e:
-                log_fn(f"  [Aviso Imagen OpenAI {b_name}] {e}")
+                log_fn(f"  [Aviso GPT Image {b_name}] {e}")
 
         if raw_im is not None:
-            w, h = raw_im.size
-            nw = max(W, round(w * H / h))
-            im_resized = raw_im.resize((nw, H), Image.Resampling.BOX)
-            x0 = (nw - W) // 2
-            im_crop = im_resized.crop((x0, 0, x0 + W, H))
-            final_bg = quantize_pixel(im_crop, 56)
-            final_bg.save(out_path)
+            a_fondo(raw_im).save(out_path)
             log_fn(f"  [BG {idx + 1}/{len(bgs)}] {b_name}.png generado con IA y cuantizado a 56 colores.")
         else:
             final_bg = _procedural_16bit_bg(b_name, theme=theme, seed=idx + 10)
             final_bg.save(out_path)
-            log_fn(f"  [BG {idx + 1}/{len(bgs)}] {b_name}.png generado con motor procedural 16-bit ({theme}).")
+            _marcar_provisorio(project_dir, b_name)
+            log_fn(f"  [BG {idx + 1}/{len(bgs)}] {b_name}.png PROVISORIO (sin claves de IA: dibujado por código, {theme}).")
 
     portraits = plan.get("portraits", [])
     if portraits:
@@ -204,22 +170,35 @@ def generate_project_assets(project_dir: str, plan: dict, settings: dict, log_fn
         out_path = os.path.join(por_dir, f"{p_name}.png")
         if os.path.exists(out_path) and os.path.getsize(out_path) > 200:
             continue
-        prompt = p_item.get("prompt", f"16-bit SNES pixel art 64x64 portrait {p_name}")
+        prompt = prompt_retrato(p_item)
         raw_im = None
         if img_provider in ("auto", "gemini") and gemini_key:
             try:
                 raw_im = _generate_image_gemini(gemini_key, prompt, aspect="1:1")
-            except Exception:
-                pass
+            except Exception as e:
+                log_fn(f"  [Aviso Nano Banana {p_name}] {e}")
         if raw_im is None and img_provider in ("auto", "openai") and openai_key:
             try:
                 raw_im = _generate_image_openai(openai_key, prompt, size="1024x1024")
-            except Exception:
-                pass
+            except Exception as e:
+                log_fn(f"  [Aviso GPT Image {p_name}] {e}")
         if raw_im is not None:
-            im_64 = raw_im.resize((64, 64), Image.Resampling.BOX)
-            final_p = quantize_pixel(im_64, 28)
+            final_p = a_retrato(raw_im)
+            log_fn(f"  [PORTRAIT {idx + 1}/{len(portraits)}] {p_name}.png generado con IA (64x64).")
         else:
             final_p = _procedural_16bit_portrait(p_name, seed=idx + 100)
+            _marcar_provisorio(project_dir, p_name)
+            log_fn(f"  [PORTRAIT {idx + 1}/{len(portraits)}] {p_name}.png PROVISORIO (sin claves de IA).")
         final_p.save(out_path)
-        log_fn(f"  [PORTRAIT {idx + 1}/{len(portraits)}] {p_name}.png listo (64x64).")
+
+
+def _marcar_provisorio(project_dir, nombre):
+    """Mismo aviso que usa el agente (scripts/arte.py): assets/ARTE_PROVISORIO.txt."""
+    path = os.path.join(project_dir, "assets", "ARTE_PROVISORIO.txt")
+    actuales = set()
+    if os.path.exists(path):
+        actuales = {ln.strip() for ln in open(path, encoding="utf-8") if ln.strip() and not ln.startswith("#")}
+    actuales.add(nombre)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("# Arte PROVISORIO (dibujado por código, no por IA). No entregar: regeneralo con IA.\n")
+        f.write("\n".join(sorted(actuales)) + "\n")

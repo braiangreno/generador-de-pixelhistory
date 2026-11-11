@@ -4,6 +4,35 @@ Aplicación web + API REST auto-hospedable de **Pixeloide Studios** (`JUGAMOS EN
 
 ---
 
+## El agente Pixeloide (Claude Code)
+
+La forma recomendada de producir: un agente que hace todo el pipeline y escribe los capítulos animados a mano (la calidad de los documentales de IA, Videojuegos y Dune), no solo escenas automáticas.
+
+1. **Instalar** (una vez): doble clic en `INSTALAR.bat`. Instala Python 3.12 (`.venv`) con Pillow, NumPy y faster-whisper (en la placa NVIDIA si hay), FFmpeg si falta, Remotion con su navegador, y crea `.env`.
+2. **Claves**: doble clic en `CLAVES.bat`. Pide ElevenLabs (voces), Gemini (Nano Banana) y OpenAI (GPT Image) sin mostrarlas, las prueba y las guarda en `.env`.
+3. **Usar**: abrí Claude Code en esta carpeta y pedile, por ejemplo: *"Hacé un documental con este guion"* (adjuntá o pegá el guion). Desde cualquier otra carpeta también podés pedirle que use el agente `pixeloide-director`.
+
+Qué hay adentro:
+
+| Pieza | Para qué |
+|---|---|
+| `.claude/skills/pixeloide-video-engine/SKILL.md` | El manual que sigue el agente: reglas de marca, pasos, comandos y control de calidad (copia en `skills/`) |
+| `.claude/agents/pixeloide-capitulo.md` | Subagente que escribe y revisa un capítulo animado; se lanza uno por capítulo en paralelo |
+| `.claude/agents/pixeloide-arte.md` | Subagente que genera con IA los fondos de época y los retratos de las personas reales, compara Nano Banana y GPT Image y rehace lo que no se parece |
+| `scripts/` | `verificar` (entorno), `claves` (cargar y probar claves), `nuevo_proyecto`, `voces` (ElevenLabs, con `--estimar` y `--prueba`), `arte` (Nano Banana / GPT Image, con `--comparar` y fotos de referencia), `producir` (hojas, audio, render, masters, .srt, miniaturas, Shorts), `transcribir` (Whisper en la GPU) |
+| `engine_template/` | Motor base que se copia a cada proyecto nuevo (con `ENGINE_GUIDE.md` para escribir capítulos) |
+| `remotion-pixeloide/` | Remotion 4 con placas de título 16:9 y 9:16 y un zócalo con transparencia, con la marca Pixeloide |
+
+Comandos útiles (desde esta carpeta):
+
+```powershell
+.venv\Scripts\python.exe scripts\verificar.py
+.venv\Scripts\python.exe scripts\producir.py <proyecto> --pasos hoja
+.venv\Scripts\python.exe scripts\producir.py <proyecto> --pasos todo --workers 16
+```
+
+---
+
 ## Qué genera automáticamente con cada guion (Pipeline de 8 Etapas)
 
 1. **Estructuración del Guion + Plan Visual 16-Bit + Traducciones (`ES` / `EN` / `PT`)**:
@@ -46,7 +75,9 @@ chmod +x install_ubuntu.sh
 ```powershell
 .\start_windows.ps1
 ```
-Abre `http://localhost:8080` en tu navegador.
+Abre `http://localhost:8080` en tu navegador. Escucha solo en esta PC (`127.0.0.1`): el panel no tiene usuarios ni contraseña.
+
+> **Seguridad**: el panel no tiene autenticación. En un servidor (Opciones A y B) cualquiera que llegue al puerto 8080 puede crear proyectos (y gastar tus créditos de ElevenLabs) o cambiar las claves. Ponelo detrás de un proxy con contraseña o de una VPN; no lo expongas directo a internet.
 
 ---
 

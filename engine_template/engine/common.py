@@ -372,5 +372,6 @@ def make_card(num, lines, years, snow=False, robot_face="question"):
 
 
 def chapter_end(num):
-    """Inicio del capítulo siguiente (o fin del video)."""
-    return TL.chapter_start(num + 1) if num < 8 else TL.total
+    """Inicio del capítulo siguiente (o fin del video si es el último capítulo, sea cual sea su número)."""
+    ultimo = max(TL.chapters) if getattr(TL, "chapters", None) else 8
+    return TL.chapter_start(num + 1) if num < ultimo else TL.total

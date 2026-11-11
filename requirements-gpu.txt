@@ -1,0 +1,4 @@
+# Whisper en la placa NVIDIA (faster-whisper / CTranslate2 necesita cuBLAS 12 y cuDNN 9).
+# INSTALAR.bat los instala solo si encuentra una GPU NVIDIA (nvidia-smi). ~1,5 GB.
+nvidia-cublas-cu12>=12.4,<13
+nvidia-cudnn-cu12>=9.1,<10

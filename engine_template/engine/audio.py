@@ -460,8 +460,10 @@ def chapter_hooks():
     eng_dir = os.path.dirname(os.path.abspath(__file__))
     ch_files = glob.glob(os.path.join(eng_dir, "ch[0-9][0-9].py"))
     mods = sorted(os.path.splitext(os.path.basename(p))[0] for p in ch_files)
-    if not mods and os.path.exists(os.path.join(eng_dir, "declarative_scenes.py")):
-        mods = ["declarative_scenes"]
+    # mismo criterio que video.py: el plan automático completa los capítulos que no tienen chNN.py
+    if os.path.exists(os.path.join(eng_dir, "declarative_scenes.py")) and (
+            not mods or os.path.exists(os.path.join(ROOT, "production_plan.json"))):
+        mods.insert(0, "declarative_scenes")
     mods.append("outro")
     for name in mods:
         try:

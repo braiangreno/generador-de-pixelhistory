@@ -7,7 +7,21 @@ import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(ROOT, "engine"))
-from timeline import TL
+from timeline import TL, TEMPO
+
+_ATEMPO = {}
+
+
+def _escala(lang, vo_dir, lid):
+    """Los tiempos de ElevenLabs son de la voz original; en la mezcla el español va acelerado por TEMPO
+    y EN/PT por el atempo que eligió mix_multilingual.py para esa frase. Se corrige para que no se desfasen."""
+    if lang == "es":
+        return 1.0 / TEMPO
+    if vo_dir not in _ATEMPO:
+        p = os.path.join(ROOT, vo_dir, "_atempo.json")
+        _ATEMPO[vo_dir] = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+    return 1.0 / float(_ATEMPO[vo_dir].get(lid, 1.0) or 1.0)
+
 
 PLAN_PATH = os.path.join(ROOT, "production_plan.json")
 PLAN = json.load(open(PLAN_PATH, encoding="utf-8")) if os.path.exists(PLAN_PATH) else {}
@@ -39,6 +53,9 @@ def generate_srt(lang, script_file, vo_dir, out_file):
         chars = al.get("characters", [])
         st = al.get("character_start_times_seconds", [])
         en = al.get("character_end_times_seconds", [])
+        k = _escala(lang, vo_dir, lid)
+        st = [x * k for x in st]
+        en = [x * k for x in en]
         text = row.get("sub") or row.get("speak") or "".join(chars)
         if not chars or not st or not en:
             out.append(f"{i}\n{ts(slot_start)} --> {ts(max(slot_start + 0.5, slot_end))}\n{text}\n")
@@ -70,9 +87,11 @@ def generate_srt(lang, script_file, vo_dir, out_file):
 
 
 if __name__ == "__main__":
+    pedidos = [a.lower() for a in sys.argv[1:]] or ["es", "en", "pt"]
     for lg, sc, vd in (
         ("es", "script_full.json", "audio/vo"),
         ("en", "script_full_en.json", "audio/vo_en"),
         ("pt", "script_full_pt.json", "audio/vo_pt"),
     ):
-        generate_srt(lg, sc, vd, f"{SLUG}_{lg.upper()}.srt")
+        if lg in pedidos:
+            generate_srt(lg, sc, vd, f"{SLUG}_{lg.upper()}.srt")

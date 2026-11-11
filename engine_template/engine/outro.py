@@ -7,11 +7,30 @@ Sigue fielmente el Manual de Marca de Pixeloide Studios (Versión 1.0 - 2026):
 - Motion: Barrido de página en cian (520 ms) y curvas suaves cubic-bezier(.2,.7,.2,1)
 - Créditos: Idea Original y Producción (Braian Greno) + Herramientas de IA utilizadas
 """
+import json
 import math
+import os
 import numpy as np
 from PIL import Image, ImageDraw
 
 from common import *  # noqa
+
+
+def _credito_imagenes():
+    """Qué IA hizo el arte: production_plan.json → "creditos": {"imagenes": "NANO BANANA / GPT IMAGE"}.
+    Si el plan no lo dice, queda el texto del manual de marca."""
+    try:
+        plan_path = os.path.join(ROOT, "production_plan.json")
+        if os.path.exists(plan_path):
+            valor = (json.load(open(plan_path, encoding="utf-8")).get("creditos") or {}).get("imagenes")
+            if valor:
+                return str(valor).upper()
+    except Exception:
+        pass
+    return "IMAGEN / NANOBANANA"
+
+
+CREDITO_IMAGENES = _credito_imagenes()
 
 # --------------------------------------------------------------------------- paleta oficial Pixeloide Studios
 PX_INK = (7, 10, 31)         # #070A1F - Fondo principal
@@ -316,7 +335,7 @@ def sc_credits(t, t0, t_end):
             ("CLAUDE & GEMINI", "DIRECCIÓN TÉCNICA · CÓDIGO Y ANIMACIÓN"),
             ("ELEVENLABS", "LOCUCIÓN NEURONAL · CARLOS AGUILAR"),
             ("OPENAI WHISPER", "ALINEACIÓN FONÉTICA Y SUBTÍTULOS"),
-            ("IMAGEN / NANOBANANA", "ARTE PIXEL BASE · FONDOS Y RETRATOS"),
+            (CREDITO_IMAGENES, "ARTE PIXEL BASE · FONDOS Y RETRATOS"),
             ("PYTHON · PIL · NUMPY", "MOTOR PIXEL ART 16-BIT Y CHIPTUNE"),
             ("FFMPEG", "MASTERIZACIÓN 1080P · AUDIO -14 LUFS"),
         ]

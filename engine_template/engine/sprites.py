@@ -705,5 +705,37 @@ CAST = {
                   glasses="black", top="blazer", top_color=C("2a2a34"), shirt=C("6a8aa8"), pants=C("26262e")),
 }
 
+# ---- Reparto genérico: los "preset" que usan production_plan.json y declarative_scenes.py.
+# Para un personaje histórico concreto, copiá uno y cambiale pelo, piel, ropa y accesorios.
+CAST.update({
+    "inge": dict(name="Ingeniero", skin=SKIN["fair"], hair=C("3a2a1e"), hair_style="short", glasses="black",
+                 top="labcoat", top_color=C("e8e8e0"), shirt=C("9ab4c8"), tie=C("2a3a5a"), pants=C("3a3a46")),
+    "prof": dict(name="Profesora", skin=SKIN["light"], hair=C("6a4a2a"), hair_style="bun", glasses="round",
+                 top="blazer", top_color=C("5a3a4a"), shirt=C("f0eee8"), skirt=True, skirt_color=C("3a2a36"),
+                 pants=C("3a2a36")),
+    "estudiante": dict(name="Estudiante", skin=SKIN["tan"], hair=C("1e1a1a"), hair_style="fringe",
+                       top="hoodie", top_color=C("3a6a9a"), pants=C("2a2a34")),
+    "ejecutivo": dict(name="Ejecutivo", skin=SKIN["fair"], hair=C("2a2226"), hair_style="slick",
+                      top="suit", top_color=C("26304e"), shirt=C("f0eee8"), tie=C("7a2030"), pants=C("1e2640")),
+    "mujer_ejecutiva": dict(name="Ejecutiva", skin=SKIN["olive"], hair=C("2a1a14"), hair_style="long",
+                            top="blazer", top_color=C("2a2a36"), shirt=C("e8e4f0"), skirt=True,
+                            skirt_color=C("26262e"), pants=C("26262e")),
+    "chica": dict(name="Chica", skin=SKIN["asian"], hair=C("141016"), hair_style="bangs",
+                  top="tshirt", top_color=C("c8506a"), pants=C("2a3a5a")),
+    "abuela": dict(name="Abuela", skin=SKIN["light"], hair=C("c8c4bc"), hair_style="bun", glasses="wire",
+                   top="sweater", top_color=C("7a5a8a"), skirt=True, skirt_color=C("4a3a4a"), pants=C("4a3a4a")),
+    "nieto": dict(name="Nieto", skin=SKIN["fair"], hair=C("8a5a34"), hair_style="crew",
+                  top="tshirt", top_color=C("e0a030"), pants=C("3a4a6a")),
+    "padre": dict(name="Padre", skin=SKIN["brown"], hair=C("1a1414"), hair_style="short", mustache=True,
+                  top="shirt", top_color=C("6a8a5a"), pants=C("3a3a40")),
+    "periodista": dict(name="Periodista", skin=SKIN["fair"], hair=C("4a3020"), hair_style="side",
+                       top="trench", top_color=C("bca77e"), shirt=C("f0eee8"), tie=C("6a2a2a"), pants=C("5a5040"),
+                       hat="fedora"),
+    "cientifica": dict(name="Científica", skin=SKIN["brown"], hair=C("1a1414"), hair_style="curly",
+                       glasses="round", top="labcoat", top_color=C("f0f0ea"), shirt=C("6a9a8a"), pants=C("2a2a34")),
+    "militar": dict(name="Militar", skin=SKIN["fair"], hair=C("3a3030"), hair_style="crew",
+                    top="uniform", top_color=C("3a4a2a"), shirt=C("e8e4d8"), tie=C("1e2414"), pants=C("2e3a22")),
+})
+
 DARTMOUTH_TEN = ["mccarthy", "minsky", "shannon", "rochester", "solomonoff",
                  "selfridge", "more", "samuel", "newell", "simon"]

@@ -32,6 +32,7 @@ def dur(p):
 def build_voice_stem(lang, total_samples):
     vo_dir = os.path.join(ROOT, "audio", f"vo_{lang}")
     stem = np.zeros(total_samples, dtype=np.float32)
+    tempos = {}  # aceleración aplicada a cada frase (los subtítulos la usan para no desfasarse)
     tmp_out = os.path.join(ROOT, "audio", f"_tmp_{lang}.wav")
     
     print(f"[{lang.upper()}] Building voice stem (naturalized pacing)...")
@@ -47,6 +48,7 @@ def build_voice_stem(lang, total_samples):
 
         # vo_en and vo_pt are synthesized at natural speed=1.0; only compress if d_nat exceeds avail_dur
         atempo = min(1.38, max(1.0, (d_nat + 0.02) / avail_dur))
+        tempos[lid] = round(atempo, 4) if abs(atempo - 1.0) > 0.015 else 1.0
         if abs(atempo - 1.0) > 0.015:
             cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", mp3, "-af", f"atempo={atempo:.3f}",
                    "-ar", str(SR), "-ac", "1", "-f", "f32le", "-"]
@@ -61,6 +63,8 @@ def build_voice_stem(lang, total_samples):
         if chunk_len > 0:
             stem[idx0:idx1] += arr[:chunk_len]
             
+    with open(os.path.join(vo_dir, "_atempo.json"), "w", encoding="utf-8") as f:
+        json.dump(tempos, f, indent=1)
     print(f"[{lang.upper()}] Voice stem created, raw amp={np.max(np.abs(stem)):.3f}")
     pk = np.max(np.abs(stem))
     if pk > 0.05:
@@ -102,5 +106,6 @@ def mix_language(lang):
     print(f"[{lang.upper()}] Saved {mix_path}")
 
 if __name__ == "__main__":
-    mix_language("en")
-    mix_language("pt")
+    for lg in (sys.argv[1:] or ["en", "pt"]):
+        if lg != "es":
+            mix_language(lg)

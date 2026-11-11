@@ -50,7 +50,7 @@ PROJECT_META = {
             "en": ("SO THEY DON'T", "GET BORED"),
             "pt": ("PARA NÃO SE", "ENTEDIAREM"),
         },
-        "years": "1958 → 2026",
+        "years": "1958 – 2026",
     },
     "historia_ia_pixel": {
         "accent": (72, 229, 255),
@@ -69,7 +69,7 @@ PROJECT_META = {
             "en": ("THE HISTORY OF", "ARTIFICIAL INTELLIGENCE"),
             "pt": ("A HISTÓRIA DA", "INTELIGÊNCIA ARTIFICIAL"),
         },
-        "years": "1950 → 2026",
+        "years": "1950 – 2026",
     },
     "historia_dune_pixel": {
         "accent": (255, 195, 85),
@@ -88,15 +88,48 @@ PROJECT_META = {
             "en": ("THE SAND THAT", "NEVER STOPPED"),
             "pt": ("A AREIA QUE", "NUNCA PAROU"),
         },
-        "years": "1957 → 2026",
+        "years": "1957 – 2026",
     },
 }
+
+
+def _dos_lineas(titulo):
+    """Parte un título en dos líneas lo más parejas posible (para la tarjeta de cierre vertical)."""
+    palabras = titulo.split()
+    if len(palabras) < 2:
+        return (titulo, "")
+    mejor = None
+    for i in range(1, len(palabras)):
+        a, b = " ".join(palabras[:i]), " ".join(palabras[i:])
+        if mejor is None or max(len(a), len(b)) < mejor[0]:
+            mejor = (max(len(a), len(b)), a, b)
+    return (mejor[1], mejor[2])
 
 
 def get_meta():
     if PROJECT_NAME in PROJECT_META:
         return PROJECT_META[PROJECT_NAME]
-    return PROJECT_META["historia_dune_pixel"]
+    # Proyecto nuevo: título por idioma, años y color de acento salen de production_plan.json
+    plan_path = os.path.join(ROOT, "production_plan.json")
+    plan = json.load(open(plan_path, encoding="utf-8")) if os.path.exists(plan_path) else {}
+    base = (plan.get("title") or "DOCUMENTAL PIXELOIDE").upper()
+    titles = {lg: ((plan.get("titles") or {}).get(lg) or base).upper() for lg in ("es", "en", "pt")}
+    series = {lg: ((plan.get("series") or {}).get(lg) or titles[lg]).upper() for lg in ("es", "en", "pt")}
+    two = plan.get("titles_2lines") or {}
+    y0, y1 = plan.get("year_start"), plan.get("year_end")
+    return {
+        "accent": tuple(plan.get("accent") or (72, 229, 255)),
+        "series": series,
+        "ep_title": titles,
+        "ep_title_2lines": {lg: (tuple(two[lg])[:2] if lg in two else _dos_lineas(t)) for lg, t in titles.items()},
+        "years": f"{y0} – {y1}" if y0 and y1 else str(y0 or y1 or ""),
+    }
+
+
+def _caps_txt(lang):
+    n = len(getattr(TL, "chapters", []) or [])
+    pal = {"es": ("CAPÍTULO", "CAPÍTULOS"), "en": ("CHAPTER", "CHAPTERS"), "pt": ("CAPÍTULO", "CAPÍTULOS")}[lang]
+    return f"{n} {pal[0] if n == 1 else pal[1]}"
 
 
 def _fmt_srt_time(sec):
@@ -219,7 +252,8 @@ def render_outro_cta_vertical(local_t, clip_dur, lang, meta):
     core._orig_draw_text(cv, cta_bot, VW // 2, 327, "press", 8, outro.PX_PAPER, align="center")
 
     core._orig_draw_text(cv, "IDEA Y PRODUCCIÓN: BRAIAN GRENO", VW // 2, 372, "silk", 8, outro.PX_MUTED, align="center")
-    core._orig_draw_text(cv, f"{meta['years']} · 8 CAPÍTULOS", VW // 2, 392, "silk", 8, accent, align="center")
+    pie = f"{meta['years']} · {_caps_txt(lang)}" if meta.get("years") else _caps_txt(lang)
+    core._orig_draw_text(cv, pie, VW // 2, 392, "silk", 8, accent, align="center")
     return cv
 
 
@@ -282,6 +316,7 @@ def build_chapter_short(args):
         "-s", f"{OUT_VW}x{OUT_VH}", "-r", str(FPS), "-i", "-",
         "-i", short_wav,
         "-c:v", "libx264", "-preset", "fast", "-crf", "18",
+        "-threads", os.environ.get("PX_FFMPEG_THREADS", "0"),
         "-pix_fmt", "yuv420p",
         "-c:a", "aac", "-b:a", "192k",
         "-shortest", "-movflags", "+faststart",
@@ -332,7 +367,9 @@ def build_all_for_lang(lang="es", workers=6):
 
     print(f"=== [{PROJECT_NAME}] Generando {len(chapters)} Shorts 9:16 FULLSCREEN en {lang.upper()} ===", flush=True)
     jobs = [(ch_info, len(chapters), lang, meta, outro_audio_start) for ch_info in chapters]
-    with Pool(min(workers, len(jobs))) as pool:
+    n_proc = max(1, min(workers, len(jobs)))
+    os.environ["PX_FFMPEG_THREADS"] = str(max(1, (os.cpu_count() or 8) // n_proc))  # pocos hilos por encoder
+    with Pool(n_proc) as pool:
         for _ in pool.imap_unordered(build_chapter_short, jobs):
             pass
 
@@ -340,5 +377,5 @@ def build_all_for_lang(lang="es", workers=6):
 if __name__ == "__main__":
     langs = sys.argv[1:] if len(sys.argv) > 1 else ["es", "en", "pt"]
     for lg in langs:
-        build_all_for_lang(lg)
+        build_all_for_lang(lg, workers=max(1, int(os.environ.get("RENDER_WORKERS", "6") or 6)))
     print(f"ALL CHAPTER SHORTS COMPLETED FOR {PROJECT_NAME}!", flush=True)

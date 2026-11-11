@@ -1,9 +1,11 @@
 """Montaje dinámico del video completo en pixel art.
 
   python engine/video.py sheet [ch]            -> hoja de contacto (todas las escenas o de un capítulo)
+  python engine/video.py sheetv [ch]           -> la misma hoja pero redibujada en 9:16 (como los Shorts)
   python engine/video.py times t1 t2 ...       -> hoja con esos instantes
   python engine/video.py render [workers]      -> renders/video_mudo.mp4 (1920x1080, 30 fps, en paralelo)
   python engine/video.py segment ch            -> renderiza solo un capítulo (para revisar)
+Con PX_LANG=en|pt dibuja los textos traducidos (y la hoja se guarda con _en/_pt).
 """
 import glob
 import importlib
@@ -20,10 +22,13 @@ ENGINE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def discover_chapter_modules():
+    """Capítulos escritos a mano (chNN.py) + escenas automáticas del plan para los capítulos que todavía no
+    tienen chNN.py (declarative_scenes se saltea solo los capítulos hechos a mano) + el cierre oficial."""
     ch_files = glob.glob(os.path.join(ENGINE_DIR, "ch[0-9][0-9].py"))
     mods = sorted(os.path.splitext(os.path.basename(p))[0] for p in ch_files)
-    if not mods and os.path.exists(os.path.join(ENGINE_DIR, "declarative_scenes.py")):
-        mods = ["declarative_scenes"]
+    if os.path.exists(os.path.join(ENGINE_DIR, "declarative_scenes.py")) and (
+            not mods or os.path.exists(os.path.join(ROOT, "production_plan.json"))):
+        mods.insert(0, "declarative_scenes")
     mods.append("outro")
     return mods
 
@@ -128,17 +133,25 @@ def scene_times(ch=None):
 
 def render_range(t0, t1, out_path):
     n0, n1 = int(round(t0 * FPS)), int(round(t1 * FPS))
+    # PX_FFMPEG_THREADS lo fija render(): con muchos procesos en paralelo, cada x264 usa pocos hilos
+    # (si cada uno abre 1,5 hilos por núcleo, 16 encoders a la vez se quedan sin memoria y se cortan).
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", "1920x1080",
            "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "medium", "-crf", "17",
-           "-pix_fmt", "yuv420p", out_path]
+           "-threads", os.environ.get("PX_FFMPEG_THREADS", "0"), "-pix_fmt", "yuv420p", out_path]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     ts = time.time()
-    for i in range(n0, n1):
-        p.stdin.write(frame_at(i / FPS, final=True).convert("RGB").tobytes())
-        if (i - n0) % 600 == 0:
-            print(f"[{os.path.basename(out_path)}] {i - n0}/{n1 - n0}  {time.time() - ts:.0f}s", flush=True)
-    p.stdin.close()
-    p.wait()
+    try:
+        for i in range(n0, n1):
+            p.stdin.write(frame_at(i / FPS, final=True).convert("RGB").tobytes())
+            if (i - n0) % 600 == 0:
+                print(f"[{os.path.basename(out_path)}] {i - n0}/{n1 - n0}  {time.time() - ts:.0f}s", flush=True)
+        p.stdin.close()
+    except OSError as e:
+        p.kill()
+        raise RuntimeError(f"ffmpeg se cortó codificando {os.path.basename(out_path)} ({e}). "
+                           f"Probá con menos workers.") from None
+    if p.wait() != 0:
+        raise RuntimeError(f"ffmpeg falló codificando {os.path.basename(out_path)}")
 
 
 def _worker(args):
@@ -157,6 +170,7 @@ def render(workers=8):
     os.makedirs(seg_dir, exist_ok=True)
     bounds = [round(n_frames * i / workers) for i in range(workers + 1)]
     jobs = [(bounds[i] / FPS, bounds[i + 1] / FPS, os.path.join(seg_dir, f"seg_{i:02d}.mp4")) for i in range(workers)]
+    os.environ["PX_FFMPEG_THREADS"] = str(max(1, (os.cpu_count() or 8) // max(1, workers)))  # lo heredan los workers
     with Pool(workers) as pool:
         for p in pool.imap_unordered(_worker, jobs):
             print("listo", os.path.basename(p), flush=True)
@@ -172,11 +186,29 @@ def render(workers=8):
 
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "sheet"
+    from i18n import get_lang
+    _suf = "" if get_lang() == "es" else f"_{get_lang()}"  # una hoja por idioma (PX_LANG=en/pt)
     if cmd == "sheet":
         ch = sys.argv[2] if len(sys.argv) > 2 else None
-        sheet(scene_times(ch), name=f"sheet_{ch or 'all'}.png")
+        sheet(scene_times(ch), name=f"sheet_{ch or 'all'}{_suf}.png")
+    elif cmd == "sheetv":
+        import vertical
+        vertical._install_hooks()
+        ch = sys.argv[2] if len(sys.argv) > 2 else None
+        ts_v = scene_times(ch) or [1.0]
+        cols = 6
+        rows = (len(ts_v) + cols - 1) // cols
+        hoja = Image.new("RGB", (cols * 270, rows * 480), (0, 0, 0))
+        dv = ImageDraw.Draw(hoja)
+        for i, tv in enumerate(ts_v):
+            im = vertical.frame_at_vertical(tv, SCENES, xfade=XFADE, final=False).convert("RGB")
+            hoja.paste(im, ((i % cols) * 270, (i // cols) * 480))
+            dv.text(((i % cols) * 270 + 4, (i // cols) * 480 + 468), f"{tv:.1f}s", fill=(255, 0, 255))
+        os.makedirs(os.path.join(ROOT, "frames"), exist_ok=True)
+        hoja.save(os.path.join(ROOT, "frames", f"sheet_v_{ch or 'all'}{_suf}.png"))
+        print("sheetv", f"sheet_v_{ch or 'all'}{_suf}.png", [round(x, 1) for x in ts_v])
     elif cmd == "times":
-        sheet([float(x) for x in sys.argv[2:]], name="sheet_times.png")
+        sheet([float(x) for x in sys.argv[2:]], name=f"sheet_times{_suf}.png")
     elif cmd == "render":
         render(int(sys.argv[2]) if len(sys.argv) > 2 else 8)
     elif cmd == "segment":

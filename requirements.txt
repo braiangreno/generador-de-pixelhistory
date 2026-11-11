@@ -5,3 +5,5 @@ Pillow>=10.2.0
 numpy>=1.26.0
 pypdf>=4.1.0
 pydantic>=2.6.0
+# Alineación palabra por palabra de voces que no vienen de ElevenLabs (scripts/transcribir.py)
+faster-whisper>=1.1.0

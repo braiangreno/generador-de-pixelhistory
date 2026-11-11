@@ -5,13 +5,15 @@ Permite subir un guion (PDF, TXT, MD o texto pegado) y producir automáticamente
 import io
 import json
 import os
+import re
 import tempfile
 import zipfile
 from typing import List, Optional
+from urllib.parse import urlsplit
 
-from fastapi import FastAPI, File, Form, HTTPException, UploadFile
+from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, HTMLResponse, StreamingResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
@@ -35,12 +37,44 @@ app = FastAPI(
     version="1.0.0",
 )
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+# Seguridad:
+# - Solo se aceptan ids de proyecto con letras, números, _ y - (antes `..\` permitía leer el .env con las claves).
+# - Una página de otro sitio abierta en el navegador no puede usar la API: los pedidos que cambian algo
+#   tienen que venir del mismo origen (o de uno listado en CORS_ORIGINS). curl, n8n y scripts no mandan Origin.
+_ID_OK = re.compile(r"^[A-Za-z0-9_-]{1,80}$")
+_CORS_EXTRA = [o.strip() for o in os.environ.get("CORS_ORIGINS", "").split(",") if o.strip()]
+
+
+def _mismo_origen(request: Request) -> bool:
+    origin = request.headers.get("origin")
+    if not origin:
+        return True
+    if origin in _CORS_EXTRA:
+        return True
+    try:
+        return urlsplit(origin).netloc.lower() == request.headers.get("host", "").lower()
+    except ValueError:
+        return False
+
+
+@app.middleware("http")
+async def _guardia(request: Request, call_next):
+    partes = request.url.path.split("/")
+    if len(partes) > 3 and partes[1] == "api" and partes[2] == "projects" and partes[3]:
+        if not _ID_OK.match(partes[3]):
+            return JSONResponse({"detail": "Proyecto no encontrado"}, status_code=404)
+    if request.method not in ("GET", "HEAD", "OPTIONS") and not _mismo_origen(request):
+        return JSONResponse({"detail": "Origen no permitido"}, status_code=403)
+    return await call_next(request)
+
+
+if _CORS_EXTRA:
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=_CORS_EXTRA,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
 STATIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "static")
 os.makedirs(STATIC_DIR, exist_ok=True)
