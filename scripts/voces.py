@@ -175,10 +175,11 @@ def main():
 
     api_key = (cfg.get("elevenlabs_api_key") or "").strip()
     if not api_key:
-        raise SystemExit("Falta ELEVENLABS_API_KEY. Pegala en el archivo .env de la raíz del repo "
-                         "(ELEVENLABS_API_KEY=...) o usá --prueba para una voz sintética de prueba.")
+        raise SystemExit("Falta ELEVENLABS_API_KEY. Cargala con doble clic en CLAVES.bat "
+                         "o usá --prueba para una voz sintética de prueba.")
 
     hechas = 0
+    sin_tiempos = {}  # idioma -> ids cuyo modelo no devolvió tiempos: los alinea Whisper al final
     for lg, todo in pendientes.items():
         v = voces[lg]
         for k, (lid, text, prev_t, next_t, mp3, js) in enumerate(todo, 1):
@@ -186,16 +187,27 @@ def main():
             if modelo != v["model"]:
                 print(f"  (el modelo {v['model']} no está disponible: sigo con {modelo})")
                 v["model"] = modelo
-            if not alignment.get("characters"):
-                raise SystemExit(f"ElevenLabs no devolvió la alineación para {lg}:{lid}.")
             with open(mp3, "wb") as f:
                 f.write(audio)
-            with open(js, "w", encoding="utf-8") as f:
-                json.dump(alignment, f, ensure_ascii=False)
+            if alignment.get("characters"):
+                with open(js, "w", encoding="utf-8") as f:
+                    json.dump(alignment, f, ensure_ascii=False)
+            else:
+                if os.path.exists(js):
+                    os.remove(js)  # el .json viejo ya no corresponde a este audio
+                sin_tiempos.setdefault(lg, []).append(lid)
             marcas.discard(f"{lg}:{lid}")
             hechas += 1
-            print(f"  [{lg.upper()} {k:02d}/{len(todo):02d}] {lid} OK")
+            print(f"  [{lg.upper()} {k:02d}/{len(todo):02d}] {lid} OK" + ("" if alignment.get("characters")
+                                                                        else " (sin tiempos: los saca Whisper)"))
     guardar_marcas(pdir, marcas)
+    for lg, ids in sin_tiempos.items():
+        print(f"\n[{lg.upper()}] {len(ids)} frases sin tiempos de ElevenLabs: alineo con Whisper (GPU si hay).")
+        cmd = [sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), "transcribir.py"),
+               os.path.basename(pdir), "--idioma", lg, "--todas", "--solo", ",".join(ids)]
+        import subprocess
+        if subprocess.run(cmd).returncode != 0:
+            raise SystemExit(f"Whisper no pudo alinear {lg}: {', '.join(ids)}. Corré scripts/transcribir.py a mano.")
     print(f"Listo: {hechas} frases con ElevenLabs ({total_chars} caracteres).")
 
 
