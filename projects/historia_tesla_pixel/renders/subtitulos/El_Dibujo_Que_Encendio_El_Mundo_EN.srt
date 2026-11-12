@@ -1,0 +1,303 @@
+1
+00:00:00,750 --> 00:00:06,442
+Right now, the screen you are watching this on runs on electricity that traveled from very far away.
+
+2
+00:00:06,642 --> 00:00:12,565
+And along the way it went back and forth: changing direction a hundred times per second, or more.
+
+3
+00:00:12,765 --> 00:00:18,304
+All of that began in a park, at sunset, with a man reciting a poem.
+
+4
+00:00:18,504 --> 00:00:23,350
+Suddenly he stopped, picked up a small stick, and drew something in the sand.
+
+5
+00:00:24,250 --> 00:00:27,327
+That drawing still makes the world spin today.
+
+6
+00:00:27,877 --> 00:00:33,031
+This is the story of Nikola Tesla. And how light reaches your home.
+
+7
+00:00:33,881 --> 00:00:39,573
+Tesla was born in 1856, in a mountain village in present-day Croatia.
+
+8
+00:00:39,793 --> 00:00:49,870
+Family legend says there was a storm that night, and the midwife called him a child of the storm. His mother corrected her: no, of light.
+
+9
+00:00:50,070 --> 00:00:57,455
+As a boy he saw sparks when petting his cat in the dark. His father told him it was electricity, just like lightning.
+
+10
+00:00:57,655 --> 00:01:03,116
+And he could imagine a machine and run it inside his head, without ever building it.
+
+11
+00:01:03,316 --> 00:01:10,316
+At university he saw a motor throwing sparks everywhere. He said you could build one without sparks.
+
+12
+00:01:10,516 --> 00:01:14,747
+The professor explained to him, in front of everyone, that it was impossible.
+
+13
+00:01:15,647 --> 00:01:19,262
+Tesla spent years trying to prove the opposite.
+
+14
+00:01:20,112 --> 00:01:26,497
+Years later, in Budapest, he was still so obsessed with that motor that he fell ill.
+
+15
+00:01:26,717 --> 00:01:33,255
+One afternoon he went for a walk with a friend. He was reciting Goethe's Faust, which he knew by heart.
+
+16
+00:01:33,455 --> 00:01:40,840
+As he told it, the idea struck him all at once, like a bolt of lightning. With a small stick, he drew the motor in the sand.
+
+17
+00:01:41,290 --> 00:01:44,367
+To understand what he saw, let's go to the chalkboard.
+
+18
+00:01:44,567 --> 00:01:50,336
+Direct current always pushes the same way, like water flowing through a pipe.
+
+19
+00:01:50,536 --> 00:01:56,459
+Alternating current goes back and forth, like a handsaw: it doesn't move forward, yet it still cuts the wood.
+
+20
+00:01:56,659 --> 00:02:05,428
+Tesla combined two alternating currents, one slightly delayed behind the other. Together they create an invisible spinning magnet.
+
+21
+00:02:05,628 --> 00:02:10,398
+Put a piece of metal in the middle and it chases it. It spins without sparks.
+
+22
+00:02:11,298 --> 00:02:16,682
+The impossible motor was already working. For now, only in his head.
+
+23
+00:02:17,532 --> 00:02:25,071
+In 1884 he arrived in New York to work for the most famous inventor in the world: Thomas Edison.
+
+24
+00:02:25,291 --> 00:02:36,752
+Edison lit the city with direct current, and his entire business depended on it. According to Tesla, he was promised fifty thousand dollars if he improved their generators.
+
+25
+00:02:36,952 --> 00:02:44,491
+He worked for months barely sleeping. When he went to collect, they told him it had been a joke. He quit.
+
+26
+00:02:44,691 --> 00:02:53,460
+Tesla started his own company and his partners pushed him out. He ended up digging ditches in the street for two dollars a day.
+
+27
+00:02:53,660 --> 00:02:58,583
+The foreman heard him talking about his motor and introduced him to a group of investors.
+
+28
+00:02:58,783 --> 00:03:04,322
+He told them about the Egg of Columbus, who according to legend stood an egg upright by tapping its tip.
+
+29
+00:03:04,522 --> 00:03:11,598
+Tesla placed a copper egg on the table, switched on his current… and the egg spun until it stood upright.
+
+30
+00:03:11,798 --> 00:03:18,568
+It was his invisible magnet, spinning beneath the wood. They put up the money. Remember that egg.
+
+31
+00:03:19,468 --> 00:03:24,006
+Columbus had to crack the egg. Tesla made it dance.
+
+32
+00:03:24,856 --> 00:03:30,318
+Word of his motor reached George Westinghouse, an industrialist who was betting on alternating current.
+
+33
+00:03:30,538 --> 00:03:38,615
+He paid to use his patents and promised him two dollars and fifty cents for every horsepower sold. Remember that number.
+
+34
+00:03:39,065 --> 00:03:41,988
+Why such a fierce battle? Back to the chalkboard.
+
+35
+00:03:42,188 --> 00:03:55,495
+Wires lose energy as heat. The more current flows through them, the more they lose. But the same energy can travel as lots of current at low voltage… or very little current at high voltage.
+
+36
+00:03:55,695 --> 00:04:03,003
+With a transformer, alternating current steps up the voltage to travel far. And steps it down before entering your home.
+
+37
+00:04:03,203 --> 00:04:09,972
+Direct current back then couldn't do that. It needed a power station every mile or so.
+
+38
+00:04:10,172 --> 00:04:17,403
+Edison's camp responded with fear: they electrocuted animals in public to show that alternating current killed.
+
+39
+00:04:17,603 --> 00:04:31,142
+Tesla answered with a spectacle: he let ultra-high-frequency currents pass through his body and lit lamps with his bare hands. That only worked at extreme frequencies, and even then it was dangerous.
+
+40
+00:04:32,042 --> 00:04:37,580
+Edison said alternating current killed. Tesla used it to light up his hands.
+
+41
+00:04:38,430 --> 00:04:47,199
+In 1893, Chicago hosted a World's Fair. It was going to be the first ever lit entirely by electricity.
+
+42
+00:04:47,419 --> 00:04:54,188
+Westinghouse won the contract: he offered to do it with alternating current for far less than Edison's camp.
+
+43
+00:04:54,388 --> 00:05:01,235
+On opening day, the president pressed a button… and about a hundred thousand lamps lit up.
+
+44
+00:05:01,435 --> 00:05:08,358
+Inside the Electricity Building, crowds gathered in front of a giant copper egg. It spun all by itself.
+
+45
+00:05:08,558 --> 00:05:15,558
+A few years later, his system carried power from Niagara Falls to Buffalo, over twenty miles away.
+
+46
+00:05:15,758 --> 00:05:23,065
+But the war left Westinghouse buried in debt. His bankers wanted to eliminate Tesla's two dollars and fifty cents.
+
+47
+00:05:23,265 --> 00:05:28,958
+The most famous version says Tesla tore up the contract right in front of him, out of friendship.
+
+48
+00:05:29,158 --> 00:05:38,312
+The documents tell a less theatrical story: he gave up his royalties and later sold his patents for about two hundred and sixteen thousand dollars.
+
+49
+00:05:39,212 --> 00:05:44,519
+His system conquered the world. And he no longer collected a cent from it.
+
+50
+00:05:45,369 --> 00:05:52,908
+In his New York laboratory, Tesla became a celebrity. One of his friends was the writer Mark Twain.
+
+51
+00:05:53,128 --> 00:05:59,974
+They say he once invited him onto a vibrating platform. Before long, Twain went running to the bathroom.
+
+52
+00:06:00,174 --> 00:06:06,020
+His signature tool was the Tesla coil. It works on something you've known since childhood.
+
+53
+00:06:06,470 --> 00:06:14,008
+If you push a swing right as it comes back, gentle pushes send it higher and higher. That is resonance.
+
+54
+00:06:14,208 --> 00:06:21,747
+The coil pushes electricity at the exact right moment. That's how it achieves huge voltages and multi-meter sparks.
+
+55
+00:06:21,947 --> 00:06:28,332
+At an exhibition in New York, he placed an iron boat in a pool. With nobody inside.
+
+56
+00:06:28,532 --> 00:06:35,762
+The audience shouted questions and the boat answered with its lights. Some believed he was controlling it with his mind.
+
+57
+00:06:35,962 --> 00:06:42,885
+He was steering it with radio waves from a small box. It is the first radio-controlled device on record.
+
+58
+00:06:43,785 --> 00:06:48,247
+Today we call it a remote control. And we use it to change the channel.
+
+59
+00:06:49,097 --> 00:06:56,712
+Tesla wanted more. In Colorado he built a giant coil and produced lightning bolts over a hundred feet long.
+
+60
+00:06:56,932 --> 00:07:05,009
+One night he burned out the power company's generator… and the town went dark. He had to pay for the repairs.
+
+61
+00:07:05,209 --> 00:07:13,209
+That's where his most famous photo comes from, reading calmly beside giant lightning bolts. It's a trick: two photos superimposed.
+
+62
+00:07:13,409 --> 00:07:20,102
+Later, banker J. P. Morgan gave him a hundred and fifty thousand dollars to build a tower.
+
+63
+00:07:20,302 --> 00:07:28,532
+Morgan wanted wireless messages. Tesla dreamed of something bigger: wireless power for the entire planet.
+
+64
+00:07:28,732 --> 00:07:35,886
+But Marconi crossed the Atlantic with a radio signal and simpler equipment. Morgan put up no more money.
+
+65
+00:07:36,336 --> 00:07:45,490
+The tower never worked. And physics wasn't helping: wireless energy spreads out in every direction, like light from a lamp.
+
+66
+00:07:45,690 --> 00:07:51,459
+The farther you go, the less arrives. Across a few centimeters, however, it works very well.
+
+67
+00:07:52,359 --> 00:07:58,128
+His wireless energy exists. It reaches a few centimeters and charges your phone.
+
+68
+00:07:58,978 --> 00:08:09,286
+In his final years he lived in New York hotels. He spent his nights feeding the pigeons. He said he loved one white pigeon like no other.
+
+69
+00:08:09,506 --> 00:08:18,583
+Engineers awarded him their highest prize: the Edison Medal. According to his biographer, in the middle of the ceremony he vanished.
+
+70
+00:08:18,783 --> 00:08:22,552
+They found him in a plaza, covered in pigeons.
+
+71
+00:08:22,752 --> 00:08:31,060
+He died alone in his hotel room in 1943. He was eighty-six years old and had almost no money.
+
+72
+00:08:31,560 --> 00:08:43,868
+Since 1960, his last name is a unit: the tesla. A hospital MRI scanner uses between 1.5 and 3. A fridge magnet, a few thousandths.
+
+73
+00:08:44,068 --> 00:08:49,683
+And his induction motors keep spinning in factories, water pumps, and fans.
+
+74
+00:08:49,883 --> 00:08:55,422
+While you watch this, the current in your home goes back and forth, pushed by his idea.
+
+75
+00:08:55,622 --> 00:09:02,929
+The night he was born, the midwife said he would be a child of the storm. His mother said no: of light.
+
+76
+00:09:03,879 --> 00:09:05,572
+They were both right.

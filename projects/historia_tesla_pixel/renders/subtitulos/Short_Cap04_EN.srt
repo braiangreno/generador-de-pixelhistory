@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:05,612
+Word of his motor reached George Westinghouse, an industrialist who was betting on alternating current.
+
+2
+00:00:05,832 --> 00:00:13,909
+He paid to use his patents and promised him two dollars and fifty cents for every horsepower sold. Remember that number.
+
+3
+00:00:14,359 --> 00:00:17,282
+Why such a fierce battle? Back to the chalkboard.
+
+4
+00:00:17,482 --> 00:00:30,789
+Wires lose energy as heat. The more current flows through them, the more they lose. But the same energy can travel as lots of current at low voltage… or very little current at high voltage.
+
+5
+00:00:30,989 --> 00:00:38,297
+With a transformer, alternating current steps up the voltage to travel far. And steps it down before entering your home.
+
+6
+00:00:38,497 --> 00:00:45,266
+Direct current back then couldn't do that. It needed a power station every mile or so.
+
+7
+00:00:45,466 --> 00:00:52,697
+Edison's camp responded with fear: they electrocuted animals in public to show that alternating current killed.
+
+8
+00:00:52,897 --> 00:01:06,436
+Tesla answered with a spectacle: he let ultra-high-frequency currents pass through his body and lit lamps with his bare hands. That only worked at extreme frequencies, and even then it was dangerous.
+
+9
+00:01:07,336 --> 00:01:12,874
+Edison said alternating current killed. Tesla used it to light up his hands.

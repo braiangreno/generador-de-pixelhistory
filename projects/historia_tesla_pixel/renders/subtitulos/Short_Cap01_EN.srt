@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:05,842
+Tesla was born in 1856, in a mountain village in present-day Croatia.
+
+2
+00:00:06,062 --> 00:00:16,139
+Family legend says there was a storm that night, and the midwife called him a child of the storm. His mother corrected her: no, of light.
+
+3
+00:00:16,339 --> 00:00:23,724
+As a boy he saw sparks when petting his cat in the dark. His father told him it was electricity, just like lightning.
+
+4
+00:00:23,924 --> 00:00:29,385
+And he could imagine a machine and run it inside his head, without ever building it.
+
+5
+00:00:29,585 --> 00:00:36,585
+At university he saw a motor throwing sparks everywhere. He said you could build one without sparks.
+
+6
+00:00:36,785 --> 00:00:41,016
+The professor explained to him, in front of everyone, that it was impossible.
+
+7
+00:00:41,916 --> 00:00:45,531
+Tesla spent years trying to prove the opposite.

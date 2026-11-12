@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:06,535
+Anos depois, já em Budapeste, continuava tão obcecado por aquele motor que acabou adoecendo.
+
+2
+00:00:06,755 --> 00:00:13,293
+Certa tarde saiu para caminhar com um amigo. Ia recitando o Fausto de Goethe, que sabia de cor.
+
+3
+00:00:13,493 --> 00:00:20,878
+Segundo ele contou, a ideia veio de golpe, como um relâmpago. Com um graveto, desenhou o motor na areia.
+
+4
+00:00:21,328 --> 00:00:24,405
+Para entender o que ele viu, vamos ao quadro-negro.
+
+5
+00:00:24,605 --> 00:00:30,374
+A corrente contínua empurra sempre para o mesmo lado, como a água em um cano.
+
+6
+00:00:30,574 --> 00:00:36,497
+A alternada vai e vem, como um serrote: não avança, mas mesmo assim corta a madeira.
+
+7
+00:00:36,697 --> 00:00:45,466
+Tesla combinou duas correntes alternadas, uma ligeiramente atrasada em relação à outra. Juntas criam um ímã invisível que gira.
+
+8
+00:00:45,666 --> 00:00:50,436
+Você coloca um pedaço de metal no meio e ele o persegue. Gira sem faíscas.
+
+9
+00:00:51,336 --> 00:00:56,720
+O motor impossível já funcionava. Por enquanto, só na cabeça dele.

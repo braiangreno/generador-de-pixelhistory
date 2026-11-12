@@ -1,0 +1,534 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.4,
+    "speak": "Ahora mismo, la pantalla en la que ves esto funciona con electricidad que viajó desde muy lejos.",
+    "sub": "Ahora mismo, la pantalla en la que ves esto funciona con electricidad que viajó desde muy lejos."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "Y en el camino iba y venía: cambiaba de sentido cien veces por segundo, o más.",
+    "sub": "Y en el camino iba y venía: cambiaba de sentido cien veces por segundo, o más."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.4,
+    "speak": "Todo eso empezó en un parque, al atardecer, con un hombre que recitaba un poema.",
+    "sub": "Todo eso empezó en un parque, al atardecer, con un hombre que recitaba un poema."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 0.85,
+    "speak": "De golpe se detuvo, agarró un palito y dibujó algo en la arena.",
+    "sub": "De golpe se detuvo, agarró un palito y dibujó algo en la arena."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 0.55,
+    "speak": "Ese dibujo todavía hace girar el mundo.",
+    "sub": "Ese dibujo todavía hace girar el mundo."
+  },
+  {
+    "id": "s06",
+    "ch": 0,
+    "pause": 1.0,
+    "speak": "Esta es la historia de Nikola Tesla. Y de cómo llega la luz a tu casa.",
+    "sub": "Esta es la historia de Nikola Tesla. Y de cómo llega la luz a tu casa."
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "Tesla nació en mil ochocientos cincuenta y seis, en un pueblo de montaña de la actual Croacia.",
+    "sub": "Tesla nació en 1856, en un pueblo de montaña de la actual Croacia."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Cuenta la leyenda familiar que esa noche hubo tormenta, y la partera lo llamó hijo de la tormenta. Su madre la corrigió: no, de la luz.",
+    "sub": "Cuenta la leyenda familiar que esa noche hubo tormenta, y la partera lo llamó hijo de la tormenta. Su madre la corrigió: no, de la luz."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "De chico vio chispas al acariciar a su gato en la oscuridad. Su padre le dijo que era electricidad, como los rayos.",
+    "sub": "De chico vio chispas al acariciar a su gato en la oscuridad. Su padre le dijo que era electricidad, como los rayos."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Y podía imaginar una máquina y hacerla funcionar en su cabeza, sin construirla.",
+    "sub": "Y podía imaginar una máquina y hacerla funcionar en su cabeza, sin construirla."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "En la universidad vio un motor que tiraba chispas por todos lados. Dijo que se podía hacer uno sin chispas.",
+    "sub": "En la universidad vio un motor que tiraba chispas por todos lados. Dijo que se podía hacer uno sin chispas."
+  },
+  {
+    "id": "c1_06",
+    "ch": 1,
+    "pause": 0.85,
+    "speak": "El profesor le explicó, delante de todos, que era imposible.",
+    "sub": "El profesor le explicó, delante de todos, que era imposible."
+  },
+  {
+    "id": "c1_07",
+    "ch": 1,
+    "pause": 1.0,
+    "speak": "Tesla se pasó años tratando de demostrar lo contrario.",
+    "sub": "Tesla se pasó años tratando de demostrar lo contrario."
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Años después, ya en Budapest, seguía tan obsesionado con ese motor que terminó enfermo.",
+    "sub": "Años después, ya en Budapest, seguía tan obsesionado con ese motor que terminó enfermo."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Una tarde salió a caminar con un amigo. Iba recitando el Fausto de Güete, que se sabía de memoria.",
+    "sub": "Una tarde salió a caminar con un amigo. Iba recitando el Fausto de Goethe, que se sabía de memoria."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.5,
+    "speak": "Según contó él, la idea le llegó de golpe, como un relámpago. Con un palito, dibujó el motor en la arena.",
+    "sub": "Según contó él, la idea le llegó de golpe, como un relámpago. Con un palito, dibujó el motor en la arena."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Para entender qué vio, vamos a la pizarra.",
+    "sub": "Para entender qué vio, vamos a la pizarra."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "La corriente continua empuja siempre hacia el mismo lado, como el agua en una tubería.",
+    "sub": "La corriente continua empuja siempre hacia el mismo lado, como el agua en una tubería."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "La alterna va y viene, como un serrucho: no avanza, pero igual corta la madera.",
+    "sub": "La alterna va y viene, como un serrucho: no avanza, pero igual corta la madera."
+  },
+  {
+    "id": "c2_07",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Tesla combinó dos corrientes alternas, una apenas atrasada respecto de la otra. Juntas crean un imán invisible que gira.",
+    "sub": "Tesla combinó dos corrientes alternas, una apenas atrasada respecto de la otra. Juntas crean un imán invisible que gira."
+  },
+  {
+    "id": "c2_08",
+    "ch": 2,
+    "pause": 0.85,
+    "speak": "Pones un trozo de metal en el medio y lo persigue. Gira sin chispas.",
+    "sub": "Pones un trozo de metal en el medio y lo persigue. Gira sin chispas."
+  },
+  {
+    "id": "c2_09",
+    "ch": 2,
+    "pause": 1.0,
+    "speak": "El motor imposible ya funcionaba. Por ahora, solo en su cabeza.",
+    "sub": "El motor imposible ya funcionaba. Por ahora, solo en su cabeza."
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "En mil ochocientos ochenta y cuatro llegó a Nueva York a trabajar para el inventor más famoso del mundo: Thomas Edison.",
+    "sub": "En 1884 llegó a Nueva York a trabajar para el inventor más famoso del mundo: Thomas Edison."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Edison iluminaba la ciudad con corriente continua, y todo su negocio dependía de ella. Según contó Tesla, le prometieron cincuenta mil dólares si mejoraba sus generadores.",
+    "sub": "Edison iluminaba la ciudad con corriente continua, y todo su negocio dependía de ella. Según contó Tesla, le prometieron cincuenta mil dólares si mejoraba sus generadores."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Trabajó meses casi sin dormir. Cuando fue a cobrar, le dijeron que había sido una broma. Renunció.",
+    "sub": "Trabajó meses casi sin dormir. Cuando fue a cobrar, le dijeron que había sido una broma. Renunció."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Tesla armó su propia empresa y sus socios lo dejaron afuera. Terminó cavando zanjas en la calle, por dos dólares al día.",
+    "sub": "Tesla armó su propia empresa y sus socios lo dejaron afuera. Terminó cavando zanjas en la calle, por dos dólares al día."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "El jefe de la obra lo escuchó hablar de su motor y le presentó a unos inversores.",
+    "sub": "El jefe de la obra lo escuchó hablar de su motor y le presentó a unos inversores."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Les habló del huevo de Colón, que según la leyenda lo paró aplastándole la punta.",
+    "sub": "Les habló del huevo de Colón, que según la leyenda lo paró aplastándole la punta."
+  },
+  {
+    "id": "c3_07",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Tesla puso un huevo de cobre sobre la mesa, encendió su corriente... y el huevo giró hasta quedar parado.",
+    "sub": "Tesla puso un huevo de cobre sobre la mesa, encendió su corriente… y el huevo giró hasta quedar parado."
+  },
+  {
+    "id": "c3_08",
+    "ch": 3,
+    "pause": 0.85,
+    "speak": "Era su imán invisible, girando bajo la madera. Pusieron el dinero. Recuerda ese huevo.",
+    "sub": "Era su imán invisible, girando bajo la madera. Pusieron el dinero. Recuerda ese huevo."
+  },
+  {
+    "id": "c3_09",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "Colón tuvo que romper el huevo. Tesla lo hizo bailar.",
+    "sub": "Colón tuvo que romper el huevo. Tesla lo hizo bailar."
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Su motor llegó a oídos de George Uéstinjaus, un empresario que apostaba por la alterna.",
+    "sub": "Su motor llegó a oídos de George Westinghouse, un empresario que apostaba por la alterna."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.5,
+    "speak": "Le pagó por usar sus patentes y le prometió dos dólares y medio por cada caballo de fuerza vendido. Recuerda ese número.",
+    "sub": "Le pagó por usar sus patentes y le prometió dos dólares y medio por cada caballo de fuerza vendido. Recuerda ese número."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "¿Por qué tanta pelea? Vuelve a la pizarra.",
+    "sub": "¿Por qué tanta pelea? Vuelve a la pizarra."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Los cables pierden energía en forma de calor. Cuanta más corriente pasa, más pierden. Pero la misma energía puede viajar como mucha corriente a poca tensión... o poca corriente a mucha tensión.",
+    "sub": "Los cables pierden energía en forma de calor. Cuanta más corriente pasa, más pierden. Pero la misma energía puede viajar como mucha corriente a poca tensión… o poca corriente a mucha tensión."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Con un transformador, la alterna sube la tensión para viajar lejos. Y la baja antes de entrar a tu casa.",
+    "sub": "Con un transformador, la alterna sube la tensión para viajar lejos. Y la baja antes de entrar a tu casa."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "pause": 0.5,
+    "speak": "La continua de esa época no podía. Necesitaba una central cada kilómetro y medio, más o menos.",
+    "sub": "La continua de esa época no podía. Necesitaba una central cada kilómetro y medio, más o menos."
+  },
+  {
+    "id": "c4_07",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "El bando de Edison respondió con miedo: electrocutaban animales en público para mostrar que la alterna mataba.",
+    "sub": "El bando de Edison respondió con miedo: electrocutaban animales en público para mostrar que la alterna mataba."
+  },
+  {
+    "id": "c4_08",
+    "ch": 4,
+    "pause": 0.85,
+    "speak": "Tesla contestó con espectáculo: dejaba pasar por su cuerpo corrientes de altísima frecuencia y encendía lámparas con las manos. Eso funcionaba solo con frecuencias altísimas, y aun así era peligroso.",
+    "sub": "Tesla contestó con espectáculo: dejaba pasar por su cuerpo corrientes de altísima frecuencia y encendía lámparas con las manos. Eso funcionaba solo con frecuencias altísimas, y aun así era peligroso."
+  },
+  {
+    "id": "c4_09",
+    "ch": 4,
+    "pause": 1.0,
+    "speak": "Edison decía que la alterna mataba. Tesla la usaba para iluminarse las manos.",
+    "sub": "Edison decía que la alterna mataba. Tesla la usaba para iluminarse las manos."
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "En mil ochocientos noventa y tres, Chicago organizó una feria mundial. Iba a ser la primera iluminada por completo con electricidad.",
+    "sub": "En 1893, Chicago organizó una feria mundial. Iba a ser la primera iluminada por completo con electricidad."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Uéstinjaus ganó el contrato: ofreció hacerlo con alterna por bastante menos que el bando de Edison.",
+    "sub": "Westinghouse ganó el contrato: ofreció hacerlo con alterna por bastante menos que el bando de Edison."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "El día de la apertura, el presidente apretó un botón... y se encendieron unas cien mil lámparas.",
+    "sub": "El día de la apertura, el presidente apretó un botón… y se encendieron unas cien mil lámparas."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "En el pabellón eléctrico, la gente se amontonaba frente a un huevo de cobre gigante. Giraba solo.",
+    "sub": "En el pabellón eléctrico, la gente se amontonaba frente a un huevo de cobre gigante. Giraba solo."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Pocos años después, su sistema llevó la energía del Niágara hasta Búfalo, a más de treinta kilómetros.",
+    "sub": "Pocos años después, su sistema llevó la energía del Niágara hasta Buffalo, a más de treinta kilómetros."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Pero la guerra dejó a Uéstinjaus lleno de deudas. Sus banqueros querían eliminar los dos dólares y medio de Tesla.",
+    "sub": "Pero la guerra dejó a Westinghouse lleno de deudas. Sus banqueros querían eliminar los dos dólares y medio de Tesla."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "La versión más contada dice que Tesla rompió el contrato delante de él, por amistad.",
+    "sub": "La versión más contada dice que Tesla rompió el contrato delante de él, por amistad."
+  },
+  {
+    "id": "c5_08",
+    "ch": 5,
+    "pause": 0.85,
+    "speak": "Los documentos cuentan algo menos teatral: renunció a las regalías y después vendió sus patentes por unos doscientos dieciséis mil dólares.",
+    "sub": "Los documentos cuentan algo menos teatral: renunció a las regalías y después vendió sus patentes por unos doscientos dieciséis mil dólares."
+  },
+  {
+    "id": "c5_09",
+    "ch": 5,
+    "pause": 1.0,
+    "speak": "Su sistema conquistó el mundo. Y él ya no cobraba nada por eso.",
+    "sub": "Su sistema conquistó el mundo. Y él ya no cobraba nada por eso."
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "En su laboratorio de Nueva York, Tesla se volvió una celebridad. Uno de sus amigos era el escritor Mark Tuein.",
+    "sub": "En su laboratorio de Nueva York, Tesla se volvió una celebridad. Uno de sus amigos era el escritor Mark Twain."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "Cuentan que una vez lo subió a una plataforma que vibraba. Al rato, Tuein salió corriendo al baño.",
+    "sub": "Cuentan que una vez lo subió a una plataforma que vibraba. Al rato, Twain salió corriendo al baño."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "Su herramienta estrella era la bobina de Tesla. Funciona con algo que conoces desde chico.",
+    "sub": "Su herramienta estrella era la bobina de Tesla. Funciona con algo que conoces desde chico."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "Si empujas un columpio justo cuando vuelve, con empujoncitos llega cada vez más alto. Eso es resonancia.",
+    "sub": "Si empujas un columpio justo cuando vuelve, con empujoncitos llega cada vez más alto. Eso es resonancia."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 0.5,
+    "speak": "La bobina empuja la electricidad en el momento justo. Así logra voltajes enormes y chispas de metros.",
+    "sub": "La bobina empuja la electricidad en el momento justo. Así logra voltajes enormes y chispas de metros."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "En una exposición en Nueva York, puso en un estanque un barquito de hierro. Sin nadie adentro.",
+    "sub": "En una exposición en Nueva York, puso en un estanque un barquito de hierro. Sin nadie adentro."
+  },
+  {
+    "id": "c6_07",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "El público le hacía preguntas y el barco respondía con sus luces. Algunos creyeron que lo manejaba con la mente.",
+    "sub": "El público le hacía preguntas y el barco respondía con sus luces. Algunos creyeron que lo manejaba con la mente."
+  },
+  {
+    "id": "c6_08",
+    "ch": 6,
+    "pause": 0.85,
+    "speak": "Lo manejaba con ondas de radio, desde una cajita. Es el primer aparato radiocontrolado del que hay registro.",
+    "sub": "Lo manejaba con ondas de radio, desde una cajita. Es el primer aparato radiocontrolado del que hay registro."
+  },
+  {
+    "id": "c6_09",
+    "ch": 6,
+    "pause": 1.0,
+    "speak": "Hoy le decimos control remoto. Y lo usamos para cambiar de canal.",
+    "sub": "Hoy le decimos control remoto. Y lo usamos para cambiar de canal."
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "Tesla quería más. En Colorado construyó una bobina gigante y fabricó rayos de más de treinta metros.",
+    "sub": "Tesla quería más. En Colorado construyó una bobina gigante y fabricó rayos de más de treinta metros."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Una noche quemó el generador de la compañía eléctrica... y la ciudad se quedó a oscuras. Tuvo que pagar la reparación.",
+    "sub": "Una noche quemó el generador de la compañía eléctrica… y la ciudad se quedó a oscuras. Tuvo que pagar la reparación."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "De ahí viene su foto más famosa, leyendo junto a rayos gigantes. Es un truco: dos fotos superpuestas.",
+    "sub": "De ahí viene su foto más famosa, leyendo junto a rayos gigantes. Es un truco: dos fotos superpuestas."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "Después, el banquero Jota Pe Morgan le dio ciento cincuenta mil dólares para construir una torre.",
+    "sub": "Después, el banquero J. P. Morgan le dio ciento cincuenta mil dólares para construir una torre."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "Morgan quería mensajes sin cables. Tesla soñaba con algo más grande: energía sin cables para todo el planeta.",
+    "sub": "Morgan quería mensajes sin cables. Tesla soñaba con algo más grande: energía sin cables para todo el planeta."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "pause": 0.5,
+    "speak": "Pero Marconi cruzó el Atlántico con una señal de radio y un equipo más sencillo. Morgan no puso más dinero.",
+    "sub": "Pero Marconi cruzó el Atlántico con una señal de radio y un equipo más sencillo. Morgan no puso más dinero."
+  },
+  {
+    "id": "c7_07",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "La torre nunca funcionó. Y la física no ayudaba: la energía sin cables se reparte para todos lados, como la luz de una lámpara.",
+    "sub": "La torre nunca funcionó. Y la física no ayudaba: la energía sin cables se reparte para todos lados, como la luz de una lámpara."
+  },
+  {
+    "id": "c7_08",
+    "ch": 7,
+    "pause": 0.85,
+    "speak": "Cuanto más lejos, menos llega. A pocos centímetros, en cambio, funciona muy bien.",
+    "sub": "Cuanto más lejos, menos llega. A pocos centímetros, en cambio, funciona muy bien."
+  },
+  {
+    "id": "c7_09",
+    "ch": 7,
+    "pause": 1.0,
+    "speak": "Su energía sin cables existe. Alcanza unos centímetros y carga tu teléfono.",
+    "sub": "Su energía sin cables existe. Alcanza unos centímetros y carga tu teléfono."
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "En sus últimos años vivía en hoteles de Nueva York. Pasaba las noches dándole de comer a las palomas. Decía que a una paloma blanca la quería como a nadie.",
+    "sub": "En sus últimos años vivía en hoteles de Nueva York. Pasaba las noches dándole de comer a las palomas. Decía que a una paloma blanca la quería como a nadie."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.4,
+    "speak": "Los ingenieros le dieron su premio más importante: la Medalla Edison. Según su biógrafo, en plena ceremonia desapareció.",
+    "sub": "Los ingenieros le dieron su premio más importante: la Medalla Edison. Según su biógrafo, en plena ceremonia desapareció."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Lo encontraron en una plaza, cubierto de palomas.",
+    "sub": "Lo encontraron en una plaza, cubierto de palomas."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.55,
+    "speak": "Murió solo en su habitación de hotel, en mil novecientos cuarenta y tres. Tenía ochenta y seis años y casi nada de dinero.",
+    "sub": "Murió solo en su habitación de hotel, en 1943. Tenía ochenta y seis años y casi nada de dinero."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.4,
+    "speak": "Desde mil novecientos sesenta, su apellido es una unidad: el tesla. Un resonador de hospital usa entre uno coma cinco y tres. Un imán de refrigerador, unas milésimas.",
+    "sub": "Desde 1960, su apellido es una unidad: el tesla. Un resonador de hospital usa entre uno coma cinco y tres. Un imán de refrigerador, unas milésimas."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Y sus motores de inducción siguen girando en fábricas, bombas de agua y ventiladores.",
+    "sub": "Y sus motores de inducción siguen girando en fábricas, bombas de agua y ventiladores."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Mientras ves esto, la corriente de tu casa va y viene, empujada por su idea.",
+    "sub": "Mientras ves esto, la corriente de tu casa va y viene, empujada por su idea."
+  },
+  {
+    "id": "c8_08",
+    "ch": 8,
+    "pause": 0.9,
+    "speak": "La noche que nació, la partera dijo que sería hijo de la tormenta. Su madre dijo que no: de la luz.",
+    "sub": "La noche que nació, la partera dijo que sería hijo de la tormenta. Su madre dijo que no: de la luz."
+  },
+  {
+    "id": "c8_09",
+    "ch": 8,
+    "pause": 1.2,
+    "speak": "Tuvieron razón las dos.",
+    "sub": "Tuvieron razón las dos."
+  }
+]

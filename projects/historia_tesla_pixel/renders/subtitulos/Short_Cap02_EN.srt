@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:06,535
+Years later, in Budapest, he was still so obsessed with that motor that he fell ill.
+
+2
+00:00:06,755 --> 00:00:13,293
+One afternoon he went for a walk with a friend. He was reciting Goethe's Faust, which he knew by heart.
+
+3
+00:00:13,493 --> 00:00:20,878
+As he told it, the idea struck him all at once, like a bolt of lightning. With a small stick, he drew the motor in the sand.
+
+4
+00:00:21,328 --> 00:00:24,405
+To understand what he saw, let's go to the chalkboard.
+
+5
+00:00:24,605 --> 00:00:30,374
+Direct current always pushes the same way, like water flowing through a pipe.
+
+6
+00:00:30,574 --> 00:00:36,497
+Alternating current goes back and forth, like a handsaw: it doesn't move forward, yet it still cuts the wood.
+
+7
+00:00:36,697 --> 00:00:45,466
+Tesla combined two alternating currents, one slightly delayed behind the other. Together they create an invisible spinning magnet.
+
+8
+00:00:45,666 --> 00:00:50,436
+Put a piece of metal in the middle and it chases it. It spins without sparks.
+
+9
+00:00:51,336 --> 00:00:56,720
+The impossible motor was already working. For now, only in his head.

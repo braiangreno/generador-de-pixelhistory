@@ -1,0 +1,303 @@
+1
+00:00:00,750 --> 00:00:06,442
+Agora mesmo, a tela em que você vê isto funciona com eletricidade que viajou de muito longe.
+
+2
+00:00:06,642 --> 00:00:12,565
+E pelo caminho ela ia e vinha: mudava de sentido cem vezes por segundo, ou mais.
+
+3
+00:00:12,765 --> 00:00:18,304
+Tudo isso começou em um parque, ao entardecer, com um homem que recitava um poema.
+
+4
+00:00:18,504 --> 00:00:23,350
+De repente ele parou, pegou um graveto e desenhou algo na areia.
+
+5
+00:00:24,250 --> 00:00:27,327
+Esse desenho ainda faz o mundo girar.
+
+6
+00:00:27,877 --> 00:00:33,031
+Esta é a história de Nikola Tesla. E de como a luz chega à sua casa.
+
+7
+00:00:33,881 --> 00:00:39,573
+Tesla nasceu em 1856, em um vilarejo nas montanhas da atual Croácia.
+
+8
+00:00:39,793 --> 00:00:49,870
+Conta a lenda familiar que naquela noite houve tempestade, e a parteira o chamou de filho da tempestade. Sua mãe a corrigiu: não, da luz.
+
+9
+00:00:50,070 --> 00:00:57,455
+Quando menino, viu faíscas ao acariciar seu gato no escuro. Seu pai lhe disse que era eletricidade, como os raios.
+
+10
+00:00:57,655 --> 00:01:03,116
+E ele podia imaginar uma máquina e fazê-la funcionar na cabeça, sem construí-la.
+
+11
+00:01:03,316 --> 00:01:10,316
+Na universidade, viu um motor que soltava faíscas para todos os lados. Disse que era possível fazer um sem faíscas.
+
+12
+00:01:10,516 --> 00:01:14,747
+O professor lhe explicou, diante de todos, que era impossível.
+
+13
+00:01:15,647 --> 00:01:19,262
+Tesla passou anos tentando provar o contrário.
+
+14
+00:01:20,112 --> 00:01:26,497
+Anos depois, já em Budapeste, continuava tão obcecado por aquele motor que acabou adoecendo.
+
+15
+00:01:26,717 --> 00:01:33,255
+Certa tarde saiu para caminhar com um amigo. Ia recitando o Fausto de Goethe, que sabia de cor.
+
+16
+00:01:33,455 --> 00:01:40,840
+Segundo ele contou, a ideia veio de golpe, como um relâmpago. Com um graveto, desenhou o motor na areia.
+
+17
+00:01:41,290 --> 00:01:44,367
+Para entender o que ele viu, vamos ao quadro-negro.
+
+18
+00:01:44,567 --> 00:01:50,336
+A corrente contínua empurra sempre para o mesmo lado, como a água em um cano.
+
+19
+00:01:50,536 --> 00:01:56,459
+A alternada vai e vem, como um serrote: não avança, mas mesmo assim corta a madeira.
+
+20
+00:01:56,659 --> 00:02:05,428
+Tesla combinou duas correntes alternadas, uma ligeiramente atrasada em relação à outra. Juntas criam um ímã invisível que gira.
+
+21
+00:02:05,628 --> 00:02:10,398
+Você coloca um pedaço de metal no meio e ele o persegue. Gira sem faíscas.
+
+22
+00:02:11,298 --> 00:02:16,682
+O motor impossível já funcionava. Por enquanto, só na cabeça dele.
+
+23
+00:02:17,532 --> 00:02:25,071
+Em 1884 chegou a Nova York para trabalhar com o inventor mais famoso do mundo: Thomas Edison.
+
+24
+00:02:25,291 --> 00:02:36,752
+Edison iluminava a cidade com corrente contínua, e todo o negócio dele dependia disso. Segundo contou Tesla, lhe prometeram cinquenta mil dólares se melhorasse os geradores.
+
+25
+00:02:36,952 --> 00:02:44,491
+Trabalhou meses quase sem dormir. Quando foi receber, disseram que tinha sido uma piada. Pediu demissão.
+
+26
+00:02:44,691 --> 00:02:53,460
+Tesla montou sua própria empresa e os sócios o deixaram de fora. Terminou cavando valas na rua, por dois dólares por dia.
+
+27
+00:02:53,660 --> 00:02:58,583
+O chefe da obra o ouviu falar de seu motor e o apresentou a alguns investidores.
+
+28
+00:02:58,783 --> 00:03:04,322
+Falou-lhes do ovo de Colombo, que segundo a lenda o colocou em pé amassando a ponta.
+
+29
+00:03:04,522 --> 00:03:11,598
+Tesla apoiou um ovo de cobre sobre a mesa, ligou a corrente… e o ovo girou até ficar em pé.
+
+30
+00:03:11,798 --> 00:03:18,568
+Era seu ímã invisível, girando sob a madeira. Colocaram o dinheiro. Lembre-se desse ovo.
+
+31
+00:03:19,468 --> 00:03:24,006
+Colombo teve que quebrar o ovo. Tesla o fez dançar.
+
+32
+00:03:24,856 --> 00:03:30,318
+Seu motor chegou aos ouvidos de George Westinghouse, um empresário que apostava na alternada.
+
+33
+00:03:30,538 --> 00:03:38,615
+Pagou para usar suas patentes e lhe prometeu dois dólares e meio por cada cavalo-vapor vendido. Lembre-se desse número.
+
+34
+00:03:39,065 --> 00:03:41,988
+Por que tanta briga? De volta ao quadro-negro.
+
+35
+00:03:42,188 --> 00:03:55,495
+Os cabos perdem energia em forma de calor. Quanto mais corrente passa, mais eles perdem. Mas a mesma energia pode viajar como muita corrente em baixa tensão… ou pouca corrente em alta tensão.
+
+36
+00:03:55,695 --> 00:04:03,003
+Com um transformador, a alternada sobe a tensão para viajar longe. E a reduz antes de entrar na sua casa.
+
+37
+00:04:03,203 --> 00:04:09,972
+A contínua daquela época não conseguia. Precisava de uma usina a cada quilômetro e meio, mais ou menos.
+
+38
+00:04:10,172 --> 00:04:17,403
+O lado de Edison respondeu com medo: eletrocutavam animais em público para mostrar que a alternada matava.
+
+39
+00:04:17,603 --> 00:04:31,142
+Tesla respondeu com espetáculo: deixava passar pelo corpo correntes de altíssima frequência e acendia lâmpadas com as mãos. Isso funcionava só com frequências altíssimas, e ainda assim era perigoso.
+
+40
+00:04:32,042 --> 00:04:37,580
+Edison dizia que a alternada matava. Tesla a usava para iluminar as próprias mãos.
+
+41
+00:04:38,430 --> 00:04:47,199
+Em 1893, Chicago organizou uma feira mundial. Seria a primeira iluminada inteiramente com eletricidade.
+
+42
+00:04:47,419 --> 00:04:54,188
+Westinghouse ganhou o contrato: ofereceu fazer tudo com alternada por bem menos que o lado de Edison.
+
+43
+00:04:54,388 --> 00:05:01,235
+No dia da abertura, o presidente apertou um botão… e acenderam-se cerca de cem mil lâmpadas.
+
+44
+00:05:01,435 --> 00:05:08,358
+No pavilhão elétrico, as pessoas se aglomeravam diante de um ovo de cobre gigante. Ele girava sozinho.
+
+45
+00:05:08,558 --> 00:05:15,558
+Poucos anos depois, seu sistema levou a energia do Niágara até Buffalo, a mais de trinta quilômetros.
+
+46
+00:05:15,758 --> 00:05:23,065
+Mas a guerra deixou Westinghouse cheio de dívidas. Seus banqueiros queriam cortar os dois dólares e meio de Tesla.
+
+47
+00:05:23,265 --> 00:05:28,958
+A versão mais contada diz que Tesla rasgou o contrato diante dele, por amizade.
+
+48
+00:05:29,158 --> 00:05:38,312
+Os documentos contam algo menos teatral: abriu mão dos royalties e depois vendeu suas patentes por cerca de duzentos e dezesseis mil dólares.
+
+49
+00:05:39,212 --> 00:05:44,519
+Seu sistema conquistou o mundo. E ele já não recebia nada por isso.
+
+50
+00:05:45,369 --> 00:05:52,908
+Em seu laboratório de Nova York, Tesla virou uma celebridade. Um de seus amigos era o escritor Mark Twain.
+
+51
+00:05:53,128 --> 00:05:59,974
+Contam que certa vez o colocou sobre uma plataforma que vibrava. Logo depois, Twain saiu correndo para o banheiro.
+
+52
+00:06:00,174 --> 00:06:06,020
+Sua ferramenta principal era a bobina de Tesla. Ela funciona com algo que você conhece desde criança.
+
+53
+00:06:06,470 --> 00:06:14,008
+Se você empurra um balanço bem quando ele volta, com empurrõezinhos ele sobe cada vez mais alto. Isso é ressonância.
+
+54
+00:06:14,208 --> 00:06:21,747
+A bobina empurra a eletricidade no momento exato. Assim alcança tensões enormes e faíscas de metros.
+
+55
+00:06:21,947 --> 00:06:28,332
+Em uma exposição em Nova York, colocou em um tanque um barquinho de ferro. Sem ninguém dentro.
+
+56
+00:06:28,532 --> 00:06:35,762
+O público fazia perguntas e o barco respondia com suas luzes. Alguns acharam que ele o controlava com a mente.
+
+57
+00:06:35,962 --> 00:06:42,885
+Ele o guiava com ondas de rádio, a partir de uma caixinha. É o primeiro aparelho radiocontrolado de que há registro.
+
+58
+00:06:43,785 --> 00:06:48,247
+Hoje chamamos isso de controle remoto. E o usamos para mudar de canal.
+
+59
+00:06:49,097 --> 00:06:56,712
+Tesla queria mais. No Colorado construiu uma bobina gigante e fabricou raios de mais de trinta metros.
+
+60
+00:06:56,932 --> 00:07:05,009
+Certa noite queimou o gerador da companhia elétrica… e a cidade ficou às escuras. Teve que pagar o conserto.
+
+61
+00:07:05,209 --> 00:07:13,209
+Daí vem sua foto mais famosa, lendo tranquilo ao lado de raios gigantes. É um truque: duas fotos sobrepostas.
+
+62
+00:07:13,409 --> 00:07:20,102
+Depois, o banqueiro J. P. Morgan lhe deu cento e cinquenta mil dólares para construir uma torre.
+
+63
+00:07:20,302 --> 00:07:28,532
+Morgan queria mensagens sem fios. Tesla sonhava com algo maior: energia sem fios para todo o planeta.
+
+64
+00:07:28,732 --> 00:07:35,886
+Mas Marconi cruzou o Atlântico com um sinal de rádio e um equipamento mais simples. Morgan não colocou mais dinheiro.
+
+65
+00:07:36,336 --> 00:07:45,490
+A torre nunca funcionou. E a física não ajudava: a energia sem fios se espalha para todos os lados, como a luz de uma lâmpada.
+
+66
+00:07:45,690 --> 00:07:51,459
+Quanto mais longe, menos chega. A poucos centímetros, porém, funciona muito bem.
+
+67
+00:07:52,359 --> 00:07:58,128
+Sua energia sem fios existe. Alcança alguns centímetros e carrega seu celular.
+
+68
+00:07:58,978 --> 00:08:09,286
+Em seus últimos anos vivia em hotéis de Nova York. Passava as noites alimentando os pombos. Dizia que amava uma pomba branca como a ninguém.
+
+69
+00:08:09,506 --> 00:08:18,583
+Os engenheiros lhe deram seu prêmio mais importante: a Medalha Edison. Segundo seu biógrafo, em plena cerimônia ele desapareceu.
+
+70
+00:08:18,783 --> 00:08:22,552
+O encontraram em uma praça, coberto de pombos.
+
+71
+00:08:22,752 --> 00:08:31,060
+Morreu sozinho em seu quarto de hotel, em 1943. Tinha oitenta e seis anos e quase nenhum dinheiro.
+
+72
+00:08:31,560 --> 00:08:43,868
+Desde 1960, seu sobrenome é uma unidade: o tesla. Uma ressonância de hospital usa entre 1,5 e 3. Um ímã de geladeira, alguns milésimos.
+
+73
+00:08:44,068 --> 00:08:49,683
+E seus motores de indução continuam girando em fábricas, bombas d'água e ventiladores.
+
+74
+00:08:49,883 --> 00:08:55,422
+Enquanto você vê isto, a corrente da sua casa vai e vem, empurrada pela ideia dele.
+
+75
+00:08:55,622 --> 00:09:02,929
+Na noite em que nasceu, a parteira disse que seria filho da tempestade. Sua mãe disse que não: da luz.
+
+76
+00:09:03,879 --> 00:09:05,572
+As duas tinham razão.

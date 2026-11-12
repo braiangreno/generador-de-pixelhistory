@@ -1,0 +1,534 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.4,
+    "speak": "Right now, the screen you are watching this on runs on electricity that traveled from very far away.",
+    "sub": "Right now, the screen you are watching this on runs on electricity that traveled from very far away."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "And along the way it went back and forth: changing direction a hundred times per second, or more.",
+    "sub": "And along the way it went back and forth: changing direction a hundred times per second, or more."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.4,
+    "speak": "All of that began in a park, at sunset, with a man reciting a poem.",
+    "sub": "All of that began in a park, at sunset, with a man reciting a poem."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 0.85,
+    "speak": "Suddenly he stopped, picked up a small stick, and drew something in the sand.",
+    "sub": "Suddenly he stopped, picked up a small stick, and drew something in the sand."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 0.55,
+    "speak": "That drawing still makes the world spin today.",
+    "sub": "That drawing still makes the world spin today."
+  },
+  {
+    "id": "s06",
+    "ch": 0,
+    "pause": 1.0,
+    "speak": "This is the story of Nikola Tesla. And how light reaches your home.",
+    "sub": "This is the story of Nikola Tesla. And how light reaches your home."
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "Tesla was born in eighteen fifty-six, in a mountain village in present-day Croatia.",
+    "sub": "Tesla was born in 1856, in a mountain village in present-day Croatia."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Family legend says there was a storm that night, and the midwife called him a child of the storm. His mother corrected her: no, of light.",
+    "sub": "Family legend says there was a storm that night, and the midwife called him a child of the storm. His mother corrected her: no, of light."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "As a boy he saw sparks when petting his cat in the dark. His father told him it was electricity, just like lightning.",
+    "sub": "As a boy he saw sparks when petting his cat in the dark. His father told him it was electricity, just like lightning."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "And he could imagine a machine and run it inside his head, without ever building it.",
+    "sub": "And he could imagine a machine and run it inside his head, without ever building it."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "At university he saw a motor throwing sparks everywhere. He said you could build one without sparks.",
+    "sub": "At university he saw a motor throwing sparks everywhere. He said you could build one without sparks."
+  },
+  {
+    "id": "c1_06",
+    "ch": 1,
+    "pause": 0.85,
+    "speak": "The professor explained to him, in front of everyone, that it was impossible.",
+    "sub": "The professor explained to him, in front of everyone, that it was impossible."
+  },
+  {
+    "id": "c1_07",
+    "ch": 1,
+    "pause": 1.0,
+    "speak": "Tesla spent years trying to prove the opposite.",
+    "sub": "Tesla spent years trying to prove the opposite."
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Years later, in Budapest, he was still so obsessed with that motor that he fell ill.",
+    "sub": "Years later, in Budapest, he was still so obsessed with that motor that he fell ill."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "One afternoon he went for a walk with a friend. He was reciting Goethe's Faust, which he knew by heart.",
+    "sub": "One afternoon he went for a walk with a friend. He was reciting Goethe's Faust, which he knew by heart."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.5,
+    "speak": "As he told it, the idea struck him all at once, like a bolt of lightning. With a small stick, he drew the motor in the sand.",
+    "sub": "As he told it, the idea struck him all at once, like a bolt of lightning. With a small stick, he drew the motor in the sand."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "To understand what he saw, let's go to the chalkboard.",
+    "sub": "To understand what he saw, let's go to the chalkboard."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Direct current always pushes the same way, like water flowing through a pipe.",
+    "sub": "Direct current always pushes the same way, like water flowing through a pipe."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Alternating current goes back and forth, like a handsaw: it doesn't move forward, yet it still cuts the wood.",
+    "sub": "Alternating current goes back and forth, like a handsaw: it doesn't move forward, yet it still cuts the wood."
+  },
+  {
+    "id": "c2_07",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Tesla combined two alternating currents, one slightly delayed behind the other. Together they create an invisible spinning magnet.",
+    "sub": "Tesla combined two alternating currents, one slightly delayed behind the other. Together they create an invisible spinning magnet."
+  },
+  {
+    "id": "c2_08",
+    "ch": 2,
+    "pause": 0.85,
+    "speak": "Put a piece of metal in the middle and it chases it. It spins without sparks.",
+    "sub": "Put a piece of metal in the middle and it chases it. It spins without sparks."
+  },
+  {
+    "id": "c2_09",
+    "ch": 2,
+    "pause": 1.0,
+    "speak": "The impossible motor was already working. For now, only in his head.",
+    "sub": "The impossible motor was already working. For now, only in his head."
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "In eighteen eighty-four he arrived in New York to work for the most famous inventor in the world: Thomas Edison.",
+    "sub": "In 1884 he arrived in New York to work for the most famous inventor in the world: Thomas Edison."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Edison lit the city with direct current, and his entire business depended on it. According to Tesla, he was promised fifty thousand dollars if he improved their generators.",
+    "sub": "Edison lit the city with direct current, and his entire business depended on it. According to Tesla, he was promised fifty thousand dollars if he improved their generators."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "He worked for months barely sleeping. When he went to collect, they told him it had been a joke. He quit.",
+    "sub": "He worked for months barely sleeping. When he went to collect, they told him it had been a joke. He quit."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Tesla started his own company and his partners pushed him out. He ended up digging ditches in the street for two dollars a day.",
+    "sub": "Tesla started his own company and his partners pushed him out. He ended up digging ditches in the street for two dollars a day."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "The foreman heard him talking about his motor and introduced him to a group of investors.",
+    "sub": "The foreman heard him talking about his motor and introduced him to a group of investors."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "He told them about the Egg of Columbus, who according to legend stood an egg upright by tapping its tip.",
+    "sub": "He told them about the Egg of Columbus, who according to legend stood an egg upright by tapping its tip."
+  },
+  {
+    "id": "c3_07",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Tesla placed a copper egg on the table, switched on his current... and the egg spun until it stood upright.",
+    "sub": "Tesla placed a copper egg on the table, switched on his current… and the egg spun until it stood upright."
+  },
+  {
+    "id": "c3_08",
+    "ch": 3,
+    "pause": 0.85,
+    "speak": "It was his invisible magnet, spinning beneath the wood. They put up the money. Remember that egg.",
+    "sub": "It was his invisible magnet, spinning beneath the wood. They put up the money. Remember that egg."
+  },
+  {
+    "id": "c3_09",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "Columbus had to crack the egg. Tesla made it dance.",
+    "sub": "Columbus had to crack the egg. Tesla made it dance."
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Word of his motor reached George Westinghouse, an industrialist who was betting on alternating current.",
+    "sub": "Word of his motor reached George Westinghouse, an industrialist who was betting on alternating current."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.5,
+    "speak": "He paid to use his patents and promised him two dollars and fifty cents for every horsepower sold. Remember that number.",
+    "sub": "He paid to use his patents and promised him two dollars and fifty cents for every horsepower sold. Remember that number."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Why such a fierce battle? Back to the chalkboard.",
+    "sub": "Why such a fierce battle? Back to the chalkboard."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Wires lose energy as heat. The more current flows through them, the more they lose. But the same energy can travel as lots of current at low voltage... or very little current at high voltage.",
+    "sub": "Wires lose energy as heat. The more current flows through them, the more they lose. But the same energy can travel as lots of current at low voltage… or very little current at high voltage."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "With a transformer, alternating current steps up the voltage to travel far. And steps it down before entering your home.",
+    "sub": "With a transformer, alternating current steps up the voltage to travel far. And steps it down before entering your home."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "pause": 0.5,
+    "speak": "Direct current back then couldn't do that. It needed a power station every mile or so.",
+    "sub": "Direct current back then couldn't do that. It needed a power station every mile or so."
+  },
+  {
+    "id": "c4_07",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Edison's camp responded with fear: they electrocuted animals in public to show that alternating current killed.",
+    "sub": "Edison's camp responded with fear: they electrocuted animals in public to show that alternating current killed."
+  },
+  {
+    "id": "c4_08",
+    "ch": 4,
+    "pause": 0.85,
+    "speak": "Tesla answered with a spectacle: he let ultra-high-frequency currents pass through his body and lit lamps with his bare hands. That only worked at extreme frequencies, and even then it was dangerous.",
+    "sub": "Tesla answered with a spectacle: he let ultra-high-frequency currents pass through his body and lit lamps with his bare hands. That only worked at extreme frequencies, and even then it was dangerous."
+  },
+  {
+    "id": "c4_09",
+    "ch": 4,
+    "pause": 1.0,
+    "speak": "Edison said alternating current killed. Tesla used it to light up his hands.",
+    "sub": "Edison said alternating current killed. Tesla used it to light up his hands."
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "In eighteen ninety-three, Chicago hosted a World's Fair. It was going to be the first ever lit entirely by electricity.",
+    "sub": "In 1893, Chicago hosted a World's Fair. It was going to be the first ever lit entirely by electricity."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Westinghouse won the contract: he offered to do it with alternating current for far less than Edison's camp.",
+    "sub": "Westinghouse won the contract: he offered to do it with alternating current for far less than Edison's camp."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "On opening day, the president pressed a button... and about a hundred thousand lamps lit up.",
+    "sub": "On opening day, the president pressed a button… and about a hundred thousand lamps lit up."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Inside the Electricity Building, crowds gathered in front of a giant copper egg. It spun all by itself.",
+    "sub": "Inside the Electricity Building, crowds gathered in front of a giant copper egg. It spun all by itself."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "A few years later, his system carried power from Niagara Falls to Buffalo, over twenty miles away.",
+    "sub": "A few years later, his system carried power from Niagara Falls to Buffalo, over twenty miles away."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "But the war left Westinghouse buried in debt. His bankers wanted to eliminate Tesla's two dollars and fifty cents.",
+    "sub": "But the war left Westinghouse buried in debt. His bankers wanted to eliminate Tesla's two dollars and fifty cents."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "The most famous version says Tesla tore up the contract right in front of him, out of friendship.",
+    "sub": "The most famous version says Tesla tore up the contract right in front of him, out of friendship."
+  },
+  {
+    "id": "c5_08",
+    "ch": 5,
+    "pause": 0.85,
+    "speak": "The documents tell a less theatrical story: he gave up his royalties and later sold his patents for about two hundred and sixteen thousand dollars.",
+    "sub": "The documents tell a less theatrical story: he gave up his royalties and later sold his patents for about two hundred and sixteen thousand dollars."
+  },
+  {
+    "id": "c5_09",
+    "ch": 5,
+    "pause": 1.0,
+    "speak": "His system conquered the world. And he no longer collected a cent from it.",
+    "sub": "His system conquered the world. And he no longer collected a cent from it."
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "In his New York laboratory, Tesla became a celebrity. One of his friends was the writer Mark Twain.",
+    "sub": "In his New York laboratory, Tesla became a celebrity. One of his friends was the writer Mark Twain."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "They say he once invited him onto a vibrating platform. Before long, Twain went running to the bathroom.",
+    "sub": "They say he once invited him onto a vibrating platform. Before long, Twain went running to the bathroom."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "His signature tool was the Tesla coil. It works on something you've known since childhood.",
+    "sub": "His signature tool was the Tesla coil. It works on something you've known since childhood."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "If you push a swing right as it comes back, gentle pushes send it higher and higher. That is resonance.",
+    "sub": "If you push a swing right as it comes back, gentle pushes send it higher and higher. That is resonance."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 0.5,
+    "speak": "The coil pushes electricity at the exact right moment. That's how it achieves huge voltages and multi-meter sparks.",
+    "sub": "The coil pushes electricity at the exact right moment. That's how it achieves huge voltages and multi-meter sparks."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "At an exhibition in New York, he placed an iron boat in a pool. With nobody inside.",
+    "sub": "At an exhibition in New York, he placed an iron boat in a pool. With nobody inside."
+  },
+  {
+    "id": "c6_07",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "The audience shouted questions and the boat answered with its lights. Some believed he was controlling it with his mind.",
+    "sub": "The audience shouted questions and the boat answered with its lights. Some believed he was controlling it with his mind."
+  },
+  {
+    "id": "c6_08",
+    "ch": 6,
+    "pause": 0.85,
+    "speak": "He was steering it with radio waves from a small box. It is the first radio-controlled device on record.",
+    "sub": "He was steering it with radio waves from a small box. It is the first radio-controlled device on record."
+  },
+  {
+    "id": "c6_09",
+    "ch": 6,
+    "pause": 1.0,
+    "speak": "Today we call it a remote control. And we use it to change the channel.",
+    "sub": "Today we call it a remote control. And we use it to change the channel."
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "Tesla wanted more. In Colorado he built a giant coil and produced lightning bolts over a hundred feet long.",
+    "sub": "Tesla wanted more. In Colorado he built a giant coil and produced lightning bolts over a hundred feet long."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "One night he burned out the power company's generator... and the town went dark. He had to pay for the repairs.",
+    "sub": "One night he burned out the power company's generator… and the town went dark. He had to pay for the repairs."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "That's where his most famous photo comes from, reading calmly beside giant lightning bolts. It's a trick: two photos superimposed.",
+    "sub": "That's where his most famous photo comes from, reading calmly beside giant lightning bolts. It's a trick: two photos superimposed."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "Later, banker J. P. Morgan gave him a hundred and fifty thousand dollars to build a tower.",
+    "sub": "Later, banker J. P. Morgan gave him a hundred and fifty thousand dollars to build a tower."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "Morgan wanted wireless messages. Tesla dreamed of something bigger: wireless power for the entire planet.",
+    "sub": "Morgan wanted wireless messages. Tesla dreamed of something bigger: wireless power for the entire planet."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "pause": 0.5,
+    "speak": "But Marconi crossed the Atlantic with a radio signal and simpler equipment. Morgan put up no more money.",
+    "sub": "But Marconi crossed the Atlantic with a radio signal and simpler equipment. Morgan put up no more money."
+  },
+  {
+    "id": "c7_07",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "The tower never worked. And physics wasn't helping: wireless energy spreads out in every direction, like light from a lamp.",
+    "sub": "The tower never worked. And physics wasn't helping: wireless energy spreads out in every direction, like light from a lamp."
+  },
+  {
+    "id": "c7_08",
+    "ch": 7,
+    "pause": 0.85,
+    "speak": "The farther you go, the less arrives. Across a few centimeters, however, it works very well.",
+    "sub": "The farther you go, the less arrives. Across a few centimeters, however, it works very well."
+  },
+  {
+    "id": "c7_09",
+    "ch": 7,
+    "pause": 1.0,
+    "speak": "His wireless energy exists. It reaches a few centimeters and charges your phone.",
+    "sub": "His wireless energy exists. It reaches a few centimeters and charges your phone."
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "In his final years he lived in New York hotels. He spent his nights feeding the pigeons. He said he loved one white pigeon like no other.",
+    "sub": "In his final years he lived in New York hotels. He spent his nights feeding the pigeons. He said he loved one white pigeon like no other."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.4,
+    "speak": "Engineers awarded him their highest prize: the Edison Medal. According to his biographer, in the middle of the ceremony he vanished.",
+    "sub": "Engineers awarded him their highest prize: the Edison Medal. According to his biographer, in the middle of the ceremony he vanished."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "They found him in a plaza, covered in pigeons.",
+    "sub": "They found him in a plaza, covered in pigeons."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.55,
+    "speak": "He died alone in his hotel room in nineteen forty-three. He was eighty-six years old and had almost no money.",
+    "sub": "He died alone in his hotel room in 1943. He was eighty-six years old and had almost no money."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.4,
+    "speak": "Since nineteen sixty, his last name is a unit: the tesla. A hospital M R I scanner uses between one point five and three. A fridge magnet, a few thousandths.",
+    "sub": "Since 1960, his last name is a unit: the tesla. A hospital MRI scanner uses between 1.5 and 3. A fridge magnet, a few thousandths."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "And his induction motors keep spinning in factories, water pumps, and fans.",
+    "sub": "And his induction motors keep spinning in factories, water pumps, and fans."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "While you watch this, the current in your home goes back and forth, pushed by his idea.",
+    "sub": "While you watch this, the current in your home goes back and forth, pushed by his idea."
+  },
+  {
+    "id": "c8_08",
+    "ch": 8,
+    "pause": 0.9,
+    "speak": "The night he was born, the midwife said he would be a child of the storm. His mother said no: of light.",
+    "sub": "The night he was born, the midwife said he would be a child of the storm. His mother said no: of light."
+  },
+  {
+    "id": "c8_09",
+    "ch": 8,
+    "pause": 1.2,
+    "speak": "They were both right.",
+    "sub": "They were both right."
+  }
+]
