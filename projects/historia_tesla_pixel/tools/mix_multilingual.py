@@ -79,17 +79,19 @@ def mix_language(lang):
     voice = build_voice_stem(lang, total_samples)
     save_wav(voice, os.path.join(ROOT, "audio", f"voice_stem_{lang}.wav"))
     
-    # Ducking
-    print(f"[{lang.upper()}] Ducking music...")
+    # Ducking profundo para acompañar la voz sin competir
+    print(f"[{lang.upper()}] Ducking music & sfx...")
     step = 512
     v_abs = np.abs(voice[::step])
-    kern_samples = int(0.25 * SR / step)
+    kern_samples = int(0.32 * SR / step)
     v_env = movavg(v_abs, max(3, kern_samples))
-    duck = np.clip(1.0 - 0.72 * (v_env / 0.12), 0.28, 1.0)
-    duck_full = np.interp(np.arange(total_samples), np.arange(len(duck)) * step, duck)
+    duck_m = np.clip(1.0 - 0.72 * (v_env / 0.10), 0.28, 1.0)
+    duck_s = np.clip(1.0 - 0.55 * (v_env / 0.10), 0.45, 1.0)
+    duck_m_full = np.interp(np.arange(total_samples), np.arange(len(duck_m)) * step, duck_m)
+    duck_s_full = np.interp(np.arange(total_samples), np.arange(len(duck_s)) * step, duck_s)
     
     # Mix
-    mix = music * duck_full + sfx + voice * 1.0
+    mix = music * duck_m_full + sfx * duck_s_full + voice * 1.0
     fade_n = int(1.5 * SR)
     mix[-fade_n:] *= np.linspace(1.0, 0.0, fade_n, dtype=np.float32)
     pk = np.max(np.abs(mix))

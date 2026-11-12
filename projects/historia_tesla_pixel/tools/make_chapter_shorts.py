@@ -382,7 +382,7 @@ def build_all_for_lang(lang="es", workers=6):
 
     chapters = group_chapters(script_data, lang=lang)
     last_lid = script_data[-1]["id"]
-    outro_audio_start = TL.e(last_lid) + 0.35
+    outro_audio_start = outro.T_LOGO
 
     print(f"=== [{PROJECT_NAME}] Generando {len(chapters)} Shorts 9:16 FULLSCREEN en {lang.upper()} ===", flush=True)
     jobs = [(ch_info, len(chapters), lang, meta, outro_audio_start) for ch_info in chapters]

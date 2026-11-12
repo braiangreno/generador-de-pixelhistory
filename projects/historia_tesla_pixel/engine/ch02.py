@@ -11,13 +11,18 @@ def c2_s01_budapest_obsessed(t):
     t_obs = TL.word("c2_01", "obsesionado")
     t_enf = TL.word("c2_01", "enfermo")
 
-    draw_chapter_header(cv, t, t0, 2, "EL DIBUJO EN LA ARENA", "BUDAPEST, HUNGRÍA", border=AMBER)
+    draw_place_only(cv, "BUDAPEST, HUNGRÍA · 1881", t, t0, border=AMBER)
 
-    # Escritorio con lámpara y pilas de planos descartados
-    d = ImageDraw.Draw(cv)
-    d.rectangle([168, 198, 312, 248], fill=(86, 56, 32, 255), outline=(*INK, 255))
-    for i, px in enumerate((182, 204, 268, 286)):
-        draw_paper(cv, px, 184 - (i % 2) * 4, 18, 14)
+    # Escritorio con lámpara y pilas de planos descartados apoyado en el suelo
+    def _draw_desk_buda(canvas, cx, fy):
+        d_b = ImageDraw.Draw(canvas)
+        shadow_ellipse(canvas, cx, fy, 52, 5, 80)
+        d_b.rectangle([cx - 52, fy - 46, cx + 52, fy - 38], fill=(116, 76, 42, 255), outline=(*INK, 255))
+        d_b.rectangle([cx - 46, fy - 38, cx - 38, fy], fill=(78, 50, 28, 255), outline=(*INK, 255))
+        d_b.rectangle([cx + 38, fy - 38, cx + 46, fy], fill=(78, 50, 28, 255), outline=(*INK, 255))
+        for i, dx_p in enumerate((-38, -22, 16, 30)):
+            draw_paper(canvas, cx + dx_p, fy - 58 - (i % 2) * 3, 14, 11)
+    floor_prop(cv, _draw_desk_buda, 240, 248)
 
     # Ventana superior mostrando los intentos fallidos del motor
     if t >= t_obs - 0.2:
@@ -83,8 +88,10 @@ def c2_s02_park_revelation(t):
 
     # A partir del palito: ventana de arena mostrando el trazado de las 4 flechas
     if t >= t_pal - 0.15:
-        d = ImageDraw.Draw(cv)
-        d.line([(int(x_inv) + 18, 212), (int(x_inv) + 38, 238)], fill=(172, 122, 64, 255), width=2)
+        def _draw_stick_c2(canvas, cx, fy):
+            d_st = ImageDraw.Draw(canvas)
+            d_st.line([(cx + 14, fy - 38), (cx + 30, fy - 12)], fill=(172, 122, 64, 255), width=2)
+        floor_prop(cv, _draw_stick_c2, x_inv, 250)
         a, dy = pop(t, t_pal - 0.15)
         window(cv, 236, 56 + dy, 216, 136, fill=(74, 50, 26), border=GOLD)
         draw_text(cv, "EL MOTOR EN LA ARENA", 344, 64 + dy, "press", 8, GOLD, align="center")
@@ -200,6 +207,8 @@ def c2_s04_sand_remate(t):
 
 def scenes():
     return [
+        (TL.s("c2_00") - 0.15, make_card(2, ["EL DIBUJO EN", "LA ARENA"], "1881 – 1882 · BUDAPEST"),
+         None, "ch02"),
         (TL.s("c2_01") - 0.15, c2_s01_budapest_obsessed,
          lambda t: cam_push(t, TL.s("c2_01"), TL.s("c2_02"), 1.0, 1.03, (240, 135)), "ch02"),
         (TL.s("c2_02") - 0.15, c2_s02_park_revelation,
@@ -207,7 +216,7 @@ def scenes():
         (TL.s("c2_04") - 0.15, c2_s03_pizarra_corrientes,
          lambda t: cam_push(t, TL.s("c2_04"), TL.s("c2_09"), 1.0, 1.02, (240, 135)), "ch02"),
         (TL.s("c2_09") - 0.15, c2_s04_sand_remate,
-         lambda t: cam_push(t, TL.s("c2_09"), TL.s("c3_01"), 1.0, 1.03, (240, 135)), "ch02"),
+         lambda t: cam_push(t, TL.s("c2_09"), TL.s("c3_00"), 1.0, 1.03, (240, 135)), "ch02"),
     ]
 
 
@@ -216,7 +225,7 @@ def music(A):
     t0 = TL.s("c2_01")
     t_piz = TL.s("c2_04")
     t_rem = TL.s("c2_09")
-    t_end = TL.s("c3_01")
+    t_end = TL.s("c3_00")
 
     # Parte 1: Budapest (melodía contemplativa)
     beat = 60.0 / 92.0

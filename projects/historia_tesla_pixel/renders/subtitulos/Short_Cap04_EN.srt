@@ -1,35 +1,39 @@
 1
-00:00:00,150 --> 00:00:05,612
-Word of his motor reached George Westinghouse, an industrialist who was betting on alternating current.
+00:00:00,150 --> 00:00:03,842
+CHAPTER 4 — THE WAR OF THE CURRENTS
 
 2
-00:00:05,832 --> 00:00:13,909
-He paid to use his patents and promised him two dollars and fifty cents for every horsepower sold. Remember that number.
+00:00:04,192 --> 00:00:09,654
+Word of his motor reached George Westinghouse, an industrialist who was betting on alternating current.
 
 3
-00:00:14,359 --> 00:00:17,282
-Why such a fierce battle? Back to the chalkboard.
+00:00:09,854 --> 00:00:17,931
+He paid to use his patents and promised him two dollars and fifty cents for every horsepower sold. Remember that number.
 
 4
-00:00:17,482 --> 00:00:30,789
-Wires lose energy as heat. The more current flows through them, the more they lose. But the same energy can travel as lots of current at low voltage… or very little current at high voltage.
+00:00:18,381 --> 00:00:21,304
+Why such a fierce battle? Back to the chalkboard.
 
 5
-00:00:30,989 --> 00:00:38,297
-With a transformer, alternating current steps up the voltage to travel far. And steps it down before entering your home.
+00:00:21,504 --> 00:00:34,812
+Wires lose energy as heat. The more current flows through them, the more they lose. But the same energy can travel as lots of current at low voltage… or very little current at high voltage.
 
 6
-00:00:38,497 --> 00:00:45,266
-Direct current back then couldn't do that. It needed a power station every mile or so.
+00:00:35,012 --> 00:00:42,319
+With a transformer, alternating current steps up the voltage to travel far. And steps it down before entering your home.
 
 7
-00:00:45,466 --> 00:00:52,697
-Edison's camp responded with fear: they electrocuted animals in public to show that alternating current killed.
+00:00:42,519 --> 00:00:49,289
+Direct current back then couldn't do that. It needed a power station every mile or so.
 
 8
-00:00:52,897 --> 00:01:06,436
-Tesla answered with a spectacle: he let ultra-high-frequency currents pass through his body and lit lamps with his bare hands. That only worked at extreme frequencies, and even then it was dangerous.
+00:00:49,489 --> 00:00:56,719
+Edison's camp responded with fear: they electrocuted animals in public to show that alternating current killed.
 
 9
-00:01:07,336 --> 00:01:12,874
+00:00:56,919 --> 00:01:10,458
+Tesla answered with a spectacle: he let ultra-high-frequency currents pass through his body and lit lamps with his bare hands. That only worked at extreme frequencies, and even then it was dangerous.
+
+10
+00:01:11,358 --> 00:01:16,896
 Edison said alternating current killed. Tesla used it to light up his hands.

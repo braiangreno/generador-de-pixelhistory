@@ -347,7 +347,7 @@ def sc_credits(t, t0, t_end):
     return vignette(cv, 0.25)
 
 
-T_LOGO = TL.e(TL.order[-1]) + 2.8
+T_LOGO = TL.e(TL.order[-1]) + 2.2
 T_CRED = T_LOGO + 3.8
 
 

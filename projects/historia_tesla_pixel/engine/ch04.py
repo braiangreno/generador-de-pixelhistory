@@ -14,12 +14,19 @@ def c4_s01_westinghouse(t):
     t_dos = TL.word("c4_02", "dos")
     t_rec = TL.word("c4_02", "Recuerda")
 
-    draw_chapter_header(cv, t, t0, 4, "LA GUERRA DE LAS CORRIENTES", "WESTINGHOUSE · 1888", border=GOLD)
+    draw_place_only(cv, "WESTINGHOUSE ELECTRIC · 1888", t, t0, border=GOLD)
 
-    # Plano del motor de corriente alterna sobre el escritorio
-    d = ImageDraw.Draw(cv)
-    d.rectangle([198, 210, 282, 224], fill=(24, 52, 88, 255), outline=(*TESLA_CYAN, 255))
-    draw_rotating_arrows(cv, 240, 217, 5, t * 2.2, color=TESLA_CYAN, pulse=0.8)
+    # Escritorio de madera con el plano del motor de corriente alterna apoyado encima
+    def _draw_west_desk(target_cv, fx, fy):
+        d = ImageDraw.Draw(target_cv)
+        d.ellipse([fx - 46, fy - 5, fx + 46, fy + 3], fill=(0, 0, 0, 110))
+        d.rectangle([fx - 40, fy - 34, fx - 34, fy], fill=(74, 44, 24, 255), outline=(*INK, 255))
+        d.rectangle([fx + 34, fy - 34, fx + 40, fy], fill=(74, 44, 24, 255), outline=(*INK, 255))
+        d.rectangle([fx - 44, fy - 40, fx + 44, fy - 32], fill=(112, 68, 38, 255), outline=(*INK, 255))
+        d.rectangle([fx - 36, fy - 46, fx + 36, fy - 36], fill=(24, 52, 88, 255), outline=(*TESLA_CYAN, 255))
+        draw_rotating_arrows(target_cv, fx, fy - 41, 4, t * 2.2, color=TESLA_CYAN, pulse=0.8)
+
+    floor_prop(cv, _draw_west_desk, 240, 250)
 
     # Tarjeta contador US$2,50 POR CABALLO DE FUERZA (dentro de x=120..360 para 9:16 1:1)
     if t >= t_c4_02 - 0.15:
@@ -173,21 +180,25 @@ def c4_s03_fear_and_tubes(t):
 
     # Escenario oscuro: Tesla iluminando dos tubos de vidrio con sus propias manos
     cv = bg("bg_stage_tubes_1891").copy()
-    d = ImageDraw.Draw(cv)
 
-    # Halo eléctrico detrás del inventor
-    glow_r = 68 + int(8 * math.sin(t * 10))
-    glow(cv, 240, 188, glow_r, TESLA_CYAN, 0.45 if t < t_c4_09 else 0.65)
-    draw_tesla_sparks(cv, 240, 198, t, radius=48, count=5, color=TESLA_VIOLET)
+    def _draw_halo_back(target_cv, fx, fy):
+        glow_r = 68 + int(8 * math.sin(t * 10))
+        glow(target_cv, fx, fy - 58, glow_r, TESLA_CYAN, 0.45 if t < t_c4_09 else 0.65)
+        draw_tesla_sparks(target_cv, fx, fy - 48, t, radius=48, count=5, color=TESLA_VIOLET)
 
+    floor_prop(cv, _draw_halo_back, 240, 246)
     char(cv, "inventor", 240, 246, t, scale=2, arms="up", look=1, mood="happy")
 
-    # Dos tubos fluorescentes brillantes en sus manos (izquierda y derecha)
-    tube_col = TESLA_SPARK if int(t * 18) % 2 == 0 else TESLA_CYAN
-    d.line([(196, 196), (222, 162)], fill=(*tube_col, 255), width=4)
-    d.line([(284, 196), (258, 162)], fill=(*tube_col, 255), width=4)
-    glow(cv, 208, 178, 24, TESLA_CYAN, 0.55)
-    glow(cv, 272, 178, 24, TESLA_CYAN, 0.55)
+    # Dos tubos fluorescentes brillantes sostenidos en sus manos (izquierda y derecha)
+    def _draw_tubes_front(target_cv, fx, fy):
+        d = ImageDraw.Draw(target_cv)
+        tube_col = TESLA_SPARK if int(t * 18) % 2 == 0 else TESLA_CYAN
+        d.line([(fx - 44, fy - 50), (fx - 18, fy - 84)], fill=(*tube_col, 255), width=4)
+        d.line([(fx + 44, fy - 50), (fx + 18, fy - 84)], fill=(*tube_col, 255), width=4)
+        glow(target_cv, fx - 32, fy - 68, 24, TESLA_CYAN, 0.55)
+        glow(target_cv, fx + 32, fy - 68, 24, TESLA_CYAN, 0.55)
+
+    floor_prop(cv, _draw_tubes_front, 240, 246)
 
     # Placa roja de advertencia obligatoria: NO LO INTENTES
     if t >= t_pel - 0.6 or t >= t_c4_09:
@@ -208,9 +219,10 @@ def c4_s03_fear_and_tubes(t):
 
 
 SCENES = [
-    (TL.s("c4_01"), TL.s("c4_03"), c4_s01_westinghouse),
+    (TL.s("c4_00") - 0.15, TL.s("c4_01"), make_card(4, ["LA GUERRA DE LAS", "CORRIENTES"], "1888 – 1891 · EE. UU.")),
+    (TL.s("c4_01") - 0.15, TL.s("c4_03"), c4_s01_westinghouse),
     (TL.s("c4_03"), TL.s("c4_07"), c4_s02_pizarra_transformador),
-    (TL.s("c4_07"), TL.s("c5_01"), c4_s03_fear_and_tubes),
+    (TL.s("c4_07"), TL.s("c5_00"), c4_s03_fear_and_tubes),
 ]
 
 
@@ -220,10 +232,10 @@ def scenes():
 
 def music(A):
     """Acto 2: La guerra de las corrientes + tema juguetón de La Pizarra 2 (El Transformador)."""
-    t0 = TL.s("c4_01")
+    t0 = TL.s("c4_00")
     t_piz = TL.s("c4_03")
     t_fear = TL.s("c4_07")
-    t_end = TL.s("c5_01")
+    t_end = TL.s("c5_00")
     A.add_pad(t0, t_piz - t0, [146.83, 220.0, 293.66], amp=0.04)
     piz_beat = 60.0 / 112.0
     piz_arp = [523.25, 659.25, 783.99, 659.25, 587.33, 698.46, 880.0, 698.46]

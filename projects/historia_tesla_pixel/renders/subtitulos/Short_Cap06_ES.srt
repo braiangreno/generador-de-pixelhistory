@@ -1,35 +1,39 @@
 1
-00:00:00,150 --> 00:00:07,689
-En su laboratorio de Nueva York, Tesla se volvió una celebridad. Uno de sus amigos era el escritor Mark Twain.
+00:00:00,150 --> 00:00:02,843
+CAPÍTULO 6 — EL MAGO
 
 2
-00:00:07,909 --> 00:00:14,755
-Cuentan que una vez lo subió a una plataforma que vibraba. Al rato, Twain salió corriendo al baño.
+00:00:03,193 --> 00:00:10,731
+En su laboratorio de Nueva York, Tesla se volvió una celebridad. Uno de sus amigos era el escritor Mark Twain.
 
 3
-00:00:14,955 --> 00:00:20,801
-Su herramienta estrella era la bobina de Tesla. Funciona con algo que conoces desde chico.
+00:00:10,931 --> 00:00:17,777
+Cuentan que una vez lo subió a una plataforma que vibraba. Al rato, Twain salió corriendo al baño.
 
 4
-00:00:21,251 --> 00:00:28,789
-Si empujas un columpio justo cuando vuelve, con empujoncitos llega cada vez más alto. Eso es resonancia.
+00:00:17,977 --> 00:00:23,823
+Su herramienta estrella era la bobina de Tesla. Funciona con algo que conoces desde chico.
 
 5
-00:00:28,989 --> 00:00:36,528
-La bobina empuja la electricidad en el momento justo. Así logra voltajes enormes y chispas de metros.
+00:00:24,273 --> 00:00:31,812
+Si empujas un columpio justo cuando vuelve, con empujoncitos llega cada vez más alto. Eso es resonancia.
 
 6
-00:00:36,728 --> 00:00:43,113
-En una exposición en Nueva York, puso en un estanque un barquito de hierro. Sin nadie adentro.
+00:00:32,012 --> 00:00:39,550
+La bobina empuja la electricidad en el momento justo. Así logra voltajes enormes y chispas de metros.
 
 7
-00:00:43,313 --> 00:00:50,543
-El público le hacía preguntas y el barco respondía con sus luces. Algunos creyeron que lo manejaba con la mente.
+00:00:39,750 --> 00:00:46,135
+En una exposición en Nueva York, puso en un estanque un barquito de hierro. Sin nadie adentro.
 
 8
-00:00:50,743 --> 00:00:57,666
-Lo manejaba con ondas de radio, desde una cajita. Es el primer aparato radiocontrolado del que hay registro.
+00:00:46,335 --> 00:00:53,566
+El público le hacía preguntas y el barco respondía con sus luces. Algunos creyeron que lo manejaba con la mente.
 
 9
-00:00:58,566 --> 00:01:03,028
+00:00:53,766 --> 00:01:00,689
+Lo manejaba con ondas de radio, desde una cajita. Es el primer aparato radiocontrolado del que hay registro.
+
+10
+00:01:01,589 --> 00:01:06,050
 Hoy le decimos control remoto. Y lo usamos para cambiar de canal.

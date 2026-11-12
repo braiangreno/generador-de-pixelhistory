@@ -580,7 +580,9 @@ def compose_vertical_scene(vctx):
 
     # Si es una escena de placa de capítulo, dibujarla a pantalla completa y retornar
     if vctx.chapter_card is not None:
-        is_dune = "dune" in getattr(core, "ROOT", "").lower()
+        root_low = getattr(core, "ROOT", "").lower()
+        is_dune = "dune" in root_low
+        is_tesla = "tesla" in root_low
         if is_dune and not vctx.chapter_card.get("snow"):
             d.ellipse([36, 38, 56, 58], fill=(244, 218, 162, 210))
             d.ellipse([216, 54, 230, 68], fill=(225, 232, 245, 190))
@@ -594,6 +596,16 @@ def compose_vertical_scene(vctx):
             pts2.append((VW, VH))
             d.polygon(pts1, fill=(76, 46, 22, 230))
             d.polygon(pts2, fill=(104, 64, 30, 245))
+        elif is_tesla:
+            d.rectangle([0, 424, VW, VH], fill=(10, 14, 28, 245))
+            for tx in (44, 135, 226):
+                d.line([(tx, 386), (tx - 9, 426)], fill=(38, 54, 86, 220), width=2)
+                d.line([(tx, 386), (tx + 9, 426)], fill=(38, 54, 86, 220), width=2)
+                d.line([(tx - 11, 394), (tx + 11, 394)], fill=(52, 74, 114, 220), width=2)
+            d.line([(0, 394), (VW, 394)], fill=(72, 168, 224, 120), width=1)
+            if hasattr(common, "draw_rotating_arrows"):
+                common.draw_rotating_arrows(cv, VW // 2, 78, 24, t, speed=2.0,
+                                            color=common.TESLA_CYAN, glow=core.GOLD, alpha=0.75)
         render_chapter_card_vertical(cv, vctx.chapter_card)
         return cv
 
@@ -797,6 +809,8 @@ def compose_vertical_scene(vctx):
             common._orig_robot(cv, vx, vfeet, ch_item["t"], face=ch_item["face"],
                                frozen=ch_item["frozen"], alpha=ch_item["alpha"],
                                sil=ch_item["sil"], scale=vscale)
+        elif ckind == "prop":
+            ch_item["fn"](cv, vx, vfeet)
 
     # Emotes ("!", "?") encima de las cabezas de los personajes
     for em in vctx.emotes:

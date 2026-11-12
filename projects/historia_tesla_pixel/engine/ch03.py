@@ -11,15 +11,17 @@ def c3_s01_ny_harbor(t):
     t_ny = TL.word("c3_01", "Nueva")
     t_edi = TL.word("c3_01", "Edison")
 
-    draw_chapter_header(cv, t, t0, 3, "DOS DÓLARES POR DÍA", "NUEVA YORK · 1884", border=AMBER)
+    draw_place_only(cv, "NUEVA YORK · 1884", t, t0, border=AMBER)
 
     x_inv, w_inv = walk(t, t0, t_edi, 92, 216)
     char(cv, "inventor_hat", x_inv, 250, t, scale=2, walk=w_inv, arms="hold", look=1, mood="happy")
     # Pequeña valija de cuero en su mano
-    d = ImageDraw.Draw(cv)
-    vx = int(x_inv) + 14
-    d.rectangle([vx, 216, vx + 16, 228], fill=(122, 74, 36, 255), outline=(*INK, 255))
-    d.rectangle([vx + 5, 213, vx + 11, 216], fill=(82, 48, 22, 255))
+    def _draw_suitcase(canvas, cx, fy):
+        d_s = ImageDraw.Draw(canvas)
+        vx = cx + 14
+        d_s.rectangle([vx, fy - 34, vx + 16, fy - 22], fill=(122, 74, 36, 255), outline=(*INK, 255))
+        d_s.rectangle([vx + 5, fy - 37, vx + 11, fy - 34], fill=(82, 48, 22, 255))
+    floor_prop(cv, _draw_suitcase, x_inv, 250)
 
     if t >= t_edi - 0.35:
         a, dy = pop(t, t_edi - 0.35)
@@ -43,9 +45,10 @@ def c3_s02_edison_workshop(t):
 
     draw_place_only(cv, "TALLER DE EDISON · NUEVA YORK", t, t0, border=GOLD)
 
-    # Lámparas colgantes cálidas (dentro de x=136..344 para escala 1:1 en 9:16)
-    for lx in (144, 240, 336):
-        bulb(cv, lx, 48, t, on=1.0 if t < t_bro else 0.45)
+    # Lámparas colgantes cálidas sujetas al techo con cable (en 16:9)
+    if getattr(sys.modules.get("core"), "_VCTX", None) is None:
+        for lx in (144, 240, 336):
+            bulb(cv, lx, 48, t, on=1.0 if t < t_bro else 0.45, cord_top=30)
 
     # Contador US$50.000 en pizarra de oficina
     if t >= t_50k - 0.35:
@@ -137,10 +140,10 @@ def c3_s04_egg_of_columbus(t):
 
     draw_place_only(cv, "EL HUEVO DE COLÓN · 1887", t, t0, border=GOLD)
 
-    # Mesa de madera central (x=156..324, y=188..248)
+    # Mesa de madera central (x=156..324, y=188..234)
     d = ImageDraw.Draw(cv)
     d.rectangle([156, 188, 324, 198], fill=(118, 68, 34, 255), outline=(*INK, 255))
-    d.rectangle([168, 198, 312, 248], fill=(78, 44, 22, 255), outline=(*INK, 255))
+    d.rectangle([168, 198, 312, 234], fill=(78, 44, 22, 255), outline=(*INK, 255))
 
     # Estado del huevo de cobre sobre la mesa
     if t < t_enc:
@@ -154,8 +157,8 @@ def c3_s04_egg_of_columbus(t):
 
     # En c3_08: debajo de la mesa, en transparencia, las cuatro flechas giran
     if t >= t_c3_08 - 0.15:
-        d.rectangle([182, 202, 298, 244], fill=(16, 28, 46, 215), outline=(*TESLA_CYAN, 255))
-        draw_rotating_arrows(cv, 240, 223, 17, t, speed=4.2, color=TESLA_CYAN, glow=GOLD)
+        d.rectangle([182, 200, 298, 232], fill=(16, 28, 46, 215), outline=(*TESLA_CYAN, 255))
+        draw_rotating_arrows(cv, 240, 216, 14, t, speed=4.2, color=TESLA_CYAN, glow=GOLD)
 
     # Tarjeta superior explicativa / remate
     if t < t_c3_07:
@@ -190,6 +193,8 @@ def c3_s04_egg_of_columbus(t):
 
 def scenes():
     return [
+        (TL.s("c3_00") - 0.15, make_card(3, ["DOS DÓLARES", "POR DÍA"], "1884 – 1887 · NUEVA YORK"),
+         None, "ch03"),
         (TL.s("c3_01") - 0.15, c3_s01_ny_harbor,
          lambda t: cam_push(t, TL.s("c3_01"), TL.s("c3_02"), 1.0, 1.03, (240, 135)), "ch03"),
         (TL.s("c3_02") - 0.15, c3_s02_edison_workshop,
@@ -197,7 +202,7 @@ def scenes():
         (TL.s("c3_04") - 0.15, c3_s03_winter_ditch,
          lambda t: cam_push(t, TL.s("c3_04"), TL.s("c3_06"), 1.0, 1.03, (240, 135)), "ch03"),
         (TL.s("c3_06") - 0.15, c3_s04_egg_of_columbus,
-         lambda t: cam_push(t, TL.s("c3_06"), TL.s("c4_01"), 1.0, 1.035, (240, 145)), "ch03"),
+         lambda t: cam_push(t, TL.s("c3_06"), TL.s("c4_00"), 1.0, 1.035, (240, 145)), "ch03"),
     ]
 
 
@@ -205,7 +210,7 @@ def music(A):
     """Acto 1 final: de la dureza del invierno en Nueva York al asombro mágico del Huevo de Colón."""
     t0 = TL.s("c3_01")
     t_egg = TL.s("c3_06")
-    t_end = TL.s("c4_01")
+    t_end = TL.s("c4_00")
     beat = 60.0 / 96.0
     chords = [[196.0, 233.08, 293.66], [174.61, 220.0, 261.63], [146.83, 174.61, 220.0], [164.81, 207.65, 246.94]]
     mel = [392.0, 466.16, 440.0, 392.0, 349.23, 329.63, 293.66, 329.63]

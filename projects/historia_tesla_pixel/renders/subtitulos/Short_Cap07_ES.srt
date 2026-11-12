@@ -1,35 +1,39 @@
 1
-00:00:00,150 --> 00:00:07,765
-Tesla quería más. En Colorado construyó una bobina gigante y fabricó rayos de más de treinta metros.
+00:00:00,150 --> 00:00:02,843
+CAPÍTULO 7 — LA TORRE
 
 2
-00:00:07,985 --> 00:00:16,062
-Una noche quemó el generador de la compañía eléctrica… y la ciudad se quedó a oscuras. Tuvo que pagar la reparación.
+00:00:03,193 --> 00:00:10,808
+Tesla quería más. En Colorado construyó una bobina gigante y fabricó rayos de más de treinta metros.
 
 3
-00:00:16,262 --> 00:00:24,262
-De ahí viene su foto más famosa, leyendo junto a rayos gigantes. Es un truco: dos fotos superpuestas.
+00:00:11,008 --> 00:00:19,085
+Una noche quemó el generador de la compañía eléctrica… y la ciudad se quedó a oscuras. Tuvo que pagar la reparación.
 
 4
-00:00:24,462 --> 00:00:31,155
-Después, el banquero J. P. Morgan le dio ciento cincuenta mil dólares para construir una torre.
+00:00:19,285 --> 00:00:27,285
+De ahí viene su foto más famosa, leyendo junto a rayos gigantes. Es un truco: dos fotos superpuestas.
 
 5
-00:00:31,355 --> 00:00:39,585
-Morgan quería mensajes sin cables. Tesla soñaba con algo más grande: energía sin cables para todo el planeta.
+00:00:27,485 --> 00:00:34,177
+Después, el banquero J. P. Morgan le dio ciento cincuenta mil dólares para construir una torre.
 
 6
-00:00:39,785 --> 00:00:46,939
-Pero Marconi cruzó el Atlántico con una señal de radio y un equipo más sencillo. Morgan no puso más dinero.
+00:00:34,377 --> 00:00:42,608
+Morgan quería mensajes sin cables. Tesla soñaba con algo más grande: energía sin cables para todo el planeta.
 
 7
-00:00:47,389 --> 00:00:56,543
-La torre nunca funcionó. Y la física no ayudaba: la energía sin cables se reparte para todos lados, como la luz de una lámpara.
+00:00:42,808 --> 00:00:49,962
+Pero Marconi cruzó el Atlántico con una señal de radio y un equipo más sencillo. Morgan no puso más dinero.
 
 8
-00:00:56,743 --> 00:01:02,512
-Cuanto más lejos, menos llega. A pocos centímetros, en cambio, funciona muy bien.
+00:00:50,412 --> 00:00:59,566
+La torre nunca funcionó. Y la física no ayudaba: la energía sin cables se reparte para todos lados, como la luz de una lámpara.
 
 9
-00:01:03,412 --> 00:01:09,181
+00:00:59,766 --> 00:01:05,535
+Cuanto más lejos, menos llega. A pocos centímetros, en cambio, funciona muy bien.
+
+10
+00:01:06,435 --> 00:01:12,204
 Su energía sin cables existe. Alcanza unos centímetros y carga tu teléfono.

@@ -35,6 +35,22 @@ def char(cv, key, x, feet, t, alpha=1.0, shadow=True, scale=1, **pose):
     paste_arr(cv, arr, int(x) - S.SW * scale // 2, int(feet) - FEET_OFFSET * scale, alpha)
 
 
+def floor_prop(cv, fn_draw, x, feet=250):
+    """Dibuja un objeto apoyado sobre el piso (mesas con velas, mascotas, maletas, podios)
+    en (x, feet) en 16:9 y sobre el suelo vertical (vfeet=452) en 9:16 para que jamás flote."""
+    vctx = getattr(sys.modules.get("core"), "_VCTX", None)
+    if vctx is not None and isinstance(cv, Image.Image) and cv.size == (W, H):
+        vctx.chars.append({
+            "kind": "prop",
+            "fn": fn_draw,
+            "x": x,
+            "feet": feet,
+            "scale": 1,
+        })
+        return
+    fn_draw(cv, int(x), int(feet))
+
+
 def pace(t, t0, x_a, x_b, period=3.6, pause=0.28):
     """Hace que un personaje camine con ritmo entre x_a y x_b, deteniéndose brevemente en cada extremo.
     Devuelve (x, walk_phase, look_dir)."""
@@ -195,8 +211,11 @@ def scribble(cv, x, y, w, p, seed, color=(30, 40, 110)):
         prev = pt
 
 
-def bulb(cv, cx, cy, t, on=1.0):
+def bulb(cv, cx, cy, t, on=1.0, cord_top=None):
     d = ImageDraw.Draw(cv)
+    if cord_top is not None and cy - 9 > cord_top:
+        d.line([(cx, int(cord_top)), (cx, cy - 9)], fill=(*INK, 255), width=2)
+        d.rectangle([cx - 3, cy - 10, cx + 3, cy - 6], fill=(140, 140, 152, 255), outline=(*INK, 255))
     if on > 0:
         glow(cv, cx, cy, 14, (255, 240, 140), 0.45 * on)
     d.ellipse([cx - 6, cy - 7, cx + 6, cy + 5], fill=(255, 240, 150, 255) if on > 0.5 else (200, 200, 190, 255),
@@ -388,32 +407,25 @@ def draw_phosphor_dot(cv, x, y, r=3, trail=None, color=(245, 200, 110)):
 
 
 def make_card(num, lines, years, snow=False, robot_face="question"):
-    """Escena de placa de capítulo de Dune: horizonte de dunas al atardecer + ventana RPG."""
+    """Escena de placa de capítulo clásica de Pixeloide (estilo RPG a pantalla completa)."""
     def sc(t):
-        cv = vgradient((18, 12, 8), (52, 32, 16), 10) if not snow else vgradient((8, 12, 24), (24, 34, 58), 10)
-        d = ImageDraw.Draw(cv)
-        # Dos lunas sobre el horizonte de Arrakis
-        if not snow:
-            d.ellipse([66, 22, 84, 40], fill=(244, 218, 162, 210))
-            d.ellipse([396, 34, 408, 46], fill=(225, 232, 245, 190))
-            # Siluetas de dunas desplazándose suavemente en el horizonte inferior
-            pts1 = [(0, H)]
-            pts2 = [(0, H)]
-            for x in range(0, W + 16, 16):
-                y1 = 224 + int(round(math.sin(x * 0.018 + t * 0.6) * 8 + math.cos(x * 0.035 - t * 0.4) * 4))
-                y2 = 240 + int(round(math.cos(x * 0.022 - t * 0.9) * 6))
-                pts1.append((x, y1))
-                pts2.append((x, y2))
-            pts1.append((W, H))
-            pts2.append((W, H))
-            d.polygon(pts1, fill=(76, 46, 22, 230))
-            d.polygon(pts2, fill=(104, 64, 30, 245))
-        else:
+        cv = vgradient((8, 12, 26), (22, 34, 64), 10) if not snow else vgradient((8, 12, 24), (24, 34, 58), 10)
+        STARS.draw(cv, t, alpha=0.75)
+        if snow:
             SNOW.draw(cv, t, density=0.6)
-        draw_sand_wind(cv, t, density=38, color=(235, 195, 115))
-        t0 = TL.chapter_start(num) - 0.3
+        d = ImageDraw.Draw(cv)
+        # Horizonte nocturno con silueta de torres eléctricas y las 4 flechas giratorias en los flancos
+        d.rectangle([0, 242, W, H], fill=(10, 14, 28, 245))
+        for tx in (56, 144, 336, 424):
+            d.line([(tx, 206), (tx - 8, 244)], fill=(38, 54, 86, 220), width=2)
+            d.line([(tx, 206), (tx + 8, 244)], fill=(38, 54, 86, 220), width=2)
+            d.line([(tx - 10, 214), (tx + 10, 214)], fill=(52, 74, 114, 220), width=2)
+        d.line([(0, 214), (W, 214)], fill=(72, 168, 224, 120), width=1)
+        draw_rotating_arrows(cv, 64, 52, 18, t, speed=1.8, color=TESLA_CYAN, glow=GOLD, alpha=0.55)
+        draw_rotating_arrows(cv, 416, 52, 18, t, speed=1.8, color=TESLA_CYAN, glow=GOLD, alpha=0.55)
+        t0 = TL.chapter_start(num) - 0.15
         chapter_card(cv, t, t0, num, lines, years, ramp_title=GOLD_RAMP)
-        return cv
+        return vignette(cv, 0.32)
     return sc
 
 
@@ -520,8 +532,7 @@ def draw_rotating_arrows(cv, cx, cy, r, t, speed=2.2, color=GOLD, glow=None,
 
 
 def draw_chapter_header(cv, t, t0, ch_num, title_es, place_es=None, border=GOLD):
-    """Encabezado de capítulo con transición de barrido de las 4 flechas giratorias en los primeros 0.55s
-    y lugar tipeado con cursor ('Lugares tipeados con cursor')."""
+    """Encabezado superior de capítulo y lugar tipeado con cursor ('Lugares tipeados con cursor')."""
     dt = t - t0
     if dt < -0.35:
         return
@@ -533,17 +544,6 @@ def draw_chapter_header(cv, t, t0, ch_num, title_es, place_es=None, border=GOLD)
     if place_es:
         rev_p = max(0, int((dt - 0.15) * 28))
         draw_text(cv, place_es, 240, 26, "silk", 8, CREAM, align="center", reveal=rev_p)
-
-    # Barrido de las 4 flechas giratorias entre capítulos (sin placa aparte)
-    if -0.25 <= dt <= 0.55:
-        u = clamp01((dt + 0.25) / 0.80)
-        wx = int(round(-40 + (W + 80) * ease_in_out(u)))
-        d = ImageDraw.Draw(cv)
-        for k_trail in range(3):
-            tx = wx - k_trail * 18
-            if 0 <= tx <= W:
-                d.line([(tx, 0), (tx, H)], fill=(*border, int(120 / (k_trail + 1))), width=2)
-        draw_rotating_arrows(cv, wx, 135, 34, t, speed=6.5, color=border, glow=TESLA_CYAN, alpha=1.0 - abs(u - 0.5) * 1.4)
 
 
 def draw_place_only(cv, place_es, t, t0, border=AMBER):

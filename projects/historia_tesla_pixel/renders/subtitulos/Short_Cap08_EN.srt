@@ -1,35 +1,43 @@
 1
-00:00:00,150 --> 00:00:10,458
-In his final years he lived in New York hotels. He spent his nights feeding the pigeons. He said he loved one white pigeon like no other.
+00:00:00,150 --> 00:00:03,612
+CHAPTER 8 — THE PIGEON MAN
 
 2
-00:00:10,678 --> 00:00:19,755
-Engineers awarded him their highest prize: the Edison Medal. According to his biographer, in the middle of the ceremony he vanished.
+00:00:03,962 --> 00:00:14,269
+In his final years he lived in New York hotels. He spent his nights feeding the pigeons. He said he loved one white pigeon like no other.
 
 3
-00:00:19,955 --> 00:00:23,724
-They found him in a plaza, covered in pigeons.
+00:00:14,469 --> 00:00:23,546
+Engineers awarded him their highest prize: the Edison Medal. According to his biographer, in the middle of the ceremony he vanished.
 
 4
-00:00:23,924 --> 00:00:32,232
-He died alone in his hotel room in 1943. He was eighty-six years old and had almost no money.
+00:00:23,746 --> 00:00:27,515
+They found him in a plaza, covered in pigeons.
 
 5
-00:00:32,732 --> 00:00:45,040
-Since 1960, his last name is a unit: the tesla. A hospital MRI scanner uses between 1.5 and 3. A fridge magnet, a few thousandths.
+00:00:27,715 --> 00:00:36,023
+He died alone in his hotel room in 1943. He was eighty-six years old and had almost no money.
 
 6
-00:00:45,240 --> 00:00:50,855
-And his induction motors keep spinning in factories, water pumps, and fans.
+00:00:36,523 --> 00:00:48,831
+Since 1960, his last name is a unit: the tesla. A hospital MRI scanner uses between 1.5 and 3. A fridge magnet, a few thousandths.
 
 7
-00:00:51,055 --> 00:00:56,594
-While you watch this, the current in your home goes back and forth, pushed by his idea.
+00:00:49,031 --> 00:00:54,646
+And his induction motors keep spinning in factories, water pumps, and fans.
 
 8
-00:00:56,794 --> 00:01:04,101
-The night he was born, the midwife said he would be a child of the storm. His mother said no: of light.
+00:00:54,846 --> 00:01:00,385
+While you watch this, the current in your home goes back and forth, pushed by his idea.
 
 9
-00:01:05,051 --> 00:01:06,744
+00:01:00,585 --> 00:01:07,892
+The night he was born, the midwife said he would be a child of the storm. His mother said no: of light.
+
+10
+00:01:08,842 --> 00:01:10,535
 They were both right.
+
+11
+00:01:11,485 --> 00:01:16,715
+And now tell us in the comments: what story would you like to see in the next episode?

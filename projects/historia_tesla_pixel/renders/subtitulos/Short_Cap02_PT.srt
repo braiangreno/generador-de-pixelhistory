@@ -1,35 +1,39 @@
 1
-00:00:00,150 --> 00:00:06,535
-Anos depois, já em Budapeste, continuava tão obcecado por aquele motor que acabou adoecendo.
+00:00:00,150 --> 00:00:03,535
+CAPÍTULO 2 — O DESENHO NA AREIA
 
 2
-00:00:06,755 --> 00:00:13,293
-Certa tarde saiu para caminhar com um amigo. Ia recitando o Fausto de Goethe, que sabia de cor.
+00:00:03,885 --> 00:00:10,269
+Anos depois, já em Budapeste, continuava tão obcecado por aquele motor que acabou adoecendo.
 
 3
-00:00:13,493 --> 00:00:20,878
-Segundo ele contou, a ideia veio de golpe, como um relâmpago. Com um graveto, desenhou o motor na areia.
+00:00:10,469 --> 00:00:17,008
+Certa tarde saiu para caminhar com um amigo. Ia recitando o Fausto de Goethe, que sabia de cor.
 
 4
-00:00:21,328 --> 00:00:24,405
-Para entender o que ele viu, vamos ao quadro-negro.
+00:00:17,208 --> 00:00:24,592
+Segundo ele contou, a ideia veio de golpe, como um relâmpago. Com um graveto, desenhou o motor na areia.
 
 5
-00:00:24,605 --> 00:00:30,374
-A corrente contínua empurra sempre para o mesmo lado, como a água em um cano.
+00:00:25,042 --> 00:00:28,119
+Para entender o que ele viu, vamos ao quadro-negro.
 
 6
-00:00:30,574 --> 00:00:36,497
-A alternada vai e vem, como um serrote: não avança, mas mesmo assim corta a madeira.
+00:00:28,319 --> 00:00:34,089
+A corrente contínua empurra sempre para o mesmo lado, como a água em um cano.
 
 7
-00:00:36,697 --> 00:00:45,466
-Tesla combinou duas correntes alternadas, uma ligeiramente atrasada em relação à outra. Juntas criam um ímã invisível que gira.
+00:00:34,289 --> 00:00:40,212
+A alternada vai e vem, como um serrote: não avança, mas mesmo assim corta a madeira.
 
 8
-00:00:45,666 --> 00:00:50,436
-Você coloca um pedaço de metal no meio e ele o persegue. Gira sem faíscas.
+00:00:40,412 --> 00:00:49,181
+Tesla combinou duas correntes alternadas, uma ligeiramente atrasada em relação à outra. Juntas criam um ímã invisível que gira.
 
 9
-00:00:51,336 --> 00:00:56,720
+00:00:49,381 --> 00:00:54,150
+Você coloca um pedaço de metal no meio e ele o persegue. Gira sem faíscas.
+
+10
+00:00:55,050 --> 00:01:00,435
 O motor impossível já funcionava. Por enquanto, só na cabeça dele.

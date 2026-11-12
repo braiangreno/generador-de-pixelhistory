@@ -27,7 +27,7 @@ def c5_s01_chicago_fair(t):
             cv = dark_cv
             glow(cv, split_x, 148, 48, GOLD, 0.75)
 
-    draw_chapter_header(cv, t, t0, 5, "LA CIUDAD BLANCA", "CHICAGO · 1893", border=GOLD)
+    draw_place_only(cv, "FERIA MUNDIAL DE CHICAGO · 1893", t, t0, border=GOLD)
 
     if t_c5_02 - 0.15 <= t < t_c5_03:
         # Dos sobres de presupuesto comparados (dentro de x=118..362)
@@ -39,12 +39,16 @@ def c5_s01_chicago_fair(t):
 
     if t >= t_c5_03:
         # Presidente en el palco apretando el botón dorado + contador 100.000 LÁMPARAS
-        d = ImageDraw.Draw(cv)
-        d.rectangle([196, 214, 284, 248], fill=(42, 32, 28, 255), outline=(*GOLD, 255))
-        btn_y = 211 if t >= t_bot else 208
-        d.rectangle([234, btn_y, 246, 214], fill=(*GOLD, 255))
         char(cv, "president_1893", 240, 246, t, scale=2,
              arms="work" if t >= t_bot else "up", look=1, mood="happy")
+
+        def _draw_podium(target_cv, fx, fy):
+            d = ImageDraw.Draw(target_cv)
+            d.rectangle([fx - 44, fy - 32, fx + 44, fy + 2], fill=(42, 32, 28, 255), outline=(*GOLD, 255))
+            btn_dy = -35 if t >= t_bot else -38
+            d.rectangle([fx - 6, fy + btn_dy, fx + 6, fy - 32], fill=(*GOLD, 255))
+
+        floor_prop(cv, _draw_podium, 240, 246)
 
         if t >= t_bot:
             cnt = int(round(100000 * clamp01((t - t_bot) / 1.4)))
@@ -66,10 +70,12 @@ def c5_s02_giant_egg_and_niagara(t):
     if t < t_c5_05:
         cv = bg("bg_electricity_pavilion_1893").copy()
         draw_place_only(cv, "PABELLÓN ELÉCTRICO · CHICAGO 1893", t, t0, border=TESLA_CYAN)
-        # Mesa central con el Huevo de Colón gigante girando sobre su punta
+        # Mesa central con patas y el Huevo de Colón gigante girando sobre su punta
         d = ImageDraw.Draw(cv)
+        d.rectangle([182, 216, 188, 234], fill=(74, 44, 24, 255), outline=(*INK, 255))
+        d.rectangle([292, 216, 298, 234], fill=(74, 44, 24, 255), outline=(*INK, 255))
         d.rectangle([176, 206, 304, 216], fill=(96, 58, 34, 255), outline=(*GOLD, 255))
-        draw_rotating_arrows(cv, 240, 232, 18, t * 4.2, color=TESLA_CYAN, pulse=0.85)
+        draw_rotating_arrows(cv, 240, 224, 14, t * 4.2, color=TESLA_CYAN, pulse=0.85)
         draw_copper_egg(cv, 240, 204, t, spin_speed=1.0, stand_p=1.0, scale=1.45)
 
         window(cv, 124, 52, 232, 42, fill=(18, 24, 38), border=GOLD)
@@ -157,9 +163,8 @@ def c5_s03_royalties_and_world_map(t):
 
     # Remate c5_09: El mapa del mundo se ilumina con corriente alterna; regalías futuras = US$0
     cv = bg("bg_night_grid_city").copy()
-    d = ImageDraw.Draw(cv)
-    for gx, gy in ((140, 165), (210, 152), (285, 160), (345, 172)):
-        glow(cv, gx, gy, 28, GOLD, 0.55)
+    for gx, gy in ((158, 165), (212, 152), (268, 160), (322, 172)):
+        glow(cv, gx, gy, 22, GOLD, 0.55)
     window(cv, 118, 54, 244, 76, fill=(14, 20, 34), border=TESLA_CYAN)
     draw_text(cv, "SISTEMA ELÉCTRICO MUNDIAL: 100% AC", 240, 64, "silk", 8, TESLA_CYAN, align="center")
     draw_text(cv, "REGALÍAS FUTURAS PARA TESLA:", 240, 84, "silk", 8, CREAM, align="center")
@@ -169,9 +174,10 @@ def c5_s03_royalties_and_world_map(t):
 
 
 SCENES = [
-    (TL.s("c5_01"), TL.s("c5_04"), c5_s01_chicago_fair),
+    (TL.s("c5_00") - 0.15, TL.s("c5_01"), make_card(5, ["LA CIUDAD", "BLANCA"], "1893 – 1897 · CHICAGO Y NIÁGARA")),
+    (TL.s("c5_01") - 0.15, TL.s("c5_04"), c5_s01_chicago_fair),
     (TL.s("c5_04"), TL.s("c5_06"), c5_s02_giant_egg_and_niagara),
-    (TL.s("c5_06"), TL.s("c6_01"), c5_s03_royalties_and_world_map),
+    (TL.s("c5_06"), TL.s("c6_00"), c5_s03_royalties_and_world_map),
 ]
 
 
@@ -181,9 +187,9 @@ def scenes():
 
 def music(A):
     """Acto 2 triunfal: La Ciudad Blanca en Chicago (1893), Niágara y el giro amargo de las regalías."""
-    t0 = TL.s("c5_01")
+    t0 = TL.s("c5_00")
     t_debt = TL.s("c5_06")
-    t_end = TL.s("c6_01")
+    t_end = TL.s("c6_00")
     A.add_pad(t0, t_debt - t0, [130.81, 196.0, 261.63, 329.63], amp=0.044)
     A.add_pad(t_debt, t_end - t_debt, [110.0, 164.81, 220.0, 261.63], amp=0.038)
 

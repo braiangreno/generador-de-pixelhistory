@@ -133,7 +133,7 @@ def crash(tr, t, vol=0.25):
 
 # --------------------------------------------------------------------------- secciones
 
-BPM_MUL = 1.12  # todo un poco más rápido (ritmo)
+BPM_MUL = 0.94  # ritmo pausado y cinematográfico para acompañar la voz
 
 
 def section(t0, t1, bpm, chords, style, beats_per_chord=4):
@@ -151,30 +151,33 @@ def section(t0, t1, bpm, chords, style, beats_per_chord=4):
 
 
 def st_mystery(tb, beat, b, notes, first, root, fade):
-    # arpegio lento 12.5% + bajo triángulo
-    for k in range(4):
-        m = notes[[0, 1, 2, 1][k]] + 12
-        note(music, tb + k * beat / 4, midi_hz(m), beat / 4 * 0.9, duty=0.125, vol=0.05 * fade, s=0.4)
+    # arpegio suave a mitad de velocidad + bajo triángulo cálido
+    for k in range(2):
+        m = notes[[0, 2][k]] + 12
+        note(music, tb + k * beat / 2, midi_hz(m), beat / 2 * 0.92, duty=0.25,
+             vol=0.026 * fade, a=0.025, s=0.45, r=0.12)
     if first:
-        note(music, tb, midi_hz(notes[0] - 12), beat * 3.8, "tri", vol=0.22 * fade, s=0.9, r=0.2)
+        note(music, tb, midi_hz(notes[0] - 12), beat * 3.8, "tri", vol=0.16 * fade, a=0.03, s=0.85, r=0.25)
     if b % 8 == 4:
-        note(music, tb, midi_hz(notes[2] + 24), beat * 2, duty=0.5, vol=0.03 * fade, a=0.15, s=0.7, r=0.5, vib=0.4)
+        note(music, tb, midi_hz(notes[2] + 12), beat * 2, duty=0.5, vol=0.018 * fade, a=0.18, s=0.65, r=0.5, vib=0.25)
 
 
 def st_build(tb, beat, b, notes, first, root, fade):
     st_mystery(tb, beat, b, notes, first, root, fade)
-    hat(music, tb + beat / 2, 0.035 * fade)
     if b % 2 == 0:
-        kick(music, tb, 0.18 * fade)
+        kick(music, tb, 0.075 * fade)
 
 
 def st_bright(tb, beat, b, notes, first, root, fade):
-    for k in range(4):
-        m = notes[[0, 2, 1, 2][k]] + 12
-        note(music, tb + k * beat / 4, midi_hz(m), beat / 4 * 0.8, duty=0.25, vol=0.05 * fade, s=0.45)
-    note(music, tb, midi_hz(notes[0] - 12 + (7 if b % 2 else 0)), beat * 0.9, "tri", vol=0.22 * fade, s=0.8)
-    kick(music, tb, 0.16 * fade) if b % 2 == 0 else snare(music, tb, 0.08 * fade)
-    hat(music, tb + beat / 2, 0.03 * fade)
+    for k in range(2):
+        m = notes[[0, 2][k]] + 12
+        note(music, tb + k * beat / 2, midi_hz(m), beat / 2 * 0.88, duty=0.5,
+             vol=0.028 * fade, a=0.02, s=0.45, r=0.10)
+    if b % 2 == 0:
+        note(music, tb, midi_hz(notes[0] - 12), beat * 1.85, "tri", vol=0.16 * fade, a=0.02, s=0.8, r=0.15)
+        kick(music, tb, 0.07 * fade)
+    elif b % 4 == 2:
+        snare(music, tb, 0.018 * fade)
 
 
 MELODY_SUMMER = [76, 79, 81, 79, 76, 74, 72, 74, 76, 76, 74, 72, 71, 72, 74, 72]
@@ -182,151 +185,143 @@ MELODY_SUMMER = [76, 79, 81, 79, 76, 74, 72, 74, 76, 76, 74, 72, 71, 72, 74, 72]
 
 def st_summer_lead(tb, beat, b, notes, first, root, fade):
     st_bright(tb, beat, b, notes, first, root, fade)
-    m = MELODY_SUMMER[b % len(MELODY_SUMMER)]
-    note(music, tb, midi_hz(m), beat * 0.85, duty=0.5, vol=0.045 * fade, s=0.6, vib=0.3)
+    if b % 2 == 0:
+        m = MELODY_SUMMER[(b // 2) % len(MELODY_SUMMER)]
+        note(music, tb, midi_hz(m - 12), beat * 1.7, duty=0.5, vol=0.022 * fade, a=0.04, s=0.55, r=0.2, vib=0.2)
 
 
 def st_rain(tb, beat, b, notes, first, root, fade):
     for k in range(2):
-        m = notes[[0, 2][k]] + 12 + (12 if b % 4 == 3 and k == 1 else 0)
-        note(music, tb + k * beat / 2, midi_hz(m), beat / 2 * 0.95, duty=0.125, vol=0.045 * fade, s=0.35, r=0.2)
+        m = notes[[0, 2][k]] + 12
+        note(music, tb + k * beat / 2, midi_hz(m), beat / 2 * 0.95, duty=0.25,
+             vol=0.025 * fade, a=0.03, s=0.35, r=0.2)
     if first:
-        note(music, tb, midi_hz(notes[0] - 12), beat * 3.9, "tri", vol=0.2 * fade, s=0.9, r=0.3)
+        note(music, tb, midi_hz(notes[0] - 12), beat * 3.9, "tri", vol=0.15 * fade, a=0.03, s=0.85, r=0.3)
     mel = [69, 72, 74, 72, 69, 67, 65, 67]
-    if b % 2 == 0:
-        note(music, tb, midi_hz(mel[(b // 2) % len(mel)]), beat * 1.8, duty=0.5, vol=0.03 * fade, a=0.08,
-             s=0.7, r=0.4, vib=0.5)
+    if b % 4 == 0:
+        note(music, tb, midi_hz(mel[(b // 4) % len(mel)] - 12), beat * 3.2, duty=0.5, vol=0.020 * fade, a=0.10,
+             s=0.65, r=0.4, vib=0.3)
 
 
 def st_puzzle(tb, beat, b, notes, first, root, fade):
-    seq = [0, 2, 1, 2, 0, 2, 1, 0]
-    for k in range(2):
-        m = notes[seq[(b * 2 + k) % 8]] + 12
-        note(music, tb + k * beat / 2, midi_hz(m), 0.07, duty=0.25, vol=0.06 * fade, s=0.2, r=0.02)
-    note(music, tb, midi_hz(notes[0] - 12 + (0 if b % 2 == 0 else 7)), beat * 0.45, "tri", vol=0.22 * fade,
-         s=0.6)
-    hat(music, tb + beat / 2, 0.025 * fade)
-    if b % 4 == 2:
-        snare(music, tb, 0.05 * fade)
+    seq = [0, 2, 1, 2]
+    m = notes[seq[b % 4]] + 12
+    note(music, tb, midi_hz(m), beat * 0.65, duty=0.5, vol=0.026 * fade, a=0.02, s=0.35, r=0.08)
+    if b % 2 == 0:
+        note(music, tb, midi_hz(notes[0] - 12), beat * 1.8, "tri", vol=0.15 * fade, a=0.02, s=0.65, r=0.15)
 
 
 def st_triumph(tb, beat, b, notes, first, root, fade):
     st_bright(tb, beat, b, notes, first, root, fade)
     if first:
         for m in notes:
-            note(music, tb, midi_hz(m + 12), beat * 3.5, duty=0.5, vol=0.03 * fade, a=0.02, s=0.7, r=0.3)
-    hat(music, tb + beat / 4 * 3, 0.02 * fade)
+            note(music, tb, midi_hz(m), beat * 3.6, duty=0.5, vol=0.020 * fade, a=0.06, s=0.65, r=0.35)
 
 
 def st_winter(tb, beat, b, notes, first, root, fade):
     if first:
         for m in notes:
-            note(music, tb, midi_hz(m + 12), beat * 3.9, duty=0.5, vol=0.022 * fade, a=0.4, s=0.8, r=0.8, vib=0.2)
-        note(music, tb, midi_hz(notes[0] - 12), beat * 3.9, "tri", vol=0.18 * fade, a=0.2, s=0.9, r=0.6)
-    if b % 2 == 1:
-        note(music, tb, midi_hz(notes[2] + 24), beat * 0.4, duty=0.125, vol=0.025 * fade, s=0.3, r=0.3)
+            note(music, tb, midi_hz(m), beat * 3.9, duty=0.5, vol=0.018 * fade, a=0.4, s=0.75, r=0.8, vib=0.15)
+        note(music, tb, midi_hz(notes[0] - 12), beat * 3.9, "tri", vol=0.15 * fade, a=0.2, s=0.85, r=0.6)
+    if b % 4 == 2:
+        note(music, tb, midi_hz(notes[2] + 12), beat * 0.8, duty=0.25, vol=0.016 * fade, a=0.03, s=0.3, r=0.3)
 
 
-def sting(t, notes, inst_duty=0.5, vol=0.06, step=0.14, hold=1.2):
+def sting(t, notes, inst_duty=0.5, vol=0.04, step=0.14, hold=1.2):
     for i, m in enumerate(notes):
         last = i == len(notes) - 1
-        note(music, t + i * step, midi_hz(m), hold if last else step * 0.9, duty=inst_duty, vol=vol,
-             s=0.7, r=0.4 if last else 0.03, vib=0.4 if last else 0)
+        note(music, t + i * step, midi_hz(m), hold if last else step * 0.9, duty=inst_duty, vol=vol * 0.72,
+             a=0.015, s=0.65, r=0.4 if last else 0.04, vib=0.25 if last else 0)
 
 
-def sand_hiss(t0, dur=1.8, vol=0.055):
-    """El sonido firma de Dune: siseo de arena desplazándose de izquierda a derecha."""
+def sand_hiss(t0, dur=1.8, vol=0.025):
+    """Siseo suave ambiental."""
     n = int(dur * SR)
     if n <= 0:
         return
     x = rng.standard_normal(n)
-    # Filtro pasa-banda suave tipo arena fina deslizándose
     y = np.convolve(x, np.ones(14) / 14, mode="same") - np.convolve(x, np.ones(60) / 60, mode="same")
     tt = np.arange(n) / SR
     env = np.sin(np.linspace(0, np.pi, n)) ** 1.4
     shimmer = 0.75 + 0.25 * np.sin(2 * np.pi * 3.2 * tt)
-    sfx.add(t0, y * env * shimmer * 2.4, vol)
-    # Sub-pulso grave muy sutil bajo la arena
-    sub = np.sin(2 * np.pi * 55 * tt) * env * 0.35
-    sfx.add(t0, sub, vol * 0.6)
+    sfx.add(t0, y * env * shimmer * 1.6, vol)
 
 
 def add_note(t, dur, f, wave="pulse25", amp=0.05, vibrato=0.0):
-    inst = "tri" if wave == "triangle" else "pulse"
-    duty = 0.25 if wave == "pulse25" else 0.5
-    note(music, t, f, dur, inst=inst, vol=amp, duty=duty, vib=0.35 if vibrato else 0.0)
+    # Desactivamos los arpegios secundarios de chNN.music para que no choquen con compose()
+    return
 
 
 def add_pad(t, dur, freqs, amp=0.035):
     if dur <= 0:
         return
     for f in freqs:
-        note(music, t, f, dur, inst="pulse", vol=amp * 0.45, duty=0.5, a=0.12, d=0.2, s=0.75, r=0.25)
+        note(music, t, f, dur, inst="pulse", vol=amp * 0.22, duty=0.5, a=0.22, d=0.25, s=0.70, r=0.35)
 
 
 def add_bass(t, dur, f, amp=0.05):
     if dur <= 0:
         return
-    note(music, t, f, dur, inst="tri", vol=amp, a=0.01, d=0.06, s=0.8, r=0.08)
+    note(music, t, f, dur, inst="tri", vol=amp * 0.45, a=0.03, d=0.08, s=0.75, r=0.12)
 
 
 def fx_pop(t, amp=0.08):
-    pop_sfx(t, f0=540, vol=amp)
+    pop_sfx(t, f0=420, vol=amp * 0.35)
 
 
 def fx_thud(t, amp=0.09):
-    stamp_hit(t, vol=amp)
+    stamp_hit(t, vol=amp * 0.35)
 
 
 def fx_chime(t, amp=0.10):
-    join_jingle(t, vol=amp * 0.65)
+    join_jingle(t, vol=amp * 0.26)
 
 
 def fx_sweep(t, dur=0.5, f0=150, f1=440, amp=0.07):
-    whoosh(t, dur=dur, vol=amp * 0.85)
+    whoosh(t, dur=dur, vol=amp * 0.32)
 
 
 def fx_sparkle(t, amp=0.10):
-    coin(t, vol=amp * 0.65)
+    coin(t, vol=amp * 0.25)
 
 
 def compose():
     # Apertura (0:00 -> Cap 1): pulso de corriente alterna y parque de Budapest
     section(0.0, TL.s("s03"), 88, [("A", "m"), ("F", "M"), ("C", "M"), ("E", "M")], st_mystery)
-    section(TL.s("s03"), TL.s("c1_01"), 96, [("A", "m"), ("F", "M"), ("C", "M"), ("G", "M")], st_build)
+    section(TL.s("s03"), TL.s("c1_00"), 96, [("A", "m"), ("F", "M"), ("C", "M"), ("G", "M")], st_build)
 
     # Capítulo 1 (Hijo de la tormenta -> Graz): misterio nocturno e infancia
-    section(TL.s("c1_01"), TL.s("c2_01"), 94, [("A", "m"), ("D", "m"), ("F", "M"), ("E", "M")], st_rain)
+    section(TL.s("c1_00"), TL.s("c2_00"), 94, [("A", "m"), ("D", "m"), ("F", "M"), ("E", "M")], st_rain)
 
     # Capítulo 2 (El dibujo en la arena + La Pizarra 1: Dos corrientes)
-    section(TL.s("c2_01"), TL.s("c2_04"), 96, [("A", "m"), ("F", "M"), ("C", "M"), ("G", "M")], st_build)
-    section(TL.s("c2_04"), TL.s("c3_01"), 106, [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], st_puzzle)
+    section(TL.s("c2_00"), TL.s("c2_04"), 96, [("A", "m"), ("F", "M"), ("C", "M"), ("G", "M")], st_build)
+    section(TL.s("c2_04"), TL.s("c3_00"), 106, [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], st_puzzle)
 
     # Capítulo 3 (Dos dólares por día -> El Huevo de Colón)
-    section(TL.s("c3_01"), TL.s("c3_06"), 92, [("D", "m"), ("A", "m"), ("Bb", "M"), ("A", "M")], st_winter)
-    section(TL.s("c3_06"), TL.s("c4_01"), 104, [("D", "m"), ("F", "M"), ("C", "M"), ("G", "M")], st_triumph)
+    section(TL.s("c3_00"), TL.s("c3_06"), 92, [("D", "m"), ("A", "m"), ("Bb", "M"), ("A", "M")], st_winter)
+    section(TL.s("c3_06"), TL.s("c4_00"), 104, [("D", "m"), ("F", "M"), ("C", "M"), ("G", "M")], st_triumph)
 
     # Capítulo 4 (La guerra de las corrientes + La Pizarra 2: El Transformador + Luz en las manos)
-    section(TL.s("c4_01"), TL.s("c4_03"), 98, [("E", "m"), ("C", "M"), ("D", "M"), ("B", "m")], st_build)
+    section(TL.s("c4_00"), TL.s("c4_03"), 98, [("E", "m"), ("C", "M"), ("D", "M"), ("B", "m")], st_build)
     section(TL.s("c4_03"), TL.s("c4_07"), 108, [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], st_puzzle)
-    section(TL.s("c4_07"), TL.s("c5_01"), 104, [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], st_summer_lead)
+    section(TL.s("c4_07"), TL.s("c5_00"), 104, [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], st_summer_lead)
 
     # Capítulo 5 (La Ciudad Blanca 1893 + Niágara + Regalías)
-    section(TL.s("c5_01"), TL.s("c5_06"), 108, [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], st_triumph)
-    section(TL.s("c5_06"), TL.s("c6_01"), 90, [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], st_rain)
+    section(TL.s("c5_00"), TL.s("c5_06"), 108, [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], st_triumph)
+    section(TL.s("c5_06"), TL.s("c6_00"), 90, [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], st_rain)
 
     # Capítulo 6 (El mago + La Pizarra 3: Resonancia + Barco radiocontrolado)
-    section(TL.s("c6_01"), TL.s("c6_04"), 100, [("E", "m"), ("G", "M"), ("D", "M"), ("A", "M")], st_bright)
+    section(TL.s("c6_00"), TL.s("c6_04"), 100, [("E", "m"), ("G", "M"), ("D", "M"), ("A", "M")], st_bright)
     section(TL.s("c6_04"), TL.s("c6_06"), 108, [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], st_puzzle)
-    section(TL.s("c6_06"), TL.s("c7_01"), 104, [("F", "M"), ("C", "M"), ("G", "M"), ("A", "m")], st_triumph)
+    section(TL.s("c6_06"), TL.s("c7_00"), 104, [("F", "M"), ("C", "M"), ("G", "M"), ("A", "m")], st_triumph)
 
     # Capítulo 7 (La torre: Colorado Springs + Wardenclyffe + La Pizarra 4: Energía sin cables)
-    section(TL.s("c7_01"), TL.s("c7_07"), 98, [("D", "m"), ("Bb", "M"), ("F", "M"), ("A", "M")], st_build)
-    section(TL.s("c7_07"), TL.s("c8_01"), 106, [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], st_puzzle)
+    section(TL.s("c7_00"), TL.s("c7_07"), 98, [("D", "m"), ("Bb", "M"), ("F", "M"), ("A", "M")], st_build)
+    section(TL.s("c7_07"), TL.s("c8_00"), 106, [("C", "M"), ("G", "M"), ("A", "m"), ("F", "M")], st_puzzle)
 
-    # Capítulo 8 (El hombre de las palomas -> El Tesla -> Match Cut final)
-    section(TL.s("c8_01"), TL.s("c8_05"), 84, [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], st_winter)
-    section(TL.s("c8_05"), TL.e("c8_09") + 0.5, 102, [("A", "m"), ("F", "M"), ("C", "M"), ("G", "M")], st_triumph)
+    # Capítulo 8 (El hombre de las palomas -> El Tesla -> Match Cut final -> CTA comentarios)
+    section(TL.s("c8_00"), TL.s("c8_05"), 84, [("A", "m"), ("F", "M"), ("D", "m"), ("E", "M")], st_winter)
+    section(TL.s("c8_05"), TL.e("c8_10") + 0.5, 102, [("A", "m"), ("F", "M"), ("C", "M"), ("G", "M")], st_triumph)
 
 
 # --------------------------------------------------------------------------- efectos
@@ -477,47 +472,48 @@ def robot_beep(t, vol=0.05):
 
 
 def design_sfx():
-    # Apertura: zumbido de 60 Hz de la red eléctrica + trazado en la arena de Budapest
-    hum_1958(0.05, TL.e("s02"), vol=0.025)
-    chalk(TL.s("s04"), TL.e("s04"), vol=0.038)
-    sting(TL.s("s06"), [57, 64, 69, 72, 76], vol=0.06, step=0.14, hold=1.6)
+    # Apertura: zumbido sutil de red eléctrica + trazado suave en la arena de Budapest
+    hum_1958(0.05, TL.e("s02"), vol=0.009)
+    chalk(TL.s("s04"), TL.e("s04"), vol=0.014)
+    sting(TL.s("s06"), [57, 64, 69, 72, 76], vol=0.035, step=0.14, hold=1.6)
 
-    # Cap 1: lluvia y truenos en Smiljan + tiza de "IMPOSIBLE" en Graz
-    rain_amb(TL.s("c1_01"), TL.e("c1_02"), vol=0.032)
-    chalk(TL.s("c1_06"), TL.s("c1_06") + 1.8, vol=0.042)
+    # Cap 1: lluvia suave en Smiljan + tiza muy sutil en Graz
+    rain_amb(TL.s("c1_01"), TL.e("c1_02"), vol=0.012)
+    chalk(TL.s("c1_06"), TL.s("c1_06") + 1.4, vol=0.014)
 
-    # Cap 2: La Pizarra 1 (tiza + giro magnético)
-    chalk(TL.s("c2_05"), TL.s("c2_06") + 2.5, vol=0.035)
-    hum_1958(TL.s("c2_07"), TL.e("c2_08"), vol=0.024)
+    # Cap 2: La Pizarra 1 (tiza suave + giro magnético sutil)
+    chalk(TL.s("c2_05"), TL.s("c2_06") + 2.0, vol=0.012)
+    hum_1958(TL.s("c2_07"), TL.e("c2_08"), vol=0.009)
 
-    # Cap 3: invierno en Nueva York + el Huevo de Colón girando sobre la mesa
-    wind(TL.s("c3_04"), TL.e("c3_05"), vol=0.028)
-    hum_1958(TL.s("c3_07"), TL.e("c3_08"), vol=0.026)
+    # Cap 3: brisa de invierno en Nueva York + Huevo de Colón
+    wind(TL.s("c3_04"), TL.e("c3_05"), vol=0.011)
+    hum_1958(TL.s("c3_07"), TL.e("c3_08"), vol=0.010)
 
     # Cap 4: La Pizarra 2 (El Transformador) + tubos de alta frecuencia
-    chalk(TL.s("c4_04"), TL.s("c4_05") + 2.5, vol=0.035)
-    hum_1958(TL.s("c4_08"), TL.e("c4_09"), vol=0.025)
+    chalk(TL.s("c4_04"), TL.s("c4_05") + 2.0, vol=0.012)
+    hum_1958(TL.s("c4_08"), TL.e("c4_09"), vol=0.009)
 
     # Cap 5: encendido de las 100.000 lámparas en Chicago + cataratas del Niágara
-    join_jingle(TL.word("c5_03", "botón"), vol=0.065)
-    rain_amb(TL.s("c5_05"), TL.e("c5_05"), vol=0.028)
+    join_jingle(TL.word("c5_03", "botón"), vol=0.028)
+    rain_amb(TL.s("c5_05"), TL.e("c5_05"), vol=0.011)
 
-    # Cap 6: La Pizarra 3 (Resonancia) + pulsos de radio en Madison Square Garden
-    chalk(TL.s("c6_04"), TL.e("c6_05"), vol=0.035)
+    # Cap 6: La Pizarra 3 (Resonancia) + pulsos de radio suaves en Madison Square Garden
+    chalk(TL.s("c6_04"), TL.e("c6_05"), vol=0.012)
     for k in range(3):
-        blip(TL.s("c6_07") + 1.2 + k * 0.25, 1320, 0.06, 0.045)
+        blip(TL.s("c6_07") + 1.2 + k * 0.25, 980, 0.05, 0.018)
 
     # Cap 7: rayos de Colorado Springs + 3 pitidos de Marconi ("S" = · · ·) + La Pizarra 4
-    hum_1958(TL.s("c7_01"), TL.e("c7_01"), vol=0.028)
-    crt_off(TL.word("c7_02", "oscuras"), vol=0.065)
+    hum_1958(TL.s("c7_01"), TL.e("c7_01"), vol=0.010)
+    crt_off(TL.word("c7_02", "oscuras"), vol=0.026)
     for k in range(3):
-        blip(TL.s("c7_06") + 1.0 + k * 0.22, 1080, 0.07, 0.05)
-    chalk(TL.s("c7_07"), TL.e("c7_08"), vol=0.035)
+        blip(TL.s("c7_06") + 1.0 + k * 0.22, 880, 0.06, 0.022)
+    chalk(TL.s("c7_07"), TL.e("c7_08"), vol=0.012)
 
-    # Cap 8: invierno en la habitación 3327 + motores de inducción + match cut final
-    wind(TL.s("c8_04"), TL.e("c8_04"), vol=0.026)
-    hum_1958(TL.s("c8_06"), TL.e("c8_07"), vol=0.024)
-    sting(TL.s("c8_09"), [57, 64, 69, 73, 76, 81], vol=0.065, step=0.14, hold=2.0)
+    # Cap 8: invierno en la habitación 3327 + motores de inducción + match cut final + CTA comentarios
+    wind(TL.s("c8_04"), TL.e("c8_04"), vol=0.011)
+    hum_1958(TL.s("c8_06"), TL.e("c8_07"), vol=0.009)
+    sting(TL.s("c8_09"), [57, 64, 69, 73, 76, 81], vol=0.038, step=0.14, hold=2.0)
+    join_jingle(TL.s("c8_10"), vol=0.025)
 
 
 # --------------------------------------------------------------------------- voz y mezcla
@@ -566,19 +562,18 @@ def lowpass(x, k=3):
     return np.convolve(x, np.ones(k) / k, mode="same")
 
 
-CARD_IDS = ["c1_01", "c2_01", "c3_01", "c4_01", "c5_01", "c6_01", "c7_01", "c8_01"]
+CARD_IDS = ["c1_00", "c2_00", "c3_00", "c4_00", "c5_00", "c6_00", "c7_00", "c8_00"]
 
 
 def card_audio():
-    """Sonido de cada transición de capítulo (1..8): barrido de las 4 flechas giratorias y tipeo del lugar."""
+    """Sonido suave de cada transición de capítulo (1..8): acorde cálido sin pitidos de tipeo."""
     for lid in CARD_IDS:
         if lid not in TL.lines:
             continue
         t0 = TL.s(lid) - 0.15
-        whoosh(t0, 0.45, 0.05)
-        text_blips(TL.s(lid), 16, 28, 0.018)
-        sting(t0 + 0.25, [57, 64, 69, 76], vol=0.048, step=0.10, hold=1.0)
-        note(music, t0 + 0.25, midi_hz(45), 1.8, "tri", vol=0.20, s=0.9, r=0.5)
+        whoosh(t0, 0.42, 0.022)
+        sting(t0 + 0.20, [57, 64, 69, 76], vol=0.028, step=0.12, hold=1.1)
+        note(music, t0 + 0.20, midi_hz(45), 1.6, "tri", vol=0.12, a=0.04, s=0.85, r=0.5)
 
 
 def chapter_hooks():
@@ -605,13 +600,18 @@ def main():
     card_audio()
     chapter_hooks()
     vo = build_voice()
-    # ducking: la música baja cuando habla el narrador
+    # Filtro pasa-bajos cálido para redondear armónicos agudos del chiptune y dejar libre la banda de la voz
+    m_warm = lowpass(lowpass(music.buf, 8), 5)
+    s_warm = lowpass(sfx.buf, 4)
+
+    # Ducking profundo: cuando habla el narrador, la música y los efectos bajan suavemente para acompañar sin competir
     env = envelope(vo, 0.08)
-    duck = np.clip(env / 0.05, 0, 1)
-    duck = movavg(duck, 0.25 * SR)
-    m = lowpass(music.buf, 2) * (1 - 0.45 * duck)
-    s = sfx.buf * 0.9
-    mix = vo * 0.95 + m * 0.6 + s
+    duck = np.clip(env / 0.04, 0, 1)
+    duck = movavg(duck, 0.32 * SR)
+
+    m_ducked = m_warm * (1.0 - 0.72 * duck) * 0.36
+    s_ducked = s_warm * (1.0 - 0.55 * duck) * 0.42
+    mix = vo * 0.98 + m_ducked + s_ducked
     # fade final
     nf = int(1.5 * SR)
     end = int(TL.total * SR)
@@ -623,9 +623,10 @@ def main():
         mix *= 0.97 / peak
     out = os.path.join(ROOT, "audio")
     write_wav(os.path.join(out, "mix.wav"), mix)
-    write_wav(os.path.join(out, "music_stem.wav"), (m * 0.6)[:end])
-    write_wav(os.path.join(out, "sfx_stem.wav"), s[:end])
-    write_wav(os.path.join(out, "voice_stem.wav"), (vo * 0.95)[:end])
+    # Guardamos los stems ya suavizados (sin el ducking de ES) para que mix_multilingual aplique el ducking de EN y PT
+    write_wav(os.path.join(out, "music_stem.wav"), (m_warm * 0.36)[:end])
+    write_wav(os.path.join(out, "sfx_stem.wav"), (s_warm * 0.42)[:end])
+    write_wav(os.path.join(out, "voice_stem.wav"), (vo * 0.98)[:end])
     print("audio ok", round(TL.total, 2), "peak", round(float(peak), 3))
 
 

@@ -1,35 +1,39 @@
 1
-00:00:00,150 --> 00:00:05,612
-Seu motor chegou aos ouvidos de George Westinghouse, um empresário que apostava na alternada.
+00:00:00,150 --> 00:00:03,842
+CAPÍTULO 4 — A GUERRA DAS CORRENTES
 
 2
-00:00:05,832 --> 00:00:13,909
-Pagou para usar suas patentes e lhe prometeu dois dólares e meio por cada cavalo-vapor vendido. Lembre-se desse número.
+00:00:04,192 --> 00:00:09,654
+Seu motor chegou aos ouvidos de George Westinghouse, um empresário que apostava na alternada.
 
 3
-00:00:14,359 --> 00:00:17,282
-Por que tanta briga? De volta ao quadro-negro.
+00:00:09,854 --> 00:00:17,931
+Pagou para usar suas patentes e lhe prometeu dois dólares e meio por cada cavalo-vapor vendido. Lembre-se desse número.
 
 4
-00:00:17,482 --> 00:00:30,789
-Os cabos perdem energia em forma de calor. Quanto mais corrente passa, mais eles perdem. Mas a mesma energia pode viajar como muita corrente em baixa tensão… ou pouca corrente em alta tensão.
+00:00:18,381 --> 00:00:21,304
+Por que tanta briga? De volta ao quadro-negro.
 
 5
-00:00:30,989 --> 00:00:38,297
-Com um transformador, a alternada sobe a tensão para viajar longe. E a reduz antes de entrar na sua casa.
+00:00:21,504 --> 00:00:34,812
+Os cabos perdem energia em forma de calor. Quanto mais corrente passa, mais eles perdem. Mas a mesma energia pode viajar como muita corrente em baixa tensão… ou pouca corrente em alta tensão.
 
 6
-00:00:38,497 --> 00:00:45,266
-A contínua daquela época não conseguia. Precisava de uma usina a cada quilômetro e meio, mais ou menos.
+00:00:35,012 --> 00:00:42,319
+Com um transformador, a alternada sobe a tensão para viajar longe. E a reduz antes de entrar na sua casa.
 
 7
-00:00:45,466 --> 00:00:52,697
-O lado de Edison respondeu com medo: eletrocutavam animais em público para mostrar que a alternada matava.
+00:00:42,519 --> 00:00:49,289
+A contínua daquela época não conseguia. Precisava de uma usina a cada quilômetro e meio, mais ou menos.
 
 8
-00:00:52,897 --> 00:01:06,436
-Tesla respondeu com espetáculo: deixava passar pelo corpo correntes de altíssima frequência e acendia lâmpadas com as mãos. Isso funcionava só com frequências altíssimas, e ainda assim era perigoso.
+00:00:49,489 --> 00:00:56,719
+O lado de Edison respondeu com medo: eletrocutavam animais em público para mostrar que a alternada matava.
 
 9
-00:01:07,336 --> 00:01:12,874
+00:00:56,919 --> 00:01:10,458
+Tesla respondeu com espetáculo: deixava passar pelo corpo correntes de altíssima frequência e acendia lâmpadas com as mãos. Isso funcionava só com frequências altíssimas, e ainda assim era perigoso.
+
+10
+00:01:11,358 --> 00:01:16,896
 Edison dizia que a alternada matava. Tesla a usava para iluminar as próprias mãos.

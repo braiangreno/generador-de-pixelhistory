@@ -42,6 +42,13 @@
     "sub": "Esta es la historia de Nikola Tesla. Y de cómo llega la luz a tu casa."
   },
   {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Capítulo uno. Hijo de la tormenta.",
+    "sub": "CAPÍTULO 1 — HIJO DE LA TORMENTA"
+  },
+  {
     "id": "c1_01",
     "ch": 1,
     "pause": 0.4,
@@ -89,6 +96,13 @@
     "pause": 1.0,
     "speak": "Tesla se pasó años tratando de demostrar lo contrario.",
     "sub": "Tesla se pasó años tratando de demostrar lo contrario."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Capítulo dos. El dibujo en la arena.",
+    "sub": "CAPÍTULO 2 — EL DIBUJO EN LA ARENA"
   },
   {
     "id": "c2_01",
@@ -154,6 +168,13 @@
     "sub": "El motor imposible ya funcionaba. Por ahora, solo en su cabeza."
   },
   {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Capítulo tres. Dos dólares por día.",
+    "sub": "CAPÍTULO 3 — DOS DÓLARES POR DÍA"
+  },
+  {
     "id": "c3_01",
     "ch": 3,
     "pause": 0.4,
@@ -215,6 +236,13 @@
     "pause": 1.0,
     "speak": "Colón tuvo que romper el huevo. Tesla lo hizo bailar.",
     "sub": "Colón tuvo que romper el huevo. Tesla lo hizo bailar."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Capítulo cuatro. La guerra de las corrientes.",
+    "sub": "CAPÍTULO 4 — LA GUERRA DE LAS CORRIENTES"
   },
   {
     "id": "c4_01",
@@ -280,6 +308,13 @@
     "sub": "Edison decía que la alterna mataba. Tesla la usaba para iluminarse las manos."
   },
   {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Capítulo cinco. La ciudad blanca.",
+    "sub": "CAPÍTULO 5 — LA CIUDAD BLANCA"
+  },
+  {
     "id": "c5_01",
     "ch": 5,
     "pause": 0.4,
@@ -341,6 +376,13 @@
     "pause": 1.0,
     "speak": "Su sistema conquistó el mundo. Y él ya no cobraba nada por eso.",
     "sub": "Su sistema conquistó el mundo. Y él ya no cobraba nada por eso."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "Capítulo seis. El mago.",
+    "sub": "CAPÍTULO 6 — EL MAGO"
   },
   {
     "id": "c6_01",
@@ -406,6 +448,13 @@
     "sub": "Hoy le decimos control remoto. Y lo usamos para cambiar de canal."
   },
   {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Capítulo siete. La torre.",
+    "sub": "CAPÍTULO 7 — LA TORRE"
+  },
+  {
     "id": "c7_01",
     "ch": 7,
     "pause": 0.4,
@@ -469,6 +518,13 @@
     "sub": "Su energía sin cables existe. Alcanza unos centímetros y carga tu teléfono."
   },
   {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Capítulo ocho. El hombre de las palomas.",
+    "sub": "CAPÍTULO 8 — EL HOMBRE DE LAS PALOMAS"
+  },
+  {
     "id": "c8_01",
     "ch": 8,
     "pause": 0.45,
@@ -527,8 +583,15 @@
   {
     "id": "c8_09",
     "ch": 8,
-    "pause": 1.2,
+    "pause": 1.0,
     "speak": "Tuvieron razón las dos.",
     "sub": "Tuvieron razón las dos."
+  },
+  {
+    "id": "c8_10",
+    "ch": 8,
+    "pause": 1.2,
+    "speak": "Y ahora te leemos en los comentarios: ¿qué historia te gustaría ver en el próximo episodio?",
+    "sub": "Y ahora te leemos en los comentarios: ¿qué historia te gustaría ver en el próximo episodio?"
   }
 ]

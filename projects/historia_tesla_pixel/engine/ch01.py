@@ -4,25 +4,50 @@ from PIL import Image, ImageDraw
 from common import *  # noqa
 
 
-def draw_candle(cv, x, y, t, scale=1):
-    """Vela encendida con halo cálido ámbar (Acto 1: la luz de la vela)."""
-    d = ImageDraw.Draw(cv)
-    flick = int(round(math.sin(t * 13.0 + x) * 2))
-    glow(cv, x, y - 10 * scale + flick, 26 * scale, (255, 196, 84), 0.45)
-    # Palmatoria y cuerpo de cera
-    d.rectangle([x - 5 * scale, y, x + 5 * scale, y + 2 * scale], fill=(184, 142, 64, 255), outline=(*INK, 255))
-    d.rectangle([x - 3 * scale, y - 9 * scale, x + 3 * scale, y], fill=(244, 236, 214, 255), outline=(*INK, 255))
-    # Llama
-    d.polygon([
-        (x, y - 16 * scale + flick),
-        (x - 3 * scale, y - 10 * scale),
-        (x + 3 * scale, y - 10 * scale),
-    ], fill=(255, 204, 72, 255))
-    d.polygon([
-        (x, y - 14 * scale + flick),
-        (x - 1 * scale, y - 10 * scale),
-        (x + 1 * scale, y - 10 * scale),
-    ], fill=(255, 248, 210, 255))
+def draw_candle(cv, x, feet=250, t=0.0, scale=1):
+    """Vela encendida en su palmatoria apoyada firmemente sobre una mesa de madera con patas hasta el suelo."""
+    if feet < 210:
+        feet = 250
+
+    def _draw(canvas, cx, fy):
+        d = ImageDraw.Draw(canvas)
+        top_y = fy - 42 * scale
+        # Sombra de la mesa sobre el piso de madera
+        shadow_ellipse(canvas, cx, fy, 22 * scale, 4 * scale, 85)
+        # Patas de madera maciza apoyadas en el suelo (fy)
+        leg_col = (78, 48, 26, 255)
+        d.rectangle([cx - 16 * scale, top_y + 5 * scale, cx - 11 * scale, fy], fill=leg_col, outline=(*INK, 255))
+        d.rectangle([cx + 11 * scale, top_y + 5 * scale, cx + 16 * scale, fy], fill=leg_col, outline=(*INK, 255))
+        # Cajón / faldón de la mesa
+        d.rectangle([cx - 18 * scale, top_y + 4 * scale, cx + 18 * scale, top_y + 14 * scale],
+                    fill=(98, 62, 34, 255), outline=(*INK, 255))
+        d.rectangle([cx - 2 * scale, top_y + 8 * scale, cx + 2 * scale, top_y + 10 * scale],
+                    fill=(184, 142, 64, 255))
+        # Tapa superior de la mesa donde apoya la vela
+        d.rectangle([cx - 22 * scale, top_y, cx + 22 * scale, top_y + 5 * scale],
+                    fill=(128, 84, 46, 255), outline=(*INK, 255))
+        d.line([(cx - 20 * scale, top_y + 1), (cx + 20 * scale, top_y + 1)], fill=(162, 110, 64, 255))
+
+        # Vela y palmatoria apoyadas directamente sobre top_y
+        flick = int(round(math.sin(t * 13.0 + cx) * 2))
+        glow(canvas, cx, top_y - 12 * scale + flick, 26 * scale, (255, 196, 84), 0.45)
+        d.rectangle([cx - 6 * scale, top_y - 2 * scale, cx + 6 * scale, top_y],
+                    fill=(184, 142, 64, 255), outline=(*INK, 255))
+        d.rectangle([cx - 3 * scale, top_y - 11 * scale, cx + 3 * scale, top_y - 2 * scale],
+                    fill=(244, 236, 214, 255), outline=(*INK, 255))
+        # Llama
+        d.polygon([
+            (cx, top_y - 18 * scale + flick),
+            (cx - 3 * scale, top_y - 12 * scale),
+            (cx + 3 * scale, top_y - 12 * scale),
+        ], fill=(255, 204, 72, 255))
+        d.polygon([
+            (cx, top_y - 16 * scale + flick),
+            (cx - 1 * scale, top_y - 12 * scale),
+            (cx + 1 * scale, top_y - 12 * scale),
+        ], fill=(255, 248, 210, 255))
+
+    floor_prop(cv, _draw, x, feet)
 
 
 def s01_screen_and_grid(t):
@@ -188,9 +213,10 @@ def s03_budapest_opening(t):
 
     # Palito y círculo con cuatro flechas en la arena junto a sus pies / centro
     if t >= t_palito - 0.1:
-        d = ImageDraw.Draw(cv)
-        # Palito en la mano derecha del inventor
-        d.line([(int(x_inv) + 18, 212), (int(x_inv) + 38, 236)], fill=(168, 118, 62, 255), width=2)
+        def _draw_stick(canvas, cx, fy):
+            d_st = ImageDraw.Draw(canvas)
+            d_st.line([(cx + 14, fy - 38), (cx + 30, fy - 14)], fill=(168, 118, 62, 255), width=2)
+        floor_prop(cv, _draw_stick, x_inv, 250)
         draw_p = clamp01((t - t_dibujo + 0.2) / 1.4)
         # Ventana lupa mostrando el dibujo en la arena mientras lo traza
         a, dy = pop(t, t_palito)
@@ -222,7 +248,7 @@ def c1_s01_smiljan_birth(t):
         if flash > 0:
             cv = grade(cv, mul=(1.35, 1.35, 1.55), add=(28, 32, 48))
             draw_tesla_sparks(cv, 260, 28, t, rays=3, max_len=95, color=TESLA_CYAN)
-        draw_chapter_header(cv, t, t0, 1, "HIJO DE LA TORMENTA", "SMILJAN, HOY CROACIA", border=AMBER)
+        draw_place_only(cv, "SMILJAN, HOY CROACIA", t, t0, border=AMBER)
         return vignette(cv, 0.4)
 
     # Interior a la luz de una vela: partera, madre y bebé
@@ -231,8 +257,8 @@ def c1_s01_smiljan_birth(t):
     if flash > 0:
         cv = grade(cv, mul=(1.3, 1.35, 1.55), add=(24, 28, 44))
 
-    draw_chapter_header(cv, t, t0, 1, "HIJO DE LA TORMENTA", "SMILJAN · 1856", border=AMBER)
-    draw_candle(cv, 240, 168, t, scale=1)
+    draw_place_only(cv, "SMILJAN · 1856", t, t0, border=AMBER)
+    draw_candle(cv, 240, 250, t, scale=1)
 
     # Partera a la izquierda y madre a la derecha
     mother_holds = t >= t_madre - 0.1
@@ -245,18 +271,21 @@ def c1_s01_smiljan_birth(t):
          look=-1, mood="happy" if t >= t_luz - 0.2 else "neutral",
          talk=talk_v(t, t >= t_madre))
 
-    # Bebé envuelto en manta clara
-    bx = 296 if mother_holds else 176
-    by = 204
-    d = ImageDraw.Draw(cv)
-    d.ellipse([bx - 10, by - 6, bx + 10, by + 6], fill=(244, 240, 228, 255), outline=(*INK, 255))
-    d.ellipse([bx - 7, by - 4, bx - 1, by + 2], fill=(242, 196, 160, 255))
+    # Bebé envuelto en manta clara en brazos de la partera o de la madre
+    bx = 300 if mother_holds else 172
+    def _draw_baby(canvas, cx, fy):
+        by = fy - 46
+        d_b = ImageDraw.Draw(canvas)
+        d_b.ellipse([cx - 10, by - 6, cx + 10, by + 6], fill=(244, 240, 228, 255), outline=(*INK, 255))
+        d_b.ellipse([cx - 7, by - 4, cx - 1, by + 2], fill=(242, 196, 160, 255))
+        if t >= t_luz - 0.25:
+            sparkle(canvas, cx, by - 10, t * 2, 3, GOLD)
+    floor_prop(cv, _draw_baby, bx, 250)
 
     if t_torm - 0.2 <= t < t_madre:
         bubble(cv, "«HIJO DE LA TORMENTA»", 156, 138)
     elif t >= t_luz - 0.25:
         bubble(cv, "«NO: DE LA LUZ»", 316, 138, fill=(255, 246, 210))
-        sparkle(cv, 296, 194, t * 2, 3, GOLD)
 
     return vignette(cv, 0.38)
 
@@ -271,7 +300,7 @@ def c1_s02_cat_and_mind(t):
     t_imag = TL.word("c1_04", "imaginar")
     t_func = TL.word("c1_04", "funcionar")
 
-    draw_candle(cv, 84, 172, t, scale=1)
+    draw_candle(cv, 96, 252, t, scale=1)
     draw_place_only(cv, "SMILJAN · INFANCIA", t, t_c1_03, border=AMBER)
 
     if t < t_c1_04 - 0.15:
@@ -279,7 +308,7 @@ def c1_s02_cat_and_mind(t):
         petting = t >= t_chis - 0.2
         char(cv, "boy_tesla", 176, 252, t, scale=2,
              arms="point" if petting else "down", look=1, mood="happy")
-        draw_black_cat(cv, 222, 250, t, sparks=petting)
+        floor_prop(cv, lambda c, cx, fy: draw_black_cat(c, cx, fy, t, sparks=petting), 222, 250)
         if t >= t_padre - 0.3:
             a, _ = pop(t, t_padre - 0.3)
             char(cv, "father_tesla", 336, 252, t, alpha=a, scale=2,
@@ -330,12 +359,17 @@ def c1_s03_graz_imposible(t):
         draw_text(cv, "IMPOSIBLE", 240, 82, "press", 24, CHALK_RED, align="center",
                   outline_w=2, reveal=rev_imp)
 
-    # Mesa con motor que larga chispas (x=218..262, y=184..216)
-    d = ImageDraw.Draw(cv)
-    d.rectangle([196, 206, 284, 248], fill=(92, 60, 34, 255), outline=(*INK, 255))
-    d.rectangle([222, 186, 258, 206], fill=(168, 126, 58, 255), outline=(*INK, 255))
-    if t < t_c1_06 + 0.5:
-        draw_tesla_sparks(cv, 240, 192, t, rays=4, max_len=24, color=AMBER, core_col=CREAM)
+    # Mesa con motor que larga chispas apoyada en el suelo
+    def _draw_graz_motor(canvas, cx, fy):
+        d_m = ImageDraw.Draw(canvas)
+        shadow_ellipse(canvas, cx, fy, 36, 5, 80)
+        d_m.rectangle([cx - 34, fy - 42, cx + 34, fy - 36], fill=(122, 82, 46, 255), outline=(*INK, 255))
+        d_m.rectangle([cx - 30, fy - 36, cx - 24, fy], fill=(82, 52, 28, 255), outline=(*INK, 255))
+        d_m.rectangle([cx + 24, fy - 36, cx + 30, fy], fill=(82, 52, 28, 255), outline=(*INK, 255))
+        d_m.rectangle([cx - 16, fy - 60, cx + 16, fy - 42], fill=(168, 126, 58, 255), outline=(*INK, 255))
+        if t < t_c1_06 + 0.5:
+            draw_tesla_sparks(canvas, cx, fy - 54, t, rays=4, max_len=22, color=AMBER, core_col=CREAM)
+    floor_prop(cv, _draw_graz_motor, 236, 250)
 
     # Profesor a la izquierda y joven inventor a la derecha con estudiantes
     prof_arms = "write" if (t_c1_06 <= t < t_imp + 0.4) else ("point" if t < t_c1_06 else "down")
@@ -364,13 +398,15 @@ def scenes():
         (0.0, s01_screen_and_grid,
          lambda t: cam_push(t, 0.0, TL.s("s03"), 1.03, 1.0, (240, 135)), "ch01"),
         (TL.s("s03") - 0.15, s03_budapest_opening,
-         lambda t: cam_push(t, TL.s("s03"), TL.s("c1_01"), 1.0, 1.03, (240, 135)), "ch01"),
+         lambda t: cam_push(t, TL.s("s03"), TL.s("c1_00"), 1.0, 1.03, (240, 135)), "ch01"),
+        (TL.s("c1_00") - 0.15, make_card(1, ["HIJO DE LA", "TORMENTA"], "1856 · SMILJAN Y GRAZ"),
+         None, "ch01"),
         (TL.s("c1_01") - 0.15, c1_s01_smiljan_birth,
          lambda t: cam_push(t, TL.s("c1_01"), TL.s("c1_03"), 1.0, 1.03, (240, 135)), "ch01"),
         (TL.s("c1_03") - 0.15, c1_s02_cat_and_mind,
          lambda t: cam_push(t, TL.s("c1_03"), TL.s("c1_05"), 1.0, 1.03, (240, 135)), "ch01"),
         (TL.s("c1_05") - 0.15, c1_s03_graz_imposible,
-         lambda t: cam_push(t, TL.s("c1_05"), TL.s("c2_01"), 1.0, 1.035, (240, 120)), "ch01"),
+         lambda t: cam_push(t, TL.s("c1_05"), TL.s("c2_00"), 1.0, 1.035, (240, 120)), "ch01"),
     ]
 
 
@@ -378,7 +414,7 @@ def music(A):
     """Acto 1: Zumbido grave de corriente alterna en la apertura + piano y cuerdas suaves en La menor."""
     t0 = 0.0
     t_park = TL.s("s03")
-    t_end = TL.s("c2_01")
+    t_end = TL.s("c2_00")
     # Zumbido firma de corriente alterna (100 Hz / 50 Hz) en la apertura
     A.add_pad(t0, t_park - t0, [55.0, 110.0], amp=0.045)
     # Piano y cuerdas suaves desde el parque de Budapest y Capítulo 1

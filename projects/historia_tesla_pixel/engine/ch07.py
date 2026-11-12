@@ -14,7 +14,7 @@ def c7_s01_colorado_springs(t):
     t_c7_03 = TL.s("c7_03")
     t_truco = TL.word("c7_03", "truco")
 
-    draw_chapter_header(cv, t, t0, 7, "LA TORRE", "COLORADO SPRINGS · 1899", border=TESLA_VIOLET)
+    draw_place_only(cv, "COLORADO SPRINGS · 1899", t, t0, border=TESLA_VIOLET)
     d = ImageDraw.Draw(cv)
 
     if t < t_c7_02:
@@ -29,16 +29,23 @@ def c7_s01_colorado_springs(t):
         # Apagón en la ciudad: el fondo se oscurece cuando dice "a oscuras" y Tesla paga la reparación
         if t >= t_osc - 0.25:
             cv = tint(cv, (6, 8, 16), 0.72)
-            glow(cv, 198, 212, 26, GOLD, 0.65)  # Linterna de mano
-        # Generador humeante a la derecha
-        d.rectangle([286, 202, 336, 244], fill=(56, 52, 58, 255), outline=(*CHALK_RED, 255))
-        for k in range(3):
-            hy = 192 - int((t * 18 + k * 7) % 20)
-            d.ellipse([304 + k * 5, hy - 4, 314 + k * 5, hy + 4], fill=(140, 144, 152, 200))
+
+        # Generador municipal humeante apoyado sobre el suelo a la derecha
+        def _draw_gen(target_cv, fx, fy):
+            d_g = ImageDraw.Draw(target_cv)
+            d_g.ellipse([fx - 28, fy - 4, fx + 28, fy + 3], fill=(0, 0, 0, 110))
+            d_g.rectangle([fx - 24, fy - 44, fx + 24, fy], fill=(56, 52, 58, 255), outline=(*CHALK_RED, 255))
+            for k in range(3):
+                hy = (fy - 54) - int((t * 18 + k * 7) % 20)
+                d_g.ellipse([fx - 6 + k * 5, hy - 4, fx + 4 + k * 5, hy + 4], fill=(140, 144, 152, 200))
+
+        floor_prop(cv, _draw_gen, 310, 248)
         window(cv, 122, 54, 236, 48, fill=(32, 16, 22), border=CHALK_RED)
         draw_text(cv, "¡GENERADOR MUNICIPAL QUEMADO!", 240, 62, "silk", 8, CHALK_RED, align="center")
         draw_text(cv, "CIUDAD A OSCURAS · TUVO QUE PAGAR", 240, 80, "silk", 8, GOLD, align="center")
         char(cv, "inventor", 184, 248, t, scale=2, arms="offer", look=1, mood="sad")
+        if t >= t_osc - 0.25:
+            floor_prop(cv, lambda target_cv, fx, fy: glow(target_cv, fx + 14, fy - 36, 26, GOLD, 0.65), 184, 248)
     else:
         # La foto más famosa: leyendo sentado junto a rayos -> se separa en DOS FOTOS SUPERPUESTAS
         split_p = clamp01((t - (t_truco - 0.1)) / 0.8) if t >= t_truco - 0.1 else 0.0
@@ -131,7 +138,7 @@ def c7_s03_pizarra_wireless(t):
         window(cv, 118, 44, 244, 156, fill=(18, 36, 28), border=CHALK_YELLOW)
         draw_text(cv, "COMO LA LUZ DE UNA LÁMPARA:", 240, 52, "silk", 8, CHALK_YELLOW, align="center")
 
-        bulb(cv, 240, 122, t, on=1.0)
+        bulb(cv, 240, 122, t, on=1.0, cord_top=68)
         for k in range(3):
             rr = 22 + k * 20 + int((t * 18) % 16)
             alpha_c = max(50, 230 - rr * 3)
@@ -171,9 +178,10 @@ def c7_s03_pizarra_wireless(t):
 
 
 SCENES = [
-    (TL.s("c7_01"), TL.s("c7_04"), c7_s01_colorado_springs),
+    (TL.s("c7_00") - 0.15, TL.s("c7_01"), make_card(7, ["LA TORRE"], "1899 – 1905 · COLORADO Y LONG ISLAND")),
+    (TL.s("c7_01") - 0.15, TL.s("c7_04"), c7_s01_colorado_springs),
     (TL.s("c7_04"), TL.s("c7_07"), c7_s02_wardenclyffe_and_marconi),
-    (TL.s("c7_07"), TL.s("c8_01"), c7_s03_pizarra_wireless),
+    (TL.s("c7_07"), TL.s("c8_00"), c7_s03_pizarra_wireless),
 ]
 
 
@@ -183,9 +191,9 @@ def scenes():
 
 def music(A):
     """Acto 3: Colorado Springs, Wardenclyffe y La Pizarra 4 (Energía sin cables)."""
-    t0 = TL.s("c7_01")
+    t0 = TL.s("c7_00")
     t_piz = TL.s("c7_07")
-    t_end = TL.s("c8_01")
+    t_end = TL.s("c8_00")
     A.add_pad(t0, t_piz - t0, [110.0, 164.81, 220.0, 261.63], amp=0.04)
     piz_beat = 60.0 / 112.0
     piz_arp = [523.25, 659.25, 783.99, 659.25, 587.33, 698.46, 880.0, 698.46]

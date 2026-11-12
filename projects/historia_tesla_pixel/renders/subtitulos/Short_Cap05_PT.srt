@@ -1,35 +1,39 @@
 1
-00:00:00,150 --> 00:00:08,919
-Em 1893, Chicago organizou uma feira mundial. Seria a primeira iluminada inteiramente com eletricidade.
+00:00:00,150 --> 00:00:03,458
+CAPÍTULO 5 — A CIDADE BRANCA
 
 2
-00:00:09,139 --> 00:00:15,908
-Westinghouse ganhou o contrato: ofereceu fazer tudo com alternada por bem menos que o lado de Edison.
+00:00:03,808 --> 00:00:12,577
+Em 1893, Chicago organizou uma feira mundial. Seria a primeira iluminada inteiramente com eletricidade.
 
 3
-00:00:16,108 --> 00:00:22,955
-No dia da abertura, o presidente apertou um botão… e acenderam-se cerca de cem mil lâmpadas.
+00:00:12,777 --> 00:00:19,546
+Westinghouse ganhou o contrato: ofereceu fazer tudo com alternada por bem menos que o lado de Edison.
 
 4
-00:00:23,155 --> 00:00:30,078
-No pavilhão elétrico, as pessoas se aglomeravam diante de um ovo de cobre gigante. Ele girava sozinho.
+00:00:19,746 --> 00:00:26,593
+No dia da abertura, o presidente apertou um botão… e acenderam-se cerca de cem mil lâmpadas.
 
 5
-00:00:30,278 --> 00:00:37,278
-Poucos anos depois, seu sistema levou a energia do Niágara até Buffalo, a mais de trinta quilômetros.
+00:00:26,793 --> 00:00:33,716
+No pavilhão elétrico, as pessoas se aglomeravam diante de um ovo de cobre gigante. Ele girava sozinho.
 
 6
-00:00:37,478 --> 00:00:44,785
-Mas a guerra deixou Westinghouse cheio de dívidas. Seus banqueiros queriam cortar os dois dólares e meio de Tesla.
+00:00:33,916 --> 00:00:40,916
+Poucos anos depois, seu sistema levou a energia do Niágara até Buffalo, a mais de trinta quilômetros.
 
 7
-00:00:44,985 --> 00:00:50,678
-A versão mais contada diz que Tesla rasgou o contrato diante dele, por amizade.
+00:00:41,116 --> 00:00:48,423
+Mas a guerra deixou Westinghouse cheio de dívidas. Seus banqueiros queriam cortar os dois dólares e meio de Tesla.
 
 8
-00:00:50,878 --> 00:01:00,032
-Os documentos contam algo menos teatral: abriu mão dos royalties e depois vendeu suas patentes por cerca de duzentos e dezesseis mil dólares.
+00:00:48,623 --> 00:00:54,316
+A versão mais contada diz que Tesla rasgou o contrato diante dele, por amizade.
 
 9
-00:01:00,932 --> 00:01:06,239
+00:00:54,516 --> 00:01:03,670
+Os documentos contam algo menos teatral: abriu mão dos royalties e depois vendeu suas patentes por cerca de duzentos e dezesseis mil dólares.
+
+10
+00:01:04,570 --> 00:01:09,877
 Seu sistema conquistou o mundo. E ele já não recebia nada por isso.

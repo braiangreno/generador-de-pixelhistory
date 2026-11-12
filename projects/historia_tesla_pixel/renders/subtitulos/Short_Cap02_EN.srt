@@ -1,35 +1,39 @@
 1
-00:00:00,150 --> 00:00:06,535
-Years later, in Budapest, he was still so obsessed with that motor that he fell ill.
+00:00:00,150 --> 00:00:03,535
+CHAPTER 2 — THE DRAWING IN THE SAND
 
 2
-00:00:06,755 --> 00:00:13,293
-One afternoon he went for a walk with a friend. He was reciting Goethe's Faust, which he knew by heart.
+00:00:03,885 --> 00:00:10,269
+Years later, in Budapest, he was still so obsessed with that motor that he fell ill.
 
 3
-00:00:13,493 --> 00:00:20,878
-As he told it, the idea struck him all at once, like a bolt of lightning. With a small stick, he drew the motor in the sand.
+00:00:10,469 --> 00:00:17,008
+One afternoon he went for a walk with a friend. He was reciting Goethe's Faust, which he knew by heart.
 
 4
-00:00:21,328 --> 00:00:24,405
-To understand what he saw, let's go to the chalkboard.
+00:00:17,208 --> 00:00:24,592
+As he told it, the idea struck him all at once, like a bolt of lightning. With a small stick, he drew the motor in the sand.
 
 5
-00:00:24,605 --> 00:00:30,374
-Direct current always pushes the same way, like water flowing through a pipe.
+00:00:25,042 --> 00:00:28,119
+To understand what he saw, let's go to the chalkboard.
 
 6
-00:00:30,574 --> 00:00:36,497
-Alternating current goes back and forth, like a handsaw: it doesn't move forward, yet it still cuts the wood.
+00:00:28,319 --> 00:00:34,089
+Direct current always pushes the same way, like water flowing through a pipe.
 
 7
-00:00:36,697 --> 00:00:45,466
-Tesla combined two alternating currents, one slightly delayed behind the other. Together they create an invisible spinning magnet.
+00:00:34,289 --> 00:00:40,212
+Alternating current goes back and forth, like a handsaw: it doesn't move forward, yet it still cuts the wood.
 
 8
-00:00:45,666 --> 00:00:50,436
-Put a piece of metal in the middle and it chases it. It spins without sparks.
+00:00:40,412 --> 00:00:49,181
+Tesla combined two alternating currents, one slightly delayed behind the other. Together they create an invisible spinning magnet.
 
 9
-00:00:51,336 --> 00:00:56,720
+00:00:49,381 --> 00:00:54,150
+Put a piece of metal in the middle and it chases it. It spins without sparks.
+
+10
+00:00:55,050 --> 00:01:00,435
 The impossible motor was already working. For now, only in his head.

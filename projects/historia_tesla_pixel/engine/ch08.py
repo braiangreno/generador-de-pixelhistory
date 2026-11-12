@@ -2,6 +2,7 @@
 import math
 from PIL import Image, ImageDraw
 from common import *  # noqa
+from i18n import tr as i18n_tr
 
 
 def c8_s01_pigeons_and_medal(t):
@@ -14,18 +15,21 @@ def c8_s01_pigeons_and_medal(t):
     t_c8_03 = TL.s("c8_03")
 
     cv = bg("bg_ny_plaza_pigeons_1930").copy()
-    draw_chapter_header(cv, t, t0, 8, "EL HOMBRE DE LAS PALOMAS", "NUEVA YORK · AÑOS 1930", border=TESLA_CYAN)
+    draw_place_only(cv, "NUEVA YORK · AÑOS 1930", t, t0, border=TESLA_CYAN)
     d = ImageDraw.Draw(cv)
 
     if t < t_c8_02:
-        # Tesla anciano dándole de comer a las palomas y a su paloma blanca favorita
+        # Tesla anciano dándole de comer a las palomas en el suelo y a su paloma blanca favorita en la mano
         char(cv, "inventor_old", 240, 248, t, scale=2, arms="offer", look=1, mood="happy")
-        for i, px in enumerate((176, 198, 282, 308)):
-            draw_pigeon(cv, px, 244, t + i * 0.4, white=False, peck=True)
-        # La paloma blanca posada junto a su mano con un suave halo
-        if t >= t_blanca - 0.6:
-            glow(cv, 260, 214, 18, CREAM, 0.55)
-        draw_pigeon(cv, 260, 216, t, white=True, peck=False)
+
+        def _draw_pigeons_feed(target_cv, fx, fy):
+            for i, dx_p in enumerate((-64, -42, 42, 68)):
+                draw_pigeon(target_cv, fx + dx_p, fy - 4, t + i * 0.4, white=False, peck=True)
+            if t >= t_blanca - 0.6:
+                glow(target_cv, fx + 20, fy - 34, 18, CREAM, 0.55)
+            draw_pigeon(target_cv, fx + 20, fy - 32, t, white=True, peck=False)
+
+        floor_prop(cv, _draw_pigeons_feed, 240, 248)
         window(cv, 122, 54, 236, 44, fill=(18, 24, 38), border=CREAM)
         draw_text(cv, "NOCHES EN NUEVA YORK", 240, 62, "silk", 8, CREAM, align="center")
         draw_text(cv, "LA PALOMA BLANCA", 240, 78, "silk", 8, GOLD, align="center")
@@ -46,9 +50,13 @@ def c8_s01_pigeons_and_medal(t):
         # Lo encuentran en la plaza cubierto de palomas
         char(cv, "organizer", 148, 248, t, scale=2, arms="point", look=1, mood="surprised")
         char(cv, "inventor_old", 268, 248, t, scale=2, arms="up", look=-1, mood="happy")
-        for px, py, wh in ((252, 206, False), (284, 206, True), (268, 186, False),
-                           (232, 244, False), (304, 244, False), (214, 246, False)):
-            draw_pigeon(cv, px, py, t + px * 0.03, white=wh, peck=(py > 230))
+
+        def _draw_pigeons_flock(target_cv, fx, fy):
+            for dx_p, dy_p, wh in ((-16, -42, False), (16, -42, True), (0, -62, False),
+                                   (-36, -4, False), (36, -4, False), (-54, -2, False)):
+                draw_pigeon(target_cv, fx + dx_p, fy + dy_p, t + (fx + dx_p) * 0.03, white=wh, peck=(dy_p > -18))
+
+        floor_prop(cv, _draw_pigeons_flock, 268, 248)
         window(cv, 124, 54, 232, 42, fill=(18, 24, 38), border=TESLA_CYAN)
         draw_text(cv, "EN LA PLAZA CERCANA:", 240, 62, "silk", 8, TESLA_CYAN, align="center")
         draw_text(cv, "CUBIERTO DE PALOMAS", 240, 78, "silk", 8, CREAM, align="center")
@@ -68,10 +76,12 @@ def c8_s02_room_3327_and_tesla_unit(t):
         cv = bg("bg_hotel_3327_winter_1943").copy()
         SNOW.draw(cv, t, density=0.35)
         draw_place_only(cv, "HABITACIÓN 3327 · NUEVA YORK (1943)", t, t0, border=SOFT_GRAY)
-        # Paloma blanca alejándose por la ventana hacia el cielo invernal
+        # Alféizar de la ventana desde donde despega la paloma blanca hacia el cielo invernal
+        d_w = ImageDraw.Draw(cv)
+        d_w.rectangle([198, 138, 304, 144], fill=(64, 48, 38, 255), outline=(*INK, 255))
         prog_fly = clamp01((t - t0) / 4.5)
         px = int(220 + 75 * prog_fly)
-        py = int(138 - 44 * prog_fly)
+        py = int(136 - 42 * prog_fly)
         glow(cv, px, py, 16, CREAM, 0.5)
         draw_pigeon(cv, px, py, t * 2.0, white=True, peck=False)
 
@@ -156,33 +166,89 @@ def c8_s03_finale_match_cut(t):
         ang = (t_c8_09 + 0.9) * 2.8
 
     glow_p = 0.85 if t >= t_luz - 0.2 else 0.45
-    draw_rotating_arrows(cv, 240, 198, 40, ang, color=TESLA_CYAN, sand_groove=True, pulse=glow_p)
+    draw_rotating_arrows(cv, 240, 168, 36, ang, color=TESLA_CYAN, sand_groove=True, pulse=glow_p)
 
     if t < t_c8_09:
-        window(cv, 118, 48, 244, 58, fill=(22, 18, 34), border=GOLD)
-        draw_text(cv, "PARTERA: «HIJO DE LA TORMENTA»", 240, 58, "silk", 8, TESLA_VIOLET, align="center")
+        window(cv, 120, 44, 240, 56, fill=(22, 18, 34), border=GOLD)
+        draw_text(cv, "PARTERA: «HIJO DE LA TORMENTA»", 240, 54, "silk", 8, TESLA_VIOLET, align="center")
         if t >= t_luz - 0.35:
-            draw_text(cv, "SU MADRE: «NO: DE LA LUZ»", 240, 78, "silk", 8, GOLD, align="center")
+            draw_text(cv, "SU MADRE: «NO: DE LA LUZ»", 240, 74, "silk", 8, GOLD, align="center")
     else:
         a, dy = pop(t, t_c8_09)
-        window(cv, 120, 52 + dy, 240, 52, fill=(16, 22, 38), border=GOLD)
-        draw_text(cv, "NIKOLA TESLA (1856 – 1943)", 240, 60 + dy, "silk", 8, TESLA_CYAN, align="center")
-        draw_text(cv, "TUVIERON RAZÓN LAS DOS.", 240, 78 + dy, "press", 8, GOLD, align="center")
+        window(cv, 120, 46 + dy, 240, 52, fill=(16, 22, 38), border=GOLD)
+        draw_text(cv, "NIKOLA TESLA (1856 – 1943)", 240, 54 + dy, "silk", 8, TESLA_CYAN, align="center")
+        draw_text(cv, "TUVIERON RAZÓN LAS DOS.", 240, 72 + dy, "press", 8, GOLD, align="center")
 
     cv = vignette(cv, 0.35)
-    # Dos segundos de pausa / fundido a negro antes del cierre de marca de Pixeloide Studios
+    return cv
+
+
+def c8_s04_comment_cta(t):
+    """Llamado a la acción final antes de la placa de Pixeloide Studios: invita a comentar el próximo episodio."""
+    t0 = TL.s("c8_10") - 0.20
+    t_vo = TL.s("c8_10")
+    t_end_vo = TL.e("c8_10")
+
+    cv = bg("bg_night_grid_city").copy()
+    d = ImageDraw.Draw(cv)
+
+    # Ventana RPG principal (x=118..362, w=244 -> cabe 1:1 en 16:9 y en 9:16 sin escalar)
+    a, dy = pop(t, t0, dur=0.32)
+    window(cv, 118, 28 + dy, 244, 122, fill=(14, 20, 38), border=GOLD)
+
+    # Etiqueta superior dorada
+    d.rectangle([144, 35 + dy, 336, 49 + dy], fill=(32, 44, 72, 255), outline=(*TESLA_CYAN, 255))
+    draw_text(cv, "PRÓXIMO EPISODIO · TU IDEA", 240, 38 + dy, "silk", 8, GOLD, align="center")
+
+    # Pregunta principal
+    draw_text(cv, "¿QUÉ HISTORIA TE GUSTARÍA VER", 240, 56 + dy, "silk", 8, CREAM, align="center")
+    draw_text(cv, "EN EL PRÓXIMO EPISODIO?", 240, 70 + dy, "press", 8, TESLA_CYAN, align="center")
+
+    # Caja interactiva de comentario con efecto de escritura y cursor titilante
+    d.rectangle([126, 86 + dy, 354, 108 + dy], fill=(8, 12, 24, 255), outline=(*GOLD, 255))
+    # Icono de burbuja de comentario a la izquierda
+    d.rectangle([132, 91 + dy, 144, 100 + dy], fill=(*TESLA_CYAN, 255))
+    d.polygon([(135, 100 + dy), (139, 100 + dy), (135, 104 + dy)], fill=(*TESLA_CYAN, 255))
+
+    full_msg = i18n_tr("DEJALO EN LOS COMENTARIOS...")
+    typed_p = clamp01((t - t_vo) / 2.2)
+    n_chars = max(1, int(len(full_msg) * typed_p))
+    cur = "|" if int(t * 4) % 2 == 0 else " "
+    draw_text(cv, full_msg[:n_chars] + cur, 150, 93 + dy, "silk", 8, GOLD, align="left")
+
+    # Sugerencias de temas + llamado abajo
+    draw_text(cv, "¿CIENCIA? · ¿VIDEOJUEGOS? · ¿CINE?", 240, 115 + dy, "silk", 8, SOFT_GRAY, align="center")
+    draw_text(cv, "¡TE LEEMOS ABAJO!", 240, 132 + dy, "press", 8, CHALK_GREEN, align="center")
+
+    # Nikola Tesla saludando en el piso junto a su paloma blanca sobre una mesita
+    char(cv, "inventor", 168, 248, t, scale=2, arms="wave", look=1, mood="happy",
+         talk=talk_v(t, t_vo <= t <= t_end_vo))
+
+    def _draw_cta_pigeon_stand(target_cv, fx, fy):
+        d_s = ImageDraw.Draw(target_cv)
+        d_s.ellipse([fx - 20, fy - 4, fx + 20, fy + 3], fill=(0, 0, 0, 110))
+        d_s.rectangle([fx - 4, fy - 28, fx + 4, fy], fill=(92, 56, 32, 255), outline=(*INK, 255))
+        d_s.rectangle([fx - 16, fy - 34, fx + 16, fy - 28], fill=(124, 78, 44, 255), outline=(*GOLD, 255))
+        glow(target_cv, fx, fy - 42, 18, CREAM, 0.55)
+        draw_pigeon(target_cv, fx, fy - 38, t, white=True, peck=False)
+
+    floor_prop(cv, _draw_cta_pigeon_stand, 312, 248)
+
+    cv = vignette(cv, 0.32)
     if t > t_end_vo + 0.8:
         k_black = clamp01((t - (t_end_vo + 0.8)) / 1.4)
         cv = fade_to(cv, (7, 10, 31), k_black)
     return cv
 
 
-T_END = TL.e("c8_09") + 2.8
+T_END = TL.e("c8_10") + 2.2
 
 SCENES = [
-    (TL.s("c8_01"), TL.s("c8_04"), c8_s01_pigeons_and_medal),
+    (TL.s("c8_00") - 0.15, TL.s("c8_01"), make_card(8, ["EL HOMBRE DE", "LAS PALOMAS"], "1917 – 1943 · NUEVA YORK", snow=True)),
+    (TL.s("c8_01") - 0.15, TL.s("c8_04"), c8_s01_pigeons_and_medal),
     (TL.s("c8_04"), TL.s("c8_07"), c8_s02_room_3327_and_tesla_unit),
-    (TL.s("c8_07"), T_END, c8_s03_finale_match_cut),
+    (TL.s("c8_07"), TL.s("c8_10") - 0.20, c8_s03_finale_match_cut),
+    (TL.s("c8_10") - 0.20, T_END, c8_s04_comment_cta),
 ]
 
 
@@ -192,9 +258,9 @@ def scenes():
 
 def music(A):
     """Acto 3 final: Piano íntimo para el hombre de las palomas y regreso luminoso al tema de las 4 flechas."""
-    t0 = TL.s("c8_01")
+    t0 = TL.s("c8_00")
     t_unit = TL.s("c8_05")
-    t_end_vo = TL.e("c8_09")
+    t_end_vo = TL.e("c8_10")
     A.add_pad(t0, t_unit - t0, [110.0, 164.81, 220.0, 261.63], amp=0.036)
     A.add_pad(t_unit, t_end_vo - t_unit + 1.2, [130.81, 196.0, 261.63, 329.63], amp=0.044)
 
@@ -205,4 +271,6 @@ def sfx(A):
     A.fx_chime(TL.word("c8_05", "tesla"), 0.11)
     A.fx_sweep(TL.s("c8_07"), 0.7, 110, 330, 0.08)
     A.fx_chime(TL.s("c8_09"), 0.13)
+    A.fx_pop(TL.s("c8_10"), 0.11)
+    A.fx_sparkle(TL.s("c8_10") + 0.35, 0.11)
 

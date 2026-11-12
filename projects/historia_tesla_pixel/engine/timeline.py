@@ -9,7 +9,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VO = os.path.join(ROOT, "audio", "vo")
 LINES = json.load(open(os.path.join(ROOT, "script_full.json"), encoding="utf-8"))
 
-CARDS = {"c1_01", "c2_01", "c3_01", "c4_01", "c5_01", "c6_01", "c7_01", "c8_01"}
+CARDS = {"c1_00", "c2_00", "c3_00", "c4_00", "c5_00", "c6_00", "c7_00", "c8_00"}
 
 # Pausas ANTES de cada frase (segundos). Incluye los silencios dramáticos de 1s antes de cada remate del guion.
 GAP_BEFORE = {
@@ -29,11 +29,12 @@ GAP_BEFORE = {
     "c7_09": 0.90, # silencio 1s -> Su energía sin cables existe. Alcanza unos centímetros y carga tu teléfono.
     "c8_05": 0.50, # Mini lección teslas
     "c8_09": 0.95, # silencio 1s -> Tuvieron razón las dos.
+    "c8_10": 0.95, # invitación a comentar el próximo episodio antes del cierre de Pixeloide
 }
 
 TEMPO = 1.04
-GAP_CARD = 0.85     # antes de cada transición de 4 flechas giratorias entre capítulos
-GAP_AFTER_CARD = 0.22
+GAP_CARD = 0.85     # antes de cada placa de capítulo (c1_00..c8_00)
+GAP_AFTER_CARD = 0.35
 DEFAULT_GAP = 0.20
 TAIL = 12.0         # espacio reservado para el cierre oficial de Pixeloide Studios (outro.py)
 
@@ -117,7 +118,7 @@ class Timeline:
         return L["start"] + L["align"]["character_start_times_seconds"][idx]
 
     def chapter_start(self, ch):
-        card = {1: "c1_01", 2: "c2_01", 3: "c3_01", 4: "c4_01", 5: "c5_01", 6: "c6_01", 7: "c7_01", 8: "c8_01"}
+        card = {1: "c1_00", 2: "c2_00", 3: "c3_00", 4: "c4_00", 5: "c5_00", 6: "c6_00", 7: "c7_00", 8: "c8_00"}
         return 0.0 if ch == 0 else self.s(card[ch])
 
     def speaking(self, t):

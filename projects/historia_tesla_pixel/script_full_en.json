@@ -42,6 +42,13 @@
     "sub": "This is the story of Nikola Tesla. And how light reaches your home."
   },
   {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Chapter one. Child of the storm.",
+    "sub": "CHAPTER 1 — CHILD OF THE STORM"
+  },
+  {
     "id": "c1_01",
     "ch": 1,
     "pause": 0.4,
@@ -89,6 +96,13 @@
     "pause": 1.0,
     "speak": "Tesla spent years trying to prove the opposite.",
     "sub": "Tesla spent years trying to prove the opposite."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Chapter two. The drawing in the sand.",
+    "sub": "CHAPTER 2 — THE DRAWING IN THE SAND"
   },
   {
     "id": "c2_01",
@@ -154,6 +168,13 @@
     "sub": "The impossible motor was already working. For now, only in his head."
   },
   {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Chapter three. Two dollars a day.",
+    "sub": "CHAPTER 3 — TWO DOLLARS A DAY"
+  },
+  {
     "id": "c3_01",
     "ch": 3,
     "pause": 0.4,
@@ -215,6 +236,13 @@
     "pause": 1.0,
     "speak": "Columbus had to crack the egg. Tesla made it dance.",
     "sub": "Columbus had to crack the egg. Tesla made it dance."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Chapter four. The war of the currents.",
+    "sub": "CHAPTER 4 — THE WAR OF THE CURRENTS"
   },
   {
     "id": "c4_01",
@@ -280,6 +308,13 @@
     "sub": "Edison said alternating current killed. Tesla used it to light up his hands."
   },
   {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Chapter five. The White City.",
+    "sub": "CHAPTER 5 — THE WHITE CITY"
+  },
+  {
     "id": "c5_01",
     "ch": 5,
     "pause": 0.4,
@@ -341,6 +376,13 @@
     "pause": 1.0,
     "speak": "His system conquered the world. And he no longer collected a cent from it.",
     "sub": "His system conquered the world. And he no longer collected a cent from it."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "Chapter six. The wizard.",
+    "sub": "CHAPTER 6 — THE WIZARD"
   },
   {
     "id": "c6_01",
@@ -406,6 +448,13 @@
     "sub": "Today we call it a remote control. And we use it to change the channel."
   },
   {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Chapter seven. The tower.",
+    "sub": "CHAPTER 7 — THE TOWER"
+  },
+  {
     "id": "c7_01",
     "ch": 7,
     "pause": 0.4,
@@ -469,6 +518,13 @@
     "sub": "His wireless energy exists. It reaches a few centimeters and charges your phone."
   },
   {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Chapter eight. The pigeon man.",
+    "sub": "CHAPTER 8 — THE PIGEON MAN"
+  },
+  {
     "id": "c8_01",
     "ch": 8,
     "pause": 0.45,
@@ -527,8 +583,15 @@
   {
     "id": "c8_09",
     "ch": 8,
-    "pause": 1.2,
+    "pause": 1.0,
     "speak": "They were both right.",
     "sub": "They were both right."
+  },
+  {
+    "id": "c8_10",
+    "ch": 8,
+    "pause": 1.2,
+    "speak": "And now tell us in the comments: what story would you like to see in the next episode?",
+    "sub": "And now tell us in the comments: what story would you like to see in the next episode?"
   }
 ]

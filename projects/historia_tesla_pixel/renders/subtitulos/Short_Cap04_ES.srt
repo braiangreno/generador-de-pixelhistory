@@ -1,35 +1,39 @@
 1
-00:00:00,150 --> 00:00:05,612
-Su motor llegó a oídos de George Westinghouse, un empresario que apostaba por la alterna.
+00:00:00,150 --> 00:00:03,842
+CAPÍTULO 4 — LA GUERRA DE LAS CORRIENTES
 
 2
-00:00:05,832 --> 00:00:13,909
-Le pagó por usar sus patentes y le prometió dos dólares y medio por cada caballo de fuerza vendido. Recuerda ese número.
+00:00:04,192 --> 00:00:09,654
+Su motor llegó a oídos de George Westinghouse, un empresario que apostaba por la alterna.
 
 3
-00:00:14,359 --> 00:00:17,282
-¿Por qué tanta pelea? Vuelve a la pizarra.
+00:00:09,854 --> 00:00:17,931
+Le pagó por usar sus patentes y le prometió dos dólares y medio por cada caballo de fuerza vendido. Recuerda ese número.
 
 4
-00:00:17,482 --> 00:00:30,789
-Los cables pierden energía en forma de calor. Cuanta más corriente pasa, más pierden. Pero la misma energía puede viajar como mucha corriente a poca tensión… o poca corriente a mucha tensión.
+00:00:18,381 --> 00:00:21,304
+¿Por qué tanta pelea? Vuelve a la pizarra.
 
 5
-00:00:30,989 --> 00:00:38,297
-Con un transformador, la alterna sube la tensión para viajar lejos. Y la baja antes de entrar a tu casa.
+00:00:21,504 --> 00:00:34,812
+Los cables pierden energía en forma de calor. Cuanta más corriente pasa, más pierden. Pero la misma energía puede viajar como mucha corriente a poca tensión… o poca corriente a mucha tensión.
 
 6
-00:00:38,497 --> 00:00:45,266
-La continua de esa época no podía. Necesitaba una central cada kilómetro y medio, más o menos.
+00:00:35,012 --> 00:00:42,319
+Con un transformador, la alterna sube la tensión para viajar lejos. Y la baja antes de entrar a tu casa.
 
 7
-00:00:45,466 --> 00:00:52,697
-El bando de Edison respondió con miedo: electrocutaban animales en público para mostrar que la alterna mataba.
+00:00:42,519 --> 00:00:49,289
+La continua de esa época no podía. Necesitaba una central cada kilómetro y medio, más o menos.
 
 8
-00:00:52,897 --> 00:01:06,436
-Tesla contestó con espectáculo: dejaba pasar por su cuerpo corrientes de altísima frecuencia y encendía lámparas con las manos. Eso funcionaba solo con frecuencias altísimas, y aun así era peligroso.
+00:00:49,489 --> 00:00:56,719
+El bando de Edison respondió con miedo: electrocutaban animales en público para mostrar que la alterna mataba.
 
 9
-00:01:07,336 --> 00:01:12,874
+00:00:56,919 --> 00:01:10,458
+Tesla contestó con espectáculo: dejaba pasar por su cuerpo corrientes de altísima frecuencia y encendía lámparas con las manos. Eso funcionaba solo con frecuencias altísimas, y aun así era peligroso.
+
+10
+00:01:11,358 --> 00:01:16,896
 Edison decía que la alterna mataba. Tesla la usaba para iluminarse las manos.

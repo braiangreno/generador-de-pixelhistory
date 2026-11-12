@@ -15,24 +15,33 @@ def c6_s01_twain_and_coil(t):
     t_c6_03 = TL.s("c6_03")
     t_bob = TL.word("c6_03", "bobina")
 
-    draw_chapter_header(cv, t, t0, 6, "EL MAGO", "NUEVA YORK · 1894", border=TESLA_VIOLET)
+    draw_place_only(cv, "LABORATORIO DE NUEVA YORK · 1894", t, t0, border=TESLA_VIOLET)
     d = ImageDraw.Draw(cv)
 
     if t < t_c6_02:
         # Mark Twain sosteniendo un aro luminoso frente a la cámara; Tesla sonríe detrás
         char(cv, "inventor", 174, 248, t, scale=2, arms="offer", look=1, mood="happy")
         char(cv, "writer_twain", 284, 248, t, scale=2, arms="hold", look=-1, mood="happy")
-        # Aro luminoso en las manos de Twain
-        glow(cv, 266, 212, 22, TESLA_CYAN, 0.65)
-        d.ellipse([256, 202, 276, 222], outline=(*TESLA_SPARK, 255), width=2)
+
+        # Aro luminoso sostenido en las manos de Twain
+        def _draw_twain_ring(target_cv, fx, fy):
+            d_r = ImageDraw.Draw(target_cv)
+            glow(target_cv, fx - 18, fy - 36, 22, TESLA_CYAN, 0.65)
+            d_r.ellipse([fx - 28, fy - 46, fx - 8, fy - 26], outline=(*TESLA_SPARK, 255), width=2)
+
+        floor_prop(cv, _draw_twain_ring, 284, 248)
         if t >= t_twain - 0.3:
             a, dy = pop(t, t_twain - 0.3)
             window(cv, 128, 56 + dy, 224, 42, fill=(18, 24, 38), border=GOLD)
             draw_text(cv, "INVITADO: MARK TWAIN", 240, 64 + dy, "silk", 8, GOLD, align="center")
             draw_text(cv, "EL ESCRITOR Y EL INVENTOR", 240, 80 + dy, "silk", 8, CREAM, align="center")
     elif t < t_c6_03:
-        # Plataforma vibratoria: Twain vibra y luego sale corriendo hacia la derecha
-        d.rectangle([244, 242, 316, 252], fill=(82, 64, 44, 255), outline=(*GOLD, 255))
+        # Plataforma vibratoria sobre el suelo: Twain vibra y luego sale corriendo hacia la derecha
+        def _draw_vib_platform(target_cv, fx, fy):
+            d_p = ImageDraw.Draw(target_cv)
+            d_p.rectangle([fx - 36, fy - 6, fx + 36, fy + 4], fill=(82, 64, 44, 255), outline=(*GOLD, 255))
+
+        floor_prop(cv, _draw_vib_platform, 280, 248)
         char(cv, "inventor", 164, 248, t, scale=2, arms="point", look=1, mood="happy")
         if t < t_bano - 0.35:
             vib_dy = int(3 * math.sin(t * 58)) if t >= t_vib - 0.2 else 0
@@ -45,14 +54,19 @@ def c6_s01_twain_and_coil(t):
                  walk=(w_run * 1.8 if w_run is not None else None), arms="up", look=1, mood="surprised")
             bubble(cv, "¡AL BAÑO!", min(350, int(x_run)), 134)
     else:
-        # Bobina de Tesla central lanzando arcos violetas y celestes
-        d.rectangle([226, 156, 254, 244], fill=(116, 68, 38, 255), outline=(*GOLD, 255))
-        for ry in range(162, 240, 6):
-            d.line([(228, ry), (252, ry)], fill=(214, 146, 74, 255), width=1)
-        # Toroide metálico superior
-        d.ellipse([214, 142, 266, 160], fill=(186, 198, 214, 255), outline=(*TESLA_CYAN, 255))
-        glow(cv, 240, 148, 56, TESLA_VIOLET, 0.55)
-        draw_tesla_sparks(cv, 240, 148, t, radius=58, count=6, color=TESLA_CYAN)
+        # Bobina de Tesla central apoyada sobre su base en el suelo lanzando arcos violetas y celestes
+        def _draw_tesla_coil(target_cv, fx, fy):
+            d_c = ImageDraw.Draw(target_cv)
+            d_c.ellipse([fx - 26, fy - 4, fx + 26, fy + 4], fill=(0, 0, 0, 110))
+            d_c.rectangle([fx - 22, fy - 8, fx + 22, fy], fill=(74, 48, 28, 255), outline=(*INK, 255))
+            d_c.rectangle([fx - 14, fy - 92, fx + 14, fy - 8], fill=(116, 68, 38, 255), outline=(*GOLD, 255))
+            for ry in range(fy - 86, fy - 10, 6):
+                d_c.line([(fx - 12, ry), (fx + 12, ry)], fill=(214, 146, 74, 255), width=1)
+            d_c.ellipse([fx - 26, fy - 106, fx + 26, fy - 88], fill=(186, 198, 214, 255), outline=(*TESLA_CYAN, 255))
+            glow(target_cv, fx, fy - 100, 56, TESLA_VIOLET, 0.55)
+            draw_tesla_sparks(target_cv, fx, fy - 100, t, radius=58, count=6, color=TESLA_CYAN)
+
+        floor_prop(cv, _draw_tesla_coil, 240, 248)
         window(cv, 124, 52, 232, 42, fill=(18, 22, 38), border=TESLA_CYAN)
         draw_text(cv, "LA BOBINA DE TESLA", 240, 60, "press", 8, TESLA_CYAN, align="center")
         draw_text(cv, "CORRIENTE DE ALTA FRECUENCIA", 240, 76, "silk", 8, CREAM, align="center")
@@ -141,9 +155,12 @@ def c6_s03_radio_boat(t):
     draw_place_only(cv, "MADISON SQUARE GARDEN · 1898", t, t0, border=TESLA_CYAN)
     d = ImageDraw.Draw(cv)
 
-    # El barquito de hierro navegando en el estanque con una antena en el centro
-    bx = int(240 + 48 * math.sin((t - t0) * 1.15))
-    by = 198 + int(3 * math.sin(t * 4.2))
+    # Estanque de agua enmarcado en piedra + barquito de hierro navegando sobre el agua
+    d.rectangle([166, 194, 314, 218], fill=(22, 58, 92, 255), outline=(140, 150, 168, 255))
+    bx = int(240 + 42 * math.sin((t - t0) * 1.15))
+    by = 198 + int(2 * math.sin(t * 4.2))
+    # Olas de agua alrededor del casco
+    d.line([(bx - 26, by + 10), (bx + 26, by + 10)], fill=(*TESLA_CYAN, 220), width=1)
     # Casco de hierro + antena
     d.polygon([(bx - 24, by), (bx + 24, by), (bx + 18, by + 10), (bx - 18, by + 10)],
               fill=(72, 82, 98, 255), outline=(*CREAM, 255))
@@ -159,10 +176,15 @@ def c6_s03_radio_boat(t):
         d.ellipse([bx - 16, by - 4, bx - 12, by], fill=(*GOLD, 255))
         d.ellipse([bx + 12, by - 4, bx + 16, by], fill=(*GOLD, 255))
 
-    # Tesla a la izquierda operando su cajita de radio con palanca
+    # Tesla a la izquierda operando su cajita de radio con palanca en las manos
     char(cv, "inventor", 122, 248, t, scale=2, arms="hold", look=1, mood="happy")
-    d.rectangle([134, 212, 152, 224], fill=(116, 68, 36, 255), outline=(*GOLD, 255))
-    d.line([(143, 212), (143, 202)], fill=(*TESLA_CYAN, 255), width=2)
+
+    def _draw_radio_box(target_cv, fx, fy):
+        d_b = ImageDraw.Draw(target_cv)
+        d_b.rectangle([fx + 12, fy - 36, fx + 30, fy - 24], fill=(116, 68, 36, 255), outline=(*GOLD, 255))
+        d_b.line([(fx + 21, fy - 36), (fx + 21, fy - 46)], fill=(*TESLA_CYAN, 255), width=2)
+
+    floor_prop(cv, _draw_radio_box, 122, 248)
 
     # Ondas de radio invisibles (arcos de puntitos celestes desde la cajita hasta la antena del barco)
     if t >= t_c6_08 - 0.2:
@@ -193,9 +215,10 @@ def c6_s03_radio_boat(t):
 
 
 SCENES = [
-    (TL.s("c6_01"), TL.s("c6_04"), c6_s01_twain_and_coil),
+    (TL.s("c6_00") - 0.15, TL.s("c6_01"), make_card(6, ["EL MAGO"], "1894 – 1898 · NUEVA YORK")),
+    (TL.s("c6_01") - 0.15, TL.s("c6_04"), c6_s01_twain_and_coil),
     (TL.s("c6_04"), TL.s("c6_06"), c6_s02_pizarra_resonancia),
-    (TL.s("c6_06"), TL.s("c7_01"), c6_s03_radio_boat),
+    (TL.s("c6_06"), TL.s("c7_00"), c6_s03_radio_boat),
 ]
 
 
@@ -205,10 +228,10 @@ def scenes():
 
 def music(A):
     """Acto 2/3: El Mago de Nueva York + La Pizarra 3 (Resonancia) + El barco radiocontrolado."""
-    t0 = TL.s("c6_01")
+    t0 = TL.s("c6_00")
     t_piz = TL.s("c6_04")
     t_boat = TL.s("c6_06")
-    t_end = TL.s("c7_01")
+    t_end = TL.s("c7_00")
     A.add_pad(t0, t_piz - t0, [146.83, 220.0, 277.18, 329.63], amp=0.04)
     piz_beat = 60.0 / 112.0
     piz_arp = [523.25, 659.25, 783.99, 659.25, 587.33, 698.46, 880.0, 698.46]
