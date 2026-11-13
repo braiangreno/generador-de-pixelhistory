@@ -191,15 +191,20 @@ def scenes():
 
 
 def music(A):
-    return
+    t0 = TL.s("c8_00")
+    t_fin = TL.s("c8_06")
+    t_end_vo = TL.e("c8_08")
+    A.add_pad(t0, t_fin - t0, [110.0, 164.81, 220.0, 261.63], amp=0.040)
+    A.add_pad(t_fin, t_end_vo - t_fin + 1.2, [130.81, 196.0, 261.63, 329.63], amp=0.045)
 
 
 def sfx(A):
-    A.fx_chime(TL.word("c8_01", "premio"), 0.10)
-    A.fx_sparkle(TL.word("c8_02", "Salón"), 0.10)
-    A.fx_pop(TL.s("c8_03"), 0.08)
-    A.fx_sparkle(TL.word("c8_05", "chip"), 0.10)
-    A.fx_chime(TL.s("c8_06"), 0.11)
-    A.fx_chime(TL.s("c8_07"), 0.12)
-    A.fx_pop(TL.s("c8_08"), 0.10)
-    A.fx_sparkle(TL.s("c8_08") + 0.35, 0.10)
+    A.fx_chime(TL.word("c8_01", "premio"), 0.11)
+    A.fx_sparkle(TL.word("c8_02", "Salón"), 0.11)
+    A.fx_pop(TL.s("c8_03"), 0.09)
+    A.fx_pop(TL.s("c8_04"), 0.08)
+    A.fx_sparkle(TL.word("c8_05", "chip"), 0.11)
+    A.fx_chime(TL.s("c8_06"), 0.12)
+    A.fx_chime(TL.s("c8_07"), 0.13)
+    A.fx_pop(TL.s("c8_08"), 0.11)
+    A.fx_sparkle(TL.s("c8_08") + 0.35, 0.11)

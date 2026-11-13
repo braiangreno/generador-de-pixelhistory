@@ -583,7 +583,6 @@ def compose_vertical_scene(vctx):
         root_low = getattr(core, "ROOT", "").lower()
         is_dune = "dune" in root_low
         is_tesla = "tesla" in root_low
-        is_smartphone = "smartphone" in root_low
         if is_dune and not vctx.chapter_card.get("snow"):
             d.ellipse([36, 38, 56, 58], fill=(244, 218, 162, 210))
             d.ellipse([216, 54, 230, 68], fill=(225, 232, 245, 190))
@@ -607,19 +606,20 @@ def compose_vertical_scene(vctx):
             if hasattr(common, "draw_rotating_arrows"):
                 common.draw_rotating_arrows(cv, VW // 2, 78, 24, t, speed=2.0,
                                             color=common.TESLA_CYAN, glow=core.GOLD, alpha=0.75)
-        elif is_smartphone:
+        elif "lamarr" in root_low:
             d.rectangle([0, 424, VW, VH], fill=(10, 14, 28, 245))
-            for tx in (44, 135, 226):
-                d.line([(tx, 386), (tx - 9, 426)], fill=(38, 54, 86, 220), width=2)
-                d.line([(tx, 386), (tx + 9, 426)], fill=(38, 54, 86, 220), width=2)
-                d.line([(tx - 9, 394), (tx + 9, 394)], fill=(52, 74, 114, 220), width=2)
-            d.line([(0, 394), (VW, 394)], fill=(72, 168, 224, 120), width=1)
-            if hasattr(common, "draw_honeycomb_grid"):
-                common.draw_honeycomb_grid(cv, VW // 2, 76, r_cell=12, ring=1, t=t,
-                                           color=common.TESLA_CYAN, highlight_idx=int(t * 2.5) % 7, alpha=0.75)
-            if hasattr(common, "draw_signal_bars"):
-                bars_anim = 1 + (int(t * 3.0) % 4)
-                common.draw_signal_bars(cv, VW // 2 - 14, 418, bars_lit=bars_anim, scale=2, color=core.GOLD, alpha=0.85)
+            if hasattr(common, "draw_piano_roll"):
+                common.draw_piano_roll(cv, VW // 2 - 22, 28, 44, 92, t, speed=22.0, alpha=0.88)
+            if hasattr(common, "draw_freq_lanes"):
+                common.draw_freq_lanes(cv, 16, 368, VW - 32, 52, t, n_lanes=4, speed=4.2,
+                                       hopping=True, show_labels=False)
+        elif "cine" in root_low:
+            if hasattr(common, "draw_filmstrip"):
+                common.draw_filmstrip(cv, 0, 28, VW, 36, t, speed=42.0, sepia=True, alpha=0.85)
+                common.draw_filmstrip(cv, 0, 412, VW, 36, t, speed=-42.0, sepia=True, alpha=0.85)
+            if hasattr(common, "draw_galloping_horse"):
+                common.draw_galloping_horse(cv, VW // 2, 98, t * 0.9, scale=1, silhouette_col=core.GOLD, rider=True)
+                common.draw_galloping_horse(cv, VW // 2, 378, t * 0.9 + 0.25, scale=1, silhouette_col=core.GOLD, rider=True)
         render_chapter_card_vertical(cv, vctx.chapter_card)
         return cv
 
@@ -977,7 +977,10 @@ def _install_hooks():
                     vctx.active_x_shift = (id(canvas), x, w, nx, nw, y, y + h)
                     x, w = nx, nw
                 else:
-                    vctx.active_x_shift = None
+                    if w >= 140 and h < 145 and x >= 0:
+                        vctx.active_x_shift = (id(canvas), x, w, x, w, y, y + h)
+                    else:
+                        vctx.active_x_shift = None
                     # Si es una tarjeta inferior (y >= 165), limpiar puntas de flechas decorativas a sus lados
                     if y >= 165 and not vctx.mid_windows:
                         ry0, ry1 = max(160, y - 4), min(core.H, y + h + 4)
@@ -995,6 +998,8 @@ def _install_hooks():
                     nx = max(0, cx - nw // 2)
                     vctx.active_x_shift = (id(canvas), x, w, nx, nw, y, y + h)
                     x, w = nx, nw
+                elif w >= 140:
+                    vctx.active_x_shift = (id(canvas), x, w, x, w, y, y + h)
                 else:
                     vctx.active_x_shift = None
                 core._orig_window(canvas, x, y, w, h, fill=fill, border=border, alpha=alpha, inner=inner)
@@ -1031,18 +1036,20 @@ def _install_hooks():
                     tw, _ = core.text_size(tr_t, fname, size)
                     max_tw = nw - 14
                     if tw > max_tw:
-                        if size >= 16:
+                        if size >= 16 and tw > max_tw + 24:
                             size = 8
                             tw, _ = core.text_size(tr_t, fname, size)
+                        if tw > max_tw and size == 8 and fname == "press":
+                            fname = "silk"
+                            tr_t = tr(text, fname)
+                            tw, _ = core.text_size(tr_t, fname, size)
                         if tw > max_tw:
-                            lines = wrap_text_px(tr_t, fname, size, max_tw)
-                            for li, lstr in enumerate(lines[:2]):
-                                core._orig_draw_text(
-                                    canvas, lstr, nx + nw // 2, y + li * 10,
-                                    fname, size, color=color, align="center", outline=outline,
-                                    shadow=shadow, gradient=gradient, reveal=reveal,
-                                    alpha=alpha, outline_w=outline_w,
-                                )
+                            core._orig_draw_text(
+                                canvas, text, nx + nw // 2, y,
+                                fname, size, color=color, align="center", outline=outline,
+                                shadow=shadow, gradient=gradient, reveal=reveal,
+                                alpha=alpha, outline_w=outline_w,
+                            )
                             return
             # Si es un texto suelto en el lienzo principal (sin ventana) y supera 244px de ancho, ajustarlo
             if _is_scene_cv(canvas):

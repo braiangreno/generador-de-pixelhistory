@@ -85,8 +85,8 @@ def mix_language(lang):
     v_abs = np.abs(voice[::step])
     kern_samples = int(0.32 * SR / step)
     v_env = movavg(v_abs, max(3, kern_samples))
-    duck_m = np.clip(1.0 - 0.72 * (v_env / 0.10), 0.28, 1.0)
-    duck_s = np.clip(1.0 - 0.55 * (v_env / 0.10), 0.45, 1.0)
+    duck_m = np.clip(1.0 - 0.70 * (v_env / 0.10), 0.30, 1.0)
+    duck_s = np.clip(1.0 - 0.38 * (v_env / 0.10), 0.62, 1.0)
     duck_m_full = np.interp(np.arange(total_samples), np.arange(len(duck_m)) * step, duck_m)
     duck_s_full = np.interp(np.arange(total_samples), np.arange(len(duck_s)) * step, duck_s)
     

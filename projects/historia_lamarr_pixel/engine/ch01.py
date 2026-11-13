@@ -15,9 +15,9 @@ def s01_wireless_and_hollywood(t):
         cv = bg("hall_of_fame_modern").copy()
         draw_place_only(cv, "AHORA MISMO · TUS AURICULARES", t, t_s01, border=LAMARR_CYAN)
 
-        # Panel central (w=244, x=118..362) mostrando el salto entre canales > 1.000 veces/s
+        # Panel central mostrando el salto entre canales > 1.000 veces/s
         window(cv, 118, 44, 244, 114, fill=(12, 20, 42), border=LAMARR_CYAN, alpha=0.94)
-        lbl_top = "SEÑAL INALÁMBRica · SALTO CONTINUO" if t < t_mil else "+1.000 SALTOS POR SEGUNDO"
+        lbl_top = "SEÑAL INALÁMBRICA · SALTO CONTINUO" if t < t_mil else "+1.000 SALTOS POR SEGUNDO"
         draw_text(cv, lbl_top, 240, 52, "silk", 8, GOLD if t >= t_mil else LAMARR_CYAN, align="center")
         draw_freq_lanes(cv, 128, 68, 224, 82, t, n_lanes=5, speed=6.5 if t >= t_mil else 3.5,
                         hopping=True, show_labels=True)
@@ -241,14 +241,25 @@ def scenes():
 
 
 def music(A):
-    return
+    t0 = 0.0
+    t_c1 = TL.s("c1_00")
+    t_end = TL.s("c2_00")
+    A.add_pad(t0, t_c1 - t0, [110.0, 164.81, 220.0], amp=0.042)
+    A.add_pad(t_c1, t_end - t_c1, [110.0, 164.81, 220.0, 261.63], amp=0.038)
 
 
 def sfx(A):
-    A.fx_pop(TL.s("s01") + 0.2, 0.07)
-    A.fx_chime(TL.s("s02"), 0.09)
-    A.fx_thud(TL.word("s03", "cajón"), 0.10)
-    A.fx_chime(TL.s("s05"), 0.11)
-    A.fx_sparkle(TL.word("c1_03", "ochenta"), 0.09)
-    A.fx_pop(TL.word("c1_04", "armar"), 0.09)
-    A.fx_thud(TL.word("c1_05", "prohibieron"), 0.09)
+    A.fx_pop(TL.s("s01") + 0.15, 0.08)
+    A.fx_sparkle(TL.word("s01", "mil"), 0.09)
+    A.fx_chime(TL.s("s02"), 0.10)
+    A.fx_thud(TL.word("s03", "cajón"), 0.11)
+    A.fx_pop(TL.s("s04"), 0.08)
+    A.fx_chime(TL.s("s05"), 0.12)
+    A.fx_pop(TL.s("c1_01"), 0.09)
+    A.fx_pop(TL.word("c1_02", "tranvías"), 0.08)
+    A.fx_sparkle(TL.word("c1_02", "electricidad"), 0.09)
+    A.fx_sparkle(TL.word("c1_03", "ochenta"), 0.10)
+    A.fx_pop(TL.word("c1_04", "desarmó"), 0.08)
+    A.fx_chime(TL.word("c1_04", "armar"), 0.10)
+    A.fx_thud(TL.word("c1_05", "prohibieron"), 0.10)
+    A.fx_chime(TL.word("c1_06", "cabeza"), 0.10)

@@ -256,7 +256,7 @@ def scenes():
 
 
 def music(A):
-    return
+    A.add_pad(TL.s("c7_00"), TL.e("c7_07") - TL.s("c7_00"), (174.61, 220.0, 293.66), amp=0.015)
 
 
 def sfx(A):

@@ -204,9 +204,54 @@ CREAM_RAMP = [(255, 255, 250), (245, 242, 235), (220, 214, 200), (190, 180, 165)
 
 def draw_text(canvas, text, x, y, fname="press", size=8, color=CREAM, align="left", outline=INK,
               shadow=True, gradient=None, reveal=None, alpha=1.0, outline_w=1):
-    """Dibuja texto. reveal = cantidad de caracteres visibles (efecto máquina de escribir)."""
+    """Dibuja texto. reveal = cantidad de caracteres visibles (efecto máquina de escribir).
+    Incluye protección automática para que ningún texto desborde jamás una ventana (window) ni el lienzo."""
     orig_len = len(text) if isinstance(text, str) else 0
-    text = tr(text, fname)
+    raw_text = text
+
+    # Determinar límites horizontales seguros (dentro de la ventana contenedora si existe, o del lienzo)
+    wins = getattr(canvas, "_windows", None)
+    containing_win = None
+    if wins:
+        for (wx, wy, ww, wh) in wins:
+            if (wx - 6 <= x <= wx + ww + 6) and (wy - 2 <= y <= wy + wh - 3):
+                if containing_win is None or ww < containing_win[2]:
+                    containing_win = (wx, wy, ww, wh)
+
+    if containing_win is not None:
+        wx, wy, ww, wh = containing_win
+        bound_x0, bound_x1 = wx + 6, wx + ww - 6
+        if align == "center" and abs(x - (wx + ww // 2)) <= 18:
+            x = wx + ww // 2
+    else:
+        cw = canvas.size[0] if hasattr(canvas, "size") else W
+        bound_x0, bound_x1 = 6, cw - 6
+
+    if align == "center":
+        max_tw = min(bound_x1 - bound_x0, 2 * min(x - bound_x0, bound_x1 - x))
+    elif align == "right":
+        max_tw = x - bound_x0
+    else:
+        max_tw = bound_x1 - x
+
+    full_text = tr(raw_text, fname)
+    full_tw, _ = text_size(full_text, fname, size)
+
+    if max_tw >= 36 and full_tw > max_tw:
+        if size > 16:
+            size = 16
+            full_text = tr(raw_text, fname)
+            full_tw, _ = text_size(full_text, fname, size)
+        if full_tw > max_tw + 24 and size > 8:
+            size = 8
+            full_text = tr(raw_text, fname)
+            full_tw, _ = text_size(full_text, fname, size)
+        if full_tw > max_tw and size == 8 and fname == "press":
+            fname = "silk"
+            full_text = tr(raw_text, fname)
+            full_tw, _ = text_size(full_text, fname, size)
+
+    text = full_text
     if reveal is not None:
         if orig_len > 0 and len(text) != orig_len:
             reveal = reveal * len(text) / orig_len
@@ -216,16 +261,31 @@ def draw_text(canvas, text, x, y, fname="press", size=8, color=CREAM, align="lef
         shown = text[:n]
     else:
         shown = text
+
     img = render_text(shown, fname, size, tuple(color), tuple(outline) if outline else None, shadow,
                       tuple(map(tuple, gradient)) if gradient else None, outline_w)
     pad = outline_w + 2
     tw = img.size[0] - pad * 2
+
+    if max_tw >= 36 and full_tw > max_tw and tw > 0:
+        scale_k = max_tw / float(full_tw)
+        new_tw = max(1, int(round(tw * scale_k)))
+        img = img.resize((new_tw + pad * 2, img.size[1]), Image.NEAREST)
+        tw = new_tw
+
     if align == "center":
         x0 = x - tw // 2
     elif align == "right":
         x0 = x - tw
     else:
         x0 = x
+
+    if max_tw >= 36:
+        if x0 + tw > bound_x1:
+            x0 = bound_x1 - tw
+        if x0 < bound_x0:
+            x0 = bound_x0
+
     paste(canvas, img, int(x0) - pad, int(y) - pad - top_pad(fname, size), alpha)
 
 
@@ -313,6 +373,21 @@ def window(canvas, x, y, w, h, fill=(20, 24, 52), border=GOLD, alpha=0.92, inner
     """Ventana estilo RPG 16 bits con borde doble y esquinas recortadas."""
     if border is None:
         border = GOLD
+    # En 16:9, si es un panel informativo central de 3 líneas (w=240..256, y=38..54, h=54..84),
+    # darle ancho cómodo (w=284) para que luzca proporcionado en 480px y nunca apriete el texto.
+    if globals().get("_VCTX") is None and getattr(canvas, "size", None) == (W, H):
+        cx = x + w // 2
+        if 236 <= w <= 256 and 38 <= y <= 56 and 50 <= h <= 120 and abs(cx - 240) <= 10:
+            w = 284
+            x = cx - w // 2
+    wins = getattr(canvas, "_windows", None)
+    if wins is None:
+        wins = []
+        try:
+            canvas._windows = wins
+        except Exception:
+            pass
+    wins.append((int(x), int(y), int(w), int(h)))
     a = np.zeros((h, w, 4), dtype=np.uint8)
     a[..., :3] = fill
     a[..., 3] = int(255 * alpha)

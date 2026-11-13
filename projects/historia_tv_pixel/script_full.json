@@ -2,402 +2,469 @@
   {
     "id": "s01",
     "ch": 0,
+    "pause": 0.4,
     "speak": "La imagen que estás viendo ahora se dibuja línea por línea, de arriba abajo. Más rápido de lo que tu ojo puede notar.",
     "sub": "La imagen que estás viendo ahora se dibuja línea por línea, de arriba abajo. Más rápido de lo que tu ojo puede notar."
   },
   {
     "id": "s02",
     "ch": 0,
-    "speak": "Esa idea se le ocurrió a un chico de catorce años mientras araba un campo en Áidajo.",
+    "pause": 0.45,
+    "speak": "Esa idea se le ocurrió a un chico de catorce años mientras araba un campo en Idaho.",
     "sub": "Esa idea se le ocurrió a un chico de catorce años mientras araba un campo en Idaho."
   },
   {
     "id": "s03",
     "ch": 0,
+    "pause": 0.85,
     "speak": "Miró los surcos, uno al lado del otro. Y pensó que así se podía mandar una imagen por el aire: renglón por renglón.",
     "sub": "Miró los surcos, uno al lado del otro. Y pensó que así se podía mandar una imagen por el aire: renglón por renglón."
   },
   {
     "id": "s04",
     "ch": 0,
+    "pause": 0.55,
     "speak": "Treinta años después, casi nadie sabía su nombre.",
     "sub": "Treinta años después, casi nadie sabía su nombre."
   },
   {
     "id": "s05",
     "ch": 0,
+    "pause": 1.0,
     "speak": "Esta es la historia de la televisión. Y del chico que la vio en un campo arado.",
     "sub": "Esta es la historia de la televisión. Y del chico que la vio en un campo arado."
   },
   {
     "id": "c1_00",
     "ch": 1,
+    "pause": 0.45,
     "speak": "Capítulo uno. Un telescopio eléctrico.",
-    "sub": "Capítulo uno. Un telescopio eléctrico."
+    "sub": "CAPÍTULO 1 — UN TELESCOPIO ELÉCTRICO"
   },
   {
     "id": "c1_01",
     "ch": 1,
+    "pause": 0.4,
     "speak": "La idea de mandar imágenes por un cable es más vieja de lo que parece. Según se cuenta, nació en la Nochebuena de mil ochocientos ochenta y tres.",
     "sub": "La idea de mandar imágenes por un cable es más vieja de lo que parece. Según se cuenta, nació en la Nochebuena de 1883."
   },
   {
     "id": "c1_02",
     "ch": 1,
-    "speak": "Un estudiante de Berlín, Pól Nípkof, imaginó un disco con agujeros en espiral. Al girar, cada agujero barría una franja de la imagen.",
+    "pause": 0.45,
+    "speak": "Un estudiante de Berlín, Paul Nipkow, imaginó un disco con agujeros en espiral. Al girar, cada agujero barría una franja de la imagen.",
     "sub": "Un estudiante de Berlín, Paul Nipkow, imaginó un disco con agujeros en espiral. Al girar, cada agujero barría una franja de la imagen."
   },
   {
     "id": "c1_03",
     "ch": 1,
+    "pause": 0.55,
     "speak": "Lo patentó como telescopio eléctrico. Nunca llegó a construirlo.",
     "sub": "Lo patentó como telescopio eléctrico. Nunca llegó a construirlo."
   },
   {
     "id": "c1_04",
     "ch": 1,
+    "pause": 0.4,
     "speak": "Una foto no entra entera en un cable. Pero se puede cortar en tiras.",
     "sub": "Una foto no entra entera en un cable. Pero se puede cortar en tiras."
   },
   {
     "id": "c1_05",
     "ch": 1,
+    "pause": 0.45,
     "speak": "Lees cada tira de izquierda a derecha, como un renglón de un libro: claro, oscuro, claro. Y mandas esos cambios de luz como electricidad.",
     "sub": "Lees cada tira de izquierda a derecha, como un renglón de un libro: claro, oscuro, claro. Y mandas esos cambios de luz como electricidad."
   },
   {
     "id": "c1_06",
     "ch": 1,
+    "pause": 0.85,
     "speak": "Del otro lado, alguien pinta las tiras en el mismo orden. Si lo haces muy rápido, el ojo ve una imagen completa.",
     "sub": "Del otro lado, alguien pinta las tiras en el mismo orden. Si lo haces muy rápido, el ojo ve una imagen completa."
   },
   {
     "id": "c1_07",
     "ch": 1,
+    "pause": 1.0,
     "speak": "La idea estaba. Faltaban cuarenta años para verla funcionar.",
     "sub": "La idea estaba. Faltaban cuarenta años para verla funcionar."
   },
   {
     "id": "c2_00",
     "ch": 2,
+    "pause": 0.45,
     "speak": "Capítulo dos. La cabeza del muñeco.",
-    "sub": "Capítulo dos. La cabeza del muñeco."
+    "sub": "CAPÍTULO 2 — LA CABEZA DEL MUÑECO"
   },
   {
     "id": "c2_01",
     "ch": 2,
-    "speak": "En un altillo de Londres, un escocés llamado Yón Lógui Berd lo intentó. Armó un aparato con discos que giraban, motores y lámparas.",
+    "pause": 0.45,
+    "speak": "En un altillo de Londres, un escocés llamado John Logie Baird lo intentó. Armó un aparato con discos que giraban, motores y lámparas.",
     "sub": "En un altillo de Londres, un escocés llamado John Logie Baird lo intentó. Armó un aparato con discos que giraban, motores y lámparas."
   },
   {
     "id": "c2_02",
     "ch": 2,
-    "speak": "Su primer actor fue la cabeza de un muñeco de ventrílocuo, al que llamaba Stuki Bil. No se quejaba del calor de las lámparas.",
+    "pause": 0.45,
+    "speak": "Su primer actor fue la cabeza de un muñeco de ventrílocuo, al que llamaba Stooky Bill. No se quejaba del calor de las lámparas.",
     "sub": "Su primer actor fue la cabeza de un muñeco de ventrílocuo, al que llamaba Stooky Bill. No se quejaba del calor de las lámparas."
   },
   {
     "id": "c2_03",
     "ch": 2,
+    "pause": 0.45,
     "speak": "Cuando por fin vio la cara del muñeco en su pantalla, bajó corriendo las escaleras.",
     "sub": "Cuando por fin vio la cara del muñeco en su pantalla, bajó corriendo las escaleras."
   },
   {
     "id": "c2_04",
     "ch": 2,
-    "speak": "Subió a un empleado de la oficina de abajo, Uíliam Téinton. Y Téinton se convirtió en la primera persona televisada.",
+    "pause": 0.45,
+    "speak": "Subió a un empleado de la oficina de abajo, William Taynton. Y Taynton se convirtió en la primera persona televisada.",
     "sub": "Subió a un empleado de la oficina de abajo, William Taynton. Y Taynton se convirtió en la primera persona televisada."
   },
   {
     "id": "c2_05",
     "ch": 2,
-    "speak": "En enero de mil novecientos veintiséis, Berd lo mostró ante unos cuarenta científicos. La imagen era chiquita, anaranjada y tenía apenas unos treinta renglones.",
+    "pause": 0.85,
+    "speak": "En enero de mil novecientos veintiséis, Baird lo mostró ante unos cuarenta científicos. La imagen era chiquita, anaranjada y tenía apenas unos treinta renglones.",
     "sub": "En enero de 1926, Baird lo mostró ante unos cuarenta científicos. La imagen era chiquita, anaranjada y tenía apenas unos treinta renglones."
   },
   {
     "id": "c2_06",
     "ch": 2,
+    "pause": 1.0,
     "speak": "Era televisión. Pero un disco que gira nunca iba a llegar mucho más lejos.",
     "sub": "Era televisión. Pero un disco que gira nunca iba a llegar mucho más lejos."
   },
   {
     "id": "c3_00",
     "ch": 3,
+    "pause": 0.45,
     "speak": "Capítulo tres. Los surcos.",
-    "sub": "Capítulo tres. Los surcos."
+    "sub": "CAPÍTULO 3 — LOS SURCOS"
   },
   {
     "id": "c3_01",
     "ch": 3,
-    "speak": "Mientras tanto, en Estados Unidos, Fáilo Fárnsuorz había nacido en una cabaña de troncos. En su casa ni siquiera había luz eléctrica. Pero a los seis años ya había decidido que iba a ser inventor.",
+    "pause": 0.45,
+    "speak": "Mientras tanto, en Estados Unidos, Philo Farnsworth había nacido en una cabaña de troncos. En su casa ni siquiera había luz eléctrica. Pero a los seis años ya había decidido que iba a ser inventor.",
     "sub": "Mientras tanto, en Estados Unidos, Philo Farnsworth había nacido en una cabaña de troncos. En su casa ni siquiera había luz eléctrica. Pero a los seis años ya había decidido que iba a ser inventor."
   },
   {
     "id": "c3_02",
     "ch": 3,
+    "pause": 0.45,
     "speak": "A los catorce años, arando con caballos, miró hacia atrás. Y pensó en un haz de electrones que barriera una imagen igual que el arado: renglón por renglón.",
     "sub": "A los catorce años, arando con caballos, miró hacia atrás. Y pensó en un haz de electrones que barriera una imagen igual que el arado: renglón por renglón."
   },
   {
     "id": "c3_03",
     "ch": 3,
+    "pause": 0.55,
     "speak": "Sin discos. Sin nada que gire. Solo electricidad.",
     "sub": "Sin discos. Sin nada que gire. Solo electricidad."
   },
   {
     "id": "c3_04",
     "ch": 3,
-    "speak": "Se lo explicó en el pizarrón a su profesor de química, Yástin Tólman. El profesor le dijo que, si lo quería de verdad, lo iba a lograr. Después copió el dibujo en un papel y lo guardó. Recuerda ese papel.",
+    "pause": 0.85,
+    "speak": "Se lo explicó en el pizarrón a su profesor de química, Justin Tolman. El profesor le dijo que, si lo quería de verdad, lo iba a lograr. Después copió el dibujo en un papel y lo guardó. Recuerda ese papel.",
     "sub": "Se lo explicó en el pizarrón a su profesor de química, Justin Tolman. El profesor le dijo que, si lo quería de verdad, lo iba a lograr. Después copió el dibujo en un papel y lo guardó. Recuerda ese papel."
   },
   {
     "id": "c3_05",
     "ch": 3,
+    "pause": 1.0,
     "speak": "Tenía quince años. Y acababa de dibujar la televisión en un pizarrón.",
     "sub": "Tenía quince años. Y acababa de dibujar la televisión en un pizarrón."
   },
   {
     "id": "c4_00",
     "ch": 4,
+    "pause": 0.45,
     "speak": "Capítulo cuatro. El signo de dólar.",
-    "sub": "Capítulo cuatro. El signo de dólar."
+    "sub": "CAPÍTULO 4 — EL SIGNO DE DÓLAR"
   },
   {
     "id": "c4_01",
     "ch": 4,
+    "pause": 0.45,
     "speak": "Con veinte años consiguió inversores, veinticinco mil dólares y un laboratorio en San Francisco. Su esposa, Pem, trabajaba con él.",
     "sub": "Con veinte años consiguió inversores, veinticinco mil dólares y un laboratorio en San Francisco. Su esposa, Pem, trabajaba con él."
   },
   {
     "id": "c4_02",
     "ch": 4,
+    "pause": 0.45,
     "speak": "Su cámara convertía la luz en electrones. Un imán los movía en renglones: de izquierda a derecha, de arriba abajo.",
     "sub": "Su cámara convertía la luz en electrones. Un imán los movía en renglones: de izquierda a derecha, de arriba abajo."
   },
   {
     "id": "c4_03",
     "ch": 4,
+    "pause": 0.55,
     "speak": "En la pantalla, otro haz de electrones pintaba esos renglones sobre un vidrio que brilla. Nada gira. Todo es electricidad.",
     "sub": "En la pantalla, otro haz de electrones pintaba esos renglones sobre un vidrio que brilla. Nada gira. Todo es electricidad."
   },
   {
     "id": "c4_04",
     "ch": 4,
+    "pause": 0.45,
     "speak": "El siete de septiembre de mil novecientos veintisiete pusieron frente a la cámara un vidrio con una sola raya.",
     "sub": "El 7 de septiembre de 1927 pusieron frente a la cámara un vidrio con una sola raya."
   },
   {
     "id": "c4_05",
     "ch": 4,
+    "pause": 0.45,
     "speak": "En la otra habitación, en un tubo, apareció una raya que brillaba. Por telegrama, el equipo avisó, palabrota incluida, que el aparato funcionaba.",
     "sub": "En la otra habitación, en un tubo, apareció una raya que brillaba. Por telegrama, el equipo avisó, palabrota incluida, que el aparato funcionaba."
   },
   {
     "id": "c4_06",
     "ch": 4,
+    "pause": 0.45,
     "speak": "Los inversores preguntaban cuándo iban a ver algo de dinero. Así que un día, en la pantalla, apareció… un signo de dólar.",
     "sub": "Los inversores preguntaban cuándo iban a ver algo de dinero. Así que un día, en la pantalla, apareció… un signo de dólar."
   },
   {
     "id": "c4_07",
     "ch": 4,
+    "pause": 0.85,
     "speak": "Recién un tiempo después llegó la primera cara humana que mostró su sistema: la de Pem, su esposa.",
     "sub": "Recién un tiempo después llegó la primera cara humana que mostró su sistema: la de Pem, su esposa."
   },
   {
     "id": "c4_08",
     "ch": 4,
+    "pause": 1.0,
     "speak": "Antes de mostrar una cara, la televisión ya mostraba dinero.",
     "sub": "Antes de mostrar una cara, la televisión ya mostraba dinero."
   },
   {
     "id": "c5_00",
     "ch": 5,
+    "pause": 0.45,
     "speak": "Capítulo cinco. Goliat.",
-    "sub": "Capítulo cinco. Goliat."
+    "sub": "CAPÍTULO 5 — GOLIAT"
   },
   {
     "id": "c5_01",
     "ch": 5,
+    "pause": 0.45,
     "speak": "Del otro lado del país, la empresa de radio más grande de Estados Unidos quería la televisión para ella. Se llamaba erre ce a.",
     "sub": "Del otro lado del país, la empresa de radio más grande de Estados Unidos quería la televisión para ella. Se llamaba RCA."
   },
   {
     "id": "c5_02",
     "ch": 5,
-    "speak": "Su jefe, Déivid Sárnof, mandó a su mejor ingeniero, Vladímir Svórikin, a visitar el laboratorio. Fárnsuorz le mostró todo. Dicen que Svórikin comentó que le habría gustado inventarlo a él.",
+    "pause": 0.45,
+    "speak": "Su jefe, David Sarnoff, mandó a su mejor ingeniero, Vladimir Zworykin, a visitar el laboratorio. Farnsworth le mostró todo. Dicen que Zworykin comentó que le habría gustado inventarlo a él.",
     "sub": "Su jefe, David Sarnoff, mandó a su mejor ingeniero, Vladimir Zworykin, a visitar el laboratorio. Farnsworth le mostró todo. Dicen que Zworykin comentó que le habría gustado inventarlo a él."
   },
   {
     "id": "c5_03",
     "ch": 5,
+    "pause": 0.45,
     "speak": "Después, erre ce a le ofreció cien mil dólares por sus patentes. Él dijo que no.",
     "sub": "Después, RCA le ofreció cien mil dólares por sus patentes. Él dijo que no."
   },
   {
     "id": "c5_04",
     "ch": 5,
-    "speak": "Entonces erre ce a le inició un pleito de patentes. Dijo que la idea era de Svórikin, que la había patentado antes.",
+    "pause": 0.45,
+    "speak": "Entonces erre ce a le inició un pleito de patentes. Dijo que la idea era de Zworykin, que la había patentado antes.",
     "sub": "Entonces RCA le inició un pleito de patentes. Dijo que la idea era de Zworykin, que la había patentado antes."
   },
   {
     "id": "c5_05",
     "ch": 5,
-    "speak": "¿Te acuerdas del papel? El viejo profesor Tólman apareció con el dibujo de aquel pizarrón.",
+    "pause": 0.45,
+    "speak": "¿Te acuerdas del papel? El viejo profesor Tolman apareció con el dibujo de aquel pizarrón.",
     "sub": "¿Te acuerdas del papel? El viejo profesor Tolman apareció con el dibujo de aquel pizarrón."
   },
   {
     "id": "c5_06",
     "ch": 5,
-    "speak": "En mil novecientos treinta y cuatro, la oficina de patentes le dio la razón a Fárnsuorz. Y en mil novecientos treinta y nueve, erre ce a terminó aceptando pagarle una licencia de un millón de dólares.",
+    "pause": 0.85,
+    "speak": "En mil novecientos treinta y cuatro, la oficina de patentes le dio la razón a Farnsworth. Y en mil novecientos treinta y nueve, erre ce a terminó aceptando pagarle una licencia de un millón de dólares.",
     "sub": "En 1934, la oficina de patentes le dio la razón a Farnsworth. Y en 1939, RCA terminó aceptando pagarle una licencia de un millón de dólares."
   },
   {
     "id": "c5_07",
     "ch": 5,
+    "pause": 1.0,
     "speak": "Un chico de campo le ganó a un gigante. Con un dibujo de pizarrón.",
     "sub": "Un chico de campo le ganó a un gigante. Con un dibujo de pizarrón."
   },
   {
     "id": "c6_00",
     "ch": 6,
+    "pause": 0.45,
     "speak": "Capítulo seis. Una ventana en el living.",
-    "sub": "Capítulo seis. Una ventana en el living."
+    "sub": "CAPÍTULO 6 — UNA VENTANA EN EL LIVING"
   },
   {
     "id": "c6_01",
     "ch": 6,
-    "speak": "Pero el gran momento se lo quedó erre ce a: en la feria mundial de Nueva York, Sárnof presentó la televisión al público como si fuera suya.",
+    "pause": 0.45,
+    "speak": "Pero el gran momento se lo quedó erre ce a: en la feria mundial de Nueva York, Sarnoff presentó la televisión al público como si fuera suya.",
     "sub": "Pero el gran momento se lo quedó RCA: en la feria mundial de Nueva York, Sarnoff presentó la televisión al público como si fuera suya."
   },
   {
     "id": "c6_02",
     "ch": 6,
+    "pause": 0.45,
     "speak": "La guerra frenó todo. Pero después, la tele explotó. En Estados Unidos, en mil novecientos cincuenta, apenas una casa de cada diez tenía una.",
     "sub": "La guerra frenó todo. Pero después, la tele explotó. En Estados Unidos, en 1950, apenas una casa de cada diez tenía una."
   },
   {
     "id": "c6_03",
     "ch": 6,
+    "pause": 0.55,
     "speak": "Diez años después, casi nueve de cada diez. En América Latina, las primeras transmisiones llegaron también en esos años cincuenta.",
     "sub": "Diez años después, casi nueve de cada diez. En América Latina, las primeras transmisiones llegaron también en esos años cincuenta."
   },
   {
     "id": "c6_04",
     "ch": 6,
+    "pause": 0.45,
     "speak": "¿Y cómo se ve movimiento? Si le muestras al ojo muchas imágenes quietas por segundo, el cerebro las une.",
     "sub": "¿Y cómo se ve movimiento? Si le muestras al ojo muchas imágenes quietas por segundo, el cerebro las une."
   },
   {
     "id": "c6_05",
     "ch": 6,
+    "pause": 0.45,
     "speak": "La tele de tubo dibujaba más de quinientos renglones por imagen. Y entre veinticinco y treinta imágenes por segundo.",
     "sub": "La tele de tubo dibujaba más de quinientos renglones por imagen. Y entre veinticinco y treinta imágenes por segundo."
   },
   {
     "id": "c6_06",
     "ch": 6,
+    "pause": 0.55,
     "speak": "Por eso, si filmas una tele vieja con el celular, ves franjas: la cámara la agarra a mitad del dibujo.",
     "sub": "Por eso, si filmas una tele vieja con el celular, ves franjas: la cámara la agarra a mitad del dibujo."
   },
   {
     "id": "c6_07",
     "ch": 6,
+    "pause": 0.85,
     "speak": "Después llegó el color: tres puntitos, rojo, verde y azul, que mezclados forman todos los demás. Tu pantalla todavía usa esos tres.",
     "sub": "Después llegó el color: tres puntitos, rojo, verde y azul, que mezclados forman todos los demás. Tu pantalla todavía usa esos tres."
   },
   {
     "id": "c6_08",
     "ch": 6,
+    "pause": 1.0,
     "speak": "La familia ya no se juntaba alrededor de la radio. Se juntaba frente a una ventana.",
     "sub": "La familia ya no se juntaba alrededor de la radio. Se juntaba frente a una ventana."
   },
   {
     "id": "c7_00",
     "ch": 7,
-    "speak": "Capítulo siete. Doctor Equis.",
-    "sub": "Capítulo siete. Doctor X."
+    "pause": 0.45,
+    "speak": "Capítulo siete. Doctor X.",
+    "sub": "CAPÍTULO 7 — DOCTOR X"
   },
   {
     "id": "c7_01",
     "ch": 7,
-    "speak": "¿Y Fárnsuorz? Nunca se hizo rico con la tele. Sus primeras patentes vencieron justo cuando la industria despegaba.",
+    "pause": 0.45,
+    "speak": "¿Y Farnsworth? Nunca se hizo rico con la tele. Sus primeras patentes vencieron justo cuando la industria despegaba.",
     "sub": "¿Y Farnsworth? Nunca se hizo rico con la tele. Sus primeras patentes vencieron justo cuando la industria despegaba."
   },
   {
     "id": "c7_02",
     "ch": 7,
+    "pause": 0.45,
     "speak": "Según contó su hijo, no le gustaba lo que se transmitía. No quería que sus hijos la miraran.",
     "sub": "Según contó su hijo, no le gustaba lo que se transmitía. No quería que sus hijos la miraran."
   },
   {
     "id": "c7_03",
     "ch": 7,
-    "speak": "En mil novecientos cincuenta y siete lo invitaron a un programa de juegos: unos famosos tenían que adivinar el secreto del invitado. Lo presentaron como Doctor Equis.",
+    "pause": 0.45,
+    "speak": "En mil novecientos cincuenta y siete lo invitaron a un programa de juegos: unos famosos tenían que adivinar el secreto del invitado. Lo presentaron como Doctor X.",
     "sub": "En 1957 lo invitaron a un programa de juegos: unos famosos tenían que adivinar el secreto del invitado. Lo presentaron como Doctor X."
   },
   {
     "id": "c7_04",
     "ch": 7,
+    "pause": 0.45,
     "speak": "El público en su casa leyó el secreto en pantalla: había inventado la televisión electrónica.",
     "sub": "El público en su casa leyó el secreto en pantalla: había inventado la televisión electrónica."
   },
   {
     "id": "c7_05",
     "ch": 7,
-    "speak": "Los famosos preguntaron de todo. No adivinaron. El conductor le dijo que, sin él, se habría quedado sin trabajo. Fárnsuorz se fue con ochenta dólares y un cartón de cigarrillos.",
+    "pause": 0.85,
+    "speak": "Los famosos preguntaron de todo. No adivinaron. El conductor le dijo que, sin él, se habría quedado sin trabajo. Farnsworth se fue con ochenta dólares y un cartón de cigarrillos.",
     "sub": "Los famosos preguntaron de todo. No adivinaron. El conductor le dijo que, sin él, se habría quedado sin trabajo. Farnsworth se fue con ochenta dólares y un cartón de cigarrillos."
   },
   {
     "id": "c7_06",
     "ch": 7,
+    "pause": 1.0,
     "speak": "El inventor de la televisión salió en televisión. Y nadie lo reconoció.",
     "sub": "El inventor de la televisión salió en televisión. Y nadie lo reconoció."
   },
   {
     "id": "c8_00",
     "ch": 8,
+    "pause": 0.45,
     "speak": "Capítulo ocho. Valió la pena.",
-    "sub": "Capítulo ocho. Valió la pena."
+    "sub": "CAPÍTULO 8 — VALIÓ LA PENA"
   },
   {
     "id": "c8_01",
     "ch": 8,
+    "pause": 0.45,
     "speak": "El veinte de julio de mil novecientos sesenta y nueve, unos seiscientos millones de personas vieron por televisión a dos astronautas en la Luna.",
     "sub": "El 20 de julio de 1969, unos seiscientos millones de personas vieron por televisión a dos astronautas en la Luna."
   },
   {
     "id": "c8_02",
     "ch": 8,
-    "speak": "Fárnsuorz también miraba, en su living. Según contó su esposa, en ese momento le dijo que todo había valido la pena.",
+    "pause": 0.55,
+    "speak": "Farnsworth también miraba, en su living. Según contó su esposa, en ese momento le dijo que todo había valido la pena.",
     "sub": "Farnsworth también miraba, en su living. Según contó su esposa, en ese momento le dijo que todo había valido la pena."
   },
   {
     "id": "c8_03",
     "ch": 8,
-    "speak": "Murió dos años después. Hoy, en Estados Unidos, casi la mitad del tiempo frente al televisor ya es stríming.",
+    "pause": 0.45,
+    "speak": "Murió dos años después. Hoy, en Estados Unidos, casi la mitad del tiempo frente al televisor ya es streaming.",
     "sub": "Murió dos años después. Hoy, en Estados Unidos, casi la mitad del tiempo frente al televisor ya es streaming."
   },
   {
     "id": "c8_04",
     "ch": 8,
-    "speak": "Y la plataforma más vista en esas pantallas es Yutúb. Sí: esta.",
+    "pause": 0.45,
+    "speak": "Y la plataforma más vista en esas pantallas es YouTube. Sí: esta.",
     "sub": "Y la plataforma más vista en esas pantallas es YouTube. Sí: esta."
   },
   {
     "id": "c8_05",
     "ch": 8,
+    "pause": 0.85,
     "speak": "Cambió todo. Pero la idea sigue siendo la misma: la imagen se dibuja línea por línea.",
     "sub": "Cambió todo. Pero la idea sigue siendo la misma: la imagen se dibuja línea por línea."
   },
   {
     "id": "c8_06",
     "ch": 8,
+    "pause": 1.0,
     "speak": "Todo empezó con un chico que miró hacia atrás mientras araba.",
     "sub": "Todo empezó con un chico que miró hacia atrás mientras araba."
   },
   {
     "id": "c8_07",
     "ch": 8,
+    "pause": 1.2,
     "speak": "Y ahora te leemos en los comentarios: ¿qué historia te gustaría ver en el próximo episodio?",
     "sub": "Y ahora te leemos en los comentarios: ¿qué historia te gustaría ver en el próximo episodio?"
   }

@@ -50,7 +50,7 @@ def s01_sixth_ave_opening(t):
 def s03_rival_call_and_title(t):
     """s03..s05: Llamada a Joel Engel (pantalla dividida / oficina rival) -> remate y título del episodio."""
     t_s03 = TL.s("s03")
-    t_joel = TL.word("s03", "Yóel")
+    t_joel = TL.word("s03", "Joel")
     t_s04 = TL.s("s04")
     t_s05 = TL.s("s05")
 

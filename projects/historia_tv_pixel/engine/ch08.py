@@ -49,7 +49,7 @@ def c8_s01_moon_landing_1969(t):
 def c8_s02_streaming_and_youtube(t):
     """c8_03..c8_04: Murió en 1971; hoy casi la mitad del tiempo en TV es streaming y la plataforma #1 es YouTube."""
     t0 = TL.s("c8_03")
-    t_str = TL.word("c8_03", "stríming")
+    t_str = TL.word("c8_03", "streaming")
     t_c8_04 = TL.s("c8_04")
 
     cv = bg("moon_landing_living_1969").copy()
@@ -161,7 +161,7 @@ def scenes():
 
 
 def music(A):
-    return
+    A.add_pad(TL.s("c8_00"), TL.e("c8_07") - TL.s("c8_00"), (220.0, 261.63, 329.63), amp=0.015)
 
 
 def sfx(A):

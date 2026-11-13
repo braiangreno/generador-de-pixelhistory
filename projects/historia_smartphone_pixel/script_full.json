@@ -17,7 +17,7 @@
     "id": "s03",
     "ch": 0,
     "pause": 0.85,
-    "speak": "¿A quién llama? No a su madre ni a su jefe. Llama a Yóel Énguel, el jefe del equipo rival. Recuerda ese nombre.",
+    "speak": "¿A quién llama? No a su madre ni a su jefe. Llama a Joel Engel, el jefe del equipo rival. Recuerda ese nombre.",
     "sub": "¿A quién llama? No a su madre ni a su jefe. Llama a Joel Engel, el jefe del equipo rival. Recuerda ese nombre."
   },
   {
@@ -52,7 +52,7 @@
     "id": "c1_02",
     "ch": 1,
     "pause": 0.45,
-    "speak": "Mártin Cúper, ingeniero de Motorola, pensaba distinto. La gente no quería hablar desde un auto. Quería hablar desde cualquier lado.",
+    "speak": "Martin Cooper, ingeniero de Motorola, pensaba distinto. La gente no quería hablar desde un auto. Quería hablar desde cualquier lado.",
     "sub": "Martin Cooper, ingeniero de Motorola, pensaba distinto. La gente no quería hablar desde un auto. Quería hablar desde cualquier lado."
   },
   {
@@ -73,7 +73,7 @@
     "id": "c1_05",
     "ch": 1,
     "pause": 0.45,
-    "speak": "Hablabas media hora y lo cargabas diez. Según contó Cúper, eso no era un problema: nadie aguantaba el ladrillo en la oreja tanto tiempo.",
+    "speak": "Hablabas media hora y lo cargabas diez. Según contó Cooper, eso no era un problema: nadie aguantaba el ladrillo en la oreja tanto tiempo.",
     "sub": "Hablabas media hora y lo cargabas diez. Según contó Cooper, eso no era un problema: nadie aguantaba el ladrillo en la oreja tanto tiempo."
   },
   {
@@ -150,7 +150,7 @@
     "id": "c2_08",
     "ch": 2,
     "pause": 0.85,
-    "speak": "La idea nació en Bel Labs en mil novecientos cuarenta y siete. Y entre los que la convirtieron en una red de verdad estaba el equipo de Yóel Énguel.",
+    "speak": "La idea nació en Bell Labs en mil novecientos cuarenta y siete. Y entre los que la convirtieron en una red de verdad estaba el equipo de Joel Engel.",
     "sub": "La idea nació en Bell Labs en 1947. Y entre los que la convirtieron en una red de verdad estaba el equipo de Joel Engel."
   },
   {
@@ -227,21 +227,21 @@
     "id": "c4_00",
     "ch": 4,
     "pause": 0.45,
-    "speak": "Capítulo cuatro. Sáimon.",
+    "speak": "Capítulo cuatro. Simon.",
     "sub": "CAPÍTULO 4 — SIMON"
   },
   {
     "id": "c4_01",
     "ch": 4,
     "pause": 0.4,
-    "speak": "En realidad, alguien ya lo había intentado. En mil novecientos noventa y cuatro, I Be Eme puso a la venta un teléfono con pantalla táctil. Se llamaba Sáimon.",
+    "speak": "En realidad, alguien ya lo había intentado. En mil novecientos noventa y cuatro, IBM puso a la venta un teléfono con pantalla táctil. Se llamaba Simon.",
     "sub": "En realidad, alguien ya lo había intentado. En 1994, IBM puso a la venta un teléfono con pantalla táctil. Se llamaba Simon."
   },
   {
     "id": "c4_02",
     "ch": 4,
     "pause": 0.45,
-    "speak": "Tenía agenda, notas, correo y hasta fax. Se usaba con un lápiz. La palabra smártfon ni siquiera existía, pero hoy se lo considera el primero.",
+    "speak": "Tenía agenda, notas, correo y hasta fax. Se usaba con un lápiz. La palabra smartphone ni siquiera existía, pero hoy se lo considera el primero.",
     "sub": "Tenía agenda, notas, correo y hasta fax. Se usaba con un lápiz. La palabra smartphone ni siquiera existía, pero hoy se lo considera el primero."
   },
   {
@@ -269,7 +269,7 @@
     "id": "c4_06",
     "ch": 4,
     "pause": 1.0,
-    "speak": "Sáimon no fracasó por malo. Fracasó por llegar demasiado temprano.",
+    "speak": "Simon no fracasó por malo. Fracasó por llegar demasiado temprano.",
     "sub": "Simon no fracasó por malo. Fracasó por llegar demasiado temprano."
   },
   {
@@ -290,7 +290,7 @@
     "id": "c5_02",
     "ch": 5,
     "pause": 0.45,
-    "speak": "Y el nueve de enero de dos mil siete, en San Francisco, Ápol presentó un teléfono sin teclado. Todo el frente era una pantalla.",
+    "speak": "Y el nueve de enero de dos mil siete, en San Francisco, Apple presentó un teléfono sin teclado. Todo el frente era una pantalla.",
     "sub": "Y el 9 de enero de 2007, en San Francisco, Apple presentó un teléfono sin teclado. Todo el frente era una pantalla."
   },
   {
@@ -304,7 +304,7 @@
     "id": "c5_04",
     "ch": 5,
     "pause": 0.45,
-    "speak": "Se usaba con los dedos. Con dos, agrandabas una foto. Y no sentía la presión, como el Sáimon. Sentía otra cosa.",
+    "speak": "Se usaba con los dedos. Con dos, agrandabas una foto. Y no sentía la presión, como el Simon. Sentía otra cosa.",
     "sub": "Se usaba con los dedos. Con dos, agrandabas una foto. Y no sentía la presión, como el Simon. Sentía otra cosa."
   },
   {
@@ -374,21 +374,21 @@
     "id": "c6_04",
     "ch": 6,
     "pause": 0.45,
-    "speak": "Unos meses después salió el primer teléfono con Ándroid, el sistema de Gúgol. Todavía tenía un teclado que se deslizaba debajo de la pantalla.",
+    "speak": "Unos meses después salió el primer teléfono con Android, el sistema de Google. Todavía tenía un teclado que se deslizaba debajo de la pantalla.",
     "sub": "Unos meses después salió el primer teléfono con Android, el sistema de Google. Todavía tenía un teclado que se deslizaba debajo de la pantalla."
   },
   {
     "id": "c6_05",
     "ch": 6,
     "pause": 0.4,
-    "speak": "Y a diferencia del otro, a Ándroid lo podía usar cualquier fabricante.",
+    "speak": "Y a diferencia del otro, a Android lo podía usar cualquier fabricante.",
     "sub": "Y a diferencia del otro, a Android lo podía usar cualquier fabricante."
   },
   {
     "id": "c6_06",
     "ch": 6,
     "pause": 0.85,
-    "speak": "Hoy, unos dos de cada tres smártfons usan Ándroid. Casi todo el resto son Áifon.",
+    "speak": "Hoy, unos dos de cada tres smartphones usan Android. Casi todo el resto son iPhone.",
     "sub": "Hoy, unos dos de cada tres smartphones usan Android. Casi todo el resto son iPhone."
   },
   {
@@ -402,7 +402,7 @@
     "id": "c7_00",
     "ch": 7,
     "pause": 0.45,
-    "speak": "Capítulo siete. Áinstain en el bolsillo.",
+    "speak": "Capítulo siete. Einstein en el bolsillo.",
     "sub": "CAPÍTULO 7 — EINSTEIN EN EL BOLSILLO"
   },
   {
@@ -444,14 +444,14 @@
     "id": "c7_06",
     "ch": 7,
     "pause": 0.85,
-    "speak": "Parece nada. Pero sin corregirlo, tu ubicación se correría unos diez kilómetros por día. Es justo lo que predice la relatividad de Áinstain.",
+    "speak": "Parece nada. Pero sin corregirlo, tu ubicación se correría unos diez kilómetros por día. Es justo lo que predice la relatividad de Einstein.",
     "sub": "Parece nada. Pero sin corregirlo, tu ubicación se correría unos diez kilómetros por día. Es justo lo que predice la relatividad de Einstein."
   },
   {
     "id": "c7_07",
     "ch": 7,
     "pause": 1.0,
-    "speak": "Cada vez que abres un mapa, Áinstain tiene razón.",
+    "speak": "Cada vez que abres un mapa, Einstein tiene razón.",
     "sub": "Cada vez que abres un mapa, Einstein tiene razón."
   },
   {
@@ -479,7 +479,7 @@
     "id": "c8_03",
     "ch": 8,
     "pause": 0.4,
-    "speak": "Hay más de siete mil millones de líneas de smártfon. Y más líneas de celular que personas en la Tierra.",
+    "speak": "Hay más de siete mil millones de líneas de smartphone. Y más líneas de celular que personas en la Tierra.",
     "sub": "Hay más de siete mil millones de líneas de smartphone. Y más líneas de celular que personas en la Tierra."
   },
   {

@@ -3,9 +3,9 @@ import base64, json, os, sys, time, urllib.request, urllib.error
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KEY = open(os.path.join(ROOT, ".env"), encoding="utf-8").read().strip().split("=", 1)[1]
 
-# Official Pixeloide narrator: Carlos Aguilar (8MeTTgXVwMEhRVfblXOj) for ES; natural speed=1.0 for EN/PT
+# Nota: El español (Carlos Aguilar, 8MeTTgXVwMEhRVfblXOj) SIEMPRE se genera con tools/tts.py (modelo eleven_v4).
+# Este script es únicamente para EN y PT a velocidad natural speed=1.0.
 VOICES = {
-    "es": {"voice_id": "8MeTTgXVwMEhRVfblXOj", "script": "script_full.json", "out": "audio/vo", "speed": 1.08},
     "en": {"voice_id": "pNInz6obpgDQGcFmaJgB", "script": "script_full_en.json", "out": "audio/vo_en", "speed": 1.0},
     "pt": {"voice_id": "Rxw6ylGPvxzn3gsuOExL", "script": "script_full_pt.json", "out": "audio/vo_pt", "speed": 1.0},
 }
@@ -73,9 +73,7 @@ def generate_lang(lang):
         time.sleep(0.15)
 
 if __name__ == "__main__":
-    target = sys.argv[1] if len(sys.argv) > 1 else "all"
-    if target in ("es", "all"):
-        generate_lang("es")
+    target = sys.argv[1] if len(sys.argv) > 1 else "both"
     if target in ("en", "both", "all"):
         generate_lang("en")
     if target in ("pt", "both", "all"):

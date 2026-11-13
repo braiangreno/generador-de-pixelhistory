@@ -256,7 +256,7 @@ def add_pad(t, dur, freqs, amp=0.035):
     if dur <= 0:
         return
     for f in freqs:
-        note(music, t, f, dur, inst="pulse", vol=amp * 0.22, duty=0.5, a=0.22, d=0.25, s=0.70, r=0.35)
+        note(music, t, f, dur, inst="pulse", vol=amp * 0.25, duty=0.5, a=0.22, d=0.25, s=0.70, r=0.35)
 
 
 def add_bass(t, dur, f, amp=0.05):
@@ -266,23 +266,23 @@ def add_bass(t, dur, f, amp=0.05):
 
 
 def fx_pop(t, amp=0.08):
-    pop_sfx(t, f0=420, vol=amp * 0.35)
+    pop_sfx(t, f0=420, vol=amp * 0.65)
 
 
 def fx_thud(t, amp=0.09):
-    stamp_hit(t, vol=amp * 0.35)
+    stamp_hit(t, vol=amp * 0.65)
 
 
 def fx_chime(t, amp=0.10):
-    join_jingle(t, vol=amp * 0.26)
+    join_jingle(t, vol=amp * 0.55)
 
 
 def fx_sweep(t, dur=0.5, f0=150, f1=440, amp=0.07):
-    whoosh(t, dur=dur, vol=amp * 0.32)
+    whoosh(t, dur=dur, vol=amp * 0.60)
 
 
 def fx_sparkle(t, amp=0.10):
-    coin(t, vol=amp * 0.25)
+    coin(t, vol=amp * 0.52)
 
 
 def compose():
@@ -472,35 +472,35 @@ def robot_beep(t, vol=0.05):
 def design_sfx():
     # Apertura: pulsos suaves de marcado y acorde de título en s05
     for k in range(3):
-        blip(TL.s("s02") + 0.6 + k * 0.22, 880 + k * 110, 0.045, 0.016)
-    sting(TL.s("s05"), [57, 64, 69, 72, 76], vol=0.035, step=0.14, hold=1.6)
+        blip(TL.s("s02") + 0.6 + k * 0.22, 880 + k * 110, 0.045, 0.028)
+    sting(TL.s("s05"), [57, 64, 69, 72, 76], vol=0.048, step=0.14, hold=1.6)
 
     # Cap 1: zumbido suave de laboratorio de Motorola
-    hum_1958(TL.s("c1_03"), TL.e("c1_04"), vol=0.008)
+    hum_1958(TL.s("c1_03"), TL.e("c1_04"), vol=0.015)
 
     # Cap 2: La Pizarra 1 (El Panal Celular: tiza suave)
-    chalk(TL.s("c2_03") + 0.4, TL.s("c2_04") + 1.8, vol=0.012)
+    chalk(TL.s("c2_03") + 0.4, TL.s("c2_04") + 1.8, vol=0.022)
 
     # Cap 3: lluvia suave de diciembre en Inglaterra (1992)
-    rain_amb(TL.s("c3_03"), TL.e("c3_04"), vol=0.011)
+    rain_amb(TL.s("c3_03"), TL.e("c3_04"), vol=0.020)
 
     # Cap 4: IBM Simon (1994)
-    hum_1958(TL.s("c4_01"), TL.e("c4_02"), vol=0.008)
+    hum_1958(TL.s("c4_01"), TL.e("c4_02"), vol=0.015)
 
     # Cap 5: La Pizarra 2 (Pantalla Capacitiva: tiza suave)
-    chalk(TL.s("c5_05") + 0.4, TL.s("c5_06") + 1.8, vol=0.012)
+    chalk(TL.s("c5_05") + 0.4, TL.s("c5_06") + 1.8, vol=0.022)
 
     # Cap 6: App Store (2008) y llegada de Android
-    join_jingle(TL.s("c6_02") + 0.3, vol=0.024)
+    join_jingle(TL.s("c6_02") + 0.3, vol=0.040)
 
     # Cap 7: pulsos suaves de satélite GPS + La Pizarra 3 (GPS y Einstein)
     for k in range(3):
-        blip(TL.s("c7_02") + 0.8 + k * 0.28, 980, 0.045, 0.016)
-    chalk(TL.s("c7_03") + 0.4, TL.s("c7_04") + 1.8, vol=0.012)
+        blip(TL.s("c7_02") + 0.8 + k * 0.28, 980, 0.045, 0.028)
+    chalk(TL.s("c7_03") + 0.4, TL.s("c7_04") + 1.8, vol=0.022)
 
     # Cap 8: regreso a 1973 y CTA de comentarios
-    sting(TL.s("c8_06"), [57, 64, 69, 73, 76, 81], vol=0.038, step=0.14, hold=2.0)
-    join_jingle(TL.s("c8_07"), vol=0.025)
+    sting(TL.s("c8_06"), [57, 64, 69, 73, 76, 81], vol=0.050, step=0.14, hold=2.0)
+    join_jingle(TL.s("c8_07"), vol=0.040)
 
 
 # --------------------------------------------------------------------------- voz y mezcla
@@ -558,9 +558,9 @@ def card_audio():
         if lid not in TL.lines:
             continue
         t0 = TL.s(lid) - 0.15
-        whoosh(t0, 0.42, 0.022)
-        sting(t0 + 0.20, [57, 64, 69, 76], vol=0.028, step=0.12, hold=1.1)
-        note(music, t0 + 0.20, midi_hz(45), 1.6, "tri", vol=0.12, a=0.04, s=0.85, r=0.5)
+        whoosh(t0, 0.42, 0.038)
+        sting(t0 + 0.20, [57, 64, 69, 76], vol=0.042, step=0.12, hold=1.1)
+        note(music, t0 + 0.20, midi_hz(45), 1.6, "tri", vol=0.14, a=0.04, s=0.85, r=0.5)
 
 
 def chapter_hooks():
@@ -589,15 +589,15 @@ def main():
     vo = build_voice()
     # Filtro pasa-bajos cálido para redondear armónicos agudos del chiptune y dejar libre la banda de la voz
     m_warm = lowpass(lowpass(music.buf, 8), 5)
-    s_warm = lowpass(sfx.buf, 4)
+    s_warm = lowpass(sfx.buf, 2)
 
-    # Ducking profundo: cuando habla el narrador, la música y los efectos bajan suavemente para acompañar sin competir
+    # Ducking equilibrado: cuando habla el narrador, la música baja pero los SFX puntuales se siguen percibiendo
     env = envelope(vo, 0.08)
     duck = np.clip(env / 0.04, 0, 1)
     duck = movavg(duck, 0.32 * SR)
 
-    m_ducked = m_warm * (1.0 - 0.72 * duck) * 0.36
-    s_ducked = s_warm * (1.0 - 0.55 * duck) * 0.42
+    m_ducked = m_warm * (1.0 - 0.70 * duck) * 0.36
+    s_ducked = s_warm * (1.0 - 0.38 * duck) * 0.68
     mix = vo * 0.98 + m_ducked + s_ducked
     # fade final
     nf = int(1.5 * SR)
@@ -612,7 +612,7 @@ def main():
     write_wav(os.path.join(out, "mix.wav"), mix)
     # Guardamos los stems ya suavizados (sin el ducking de ES) para que mix_multilingual aplique el ducking de EN y PT
     write_wav(os.path.join(out, "music_stem.wav"), (m_warm * 0.36)[:end])
-    write_wav(os.path.join(out, "sfx_stem.wav"), (s_warm * 0.42)[:end])
+    write_wav(os.path.join(out, "sfx_stem.wav"), (s_warm * 0.68)[:end])
     write_wav(os.path.join(out, "voice_stem.wav"), (vo * 0.98)[:end])
     print("audio ok", round(TL.total, 2), "peak", round(float(peak), 3))
 

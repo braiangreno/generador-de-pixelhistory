@@ -31,21 +31,21 @@
     "id": "s05",
     "ch": 0,
     "pause": 0.9,
-    "speak": "Esta es la historia de Jedi Lamár. La mujer más linda del mundo, según su estudio de cine. Y una inventora.",
+    "speak": "Esta es la historia de Hedy Lamarr. La mujer más linda del mundo, según su estudio de cine. Y una inventora.",
     "sub": "Esta es la historia de Hedy Lamarr. La mujer más linda del mundo, según su estudio de cine. Y una inventora."
   },
   {
     "id": "c1_00",
     "ch": 1,
-    "pause": 0.35,
+    "pause": 0.45,
     "speak": "Capítulo uno. La caja de música.",
-    "sub": "Capítulo uno. La caja de música."
+    "sub": "CAPÍTULO 1 — LA CAJA DE MÚSICA"
   },
   {
     "id": "c1_01",
     "ch": 1,
     "pause": 0.4,
-    "speak": "Nació en Viena en mil novecientos catorce, como Jedvig Kísler. Hija única de un director de banco y una pianista.",
+    "speak": "Nació en Viena en mil novecientos catorce, como Hedwig Kiesler. Hija única de un director de banco y una pianista.",
     "sub": "Nació en Viena en 1914, como Hedwig Kiesler. Hija única de un director de banco y una pianista."
   },
   {
@@ -86,22 +86,22 @@
   {
     "id": "c2_00",
     "ch": 2,
-    "pause": 0.35,
+    "pause": 0.45,
     "speak": "Capítulo dos. La jaula de oro.",
-    "sub": "Capítulo dos. La jaula de oro."
+    "sub": "CAPÍTULO 2 — LA JAULA DE ORO"
   },
   {
     "id": "c2_01",
     "ch": 2,
     "pause": 0.4,
-    "speak": "Entre los que la vieron actuar estaba Fritz Mándel, uno de los mayores fabricantes de armas de Austria. Se casaron ese mismo año.",
+    "speak": "Entre los que la vieron actuar estaba Fritz Mandl, uno de los mayores fabricantes de armas de Austria. Se casaron ese mismo año.",
     "sub": "Entre los que la vieron actuar estaba Fritz Mandl, uno de los mayores fabricantes de armas de Austria. Se casaron ese mismo año."
   },
   {
     "id": "c2_02",
     "ch": 2,
     "pause": 0.4,
-    "speak": "Mándel era celoso y controlador. Ella vivía rodeada de lujo… y vigilada.",
+    "speak": "Mandl era celoso y controlador. Ella vivía rodeada de lujo… y vigilada.",
     "sub": "Mandl era celoso y controlador. Ella vivía rodeada de lujo… y vigilada."
   },
   {
@@ -142,29 +142,29 @@
   {
     "id": "c3_00",
     "ch": 3,
-    "pause": 0.35,
+    "pause": 0.45,
     "speak": "Capítulo tres. La mujer más linda del mundo.",
-    "sub": "Capítulo tres. La mujer más linda del mundo."
+    "sub": "CAPÍTULO 3 — LA MUJER MÁS LINDA DEL MUNDO"
   },
   {
     "id": "c3_01",
     "ch": 3,
     "pause": 0.4,
-    "speak": "En Londres consiguió una reunión con Lúis Bi Méier, el jefe del estudio Em Yi Em. Le ofreció un contrato chico. Ella dijo que no.",
+    "speak": "En Londres consiguió una reunión con Louis B. Mayer, el jefe del estudio MGM. Le ofreció un contrato chico. Ella dijo que no.",
     "sub": "En Londres consiguió una reunión con Louis B. Mayer, el jefe del estudio MGM. Le ofreció un contrato chico. Ella dijo que no."
   },
   {
     "id": "c3_02",
     "ch": 3,
     "pause": 0.4,
-    "speak": "Entonces sacó pasaje en el mismo barco en el que Méier volvía a Nueva York.",
+    "speak": "Entonces sacó pasaje en el mismo barco en el que Mayer volvía a Nueva York.",
     "sub": "Entonces sacó pasaje en el mismo barco en el que Mayer volvía a Nueva York."
   },
   {
     "id": "c3_03",
     "ch": 3,
     "pause": 0.45,
-    "speak": "Cuando bajaron, tenía un contrato cuatro veces mejor y un nombre nuevo: Jedi Lamár.",
+    "speak": "Cuando bajaron, tenía un contrato cuatro veces mejor y un nombre nuevo: Hedy Lamarr.",
     "sub": "Cuando bajaron, tenía un contrato cuatro veces mejor y un nombre nuevo: Hedy Lamarr."
   },
   {
@@ -185,14 +185,14 @@
     "id": "c3_06",
     "ch": 3,
     "pause": 0.45,
-    "speak": "El millonario Jáuard Jiugs le dio equipos para su camarín. Ella le dibujó un ala más rápida, mezclando al pez y al pájaro más veloces.",
+    "speak": "El millonario Howard Hughes le dio equipos para su camarín. Ella le dibujó un ala más rápida, mezclando al pez y al pájaro más veloces.",
     "sub": "El millonario Howard Hughes le dio equipos para su camarín. Ella le dibujó un ala más rápida, mezclando al pez y al pájaro más veloces."
   },
   {
     "id": "c3_07",
     "ch": 3,
     "pause": 0.85,
-    "speak": "Según contó ella, Jiugs le dijo que era un genio.",
+    "speak": "Según contó ella, Hughes le dijo que era un genio.",
     "sub": "Según contó ella, Hughes le dijo que era un genio."
   },
   {
@@ -205,9 +205,9 @@
   {
     "id": "c4_00",
     "ch": 4,
-    "pause": 0.35,
+    "pause": 0.45,
     "speak": "Capítulo cuatro. El problema del torpedo.",
-    "sub": "Capítulo cuatro. El problema del torpedo."
+    "sub": "CAPÍTULO 4 — EL PROBLEMA DEL TORPEDO"
   },
   {
     "id": "c4_01",
@@ -220,7 +220,7 @@
     "id": "c4_02",
     "ch": 4,
     "pause": 0.45,
-    "speak": "Jedi quería ayudar. Y se acordó de aquellas cenas en Viena.",
+    "speak": "Hedy quería ayudar. Y se acordó de aquellas cenas en Viena.",
     "sub": "Hedy quería ayudar. Y se acordó de aquellas cenas en Viena."
   },
   {
@@ -261,15 +261,15 @@
   {
     "id": "c5_00",
     "ch": 5,
-    "pause": 0.35,
+    "pause": 0.45,
     "speak": "Capítulo cinco. Un piano dentro de un torpedo.",
-    "sub": "Capítulo cinco. Un piano dentro de un torpedo."
+    "sub": "CAPÍTULO 5 — UN PIANO DENTRO DE UN TORPEDO"
   },
   {
     "id": "c5_01",
     "ch": 5,
     "pause": 0.4,
-    "speak": "En una cena conoció a Yory Ántail, un compositor que se hacía llamar el chico malo de la música.",
+    "speak": "En una cena conoció a George Antheil, un compositor que se hacía llamar el chico malo de la música.",
     "sub": "En una cena conoció a George Antheil, un compositor que se hacía llamar el chico malo de la música."
   },
   {
@@ -283,7 +283,7 @@
     "id": "c5_03",
     "ch": 5,
     "pause": 0.45,
-    "speak": "Ántail también quería ayudar. Su hermano había muerto en los primeros meses de la guerra, cuando derribaron el avión en el que viajaba.",
+    "speak": "Antheil también quería ayudar. Su hermano había muerto en los primeros meses de la guerra, cuando derribaron el avión en el que viajaba.",
     "sub": "Antheil también quería ayudar. Su hermano había muerto en los primeros meses de la guerra, cuando derribaron el avión en el que viajaba."
   },
   {
@@ -311,7 +311,7 @@
     "id": "c5_07",
     "ch": 5,
     "pause": 0.45,
-    "speak": "Pero ¿cómo sincronizar el barco y el torpedo? Ántail propuso rollos perforados, como los de las pianolas: uno en cada lado.",
+    "speak": "Pero ¿cómo sincronizar el barco y el torpedo? Antheil propuso rollos perforados, como los de las pianolas: uno en cada lado.",
     "sub": "Pero ¿cómo sincronizar el barco y el torpedo? Antheil propuso rollos perforados, como los de las pianolas: uno en cada lado."
   },
   {
@@ -325,7 +325,7 @@
     "id": "c5_09",
     "ch": 5,
     "pause": 0.85,
-    "speak": "Trabajaron meses en la mesa del comedor, con ayuda de un profesor de ingeniería eléctrica. En mil novecientos cuarenta y dos recibieron la patente. Ella firmó con su apellido de casada de entonces: Jedi Kísler Márki.",
+    "speak": "Trabajaron meses en la mesa del comedor, con ayuda de un profesor de ingeniería eléctrica. En mil novecientos cuarenta y dos recibieron la patente. Ella firmó con su apellido de casada de entonces: Hedy Kiesler Markey.",
     "sub": "Trabajaron meses en la mesa del comedor, con ayuda de un profesor de ingeniería eléctrica. En 1942 recibieron la patente. Ella firmó con su apellido de casada de entonces: Hedy Kiesler Markey."
   },
   {
@@ -338,9 +338,9 @@
   {
     "id": "c6_00",
     "ch": 6,
-    "pause": 0.35,
+    "pause": 0.45,
     "speak": "Capítulo seis. Bonos y besos.",
-    "sub": "Capítulo seis. Bonos y besos."
+    "sub": "CAPÍTULO 6 — BONOS Y BESOS"
   },
   {
     "id": "c6_01",
@@ -353,14 +353,14 @@
     "id": "c6_02",
     "ch": 6,
     "pause": 0.45,
-    "speak": "Ántail sospechaba que el error fue nombrar un piano delante de los oficiales.",
+    "speak": "Antheil sospechaba que el error fue nombrar un piano delante de los oficiales.",
     "sub": "Antheil sospechaba que el error fue nombrar un piano delante de los oficiales."
   },
   {
     "id": "c6_03",
     "ch": 6,
     "pause": 0.4,
-    "speak": "A Jedi le sugirieron que ayudara de otra forma: vendiendo bonos de guerra con su fama.",
+    "speak": "A Hedy le sugirieron que ayudara de otra forma: vendiendo bonos de guerra con su fama.",
     "sub": "A Hedy le sugirieron que ayudara de otra forma: vendiendo bonos de guerra con su fama."
   },
   {
@@ -394,15 +394,15 @@
   {
     "id": "c7_00",
     "ch": 7,
-    "pause": 0.35,
+    "pause": 0.45,
     "speak": "Capítulo siete. El cajón.",
-    "sub": "Capítulo siete. El cajón."
+    "sub": "CAPÍTULO 7 — EL CAJÓN"
   },
   {
     "id": "c7_01",
     "ch": 7,
     "pause": 0.4,
-    "speak": "La patente venció en mil novecientos cincuenta y nueve. Ese mismo año murió Ántail.",
+    "speak": "La patente venció en mil novecientos cincuenta y nueve. Ese mismo año murió Antheil.",
     "sub": "La patente venció en 1959. Ese mismo año murió Antheil."
   },
   {
@@ -423,7 +423,7 @@
     "id": "c7_04",
     "ch": 7,
     "pause": 0.45,
-    "speak": "Jedi no cobró nada: la patente había vencido y casi nadie sabía que era suya. Su carrera se apagó y vivió sus últimos años muy aislada.",
+    "speak": "Hedy no cobró nada: la patente había vencido y casi nadie sabía que era suya. Su carrera se apagó y vivió sus últimos años muy aislada.",
     "sub": "Hedy no cobró nada: la patente había vencido y casi nadie sabía que era suya. Su carrera se apagó y vivió sus últimos años muy aislada."
   },
   {
@@ -443,43 +443,43 @@
   {
     "id": "c8_00",
     "ch": 8,
-    "pause": 0.35,
+    "pause": 0.45,
     "speak": "Capítulo ocho. Mil seiscientos saltos.",
-    "sub": "Capítulo ocho. Mil seiscientos saltos."
+    "sub": "CAPÍTULO 8 — MIL SEISCIENTOS SALTOS"
   },
   {
     "id": "c8_01",
     "ch": 8,
     "pause": 0.45,
-    "speak": "En mil novecientos noventa y siete, con ochenta y dos años, recibió un premio para pioneros de la era digital, junto a Ántail. Ya no aparecía en público, así que no fue a recibirlo.",
+    "speak": "En mil novecientos noventa y siete, con ochenta y dos años, recibió un premio para pioneros de la era digital, junto a Antheil. Ya no aparecía en público, así que no fue a recibirlo.",
     "sub": "En 1997, con ochenta y dos años, recibió un premio para pioneros de la era digital, junto a Antheil. Ya no aparecía en público, así que no fue a recibirlo."
   },
   {
     "id": "c8_02",
     "ch": 8,
     "pause": 0.45,
-    "speak": "Murió en el año dos mil. En dos mil catorce entró al Salón de la Fama de los Inventores de Estados Unidos. Y al año siguiente, Gúguel le dedicó su portada el día de su cumpleaños.",
+    "speak": "Murió en el año dos mil. En dos mil catorce entró al Salón de la Fama de los Inventores de Estados Unidos. Y al año siguiente, Google le dedicó su portada el día de su cumpleaños.",
     "sub": "Murió en el año 2000. En 2014 entró al Salón de la Fama de los Inventores de Estados Unidos. Y al año siguiente, Google le dedicó su portada el día de su cumpleaños."
   },
   {
     "id": "c8_03",
     "ch": 8,
     "pause": 0.4,
-    "speak": "Hoy, el blutúz clásico reparte su señal en setenta y nueve canales. Y salta entre ellos hasta mil seiscientas veces por segundo.",
+    "speak": "Hoy, el Bluetooth clásico reparte su señal en setenta y nueve canales. Y salta entre ellos hasta mil seiscientas veces por segundo.",
     "sub": "Hoy, el Bluetooth clásico reparte su señal en setenta y nueve canales. Y salta entre ellos hasta mil seiscientas veces por segundo."
   },
   {
     "id": "c8_04",
     "ch": 8,
     "pause": 0.45,
-    "speak": "Por eso tus auriculares casi no se cortan aunque haya güái fái o un microondas cerca: si un canal está ocupado, saltan a otro.",
+    "speak": "Por eso tus auriculares casi no se cortan aunque haya wifi o un microondas cerca: si un canal está ocupado, saltan a otro.",
     "sub": "Por eso tus auriculares casi no se cortan aunque haya wifi o un microondas cerca: si un canal está ocupado, saltan a otro."
   },
   {
     "id": "c8_05",
     "ch": 8,
     "pause": 0.5,
-    "speak": "El rollo de papel ahora es un chip. Su idea es parte de una familia de técnicas que usan el blutúz y muchas radios. El truco es el mismo: saltar juntos, en secreto.",
+    "speak": "El rollo de papel ahora es un chip. Su idea es parte de una familia de técnicas que usan el Bluetooth y muchas radios. El truco es el mismo: saltar juntos, en secreto.",
     "sub": "El rollo de papel ahora es un chip. Su idea es parte de una familia de técnicas que usan el Bluetooth y muchas radios. El truco es el mismo: saltar juntos, en secreto."
   },
   {

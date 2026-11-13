@@ -256,7 +256,7 @@ def add_pad(t, dur, freqs, amp=0.035):
     if dur <= 0:
         return
     for f in freqs:
-        note(music, t, f, dur, inst="pulse", vol=amp * 0.22, duty=0.5, a=0.22, d=0.25, s=0.70, r=0.35)
+        note(music, t, f, dur, inst="pulse", vol=amp * 0.25, duty=0.5, a=0.22, d=0.25, s=0.70, r=0.35)
 
 
 def add_bass(t, dur, f, amp=0.05):
@@ -266,23 +266,23 @@ def add_bass(t, dur, f, amp=0.05):
 
 
 def fx_pop(t, amp=0.08):
-    pop_sfx(t, f0=420, vol=amp * 0.35)
+    pop_sfx(t, f0=420, vol=amp * 0.65)
 
 
 def fx_thud(t, amp=0.09):
-    stamp_hit(t, vol=amp * 0.35)
+    stamp_hit(t, vol=amp * 0.65)
 
 
 def fx_chime(t, amp=0.10):
-    join_jingle(t, vol=amp * 0.26)
+    join_jingle(t, vol=amp * 0.55)
 
 
 def fx_sweep(t, dur=0.5, f0=150, f1=440, amp=0.07):
-    whoosh(t, dur=dur, vol=amp * 0.32)
+    whoosh(t, dur=dur, vol=amp * 0.60)
 
 
 def fx_sparkle(t, amp=0.10):
-    coin(t, vol=amp * 0.25)
+    coin(t, vol=amp * 0.52)
 
 
 def compose():
@@ -470,33 +470,33 @@ def robot_beep(t, vol=0.05):
 def design_sfx():
     # Apertura: obturadores suaves de las cámaras en fila + acorde de título principal
     for k in range(4):
-        blip(TL.s("s03") + 0.65 + k * 0.45, 760 + k * 40, 0.025, 0.016)
-    sting(TL.s("s05"), [57, 64, 69, 72, 76], vol=0.035, step=0.14, hold=1.6)
+        blip(TL.s("s03") + 0.65 + k * 0.45, 760 + k * 40, 0.025, 0.028)
+    sting(TL.s("s05"), [57, 64, 69, 72, 76], vol=0.048, step=0.14, hold=1.6)
 
-    # Cap 1: rueda del Zoopraxiscopio + tiza muy sutil en La Pizarra 1
-    hum_1958(TL.s("c1_05"), TL.e("c1_05"), vol=0.008)
-    chalk(TL.s("c1_06"), TL.s("c1_06") + 1.8, vol=0.012)
+    # Cap 1: rueda del Zoopraxiscopio + tiza suave en La Pizarra 1
+    hum_1958(TL.s("c1_05"), TL.e("c1_05"), vol=0.015)
+    chalk(TL.s("c1_06"), TL.s("c1_06") + 1.8, vol=0.022)
 
     # Cap 2: proyector de los Lumière en el sótano del Grand Café
-    hum_1958(TL.s("c2_04"), TL.e("c2_06"), vol=0.008)
+    hum_1958(TL.s("c2_04"), TL.e("c2_06"), vol=0.015)
 
     # Cap 3: magia de Méliès y Viaje a la Luna
-    join_jingle(TL.s("c3_05") + 0.4, vol=0.022)
+    join_jingle(TL.s("c3_05") + 0.4, vol=0.038)
 
     # Cap 4: brisa californiana suave
-    wind(TL.s("c4_02"), TL.e("c4_03"), vol=0.009)
+    wind(TL.s("c4_02"), TL.e("c4_03"), vol=0.018)
 
     # Cap 5: La Pizarra 2 (Sonido óptico y 24 fps)
-    chalk(TL.s("c5_03"), TL.s("c5_04") + 1.6, vol=0.012)
-    hum_1958(TL.s("c5_05"), TL.e("c5_05"), vol=0.008)
+    chalk(TL.s("c5_03"), TL.s("c5_04") + 1.6, vol=0.022)
+    hum_1958(TL.s("c5_05"), TL.e("c5_05"), vol=0.015)
 
     # Cap 6: La Pizarra 3 (Technicolor) + explosión de color en El mago de Oz
-    chalk(TL.s("c6_02"), TL.s("c6_03") + 1.4, vol=0.012)
-    join_jingle(TL.word("c6_04", "puerta"), vol=0.026)
+    chalk(TL.s("c6_02"), TL.s("c6_03") + 1.4, vol=0.022)
+    join_jingle(TL.word("c6_04", "puerta"), vol=0.042)
 
     # Cap 7: acorde luminoso cuando el caballo vuela + CTA comentarios
-    sting(TL.s("c7_06"), [57, 64, 69, 73, 76, 81], vol=0.038, step=0.14, hold=2.0)
-    join_jingle(TL.s("c7_07"), vol=0.025)
+    sting(TL.s("c7_06"), [57, 64, 69, 73, 76, 81], vol=0.050, step=0.14, hold=2.0)
+    join_jingle(TL.s("c7_07"), vol=0.040)
 
 
 # --------------------------------------------------------------------------- voz y mezcla
@@ -554,9 +554,9 @@ def card_audio():
         if lid not in TL.lines:
             continue
         t0 = TL.s(lid) - 0.15
-        whoosh(t0, 0.42, 0.022)
-        sting(t0 + 0.20, [57, 64, 69, 76], vol=0.028, step=0.12, hold=1.1)
-        note(music, t0 + 0.20, midi_hz(45), 1.6, "tri", vol=0.12, a=0.04, s=0.85, r=0.5)
+        whoosh(t0, 0.42, 0.038)
+        sting(t0 + 0.20, [57, 64, 69, 76], vol=0.042, step=0.12, hold=1.1)
+        note(music, t0 + 0.20, midi_hz(45), 1.6, "tri", vol=0.14, a=0.04, s=0.85, r=0.5)
 
 
 def chapter_hooks():
@@ -585,15 +585,15 @@ def main():
     vo = build_voice()
     # Filtro pasa-bajos cálido para redondear armónicos agudos del chiptune y dejar libre la banda de la voz
     m_warm = lowpass(lowpass(music.buf, 8), 5)
-    s_warm = lowpass(sfx.buf, 4)
+    s_warm = lowpass(sfx.buf, 2)
 
-    # Ducking profundo: cuando habla el narrador, la música y los efectos bajan suavemente para acompañar sin competir
+    # Ducking equilibrado: cuando habla el narrador, la música baja pero los SFX puntuales se siguen percibiendo
     env = envelope(vo, 0.08)
     duck = np.clip(env / 0.04, 0, 1)
     duck = movavg(duck, 0.32 * SR)
 
-    m_ducked = m_warm * (1.0 - 0.72 * duck) * 0.36
-    s_ducked = s_warm * (1.0 - 0.55 * duck) * 0.42
+    m_ducked = m_warm * (1.0 - 0.70 * duck) * 0.36
+    s_ducked = s_warm * (1.0 - 0.38 * duck) * 0.68
     mix = vo * 0.98 + m_ducked + s_ducked
     # fade final
     nf = int(1.5 * SR)
@@ -608,7 +608,7 @@ def main():
     write_wav(os.path.join(out, "mix.wav"), mix)
     # Guardamos los stems ya suavizados (sin el ducking de ES) para que mix_multilingual aplique el ducking de EN y PT
     write_wav(os.path.join(out, "music_stem.wav"), (m_warm * 0.36)[:end])
-    write_wav(os.path.join(out, "sfx_stem.wav"), (s_warm * 0.42)[:end])
+    write_wav(os.path.join(out, "sfx_stem.wav"), (s_warm * 0.68)[:end])
     write_wav(os.path.join(out, "voice_stem.wav"), (vo * 0.98)[:end])
     print("audio ok", round(TL.total, 2), "peak", round(float(peak), 3))
 

@@ -1,0 +1,170 @@
+---
+name: pixeloide-video-engine
+description: Framework y pipeline oficial de Pixeloide Studios para producir documentales animados en pixel art 16-bit (estilo SNES / Chrono Trigger) a partir de un guion en texto. Úsalo siempre que el usuario entregue un guion o pida crear un video animado en pixel art con narrador en español (Carlos Aguilar), versiones multilingües (EN/PT), música chiptune procedural y cierre oficial de Pixeloide Studios + créditos.
+---
+
+# Pixeloide Video Engine — Framework de Producción Documental 16-Bit
+
+Este skill define el estándar de producción de **Pixeloide Studios** (`JUGAMOS EN SERIO.`) para transformar cualquier guion entregado por el usuario en un documental animado 16-bit (`1920x1080` a `30 fps`, lienzo lógico `480x270` escalado `4x` nearest-neighbor) en Español (`ES`), Inglés (`EN`) y Portugués (`PT`).
+
+> **Repositorios base / motores de referencia**:
+> - **Estándar de Oro (Audio, Voz `eleven_v4`, Pizarras, Props apoyados y CTA)**: `C:\Users\Braian\.gemini\antigravity\scratch\historia_tesla_pixel`
+> - Motor documental completo: `C:\Users\Braian\.gemini\antigravity\scratch\historia_videojuegos_pixel`
+> - Plataforma Web + API REST instalable en servidor: `C:\Users\Braian\.gemini\antigravity\scratch\pixeloide_studio_server` (`.\start_windows.ps1` o `docker compose up -d --build`)
+> - Proyecto original IA: `C:\Users\Braian\.gemini\antigravity\scratch\historia_ia_pixel`
+
+---
+
+## 1. Reglas Innegociables de Marca, Voz, Cajas de Texto y Diseño Sonoro
+
+1. **Narrador Oficial en Español (Fijo — OBLIGATORIO `eleven_v4` con `tools/tts.py`)**:
+   - Nombre: **Carlos Aguilar** (ElevenLabs)
+   - `VOICE_ID`: `"8MeTTgXVwMEhRVfblXOj"`
+   - **Modelo OBLIGATORIO para Español (`ES`)**: **`"eleven_v4"`** (ejecutado mediante `python tools/tts.py` con `speed=1.1`, `stability=0.50`, `similarity_boost=0.75`, `style=0.35`, `use_speaker_boost=True`).
+   - **PROHIBIDO generar la voz en español con `"eleven_multilingual_v2"`**: con `eleven_multilingual_v2`, la voz `8MeTTgXVwMEhRVfblXOj` pierde consistencia y cambia de timbre, acento y entonación entre una frase y otra.
+   - En `script_full.json`, escribe el texto `speak` en español limpio y natural (como en `historia_tesla_pixel/script_full.json`), sin deformar nombres propios con fonéticas forzadas antinaturales.
+   - **Nunca cambies el narrador ni el modelo `eleven_v4` en español** a menos que el usuario lo pida explícitamente.
+
+2. **Narradores en Inglés (`EN`) y Portugués (`PT`) — Cadencia Natural**:
+   - Inglés (`EN`): `VOICE_ID = "pNInz6obpgDQGcFmaJgB"`
+   - Portugués (`PT`): `VOICE_ID = "Rxw6ylGPvxzn3gsuOExL"`
+   - Modelo (solo para `EN` y `PT` en `tools/batch_tts_multilingual.py`): `"eleven_multilingual_v2"`
+   - **Velocidad de generación (`speed`)**: **`1.0` (natural)**. **PROHIBIDO usar `speed=1.15`**, ya que acelera artificialmente la locución.
+   - **Sincronización en mezcla (`tools/mix_multilingual.py`)**:
+     - Al alinear cada línea `lid` con el timeline maestro en español, calcula siempre la ventana real disponible hasta la siguiente frase:
+       ```python
+       next_start = TL.s(TL.order[i + 1]) if i + 1 < len(TL.order) else (TL.e(lid) + 1.0)
+       avail_dur = max(slot_dur, next_start - slot_start - 0.08)
+       ```
+     - Solo comprime con `atempo` cuando `d_nat > avail_dur`, evitando que las voces en inglés o portugués suenen apresuradas.
+
+3. **Regla Innegociable de Cajas de Texto (`window` + `draw_text` — CERO Texto Fuera de Caja)**:
+   - **PROHIBIDO que cualquier texto toque o sobresalga de los bordes de una ventana (`window`)** en `16:9` o `9:16`, en cualquiera de los 3 idiomas (`ES`, `EN`, `PT`).
+   - En las escenas (`engine/ch01.py..ch08.py`):
+     - La fuente `"press"` (`PressStart2P`, `size=8`) mide `8px` por carácter (`28 chars = 224px`). Úsala **únicamente para titulares cortos (`<= 26` caracteres)**.
+     - Para líneas de más de 26 caracteres dentro de ventanas, usa siempre `"silk"` (`Silkscreen`, `size=8`, que mide `~5.5px` por carácter) o divide en 2 líneas.
+   - **Protección automática obligatoria en el motor (`engine/core.py` y `engine/vertical.py`)**:
+     - `window(canvas, x, y, w, h, ...)` debe registrar cada ventana dibujada en `canvas._windows` (y en `16:9` ensanchar automáticamente los paneles informativos centrales de `w=244..252` a `w=284, x=98`).
+     - `draw_text(...)` debe verificar si `(x, y)` cae dentro de alguna ventana de `canvas._windows` y calcular `max_tw = ww - 14`. Si el ancho del texto completo supera `max_tw`:
+       1. Baja `size` (`24 -> 16 -> 8`).
+       2. Si en `size=8` con `fname="press"` aún supera `max_tw`, cambia automáticamente a `fname="silk"`.
+       3. Si aún supera `max_tw`, comprime horizontalmente con `Image.NEAREST` a `max_tw` y restringe `x0` dentro de `[wx + 6, wx + ww - 6]`.
+
+4. **Regla Innegociable de Diseño Sonoro y Música (`engine/audio.py` + `ch01..ch08.py` — Balance Estándar Tesla)**:
+   - **PROHIBIDO dejar capítulos o escenas sin efectos de sonido o con SFX inaudibles**, y **PROHIBIDO saturar con pitidos constantes encima de la voz**. El balance exacto a seguir es el de `historia_tesla_pixel`:
+   - En cada `engine/ch01.py..ch08.py`:
+     - `def music(A):` **NO debe quedar vacío (`return`)**: debe sumar colchones armónicos suaves (`A.add_pad(t0, dur, freqs, amp=0.038..0.045)`) y bajos cálidos (`A.add_bass(...)`) que den cuerpo a la música de cada acto.
+     - `def sfx(A):` debe incluir efectos puntuales y con sentido narrativo en cada escena (`A.fx_pop`, `A.fx_chime`, `A.fx_sparkle`, `A.fx_thud`, `A.fx_sweep`), sincronizados con `TL.s(lid)` y `TL.word(lid, "...")`.
+   - En `engine/audio.py`:
+     - `design_sfx()` debe acompañar cada capítulo con sonidos diegéticos suaves (tiza `chalk` en las pizarras, brisa/lluvia `wind`/`rain_amb` en exteriores, zumbido eléctrico/radio `hum_1958`, sellos `stamp_hit`, acordes `sting` y `join_jingle`).
+     - Los helpers `fx_*` deben tener ganancia clara y perceptible: `fx_pop` (`vol=amp*0.65`), `fx_thud` (`vol=amp*0.65`), `fx_chime` (`vol=amp*0.55`), `fx_sweep` (`vol=amp*0.60`), `fx_sparkle` (`vol=amp*0.52`).
+     - En `main()` y `tools/mix_multilingual.py`, usar `s_warm = lowpass(sfx.buf, 2)`, `m_ducked = m_warm * (1.0 - 0.70 * duck) * 0.36` y `s_ducked = s_warm * (1.0 - 0.38 * duck) * 0.68`, logrando que los efectos se escuchen con nitidez y calidez sin tapar jamás al narrador.
+
+5. **Regla de Objetos Apoyados (`floor_prop`), Tarjetas de Capítulo y Llamado a Comentarios (`CTA`)**:
+   - **CERO objetos flotando**: ningún objeto (velas, lámparas, radios, patentes, cajas de música, proyectores, televisores, teléfonos) puede dibujarse suelto en el aire; todos deben apoyarse sobre una mesa, escritorio o pedestal en el piso (`y_feet = 248`).
+   - Todos los capítulos (`1..8`) deben abrir con la tarjeta clásica `make_card(num, lines, years)`.
+   - El último capítulo (`ch08.py`) debe incluir antes del cierre de Pixeloide Studios una escena de llamado a la acción (`c8_s04_comment_cta`) invitando a comentar qué historia quieren ver en el próximo episodio.
+
+3. **Traducción Total en Pantalla (`engine/i18n.py`)**:
+   - No basta con cambiar el audio: **todos los textos visibles en las escenas** (títulos de capítulos, etiquetas, diagramas, tarjetas, diálogos, banners y créditos) deben traducirse a `en` y `pt` mediante el hook automático de `engine/i18n.py` integrado en `Frame.text()` y `Frame.text_wrap()`.
+   - El motor de fuentes (`engine/core.py`) soporta composición automática de diacríticos en mayúsculas (`Á, É, Í, Ó, Ú, À, Â, Ê, Ô, Ã, Õ, Ç, Ñ, Ü`).
+
+4. **Cierre Oficial Obligatorio (`engine/outro.py`) — Manual de Marca Pixeloide Studios**:
+   Todo video producido con este framework **debe** cerrar con el módulo `engine/outro.py` (`TAIL = 12.0s` en `engine/timeline.py`), dividido en dos escenas tras el fade-out del último capítulo:
+   - **Escena 1 (`sc_pixeloide_logo`, ~3.8s)**:
+     - Transición de barrido (`wipe`) de `520ms` en **Cyan** (`#28DCE0`) con curva `cubic-bezier(.76, 0, .24, 1)`.
+     - Fondo oscuro **Ink** (`#070A1F`) con el **Campo de píxeles** reactivo iluminándose de **Cyan** (`#28DCE0`) a **Magenta** (`#E732B6`).
+     - Isotipo geométrico exacto: **«Una P que es un play»** (triángulo superior en Cyan `#28DCE0`, franja diagonal en Paper `#F4F3EE` formando la punta derecha del Play, y chispa triangular inferior en Magenta `#E732B6`).
+     - Logotipo **PIXELOIDE** (`#F4F3EE`) + **STUDIOS** (`#28DCE0`) y claim **`JUGAMOS EN SERIO.`** (`JUGAMOS` en Paper, `EN SERIO` en Cyan, punto `.` en Magenta; traducido en EN a `WE PLAY SERIOUSLY.` y en PT a `JOGAMOS A SÉRIO.`).
+   - **Escena 2 (`sc_credits`, ~5.4s)**:
+     - Header con lockup horizontal de **Pixeloide Studios** + `01 — CRÉDITOS DE PRODUCCIÓN`.
+     - Dos tarjetas destacadas de autoría:
+       - **IDEA ORIGINAL**: `BRAIAN GRENO`
+       - **PRODUCCIÓN Y DIRECCIÓN**: `BRAIAN GRENO`
+     - Panel `02 — HERRAMIENTAS DE IA Y TECNOLOGÍA` (`IA + CODE`) listando el stack completo:
+       - `CLAUDE & GEMINI` — Dirección técnica · Código y animación
+       - `ELEVENLABS` — Locución neuronal · Carlos Aguilar
+       - `OPENAI WHISPER` — Alineación fonética y subtítulos
+       - `IMAGEN / NANOBANANA` — Arte pixel base · Fondos y retratos
+       - `PYTHON · PIL · NUMPY` — Motor pixel art 16-bit y chiptune
+       - `FFMPEG` — Masterización 1080p · Audio -14 LUFS
+
+---
+
+## 2. Flujo Paso a Paso desde un Guion Nuevo
+
+Cuando el usuario te entregue un guion nuevo, ejecuta este pipeline en orden:
+
+### Paso 1 — Estructurar el Guion (`script_full.json`, `script_full_en.json`, `script_full_pt.json`)
+Convierte el guion en una lista JSON de líneas narrativas con:
+- `id`: identificador `"c{cap}_{num:02d}"` (ej. `"c1_01"`, `"c1_02"`, ...)
+- `ch`: número de capítulo (`1..N`)
+- `pause`: pausa dramática en segundos después de la línea (`0.35` normal, `0.65` cierre de idea, `1.1` fin de capítulo)
+- `speak`: texto optimizado para fonética TTS (fechas y siglas escritas como se pronuncian en español si hace falta)
+- `sub`: texto limpio para subtítulos en pantalla
+
+Genera a la vez `script_full_en.json` y `script_full_pt.json` con los mismos `id`, `ch` y `pause`, traduciendo `speak` y `sub` con tono documental natural.
+
+### Paso 2 — Generar Locución + Timestamps (`audio/vo/`, `audio/vo_en/`, `audio/vo_pt/`)
+1. Ejecuta `python tools/tts.py` para generar el español (`audio/vo/{id}.mp3` y `audio/vo/{id}.json`) con **Carlos Aguilar** (`8MeTTgXVwMEhRVfblXOj`), **`MODEL = "eleven_v4"`** y **`speed = 1.1`**. (**NUNCA** generes el español con `eleven_multilingual_v2`).
+2. Ejecuta `python tools/batch_tts_multilingual.py both` para generar únicamente `audio/vo_en/` y `audio/vo_pt/` a velocidad natural (`speed=1.0`).
+3. Verifica que `engine/timeline.py` construya el timeline maestro a partir de `script_full.json` + `audio/vo/*.json` con `TAIL = 12.0` para dar espacio al cierre de **Pixeloide Studios**.
+
+### Paso 3 — Generar y Preparar Assets 16-Bit (`assets/bgs/` y `assets/portraits/`)
+1. Identifica los personajes clave y escenarios históricos/temáticos del guion.
+2. Usa el subagente `image-generator` para crear:
+   - **Retratos (`64x64`)**: pixel art 16-bit estilo SNES/Chrono Trigger, busto frontal/3-cuartos sobre fondo sólido uniforme para recorte automático.
+   - **Fondos (`480x270`)**: escenarios 16-bit panorámicos sin texto incrustado y con iluminación atmosférica.
+3. Procesa las imágenes con `python prep_assets.py` (escalado pixel-perfect, cuantización de paleta y eliminación de fondo en retratos).
+
+### Paso 4 — Programar Capítulos (`engine/ch01.py` .. `engine/chNN.py`) y Traducciones (`engine/i18n.py`)
+1. Cada módulo `chXX.py` debe exponer:
+   - `scenes()`: lista de tuplas `(t_inicio, funcion_escena, funcion_camara_opcional)` sincronizadas al milisegundo con `TL.s(lid)`, `TL.e(lid)` y `TL.word(lid, "palabra")`.
+   - `music(A)`: composición chiptune procedural acorde al tono emocional del capítulo.
+   - `sfx(A)`: efectos de sonido sincronizados con las apariciones de ventanas, golpes, alertas o revelaciones.
+2. **Reglas de Animación, Personajes y Coreografía con el Audio**:
+   - **PROHIBIDO incluir `robot(...)` ("La Máquina")** en documentales cuya temática no sea Inteligencia Artificial.
+   - **PROHIBIDO usar loops continuos sin sentido (`pace()` infinito, rebote continuo o rotación automática de brazos)**. Los personajes no deben moverse todo el tiempo sin motivo.
+   - **Coreografía sincronizada con las palabras del narrador (`TL.word`)**: cada entrada caminando (`walk(t, t0, t1, x0, x1)` una sola vez para entrar o desplazarse a un punto), gesto de brazos (`arms="type"`, `"write"`, `"note"`, `"work"`, `"point"`, `"cheer"`, `"shrug"`, `"think"`, `"hold"`) y aparición de tarjetas (`pop(t, t_word)`) debe dispararse en el instante exacto en que el audio pronuncia la acción o concepto (`TL.word(lid, "...")` y `TL.s(lid)`).
+   - **Ritmo y Cámara**: incluye siempre funciones de cámara (`cam_push` y `cam_punch`) en `scenes()`, apariciones con rebote `pop(t, t0)`, sacudidas `shake()` en impactos/rechazos y revelado progresivo `reveal=` en titulares. No repitas un mismo recurso visual (como una línea/gusano en el piso) en todas las escenas.
+3. En el último capítulo (`chNN.py`), define `T_END = TL.e("ultima_linea") + 2.8` para que `engine/outro.py` tome el relevo inmediatamente después.
+4. Registra todas las cadenas en mayúsculas de los capítulos dentro de `engine/i18n.py` (`EN_MAP` y `PT_MAP`).
+
+### Paso 5 — Verificación Automática de Márgenes y Cajas (QA Visual)
+Antes de renderizar el video final, **siempre** verifica que ningún texto en `es`, `en` o `pt` se salga de su caja (`win` / `panel` / `banner`) ni de los márgenes seguros (`x in [4..476]`, `y in [4..266]`):
+1. Usa `check_boxes` o renderiza hojas de contacto (`python engine/video.py sheet`) en los 3 idiomas.
+2. Inspecciona visualmente las hojas con `read_file` y corrige cualquier texto largo ajustando el ancho de la caja, usando `text_wrap` o abreviando la traducción en `engine/i18n.py`.
+
+### Paso 6 — Síntesis de Audio, Render Paralelo 1080p y Masterización (`-14 LUFS`)
+1. Genera los stems y mezcla en español:
+   ```powershell
+   python engine/audio.py
+   ```
+2. Genera las mezclas multilingües (`EN` y `PT`) con ducking automático y cadencia natural:
+   ```powershell
+   python tools/mix_multilingual.py
+   ```
+3. Renderiza el video mudo en los 3 idiomas (`renders/video_mudo.mp4`, `renders/video_mudo_en.mp4`, `renders/video_mudo_pt.mp4`) en paralelo (8 workers):
+   ```powershell
+   python engine/video.py render 8
+   python tools/render_multilingual.py
+   ```
+4. Une video + audio normalizado a `-14 LUFS` (estándar broadcast/YouTube) **sin quemar subtítulos en ningún `.mp4`** y guardando todos los archivos `.srt` dentro de `renders/subtitulos/`:
+   ```powershell
+   python tools/mux_all.py
+   ```
+
+### Paso 7 — Miniaturas 16:9 y Shorts Verticales 9:16 a Pantalla Completa por Cada Capítulo (`renders/shorts/`)
+1. **Regla obligatoria (Redibujado 9:16 a pantalla completa, CERO recortes en caja cuadrada)**:
+   - **PROHIBIDO recortar el video 16:9 (`480x270`) dentro de un recuadro cuadrado (`254x254`) con barras estáticas arriba y abajo**.
+   - Todos los videos `9:16` (`1080x1920`, 30fps, sin subtítulos pegados) deben redibujarse **a pantalla completa en resolución nativa `270x480`** (escalada `4x NEAREST` a `1080x1920`) mediante `engine/vertical.py` (`vertical.frame_at_vertical`):
+     - Fondo pixel-art extendido a pantalla completa (`y=0..480`).
+     - Encabezados superiores redibujados en `x=8..262` con ajuste automático de línea (`wrap_text_px`) para que ningún texto se corte jamás.
+     - Paneles centrales, retratos y diagramas centrados en `x=135` en la zona media (`y=72..352`), apilando verticalmente los paneles que en `16:9` estaban lado a lado.
+     - Personajes sobre el piso vertical (`feet=452, x=34..236`) y globos de diálogo ajustados a `VW=270`.
+   - Se debe generar por separado cada capítulo del episodio (`Cap 00 Apertura` + `Cap 01` a `Cap 08`) en Español, Inglés y Portugués dentro de `renders/shorts/` (`Short_Cap00_Apertura_{LANG}.mp4`, `Short_Cap01_{LANG}.mp4`, ..., `Short_Cap08_{LANG}.mp4`), junto con sus `.srt` independientes en `renders/subtitulos/`:
+   ```powershell
+   python tools/make_thumbnails_and_shorts.py
+   python tools/make_chapter_shorts.py
+   ```
+2. Limpia archivos temporales y deja todo versionado con `git commit`.

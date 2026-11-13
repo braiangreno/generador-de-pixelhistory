@@ -256,33 +256,33 @@ def add_pad(t, dur, freqs, amp=0.035):
     if dur <= 0:
         return
     for f in freqs:
-        note(music, t, f, dur, inst="pulse", vol=amp * 0.22, duty=0.5, a=0.22, d=0.25, s=0.70, r=0.35)
+        note(music, t, f, dur, inst="pulse", vol=amp * 0.28, duty=0.5, a=0.22, d=0.25, s=0.70, r=0.35)
 
 
 def add_bass(t, dur, f, amp=0.05):
     if dur <= 0:
         return
-    note(music, t, f, dur, inst="tri", vol=amp * 0.45, a=0.03, d=0.08, s=0.75, r=0.12)
+    note(music, t, f, dur, inst="tri", vol=amp * 0.48, a=0.03, d=0.08, s=0.75, r=0.12)
 
 
 def fx_pop(t, amp=0.08):
-    pop_sfx(t, f0=420, vol=amp * 0.35)
+    pop_sfx(t, f0=440, vol=amp * 0.65)
 
 
 def fx_thud(t, amp=0.09):
-    stamp_hit(t, vol=amp * 0.35)
+    stamp_hit(t, vol=amp * 0.65)
 
 
 def fx_chime(t, amp=0.10):
-    join_jingle(t, vol=amp * 0.26)
+    join_jingle(t, vol=amp * 0.55)
 
 
 def fx_sweep(t, dur=0.5, f0=150, f1=440, amp=0.07):
-    whoosh(t, dur=dur, vol=amp * 0.32)
+    whoosh(t, dur=dur, vol=amp * 0.60)
 
 
 def fx_sparkle(t, amp=0.10):
-    coin(t, vol=amp * 0.25)
+    coin(t, vol=amp * 0.52)
 
 
 def compose():
@@ -474,48 +474,55 @@ def robot_beep(t, vol=0.05):
 
 def design_sfx():
     # Apertura: saltos suaves de frecuencia + golpe seco del cajón de la Marina + acorde de presentación
-    for k in range(4):
-        blip(0.25 + k * 0.28, 740 + (k % 3) * 160, 0.035, 0.015)
-    stamp_hit(TL.s("s03") + 0.6, vol=0.028)
-    sting(TL.s("s05"), [57, 64, 69, 72, 76], vol=0.035, step=0.14, hold=1.6)
+    for k in range(5):
+        blip(0.25 + k * 0.26, 740 + (k % 3) * 160, 0.04, 0.026)
+    hum_1958(0.05, TL.e("s02"), vol=0.012)
+    stamp_hit(TL.s("s03") + 0.5, vol=0.045)
+    sting(TL.s("s05"), [57, 64, 69, 72, 76], vol=0.042, step=0.14, hold=1.6)
 
-    # Cap 1: melodía de caja de música y piano en Viena
-    join_jingle(TL.s("c1_03") + 0.4, vol=0.022)
-    pop_sfx(TL.s("c1_04") + 0.5, f0=520, vol=0.020)
+    # Cap 1: calles de Viena 1914 (tranvía/electricidad) + piano de mamá + caja de música
+    wind(TL.s("c1_01"), TL.e("c1_02"), vol=0.013)
+    hum_1958(TL.s("c1_02"), TL.e("c1_02"), vol=0.011)
+    join_jingle(TL.s("c1_03") + 0.35, vol=0.038)
+    pop_sfx(TL.s("c1_04") + 0.45, f0=520, vol=0.036)
+    stamp_hit(TL.word("c1_05", "prohibieron"), vol=0.042)
 
-    # Cap 2: murmullo tenso en las cenas de Viena + escape nocturno en 1937
-    hum_1958(TL.s("c2_04"), TL.e("c2_05"), vol=0.009)
-    whoosh(TL.s("c2_06") + 0.4, dur=0.45, vol=0.022)
+    # Cap 2: mansión de Mandl en Viena + murmullo tenso de radio en cenas + escape nocturno en 1937
+    pop_sfx(TL.s("c2_01") + 0.3, f0=420, vol=0.034)
+    hum_1958(TL.s("c2_04"), TL.e("c2_05"), vol=0.013)
+    whoosh(TL.s("c2_06") + 0.35, dur=0.48, vol=0.038)
+    wind(TL.s("c2_06"), TL.e("c2_07"), vol=0.013)
 
     # Cap 3: brisa en la cubierta del trasatlántico + trazos de diseño de ala en su camarín
-    wind(TL.s("c3_02"), TL.e("c3_03"), vol=0.011)
-    chalk(TL.s("c3_06"), TL.s("c3_06") + 1.8, vol=0.013)
+    wind(TL.s("c3_02"), TL.e("c3_03"), vol=0.014)
+    chalk(TL.s("c3_06"), TL.e("c3_06"), vol=0.018)
 
     # Cap 4: mar nocturno 1940 + La Pizarra 1 (interferencia en un solo canal)
-    rain_amb(TL.s("c4_01"), TL.e("c4_01"), vol=0.011)
-    chalk(TL.s("c4_03"), TL.s("c4_04") + 1.8, vol=0.012)
-    hum_1958(TL.s("c4_06"), TL.e("c4_06"), vol=0.011)
+    rain_amb(TL.s("c4_01"), TL.e("c4_01"), vol=0.015)
+    chalk(TL.s("c4_03"), TL.e("c4_05"), vol=0.017)
+    hum_1958(TL.s("c4_06"), TL.e("c4_06"), vol=0.015)
 
     # Cap 5: La Pizarra 2 (88 frecuencias saltando en sincronía) + sello de patente US 2,292,387
-    chalk(TL.s("c5_04"), TL.s("c5_05") + 1.8, vol=0.012)
-    for k in range(5):
-        blip(TL.s("c5_08") + 0.3 + k * 0.22, 660 + k * 110, 0.04, 0.018)
-    stamp_hit(TL.s("c5_09") + 1.2, vol=0.028)
+    chalk(TL.s("c5_04"), TL.e("c5_06"), vol=0.017)
+    for k in range(6):
+        blip(TL.s("c5_08") + 0.25 + k * 0.20, 660 + k * 110, 0.045, 0.028)
+    stamp_hit(TL.word("c5_09", "patente"), vol=0.045)
 
     # Cap 6: sello "CLASIFICADO" en el cajón de la Marina + destello de la gira de bonos
-    stamp_hit(TL.s("c6_01") + 0.8, vol=0.028)
-    coin(TL.s("c6_04") + 0.7, vol=0.024)
+    stamp_hit(TL.word("c6_01", "descartó"), vol=0.045)
+    coin(TL.s("c6_04") + 0.6, vol=0.038)
+    coin_cascade(TL.word("c6_04", "siete"), dur=1.2, count=12, vol=0.024)
 
     # Cap 7: radar naval en 1962 + pulsos electrónicos de los años 80/90
     for k in range(3):
-        blip(TL.s("c7_03") + 0.6 + k * 0.35, 880, 0.05, 0.018)
-    hum_1958(TL.s("c7_05"), TL.e("c7_05"), vol=0.009)
+        blip(TL.s("c7_03") + 0.5 + k * 0.35, 880, 0.055, 0.028)
+    hum_1958(TL.s("c7_05"), TL.e("c7_05"), vol=0.012)
 
     # Cap 8: premio EFF 1997 + La Pizarra 3 (1600 saltos/s) + Match Cut final + CTA comentarios
-    join_jingle(TL.s("c8_01") + 0.5, vol=0.022)
-    chalk(TL.s("c8_03"), TL.s("c8_04") + 1.8, vol=0.012)
-    sting(TL.s("c8_07"), [57, 64, 69, 73, 76, 81], vol=0.038, step=0.14, hold=2.0)
-    join_jingle(TL.s("c8_08"), vol=0.025)
+    join_jingle(TL.s("c8_01") + 0.4, vol=0.038)
+    chalk(TL.s("c8_03"), TL.e("c8_04"), vol=0.017)
+    sting(TL.s("c8_07"), [57, 64, 69, 73, 76, 81], vol=0.044, step=0.14, hold=2.0)
+    join_jingle(TL.s("c8_08"), vol=0.038)
 
 
 # --------------------------------------------------------------------------- voz y mezcla
@@ -604,15 +611,15 @@ def main():
     vo = build_voice()
     # Filtro pasa-bajos cálido para redondear armónicos agudos del chiptune y dejar libre la banda de la voz
     m_warm = lowpass(lowpass(music.buf, 8), 5)
-    s_warm = lowpass(sfx.buf, 4)
+    s_warm = lowpass(sfx.buf, 2)
 
-    # Ducking profundo: cuando habla el narrador, la música y los efectos bajan suavemente para acompañar sin competir
+    # Ducking equilibrado (Estándar Tesla): la música baja suavemente al hablar y los efectos acompañan con nitidez
     env = envelope(vo, 0.08)
     duck = np.clip(env / 0.04, 0, 1)
     duck = movavg(duck, 0.32 * SR)
 
-    m_ducked = m_warm * (1.0 - 0.72 * duck) * 0.36
-    s_ducked = s_warm * (1.0 - 0.55 * duck) * 0.42
+    m_ducked = m_warm * (1.0 - 0.70 * duck) * 0.36
+    s_ducked = s_warm * (1.0 - 0.38 * duck) * 0.68
     mix = vo * 0.98 + m_ducked + s_ducked
     # fade final
     nf = int(1.5 * SR)
@@ -627,7 +634,7 @@ def main():
     write_wav(os.path.join(out, "mix.wav"), mix)
     # Guardamos los stems ya suavizados (sin el ducking de ES) para que mix_multilingual aplique el ducking de EN y PT
     write_wav(os.path.join(out, "music_stem.wav"), (m_warm * 0.36)[:end])
-    write_wav(os.path.join(out, "sfx_stem.wav"), (s_warm * 0.42)[:end])
+    write_wav(os.path.join(out, "sfx_stem.wav"), (s_warm * 0.68)[:end])
     write_wav(os.path.join(out, "voice_stem.wav"), (vo * 0.98)[:end])
     print("audio ok", round(TL.total, 2), "peak", round(float(peak), 3))
 

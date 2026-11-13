@@ -266,23 +266,23 @@ def add_bass(t, dur, f, amp=0.05):
 
 
 def fx_pop(t, amp=0.08):
-    pop_sfx(t, f0=420, vol=amp * 0.35)
+    pop_sfx(t, f0=420, vol=amp * 0.65)
 
 
 def fx_thud(t, amp=0.09):
-    stamp_hit(t, vol=amp * 0.35)
+    stamp_hit(t, vol=amp * 0.65)
 
 
 def fx_chime(t, amp=0.10):
-    join_jingle(t, vol=amp * 0.26)
+    join_jingle(t, vol=amp * 0.55)
 
 
 def fx_sweep(t, dur=0.5, f0=150, f1=440, amp=0.07):
-    whoosh(t, dur=dur, vol=amp * 0.32)
+    whoosh(t, dur=dur, vol=amp * 0.60)
 
 
 def fx_sparkle(t, amp=0.10):
-    coin(t, vol=amp * 0.25)
+    coin(t, vol=amp * 0.52)
 
 
 def compose():
@@ -474,40 +474,40 @@ def robot_beep(t, vol=0.05):
 
 def design_sfx():
     # Apertura: zumbido sutil de tubo CRT + surcos en el campo de Idaho
-    hum_1958(0.05, TL.e("s01"), vol=0.009)
-    wind(TL.s("s02"), TL.e("s03"), vol=0.010)
-    sting(TL.s("s05"), [57, 64, 69, 72, 76], vol=0.035, step=0.14, hold=1.6)
+    hum_1958(0.05, TL.e("s01"), vol=0.016)
+    wind(TL.s("s02"), TL.e("s03"), vol=0.018)
+    sting(TL.s("s05"), [57, 64, 69, 72, 76], vol=0.045, step=0.14, hold=1.6)
 
-    # Cap 1: nieve suave en Berlín 1883 + tiza muy sutil en La Pizarra 1
-    wind(TL.s("c1_01"), TL.e("c1_02"), vol=0.010)
-    chalk(TL.s("c1_04"), TL.s("c1_05") + 1.4, vol=0.012)
+    # Cap 1: nieve suave en Berlín 1883 + tiza en La Pizarra 1
+    wind(TL.s("c1_01"), TL.e("c1_02"), vol=0.018)
+    chalk(TL.s("c1_04"), TL.s("c1_05") + 1.4, vol=0.024)
 
     # Cap 2: motor del disco de Baird en Londres
-    hum_1958(TL.s("c2_01"), TL.e("c2_02"), vol=0.009)
+    hum_1958(TL.s("c2_01"), TL.e("c2_02"), vol=0.016)
 
     # Cap 3: brisa en el campo arado de Idaho + tiza en el pizarrón del profesor Tolman
-    wind(TL.s("c3_02"), TL.e("c3_02"), vol=0.010)
-    chalk(TL.s("c3_04"), TL.s("c3_04") + 1.8, vol=0.012)
+    wind(TL.s("c3_02"), TL.e("c3_02"), vol=0.018)
+    chalk(TL.s("c3_04"), TL.s("c3_04") + 1.8, vol=0.024)
 
     # Cap 4: La Pizarra 2 (Haz de electrones) + primera raya luminosa en San Francisco
-    chalk(TL.s("c4_02"), TL.s("c4_03") + 1.5, vol=0.012)
-    hum_1958(TL.s("c4_04"), TL.e("c4_05"), vol=0.009)
+    chalk(TL.s("c4_02"), TL.s("c4_03") + 1.5, vol=0.024)
+    hum_1958(TL.s("c4_04"), TL.e("c4_05"), vol=0.016)
 
     # Cap 5: fallo de la oficina de patentes a favor de Farnsworth
-    join_jingle(TL.s("c5_06"), vol=0.025)
+    join_jingle(TL.s("c5_06"), vol=0.042)
 
     # Cap 6: La Pizarra 3 (Movimiento y barrido)
-    chalk(TL.s("c6_04"), TL.s("c6_05") + 1.5, vol=0.012)
-    hum_1958(TL.s("c6_05"), TL.e("c6_06"), vol=0.008)
+    chalk(TL.s("c6_04"), TL.s("c6_05") + 1.5, vol=0.024)
+    hum_1958(TL.s("c6_05"), TL.e("c6_06"), vol=0.015)
 
     # Cap 7: estudio de televisión de 1957 (Doctor X)
     for k in range(3):
-        blip(TL.s("c7_04") + 0.6 + k * 0.22, 980, 0.05, 0.016)
+        blip(TL.s("c7_04") + 0.6 + k * 0.22, 980, 0.05, 0.028)
 
     # Cap 8: transmisión lunar de 1969 + match cut final en Idaho + CTA comentarios
-    hum_1958(TL.s("c8_01"), TL.e("c8_02"), vol=0.009)
-    sting(TL.s("c8_06"), [57, 64, 69, 73, 76, 81], vol=0.038, step=0.14, hold=2.0)
-    join_jingle(TL.s("c8_07"), vol=0.025)
+    hum_1958(TL.s("c8_01"), TL.e("c8_02"), vol=0.016)
+    sting(TL.s("c8_06"), [57, 64, 69, 73, 76, 81], vol=0.048, step=0.14, hold=2.0)
+    join_jingle(TL.s("c8_07"), vol=0.042)
 
 
 # --------------------------------------------------------------------------- voz y mezcla
@@ -565,9 +565,9 @@ def card_audio():
         if lid not in TL.lines:
             continue
         t0 = TL.s(lid) - 0.15
-        whoosh(t0, 0.42, 0.022)
-        sting(t0 + 0.20, [57, 64, 69, 76], vol=0.028, step=0.12, hold=1.1)
-        note(music, t0 + 0.20, midi_hz(45), 1.6, "tri", vol=0.12, a=0.04, s=0.85, r=0.5)
+        whoosh(t0, 0.42, 0.035)
+        sting(t0 + 0.20, [57, 64, 69, 76], vol=0.038, step=0.12, hold=1.1)
+        note(music, t0 + 0.20, midi_hz(45), 1.6, "tri", vol=0.14, a=0.04, s=0.85, r=0.5)
 
 
 def chapter_hooks():
@@ -596,15 +596,15 @@ def main():
     vo = build_voice()
     # Filtro pasa-bajos cálido para redondear armónicos agudos del chiptune y dejar libre la banda de la voz
     m_warm = lowpass(lowpass(music.buf, 8), 5)
-    s_warm = lowpass(sfx.buf, 4)
+    s_warm = lowpass(sfx.buf, 2)
 
-    # Ducking profundo: cuando habla el narrador, la música y los efectos bajan suavemente para acompañar sin competir
+    # Ducking equilibrado (igual al estándar de Tesla): música y efectos presentes y cálidos sin tapar la voz
     env = envelope(vo, 0.08)
     duck = np.clip(env / 0.04, 0, 1)
     duck = movavg(duck, 0.32 * SR)
 
-    m_ducked = m_warm * (1.0 - 0.72 * duck) * 0.36
-    s_ducked = s_warm * (1.0 - 0.55 * duck) * 0.42
+    m_ducked = m_warm * (1.0 - 0.70 * duck) * 0.36
+    s_ducked = s_warm * (1.0 - 0.38 * duck) * 0.68
     mix = vo * 0.98 + m_ducked + s_ducked
     # fade final
     nf = int(1.5 * SR)
@@ -619,7 +619,7 @@ def main():
     write_wav(os.path.join(out, "mix.wav"), mix)
     # Guardamos los stems ya suavizados (sin el ducking de ES) para que mix_multilingual aplique el ducking de EN y PT
     write_wav(os.path.join(out, "music_stem.wav"), (m_warm * 0.36)[:end])
-    write_wav(os.path.join(out, "sfx_stem.wav"), (s_warm * 0.42)[:end])
+    write_wav(os.path.join(out, "sfx_stem.wav"), (s_warm * 0.68)[:end])
     write_wav(os.path.join(out, "voice_stem.wav"), (vo * 0.98)[:end])
     print("audio ok", round(TL.total, 2), "peak", round(float(peak), 3))
 

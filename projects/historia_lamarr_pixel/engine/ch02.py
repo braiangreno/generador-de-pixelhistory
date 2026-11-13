@@ -134,12 +134,18 @@ def scenes():
 
 
 def music(A):
-    return
+    t0 = TL.s("c2_00")
+    t_esc = TL.s("c2_06")
+    t_end = TL.s("c3_00")
+    A.add_pad(t0, t_esc - t0, [110.0, 146.83, 220.0], amp=0.038)
+    A.add_pad(t_esc, t_end - t_esc, [110.0, 164.81, 220.0, 329.63], amp=0.044)
 
 
 def sfx(A):
-    A.fx_thud(TL.word("c2_02", "vigilada"), 0.09)
-    A.fx_pop(TL.word("c2_03", "nuevas"), 0.08)
-    A.fx_sparkle(TL.word("c2_05", "escuchaba"), 0.09)
-    A.fx_sweep(TL.s("c2_06"), 0.45, 220, 440, 0.07)
-    A.fx_chime(TL.word("c2_07", "escuchado"), 0.10)
+    A.fx_pop(TL.s("c2_01"), 0.09)
+    A.fx_thud(TL.word("c2_02", "vigilada"), 0.10)
+    A.fx_pop(TL.word("c2_03", "nuevas"), 0.09)
+    A.fx_thud(TL.word("c2_04", "Mussolini"), 0.09)
+    A.fx_sparkle(TL.word("c2_05", "escuchaba"), 0.10)
+    A.fx_sweep(TL.s("c2_06"), 0.45, 220, 440, 0.08)
+    A.fx_chime(TL.word("c2_07", "escuchado"), 0.11)

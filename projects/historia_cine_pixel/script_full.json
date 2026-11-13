@@ -2,402 +2,469 @@
   {
     "id": "s01",
     "ch": 0,
+    "pause": 0.4,
     "speak": "A fines del siglo diecinueve, una pregunta tenía discutiendo a pintores, científicos y criadores de caballos. Cuando un caballo galopa, ¿despega las cuatro patas del suelo al mismo tiempo?",
     "sub": "A fines del siglo diecinueve, una pregunta tenía discutiendo a pintores, científicos y criadores de caballos. Cuando un caballo galopa, ¿despega las cuatro patas del suelo al mismo tiempo?"
   },
   {
     "id": "s02",
     "ch": 0,
+    "pause": 0.45,
     "speak": "El ojo no alcanzaba a verlo. Los pintores lo dibujaban cada uno a su manera.",
     "sub": "El ojo no alcanzaba a verlo. Los pintores lo dibujaban cada uno a su manera."
   },
   {
     "id": "s03",
     "ch": 0,
+    "pause": 0.85,
     "speak": "Para salir de dudas, un fotógrafo puso doce cámaras en fila, con hilos que el caballo cortaba al pasar.",
     "sub": "Para salir de dudas, un fotógrafo puso doce cámaras en fila, con hilos que el caballo cortaba al pasar."
   },
   {
     "id": "s04",
     "ch": 0,
+    "pause": 0.55,
     "speak": "La respuesta fue sí. Y sin buscarlo, abrió la puerta al cine.",
     "sub": "La respuesta fue sí. Y sin buscarlo, abrió la puerta al cine."
   },
   {
     "id": "s05",
     "ch": 0,
+    "pause": 1.0,
     "speak": "Esta es la historia del cine. De cómo unas fotos quietas aprendieron a moverse, a hablar y a llenarse de color.",
     "sub": "Esta es la historia del cine. De cómo unas fotos quietas aprendieron a moverse, a hablar y a llenarse de color."
   },
   {
     "id": "c1_00",
     "ch": 1,
+    "pause": 0.45,
     "speak": "Capítulo uno. Doce cámaras.",
-    "sub": "Capítulo uno. Doce cámaras."
+    "sub": "CAPÍTULO 1 — DOCE CÁMARAS"
   },
   {
     "id": "c1_01",
     "ch": 1,
-    "speak": "El experimento lo pagó Líland Stánford, un millonario de los ferrocarriles y criador de caballos. Dicen que había una apuesta de por medio, pero nadie pudo probarlo.",
+    "pause": 0.45,
+    "speak": "El experimento lo pagó Leland Stanford, un millonario de los ferrocarriles y criador de caballos. Dicen que había una apuesta de por medio, pero nadie pudo probarlo.",
     "sub": "El experimento lo pagó Leland Stanford, un millonario de los ferrocarriles y criador de caballos. Dicen que había una apuesta de por medio, pero nadie pudo probarlo."
   },
   {
     "id": "c1_02",
     "ch": 1,
-    "speak": "El fotógrafo se llamaba Éduard Máibrich. Las cámaras de la época eran lentísimas, y tardó años en lograrlo.",
+    "pause": 0.45,
+    "speak": "El fotógrafo se llamaba Eadweard Muybridge. Las cámaras de la época eran lentísimas, y tardó años en lograrlo.",
     "sub": "El fotógrafo se llamaba Eadweard Muybridge. Las cámaras de la época eran lentísimas, y tardó años en lograrlo."
   },
   {
     "id": "c1_03",
     "ch": 1,
-    "speak": "En mil ochocientos setenta y ocho, frente a periodistas, una yegua llamada Sáli Gárdner corrió frente a las doce cámaras.",
+    "pause": 0.45,
+    "speak": "En mil ochocientos setenta y ocho, frente a periodistas, una yegua llamada Sallie Gardner corrió frente a las doce cámaras.",
     "sub": "En 1878, frente a periodistas, una yegua llamada Sallie Gardner corrió frente a las doce cámaras."
   },
   {
     "id": "c1_04",
     "ch": 1,
+    "pause": 0.45,
     "speak": "En algunas fotos, las cuatro patas estaban en el aire. Pero recogidas bajo la panza, no estiradas como en los cuadros.",
     "sub": "En algunas fotos, las cuatro patas estaban en el aire. Pero recogidas bajo la panza, no estiradas como en los cuadros."
   },
   {
     "id": "c1_05",
     "ch": 1,
-    "speak": "Máibrich hizo algo más: puso las fotos en una rueda y las proyectó una tras otra. El caballo volvió a correr, ahora en una pared.",
+    "pause": 0.55,
+    "speak": "Muybridge hizo algo más: puso las fotos en una rueda y las proyectó una tras otra. El caballo volvió a correr, ahora en una pared.",
     "sub": "Muybridge hizo algo más: puso las fotos en una rueda y las proyectó una tras otra. El caballo volvió a correr, ahora en una pared."
   },
   {
     "id": "c1_06",
     "ch": 1,
+    "pause": 0.45,
     "speak": "¿Por qué fotos quietas parecen un caballo que corre? Porque el cerebro rellena los huecos.",
     "sub": "¿Por qué fotos quietas parecen un caballo que corre? Porque el cerebro rellena los huecos."
   },
   {
     "id": "c1_07",
     "ch": 1,
+    "pause": 0.85,
     "speak": "Si ves más de diez o doce imágenes por segundo, ya no ves fotos: ves movimiento. Como en un cuaderno con dibujitos en las esquinas.",
     "sub": "Si ves más de diez o doce imágenes por segundo, ya no ves fotos: ves movimiento. Como en un cuaderno con dibujitos en las esquinas."
   },
   {
     "id": "c1_08",
     "ch": 1,
+    "pause": 1.0,
     "speak": "Ya había movimiento. Faltaba mostrarlo a una sala llena.",
     "sub": "Ya había movimiento. Faltaba mostrarlo a una sala llena."
   },
   {
     "id": "c2_00",
     "ch": 2,
+    "pause": 0.45,
     "speak": "Capítulo dos. Treinta y tres espectadores.",
-    "sub": "Capítulo dos. Treinta y tres espectadores."
+    "sub": "CAPÍTULO 2 — TREINTA Y TRES ESPECTADORES"
   },
   {
     "id": "c2_01",
     "ch": 2,
+    "pause": 0.45,
     "speak": "En Estados Unidos, el equipo de Thomas Edison armó una caja con una mirilla: el kinetoscopio. Ponías una moneda y mirabas solo, agachado, una película de segundos.",
     "sub": "En Estados Unidos, el equipo de Thomas Edison armó una caja con una mirilla: el kinetoscopio. Ponías una moneda y mirabas solo, agachado, una película de segundos."
   },
   {
     "id": "c2_02",
     "ch": 2,
-    "speak": "En París, un fotógrafo, Antuán Lumiér, vio esa caja. Y volvió a casa con una idea para sus hijos.",
+    "pause": 0.45,
+    "speak": "En París, un fotógrafo, Antoine Lumière, vio esa caja. Y volvió a casa con una idea para sus hijos.",
     "sub": "En París, un fotógrafo, Antoine Lumière, vio esa caja. Y volvió a casa con una idea para sus hijos."
   },
   {
     "id": "c2_03",
     "ch": 2,
-    "speak": "Ogúst y Luí Lumiér inventaron un aparato que filmaba, copiaba y proyectaba: el cinematógrafo.",
+    "pause": 0.45,
+    "speak": "Auguste y Louis Lumière inventaron un aparato que filmaba, copiaba y proyectaba: el cinematógrafo.",
     "sub": "Auguste y Louis Lumière inventaron un aparato que filmaba, copiaba y proyectaba: el cinematógrafo."
   },
   {
     "id": "c2_04",
     "ch": 2,
+    "pause": 0.45,
     "speak": "El veintiocho de diciembre de mil ochocientos noventa y cinco alquilaron el sótano de un café de París. Cobraron un franco la entrada.",
     "sub": "El 28 de diciembre de 1895 alquilaron el sótano de un café de París. Cobraron un franco la entrada."
   },
   {
     "id": "c2_05",
     "ch": 2,
+    "pause": 0.45,
     "speak": "Había cien sillas. Llegaron treinta y tres personas.",
     "sub": "Había cien sillas. Llegaron treinta y tres personas."
   },
   {
     "id": "c2_06",
     "ch": 2,
+    "pause": 0.45,
     "speak": "Vieron diez películas cortitas: obreros saliendo de una fábrica, un bebé comiendo, una broma a un jardinero.",
     "sub": "Vieron diez películas cortitas: obreros saliendo de una fábrica, un bebé comiendo, una broma a un jardinero."
   },
   {
     "id": "c2_07",
     "ch": 2,
+    "pause": 0.45,
     "speak": "Seguro escuchaste que el público salió corriendo al ver un tren que se acercaba. Esa película no estaba en la primera función, y no hay ningún registro de pánico.",
     "sub": "Seguro escuchaste que el público salió corriendo al ver un tren que se acercaba. Esa película no estaba en la primera función, y no hay ningún registro de pánico."
   },
   {
     "id": "c2_08",
     "ch": 2,
+    "pause": 0.85,
     "speak": "En pocos meses, el invento ya estaba en Buenos Aires, en Montevideo y en Ciudad de México.",
     "sub": "En pocos meses, el invento ya estaba en Buenos Aires, en Montevideo y en Ciudad de México."
   },
   {
     "id": "c2_09",
     "ch": 2,
+    "pause": 1.0,
     "speak": "Treinta y tres espectadores. El público más chico de la historia del cine… y el primero.",
     "sub": "Treinta y tres espectadores. El público más chico de la historia del cine… y el primero."
   },
   {
     "id": "c3_00",
     "ch": 3,
+    "pause": 0.45,
     "speak": "Capítulo tres. El mago.",
-    "sub": "Capítulo tres. El mago."
+    "sub": "CAPÍTULO 3 — EL MAGO"
   },
   {
     "id": "c3_01",
     "ch": 3,
-    "speak": "Entre el público de aquella noche había un mago de teatro: Yóryes Melié.",
+    "pause": 0.45,
+    "speak": "Entre el público de aquella noche había un mago de teatro: Georges Méliès.",
     "sub": "Entre el público de aquella noche había un mago de teatro: Georges Méliès."
   },
   {
     "id": "c3_02",
     "ch": 3,
-    "speak": "Quiso comprarles el aparato a los Lumiér. Le dijeron que no. Según la leyenda, le explicaron que el cine era un invento sin futuro.",
+    "pause": 0.45,
+    "speak": "Quiso comprarles el aparato a los Lumière. Le dijeron que no. Según la leyenda, le explicaron que el cine era un invento sin futuro.",
     "sub": "Quiso comprarles el aparato a los Lumière. Le dijeron que no. Según la leyenda, le explicaron que el cine era un invento sin futuro."
   },
   {
     "id": "c3_03",
     "ch": 3,
+    "pause": 0.45,
     "speak": "Así que consiguió un proyector inglés y lo convirtió en su propia cámara.",
     "sub": "Así que consiguió un proyector inglés y lo convirtió en su propia cámara."
   },
   {
     "id": "c3_04",
     "ch": 3,
+    "pause": 0.45,
     "speak": "Según contó él, un día filmaba una plaza y la cámara se trabó un minuto. Al proyectar, un ómnibus se convirtió de golpe en un coche fúnebre.",
     "sub": "Según contó él, un día filmaba una plaza y la cámara se trabó un minuto. Al proyectar, un ómnibus se convirtió de golpe en un coche fúnebre."
   },
   {
     "id": "c3_05",
     "ch": 3,
+    "pause": 0.45,
     "speak": "Había descubierto un truco: si paras la cámara, cambias algo y sigues filmando, en la pantalla parece magia.",
     "sub": "Había descubierto un truco: si paras la cámara, cambias algo y sigues filmando, en la pantalla parece magia."
   },
   {
     "id": "c3_06",
     "ch": 3,
+    "pause": 0.45,
     "speak": "Con trucos así hizo desaparecer gente, multiplicó cabezas y, en mil novecientos dos, mandó una nave a la Luna. Se clava en su ojo.",
     "sub": "Con trucos así hizo desaparecer gente, multiplicó cabezas y, en 1902, mandó una nave a la Luna. Se clava en su ojo."
   },
   {
     "id": "c3_07",
     "ch": 3,
-    "speak": "Fue tan exitosa que en Estados Unidos la copiaron sin permiso. Un distribuidor llegó a ofrecerle a Melié… su propia película.",
+    "pause": 0.45,
+    "speak": "Fue tan exitosa que en Estados Unidos la copiaron sin permiso. Un distribuidor llegó a ofrecerle a Méliès… su propia película.",
     "sub": "Fue tan exitosa que en Estados Unidos la copiaron sin permiso. Un distribuidor llegó a ofrecerle a Méliès… su propia película."
   },
   {
     "id": "c3_08",
     "ch": 3,
+    "pause": 0.45,
     "speak": "Con el tiempo, el público se cansó de sus trucos y la guerra lo arruinó. Terminó vendiendo juguetes y caramelos en una estación de París.",
     "sub": "Con el tiempo, el público se cansó de sus trucos y la guerra lo arruinó. Terminó vendiendo juguetes y caramelos en una estación de París."
   },
   {
     "id": "c3_09",
     "ch": 3,
-    "speak": "Unos periodistas lo redescubrieron. En mil novecientos treinta y uno recibió la Legión de Honor. Se la entregó Luí Lumiér.",
+    "pause": 0.85,
+    "speak": "Unos periodistas lo redescubrieron. En mil novecientos treinta y uno recibió la Legión de Honor. Se la entregó Louis Lumière.",
     "sub": "Unos periodistas lo redescubrieron. En 1931 recibió la Legión de Honor. Se la entregó Louis Lumière."
   },
   {
     "id": "c3_10",
     "ch": 3,
-    "speak": "Los Lumiér filmaron la realidad. Melié filmó los sueños. El cine necesitó a los dos.",
+    "pause": 1.0,
+    "speak": "Los Lumière filmaron la realidad. Méliès filmó los sueños. El cine necesitó a los dos.",
     "sub": "Los Lumière filmaron la realidad. Méliès filmó los sueños. El cine necesitó a los dos."
   },
   {
     "id": "c4_00",
     "ch": 4,
+    "pause": 0.45,
     "speak": "Capítulo cuatro. Hollywood.",
-    "sub": "Capítulo cuatro. Hollywood."
+    "sub": "CAPÍTULO 4 — HOLLYWOOD"
   },
   {
     "id": "c4_01",
     "ch": 4,
+    "pause": 0.45,
     "speak": "En Estados Unidos, el negocio era de unos pocos. Edison y otras empresas se juntaron en un trust que controlaba cámaras, películas y salas.",
     "sub": "En Estados Unidos, el negocio era de unos pocos. Edison y otras empresas se juntaron en un trust que controlaba cámaras, películas y salas."
   },
   {
     "id": "c4_02",
     "ch": 4,
+    "pause": 0.45,
     "speak": "Muchos productores se mudaron al oeste, a un pueblito de California llamado Hollywood.",
     "sub": "Muchos productores se mudaron al oeste, a un pueblito de California llamado Hollywood."
   },
   {
     "id": "c4_03",
     "ch": 4,
+    "pause": 0.45,
     "speak": "¿Por qué ahí? Por el sol: se podía filmar casi todo el año. Y había mar, montañas y desierto a poca distancia.",
     "sub": "¿Por qué ahí? Por el sol: se podía filmar casi todo el año. Y había mar, montañas y desierto a poca distancia."
   },
   {
     "id": "c4_04",
     "ch": 4,
+    "pause": 0.45,
     "speak": "La leyenda dice que también huían de los abogados de Edison, y que desde ahí podían escapar a México. Los historiadores dicen que es más mito que realidad: hasta las empresas del trust filmaban en California.",
     "sub": "La leyenda dice que también huían de los abogados de Edison, y que desde ahí podían escapar a México. Los historiadores dicen que es más mito que realidad: hasta las empresas del trust filmaban en California."
   },
   {
     "id": "c4_05",
     "ch": 4,
+    "pause": 0.85,
     "speak": "Las películas eran mudas, pero casi nunca silenciosas: en las salas solía haber un pianista o una orquesta tocando en vivo.",
     "sub": "Las películas eran mudas, pero casi nunca silenciosas: en las salas solía haber un pianista o una orquesta tocando en vivo."
   },
   {
     "id": "c4_06",
     "ch": 4,
+    "pause": 1.0,
     "speak": "Hollywood no nació por los abogados. Nació por la luz.",
     "sub": "Hollywood no nació por los abogados. Nació por la luz."
   },
   {
     "id": "c5_00",
     "ch": 5,
+    "pause": 0.45,
     "speak": "Capítulo cinco. Las películas hablan.",
-    "sub": "Capítulo cinco. Las películas hablan."
+    "sub": "CAPÍTULO 5 — LAS PELÍCULAS HABLAN"
   },
   {
     "id": "c5_01",
     "ch": 5,
+    "pause": 0.45,
     "speak": "En octubre de mil novecientos veintisiete se estrenó El cantante de jazz. Era casi toda muda, con carteles. Pero en algunas escenas el protagonista cantaba y hablaba… y el público lo escuchaba.",
     "sub": "En octubre de 1927 se estrenó El cantante de jazz. Era casi toda muda, con carteles. Pero en algunas escenas el protagonista cantaba y hablaba… y el público lo escuchaba."
   },
   {
     "id": "c5_02",
     "ch": 5,
+    "pause": 0.55,
     "speak": "Fue la primera película larga con diálogos sincronizados. En pocos años, el cine mudo se terminó.",
     "sub": "Fue la primera película larga con diálogos sincronizados. En pocos años, el cine mudo se terminó."
   },
   {
     "id": "c5_03",
     "ch": 5,
+    "pause": 0.45,
     "speak": "¿Dónde iba el sonido? Al principio, en un disco aparte, como un vinilo, que giraba al mismo tiempo que el proyector.",
     "sub": "¿Dónde iba el sonido? Al principio, en un disco aparte, como un vinilo, que giraba al mismo tiempo que el proyector."
   },
   {
     "id": "c5_04",
     "ch": 5,
+    "pause": 0.45,
     "speak": "Después lo metieron en la misma película: una franja al costado de las imágenes. Ahí el sonido es una sombra que cambia de forma.",
     "sub": "Después lo metieron en la misma película: una franja al costado de las imágenes. Ahí el sonido es una sombra que cambia de forma."
   },
   {
     "id": "c5_05",
     "ch": 5,
+    "pause": 0.45,
     "speak": "Una luz la atraviesa, una celda la lee… y se convierte otra vez en sonido.",
     "sub": "Una luz la atraviesa, una celda la lee… y se convierte otra vez en sonido."
   },
   {
     "id": "c5_06",
     "ch": 5,
+    "pause": 0.85,
     "speak": "Para que no sonara raro, la película tenía que pasar siempre a la misma velocidad. Se fijaron veinticuatro imágenes por segundo. Todavía las usamos.",
     "sub": "Para que no sonara raro, la película tenía que pasar siempre a la misma velocidad. Se fijaron veinticuatro imágenes por segundo. Todavía las usamos."
   },
   {
     "id": "c5_07",
     "ch": 5,
+    "pause": 1.0,
     "speak": "Las veinticuatro imágenes por segundo se eligieron para que la voz no desafinara.",
     "sub": "Las veinticuatro imágenes por segundo se eligieron para que la voz no desafinara."
   },
   {
     "id": "c6_00",
     "ch": 6,
+    "pause": 0.45,
     "speak": "Capítulo seis. Color y pantalla gigante.",
-    "sub": "Capítulo seis. Color y pantalla gigante."
+    "sub": "CAPÍTULO 6 — COLOR Y PANTALLA GIGANTE"
   },
   {
     "id": "c6_01",
     "ch": 6,
-    "speak": "El color llegó despacio. Melié ya pintaba algunas de sus películas a mano, cuadro por cuadro.",
+    "pause": 0.45,
+    "speak": "El color llegó despacio. Méliès ya pintaba algunas de sus películas a mano, cuadro por cuadro.",
     "sub": "El color llegó despacio. Méliès ya pintaba algunas de sus películas a mano, cuadro por cuadro."
   },
   {
     "id": "c6_02",
     "ch": 6,
+    "pause": 0.45,
     "speak": "El truco de verdad vino con tres colores: rojo, verde y azul. Mezclando esas tres luces se arma casi cualquier color.",
     "sub": "El truco de verdad vino con tres colores: rojo, verde y azul. Mezclando esas tres luces se arma casi cualquier color."
   },
   {
     "id": "c6_03",
     "ch": 6,
-    "speak": "En los años treinta, una cámara filmaba cada color en una película distinta, y después los juntaba. Se llamaba Téknicolor.",
+    "pause": 0.45,
+    "speak": "En los años treinta, una cámara filmaba cada color en una película distinta, y después los juntaba. Se llamaba Technicolor.",
     "sub": "En los años treinta, una cámara filmaba cada color en una película distinta, y después los juntaba. Se llamaba Technicolor."
   },
   {
     "id": "c6_04",
     "ch": 6,
+    "pause": 0.45,
     "speak": "En mil novecientos treinta y nueve, El mago de Oz empezaba en sepia. Cuando se abría una puerta, el mundo estallaba en color.",
     "sub": "En 1939, El mago de Oz empezaba en sepia. Cuando se abría una puerta, el mundo estallaba en color."
   },
   {
     "id": "c6_05",
     "ch": 6,
+    "pause": 0.45,
     "speak": "En los años cincuenta, la televisión le robó público al cine. La respuesta fue hacer lo que una tele no podía.",
     "sub": "En los años cincuenta, la televisión le robó público al cine. La respuesta fue hacer lo que una tele no podía."
   },
   {
     "id": "c6_06",
     "ch": 6,
+    "pause": 0.45,
     "speak": "Pantallas enormes, más anchas, y hasta películas en tres dimensiones con anteojos.",
     "sub": "Pantallas enormes, más anchas, y hasta películas en tres dimensiones con anteojos."
   },
   {
     "id": "c6_07",
     "ch": 6,
+    "pause": 0.85,
     "speak": "Y en los setenta, con Tiburón y La guerra de las galaxias, nacieron los grandes estrenos de verano. Las filas daban vuelta a la manzana.",
     "sub": "Y en los setenta, con Tiburón y La guerra de las galaxias, nacieron los grandes estrenos de verano. Las filas daban vuelta a la manzana."
   },
   {
     "id": "c6_08",
     "ch": 6,
+    "pause": 1.0,
     "speak": "Cada vez que apareció una pantalla rival, el cine se hizo más grande.",
     "sub": "Cada vez que apareció una pantalla rival, el cine se hizo más grande."
   },
   {
     "id": "c7_00",
     "ch": 7,
+    "pause": 0.45,
     "speak": "Capítulo siete. Veinticuatro por segundo.",
-    "sub": "Capítulo siete. Veinticuatro por segundo."
+    "sub": "CAPÍTULO 7 — VEINTICUATRO POR SEGUNDO"
   },
   {
     "id": "c7_01",
     "ch": 7,
-    "speak": "En los noventa entró la computadora. En mil novecientos noventa y tres, los dinosaurios de Yurásic Park parecían reales. Y en mil novecientos noventa y cinco, Tói Stóri fue la primera película larga hecha entera por computadora.",
+    "pause": 0.45,
+    "speak": "En los noventa entró la computadora. En mil novecientos noventa y tres, los dinosaurios de Jurassic Park parecían reales. Y en mil novecientos noventa y cinco, Toy Story fue la primera película larga hecha entera por computadora.",
     "sub": "En los noventa entró la computadora. En 1993, los dinosaurios de Jurassic Park parecían reales. Y en 1995, Toy Story fue la primera película larga hecha entera por computadora."
   },
   {
     "id": "c7_02",
     "ch": 7,
+    "pause": 0.45,
     "speak": "Después desapareció hasta la película: hoy casi todo se filma y se proyecta en digital.",
     "sub": "Después desapareció hasta la película: hoy casi todo se filma y se proyecta en digital."
   },
   {
     "id": "c7_03",
     "ch": 7,
+    "pause": 0.45,
     "speak": "Y las películas más taquilleras de la historia ya recaudan casi tres mil millones de dólares.",
     "sub": "Y las películas más taquilleras de la historia ya recaudan casi tres mil millones de dólares."
   },
   {
     "id": "c7_04",
     "ch": 7,
+    "pause": 0.45,
     "speak": "Pero cada película que ves, en el cine, en la tele o en el teléfono, sigue siendo lo mismo: imágenes quietas, una detrás de otra. Veinticuatro por segundo.",
     "sub": "Pero cada película que ves, en el cine, en la tele o en el teléfono, sigue siendo lo mismo: imágenes quietas, una detrás de otra. Veinticuatro por segundo."
   },
   {
     "id": "c7_05",
     "ch": 7,
+    "pause": 0.85,
     "speak": "Tu cerebro hace el resto, como con aquel caballo. Y el cine sigue buscando lo mismo que en aquel sótano de París: que un grupo de desconocidos, a oscuras, mire la misma luz.",
     "sub": "Tu cerebro hace el resto, como con aquel caballo. Y el cine sigue buscando lo mismo que en aquel sótano de París: que un grupo de desconocidos, a oscuras, mire la misma luz."
   },
   {
     "id": "c7_06",
     "ch": 7,
+    "pause": 1.0,
     "speak": "El cine sigue siendo un caballo que, por un instante, vuela.",
     "sub": "El cine sigue siendo un caballo que, por un instante, vuela."
   },
   {
     "id": "c7_07",
     "ch": 7,
+    "pause": 1.2,
     "speak": "Y ahora te leemos en los comentarios: ¿qué historia te gustaría ver en el próximo episodio?",
     "sub": "Y ahora te leemos en los comentarios: ¿qué historia te gustaría ver en el próximo episodio?"
   }
