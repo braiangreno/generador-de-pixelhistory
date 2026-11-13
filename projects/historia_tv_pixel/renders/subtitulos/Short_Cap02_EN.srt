@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:03,499
+Chapter two. The dummy's head.
+
+2
+00:00:03,849 --> 00:00:12,066
+In a London attic, a Scotsman named John Logie Baird tried to build it. He put together a machine with spinning disks, motors, and lamps.
+
+3
+00:00:12,266 --> 00:00:20,035
+His first actor was the head of a ventriloquist's dummy he called Stooky Bill. It didn't complain about the heat from the lamps.
+
+4
+00:00:20,235 --> 00:00:24,790
+When he finally saw the dummy's face on his screen, he ran downstairs.
+
+5
+00:00:24,990 --> 00:00:32,403
+He brought up an office boy from downstairs, William Taynton. And Taynton became the first person ever televised.
+
+6
+00:00:32,603 --> 00:00:43,275
+In January 1926, Baird demonstrated it to about forty scientists. The image was tiny, orange, and had barely thirty lines.
+
+7
+00:00:44,175 --> 00:00:49,444
+It was television. But a spinning disk was never going to get much further.

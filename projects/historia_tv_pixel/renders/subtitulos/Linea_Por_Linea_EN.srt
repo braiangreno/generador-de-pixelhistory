@@ -1,0 +1,267 @@
+1
+00:00:00,750 --> 00:00:07,850
+The image you are watching right now is drawn line by line, from top to bottom. Faster than your eye can notice.
+
+2
+00:00:08,050 --> 00:00:12,873
+That idea came to a fourteen-year-old boy while plowing a field in Idaho.
+
+3
+00:00:13,073 --> 00:00:21,557
+He looked at the furrows, side by side. And he thought you could send a picture through the air the same way: line by line.
+
+4
+00:00:22,457 --> 00:00:25,716
+Thirty years later, almost nobody knew his name.
+
+5
+00:00:26,266 --> 00:00:31,536
+This is the story of television. And of the boy who saw it in a plowed field.
+
+6
+00:00:32,386 --> 00:00:35,110
+Chapter one. An electric telescope.
+
+7
+00:00:35,460 --> 00:00:43,274
+The idea of sending pictures through a wire is older than it seems. As the story goes, it was born on Christmas Eve, 1883.
+
+8
+00:00:43,474 --> 00:00:52,092
+A student in Berlin, Paul Nipkow, imagined a disk with holes in a spiral. As it spun, each hole scanned a strip of the image.
+
+9
+00:00:52,292 --> 00:00:56,981
+He patented it as an electric telescope. He never built it.
+
+10
+00:00:57,431 --> 00:01:01,137
+A whole photo cannot fit inside a wire at once. But you can slice it into strips.
+
+11
+00:01:01,337 --> 00:01:10,178
+You read each strip from left to right, like a line in a book: light, dark, light. And you send those changes of light as electricity.
+
+12
+00:01:10,378 --> 00:01:16,853
+On the other end, someone paints the strips in the exact same order. If you do it fast enough, the eye sees a complete picture.
+
+13
+00:01:17,753 --> 00:01:21,861
+The idea was there. It would take forty years to see it work.
+
+14
+00:01:22,711 --> 00:01:26,060
+Chapter two. The dummy's head.
+
+15
+00:01:26,410 --> 00:01:34,627
+In a London attic, a Scotsman named John Logie Baird tried to build it. He put together a machine with spinning disks, motors, and lamps.
+
+16
+00:01:34,827 --> 00:01:42,596
+His first actor was the head of a ventriloquist's dummy he called Stooky Bill. It didn't complain about the heat from the lamps.
+
+17
+00:01:42,796 --> 00:01:47,351
+When he finally saw the dummy's face on his screen, he ran downstairs.
+
+18
+00:01:47,551 --> 00:01:54,964
+He brought up an office boy from downstairs, William Taynton. And Taynton became the first person ever televised.
+
+19
+00:01:55,164 --> 00:02:05,836
+In January 1926, Baird demonstrated it to about forty scientists. The image was tiny, orange, and had barely thirty lines.
+
+20
+00:02:06,736 --> 00:02:12,005
+It was television. But a spinning disk was never going to get much further.
+
+21
+00:02:12,855 --> 00:02:15,266
+Chapter three. The furrows.
+
+22
+00:02:15,616 --> 00:02:27,851
+Meanwhile, in the United States, Philo Farnsworth had been born in a log cabin. His home didn't even have electric light. Yet by age six, he had already decided he would be an inventor.
+
+23
+00:02:28,051 --> 00:02:38,724
+At fourteen, while plowing with horses, he looked back. And he imagined a beam of electrons scanning an image just like the plow: row by row.
+
+24
+00:02:39,174 --> 00:02:43,818
+No disks. Nothing spinning. Just electricity.
+
+25
+00:02:44,018 --> 00:02:57,012
+He explained it on the chalkboard to his chemistry teacher, Justin Tolman. His teacher told him that if he truly wanted it, he would achieve it. Then he copied the drawing onto a piece of paper and kept it. Remember that paper.
+
+26
+00:02:57,912 --> 00:03:02,422
+He was fifteen years old. And he had just drawn television on a chalkboard.
+
+27
+00:03:03,272 --> 00:03:06,175
+Chapter four. The dollar sign.
+
+28
+00:03:06,525 --> 00:03:14,205
+At twenty, he found investors, twenty-five thousand dollars, and a laboratory in San Francisco. His wife, Pem, worked right alongside him.
+
+29
+00:03:14,655 --> 00:03:22,201
+His camera turned light into electrons. A magnet moved them in lines: from left to right, from top to bottom.
+
+30
+00:03:22,401 --> 00:03:30,707
+On the screen, another beam of electrons painted those lines onto glowing glass. Nothing spins. Everything is electricity.
+
+31
+00:03:30,907 --> 00:03:38,186
+On September 7, 1927, they placed a glass slide with a single straight line in front of the camera.
+
+32
+00:03:38,386 --> 00:03:47,361
+In the next room, inside a tube, a glowing line appeared. By telegram, the team announced—curse word included—that the machine worked.
+
+33
+00:03:47,561 --> 00:03:55,018
+The investors kept asking when they were going to see some money. So one day, on the screen, there appeared... a dollar sign.
+
+34
+00:03:55,218 --> 00:04:01,693
+Only some time later came the first human face shown by his system: his wife, Pem.
+
+35
+00:04:02,593 --> 00:04:06,389
+Before showing a human face, television was already showing money.
+
+36
+00:04:07,239 --> 00:04:10,230
+Chapter five. Goliath.
+
+37
+00:04:10,580 --> 00:04:17,680
+Across the country, the largest radio corporation in America wanted television for itself. It was called RCA.
+
+38
+00:04:17,880 --> 00:04:31,276
+Its boss, David Sarnoff, sent his top engineer, Vladimir Zworykin, to visit the lab. Farnsworth showed him everything. Zworykin reportedly remarked that he wished he had invented it himself.
+
+39
+00:04:31,476 --> 00:04:36,299
+Later, RCA offered him $100,000 for his patents. He said no.
+
+40
+00:04:36,499 --> 00:04:43,733
+So RCA filed a patent lawsuit against him. They claimed the idea belonged to Zworykin, who had filed an earlier patent.
+
+41
+00:04:44,183 --> 00:04:49,541
+Remember that piece of paper? His old teacher Tolman showed up with the drawing from that chalkboard.
+
+42
+00:04:49,741 --> 00:05:01,843
+In 1934, the patent office ruled in Farnsworth's favor. And in 1939, RCA finally agreed to pay him a one-million-dollar license.
+
+43
+00:05:02,743 --> 00:05:07,119
+A farm boy beat a corporate giant. With a chalkboard drawing.
+
+44
+00:05:07,969 --> 00:05:10,693
+Chapter six. A window in the living room.
+
+45
+00:05:11,043 --> 00:05:18,812
+Yet RCA took the spotlight: at the New York World's Fair, Sarnoff unveiled television to the public as if it were his own.
+
+46
+00:05:19,012 --> 00:05:29,729
+The war put everything on hold. But afterwards, television exploded. In the United States, in 1950, barely one in ten homes had one.
+
+47
+00:05:29,929 --> 00:05:37,252
+Ten years later, nearly nine out of ten. Across Latin America, the first broadcasts also arrived during the 1950s.
+
+48
+00:05:37,702 --> 00:05:44,400
+And how do we see motion? If you show the eye many still pictures per second, the brain blends them together.
+
+49
+00:05:44,600 --> 00:05:51,254
+A tube television drew more than five hundred lines per picture. And between twenty-five and thirty pictures every second.
+
+50
+00:05:51,454 --> 00:05:57,616
+That is why, if you film an old TV with your phone, you see dark bands: the camera catches it halfway through drawing.
+
+51
+00:05:57,816 --> 00:06:09,113
+Then came color: three tiny dots—red, green, and blue—that mix to form every other color. Your screen still uses those three today.
+
+52
+00:06:10,013 --> 00:06:14,881
+Families no longer gathered around the radio. They gathered in front of a window.
+
+53
+00:06:15,731 --> 00:06:18,097
+Chapter seven. Doctor X.
+
+54
+00:06:18,447 --> 00:06:25,324
+And what about Farnsworth? He never got rich from television. His early patents expired just as the industry took off.
+
+55
+00:06:25,524 --> 00:06:30,838
+According to his son, he disliked what was being broadcast. He didn't want his children watching it.
+
+56
+00:06:31,038 --> 00:06:40,638
+In 1957, he was invited onto a television quiz show where celebrities had to guess a guest's secret. He was introduced as Doctor X.
+
+57
+00:06:40,838 --> 00:06:46,108
+Viewers at home read his secret on the screen: he had invented electronic television.
+
+58
+00:06:46,308 --> 00:06:58,319
+The panelists asked everything. They couldn't guess. The host told him that without him, he would be out of a job. Farnsworth walked away with eighty dollars and a carton of cigarettes.
+
+59
+00:06:59,219 --> 00:07:05,203
+The inventor of television appeared on television. And nobody recognized him.
+
+60
+00:07:06,053 --> 00:07:08,822
+Chapter eight. It was worth it.
+
+61
+00:07:09,172 --> 00:07:17,566
+On July 20, 1969, some six hundred million people watched two astronauts on the Moon on television.
+
+62
+00:07:17,766 --> 00:07:25,000
+Farnsworth was watching too, in his living room. According to his wife, right then he told her that it had all been worth it.
+
+63
+00:07:25,200 --> 00:07:32,390
+He died two years later. Today, in the United States, nearly half of all time spent in front of a TV is already streaming.
+
+64
+00:07:32,590 --> 00:07:37,635
+And the most watched platform on those screens is YouTube. Yes: this one.
+
+65
+00:07:38,135 --> 00:07:43,896
+Everything changed. Yet the idea remains the same: the image is drawn line by line.
+
+66
+00:07:44,846 --> 00:07:48,373
+It all started with a boy who looked back while plowing a field.
+
+67
+00:07:49,323 --> 00:07:54,771
+And now we are reading you in the comments: what story would you like to see in the next episode?

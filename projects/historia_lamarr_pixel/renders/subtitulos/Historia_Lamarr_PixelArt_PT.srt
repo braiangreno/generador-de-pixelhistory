@@ -1,0 +1,287 @@
+1
+00:00:00,750 --> 00:00:08,788
+Se você usa fones de ouvido sem fio, o sinal deles está saltando de um canal para outro sem parar. Às vezes, mais de mil vezes por segundo.
+
+2
+00:00:09,008 --> 00:00:15,036
+Essa ideia foi patenteada, em plena guerra, por uma das atrizes mais famosas de Hollywood. Junto com um pianista.
+
+3
+00:00:15,486 --> 00:00:18,478
+E a Marinha dos Estados Unidos a guardou em uma gaveta.
+
+4
+00:00:18,928 --> 00:00:21,830
+A ela, sugeriram que seria melhor ajudar com o próprio rosto.
+
+5
+00:00:22,680 --> 00:00:30,003
+Esta é a história de Hedy Lamarr. A mulher mais linda do mundo, segundo seu estúdio de cinema. E uma inventora.
+
+6
+00:00:30,853 --> 00:00:33,845
+Capítulo um. A caixa de música.
+
+7
+00:00:34,195 --> 00:00:41,251
+Ela nasceu em Viena em 1914, como Hedwig Kiesler. Filha única de um diretor de banco e de uma pianista.
+
+8
+00:00:41,471 --> 00:00:49,106
+Seu pai a levava para caminhar e explicava como as coisas funcionavam: os bondes, a imprensa, a eletricidade.
+
+9
+00:00:49,326 --> 00:00:55,801
+Sua mãe lhe ensinou piano. Aquelas oitenta e oito teclas iriam servir muito mais do que qualquer um imaginava.
+
+10
+00:00:56,021 --> 00:01:01,826
+Aos cinco anos, desmontou sua caixa de música para entender como ela tocava. E a montou de volta.
+
+11
+00:01:02,046 --> 00:01:09,950
+Na adolescência escolheu atuar. E aos dezoito estrelou um filme tão escandaloso que foi proibido em vários países.
+
+12
+00:01:10,850 --> 00:01:15,360
+Toda a Europa falava do seu rosto. Ninguém, da sua cabeça.
+
+13
+00:01:16,210 --> 00:01:19,068
+Capítulo dois. A gaiola de ouro.
+
+14
+00:01:19,418 --> 00:01:26,964
+Entre os que a viram atuar estava Fritz Mandl, um dos maiores fabricantes de armas da Áustria. Eles se casaram naquele mesmo ano.
+
+15
+00:01:27,184 --> 00:01:32,543
+Mandl era ciumento e controlador. Ela vivia cercada de luxo... e vigiada.
+
+16
+00:01:32,763 --> 00:01:41,113
+Dizem que ele tentou comprar todas as cópias daquele filme escandaloso para que mais ninguém o visse. Não conseguiu: continuavam fazendo cópias novas.
+
+17
+00:01:41,333 --> 00:01:48,031
+Naquela casa havia jantares com militares e compradores de armas. Entre seus clientes estava o governo de Mussolini.
+
+18
+00:01:48,251 --> 00:01:55,485
+Ela fazia parte da decoração. Mas escutava. Falavam de armas guiadas por rádio e de como bloqueá-las.
+
+19
+00:01:55,705 --> 00:02:01,019
+Em 1937 ela fugiu. Segundo contou, disfarçada de empregada.
+
+20
+00:02:01,919 --> 00:02:06,429
+Saiu apenas com a roupa do corpo. E com tudo o que tinha ouvido naqueles jantares.
+
+21
+00:02:07,279 --> 00:02:10,583
+Capítulo três. A mulher mais linda do mundo.
+
+22
+00:02:10,933 --> 00:02:19,149
+Em Londres conseguiu uma reunião com Louis B. Mayer, o chefe do estúdio MGM. Ele ofereceu um contrato pequeno. Ela disse não.
+
+23
+00:02:19,369 --> 00:02:23,522
+Então comprou passagem no mesmo navio em que Mayer voltava para Nova York.
+
+24
+00:02:23,742 --> 00:02:30,083
+Quando desembarcaram, ela tinha um contrato quatro vezes melhor e um nome novo: Hedy Lamarr.
+
+25
+00:02:30,303 --> 00:02:38,966
+Seu primeiro filme nos Estados Unidos foi um sucesso imediato. O estúdio a vendia como a mulher mais linda do mundo, e ela fazia vários filmes por ano.
+
+26
+00:02:39,186 --> 00:02:47,759
+Mas no set ela se entediava. Entre uma cena e outra, inventava: uma pastilha que transformava água em refrigerante, um semáforo melhorado.
+
+27
+00:02:47,979 --> 00:02:56,240
+O milionário Howard Hughes lhe deu equipamentos para o camarim. Ela desenhou para ele uma asa mais rápida, misturando o peixe e o pássaro mais velozes.
+
+28
+00:02:56,460 --> 00:02:59,586
+Segundo ela contou, Hughes disse que ela era um gênio.
+
+29
+00:03:00,486 --> 00:03:05,800
+Hollywood lhe pagava para ficar parada. Ela não sabia ficar parada.
+
+30
+00:03:06,650 --> 00:03:09,910
+Capítulo quatro. O problema do torpedo.
+
+31
+00:03:10,260 --> 00:03:17,226
+Em 1940, um submarino alemão afundou um navio que levava crianças britânicas para o Canadá. A maioria morreu.
+
+32
+00:03:17,446 --> 00:03:21,554
+Hedy queria ajudar. E se lembrou daqueles jantares em Viena.
+
+33
+00:03:22,004 --> 00:03:28,300
+Um torpedo guiado por rádio é como um carro de controle remoto debaixo d'água. O navio lhe envia ordens.
+
+34
+00:03:28,520 --> 00:03:37,093
+Essas ordens viajam em uma onda de rádio. Sua frequência é quantas vezes ela vibra por segundo, e cada emissora vibra no seu próprio ritmo.
+
+35
+00:03:37,313 --> 00:03:42,493
+Por isso dizemos que cada frequência é um canal. E o torpedo escuta um só.
+
+36
+00:03:42,713 --> 00:03:51,421
+O problema: o inimigo pode encontrar esse canal e enchê-lo de ruído. Como alguém gritando por cima da sua voz. O torpedo fica surdo.
+
+37
+00:03:52,321 --> 00:03:55,759
+Era preciso uma mensagem que ninguém pudesse encontrar.
+
+38
+00:03:56,609 --> 00:04:00,181
+Capítulo cinco. Um piano dentro de um torpedo.
+
+39
+00:04:00,531 --> 00:04:06,604
+Em um jantar ela conheceu George Antheil, um compositor que se autodenominava o garoto mau da música.
+
+40
+00:04:06,824 --> 00:04:13,746
+Anos antes, ele havia escrito uma obra para dezesseis pianolas que deviam tocar juntas, com sirenes e hélices de avião.
+
+41
+00:04:13,966 --> 00:04:21,423
+Antheil também queria ajudar. Seu irmão havia morrido nos primeiros meses da guerra, quando derrubaram o avião em que viajava.
+
+42
+00:04:21,643 --> 00:04:27,850
+Ela tinha a ideia: que o sinal não ficasse parado. Que saltasse de canal o tempo todo.
+
+43
+00:04:28,300 --> 00:04:33,747
+Imagine dois amigos mudando de estação ao mesmo tempo, seguindo uma lista secreta.
+
+44
+00:04:33,967 --> 00:04:41,916
+O espião que escuta uma estação ouve só um pedacinho de ruído, e nada mais. Para bloqueá-los, teria que tapar todas de uma vez.
+
+45
+00:04:42,136 --> 00:04:50,665
+Mas como sincronizar o navio e o torpedo? Antheil propôs rolos perfurados, como os das pianolas: um de cada lado.
+
+46
+00:04:51,165 --> 00:04:55,050
+Oitenta e oito frequências. Uma para cada tecla do piano.
+
+47
+00:04:55,270 --> 00:05:09,469
+Trabalharam meses na mesa de jantar, com a ajuda de um professor de engenharia elétrica. Em 1942 receberam a patente. Ela assinou com seu sobrenome de casada da época: Hedy Kiesler Markey.
+
+48
+00:05:10,369 --> 00:05:14,879
+Por isso, durante décadas, quase ninguém soube que a ideia era dela.
+
+49
+00:05:15,729 --> 00:05:18,007
+Capítulo seis. Bônus e beijos.
+
+50
+00:05:18,357 --> 00:05:25,814
+Eles doaram a patente para a Marinha para ajudar na guerra. A Marinha a descartou: disse que o mecanismo não cabia em um torpedo.
+
+51
+00:05:26,034 --> 00:05:30,276
+Antheil suspeitava que o erro foi mencionar um piano diante dos oficiais.
+
+52
+00:05:30,496 --> 00:05:35,363
+A Hedy, sugeriram que ajudasse de outra forma: vendendo bônus de guerra com a sua fama.
+
+53
+00:05:35,583 --> 00:05:42,773
+Ela fez isso. Beijava quem comprasse vinte e cinco mil dólares em bônus. Em uma única noite arrecadou sete milhões.
+
+54
+00:05:42,993 --> 00:05:47,056
+Em uma turnê por várias cidades, atribuem a ela cerca de vinte e cinco milhões.
+
+55
+00:05:47,276 --> 00:05:53,081
+Um detalhe: o marinheiro escolhido ao acaso para o beijo era sempre o mesmo. Fazia parte do show.
+
+56
+00:05:53,981 --> 00:05:58,134
+Seu rosto arrecadou milhões. Sua ideia ficou em uma gaveta.
+
+57
+00:05:58,984 --> 00:06:01,440
+Capítulo sete. A gaveta.
+
+58
+00:06:01,790 --> 00:06:07,684
+A patente venceu em 1959. Naquele mesmo ano, Antheil morreu.
+
+59
+00:06:07,904 --> 00:06:14,066
+A essa altura, engenheiros já haviam resgatado a ideia e a tornado eletrônica, sem rolos de papel.
+
+60
+00:06:14,286 --> 00:06:22,681
+Em 1962 chegou a crise dos mísseis em Cuba. Os navios dos Estados Unidos já usavam uma versão desse sistema.
+
+61
+00:06:22,901 --> 00:06:31,921
+Hedy não recebeu nada: a patente havia vencido e quase ninguém sabia que era dela. Sua carreira se apagou e ela viveu seus últimos anos muito isolada.
+
+62
+00:06:32,141 --> 00:06:41,027
+Enquanto isso, sua ideia continuou crescendo. Nos anos oitenta e noventa, saltar de frequência se tornou uma peça-chave das comunicações sem fio.
+
+63
+00:06:41,927 --> 00:06:46,080
+O mundo se encheu da sua ideia. E se esqueceu do seu nome.
+
+64
+00:06:46,930 --> 00:06:50,190
+Capítulo oito. Mil e seiscentos saltos.
+
+65
+00:06:50,540 --> 00:07:01,525
+Em 1997, aos oitenta e dois anos, ela recebeu um prêmio para pioneiros da era digital, junto com Antheil. Já não aparecia em público, então não foi recebê-lo.
+
+66
+00:07:01,745 --> 00:07:12,908
+Morreu no ano 2000. Em 2014 entrou para o Hall da Fama dos Inventores dos Estados Unidos. E no ano seguinte, o Google lhe dedicou sua página inicial no dia do seu aniversário.
+
+67
+00:07:13,358 --> 00:07:21,798
+Hoje, o Bluetooth clássico divide seu sinal em setenta e nove canais. E salta entre eles até mil e seiscentas vezes por segundo.
+
+68
+00:07:22,018 --> 00:07:30,993
+É por isso que seus fones quase não falham mesmo perto do Wi-Fi ou de um micro-ondas: se um canal está ocupado, eles pulam para outro.
+
+69
+00:07:31,213 --> 00:07:42,957
+O rolo de papel agora é um chip. Sua ideia faz parte de uma família de técnicas usadas pelo Bluetooth e por muitos rádios. O truque é o mesmo: saltar juntos, em segredo.
+
+70
+00:07:43,607 --> 00:07:48,430
+Então, da próxima vez que conectar seus fones de ouvido, pense em um piano dentro de um torpedo.
+
+71
+00:07:49,330 --> 00:07:52,232
+E em uma mulher a quem pediam que ficasse parada.
+
+72
+00:07:53,182 --> 00:07:58,943
+E agora lemos vocês nos comentários: que história você gostaria de ver no próximo episódio?

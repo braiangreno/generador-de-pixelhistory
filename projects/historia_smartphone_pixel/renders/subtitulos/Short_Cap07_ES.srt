@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:02,829
+CAPÍTULO 7 — EINSTEIN EN EL BOLSILLO
+
+2
+00:00:03,179 --> 00:00:08,046
+De todo lo que hace tu teléfono, hay algo que parece magia: sabe dónde estás.
+
+3
+00:00:08,246 --> 00:00:14,632
+Lo sabe escuchando a satélites que giran a unos veinte mil kilómetros de altura. Cada uno lleva un reloj atómico.
+
+4
+00:00:15,082 --> 00:00:21,155
+A la pizarra. Cada satélite repite la hora todo el tiempo. Tu teléfono escucha y compara.
+
+5
+00:00:21,355 --> 00:00:29,393
+Si una señal llega más tarde, ese satélite está más lejos. Con cuatro satélites, el teléfono calcula el punto exacto donde estás.
+
+6
+00:00:29,593 --> 00:00:37,987
+Pero allá arriba el tiempo pasa un poquito más rápido. Los relojes de los satélites se adelantan unos 38 millonésimos de segundo por día.
+
+7
+00:00:38,187 --> 00:00:46,627
+Parece nada. Pero sin corregirlo, tu ubicación se correría unos diez kilómetros por día. Es justo lo que predice la relatividad de Einstein.
+
+8
+00:00:47,527 --> 00:00:51,099
+Cada vez que abres un mapa, Einstein tiene razón.

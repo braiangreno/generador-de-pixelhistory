@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:02,606
+CHAPTER 4 — SIMON
+
+2
+00:00:02,956 --> 00:00:13,583
+Actually, someone had already tried. In 1994, IBM released a phone with a touchscreen. It was called Simon.
+
+3
+00:00:13,783 --> 00:00:23,964
+It had a calendar, notes, email, and even fax. You used it with a stylus. The word smartphone didn't even exist yet, but today it is considered the first.
+
+4
+00:00:24,164 --> 00:00:32,738
+But it weighed half a kilo, the battery lasted an hour, and it cost nearly $900. And internet on a phone was out of the question.
+
+5
+00:00:32,938 --> 00:00:36,957
+It sold about 50,000 units, and after six months it vanished from stores.
+
+6
+00:00:37,157 --> 00:00:44,078
+It was missing pieces that didn't exist yet. Lasting batteries, pocket internet, and a screen made for a finger.
+
+7
+00:00:44,978 --> 00:00:49,577
+Simon didn't fail because it was bad. It failed because it arrived too early.

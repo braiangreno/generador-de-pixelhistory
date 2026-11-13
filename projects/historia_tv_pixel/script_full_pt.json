@@ -1,0 +1,404 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "speak": "A imagem que você está vendo agora é desenhada linha por linha, de cima para baixo. Mais rápido do que o seu olho consegue notar.",
+    "sub": "A imagem que você está vendo agora é desenhada linha por linha, de cima para baixo. Mais rápido do que o seu olho consegue notar."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "speak": "Essa ideia surgiu na cabeça de um garoto de quatorze anos enquanto arava um campo em Idaho.",
+    "sub": "Essa ideia surgiu na cabeça de um garoto de quatorze anos enquanto arava um campo em Idaho."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "speak": "Ele olhou para os sulcos, um ao lado do outro. E pensou que assim seria possível enviar uma imagem pelo ar: linha por linha.",
+    "sub": "Ele olhou para os sulcos, um ao lado do outro. E pensou que assim seria possível enviar uma imagem pelo ar: linha por linha."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "speak": "Trinta anos depois, quase ninguém sabia o nome dele.",
+    "sub": "Trinta anos depois, quase ninguém sabia o nome dele."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "speak": "Esta é a história da televisão. E do garoto que a viu em um campo arado.",
+    "sub": "Esta é a história da televisão. E do garoto que a viu em um campo arado."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "speak": "Capítulo um. Um telescópio elétrico.",
+    "sub": "Capítulo um. Um telescópio elétrico."
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "speak": "A ideia de mandar imagens por um cabo é mais antiga do que parece. Segundo se conta, nasceu na véspera de Natal de mil oitocentos e oitenta e três.",
+    "sub": "A ideia de mandar imagens por um cabo é mais antiga do que parece. Segundo se conta, nasceu na véspera de Natal de 1883."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "speak": "Um estudante de Berlim, Paul Nipkow, imaginou um disco com furos em espiral. Ao girar, cada furo varria uma faixa da imagem.",
+    "sub": "Um estudante de Berlim, Paul Nipkow, imaginou um disco com furos em espiral. Ao girar, cada furo varria uma faixa da imagem."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "speak": "Ele o patenteou como telescópio elétrico. Nunca chegou a construí-lo.",
+    "sub": "Ele o patenteou como telescópio elétrico. Nunca chegou a construí-lo."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "speak": "Uma foto não cabe inteira dentro de um cabo. Mas pode ser cortada em tiras.",
+    "sub": "Uma foto não cabe inteira dentro de um cabo. Mas pode ser cortada em tiras."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "speak": "Você lê cada tira da esquerda para a direita, como a linha de um livro: claro, escuro, claro. E envia essas mudanças de luz como eletricidade.",
+    "sub": "Você lê cada tira da esquerda para a direita, como a linha de um livro: claro, escuro, claro. E envia essas mudanças de luz como eletricidade."
+  },
+  {
+    "id": "c1_06",
+    "ch": 1,
+    "speak": "Do outro lado, alguém pinta as tiras na mesma ordem. Se você fizer isso muito rápido, o olho vê uma imagem completa.",
+    "sub": "Do outro lado, alguém pinta as tiras na mesma ordem. Se você fizer isso muito rápido, o olho vê uma imagem completa."
+  },
+  {
+    "id": "c1_07",
+    "ch": 1,
+    "speak": "A ideia já existia. Faltavam quarenta anos para vê-la funcionar.",
+    "sub": "A ideia já existia. Faltavam quarenta anos para vê-la funcionar."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "speak": "Capítulo dois. A cabeça do boneco.",
+    "sub": "Capítulo dois. A cabeça do boneco."
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "speak": "Em um sótão de Londres, um escocês chamado John Logie Baird tentou fazer funcionar. Montou um aparelho com discos giratórios, motores e lâmpadas.",
+    "sub": "Em um sótão de Londres, um escocês chamado John Logie Baird tentou fazer funcionar. Montou um aparelho com discos giratórios, motores e lâmpadas."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "speak": "Seu primeiro ator foi a cabeça de um boneco de ventríloquo, que ele chamava de Stooky Bill. Ele não reclamava do calor das lâmpadas.",
+    "sub": "Seu primeiro ator foi a cabeça de um boneco de ventríloquo, que ele chamava de Stooky Bill. Ele não reclamava do calor das lâmpadas."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "speak": "Quando finalmente viu o rosto do boneco na tela, desceu as escadas correndo.",
+    "sub": "Quando finalmente viu o rosto do boneco na tela, desceu as escadas correndo."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "speak": "Trouxe um funcionário do escritório de baixo, William Taynton. E Taynton se tornou a primeira pessoa televisionada da história.",
+    "sub": "Trouxe um funcionário do escritório de baixo, William Taynton. E Taynton se tornou a primeira pessoa televisionada da história."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "speak": "Em janeiro de mil novecentos e vinte e seis, Baird mostrou o invento para cerca de quarenta cientistas. A imagem era pequenininha, alaranjada e tinha apenas umas trinta linhas.",
+    "sub": "Em janeiro de 1926, Baird mostrou o invento para cerca de quarenta cientistas. A imagem era pequenininha, alaranjada e tinha apenas umas trinta linhas."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "speak": "Era televisão. Mas um disco girando nunca iria muito mais longe.",
+    "sub": "Era televisão. Mas um disco girando nunca iria muito mais longe."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "speak": "Capítulo três. Os sulcos.",
+    "sub": "Capítulo três. Os sulcos."
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "speak": "Enquanto isso, nos Estados Unidos, Philo Farnsworth havia nascido em uma cabana de troncos. Na casa dele não havia nem luz elétrica. Mas aos seis anos já tinha decidido que seria inventor.",
+    "sub": "Enquanto isso, nos Estados Unidos, Philo Farnsworth havia nascido em uma cabana de troncos. Na casa dele não havia nem luz elétrica. Mas aos seis anos já tinha decidido que seria inventor."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "speak": "Aos quatorze anos, arando com cavalos, olhou para trás. E pensou em um feixe de elétrons que varresse uma imagem igual ao arado: linha por linha.",
+    "sub": "Aos quatorze anos, arando com cavalos, olhou para trás. E pensou em um feixe de elétrons que varresse uma imagem igual ao arado: linha por linha."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "speak": "Sem discos. Sem nada girando. Apenas eletricidade.",
+    "sub": "Sem discos. Sem nada girando. Apenas eletricidade."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "speak": "Ele explicou tudo no quadro-negro para seu professor de química, Justin Tolman. O professor disse que, se ele realmente quisesse aquilo, iria conseguir. Depois copiou o desenho em um papel e o guardou. Lembre-se desse papel.",
+    "sub": "Ele explicou tudo no quadro-negro para seu professor de química, Justin Tolman. O professor disse que, se ele realmente quisesse aquilo, iria conseguir. Depois copiou o desenho em um papel e o guardou. Lembre-se desse papel."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "speak": "Ele tinha quinze anos. E acabava de desenhar a televisão em um quadro-negro.",
+    "sub": "Ele tinha quinze anos. E acabava de desenhar a televisão em um quadro-negro."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "speak": "Capítulo quatro. O cifrão.",
+    "sub": "Capítulo quatro. O cifrão."
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "speak": "Aos vinte anos conseguiu investidores, vinte e cinco mil dólares e um laboratório em São Francisco. Sua esposa, Pem, trabalhava com ele.",
+    "sub": "Aos vinte anos conseguiu investidores, vinte e cinco mil dólares e um laboratório em São Francisco. Sua esposa, Pem, trabalhava com ele."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "speak": "Sua câmera convertia a luz em elétrons. Um ímã os movia em linhas: da esquerda para a direita, de cima para baixo.",
+    "sub": "Sua câmera convertia a luz em elétrons. Um ímã os movia em linhas: da esquerda para a direita, de cima para baixo."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "speak": "Na tela, outro feixe de elétrons pintava essas linhas sobre um vidro brilhante. Nada gira. Tudo é eletricidade.",
+    "sub": "Na tela, outro feixe de elétrons pintava essas linhas sobre um vidro brilhante. Nada gira. Tudo é eletricidade."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "speak": "Em sete de setembro de mil novecentos e vinte e sete, colocaram na frente da câmera um vidro com um único traço.",
+    "sub": "Em 7 de setembro de 1927, colocaram na frente da câmera um vidro com um único traço."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "speak": "Na outra sala, dentro de um tubo, apareceu um traço que brilhava. Por telegrama, a equipe avisou, com palavrão incluído, que o aparelho funcionava.",
+    "sub": "Na outra sala, dentro de um tubo, apareceu um traço que brilhava. Por telegrama, a equipe avisou, com palavrão incluído, que o aparelho funcionava."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "speak": "Os investidores perguntavam quando iam ver algum dinheiro. Então, um dia, na tela, apareceu… um cifrão.",
+    "sub": "Os investidores perguntavam quando iam ver algum dinheiro. Então, um dia, na tela, apareceu… um cifrão."
+  },
+  {
+    "id": "c4_07",
+    "ch": 4,
+    "speak": "Só algum tempo depois veio o primeiro rosto humano mostrado pelo sistema: o de Pem, sua esposa.",
+    "sub": "Só algum tempo depois veio o primeiro rosto humano mostrado pelo sistema: o de Pem, sua esposa."
+  },
+  {
+    "id": "c4_08",
+    "ch": 4,
+    "speak": "Antes de mostrar um rosto, a televisão já mostrava dinheiro.",
+    "sub": "Antes de mostrar um rosto, a televisão já mostrava dinheiro."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "speak": "Capítulo cinco. Golias.",
+    "sub": "Capítulo cinco. Golias."
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "speak": "Do outro lado do país, a maior empresa de rádio dos Estados Unidos queria a televisão para ela. Chamava-se R C A.",
+    "sub": "Do outro lado do país, a maior empresa de rádio dos Estados Unidos queria a televisão para ela. Chamava-se RCA."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "speak": "Seu chefe, David Sarnoff, mandou seu melhor engenheiro, Vladimir Zworykin, visitar o laboratório. Farnsworth mostrou tudo. Dizem que Zworykin comentou que gostaria de ter inventado aquilo ele mesmo.",
+    "sub": "Seu chefe, David Sarnoff, mandou seu melhor engenheiro, Vladimir Zworykin, visitar o laboratório. Farnsworth mostrou tudo. Dizem que Zworykin comentou que gostaria de ter inventado aquilo ele mesmo."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "speak": "Depois, a R C A ofereceu cem mil dólares por suas patentes. Ele disse que não.",
+    "sub": "Depois, a RCA ofereceu cem mil dólares por suas patentes. Ele disse que não."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "speak": "Então a R C A abriu um processo de patentes contra ele. Disse que a ideia era de Zworykin, que a havia patenteado antes.",
+    "sub": "Então a RCA abriu um processo de patentes contra ele. Disse que a ideia era de Zworykin, que a havia patenteado antes."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "speak": "Lembra daquele papel? O velho professor Tolman apareceu com o desenho daquele quadro-negro.",
+    "sub": "Lembra daquele papel? O velho professor Tolman apareceu com o desenho daquele quadro-negro."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "speak": "Em mil novecentos e trinta e quatro, o escritório de patentes deu razão a Farnsworth. E em mil novecentos e trinta e nove, a R C A acabou aceitando pagar uma licença de um milhão de dólares.",
+    "sub": "Em 1934, o escritório de patentes deu razão a Farnsworth. E em 1939, a RCA acabou aceitando pagar uma licença de um milhão de dólares."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "speak": "Um garoto do campo venceu um gigante. Com um desenho de quadro-negro.",
+    "sub": "Um garoto do campo venceu um gigante. Com um desenho de quadro-negro."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "speak": "Capítulo seis. Uma janela na sala.",
+    "sub": "Capítulo seis. Uma janela na sala."
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "speak": "Mas o grande momento ficou com a R C A: na Feira Mundial de Nova York, Sarnoff apresentou a televisão ao público como se fosse dele.",
+    "sub": "Mas o grande momento ficou com a RCA: na Feira Mundial de Nova York, Sarnoff apresentou a televisão ao público como se fosse dele."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "speak": "A guerra freou tudo. Mas depois, a tevê explodiu. Nos Estados Unidos, em mil novecentos e cinquenta, apenas uma em cada dez casas tinha uma.",
+    "sub": "A guerra freou tudo. Mas depois, a TV explodiu. Nos Estados Unidos, em 1950, apenas uma em cada dez casas tinha uma."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "speak": "Dez anos depois, quase nove em cada dez. Na América Latina, as primeiras transmissões também chegaram nesses anos cinquenta.",
+    "sub": "Dez anos depois, quase nove em cada dez. Na América Latina, as primeiras transmissões também chegaram nesses anos cinquenta."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "speak": "E como vemos movimento? Se você mostra ao olho muitas imagens paradas por segundo, o cérebro junta todas elas.",
+    "sub": "E como vemos movimento? Se você mostra ao olho muitas imagens paradas por segundo, o cérebro junta todas elas."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "speak": "A tevê de tubo desenhava mais de quinhentas linhas por imagem. E entre vinte e cinco e trinta imagens por segundo.",
+    "sub": "A TV de tubo desenhava mais de quinhentas linhas por imagem. E entre vinte e cinco e trinta imagens por segundo."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "speak": "Por isso, se você filma uma tevê antiga com o celular, vê faixas escuras: a câmera pega a tela no meio do desenho.",
+    "sub": "Por isso, se você filma uma TV antiga com o celular, vê faixas escuras: a câmera pega a tela no meio do desenho."
+  },
+  {
+    "id": "c6_07",
+    "ch": 6,
+    "speak": "Depois veio a cor: três pontinhos, vermelho, verde e azul, que misturados formam todas as outras. Sua tela ainda usa esses três.",
+    "sub": "Depois veio a cor: três pontinhos, vermelho, verde e azul, que misturados formam todas as outras. Sua tela ainda usa esses três."
+  },
+  {
+    "id": "c6_08",
+    "ch": 6,
+    "speak": "A família já não se reunia ao redor do rádio. Reunia-se em frente a uma janela.",
+    "sub": "A família já não se reunia ao redor do rádio. Reunia-se em frente a uma janela."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "speak": "Capítulo sete. Doutor X.",
+    "sub": "Capítulo sete. Doutor X."
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "speak": "E Farnsworth? Nunca ficou rico com a tevê. Suas primeiras patentes venceram bem quando a indústria decolava.",
+    "sub": "E Farnsworth? Nunca ficou rico com a TV. Suas primeiras patentes venceram bem quando a indústria decolava."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "speak": "Segundo contou seu filho, ele não gostava do que era transmitido. Não queria que seus filhos assistissem.",
+    "sub": "Segundo contou seu filho, ele não gostava do que era transmitido. Não queria que seus filhos assistissem."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "speak": "Em mil novecentos e cinquenta e sete, foi convidado para um programa de auditório em que famosos tinham que adivinhar o segredo do convidado. Foi apresentado como Doutor X.",
+    "sub": "Em 1957, foi convidado para um programa de auditório em que famosos tinham que adivinhar o segredo do convidado. Foi apresentado como Doutor X."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "speak": "O público em casa leu o segredo na tela: ele havia inventado a televisão eletrônica.",
+    "sub": "O público em casa leu o segredo na tela: ele havia inventado a televisão eletrônica."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "speak": "Os famosos perguntaram de tudo. Não adivinharam. O apresentador disse que, sem ele, estaria sem emprego. Farnsworth saiu com oitenta dólares e um pacote de cigarros.",
+    "sub": "Os famosos perguntaram de tudo. Não adivinharam. O apresentador disse que, sem ele, estaria sem emprego. Farnsworth saiu com oitenta dólares e um pacote de cigarros."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "speak": "O inventor da televisão apareceu na televisão. E ninguém o reconheceu.",
+    "sub": "O inventor da televisão apareceu na televisão. E ninguém o reconheceu."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "speak": "Capítulo oito. Valeu a pena.",
+    "sub": "Capítulo oito. Valeu a pena."
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "speak": "Em vinte de julho de mil novecentos e sessenta e nove, cerca de seiscentos milhões de pessoas viram pela televisão dois astronautas na Lua.",
+    "sub": "Em 20 de julho de 1969, cerca de seiscentos milhões de pessoas viram pela televisão dois astronautas na Lua."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "speak": "Farnsworth também assistia, na sala dele. Segundo contou sua esposa, naquele momento ele lhe disse que tudo tinha valido a pena.",
+    "sub": "Farnsworth também assistia, na sala dele. Segundo contou sua esposa, naquele momento ele lhe disse que tudo tinha valido a pena."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "speak": "Morreu dois anos depois. Hoje, nos Estados Unidos, quase metade do tempo em frente à televisão já é streaming.",
+    "sub": "Morreu dois anos depois. Hoje, nos Estados Unidos, quase metade do tempo em frente à televisão já é streaming."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "speak": "E a plataforma mais vista nessas telas é o YouTube. Sim: esta aqui.",
+    "sub": "E a plataforma mais vista nessas telas é o YouTube. Sim: esta aqui."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "speak": "Mudou tudo. Mas a ideia continua sendo a mesma: a imagem é desenhada linha por linha.",
+    "sub": "Mudou tudo. Mas a ideia continua sendo a mesma: a imagem é desenhada linha por linha."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "speak": "Tudo começou com um garoto que olhou para trás enquanto arava.",
+    "sub": "Tudo começou com um garoto que olhou para trás enquanto arava."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "speak": "E agora lemos vocês nos comentários: que história você gostaria de ver no próximo episódio?",
+    "sub": "E agora lemos vocês nos comentários: que história você gostaria de ver no próximo episódio?"
+  }
+]

@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:02,829
+CHAPTER 7 — EINSTEIN IN YOUR POCKET
+
+2
+00:00:03,179 --> 00:00:08,046
+Of everything your phone does, one thing feels like magic: it knows where you are.
+
+3
+00:00:08,246 --> 00:00:14,632
+It knows by listening to satellites orbiting about 20,000 kilometers up. Each one carries an atomic clock.
+
+4
+00:00:15,082 --> 00:00:21,155
+To the chalkboard. Every satellite broadcasts the time nonstop. Your phone listens and compares.
+
+5
+00:00:21,355 --> 00:00:29,393
+If a signal arrives later, that satellite is farther away. With four satellites, the phone calculates the exact spot where you stand.
+
+6
+00:00:29,593 --> 00:00:37,987
+But way up there, time runs slightly faster. Satellite clocks get ahead by about 38 microseconds a day.
+
+7
+00:00:38,187 --> 00:00:46,627
+It sounds like nothing. But without correcting it, your location would drift by about 10 kilometers a day. It's exactly what Einstein's relativity predicts.
+
+8
+00:00:47,527 --> 00:00:51,099
+Every time you open a map, Einstein is right.

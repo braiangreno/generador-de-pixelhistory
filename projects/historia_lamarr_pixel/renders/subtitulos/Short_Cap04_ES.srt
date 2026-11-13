@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,410
+Capítulo cuatro. El problema del torpedo.
+
+2
+00:00:03,760 --> 00:00:10,726
+En 1940, un submarino alemán hundió un barco que llevaba niños británicos a Canadá. La mayoría murió.
+
+3
+00:00:10,946 --> 00:00:15,054
+Hedy quería ayudar. Y se acordó de aquellas cenas en Viena.
+
+4
+00:00:15,504 --> 00:00:21,800
+Un torpedo guiado por radio es como un auto a control remoto bajo el agua. El barco le manda órdenes.
+
+5
+00:00:22,020 --> 00:00:30,593
+Esas órdenes viajan en una onda de radio. Su frecuencia es cuántas veces vibra por segundo, y cada emisora vibra a su propio ritmo.
+
+6
+00:00:30,813 --> 00:00:35,993
+Por eso decimos que cada frecuencia es un canal. Y el torpedo escucha uno solo.
+
+7
+00:00:36,213 --> 00:00:44,921
+El problema: el enemigo puede encontrar ese canal y llenarlo de ruido. Como alguien que grita encima de tu voz. El torpedo queda sordo.
+
+8
+00:00:45,821 --> 00:00:49,259
+Hacía falta un mensaje que nadie pudiera encontrar.

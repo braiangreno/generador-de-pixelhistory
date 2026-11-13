@@ -1,0 +1,291 @@
+1
+00:00:00,750 --> 00:00:10,395
+Una mañana de abril de 1973, un ingeniero se para en una vereda de Nueva York. Va camino a una conferencia de prensa, pero antes quiere probar algo.
+
+2
+00:00:10,595 --> 00:00:19,928
+Levanta un aparato del tamaño de un ladrillo y marca un número. La gente se da vuelta. Nadie había visto a alguien hablar por teléfono en plena calle.
+
+3
+00:00:20,128 --> 00:00:28,210
+¿A quién llama? No a su madre ni a su jefe. Llama a Joel Engel, el jefe del equipo rival. Recuerda ese nombre.
+
+4
+00:00:29,110 --> 00:00:32,013
+La primera llamada desde un celular fue para presumir.
+
+5
+00:00:32,563 --> 00:00:40,868
+Hoy hay más líneas de celular que personas en el planeta. Esta es la historia del teléfono que llevas en el bolsillo. Y de cómo funciona.
+
+6
+00:00:41,718 --> 00:00:44,040
+CAPÍTULO 1 — EL LADRILLO
+
+7
+00:00:44,390 --> 00:00:50,820
+Teléfonos móviles ya existían. Eran teléfonos de auto: el equipo ocupaba el baúl y gastaba mucha batería.
+
+8
+00:00:51,020 --> 00:00:59,013
+Martin Cooper, ingeniero de Motorola, pensaba distinto. La gente no quería hablar desde un auto. Quería hablar desde cualquier lado.
+
+9
+00:00:59,213 --> 00:01:05,286
+Su equipo armó el prototipo en pocos meses. Pesaba más de un kilo, y casi todo era batería.
+
+10
+00:01:05,486 --> 00:01:10,755
+No tenía pantalla. Servía para tres cosas: marcar, hablar y escuchar.
+
+11
+00:01:10,955 --> 00:01:19,350
+Hablabas media hora y lo cargabas diez. Según contó Cooper, eso no era un problema: nadie aguantaba el ladrillo en la oreja tanto tiempo.
+
+12
+00:01:19,550 --> 00:01:27,856
+Llegó a las tiendas diez años después, en 1983, a casi cuatro mil dólares. Hoy serían más de diez mil.
+
+13
+00:01:28,756 --> 00:01:33,221
+Hasta entonces, llamabas a un lugar. Desde entonces, a una persona.
+
+14
+00:01:34,071 --> 00:01:36,125
+CAPÍTULO 2 — EL PANAL
+
+15
+00:01:36,475 --> 00:01:42,816
+Pero un teléfono no sirve sin una red. Y la red de entonces era una antena gigante para toda la ciudad.
+
+16
+00:01:43,016 --> 00:01:50,741
+En Nueva York, unos dos mil abonados compartían doce canales. Para hablar había que esperar turno. A veces, media hora.
+
+17
+00:01:51,191 --> 00:01:58,336
+Vamos a la pizarra. Una antena grande cubre toda la ciudad, pero tiene pocos canales. Cuando se ocupan, nadie más habla.
+
+18
+00:01:58,536 --> 00:02:05,636
+La idea fue partir la ciudad en celdas chicas, como un panal de abejas. Cada celda tiene su propia antena, de poca potencia.
+
+19
+00:02:05,836 --> 00:02:13,472
+Como la señal no llega lejos, dos celdas separadas pueden usar los mismos canales sin pisarse. Así, cada canal sirve muchas veces.
+
+20
+00:02:13,672 --> 00:02:18,092
+Y cuando te mueves, la llamada pasa de una antena a la siguiente sin cortarse.
+
+21
+00:02:18,292 --> 00:02:24,231
+Muchas antenas chicas atienden a más gente que una grande. Por eso se llama celular: por las celdas.
+
+22
+00:02:24,431 --> 00:02:33,050
+La idea nació en Bell Labs en 1947. Y entre los que la convirtieron en una red de verdad estaba el equipo de Joel Engel.
+
+23
+00:02:33,950 --> 00:02:38,683
+El rival de aquella llamada estaba diseñando la red que iba a usar ese teléfono.
+
+24
+00:02:39,533 --> 00:02:42,301
+CAPÍTULO 3 — ESCRIBIR Y MIRAR
+
+25
+00:02:42,651 --> 00:02:51,136
+En los noventa, el ladrillo se encogió y entró en el bolsillo. Y las redes se volvieron digitales: la voz viajaba convertida en ceros y unos.
+
+26
+00:02:51,336 --> 00:02:55,176
+Y si la voz viajaba como números, también podían viajar letras.
+
+27
+00:02:55,376 --> 00:03:02,654
+Un diciembre, en Inglaterra, un ingeniero de veintidós años mandó el primer mensaje de texto. Lo escribió en una computadora.
+
+28
+00:03:02,854 --> 00:03:11,785
+Los teléfonos todavía no tenían cómo escribir. El mensaje decía feliz Navidad, en inglés. Y el que lo recibió no podía contestarlo.
+
+29
+00:03:11,985 --> 00:03:21,496
+Cuando los teléfonos aprendieron a escribir, cada mensaje tenía un límite de 160 caracteres. Y nació la costumbre de escribir abreviado.
+
+30
+00:03:21,696 --> 00:03:32,547
+Cinco años después, en una maternidad de California, un programador esperaba el nacimiento de su hija. Mientras esperaba, unió con cables una cámara, su teléfono y una computadora.
+
+31
+00:03:32,747 --> 00:03:40,249
+Al rato, la foto de su hija llegó a unas dos mil personas. Se la considera la primera foto compartida al instante desde un teléfono.
+
+32
+00:03:41,149 --> 00:03:45,838
+El teléfono ya sabía escribir y mirar. Le faltaba pensar.
+
+33
+00:03:46,688 --> 00:03:49,144
+CAPÍTULO 4 — SIMON
+
+34
+00:03:49,494 --> 00:04:00,121
+En realidad, alguien ya lo había intentado. En 1994, IBM puso a la venta un teléfono con pantalla táctil. Se llamaba Simon.
+
+35
+00:04:00,321 --> 00:04:10,502
+Tenía agenda, notas, correo y hasta fax. Se usaba con un lápiz. La palabra smartphone ni siquiera existía, pero hoy se lo considera el primero.
+
+36
+00:04:10,702 --> 00:04:19,276
+Pero pesaba medio kilo, la batería duraba una hora y costaba casi 900 dólares. Y de internet en el teléfono, ni hablar.
+
+37
+00:04:19,476 --> 00:04:23,495
+Vendió unos cincuenta mil y a los seis meses desapareció de las tiendas.
+
+38
+00:04:23,695 --> 00:04:30,616
+Le faltaban piezas que todavía no existían. Baterías que duraran, internet en el bolsillo y una pantalla para el dedo.
+
+39
+00:04:31,516 --> 00:04:36,115
+Simon no fracasó por malo. Fracasó por llegar demasiado temprano.
+
+40
+00:04:36,965 --> 00:04:40,180
+CAPÍTULO 5 — UNA PANTALLA QUE SIENTE
+
+41
+00:04:40,530 --> 00:04:47,630
+Diez años después, los teléfonos inteligentes eran cosa de oficina: pantallita arriba, teclado de botones abajo.
+
+42
+00:04:47,830 --> 00:04:55,734
+Y el 9 de enero de 2007, en San Francisco, Apple presentó un teléfono sin teclado. Todo el frente era una pantalla.
+
+43
+00:04:55,934 --> 00:05:05,847
+Lo presentaron como tres aparatos en uno: un reproductor de música, un teléfono y una ventana a internet. Salió a la venta en junio, con filas en la puerta de las tiendas.
+
+44
+00:05:06,047 --> 00:05:13,862
+Se usaba con los dedos. Con dos, agrandabas una foto. Y no sentía la presión, como el Simon. Sentía otra cosa.
+
+45
+00:05:14,312 --> 00:05:19,179
+A la pizarra. Tu cuerpo conduce la electricidad. Muy poquito, pero la conduce.
+
+46
+00:05:19,379 --> 00:05:27,283
+Debajo del vidrio hay una cuadrícula de líneas transparentes con una pequeña carga eléctrica. Cada cruce funciona como un sensor.
+
+47
+00:05:27,483 --> 00:05:36,101
+Cuando apoyas el dedo, cambias la carga de los cruces de abajo. El teléfono mide dónde cambió, todo el tiempo. Y puede seguir varios dedos a la vez.
+
+48
+00:05:36,301 --> 00:05:40,364
+Por eso con guantes gruesos no funciona: la tela no conduce.
+
+49
+00:05:41,264 --> 00:05:45,551
+La pantalla no siente tu dedo. Siente tu electricidad.
+
+50
+00:05:46,401 --> 00:05:49,036
+CAPÍTULO 6 — QUINIENTAS APLICACIONES
+
+51
+00:05:49,386 --> 00:05:55,012
+Pero ese primer teléfono no dejaba instalar programas de otros. Al año siguiente, eso cambió.
+
+52
+00:05:55,212 --> 00:06:02,535
+En julio de 2008 abrió una tienda de aplicaciones con quinientas. En el primer fin de semana se bajaron diez millones.
+
+53
+00:06:02,735 --> 00:06:08,719
+Cualquiera podía programar una y vendérsela al mundo entero. Una linterna, un juego, un mapa.
+
+54
+00:06:08,919 --> 00:06:17,269
+Unos meses después salió el primer teléfono con Android, el sistema de Google. Todavía tenía un teclado que se deslizaba debajo de la pantalla.
+
+55
+00:06:17,469 --> 00:06:21,577
+Y a diferencia del otro, a Android lo podía usar cualquier fabricante.
+
+56
+00:06:21,777 --> 00:06:27,493
+Hoy, unos dos de cada tres smartphones usan Android. Casi todo el resto son iPhone.
+
+57
+00:06:28,393 --> 00:06:31,608
+Desde entonces, tu teléfono es lo que le instalas.
+
+58
+00:06:32,458 --> 00:06:35,137
+CAPÍTULO 7 — EINSTEIN EN EL BOLSILLO
+
+59
+00:06:35,487 --> 00:06:40,354
+De todo lo que hace tu teléfono, hay algo que parece magia: sabe dónde estás.
+
+60
+00:06:40,554 --> 00:06:46,940
+Lo sabe escuchando a satélites que giran a unos veinte mil kilómetros de altura. Cada uno lleva un reloj atómico.
+
+61
+00:06:47,390 --> 00:06:53,463
+A la pizarra. Cada satélite repite la hora todo el tiempo. Tu teléfono escucha y compara.
+
+62
+00:06:53,663 --> 00:07:01,701
+Si una señal llega más tarde, ese satélite está más lejos. Con cuatro satélites, el teléfono calcula el punto exacto donde estás.
+
+63
+00:07:01,901 --> 00:07:10,295
+Pero allá arriba el tiempo pasa un poquito más rápido. Los relojes de los satélites se adelantan unos 38 millonésimos de segundo por día.
+
+64
+00:07:10,495 --> 00:07:18,935
+Parece nada. Pero sin corregirlo, tu ubicación se correría unos diez kilómetros por día. Es justo lo que predice la relatividad de Einstein.
+
+65
+00:07:19,835 --> 00:07:23,407
+Cada vez que abres un mapa, Einstein tiene razón.
+
+66
+00:07:24,257 --> 00:07:27,472
+CAPÍTULO 8 — UNA LLAMADA AL RIVAL
+
+67
+00:07:27,822 --> 00:07:33,761
+El ladrillo pesaba más de un kilo y solo servía para hablar. El de hoy pesa unos doscientos gramos.
+
+68
+00:07:33,961 --> 00:07:40,347
+Y tiene más de un millón de veces más memoria que la computadora del Apolo. La que llevó astronautas a la Luna.
+
+69
+00:07:40,547 --> 00:07:46,932
+Hay más de siete mil millones de líneas de smartphone. Y más líneas de celular que personas en la Tierra.
+
+70
+00:07:47,132 --> 00:07:54,188
+Lo usamos para escribir, mirar, pagar y saber dónde estamos. Llamar es apenas una de las cosas que hace.
+
+71
+00:07:54,388 --> 00:07:59,791
+Y todo empezó en una vereda de Nueva York. Un hombre con un ladrillo en la oreja, llamando a su rival.
+
+72
+00:08:00,741 --> 00:08:05,519
+La primera llamada desde un celular fue para presumir. Algunas cosas no cambiaron.
+
+73
+00:08:06,469 --> 00:08:11,916
+Y ahora te leemos en los comentarios: ¿qué historia te gustaría ver en el próximo episodio?

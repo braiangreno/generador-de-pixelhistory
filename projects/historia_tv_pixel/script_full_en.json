@@ -1,0 +1,404 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "speak": "The image you are watching right now is drawn line by line, from top to bottom. Faster than your eye can notice.",
+    "sub": "The image you are watching right now is drawn line by line, from top to bottom. Faster than your eye can notice."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "speak": "That idea came to a fourteen-year-old boy while plowing a field in Idaho.",
+    "sub": "That idea came to a fourteen-year-old boy while plowing a field in Idaho."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "speak": "He looked at the furrows, side by side. And he thought you could send a picture through the air the same way: line by line.",
+    "sub": "He looked at the furrows, side by side. And he thought you could send a picture through the air the same way: line by line."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "speak": "Thirty years later, almost nobody knew his name.",
+    "sub": "Thirty years later, almost nobody knew his name."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "speak": "This is the story of television. And of the boy who saw it in a plowed field.",
+    "sub": "This is the story of television. And of the boy who saw it in a plowed field."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "speak": "Chapter one. An electric telescope.",
+    "sub": "Chapter one. An electric telescope."
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "speak": "The idea of sending pictures through a wire is older than it seems. As the story goes, it was born on Christmas Eve, eighteen eighty-three.",
+    "sub": "The idea of sending pictures through a wire is older than it seems. As the story goes, it was born on Christmas Eve, 1883."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "speak": "A student in Berlin, Paul Nipkow, imagined a disk with holes in a spiral. As it spun, each hole scanned a strip of the image.",
+    "sub": "A student in Berlin, Paul Nipkow, imagined a disk with holes in a spiral. As it spun, each hole scanned a strip of the image."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "speak": "He patented it as an electric telescope. He never built it.",
+    "sub": "He patented it as an electric telescope. He never built it."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "speak": "A whole photo cannot fit inside a wire at once. But you can slice it into strips.",
+    "sub": "A whole photo cannot fit inside a wire at once. But you can slice it into strips."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "speak": "You read each strip from left to right, like a line in a book: light, dark, light. And you send those changes of light as electricity.",
+    "sub": "You read each strip from left to right, like a line in a book: light, dark, light. And you send those changes of light as electricity."
+  },
+  {
+    "id": "c1_06",
+    "ch": 1,
+    "speak": "On the other end, someone paints the strips in the exact same order. If you do it fast enough, the eye sees a complete picture.",
+    "sub": "On the other end, someone paints the strips in the exact same order. If you do it fast enough, the eye sees a complete picture."
+  },
+  {
+    "id": "c1_07",
+    "ch": 1,
+    "speak": "The idea was there. It would take forty years to see it work.",
+    "sub": "The idea was there. It would take forty years to see it work."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "speak": "Chapter two. The dummy's head.",
+    "sub": "Chapter two. The dummy's head."
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "speak": "In a London attic, a Scotsman named John Logie Baird tried to build it. He put together a machine with spinning disks, motors, and lamps.",
+    "sub": "In a London attic, a Scotsman named John Logie Baird tried to build it. He put together a machine with spinning disks, motors, and lamps."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "speak": "His first actor was the head of a ventriloquist's dummy he called Stooky Bill. It didn't complain about the heat from the lamps.",
+    "sub": "His first actor was the head of a ventriloquist's dummy he called Stooky Bill. It didn't complain about the heat from the lamps."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "speak": "When he finally saw the dummy's face on his screen, he ran downstairs.",
+    "sub": "When he finally saw the dummy's face on his screen, he ran downstairs."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "speak": "He brought up an office boy from downstairs, William Taynton. And Taynton became the first person ever televised.",
+    "sub": "He brought up an office boy from downstairs, William Taynton. And Taynton became the first person ever televised."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "speak": "In January nineteen twenty-six, Baird demonstrated it to about forty scientists. The image was tiny, orange, and had barely thirty lines.",
+    "sub": "In January 1926, Baird demonstrated it to about forty scientists. The image was tiny, orange, and had barely thirty lines."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "speak": "It was television. But a spinning disk was never going to get much further.",
+    "sub": "It was television. But a spinning disk was never going to get much further."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "speak": "Chapter three. The furrows.",
+    "sub": "Chapter three. The furrows."
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "speak": "Meanwhile, in the United States, Philo Farnsworth had been born in a log cabin. His home didn't even have electric light. Yet by age six, he had already decided he would be an inventor.",
+    "sub": "Meanwhile, in the United States, Philo Farnsworth had been born in a log cabin. His home didn't even have electric light. Yet by age six, he had already decided he would be an inventor."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "speak": "At fourteen, while plowing with horses, he looked back. And he imagined a beam of electrons scanning an image just like the plow: row by row.",
+    "sub": "At fourteen, while plowing with horses, he looked back. And he imagined a beam of electrons scanning an image just like the plow: row by row."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "speak": "No disks. Nothing spinning. Just electricity.",
+    "sub": "No disks. Nothing spinning. Just electricity."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "speak": "He explained it on the chalkboard to his chemistry teacher, Justin Tolman. His teacher told him that if he truly wanted it, he would achieve it. Then he copied the drawing onto a piece of paper and kept it. Remember that paper.",
+    "sub": "He explained it on the chalkboard to his chemistry teacher, Justin Tolman. His teacher told him that if he truly wanted it, he would achieve it. Then he copied the drawing onto a piece of paper and kept it. Remember that paper."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "speak": "He was fifteen years old. And he had just drawn television on a chalkboard.",
+    "sub": "He was fifteen years old. And he had just drawn television on a chalkboard."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "speak": "Chapter four. The dollar sign.",
+    "sub": "Chapter four. The dollar sign."
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "speak": "At twenty, he found investors, twenty-five thousand dollars, and a laboratory in San Francisco. His wife, Pem, worked right alongside him.",
+    "sub": "At twenty, he found investors, twenty-five thousand dollars, and a laboratory in San Francisco. His wife, Pem, worked right alongside him."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "speak": "His camera turned light into electrons. A magnet moved them in lines: from left to right, from top to bottom.",
+    "sub": "His camera turned light into electrons. A magnet moved them in lines: from left to right, from top to bottom."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "speak": "On the screen, another beam of electrons painted those lines onto glowing glass. Nothing spins. Everything is electricity.",
+    "sub": "On the screen, another beam of electrons painted those lines onto glowing glass. Nothing spins. Everything is electricity."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "speak": "On September seventh, nineteen twenty-seven, they placed a glass slide with a single straight line in front of the camera.",
+    "sub": "On September 7, 1927, they placed a glass slide with a single straight line in front of the camera."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "speak": "In the next room, inside a tube, a glowing line appeared. By telegram, the team announced—curse word included—that the machine worked.",
+    "sub": "In the next room, inside a tube, a glowing line appeared. By telegram, the team announced—curse word included—that the machine worked."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "speak": "The investors kept asking when they were going to see some money. So one day, on the screen, there appeared... a dollar sign.",
+    "sub": "The investors kept asking when they were going to see some money. So one day, on the screen, there appeared... a dollar sign."
+  },
+  {
+    "id": "c4_07",
+    "ch": 4,
+    "speak": "Only some time later came the first human face shown by his system: his wife, Pem.",
+    "sub": "Only some time later came the first human face shown by his system: his wife, Pem."
+  },
+  {
+    "id": "c4_08",
+    "ch": 4,
+    "speak": "Before showing a human face, television was already showing money.",
+    "sub": "Before showing a human face, television was already showing money."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "speak": "Chapter five. Goliath.",
+    "sub": "Chapter five. Goliath."
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "speak": "Across the country, the largest radio corporation in America wanted television for itself. It was called R C A.",
+    "sub": "Across the country, the largest radio corporation in America wanted television for itself. It was called RCA."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "speak": "Its boss, David Sarnoff, sent his top engineer, Vladimir Zworykin, to visit the lab. Farnsworth showed him everything. Zworykin reportedly remarked that he wished he had invented it himself.",
+    "sub": "Its boss, David Sarnoff, sent his top engineer, Vladimir Zworykin, to visit the lab. Farnsworth showed him everything. Zworykin reportedly remarked that he wished he had invented it himself."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "speak": "Later, R C A offered him one hundred thousand dollars for his patents. He said no.",
+    "sub": "Later, RCA offered him $100,000 for his patents. He said no."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "speak": "So R C A filed a patent lawsuit against him. They claimed the idea belonged to Zworykin, who had filed an earlier patent.",
+    "sub": "So RCA filed a patent lawsuit against him. They claimed the idea belonged to Zworykin, who had filed an earlier patent."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "speak": "Remember that piece of paper? His old teacher Tolman showed up with the drawing from that chalkboard.",
+    "sub": "Remember that piece of paper? His old teacher Tolman showed up with the drawing from that chalkboard."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "speak": "In nineteen thirty-four, the patent office ruled in Farnsworth's favor. And in nineteen thirty-nine, R C A finally agreed to pay him a one-million-dollar license.",
+    "sub": "In 1934, the patent office ruled in Farnsworth's favor. And in 1939, RCA finally agreed to pay him a one-million-dollar license."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "speak": "A farm boy beat a corporate giant. With a chalkboard drawing.",
+    "sub": "A farm boy beat a corporate giant. With a chalkboard drawing."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "speak": "Chapter six. A window in the living room.",
+    "sub": "Chapter six. A window in the living room."
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "speak": "Yet R C A took the spotlight: at the New York World's Fair, Sarnoff unveiled television to the public as if it were his own.",
+    "sub": "Yet RCA took the spotlight: at the New York World's Fair, Sarnoff unveiled television to the public as if it were his own."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "speak": "The war put everything on hold. But afterwards, television exploded. In the United States, in nineteen fifty, barely one in ten homes had one.",
+    "sub": "The war put everything on hold. But afterwards, television exploded. In the United States, in 1950, barely one in ten homes had one."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "speak": "Ten years later, nearly nine out of ten. Across Latin America, the first broadcasts also arrived during the nineteen fifties.",
+    "sub": "Ten years later, nearly nine out of ten. Across Latin America, the first broadcasts also arrived during the 1950s."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "speak": "And how do we see motion? If you show the eye many still pictures per second, the brain blends them together.",
+    "sub": "And how do we see motion? If you show the eye many still pictures per second, the brain blends them together."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "speak": "A tube television drew more than five hundred lines per picture. And between twenty-five and thirty pictures every second.",
+    "sub": "A tube television drew more than five hundred lines per picture. And between twenty-five and thirty pictures every second."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "speak": "That is why, if you film an old TV with your phone, you see dark bands: the camera catches it halfway through drawing.",
+    "sub": "That is why, if you film an old TV with your phone, you see dark bands: the camera catches it halfway through drawing."
+  },
+  {
+    "id": "c6_07",
+    "ch": 6,
+    "speak": "Then came color: three tiny dots—red, green, and blue—that mix to form every other color. Your screen still uses those three today.",
+    "sub": "Then came color: three tiny dots—red, green, and blue—that mix to form every other color. Your screen still uses those three today."
+  },
+  {
+    "id": "c6_08",
+    "ch": 6,
+    "speak": "Families no longer gathered around the radio. They gathered in front of a window.",
+    "sub": "Families no longer gathered around the radio. They gathered in front of a window."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "speak": "Chapter seven. Doctor X.",
+    "sub": "Chapter seven. Doctor X."
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "speak": "And what about Farnsworth? He never got rich from television. His early patents expired just as the industry took off.",
+    "sub": "And what about Farnsworth? He never got rich from television. His early patents expired just as the industry took off."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "speak": "According to his son, he disliked what was being broadcast. He didn't want his children watching it.",
+    "sub": "According to his son, he disliked what was being broadcast. He didn't want his children watching it."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "speak": "In nineteen fifty-seven, he was invited onto a television quiz show where celebrities had to guess a guest's secret. He was introduced as Doctor X.",
+    "sub": "In 1957, he was invited onto a television quiz show where celebrities had to guess a guest's secret. He was introduced as Doctor X."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "speak": "Viewers at home read his secret on the screen: he had invented electronic television.",
+    "sub": "Viewers at home read his secret on the screen: he had invented electronic television."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "speak": "The panelists asked everything. They couldn't guess. The host told him that without him, he would be out of a job. Farnsworth walked away with eighty dollars and a carton of cigarettes.",
+    "sub": "The panelists asked everything. They couldn't guess. The host told him that without him, he would be out of a job. Farnsworth walked away with eighty dollars and a carton of cigarettes."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "speak": "The inventor of television appeared on television. And nobody recognized him.",
+    "sub": "The inventor of television appeared on television. And nobody recognized him."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "speak": "Chapter eight. It was worth it.",
+    "sub": "Chapter eight. It was worth it."
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "speak": "On July twentieth, nineteen sixty-nine, some six hundred million people watched two astronauts on the Moon on television.",
+    "sub": "On July 20, 1969, some six hundred million people watched two astronauts on the Moon on television."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "speak": "Farnsworth was watching too, in his living room. According to his wife, right then he told her that it had all been worth it.",
+    "sub": "Farnsworth was watching too, in his living room. According to his wife, right then he told her that it had all been worth it."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "speak": "He died two years later. Today, in the United States, nearly half of all time spent in front of a TV is already streaming.",
+    "sub": "He died two years later. Today, in the United States, nearly half of all time spent in front of a TV is already streaming."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "speak": "And the most watched platform on those screens is YouTube. Yes: this one.",
+    "sub": "And the most watched platform on those screens is YouTube. Yes: this one."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "speak": "Everything changed. Yet the idea remains the same: the image is drawn line by line.",
+    "sub": "Everything changed. Yet the idea remains the same: the image is drawn line by line."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "speak": "It all started with a boy who looked back while plowing a field.",
+    "sub": "It all started with a boy who looked back while plowing a field."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "speak": "And now we are reading you in the comments: what story would you like to see in the next episode?",
+    "sub": "And now we are reading you in the comments: what story would you like to see in the next episode?"
+  }
+]

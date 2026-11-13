@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:02,785
+CHAPTER 6 — FIVE HUNDRED APPS
+
+2
+00:00:03,135 --> 00:00:08,761
+But that first phone didn't let you install programs made by others. The following year, that changed.
+
+3
+00:00:08,961 --> 00:00:16,284
+In July 2008, an app store opened with 500 applications. In the first weekend, ten million were downloaded.
+
+4
+00:00:16,484 --> 00:00:22,468
+Anyone could code one and sell it to the entire world. A flashlight, a game, a map.
+
+5
+00:00:22,668 --> 00:00:31,018
+A few months later came the first phone with Android, Google's system. It still had a keyboard that slid out from under the screen.
+
+6
+00:00:31,218 --> 00:00:35,326
+And unlike the other one, Android could be used by any manufacturer.
+
+7
+00:00:35,526 --> 00:00:41,242
+Today, about two out of every three smartphones run Android. Almost all the rest are iPhones.
+
+8
+00:00:42,142 --> 00:00:45,357
+Ever since, your phone is whatever you install on it.

@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,410
+Chapter Four. The Torpedo Problem.
+
+2
+00:00:03,760 --> 00:00:10,726
+In 1940, a German submarine sank a ship carrying British children to Canada. Most of them died.
+
+3
+00:00:10,946 --> 00:00:15,054
+Hedy wanted to help. And she remembered those dinners in Vienna.
+
+4
+00:00:15,504 --> 00:00:21,800
+A radio-guided torpedo is like a remote-controlled car underwater. The ship sends it commands.
+
+5
+00:00:22,020 --> 00:00:30,593
+Those commands travel on a radio wave. Its frequency is how many times it vibrates per second, and each station vibrates at its own rhythm.
+
+6
+00:00:30,813 --> 00:00:35,993
+That is why we call each frequency a channel. And the torpedo listens to just one.
+
+7
+00:00:36,213 --> 00:00:44,921
+The problem: the enemy can find that channel and flood it with noise. Like someone shouting over your voice. The torpedo goes deaf.
+
+8
+00:00:45,821 --> 00:00:49,259
+What was needed was a message no one could find.

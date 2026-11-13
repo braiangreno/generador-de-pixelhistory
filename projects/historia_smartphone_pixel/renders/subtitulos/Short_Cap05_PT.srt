@@ -1,0 +1,39 @@
+1
+00:00:00,150 --> 00:00:03,365
+CAPÍTULO 5 — UMA TELA QUE SENTE
+
+2
+00:00:03,715 --> 00:00:10,815
+Dez anos depois, os telefones inteligentes eram coisa de escritório: telinha em cima, teclado de botões embaixo.
+
+3
+00:00:11,015 --> 00:00:18,919
+E em 9 de janeiro de 2007, em São Francisco, a Apple apresentou um telefone sem teclado. Toda a frente era uma tela.
+
+4
+00:00:19,119 --> 00:00:29,032
+Apresentaram-no como três aparelhos em um: um tocador de música, um telefone e uma janela para a internet. Saiu à venda em junho, com filas na porta das lojas.
+
+5
+00:00:29,232 --> 00:00:37,047
+Usava-se com os dedos. Com dois, você ampliava uma foto. E não sentia a pressão, como o Simon. Sentia outra coisa.
+
+6
+00:00:37,497 --> 00:00:42,364
+Ao quadro. Seu corpo conduz eletricidade. Muito pouquinho, mas conduz.
+
+7
+00:00:42,564 --> 00:00:50,468
+Debaixo do vidro há uma grade de linhas transparentes com uma pequena carga elétrica. Cada cruzamento funciona como um sensor.
+
+8
+00:00:50,668 --> 00:00:59,286
+Quando você apoia o dedo, muda a carga dos cruzamentos de baixo. O telefone mede onde mudou, o tempo todo. E pode seguir vários dedos de uma vez.
+
+9
+00:00:59,486 --> 00:01:03,549
+Por isso com luvas grossas não funciona: o tecido não conduz.
+
+10
+00:01:04,449 --> 00:01:08,736
+A tela não sente o seu dedo. Sente a sua eletricidade.

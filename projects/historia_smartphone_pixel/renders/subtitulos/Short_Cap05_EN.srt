@@ -1,0 +1,39 @@
+1
+00:00:00,150 --> 00:00:03,365
+CHAPTER 5 — A SCREEN THAT FEELS
+
+2
+00:00:03,715 --> 00:00:10,815
+Ten years later, smartphones were office tools: a tiny screen on top, a full button keyboard below.
+
+3
+00:00:11,015 --> 00:00:18,919
+And on January 9, 2007, in San Francisco, Apple unveiled a phone with no keyboard. The entire front was a screen.
+
+4
+00:00:19,119 --> 00:00:29,032
+They pitched it as three devices in one: a music player, a phone, and a window to the internet. It went on sale in June, with lines outside the stores.
+
+5
+00:00:29,232 --> 00:00:37,047
+You used it with your fingers. With two, you zoomed in on a photo. And it didn't sense pressure, like Simon. It sensed something else.
+
+6
+00:00:37,497 --> 00:00:42,364
+To the chalkboard. Your body conducts electricity. Very little, but it does.
+
+7
+00:00:42,564 --> 00:00:50,468
+Beneath the glass lies a grid of transparent lines holding a tiny electrical charge. Every intersection acts as a sensor.
+
+8
+00:00:50,668 --> 00:00:59,286
+When you touch it with your finger, you change the charge at the intersections below. The phone measures where it changed, all the time. And it can track several fingers at once.
+
+9
+00:00:59,486 --> 00:01:03,549
+That's why it doesn't work with thick gloves: fabric doesn't conduct.
+
+10
+00:01:04,449 --> 00:01:08,736
+The screen doesn't feel your finger. It feels your electricity.

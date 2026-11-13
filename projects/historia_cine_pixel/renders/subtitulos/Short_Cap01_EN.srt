@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:02,338
+Chapter one. Twelve cameras.
+
+2
+00:00:02,688 --> 00:00:12,557
+The experiment was funded by Leland Stanford, a railroad millionaire and horse breeder. Legend says there was a bet involved, though no one could ever prove it.
+
+3
+00:00:12,757 --> 00:00:19,857
+The photographer was named Eadweard Muybridge. Cameras back then were terribly slow, and it took him years to pull it off.
+
+4
+00:00:20,057 --> 00:00:27,514
+In 1878, in front of journalists, a mare named Sallie Gardner ran past the twelve cameras.
+
+5
+00:00:27,714 --> 00:00:35,082
+In some photos, all four legs were in the air. But tucked beneath her belly, not stretched out like in the paintings.
+
+6
+00:00:35,282 --> 00:00:43,766
+Muybridge did something else: he placed the photos on a wheel and projected them one after another. The horse ran again, now on a wall.
+
+7
+00:00:44,216 --> 00:00:49,083
+Why do still photos look like a running horse? Because the brain fills in the gaps.
+
+8
+00:00:49,283 --> 00:00:57,634
+If you see more than ten or twelve images per second, you no longer see photos: you see motion. Just like a flipbook with drawings in the corners.
+
+9
+00:00:58,534 --> 00:01:02,731
+There was motion now. What was missing was showing it to a full room.

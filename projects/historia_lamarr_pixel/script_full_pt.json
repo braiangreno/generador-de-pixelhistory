@@ -1,0 +1,506 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.4,
+    "speak": "Se você usa fones de ouvido sem fio, o sinal deles está saltando de um canal para outro sem parar. Às vezes, mais de mil vezes por segundo.",
+    "sub": "Se você usa fones de ouvido sem fio, o sinal deles está saltando de um canal para outro sem parar. Às vezes, mais de mil vezes por segundo."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "Essa ideia foi patenteada, em plena guerra, por uma das atrizes mais famosas de Hollywood. Junto com um pianista.",
+    "sub": "Essa ideia foi patenteada, em plena guerra, por uma das atrizes mais famosas de Hollywood. Junto com um pianista."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "E a Marinha dos Estados Unidos a guardou em uma gaveta.",
+    "sub": "E a Marinha dos Estados Unidos a guardou em uma gaveta."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 0.85,
+    "speak": "A ela, sugeriram que seria melhor ajudar com o próprio rosto.",
+    "sub": "A ela, sugeriram que seria melhor ajudar com o próprio rosto."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 0.9,
+    "speak": "Esta é a história de Hedy Lamarr. A mulher mais linda do mundo, segundo seu estúdio de cinema. E uma inventora.",
+    "sub": "Esta é a história de Hedy Lamarr. A mulher mais linda do mundo, segundo seu estúdio de cinema. E uma inventora."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Capítulo um. A caixa de música.",
+    "sub": "Capítulo um. A caixa de música."
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "Ela nasceu em Viena em mil novecentos e quatorze, como Hedwig Kiesler. Filha única de um diretor de banco e de uma pianista.",
+    "sub": "Ela nasceu em Viena em 1914, como Hedwig Kiesler. Filha única de um diretor de banco e de uma pianista."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "Seu pai a levava para caminhar e explicava como as coisas funcionavam: os bondes, a imprensa, a eletricidade.",
+    "sub": "Seu pai a levava para caminhar e explicava como as coisas funcionavam: os bondes, a imprensa, a eletricidade."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "Sua mãe lhe ensinou piano. Aquelas oitenta e oito teclas iriam servir muito mais do que qualquer um imaginava.",
+    "sub": "Sua mãe lhe ensinou piano. Aquelas oitenta e oito teclas iriam servir muito mais do que qualquer um imaginava."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Aos cinco anos, desmontou sua caixa de música para entender como ela tocava. E a montou de volta.",
+    "sub": "Aos cinco anos, desmontou sua caixa de música para entender como ela tocava. E a montou de volta."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 0.85,
+    "speak": "Na adolescência escolheu atuar. E aos dezoito estrelou um filme tão escandaloso que foi proibido em vários países.",
+    "sub": "Na adolescência escolheu atuar. E aos dezoito estrelou um filme tão escandaloso que foi proibido em vários países."
+  },
+  {
+    "id": "c1_06",
+    "ch": 1,
+    "pause": 0.9,
+    "speak": "Toda a Europa falava do seu rosto. Ninguém, da sua cabeça.",
+    "sub": "Toda a Europa falava do seu rosto. Ninguém, da sua cabeça."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Capítulo dois. A gaiola de ouro.",
+    "sub": "Capítulo dois. A gaiola de ouro."
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Entre os que a viram atuar estava Fritz Mandl, um dos maiores fabricantes de armas da Áustria. Eles se casaram naquele mesmo ano.",
+    "sub": "Entre os que a viram atuar estava Fritz Mandl, um dos maiores fabricantes de armas da Áustria. Eles se casaram naquele mesmo ano."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Mandl era ciumento e controlador. Ela vivia cercada de luxo... e vigiada.",
+    "sub": "Mandl era ciumento e controlador. Ela vivia cercada de luxo... e vigiada."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Dizem que ele tentou comprar todas as cópias daquele filme escandaloso para que mais ninguém o visse. Não conseguiu: continuavam fazendo cópias novas.",
+    "sub": "Dizem que ele tentou comprar todas as cópias daquele filme escandaloso para que mais ninguém o visse. Não conseguiu: continuavam fazendo cópias novas."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Naquela casa havia jantares com militares e compradores de armas. Entre seus clientes estava o governo de Mussolini.",
+    "sub": "Naquela casa havia jantares com militares e compradores de armas. Entre seus clientes estava o governo de Mussolini."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Ela fazia parte da decoração. Mas escutava. Falavam de armas guiadas por rádio e de como bloqueá-las.",
+    "sub": "Ela fazia parte da decoração. Mas escutava. Falavam de armas guiadas por rádio e de como bloqueá-las."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 0.85,
+    "speak": "Em mil novecentos e trinta e sete ela fugiu. Segundo contou, disfarçada de empregada.",
+    "sub": "Em 1937 ela fugiu. Segundo contou, disfarçada de empregada."
+  },
+  {
+    "id": "c2_07",
+    "ch": 2,
+    "pause": 0.9,
+    "speak": "Saiu apenas com a roupa do corpo. E com tudo o que tinha ouvido naqueles jantares.",
+    "sub": "Saiu apenas com a roupa do corpo. E com tudo o que tinha ouvido naqueles jantares."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Capítulo três. A mulher mais linda do mundo.",
+    "sub": "Capítulo três. A mulher mais linda do mundo."
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Em Londres conseguiu uma reunião com Louis B. Mayer, o chefe do estúdio M G M. Ele ofereceu um contrato pequeno. Ela disse não.",
+    "sub": "Em Londres conseguiu uma reunião com Louis B. Mayer, o chefe do estúdio MGM. Ele ofereceu um contrato pequeno. Ela disse não."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Então comprou passagem no mesmo navio em que Mayer voltava para Nova York.",
+    "sub": "Então comprou passagem no mesmo navio em que Mayer voltava para Nova York."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Quando desembarcaram, ela tinha um contrato quatro vezes melhor e um nome novo: Hedy Lamarr.",
+    "sub": "Quando desembarcaram, ela tinha um contrato quatro vezes melhor e um nome novo: Hedy Lamarr."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Seu primeiro filme nos Estados Unidos foi um sucesso imediato. O estúdio a vendia como a mulher mais linda do mundo, e ela fazia vários filmes por ano.",
+    "sub": "Seu primeiro filme nos Estados Unidos foi um sucesso imediato. O estúdio a vendia como a mulher mais linda do mundo, e ela fazia vários filmes por ano."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Mas no set ela se entediava. Entre uma cena e outra, inventava: uma pastilha que transformava água em refrigerante, um semáforo melhorado.",
+    "sub": "Mas no set ela se entediava. Entre uma cena e outra, inventava: uma pastilha que transformava água em refrigerante, um semáforo melhorado."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "O milionário Howard Hughes lhe deu equipamentos para o camarim. Ela desenhou para ele uma asa mais rápida, misturando o peixe e o pássaro mais velozes.",
+    "sub": "O milionário Howard Hughes lhe deu equipamentos para o camarim. Ela desenhou para ele uma asa mais rápida, misturando o peixe e o pássaro mais velozes."
+  },
+  {
+    "id": "c3_07",
+    "ch": 3,
+    "pause": 0.85,
+    "speak": "Segundo ela contou, Hughes disse que ela era um gênio.",
+    "sub": "Segundo ela contou, Hughes disse que ela era um gênio."
+  },
+  {
+    "id": "c3_08",
+    "ch": 3,
+    "pause": 0.9,
+    "speak": "Hollywood lhe pagava para ficar parada. Ela não sabia ficar parada.",
+    "sub": "Hollywood lhe pagava para ficar parada. Ela não sabia ficar parada."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Capítulo quatro. O problema do torpedo.",
+    "sub": "Capítulo quatro. O problema do torpedo."
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Em mil novecentos e quarenta, um submarino alemão afundou um navio que levava crianças britânicas para o Canadá. A maioria morreu.",
+    "sub": "Em 1940, um submarino alemão afundou um navio que levava crianças britânicas para o Canadá. A maioria morreu."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Hedy queria ajudar. E se lembrou daqueles jantares em Viena.",
+    "sub": "Hedy queria ajudar. E se lembrou daqueles jantares em Viena."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Um torpedo guiado por rádio é como um carro de controle remoto debaixo d'água. O navio lhe envia ordens.",
+    "sub": "Um torpedo guiado por rádio é como um carro de controle remoto debaixo d'água. O navio lhe envia ordens."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Essas ordens viajam em uma onda de rádio. Sua frequência é quantas vezes ela vibra por segundo, e cada emissora vibra no seu próprio ritmo.",
+    "sub": "Essas ordens viajam em uma onda de rádio. Sua frequência é quantas vezes ela vibra por segundo, e cada emissora vibra no seu próprio ritmo."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Por isso dizemos que cada frequência é um canal. E o torpedo escuta um só.",
+    "sub": "Por isso dizemos que cada frequência é um canal. E o torpedo escuta um só."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "pause": 0.85,
+    "speak": "O problema: o inimigo pode encontrar esse canal e enchê-lo de ruído. Como alguém gritando por cima da sua voz. O torpedo fica surdo.",
+    "sub": "O problema: o inimigo pode encontrar esse canal e enchê-lo de ruído. Como alguém gritando por cima da sua voz. O torpedo fica surdo."
+  },
+  {
+    "id": "c4_07",
+    "ch": 4,
+    "pause": 0.9,
+    "speak": "Era preciso uma mensagem que ninguém pudesse encontrar.",
+    "sub": "Era preciso uma mensagem que ninguém pudesse encontrar."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Capítulo cinco. Um piano dentro de um torpedo.",
+    "sub": "Capítulo cinco. Um piano dentro de um torpedo."
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Em um jantar ela conheceu George Antheil, um compositor que se autodenominava o garoto mau da música.",
+    "sub": "Em um jantar ela conheceu George Antheil, um compositor que se autodenominava o garoto mau da música."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Anos antes, ele havia escrito uma obra para dezesseis pianolas que deviam tocar juntas, com sirenes e hélices de avião.",
+    "sub": "Anos antes, ele havia escrito uma obra para dezesseis pianolas que deviam tocar juntas, com sirenes e hélices de avião."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Antheil também queria ajudar. Seu irmão havia morrido nos primeiros meses da guerra, quando derrubaram o avião em que viajava.",
+    "sub": "Antheil também queria ajudar. Seu irmão havia morrido nos primeiros meses da guerra, quando derrubaram o avião em que viajava."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Ela tinha a ideia: que o sinal não ficasse parado. Que saltasse de canal o tempo todo.",
+    "sub": "Ela tinha a ideia: que o sinal não ficasse parado. Que saltasse de canal o tempo todo."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Imagine dois amigos mudando de estação ao mesmo tempo, seguindo uma lista secreta.",
+    "sub": "Imagine dois amigos mudando de estação ao mesmo tempo, seguindo uma lista secreta."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "O espião que escuta uma estação ouve só um pedacinho de ruído, e nada mais. Para bloqueá-los, teria que tapar todas de uma vez.",
+    "sub": "O espião que escuta uma estação ouve só um pedacinho de ruído, e nada mais. Para bloqueá-los, teria que tapar todas de uma vez."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Mas como sincronizar o navio e o torpedo? Antheil propôs rolos perfurados, como os das pianolas: um de cada lado.",
+    "sub": "Mas como sincronizar o navio e o torpedo? Antheil propôs rolos perfurados, como os das pianolas: um de cada lado."
+  },
+  {
+    "id": "c5_08",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Oitenta e oito frequências. Uma para cada tecla do piano.",
+    "sub": "Oitenta e oito frequências. Uma para cada tecla do piano."
+  },
+  {
+    "id": "c5_09",
+    "ch": 5,
+    "pause": 0.85,
+    "speak": "Trabalharam meses na mesa de jantar, com a ajuda de um professor de engenharia elétrica. Em mil novecentos e quarenta e dois receberam a patente. Ela assinou com seu sobrenome de casada da época: Hedy Kiesler Markey.",
+    "sub": "Trabalharam meses na mesa de jantar, com a ajuda de um professor de engenharia elétrica. Em 1942 receberam a patente. Ela assinou com seu sobrenome de casada da época: Hedy Kiesler Markey."
+  },
+  {
+    "id": "c5_10",
+    "ch": 5,
+    "pause": 0.9,
+    "speak": "Por isso, durante décadas, quase ninguém soube que a ideia era dela.",
+    "sub": "Por isso, durante décadas, quase ninguém soube que a ideia era dela."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Capítulo seis. Bônus e beijos.",
+    "sub": "Capítulo seis. Bônus e beijos."
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "Eles doaram a patente para a Marinha para ajudar na guerra. A Marinha a descartou: disse que o mecanismo não cabia em um torpedo.",
+    "sub": "Eles doaram a patente para a Marinha para ajudar na guerra. A Marinha a descartou: disse que o mecanismo não cabia em um torpedo."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "Antheil suspeitava que o erro foi mencionar um piano diante dos oficiais.",
+    "sub": "Antheil suspeitava que o erro foi mencionar um piano diante dos oficiais."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "A Hedy, sugeriram que ajudasse de outra forma: vendendo bônus de guerra com a sua fama.",
+    "sub": "A Hedy, sugeriram que ajudasse de outra forma: vendendo bônus de guerra com a sua fama."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "Ela fez isso. Beijava quem comprasse vinte e cinco mil dólares em bônus. Em uma única noite arrecadou sete milhões.",
+    "sub": "Ela fez isso. Beijava quem comprasse vinte e cinco mil dólares em bônus. Em uma única noite arrecadou sete milhões."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "Em uma turnê por várias cidades, atribuem a ela cerca de vinte e cinco milhões.",
+    "sub": "Em uma turnê por várias cidades, atribuem a ela cerca de vinte e cinco milhões."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "pause": 0.85,
+    "speak": "Um detalhe: o marinheiro escolhido ao acaso para o beijo era sempre o mesmo. Fazia parte do show.",
+    "sub": "Um detalhe: o marinheiro escolhido ao acaso para o beijo era sempre o mesmo. Fazia parte do show."
+  },
+  {
+    "id": "c6_07",
+    "ch": 6,
+    "pause": 0.9,
+    "speak": "Seu rosto arrecadou milhões. Sua ideia ficou em uma gaveta.",
+    "sub": "Seu rosto arrecadou milhões. Sua ideia ficou em uma gaveta."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Capítulo sete. A gaveta.",
+    "sub": "Capítulo sete. A gaveta."
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "A patente venceu em mil novecentos e cinquenta e nove. Naquele mesmo ano, Antheil morreu.",
+    "sub": "A patente venceu em 1959. Naquele mesmo ano, Antheil morreu."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "A essa altura, engenheiros já haviam resgatado a ideia e a tornado eletrônica, sem rolos de papel.",
+    "sub": "A essa altura, engenheiros já haviam resgatado a ideia e a tornado eletrônica, sem rolos de papel."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Em mil novecentos e sessenta e dois chegou a crise dos mísseis em Cuba. Os navios dos Estados Unidos já usavam uma versão desse sistema.",
+    "sub": "Em 1962 chegou a crise dos mísseis em Cuba. Os navios dos Estados Unidos já usavam uma versão desse sistema."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Hedy não recebeu nada: a patente havia vencido e quase ninguém sabia que era dela. Sua carreira se apagou e ela viveu seus últimos anos muito isolada.",
+    "sub": "Hedy não recebeu nada: a patente havia vencido e quase ninguém sabia que era dela. Sua carreira se apagou e ela viveu seus últimos anos muito isolada."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 0.85,
+    "speak": "Enquanto isso, sua ideia continuou crescendo. Nos anos oitenta e noventa, saltar de frequência se tornou uma peça-chave das comunicações sem fio.",
+    "sub": "Enquanto isso, sua ideia continuou crescendo. Nos anos oitenta e noventa, saltar de frequência se tornou uma peça-chave das comunicações sem fio."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "pause": 0.9,
+    "speak": "O mundo se encheu da sua ideia. E se esqueceu do seu nome.",
+    "sub": "O mundo se encheu da sua ideia. E se esqueceu do seu nome."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Capítulo oito. Mil e seiscentos saltos.",
+    "sub": "Capítulo oito. Mil e seiscentos saltos."
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Em mil novecentos e noventa e sete, aos oitenta e dois anos, ela recebeu um prêmio para pioneiros da era digital, junto com Antheil. Já não aparecia em público, então não foi recebê-lo.",
+    "sub": "Em 1997, aos oitenta e dois anos, ela recebeu um prêmio para pioneiros da era digital, junto com Antheil. Já não aparecia em público, então não foi recebê-lo."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Morreu no ano dois mil. Em dois mil e quatorze entrou para o Hall da Fama dos Inventores dos Estados Unidos. E no ano seguinte, o Google lhe dedicou sua página inicial no dia do seu aniversário.",
+    "sub": "Morreu no ano 2000. Em 2014 entrou para o Hall da Fama dos Inventores dos Estados Unidos. E no ano seguinte, o Google lhe dedicou sua página inicial no dia do seu aniversário."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.4,
+    "speak": "Hoje, o Bluetooth clássico divide seu sinal em setenta e nove canais. E salta entre eles até mil e seiscentas vezes por segundo.",
+    "sub": "Hoje, o Bluetooth clássico divide seu sinal em setenta e nove canais. E salta entre eles até mil e seiscentas vezes por segundo."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "É por isso que seus fones quase não falham mesmo perto do Wi-Fi ou de um micro-ondas: se um canal está ocupado, eles pulam para outro.",
+    "sub": "É por isso que seus fones quase não falham mesmo perto do Wi-Fi ou de um micro-ondas: se um canal está ocupado, eles pulam para outro."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.5,
+    "speak": "O rolo de papel agora é um chip. Sua ideia faz parte de uma família de técnicas usadas pelo Bluetooth e por muitos rádios. O truque é o mesmo: saltar juntos, em segredo.",
+    "sub": "O rolo de papel agora é um chip. Sua ideia faz parte de uma família de técnicas usadas pelo Bluetooth e por muitos rádios. O truque é o mesmo: saltar juntos, em segredo."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 0.85,
+    "speak": "Então, da próxima vez que conectar seus fones de ouvido, pense em um piano dentro de um torpedo.",
+    "sub": "Então, da próxima vez que conectar seus fones de ouvido, pense em um piano dentro de um torpedo."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 0.95,
+    "speak": "E em uma mulher a quem pediam que ficasse parada.",
+    "sub": "E em uma mulher a quem pediam que ficasse parada."
+  },
+  {
+    "id": "c8_08",
+    "ch": 8,
+    "pause": 0.9,
+    "speak": "E agora lemos vocês nos comentários: que história você gostaria de ver no próximo episódio?",
+    "sub": "E agora lemos vocês nos comentários: que história você gostaria de ver no próximo episódio?"
+  }
+]

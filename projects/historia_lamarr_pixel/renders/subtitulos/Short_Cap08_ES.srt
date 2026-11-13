@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:03,410
+Capítulo ocho. Mil seiscientos saltos.
+
+2
+00:00:03,760 --> 00:00:14,745
+En 1997, con ochenta y dos años, recibió un premio para pioneros de la era digital, junto a Antheil. Ya no aparecía en público, así que no fue a recibirlo.
+
+3
+00:00:14,965 --> 00:00:26,128
+Murió en el año 2000. En 2014 entró al Salón de la Fama de los Inventores de Estados Unidos. Y al año siguiente, Google le dedicó su portada el día de su cumpleaños.
+
+4
+00:00:26,578 --> 00:00:35,018
+Hoy, el Bluetooth clásico reparte su señal en setenta y nueve canales. Y salta entre ellos hasta mil seiscientas veces por segundo.
+
+5
+00:00:35,238 --> 00:00:44,213
+Por eso tus auriculares casi no se cortan aunque haya wifi o un microondas cerca: si un canal está ocupado, saltan a otro.
+
+6
+00:00:44,433 --> 00:00:56,177
+El rollo de papel ahora es un chip. Su idea es parte de una familia de técnicas que usan el Bluetooth y muchas radios. El truco es el mismo: saltar juntos, en secreto.
+
+7
+00:00:56,827 --> 00:01:01,650
+Así que la próxima vez que conectes tus auriculares, piensa en un piano dentro de un torpedo.
+
+8
+00:01:02,550 --> 00:01:05,452
+Y en una mujer a la que le pedían que se quedara quieta.
+
+9
+00:01:06,402 --> 00:01:12,163
+Y ahora te leemos en los comentarios: ¿qué historia te gustaría ver en el próximo episodio?

@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,544
+Chapter five. The movies talk.
+
+2
+00:00:03,894 --> 00:00:16,352
+In October 1927, The Jazz Singer premiered. It was mostly silent, with title cards. But in a few scenes the star sang and spoke… and the audience heard him.
+
+3
+00:00:16,552 --> 00:00:23,072
+It was the first feature film with synchronized dialogue. Within a few years, silent cinema was over.
+
+4
+00:00:23,522 --> 00:00:31,157
+Where did the sound go? At first, on a separate disc, like a vinyl record, spinning in sync with the projector.
+
+5
+00:00:31,357 --> 00:00:39,038
+Later they put it right on the film strip: a narrow track beside the images. There, sound is a shadow that changes shape.
+
+6
+00:00:39,238 --> 00:00:44,686
+A beam of light shines through it, a sensor reads it… and it turns back into sound.
+
+7
+00:00:44,886 --> 00:00:53,682
+So it wouldn't sound strange, the film had to run at a constant speed. Twenty-four frames per second became the standard. We still use it today.
+
+8
+00:00:54,582 --> 00:00:59,405
+Twenty-four frames per second were chosen so the human voice wouldn't go out of tune.

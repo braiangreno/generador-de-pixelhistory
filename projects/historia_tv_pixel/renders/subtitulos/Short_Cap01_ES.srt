@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:02,874
+Capítulo uno. Un telescopio eléctrico.
+
+2
+00:00:03,224 --> 00:00:11,038
+La idea de mandar imágenes por un cable es más vieja de lo que parece. Según se cuenta, nació en la Nochebuena de 1883.
+
+3
+00:00:11,238 --> 00:00:19,856
+Un estudiante de Berlín, Paul Nipkow, imaginó un disco con agujeros en espiral. Al girar, cada agujero barría una franja de la imagen.
+
+4
+00:00:20,056 --> 00:00:24,745
+Lo patentó como telescopio eléctrico. Nunca llegó a construirlo.
+
+5
+00:00:25,195 --> 00:00:28,901
+Una foto no entra entera en un cable. Pero se puede cortar en tiras.
+
+6
+00:00:29,101 --> 00:00:37,942
+Lees cada tira de izquierda a derecha, como un renglón de un libro: claro, oscuro, claro. Y mandas esos cambios de luz como electricidad.
+
+7
+00:00:38,142 --> 00:00:44,617
+Del otro lado, alguien pinta las tiras en el mismo orden. Si lo haces muy rápido, el ojo ve una imagen completa.
+
+8
+00:00:45,517 --> 00:00:49,625
+La idea estaba. Faltaban cuarenta años para verla funcionar.

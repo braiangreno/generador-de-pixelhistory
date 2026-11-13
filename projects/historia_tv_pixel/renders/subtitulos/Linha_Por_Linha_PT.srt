@@ -1,0 +1,267 @@
+1
+00:00:00,750 --> 00:00:07,850
+A imagem que você está vendo agora é desenhada linha por linha, de cima para baixo. Mais rápido do que o seu olho consegue notar.
+
+2
+00:00:08,050 --> 00:00:12,873
+Essa ideia surgiu na cabeça de um garoto de quatorze anos enquanto arava um campo em Idaho.
+
+3
+00:00:13,073 --> 00:00:21,557
+Ele olhou para os sulcos, um ao lado do outro. E pensou que assim seria possível enviar uma imagem pelo ar: linha por linha.
+
+4
+00:00:22,457 --> 00:00:25,716
+Trinta anos depois, quase ninguém sabia o nome dele.
+
+5
+00:00:26,266 --> 00:00:31,536
+Esta é a história da televisão. E do garoto que a viu em um campo arado.
+
+6
+00:00:32,386 --> 00:00:35,110
+Capítulo um. Um telescópio elétrico.
+
+7
+00:00:35,460 --> 00:00:43,274
+A ideia de mandar imagens por um cabo é mais antiga do que parece. Segundo se conta, nasceu na véspera de Natal de 1883.
+
+8
+00:00:43,474 --> 00:00:52,092
+Um estudante de Berlim, Paul Nipkow, imaginou um disco com furos em espiral. Ao girar, cada furo varria uma faixa da imagem.
+
+9
+00:00:52,292 --> 00:00:56,981
+Ele o patenteou como telescópio elétrico. Nunca chegou a construí-lo.
+
+10
+00:00:57,431 --> 00:01:01,137
+Uma foto não cabe inteira dentro de um cabo. Mas pode ser cortada em tiras.
+
+11
+00:01:01,337 --> 00:01:10,178
+Você lê cada tira da esquerda para a direita, como a linha de um livro: claro, escuro, claro. E envia essas mudanças de luz como eletricidade.
+
+12
+00:01:10,378 --> 00:01:16,853
+Do outro lado, alguém pinta as tiras na mesma ordem. Se você fizer isso muito rápido, o olho vê uma imagem completa.
+
+13
+00:01:17,753 --> 00:01:21,861
+A ideia já existia. Faltavam quarenta anos para vê-la funcionar.
+
+14
+00:01:22,711 --> 00:01:26,060
+Capítulo dois. A cabeça do boneco.
+
+15
+00:01:26,410 --> 00:01:34,627
+Em um sótão de Londres, um escocês chamado John Logie Baird tentou fazer funcionar. Montou um aparelho com discos giratórios, motores e lâmpadas.
+
+16
+00:01:34,827 --> 00:01:42,596
+Seu primeiro ator foi a cabeça de um boneco de ventríloquo, que ele chamava de Stooky Bill. Ele não reclamava do calor das lâmpadas.
+
+17
+00:01:42,796 --> 00:01:47,351
+Quando finalmente viu o rosto do boneco na tela, desceu as escadas correndo.
+
+18
+00:01:47,551 --> 00:01:54,964
+Trouxe um funcionário do escritório de baixo, William Taynton. E Taynton se tornou a primeira pessoa televisionada da história.
+
+19
+00:01:55,164 --> 00:02:05,836
+Em janeiro de 1926, Baird mostrou o invento para cerca de quarenta cientistas. A imagem era pequenininha, alaranjada e tinha apenas umas trinta linhas.
+
+20
+00:02:06,736 --> 00:02:12,005
+Era televisão. Mas um disco girando nunca iria muito mais longe.
+
+21
+00:02:12,855 --> 00:02:15,266
+Capítulo três. Os sulcos.
+
+22
+00:02:15,616 --> 00:02:27,851
+Enquanto isso, nos Estados Unidos, Philo Farnsworth havia nascido em uma cabana de troncos. Na casa dele não havia nem luz elétrica. Mas aos seis anos já tinha decidido que seria inventor.
+
+23
+00:02:28,051 --> 00:02:38,724
+Aos quatorze anos, arando com cavalos, olhou para trás. E pensou em um feixe de elétrons que varresse uma imagem igual ao arado: linha por linha.
+
+24
+00:02:39,174 --> 00:02:43,818
+Sem discos. Sem nada girando. Apenas eletricidade.
+
+25
+00:02:44,018 --> 00:02:57,012
+Ele explicou tudo no quadro-negro para seu professor de química, Justin Tolman. O professor disse que, se ele realmente quisesse aquilo, iria conseguir. Depois copiou o desenho em um papel e o guardou. Lembre-se desse papel.
+
+26
+00:02:57,912 --> 00:03:02,422
+Ele tinha quinze anos. E acabava de desenhar a televisão em um quadro-negro.
+
+27
+00:03:03,272 --> 00:03:06,175
+Capítulo quatro. O cifrão.
+
+28
+00:03:06,525 --> 00:03:14,205
+Aos vinte anos conseguiu investidores, vinte e cinco mil dólares e um laboratório em São Francisco. Sua esposa, Pem, trabalhava com ele.
+
+29
+00:03:14,655 --> 00:03:22,201
+Sua câmera convertia a luz em elétrons. Um ímã os movia em linhas: da esquerda para a direita, de cima para baixo.
+
+30
+00:03:22,401 --> 00:03:30,707
+Na tela, outro feixe de elétrons pintava essas linhas sobre um vidro brilhante. Nada gira. Tudo é eletricidade.
+
+31
+00:03:30,907 --> 00:03:38,186
+Em 7 de setembro de 1927, colocaram na frente da câmera um vidro com um único traço.
+
+32
+00:03:38,386 --> 00:03:47,361
+Na outra sala, dentro de um tubo, apareceu um traço que brilhava. Por telegrama, a equipe avisou, com palavrão incluído, que o aparelho funcionava.
+
+33
+00:03:47,561 --> 00:03:55,018
+Os investidores perguntavam quando iam ver algum dinheiro. Então, um dia, na tela, apareceu… um cifrão.
+
+34
+00:03:55,218 --> 00:04:01,693
+Só algum tempo depois veio o primeiro rosto humano mostrado pelo sistema: o de Pem, sua esposa.
+
+35
+00:04:02,593 --> 00:04:06,389
+Antes de mostrar um rosto, a televisão já mostrava dinheiro.
+
+36
+00:04:07,239 --> 00:04:10,230
+Capítulo cinco. Golias.
+
+37
+00:04:10,580 --> 00:04:17,680
+Do outro lado do país, a maior empresa de rádio dos Estados Unidos queria a televisão para ela. Chamava-se RCA.
+
+38
+00:04:17,880 --> 00:04:31,276
+Seu chefe, David Sarnoff, mandou seu melhor engenheiro, Vladimir Zworykin, visitar o laboratório. Farnsworth mostrou tudo. Dizem que Zworykin comentou que gostaria de ter inventado aquilo ele mesmo.
+
+39
+00:04:31,476 --> 00:04:36,299
+Depois, a RCA ofereceu cem mil dólares por suas patentes. Ele disse que não.
+
+40
+00:04:36,499 --> 00:04:43,733
+Então a RCA abriu um processo de patentes contra ele. Disse que a ideia era de Zworykin, que a havia patenteado antes.
+
+41
+00:04:44,183 --> 00:04:49,541
+Lembra daquele papel? O velho professor Tolman apareceu com o desenho daquele quadro-negro.
+
+42
+00:04:49,741 --> 00:05:01,843
+Em 1934, o escritório de patentes deu razão a Farnsworth. E em 1939, a RCA acabou aceitando pagar uma licença de um milhão de dólares.
+
+43
+00:05:02,743 --> 00:05:07,119
+Um garoto do campo venceu um gigante. Com um desenho de quadro-negro.
+
+44
+00:05:07,969 --> 00:05:10,693
+Capítulo seis. Uma janela na sala.
+
+45
+00:05:11,043 --> 00:05:18,812
+Mas o grande momento ficou com a RCA: na Feira Mundial de Nova York, Sarnoff apresentou a televisão ao público como se fosse dele.
+
+46
+00:05:19,012 --> 00:05:29,729
+A guerra freou tudo. Mas depois, a TV explodiu. Nos Estados Unidos, em 1950, apenas uma em cada dez casas tinha uma.
+
+47
+00:05:29,929 --> 00:05:37,252
+Dez anos depois, quase nove em cada dez. Na América Latina, as primeiras transmissões também chegaram nesses anos cinquenta.
+
+48
+00:05:37,702 --> 00:05:44,400
+E como vemos movimento? Se você mostra ao olho muitas imagens paradas por segundo, o cérebro junta todas elas.
+
+49
+00:05:44,600 --> 00:05:51,254
+A TV de tubo desenhava mais de quinhentas linhas por imagem. E entre vinte e cinco e trinta imagens por segundo.
+
+50
+00:05:51,454 --> 00:05:57,616
+Por isso, se você filma uma TV antiga com o celular, vê faixas escuras: a câmera pega a tela no meio do desenho.
+
+51
+00:05:57,816 --> 00:06:09,113
+Depois veio a cor: três pontinhos, vermelho, verde e azul, que misturados formam todas as outras. Sua tela ainda usa esses três.
+
+52
+00:06:10,013 --> 00:06:14,881
+A família já não se reunia ao redor do rádio. Reunia-se em frente a uma janela.
+
+53
+00:06:15,731 --> 00:06:18,097
+Capítulo sete. Doutor X.
+
+54
+00:06:18,447 --> 00:06:25,324
+E Farnsworth? Nunca ficou rico com a TV. Suas primeiras patentes venceram bem quando a indústria decolava.
+
+55
+00:06:25,524 --> 00:06:30,838
+Segundo contou seu filho, ele não gostava do que era transmitido. Não queria que seus filhos assistissem.
+
+56
+00:06:31,038 --> 00:06:40,638
+Em 1957, foi convidado para um programa de auditório em que famosos tinham que adivinhar o segredo do convidado. Foi apresentado como Doutor X.
+
+57
+00:06:40,838 --> 00:06:46,108
+O público em casa leu o segredo na tela: ele havia inventado a televisão eletrônica.
+
+58
+00:06:46,308 --> 00:06:58,319
+Os famosos perguntaram de tudo. Não adivinharam. O apresentador disse que, sem ele, estaria sem emprego. Farnsworth saiu com oitenta dólares e um pacote de cigarros.
+
+59
+00:06:59,219 --> 00:07:05,203
+O inventor da televisão apareceu na televisão. E ninguém o reconheceu.
+
+60
+00:07:06,053 --> 00:07:08,822
+Capítulo oito. Valeu a pena.
+
+61
+00:07:09,172 --> 00:07:17,566
+Em 20 de julho de 1969, cerca de seiscentos milhões de pessoas viram pela televisão dois astronautas na Lua.
+
+62
+00:07:17,766 --> 00:07:25,000
+Farnsworth também assistia, na sala dele. Segundo contou sua esposa, naquele momento ele lhe disse que tudo tinha valido a pena.
+
+63
+00:07:25,200 --> 00:07:32,390
+Morreu dois anos depois. Hoje, nos Estados Unidos, quase metade do tempo em frente à televisão já é streaming.
+
+64
+00:07:32,590 --> 00:07:37,635
+E a plataforma mais vista nessas telas é o YouTube. Sim: esta aqui.
+
+65
+00:07:38,135 --> 00:07:43,896
+Mudou tudo. Mas a ideia continua sendo a mesma: a imagem é desenhada linha por linha.
+
+66
+00:07:44,846 --> 00:07:48,373
+Tudo começou com um garoto que olhou para trás enquanto arava.
+
+67
+00:07:49,323 --> 00:07:54,771
+E agora lemos vocês nos comentários: que história você gostaria de ver no próximo episódio?

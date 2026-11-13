@@ -1,0 +1,39 @@
+1
+00:00:00,150 --> 00:00:02,204
+CHAPTER 2 — THE HONEYCOMB
+
+2
+00:00:02,554 --> 00:00:08,895
+But a phone is useless without a network. And back then, the network was one giant antenna for the entire city.
+
+3
+00:00:09,095 --> 00:00:16,820
+In New York, about two thousand subscribers shared twelve channels. To make a call, you had to wait your turn. Sometimes for half an hour.
+
+4
+00:00:17,270 --> 00:00:24,415
+Let's go to the chalkboard. One big antenna covers the whole city, but it has very few channels. When they fill up, nobody else can talk.
+
+5
+00:00:24,615 --> 00:00:31,715
+The idea was to split the city into small cells, like a honeycomb. Each cell has its own low-power antenna.
+
+6
+00:00:31,915 --> 00:00:39,551
+Because the signal doesn't travel far, two separated cells can use the exact same channels without interfering. That way, each channel is reused many times.
+
+7
+00:00:39,751 --> 00:00:44,171
+And when you move, the call is handed off from one antenna to the next without dropping.
+
+8
+00:00:44,371 --> 00:00:50,310
+Many small antennas serve far more people than one big one. That's why it's called a cell phone: because of the cells.
+
+9
+00:00:50,510 --> 00:00:59,129
+The idea was born at Bell Labs in 1947. And among those who turned it into a real network was Joel Engel's team.
+
+10
+00:01:00,029 --> 00:01:04,762
+The rival from that phone call was designing the network that phone was going to use.

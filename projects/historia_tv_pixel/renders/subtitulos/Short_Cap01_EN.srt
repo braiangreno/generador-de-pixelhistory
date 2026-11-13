@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:02,874
+Chapter one. An electric telescope.
+
+2
+00:00:03,224 --> 00:00:11,038
+The idea of sending pictures through a wire is older than it seems. As the story goes, it was born on Christmas Eve, 1883.
+
+3
+00:00:11,238 --> 00:00:19,856
+A student in Berlin, Paul Nipkow, imagined a disk with holes in a spiral. As it spun, each hole scanned a strip of the image.
+
+4
+00:00:20,056 --> 00:00:24,745
+He patented it as an electric telescope. He never built it.
+
+5
+00:00:25,195 --> 00:00:28,901
+A whole photo cannot fit inside a wire at once. But you can slice it into strips.
+
+6
+00:00:29,101 --> 00:00:37,942
+You read each strip from left to right, like a line in a book: light, dark, light. And you send those changes of light as electricity.
+
+7
+00:00:38,142 --> 00:00:44,617
+On the other end, someone paints the strips in the exact same order. If you do it fast enough, the eye sees a complete picture.
+
+8
+00:00:45,517 --> 00:00:49,625
+The idea was there. It would take forty years to see it work.

@@ -1,0 +1,39 @@
+1
+00:00:00,150 --> 00:00:02,204
+CAPÍTULO 2 — A COLMEIA
+
+2
+00:00:02,554 --> 00:00:08,895
+Mas um telefone não serve sem uma rede. E a rede da época era uma antena gigante para a cidade inteira.
+
+3
+00:00:09,095 --> 00:00:16,820
+Em Nova York, uns dois mil assinantes dividiam doze canais. Para falar era preciso esperar na fila. Às vezes, meia hora.
+
+4
+00:00:17,270 --> 00:00:24,415
+Vamos ao quadro. Uma antena grande cobre toda a cidade, mas tem poucos canais. Quando ocupados, mais ninguém fala.
+
+5
+00:00:24,615 --> 00:00:31,715
+A ideia foi dividir a cidade em células pequenas, como uma colmeia de abelhas. Cada célula tem sua própria antena, de baixa potência.
+
+6
+00:00:31,915 --> 00:00:39,551
+Como o sinal não vai longe, duas células separadas podem usar os mesmos canais sem interferir. Assim, cada canal serve muitas vezes.
+
+7
+00:00:39,751 --> 00:00:44,171
+E quando você se move, a chamada passa de uma antena para a seguinte sem cair.
+
+8
+00:00:44,371 --> 00:00:50,310
+Muitas antenas pequenas atendem mais gente do que uma grande. Por isso se chama celular: pelas células.
+
+9
+00:00:50,510 --> 00:00:59,129
+A ideia nasceu nos Bell Labs em 1947. E entre os que a transformaram numa rede de verdade estava a equipe de Joel Engel.
+
+10
+00:01:00,029 --> 00:01:04,762
+O rival daquela chamada estava projetando a rede que aquele telefone ia usar.

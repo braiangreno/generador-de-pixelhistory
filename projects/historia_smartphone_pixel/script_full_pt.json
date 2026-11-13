@@ -1,0 +1,513 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.4,
+    "speak": "Numa manhã de abril de mil novecentos e setenta e três, um engenheiro para numa calçada de Nova York. Ele está a caminho de uma coletiva de imprensa, mas antes quer testar uma coisa.",
+    "sub": "Numa manhã de abril de 1973, um engenheiro para numa calçada de Nova York. Ele está a caminho de uma coletiva de imprensa, mas antes quer testar uma coisa."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "Ele levanta um aparelho do tamanho de um tijolo e disca um número. As pessoas se viram. Ninguém jamais tinha visto alguém falar ao telefone no meio da rua.",
+    "sub": "Ele levanta um aparelho do tamanho de um tijolo e disca um número. As pessoas se viram. Ninguém jamais tinha visto alguém falar ao telefone no meio da rua."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.85,
+    "speak": "Para quem ele liga? Nem para a mãe, nem para o chefe. Ele liga para Joel Engel, o chefe da equipe rival. Lembre-se desse nome.",
+    "sub": "Para quem ele liga? Nem para a mãe, nem para o chefe. Ele liga para Joel Engel, o chefe da equipe rival. Lembre-se desse nome."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 0.55,
+    "speak": "A primeira chamada de um celular foi para se exibir.",
+    "sub": "A primeira chamada de um celular foi para se exibir."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 1.0,
+    "speak": "Hoje há mais linhas de celular do que pessoas no planeta. Esta é a história do telefone que você leva no bolso. E de como ele funciona.",
+    "sub": "Hoje há mais linhas de celular do que pessoas no planeta. Esta é a história do telefone que você leva no bolso. E de como ele funciona."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Capítulo um. O tijolo.",
+    "sub": "CAPÍTULO 1 — O TIJOLO"
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "Telefones móveis já existiam. Eram telefones de carro: o equipamento ocupava o porta-malas e gastava muita bateria.",
+    "sub": "Telefones móveis já existiam. Eram telefones de carro: o equipamento ocupava o porta-malas e gastava muita bateria."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Martin Cooper, engenheiro da Motorola, pensava diferente. As pessoas não queriam falar de dentro de um carro. Queriam falar de qualquer lugar.",
+    "sub": "Martin Cooper, engenheiro da Motorola, pensava diferente. As pessoas não queriam falar de dentro de um carro. Queriam falar de qualquer lugar."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "Sua equipe montou o protótipo em poucos meses. Pesava mais de um quilo, e quase tudo era bateria.",
+    "sub": "Sua equipe montou o protótipo em poucos meses. Pesava mais de um quilo, e quase tudo era bateria."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "Não tinha tela. Servia para três coisas: discar, falar e ouvir.",
+    "sub": "Não tinha tela. Servia para três coisas: discar, falar e ouvir."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Você falava meia hora e carregava por dez. Segundo contou Cooper, isso não era problema: ninguém aguentava o tijolo na orelha por tanto tempo.",
+    "sub": "Você falava meia hora e carregava por dez. Segundo contou Cooper, isso não era problema: ninguém aguentava o tijolo na orelha por tanto tempo."
+  },
+  {
+    "id": "c1_06",
+    "ch": 1,
+    "pause": 0.85,
+    "speak": "Chegou às lojas dez anos depois, em mil novecentos e oitenta e três, por quase quatro mil dólares. Hoje seriam mais de dez mil.",
+    "sub": "Chegou às lojas dez anos depois, em 1983, por quase 4 mil dólares. Hoje seriam mais de 10 mil."
+  },
+  {
+    "id": "c1_07",
+    "ch": 1,
+    "pause": 1.0,
+    "speak": "Até então, você ligava para um lugar. Desde então, para uma pessoa.",
+    "sub": "Até então, você ligava para um lugar. Desde então, para uma pessoa."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Capítulo dois. A colmeia.",
+    "sub": "CAPÍTULO 2 — A COLMEIA"
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Mas um telefone não serve sem uma rede. E a rede da época era uma antena gigante para a cidade inteira.",
+    "sub": "Mas um telefone não serve sem uma rede. E a rede da época era uma antena gigante para a cidade inteira."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Em Nova York, uns dois mil assinantes dividiam doze canais. Para falar era preciso esperar na fila. Às vezes, meia hora.",
+    "sub": "Em Nova York, uns dois mil assinantes dividiam doze canais. Para falar era preciso esperar na fila. Às vezes, meia hora."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Vamos ao quadro. Uma antena grande cobre toda a cidade, mas tem poucos canais. Quando ocupados, mais ninguém fala.",
+    "sub": "Vamos ao quadro. Uma antena grande cobre toda a cidade, mas tem poucos canais. Quando ocupados, mais ninguém fala."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "A ideia foi dividir a cidade em células pequenas, como uma colmeia de abelhas. Cada célula tem sua própria antena, de baixa potência.",
+    "sub": "A ideia foi dividir a cidade em células pequenas, como uma colmeia de abelhas. Cada célula tem sua própria antena, de baixa potência."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Como o sinal não vai longe, duas células separadas podem usar os mesmos canais sem interferir. Assim, cada canal serve muitas vezes.",
+    "sub": "Como o sinal não vai longe, duas células separadas podem usar os mesmos canais sem interferir. Assim, cada canal serve muitas vezes."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "E quando você se move, a chamada passa de uma antena para a seguinte sem cair.",
+    "sub": "E quando você se move, a chamada passa de uma antena para a seguinte sem cair."
+  },
+  {
+    "id": "c2_07",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Muitas antenas pequenas atendem mais gente do que uma grande. Por isso se chama celular: pelas células.",
+    "sub": "Muitas antenas pequenas atendem mais gente do que uma grande. Por isso se chama celular: pelas células."
+  },
+  {
+    "id": "c2_08",
+    "ch": 2,
+    "pause": 0.85,
+    "speak": "A ideia nasceu nos Bell Labs em mil novecentos e quarenta e sete. E entre os que a transformaram numa rede de verdade estava a equipe de Joel Engel.",
+    "sub": "A ideia nasceu nos Bell Labs em 1947. E entre os que a transformaram numa rede de verdade estava a equipe de Joel Engel."
+  },
+  {
+    "id": "c2_09",
+    "ch": 2,
+    "pause": 1.0,
+    "speak": "O rival daquela chamada estava projetando a rede que aquele telefone ia usar.",
+    "sub": "O rival daquela chamada estava projetando a rede que aquele telefone ia usar."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Capítulo três. Escrever e olhar.",
+    "sub": "CAPÍTULO 3 — ESCREVER E OLHAR"
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Nos anos noventa, o tijolo encolheu e coube no bolso. E as redes ficaram digitais: a voz viajava convertida em zeros e uns.",
+    "sub": "Nos anos noventa, o tijolo encolheu e coube no bolso. E as redes ficaram digitais: a voz viajava convertida em zeros e uns."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "E se a voz viajava como números, também podiam viajar letras.",
+    "sub": "E se a voz viajava como números, também podiam viajar letras."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "Num dezembro, na Inglaterra, um engenheiro de vinte e dois anos mandou a primeira mensagem de texto. Ele a escreveu num computador.",
+    "sub": "Num dezembro, na Inglaterra, um engenheiro de 22 anos mandou a primeira mensagem de texto. Ele a escreveu num computador."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Os telefones ainda não tinham como escrever. A mensagem dizia feliz Natal, em inglês. E quem a recebeu não podia responder.",
+    "sub": "Os telefones ainda não tinham como escrever. A mensagem dizia feliz Natal, em inglês. E quem a recebeu não podia responder."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Quando os telefones aprenderam a escrever, cada mensagem tinha um limite de cento e sessenta caracteres. E nasceu o costume de escrever abreviado.",
+    "sub": "Quando os telefones aprenderam a escrever, cada mensagem tinha um limite de 160 caracteres. E nasceu o costume de escrever abreviado."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Cinco anos depois, numa maternidade da Califórnia, um programador esperava o nascimento da filha. Enquanto esperava, uniu com cabos uma câmera, seu telefone e um computador.",
+    "sub": "Cinco anos depois, numa maternidade da Califórnia, um programador esperava o nascimento da filha. Enquanto esperava, uniu com cabos uma câmera, seu telefone e um computador."
+  },
+  {
+    "id": "c3_07",
+    "ch": 3,
+    "pause": 0.85,
+    "speak": "Logo depois, a foto da filha chegou a umas duas mil pessoas. É considerada a primeira foto compartilhada na hora a partir de um telefone.",
+    "sub": "Logo depois, a foto da filha chegou a umas duas mil pessoas. É considerada a primeira foto compartilhada na hora a partir de um telefone."
+  },
+  {
+    "id": "c3_08",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "O telefone já sabia escrever e olhar. Faltava pensar.",
+    "sub": "O telefone já sabia escrever e olhar. Faltava pensar."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Capítulo quatro. Simon.",
+    "sub": "CAPÍTULO 4 — SIMON"
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Na verdade, alguém já tinha tentado. Em mil novecentos e noventa e quatro, a IBM colocou à venda um telefone com tela sensível ao toque. Chamava-se Simon.",
+    "sub": "Na verdade, alguém já tinha tentado. Em 1994, a IBM colocou à venda um telefone com tela sensível ao toque. Chamava-se Simon."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Tinha agenda, notas, e-mail e até fax. Usava-se com uma caneta. A palavra smartphone nem sequer existia, mas hoje ele é considerado o primeiro.",
+    "sub": "Tinha agenda, notas, e-mail e até fax. Usava-se com uma caneta. A palavra smartphone nem sequer existia, mas hoje ele é considerado o primeiro."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Mas pesava meio quilo, a bateria durava uma hora e custava quase novecentos dólares. E de internet no telefone, nem falar.",
+    "sub": "Mas pesava meio quilo, a bateria durava uma hora e custava quase 900 dólares. E de internet no telefone, nem falar."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Vendeu uns cinquenta mil e, aos seis meses, sumiu das lojas.",
+    "sub": "Vendeu uns 50 mil e, aos seis meses, sumiu das lojas."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 0.85,
+    "speak": "Faltavam peças que ainda não existiam. Baterias que durassem, internet no bolso e uma tela para o dedo.",
+    "sub": "Faltavam peças que ainda não existiam. Baterias que durassem, internet no bolso e uma tela para o dedo."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "pause": 1.0,
+    "speak": "O Simon não fracassou por ser ruim. Fracassou por chegar cedo demais.",
+    "sub": "O Simon não fracassou por ser ruim. Fracassou por chegar cedo demais."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Capítulo cinco. Uma tela que sente.",
+    "sub": "CAPÍTULO 5 — UMA TELA QUE SENTE"
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Dez anos depois, os telefones inteligentes eram coisa de escritório: telinha em cima, teclado de botões embaixo.",
+    "sub": "Dez anos depois, os telefones inteligentes eram coisa de escritório: telinha em cima, teclado de botões embaixo."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "E em nove de janeiro de dois mil e sete, em São Francisco, a Apple apresentou um telefone sem teclado. Toda a frente era uma tela.",
+    "sub": "E em 9 de janeiro de 2007, em São Francisco, a Apple apresentou um telefone sem teclado. Toda a frente era uma tela."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Apresentaram-no como três aparelhos em um: um tocador de música, um telefone e uma janela para a internet. Saiu à venda em junho, com filas na porta das lojas.",
+    "sub": "Apresentaram-no como três aparelhos em um: um tocador de música, um telefone e uma janela para a internet. Saiu à venda em junho, com filas na porta das lojas."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Usava-se com os dedos. Com dois, você ampliava uma foto. E não sentia a pressão, como o Simon. Sentia outra coisa.",
+    "sub": "Usava-se com os dedos. Com dois, você ampliava uma foto. E não sentia a pressão, como o Simon. Sentia outra coisa."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Ao quadro. Seu corpo conduz eletricidade. Muito pouquinho, mas conduz.",
+    "sub": "Ao quadro. Seu corpo conduz eletricidade. Muito pouquinho, mas conduz."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Debaixo do vidro há uma grade de linhas transparentes com uma pequena carga elétrica. Cada cruzamento funciona como um sensor.",
+    "sub": "Debaixo do vidro há uma grade de linhas transparentes com uma pequena carga elétrica. Cada cruzamento funciona como um sensor."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Quando você apoia o dedo, muda a carga dos cruzamentos de baixo. O telefone mede onde mudou, o tempo todo. E pode seguir vários dedos de uma vez.",
+    "sub": "Quando você apoia o dedo, muda a carga dos cruzamentos de baixo. O telefone mede onde mudou, o tempo todo. E pode seguir vários dedos de uma vez."
+  },
+  {
+    "id": "c5_08",
+    "ch": 5,
+    "pause": 0.85,
+    "speak": "Por isso com luvas grossas não funciona: o tecido não conduz.",
+    "sub": "Por isso com luvas grossas não funciona: o tecido não conduz."
+  },
+  {
+    "id": "c5_09",
+    "ch": 5,
+    "pause": 1.0,
+    "speak": "A tela não sente o seu dedo. Sente a sua eletricidade.",
+    "sub": "A tela não sente o seu dedo. Sente a sua eletricidade."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "Capítulo seis. Quinhentos aplicativos.",
+    "sub": "CAPÍTULO 6 — QUINHENTOS APLICATIVOS"
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "Mas aquele primeiro telefone não deixava instalar programas de outros. No ano seguinte, isso mudou.",
+    "sub": "Mas aquele primeiro telefone não deixava instalar programas de outros. No ano seguinte, isso mudou."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "Em julho de dois mil e oito abriu uma loja de aplicativos com quinhentos. No primeiro fim de semana foram baixados dez milhões.",
+    "sub": "Em julho de 2008 abriu uma loja de aplicativos com quinhentos. No primeiro fim de semana foram baixados dez milhões."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "Qualquer um podia programar um e vendê-lo para o mundo inteiro. Uma lanterna, um jogo, um mapa.",
+    "sub": "Qualquer um podia programar um e vendê-lo para o mundo inteiro. Uma lanterna, um jogo, um mapa."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "Alguns meses depois saiu o primeiro telefone com Android, o sistema do Google. Ainda tinha um teclado que deslizava por baixo da tela.",
+    "sub": "Alguns meses depois saiu o primeiro telefone com Android, o sistema do Google. Ainda tinha um teclado que deslizava por baixo da tela."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "E, ao contrário do outro, o Android podia ser usado por qualquer fabricante.",
+    "sub": "E, ao contrário do outro, o Android podia ser usado por qualquer fabricante."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "pause": 0.85,
+    "speak": "Hoje, cerca de dois em cada três smartphones usam Android. Quase todo o resto é iPhone.",
+    "sub": "Hoje, cerca de dois em cada três smartphones usam Android. Quase todo o resto é iPhone."
+  },
+  {
+    "id": "c6_07",
+    "ch": 6,
+    "pause": 1.0,
+    "speak": "Desde então, seu telefone é o que você instala nele.",
+    "sub": "Desde então, seu telefone é o que você instala nele."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Capítulo sete. Einstein no bolso.",
+    "sub": "CAPÍTULO 7 — EINSTEIN NO BOLSO"
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "De tudo o que seu telefone faz, há algo que parece mágica: ele sabe onde você está.",
+    "sub": "De tudo o que seu telefone faz, há algo que parece mágica: ele sabe onde você está."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Ele sabe ouvindo satélites que giram a uns vinte mil quilômetros de altura. Cada um leva um relógio atômico.",
+    "sub": "Ele sabe ouvindo satélites que giram a uns 20 mil quilômetros de altura. Cada um leva um relógio atômico."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "Ao quadro. Cada satélite repete a hora o tempo todo. Seu telefone escuta e compara.",
+    "sub": "Ao quadro. Cada satélite repete a hora o tempo todo. Seu telefone escuta e compara."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Se um sinal chega mais tarde, esse satélite está mais longe. Com quatro satélites, o telefone calcula o ponto exato onde você está.",
+    "sub": "Se um sinal chega mais tarde, esse satélite está mais longe. Com quatro satélites, o telefone calcula o ponto exato onde você está."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Mas lá em cima o tempo passa um pouquinho mais rápido. Os relógios dos satélites adiantam uns trinta e oito milionésimos de segundo por dia.",
+    "sub": "Mas lá em cima o tempo passa um pouquinho mais rápido. Os relógios dos satélites adiantam uns 38 milionésimos de segundo por dia."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "pause": 0.85,
+    "speak": "Parece nada. Mas sem corrigir isso, sua localização desviaria uns dez quilômetros por dia. É exatamente o que prevê a relatividade de Einstein.",
+    "sub": "Parece nada. Mas sem corrigir isso, sua localização desviaria uns 10 quilômetros por dia. É exatamente o que prevê a relatividade de Einstein."
+  },
+  {
+    "id": "c7_07",
+    "ch": 7,
+    "pause": 1.0,
+    "speak": "Cada vez que você abre um mapa, Einstein tem razão.",
+    "sub": "Cada vez que você abre um mapa, Einstein tem razão."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Capítulo oito. Uma chamada ao rival.",
+    "sub": "CAPÍTULO 8 — UMA CHAMADA AO RIVAL"
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.4,
+    "speak": "O tijolo pesava mais de um quilo e só servia para falar. O de hoje pesa uns duzentos gramas.",
+    "sub": "O tijolo pesava mais de um quilo e só servia para falar. O de hoje pesa uns 200 gramas."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "E tem mais de um milhão de vezes mais memória que o computador da Apollo. Aquele que levou astronautas à Lua.",
+    "sub": "E tem mais de um milhão de vezes mais memória que o computador da Apollo. Aquele que levou astronautas à Lua."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.4,
+    "speak": "Há mais de sete bilhões de linhas de smartphone. E mais linhas de celular do que pessoas na Terra.",
+    "sub": "Há mais de sete bilhões de linhas de smartphone. E mais linhas de celular do que pessoas na Terra."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Nós o usamos para escrever, olhar, pagar e saber onde estamos. Ligar é apenas uma das coisas que ele faz.",
+    "sub": "Nós o usamos para escrever, olhar, pagar e saber onde estamos. Ligar é apenas uma das coisas que ele faz."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.85,
+    "speak": "E tudo começou numa calçada de Nova York. Um homem com um tijolo na orelha, ligando para o seu rival.",
+    "sub": "E tudo começou numa calçada de Nova York. Um homem com um tijolo na orelha, ligando para o seu rival."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 1.0,
+    "speak": "A primeira chamada de um celular foi para se exibir. Algumas coisas não mudaram.",
+    "sub": "A primeira chamada de um celular foi para se exibir. Algumas coisas não mudaram."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 1.2,
+    "speak": "E agora lemos vocês nos comentários: que história você gostaria de ver no próximo episódio?",
+    "sub": "E agora lemos vocês nos comentários: que história você gostaria de ver no próximo episódio?"
+  }
+]

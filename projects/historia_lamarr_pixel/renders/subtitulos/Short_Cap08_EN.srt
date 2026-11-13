@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:03,410
+Chapter Eight. Sixteen Hundred Hops.
+
+2
+00:00:03,760 --> 00:00:14,745
+In 1997, at age eighty-two, she received a pioneer award of the digital age alongside Antheil. She no longer appeared in public, so she didn't attend.
+
+3
+00:00:14,965 --> 00:00:26,128
+She died in the year 2000. In 2014 she was inducted into the National Inventors Hall of Fame. And the following year, Google dedicated its homepage to her on her birthday.
+
+4
+00:00:26,578 --> 00:00:35,018
+Today, classic Bluetooth spreads its signal across seventy-nine channels. And hops between them up to sixteen hundred times per second.
+
+5
+00:00:35,238 --> 00:00:44,213
+That's why your headphones barely drop out even near Wi-Fi or a microwave: if one channel is busy, they jump to another.
+
+6
+00:00:44,433 --> 00:00:56,177
+The paper roll is now a microchip. Her idea belongs to a family of techniques used by Bluetooth and countless radios. The trick is the same: jumping together, in secret.
+
+7
+00:00:56,827 --> 00:01:01,650
+So the next time you connect your headphones, think of a piano inside a torpedo.
+
+8
+00:01:02,550 --> 00:01:05,452
+And of a woman who was told to sit still.
+
+9
+00:01:06,402 --> 00:01:12,163
+And now we're reading you in the comments: what story would you like to see in the next episode?

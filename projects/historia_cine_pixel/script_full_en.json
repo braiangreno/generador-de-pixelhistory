@@ -1,0 +1,404 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "speak": "In the late nineteenth century, one question had painters, scientists, and horse breeders arguing. When a horse gallops, do all four hooves leave the ground at the same time?",
+    "sub": "In the late nineteenth century, one question had painters, scientists, and horse breeders arguing. When a horse gallops, do all four hooves leave the ground at the same time?"
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "speak": "The human eye couldn't see it. Painters drew it each in their own way.",
+    "sub": "The human eye couldn't see it. Painters drew it each in their own way."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "speak": "To settle the doubt, a photographer lined up twelve cameras with threads that the horse snapped as it ran past.",
+    "sub": "To settle the doubt, a photographer lined up twelve cameras with threads that the horse snapped as it ran past."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "speak": "The answer was yes. And without meaning to, he opened the door to cinema.",
+    "sub": "The answer was yes. And without meaning to, he opened the door to cinema."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "speak": "This is the story of cinema. How still photos learned to move, to speak, and to burst with color.",
+    "sub": "This is the story of cinema. How still photos learned to move, to speak, and to burst with color."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "speak": "Chapter one. Twelve cameras.",
+    "sub": "Chapter one. Twelve cameras."
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "speak": "The experiment was funded by Leland Stanford, a railroad millionaire and horse breeder. Legend says there was a bet involved, though no one could ever prove it.",
+    "sub": "The experiment was funded by Leland Stanford, a railroad millionaire and horse breeder. Legend says there was a bet involved, though no one could ever prove it."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "speak": "The photographer was named Eadweard Muybridge. Cameras back then were terribly slow, and it took him years to pull it off.",
+    "sub": "The photographer was named Eadweard Muybridge. Cameras back then were terribly slow, and it took him years to pull it off."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "speak": "In eighteen seventy-eight, in front of journalists, a mare named Sallie Gardner ran past the twelve cameras.",
+    "sub": "In 1878, in front of journalists, a mare named Sallie Gardner ran past the twelve cameras."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "speak": "In some photos, all four legs were in the air. But tucked beneath her belly, not stretched out like in the paintings.",
+    "sub": "In some photos, all four legs were in the air. But tucked beneath her belly, not stretched out like in the paintings."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "speak": "Muybridge did something else: he placed the photos on a wheel and projected them one after another. The horse ran again, now on a wall.",
+    "sub": "Muybridge did something else: he placed the photos on a wheel and projected them one after another. The horse ran again, now on a wall."
+  },
+  {
+    "id": "c1_06",
+    "ch": 1,
+    "speak": "Why do still photos look like a running horse? Because the brain fills in the gaps.",
+    "sub": "Why do still photos look like a running horse? Because the brain fills in the gaps."
+  },
+  {
+    "id": "c1_07",
+    "ch": 1,
+    "speak": "If you see more than ten or twelve images per second, you no longer see photos: you see motion. Just like a flipbook with drawings in the corners.",
+    "sub": "If you see more than ten or twelve images per second, you no longer see photos: you see motion. Just like a flipbook with drawings in the corners."
+  },
+  {
+    "id": "c1_08",
+    "ch": 1,
+    "speak": "There was motion now. What was missing was showing it to a full room.",
+    "sub": "There was motion now. What was missing was showing it to a full room."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "speak": "Chapter two. Thirty-three spectators.",
+    "sub": "Chapter two. Thirty-three spectators."
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "speak": "In the United States, Thomas Edison's team built a box with a peephole: the Kinetoscope. You dropped a coin and watched alone, leaning over, a film just seconds long.",
+    "sub": "In the United States, Thomas Edison's team built a box with a peephole: the Kinetoscope. You dropped a coin and watched alone, leaning over, a film just seconds long."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "speak": "In Paris, a photographer named Antoine Lumière saw that box. And he went home with an idea for his sons.",
+    "sub": "In Paris, a photographer named Antoine Lumière saw that box. And he went home with an idea for his sons."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "speak": "Auguste and Louis Lumière invented a device that filmed, copied, and projected: the Cinematograph.",
+    "sub": "Auguste and Louis Lumière invented a device that filmed, copied, and projected: the Cinematograph."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "speak": "On December twenty-eighth, eighteen ninety-five, they rented the basement of a Paris café. Admission was one franc.",
+    "sub": "On December 28, 1895, they rented the basement of a Paris café. Admission was one franc."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "speak": "There were a hundred chairs. Thirty-three people showed up.",
+    "sub": "There were a hundred chairs. Thirty-three people showed up."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "speak": "They watched ten short films: workers leaving a factory, a baby eating, a prank on a gardener.",
+    "sub": "They watched ten short films: workers leaving a factory, a baby eating, a prank on a gardener."
+  },
+  {
+    "id": "c2_07",
+    "ch": 2,
+    "speak": "You've probably heard that the audience ran away screaming at an approaching train. That film wasn't in the first screening, and there is no record of panic.",
+    "sub": "You've probably heard that the audience ran away screaming at an approaching train. That film wasn't in the first screening, and there is no record of panic."
+  },
+  {
+    "id": "c2_08",
+    "ch": 2,
+    "speak": "Within a few months, the invention had already reached Buenos Aires, Montevideo, and Mexico City.",
+    "sub": "Within a few months, the invention had already reached Buenos Aires, Montevideo, and Mexico City."
+  },
+  {
+    "id": "c2_09",
+    "ch": 2,
+    "speak": "Thirty-three spectators. The smallest audience in cinema history… and the very first.",
+    "sub": "Thirty-three spectators. The smallest audience in cinema history… and the very first."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "speak": "Chapter three. The magician.",
+    "sub": "Chapter three. The magician."
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "speak": "In the audience that night was a stage magician: Georges Méliès.",
+    "sub": "In the audience that night was a stage magician: Georges Méliès."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "speak": "He wanted to buy the machine from the Lumières. They said no. According to legend, they told him cinema was an invention without a future.",
+    "sub": "He wanted to buy the machine from the Lumières. They said no. According to legend, they told him cinema was an invention without a future."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "speak": "So he got hold of an English projector and turned it into his own camera.",
+    "sub": "So he got hold of an English projector and turned it into his own camera."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "speak": "As he told it, one day he was filming a square when the camera jammed for a minute. When projected, an omnibus suddenly turned into a hearse.",
+    "sub": "As he told it, one day he was filming a square when the camera jammed for a minute. When projected, an omnibus suddenly turned into a hearse."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "speak": "He had discovered a trick: if you stop the camera, change something, and keep filming, on screen it looks like magic.",
+    "sub": "He had discovered a trick: if you stop the camera, change something, and keep filming, on screen it looks like magic."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "speak": "With tricks like that he made people vanish, multiplied heads, and in nineteen oh-two, sent a spacecraft to the Moon. It lands right in its eye.",
+    "sub": "With tricks like that he made people vanish, multiplied heads, and in 1902, sent a spacecraft to the Moon. It lands right in its eye."
+  },
+  {
+    "id": "c3_07",
+    "ch": 3,
+    "speak": "It was so successful that in the United States they copied it without permission. One distributor even offered to sell Méliès… his own film.",
+    "sub": "It was so successful that in the United States they copied it without permission. One distributor even offered to sell Méliès… his own film."
+  },
+  {
+    "id": "c3_08",
+    "ch": 3,
+    "speak": "Over time, audiences grew tired of his tricks and the war ruined him. He ended up selling toys and candy at a Paris train station.",
+    "sub": "Over time, audiences grew tired of his tricks and the war ruined him. He ended up selling toys and candy at a Paris train station."
+  },
+  {
+    "id": "c3_09",
+    "ch": 3,
+    "speak": "Journalists rediscovered him. In nineteen thirty-one he received the Legion of Honor, presented by Louis Lumière himself.",
+    "sub": "Journalists rediscovered him. In 1931 he received the Legion of Honor, presented by Louis Lumière himself."
+  },
+  {
+    "id": "c3_10",
+    "ch": 3,
+    "speak": "The Lumières filmed reality. Méliès filmed dreams. Cinema needed them both.",
+    "sub": "The Lumières filmed reality. Méliès filmed dreams. Cinema needed them both."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "speak": "Chapter four. Hollywood.",
+    "sub": "Chapter four. Hollywood."
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "speak": "In the United States, the business belonged to a select few. Edison and other companies formed a trust that controlled cameras, film stock, and theaters.",
+    "sub": "In the United States, the business belonged to a select few. Edison and other companies formed a trust that controlled cameras, film stock, and theaters."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "speak": "Many producers moved west, to a small California town called Hollywood.",
+    "sub": "Many producers moved west, to a small California town called Hollywood."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "speak": "Why there? Because of the sun: you could film almost all year round. And the ocean, mountains, and desert were all close by.",
+    "sub": "Why there? Because of the sun: you could film almost all year round. And the ocean, mountains, and desert were all close by."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "speak": "Legend says they were also fleeing Edison's lawyers, and could slip across to Mexico from there. Historians say it's more myth than fact: even the trust's own companies filmed in California.",
+    "sub": "Legend says they were also fleeing Edison's lawyers, and could slip across to Mexico from there. Historians say it's more myth than fact: even the trust's own companies filmed in California."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "speak": "Movies were silent, yet almost never quiet: theaters usually had a live pianist or an orchestra playing along.",
+    "sub": "Movies were silent, yet almost never quiet: theaters usually had a live pianist or an orchestra playing along."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "speak": "Hollywood wasn't born because of lawyers. It was born because of light.",
+    "sub": "Hollywood wasn't born because of lawyers. It was born because of light."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "speak": "Chapter five. The movies talk.",
+    "sub": "Chapter five. The movies talk."
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "speak": "In October nineteen twenty-seven, The Jazz Singer premiered. It was mostly silent, with title cards. But in a few scenes the star sang and spoke… and the audience heard him.",
+    "sub": "In October 1927, The Jazz Singer premiered. It was mostly silent, with title cards. But in a few scenes the star sang and spoke… and the audience heard him."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "speak": "It was the first feature film with synchronized dialogue. Within a few years, silent cinema was over.",
+    "sub": "It was the first feature film with synchronized dialogue. Within a few years, silent cinema was over."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "speak": "Where did the sound go? At first, on a separate disc, like a vinyl record, spinning in sync with the projector.",
+    "sub": "Where did the sound go? At first, on a separate disc, like a vinyl record, spinning in sync with the projector."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "speak": "Later they put it right on the film strip: a narrow track beside the images. There, sound is a shadow that changes shape.",
+    "sub": "Later they put it right on the film strip: a narrow track beside the images. There, sound is a shadow that changes shape."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "speak": "A beam of light shines through it, a sensor reads it… and it turns back into sound.",
+    "sub": "A beam of light shines through it, a sensor reads it… and it turns back into sound."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "speak": "So it wouldn't sound strange, the film had to run at a constant speed. Twenty-four frames per second became the standard. We still use it today.",
+    "sub": "So it wouldn't sound strange, the film had to run at a constant speed. Twenty-four frames per second became the standard. We still use it today."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "speak": "Twenty-four frames per second were chosen so the human voice wouldn't go out of tune.",
+    "sub": "Twenty-four frames per second were chosen so the human voice wouldn't go out of tune."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "speak": "Chapter six. Color and giant screen.",
+    "sub": "Chapter six. Color and giant screen."
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "speak": "Color arrived slowly. Méliès was already painting some of his films by hand, frame by frame.",
+    "sub": "Color arrived slowly. Méliès was already painting some of his films by hand, frame by frame."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "speak": "The real breakthrough came with three colors: red, green, and blue. Mixing those three lights creates almost any color.",
+    "sub": "The real breakthrough came with three colors: red, green, and blue. Mixing those three lights creates almost any color."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "speak": "In the nineteen thirties, a camera filmed each color onto a separate strip of film, then combined them. It was called Technicolor.",
+    "sub": "In the 1930s, a camera filmed each color onto a separate strip of film, then combined them. It was called Technicolor."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "speak": "In nineteen thirty-nine, The Wizard of Oz began in sepia. When a door opened, the world exploded into color.",
+    "sub": "In 1939, The Wizard of Oz began in sepia. When a door opened, the world exploded into color."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "speak": "In the fifties, television stole audiences away from movie theaters. The answer was to do what a TV set couldn't.",
+    "sub": "In the 1950s, television stole audiences away from movie theaters. The answer was to do what a TV set couldn't."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "speak": "Huge, wider screens, and even three-D movies with special glasses.",
+    "sub": "Huge, wider screens, and even 3D movies with special glasses."
+  },
+  {
+    "id": "c6_07",
+    "ch": 6,
+    "speak": "And in the seventies, with Jaws and Star Wars, the summer blockbuster was born. Lines wrapped all the way around the block.",
+    "sub": "And in the 1970s, with Jaws and Star Wars, the summer blockbuster was born. Lines wrapped all the way around the block."
+  },
+  {
+    "id": "c6_08",
+    "ch": 6,
+    "speak": "Every time a rival screen appeared, cinema got bigger.",
+    "sub": "Every time a rival screen appeared, cinema got bigger."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "speak": "Chapter seven. Twenty-four per second.",
+    "sub": "Chapter seven. Twenty-four per second."
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "speak": "In the nineties, the computer stepped in. In nineteen ninety-three, the dinosaurs of Jurassic Park looked real. And in nineteen ninety-five, Toy Story became the first feature-length film made entirely on a computer.",
+    "sub": "In the 1990s, the computer stepped in. In 1993, the dinosaurs of Jurassic Park looked real. And in 1995, Toy Story became the first feature-length film made entirely on a computer."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "speak": "Then even the film strip disappeared: today, almost everything is shot and projected digitally.",
+    "sub": "Then even the film strip disappeared: today, almost everything is shot and projected digitally."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "speak": "And the highest-grossing movies in history now make nearly three billion dollars.",
+    "sub": "And the highest-grossing movies in history now make nearly three billion dollars."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "speak": "Yet every movie you watch—in a theater, on TV, or on your phone—is still the exact same thing: still images, one after another. Twenty-four per second.",
+    "sub": "Yet every movie you watch—in a theater, on TV, or on your phone—is still the exact same thing: still images, one after another. Twenty-four per second."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "speak": "Your brain does the rest, just like with that horse. And cinema is still looking for the same thing as in that Paris basement: for a group of strangers, in the dark, to watch the same light.",
+    "sub": "Your brain does the rest, just like with that horse. And cinema is still looking for the same thing as in that Paris basement: for a group of strangers, in the dark, to watch the same light."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "speak": "Cinema is still a horse that, for a single instant, flies.",
+    "sub": "Cinema is still a horse that, for a single instant, flies."
+  },
+  {
+    "id": "c7_07",
+    "ch": 7,
+    "speak": "And now we're reading your comments: what story would you like to see in the next episode?",
+    "sub": "And now we're reading your comments: what story would you like to see in the next episode?"
+  }
+]

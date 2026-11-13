@@ -1,0 +1,513 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.4,
+    "speak": "One morning in April nineteen seventy-three, an engineer stops on a New York sidewalk. He is on his way to a press conference, but first he wants to test something.",
+    "sub": "One morning in April 1973, an engineer stops on a New York sidewalk. He is on his way to a press conference, but first he wants to test something."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "He raises a device the size of a brick and dials a number. People turn around. Nobody had ever seen someone talking on a phone right in the middle of the street.",
+    "sub": "He raises a device the size of a brick and dials a number. People turn around. Nobody had ever seen someone talking on a phone right in the middle of the street."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.85,
+    "speak": "Who is he calling? Not his mother or his boss. He calls Joel Engel, the head of the rival team. Remember that name.",
+    "sub": "Who is he calling? Not his mother or his boss. He calls Joel Engel, the head of the rival team. Remember that name."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 0.55,
+    "speak": "The very first cell phone call was made to show off.",
+    "sub": "The very first cell phone call was made to show off."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 1.0,
+    "speak": "Today there are more mobile lines than people on the planet. This is the story of the phone in your pocket. And how it works.",
+    "sub": "Today there are more mobile lines than people on the planet. This is the story of the phone in your pocket. And how it works."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Chapter one. The Brick.",
+    "sub": "CHAPTER 1 — THE BRICK"
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "Mobile phones already existed. They were car phones: the equipment filled the trunk and drained the battery.",
+    "sub": "Mobile phones already existed. They were car phones: the equipment filled the trunk and drained the battery."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Martin Cooper, an engineer at Motorola, thought differently. People didn't want to talk from a car. They wanted to talk from anywhere.",
+    "sub": "Martin Cooper, an engineer at Motorola, thought differently. People didn't want to talk from a car. They wanted to talk from anywhere."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "His team built the prototype in just a few months. It weighed over a kilogram, and almost all of it was battery.",
+    "sub": "His team built the prototype in just a few months. It weighed over a kilogram, and almost all of it was battery."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.4,
+    "speak": "It had no screen. It did three things: dial, talk, and listen.",
+    "sub": "It had no screen. It did three things: dial, talk, and listen."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "You talked for half an hour and charged it for ten. According to Cooper, that wasn't a problem: nobody could hold the brick to their ear that long anyway.",
+    "sub": "You talked for half an hour and charged it for ten. According to Cooper, that wasn't a problem: nobody could hold the brick to their ear that long anyway."
+  },
+  {
+    "id": "c1_06",
+    "ch": 1,
+    "pause": 0.85,
+    "speak": "It reached stores ten years later, in nineteen eighty-three, for nearly four thousand dollars. Today that would be over ten thousand.",
+    "sub": "It reached stores ten years later, in 1983, for nearly $4,000. Today that would be over $10,000."
+  },
+  {
+    "id": "c1_07",
+    "ch": 1,
+    "pause": 1.0,
+    "speak": "Until then, you called a place. From then on, you called a person.",
+    "sub": "Until then, you called a place. From then on, you called a person."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Chapter two. The Honeycomb.",
+    "sub": "CHAPTER 2 — THE HONEYCOMB"
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "But a phone is useless without a network. And back then, the network was one giant antenna for the entire city.",
+    "sub": "But a phone is useless without a network. And back then, the network was one giant antenna for the entire city."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "In New York, about two thousand subscribers shared twelve channels. To make a call, you had to wait your turn. Sometimes for half an hour.",
+    "sub": "In New York, about two thousand subscribers shared twelve channels. To make a call, you had to wait your turn. Sometimes for half an hour."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "Let's go to the chalkboard. One big antenna covers the whole city, but it has very few channels. When they fill up, nobody else can talk.",
+    "sub": "Let's go to the chalkboard. One big antenna covers the whole city, but it has very few channels. When they fill up, nobody else can talk."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "The idea was to split the city into small cells, like a honeycomb. Each cell has its own low-power antenna.",
+    "sub": "The idea was to split the city into small cells, like a honeycomb. Each cell has its own low-power antenna."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Because the signal doesn't travel far, two separated cells can use the exact same channels without interfering. That way, each channel is reused many times.",
+    "sub": "Because the signal doesn't travel far, two separated cells can use the exact same channels without interfering. That way, each channel is reused many times."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 0.4,
+    "speak": "And when you move, the call is handed off from one antenna to the next without dropping.",
+    "sub": "And when you move, the call is handed off from one antenna to the next without dropping."
+  },
+  {
+    "id": "c2_07",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Many small antennas serve far more people than one big one. That's why it's called a cell phone: because of the cells.",
+    "sub": "Many small antennas serve far more people than one big one. That's why it's called a cell phone: because of the cells."
+  },
+  {
+    "id": "c2_08",
+    "ch": 2,
+    "pause": 0.85,
+    "speak": "The idea was born at Bell Labs in nineteen forty-seven. And among those who turned it into a real network was Joel Engel's team.",
+    "sub": "The idea was born at Bell Labs in 1947. And among those who turned it into a real network was Joel Engel's team."
+  },
+  {
+    "id": "c2_09",
+    "ch": 2,
+    "pause": 1.0,
+    "speak": "The rival from that phone call was designing the network that phone was going to use.",
+    "sub": "The rival from that phone call was designing the network that phone was going to use."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Chapter three. Writing and Seeing.",
+    "sub": "CHAPTER 3 — WRITING AND SEEING"
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "In the nineties, the brick shrank and fit into a pocket. And networks went digital: your voice traveled turned into zeros and ones.",
+    "sub": "In the nineties, the brick shrank and fit into a pocket. And networks went digital: your voice traveled turned into zeros and ones."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "And if a voice could travel as numbers, letters could travel too.",
+    "sub": "And if a voice could travel as numbers, letters could travel too."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.4,
+    "speak": "One December in England, a twenty-two-year-old engineer sent the first text message. He typed it on a computer.",
+    "sub": "One December in England, a 22-year-old engineer sent the first text message. He typed it on a computer."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Phones still had no way to type. The message said Merry Christmas. And the person who received it couldn't reply.",
+    "sub": "Phones still had no way to type. The message said Merry Christmas. And the person who received it couldn't reply."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "When phones learned to type, each message had a limit of one hundred and sixty characters. And the habit of writing in abbreviations was born.",
+    "sub": "When phones learned to type, each message had a limit of 160 characters. And the habit of writing in abbreviations was born."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Five years later, in a California maternity ward, a programmer was waiting for his daughter to be born. While waiting, he wired together a camera, his phone, and a laptop.",
+    "sub": "Five years later, in a California maternity ward, a programmer was waiting for his daughter to be born. While waiting, he wired together a camera, his phone, and a laptop."
+  },
+  {
+    "id": "c3_07",
+    "ch": 3,
+    "pause": 0.85,
+    "speak": "Soon after, his daughter's photo reached about two thousand people. It is considered the first photo shared instantly from a phone.",
+    "sub": "Soon after, his daughter's photo reached about two thousand people. It is considered the first photo shared instantly from a phone."
+  },
+  {
+    "id": "c3_08",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "The phone already knew how to write and see. It still needed to think.",
+    "sub": "The phone already knew how to write and see. It still needed to think."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Chapter four. Simon.",
+    "sub": "CHAPTER 4 — SIMON"
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "Actually, someone had already tried. In nineteen ninety-four, IBM released a phone with a touchscreen. It was called Simon.",
+    "sub": "Actually, someone had already tried. In 1994, IBM released a phone with a touchscreen. It was called Simon."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "It had a calendar, notes, email, and even fax. You used it with a stylus. The word smartphone didn't even exist yet, but today it is considered the first.",
+    "sub": "It had a calendar, notes, email, and even fax. You used it with a stylus. The word smartphone didn't even exist yet, but today it is considered the first."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "But it weighed half a kilo, the battery lasted an hour, and it cost nearly nine hundred dollars. And internet on a phone was out of the question.",
+    "sub": "But it weighed half a kilo, the battery lasted an hour, and it cost nearly $900. And internet on a phone was out of the question."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.4,
+    "speak": "It sold about fifty thousand units, and after six months it vanished from stores.",
+    "sub": "It sold about 50,000 units, and after six months it vanished from stores."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 0.85,
+    "speak": "It was missing pieces that didn't exist yet. Lasting batteries, pocket internet, and a screen made for a finger.",
+    "sub": "It was missing pieces that didn't exist yet. Lasting batteries, pocket internet, and a screen made for a finger."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "pause": 1.0,
+    "speak": "Simon didn't fail because it was bad. It failed because it arrived too early.",
+    "sub": "Simon didn't fail because it was bad. It failed because it arrived too early."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Chapter five. A Screen That Feels.",
+    "sub": "CHAPTER 5 — A SCREEN THAT FEELS"
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "Ten years later, smartphones were office tools: a tiny screen on top, a full button keyboard below.",
+    "sub": "Ten years later, smartphones were office tools: a tiny screen on top, a full button keyboard below."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "And on January ninth, two thousand seven, in San Francisco, Apple unveiled a phone with no keyboard. The entire front was a screen.",
+    "sub": "And on January 9, 2007, in San Francisco, Apple unveiled a phone with no keyboard. The entire front was a screen."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "They pitched it as three devices in one: a music player, a phone, and a window to the internet. It went on sale in June, with lines outside the stores.",
+    "sub": "They pitched it as three devices in one: a music player, a phone, and a window to the internet. It went on sale in June, with lines outside the stores."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "You used it with your fingers. With two, you zoomed in on a photo. And it didn't sense pressure, like Simon. It sensed something else.",
+    "sub": "You used it with your fingers. With two, you zoomed in on a photo. And it didn't sense pressure, like Simon. It sensed something else."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.4,
+    "speak": "To the chalkboard. Your body conducts electricity. Very little, but it does.",
+    "sub": "To the chalkboard. Your body conducts electricity. Very little, but it does."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Beneath the glass lies a grid of transparent lines holding a tiny electrical charge. Every intersection acts as a sensor.",
+    "sub": "Beneath the glass lies a grid of transparent lines holding a tiny electrical charge. Every intersection acts as a sensor."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "When you touch it with your finger, you change the charge at the intersections below. The phone measures where it changed, all the time. And it can track several fingers at once.",
+    "sub": "When you touch it with your finger, you change the charge at the intersections below. The phone measures where it changed, all the time. And it can track several fingers at once."
+  },
+  {
+    "id": "c5_08",
+    "ch": 5,
+    "pause": 0.85,
+    "speak": "That's why it doesn't work with thick gloves: fabric doesn't conduct.",
+    "sub": "That's why it doesn't work with thick gloves: fabric doesn't conduct."
+  },
+  {
+    "id": "c5_09",
+    "ch": 5,
+    "pause": 1.0,
+    "speak": "The screen doesn't feel your finger. It feels your electricity.",
+    "sub": "The screen doesn't feel your finger. It feels your electricity."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "Chapter six. Five Hundred Apps.",
+    "sub": "CHAPTER 6 — FIVE HUNDRED APPS"
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "But that first phone didn't let you install programs made by others. The following year, that changed.",
+    "sub": "But that first phone didn't let you install programs made by others. The following year, that changed."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "In July two thousand eight, an app store opened with five hundred applications. In the first weekend, ten million were downloaded.",
+    "sub": "In July 2008, an app store opened with 500 applications. In the first weekend, ten million were downloaded."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "Anyone could code one and sell it to the entire world. A flashlight, a game, a map.",
+    "sub": "Anyone could code one and sell it to the entire world. A flashlight, a game, a map."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "A few months later came the first phone with Android, Google's system. It still had a keyboard that slid out from under the screen.",
+    "sub": "A few months later came the first phone with Android, Google's system. It still had a keyboard that slid out from under the screen."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 0.4,
+    "speak": "And unlike the other one, Android could be used by any manufacturer.",
+    "sub": "And unlike the other one, Android could be used by any manufacturer."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "pause": 0.85,
+    "speak": "Today, about two out of every three smartphones run Android. Almost all the rest are iPhones.",
+    "sub": "Today, about two out of every three smartphones run Android. Almost all the rest are iPhones."
+  },
+  {
+    "id": "c6_07",
+    "ch": 6,
+    "pause": 1.0,
+    "speak": "Ever since, your phone is whatever you install on it.",
+    "sub": "Ever since, your phone is whatever you install on it."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Chapter seven. Einstein in Your Pocket.",
+    "sub": "CHAPTER 7 — EINSTEIN IN YOUR POCKET"
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "Of everything your phone does, one thing feels like magic: it knows where you are.",
+    "sub": "Of everything your phone does, one thing feels like magic: it knows where you are."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "It knows by listening to satellites orbiting about twenty thousand kilometers up. Each one carries an atomic clock.",
+    "sub": "It knows by listening to satellites orbiting about 20,000 kilometers up. Each one carries an atomic clock."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.4,
+    "speak": "To the chalkboard. Every satellite broadcasts the time nonstop. Your phone listens and compares.",
+    "sub": "To the chalkboard. Every satellite broadcasts the time nonstop. Your phone listens and compares."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "If a signal arrives later, that satellite is farther away. With four satellites, the phone calculates the exact spot where you stand.",
+    "sub": "If a signal arrives later, that satellite is farther away. With four satellites, the phone calculates the exact spot where you stand."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "But way up there, time runs slightly faster. Satellite clocks get ahead by about thirty-eight microseconds a day.",
+    "sub": "But way up there, time runs slightly faster. Satellite clocks get ahead by about 38 microseconds a day."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "pause": 0.85,
+    "speak": "It sounds like nothing. But without correcting it, your location would drift by about ten kilometers a day. It's exactly what Einstein's relativity predicts.",
+    "sub": "It sounds like nothing. But without correcting it, your location would drift by about 10 kilometers a day. It's exactly what Einstein's relativity predicts."
+  },
+  {
+    "id": "c7_07",
+    "ch": 7,
+    "pause": 1.0,
+    "speak": "Every time you open a map, Einstein is right.",
+    "sub": "Every time you open a map, Einstein is right."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Chapter eight. A Call to the Rival.",
+    "sub": "CHAPTER 8 — A CALL TO THE RIVAL"
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.4,
+    "speak": "The brick weighed over a kilo and was only good for talking. Today's phone weighs about two hundred grams.",
+    "sub": "The brick weighed over a kilo and was only good for talking. Today's phone weighs about 200 grams."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "And it has over a million times more memory than the Apollo guidance computer. The one that took astronauts to the Moon.",
+    "sub": "And it has over a million times more memory than the Apollo guidance computer. The one that took astronauts to the Moon."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.4,
+    "speak": "There are over seven billion smartphone lines. And more mobile lines than people on Earth.",
+    "sub": "There are over seven billion smartphone lines. And more mobile lines than people on Earth."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "We use it to write, watch, pay, and know where we are. Making calls is barely one of the things it does.",
+    "sub": "We use it to write, watch, pay, and know where we are. Making calls is barely one of the things it does."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.85,
+    "speak": "And it all started on a New York sidewalk. A man with a brick to his ear, calling his rival.",
+    "sub": "And it all started on a New York sidewalk. A man with a brick to his ear, calling his rival."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 1.0,
+    "speak": "The first cell phone call was made to show off. Some things never changed.",
+    "sub": "The first cell phone call was made to show off. Some things never changed."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 1.2,
+    "speak": "And now we're reading you in the comments: what story would you like to see in the next episode?",
+    "sub": "And now we're reading you in the comments: what story would you like to see in the next episode?"
+  }
+]

@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:02,472
+CAPÍTULO 1 — EL LADRILLO
+
+2
+00:00:02,822 --> 00:00:09,252
+Teléfonos móviles ya existían. Eran teléfonos de auto: el equipo ocupaba el baúl y gastaba mucha batería.
+
+3
+00:00:09,452 --> 00:00:17,445
+Martin Cooper, ingeniero de Motorola, pensaba distinto. La gente no quería hablar desde un auto. Quería hablar desde cualquier lado.
+
+4
+00:00:17,645 --> 00:00:23,718
+Su equipo armó el prototipo en pocos meses. Pesaba más de un kilo, y casi todo era batería.
+
+5
+00:00:23,918 --> 00:00:29,187
+No tenía pantalla. Servía para tres cosas: marcar, hablar y escuchar.
+
+6
+00:00:29,387 --> 00:00:37,782
+Hablabas media hora y lo cargabas diez. Según contó Cooper, eso no era un problema: nadie aguantaba el ladrillo en la oreja tanto tiempo.
+
+7
+00:00:37,982 --> 00:00:46,288
+Llegó a las tiendas diez años después, en 1983, a casi cuatro mil dólares. Hoy serían más de diez mil.
+
+8
+00:00:47,188 --> 00:00:51,653
+Hasta entonces, llamabas a un lugar. Desde entonces, a una persona.

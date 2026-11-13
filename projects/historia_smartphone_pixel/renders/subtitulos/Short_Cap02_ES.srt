@@ -1,0 +1,39 @@
+1
+00:00:00,150 --> 00:00:02,204
+CAPÍTULO 2 — EL PANAL
+
+2
+00:00:02,554 --> 00:00:08,895
+Pero un teléfono no sirve sin una red. Y la red de entonces era una antena gigante para toda la ciudad.
+
+3
+00:00:09,095 --> 00:00:16,820
+En Nueva York, unos dos mil abonados compartían doce canales. Para hablar había que esperar turno. A veces, media hora.
+
+4
+00:00:17,270 --> 00:00:24,415
+Vamos a la pizarra. Una antena grande cubre toda la ciudad, pero tiene pocos canales. Cuando se ocupan, nadie más habla.
+
+5
+00:00:24,615 --> 00:00:31,715
+La idea fue partir la ciudad en celdas chicas, como un panal de abejas. Cada celda tiene su propia antena, de poca potencia.
+
+6
+00:00:31,915 --> 00:00:39,551
+Como la señal no llega lejos, dos celdas separadas pueden usar los mismos canales sin pisarse. Así, cada canal sirve muchas veces.
+
+7
+00:00:39,751 --> 00:00:44,171
+Y cuando te mueves, la llamada pasa de una antena a la siguiente sin cortarse.
+
+8
+00:00:44,371 --> 00:00:50,310
+Muchas antenas chicas atienden a más gente que una grande. Por eso se llama celular: por las celdas.
+
+9
+00:00:50,510 --> 00:00:59,129
+La idea nació en Bell Labs en 1947. Y entre los que la convirtieron en una red de verdad estaba el equipo de Joel Engel.
+
+10
+00:01:00,029 --> 00:01:04,762
+El rival de aquella llamada estaba diseñando la red que iba a usar ese teléfono.
