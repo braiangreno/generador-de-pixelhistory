@@ -28,6 +28,7 @@ def c8_s01_awards_and_hall_of_fame(t):
         draw_text(cv, "1997 · PREMIO PIONEROS DIGITALES", 240, 54, "press", 8, GOLD, align="center")
         draw_text(cv, "PARA HEDY LAMARR (82 AÑOS) Y ANTHEIL", 240, 74, "silk", 8, CREAM, align="center")
         draw_text(cv, "POR FIN EL MUNDO SUPO SU NOMBRE", 240, 94, "silk", 8, LAMARR_CYAN, align="center")
+        person_card(cv, "hedy_lamarr", "HEDY LAMARR", "PIONERA DE LA ERA DIGITAL · 1997", t, t0 + 0.15, dur=2.8)
         return vignette(cv, 0.34)
 
     # c8_02: Murió en 2000 -> En 2014 entra al Salón de la Fama de los Inventores -> 2015 homenaje de Google

@@ -39,6 +39,8 @@ def c5_s01_rca_and_zworykin(t):
         draw_text(cv, "DIRECTOR: DAVID SARNOFF", 240, 78, "silk", 8, CREAM, align="center")
         draw_text(cv, "QUERÍA LA TELEVISIÓN PARA ÉL", 240, 102, "silk", 8, CHALK_RED, align="center")
         char(cv, "sarnoff", 240, 248, t, scale=2, arms="cross", look=1, mood="neutral")
+        person_card(cv, "david_sarnoff", "DAVID SARNOFF",
+                    "DIRECTOR DE RCA · NUEVA YORK", t, t0, dur=3.0)
     elif t < t_c5_03 - 0.1:
         draw_text(cv, "VISITA DE VLADIMIR ZWORYKIN", 240, 52, "press", 8, TESLA_CYAN, align="center")
         draw_text(cv, "INGENIERO JEFE DE RCA", 240, 72, "silk", 8, CREAM, align="center")
@@ -49,6 +51,8 @@ def c5_s01_rca_and_zworykin(t):
         char(cv, "farnsworth_young", 148, 248, t, scale=2, arms="offer", look=1, mood="happy")
         draw_sf_lab_bench_prop(cv, 244, 248, t, mode="scan")
         char(cv, "zworykin", 338, 248, t, scale=2, arms="think", look=-1, mood="happy")
+        person_card(cv, "vladimir_zworykin", "VLADIMIR ZWORYKIN",
+                    "INGENIERO JEFE DE RCA · 1930", t, t_c5_02, dur=3.0)
     else:
         draw_text(cv, "OFERTA DE COMPRA DE RCA:", 240, 54, "silk", 8, CREAM, align="center")
         draw_text(cv, "US$ 100.000 POR TODO", 240, 74, "press", 8, GOLD, align="center")
@@ -86,6 +90,8 @@ def c5_s02_patent_trial_victory(t):
         draw_text(cv, "BOCETO DE CLASE · AÑO 1922", 240, 78, "silk", 8, CREAM, align="center")
         draw_text(cv, "TESTIGO: PROFESOR TOLMAN", 240, 96, "press", 8, CHALK_YELLOW, align="center")
         draw_text(cv, "PRUEBA DECISIVA EN EL JUICIO", 240, 126, "silk", 8, CHALK_GREEN, align="center")
+        person_card(cv, "justin_tolman", "JUSTIN TOLMAN",
+                    "TESTIGO CLAVE CON EL BOCETO DE 1922", t, t_c5_05, dur=3.0)
     else:
         draw_text(cv, "FALLO DE PATENTES (1934):", 240, 50, "silk", 8, TESLA_CYAN, align="center")
         draw_text(cv, "¡GANA FARNSWORTH!", 240, 68, "press", 8, CHALK_GREEN, align="center")

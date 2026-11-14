@@ -31,6 +31,7 @@ def c2_s01_mandl_and_copies(t):
              look=1, mood="neutral")
         char(cv, "hedy_glam", 304, 248, t, scale=2, arms="down", look=-1,
              mood="sad" if t >= t_c2_02 else "neutral")
+        person_card(cv, "fritz_mandl", "FRITZ MANDL", "FABRICANTE DE ARMAS · AUSTRIA, 1933", t, t0 + 0.15, dur=2.8)
         return vignette(cv, 0.38)
 
     # c2_03: Mandl intenta comprar todas las copias de la película, pero siguen saliendo copias nuevas

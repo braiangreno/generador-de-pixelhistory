@@ -188,6 +188,8 @@ def c1_s01_nipkow_berlin(t):
          look=1, mood="happy" if t < t_nunca else "neutral",
          talk=talk_v(t, t_c1_02 <= t < t_c1_03))
     draw_nipkow_bench_prop(cv, 304, 248, t, spin=(t >= t_esp - 0.2 and t < t_nunca))
+    person_card(cv, "paul_nipkow", "PAUL NIPKOW",
+                "ESTUDIANTE E INVENTOR · BERLÍN, 1883", t, t0, dur=3.2)
 
     return vignette(cv, 0.36)
 

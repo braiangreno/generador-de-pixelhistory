@@ -91,6 +91,8 @@ def c7_s02_doctor_x_quiz_show(t):
          arms="wave" if t >= t_och else "down", look=-1, mood="happy")
     char(cv, "panelist", 348, 248, t, scale=2,
          arms="shrug" if t >= t_c7_05 else "think", look=-1, mood="neutral")
+    person_card(cv, "philo_farnsworth", "PHILO FARNSWORTH",
+                "«DOCTOR X» EN TELEVISIÓN · 1957", t, t0, dur=3.2)
 
     return vignette(cv, 0.36)
 

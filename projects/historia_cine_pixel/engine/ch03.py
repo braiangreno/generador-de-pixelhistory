@@ -55,6 +55,8 @@ def c3_s01_melies_and_camera(t):
             draw_text(cv, "GEORGES MÉLIÈS", 240, 54 + dy, "press", 8, GOLD, align="center")
             draw_text(cv, "ILUSIONISTA Y MAGO DE TEATRO", 240, 72 + dy, "silk", 8, CREAM, align="center")
             draw_text(cv, "ESTABA ENTRE LOS 33 ESPECTADORES", 240, 90 + dy, "silk", 8, TESLA_CYAN, align="center")
+            person_card(cv, "georges_melies", "GEORGES MÉLIÈS",
+                        "ILUSIONISTA Y PIONERO DEL CINE · PARÍS", t, t0, dur=3.0)
         else:
             a, dy = pop(t, t_c3_02 - 0.1)
             window(cv, 118, 44 + dy, 244, 88, fill=(28, 18, 32), border=CHALK_RED, alpha=0.95)
@@ -220,6 +222,8 @@ def c3_s03_piracy_kiosk_and_honor(t):
         d.polygon([(236, 88 + dy), (244, 88 + dy), (242, 100 + dy), (238, 100 + dy)], fill=(214, 42, 48, 255))
         d.ellipse([234, 98 + dy, 246, 110 + dy], fill=(*GOLD, 255), outline=(*CREAM, 255))
         draw_text(cv, "ENTREGADA POR LOUIS LUMIÈRE", 240, 116 + dy, "silk", 8, TESLA_CYAN, align="center")
+        person_card(cv, "georges_melies", "GEORGES MÉLIÈS",
+                    "CABALLERO DE LA LEGIÓN DE HONOR · 1931", t, t_c3_09, dur=3.0)
         return vignette(cv, 0.34)
 
     # c3_10: Remate — "Los Lumière filmaron la realidad. Méliès filmó los sueños. El cine necesitó a los dos."

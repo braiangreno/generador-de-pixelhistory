@@ -149,6 +149,8 @@ def c1_s01_stanford_and_muybridge(t):
         if t >= t_apuesta - 0.2:
             draw_text(cv, "¿APUESTA? LEYENDA SIN PRUEBAS", 240, 92 + dy, "silk", 8, TESLA_CYAN, align="center")
             draw_text(cv, "NADIE PUDO PROBARLO", 240, 108 + dy, "silk", 8, CHALK_YELLOW, align="center")
+        person_card(cv, "leland_stanford", "LELAND STANFORD",
+                    "MAGNATE FERROVIARIO · CALIFORNIA, 1878", t, t0, dur=3.0)
     else:
         # Eadweard Muybridge trabajando años con las pesadas cámaras de placas húmedas
         char(cv, "muybridge", 184, 248, t, scale=2,
@@ -163,6 +165,8 @@ def c1_s01_stanford_and_muybridge(t):
         if t >= t_lent - 0.25:
             draw_text(cv, "CÁMARAS LENTÍSIMAS", 240, 92 + dy, "silk", 8, CHALK_RED, align="center")
             draw_text(cv, "TARDÓ AÑOS EN LOGRARLO", 240, 108 + dy, "silk", 8, CHALK_YELLOW, align="center")
+        person_card(cv, "eadweard_muybridge", "EADWEARD MUYBRIDGE",
+                    "FOTÓGRAFO · DOCE CÁMARAS EN FILA (1878)", t, t_c1_02, dur=3.2)
 
     return vignette(cv, 0.34)
 

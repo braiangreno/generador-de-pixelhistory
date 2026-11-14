@@ -31,6 +31,8 @@ def c2_s01_kinetoscope_and_cinematograph(t):
         if t >= t_moneda - 0.25:
             draw_text(cv, "1 MONEDA -> MIRABAS SOLO", 240, 88 + dy, "silk", 8, TESLA_CYAN, align="center")
             draw_text(cv, "PELÍCULA DE POCOS SEGUNDOS", 240, 104 + dy, "silk", 8, CHALK_YELLOW, align="center")
+        person_card(cv, "thomas_edison", "THOMAS EDISON",
+                    "CREADOR DEL KINETOSCOPIO · EE. UU.", t, t0, dur=3.0)
         return vignette(cv, 0.36)
 
     if t < t_c2_03 - 0.12:
@@ -48,6 +50,8 @@ def c2_s01_kinetoscope_and_cinematograph(t):
         draw_text(cv, "ANTOINE LUMIÈRE (FOTÓGRAFO)", 240, 54 + dy, "press", 8, GOLD, align="center")
         draw_text(cv, "VIO LA CAJA EN PARÍS", 240, 72 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "«¡SAQUEMOS LA IMAGEN A UNA PANTALLA!»", 240, 92 + dy, "silk", 8, TESLA_CYAN, align="center")
+        person_card(cv, "antoine_lumiere", "ANTOINE LUMIÈRE",
+                    "FOTÓGRAFO · PADRE DE LOS LUMIÈRE", t, t_c2_02, dur=2.8)
         return vignette(cv, 0.36)
 
     # c2_03: Auguste y Louis Lumière inventan el Cinematógrafo (filma, copia y proyecta)
@@ -63,6 +67,8 @@ def c2_s01_kinetoscope_and_cinematograph(t):
     draw_text(cv, "EL CINEMATÓGRAFO", 240, 68 + dy, "press", 8, GOLD, align="center")
     draw_text(cv, "1. FILMABA  ·  2. COPIABA", 240, 90 + dy, "silk", 8, TESLA_CYAN, align="center")
     draw_text(cv, "3. PROYECTABA EN PANTALLA", 240, 108 + dy, "silk", 8, CHALK_GREEN, align="center")
+    person_card(cv, "lumiere_brothers", "HERMANOS LUMIÈRE",
+                "INVENTORES DEL CINEMATÓGRAFO · PARÍS, 1895", t, t_c2_03, dur=3.2)
 
     return vignette(cv, 0.35)
 

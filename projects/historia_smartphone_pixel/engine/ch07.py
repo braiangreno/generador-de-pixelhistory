@@ -88,6 +88,8 @@ def c7_s02_pizarra_gps_einstein(t):
             draw_text(cv, "SIN CORREGIR ESOS 38 MICROSEGUNDOS:", 240, 52, "silk", 8, CHALK_RED, align="center")
             draw_text(cv, "ERROR: 10 KM POR DÍA", 240, 78, "press", 8, CHALK_RED, align="center")
             draw_text(cv, "RELATIVIDAD DE EINSTEIN", 240, 106, "press", 8, CHALK_YELLOW, align="center")
+            person_card(cv, "albert_einstein", "ALBERT EINSTEIN",
+                        "TEORÍA DE LA RELATIVIDAD Y EL GPS", t, t_c7_06, dur=3.0)
         else:
             draw_text(cv, "RELATIVIDAD EN TU BOLSILLO:", 240, 54, "silk", 8, CHALK_CYAN, align="center")
             draw_text(cv, "CADA VEZ QUE ABRES UN MAPA,", 240, 82, "press", 8, CHALK_WHITE, align="center")

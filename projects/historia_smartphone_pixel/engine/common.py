@@ -892,4 +892,35 @@ def draw_simon_pedestal(cv, x, feet=248, t=0.0):
         d.line([(cx + 13, by + 8), (cx + 7, by + 18)], fill=(214, 218, 228, 255), width=2)
     floor_prop(cv, _draw, x, feet)
 
-
+def person_card(cv, portrait_key, name, subtitle, t, t0, y=166, frame=GOLD, dur=2.8):
+    """Dibuja la tarjeta clásica de presentación de personaje con retrato 64x64 a la izquierda
+    y ventana RPG de nombre + subtítulo a la derecha (idéntica al Episodio 1 de IA).
+    En 9:16 se registra en vctx.person_cards para redibujarse limpia sin dividirse."""
+    if t < t0 - 0.15:
+        return
+    if dur is not None and t > t0 + dur + 0.35:
+        return
+    vctx = getattr(sys.modules.get("core"), "_VCTX", None)
+    if vctx is not None and isinstance(cv, Image.Image) and cv.size == (W, H):
+        if hasattr(vctx, "person_cards"):
+            vctx.person_cards.append({
+                "key": portrait_key,
+                "name": name,
+                "sub": subtitle,
+                "t": t,
+                "t0": t0,
+                "frame": frame,
+            })
+            return
+    a = prog(t, t0 - 0.15, t0 + 0.25)
+    a_out = prog(t, t0 + dur, t0 + dur + 0.35) if dur is not None else 0.0
+    off = int((1 - ease_out(a)) * -140) + int(ease_in_out(a_out) * -380)
+    portrait_card(cv, portrait_key, 14 + off, y, frame=frame)
+    tw_name, _ = text_size(name, "press", 16)
+    tw_sub, _ = text_size(subtitle, "silk", 8)
+    tw = min(376, max(268, max(tw_name, tw_sub) + 24))
+    window(cv, 86 + off, y + 14, tw, 46, border=frame)
+    name_sz = 16 if tw_name <= (tw - 20) else 8
+    name_y = (y + 24) if name_sz == 16 else (y + 26)
+    draw_text(cv, name, 96 + off, name_y, "press", name_sz, CREAM)
+    draw_text(cv, subtitle, 96 + off, y + 44, "silk", 8, GREY)

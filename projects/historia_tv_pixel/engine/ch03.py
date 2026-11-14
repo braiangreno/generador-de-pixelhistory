@@ -48,6 +48,8 @@ def c3_s01_cabin_and_furrows(t):
         draw_text(cv, lbl_c, 240, 124, "silk", 8, CHALK_GREEN if t >= t_seis - 0.2 else CREAM, align="center")
         char(cv, "farnsworth_boy", 204, 248, t, scale=2,
              arms="cheer" if t >= t_seis - 0.2 else "think", look=1, mood="happy")
+        person_card(cv, "philo_farnsworth", "PHILO FARNSWORTH",
+                    "INVENTOR DE LA TV ELECTRÓNICA · IDAHO", t, t0, dur=3.2)
     else:
         # 14 años: arando con caballos -> haz de electrones barriendo renglón por renglón
         draw_text(cv, "14 AÑOS · CAMPO ARADO EN IDAHO", 240, 52, "silk", 8, AMBER, align="center")
@@ -104,6 +106,8 @@ def c3_s02_tolman_chalkboard(t):
          arms="note" if (t_papel - 0.3 <= t < t_c3_05) else "point_l",
          look=-1, mood="happy",
          talk=talk_v(t, t_papel - 0.4 <= t < t_rec))
+    person_card(cv, "justin_tolman", "JUSTIN TOLMAN",
+                "PROFESOR DE QUÍMICA · IDAHO, 1922", t, t0, dur=3.2)
 
     return vignette(cv, 0.34)
 

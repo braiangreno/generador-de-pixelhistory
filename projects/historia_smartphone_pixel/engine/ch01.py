@@ -43,6 +43,8 @@ def s01_sixth_ave_opening(t):
         window(cv, 120, 46 + dy, 240, 42, fill=(24, 18, 14), border=GOLD, alpha=0.94)
         draw_text(cv, "MOTOROLA DYNATAC · PROTOTIPO", 240, 54 + dy, "silk", 8, GOLD, align="center")
         draw_text(cv, "HABLANDO EN PLENA CALLE", 240, 70 + dy, "press", 8, CREAM, align="center")
+    person_card(cv, "martin_cooper", "MARTIN COOPER",
+                "INGENIERO DE MOTOROLA · NUEVA YORK, 1973", t, t_s01 + 0.3, dur=3.0)
 
     return vignette(cv, 0.35)
 
@@ -81,6 +83,8 @@ def s03_rival_call_and_title(t):
 
         if t >= t_s04 - 0.1:
             bubble(cv, "«TE LLAMO DESDE LA CALLE»", 148, 134, fill=(255, 246, 210))
+        person_card(cv, "joel_engel", "JOEL ENGEL",
+                    "JEFE DE BELL LABS · RED CELULAR", t, t_joel - 0.15, dur=2.8)
 
         return vignette(cv, 0.36)
 
@@ -141,6 +145,8 @@ def c1_s01_car_phone_vs_cooper(t):
     char(cv, "cooper_1973", 172, 248, t, scale=2, arms="point", look=1, mood="happy",
          talk=talk_v(t, True))
     char(cv, "motorola_eng", 308, 248, t, scale=2, arms="note", facing=-1, look=-1, mood="neutral")
+    person_card(cv, "martin_cooper", "MARTIN COOPER",
+                "LÍDER DEL PROYECTO DYNATAC · MOTOROLA", t, t_c1_02, dur=3.0)
     return vignette(cv, 0.36)
 
 

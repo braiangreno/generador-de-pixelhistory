@@ -116,6 +116,8 @@ def c2_s03_bell_labs_engel(t):
         draw_text(cv, "IDEA NACIDA EN BELL LABS (1947)", 240, 54, "silk", 8, TESLA_CYAN, align="center")
         draw_honeycomb_grid(cv, 240, 92, r_cell=11, ring=1, t=t, color=TESLA_CYAN, highlight_idx=0)
         draw_text(cv, "EQUIPO DE JOEL ENGEL", 240, 122, "press", 8, GOLD, align="center")
+        person_card(cv, "joel_engel", "JOEL ENGEL",
+                    "DISEÑADOR DE LA RED CELULAR · BELL LABS", t, t0, dur=3.0)
     else:
         draw_text(cv, "LA PARADOJA DE 1973:", 240, 54, "silk", 8, GOLD, align="center")
         draw_text(cv, "COOPER HIZO EL TELÉFONO", 240, 74, "press", 8, CREAM, align="center")

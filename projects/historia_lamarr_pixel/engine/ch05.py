@@ -32,6 +32,7 @@ def c5_s01_meeting_antheil(t):
         draw_text(cv, "GEORGE ANTHEIL · COMPOSITOR", 240, 54, "press", 8, GOLD, align="center")
         draw_text(cv, "«EL CHICO MALO DE LA MÚSICA»", 240, 74, "silk", 8, CREAM, align="center")
         draw_text(cv, "VANGUARDIA Y MECÁNICA MUSICAL", 240, 92, "silk", 8, LAMARR_CYAN, align="center")
+        person_card(cv, "george_antheil", "GEORGE ANTHEIL", "COMPOSITOR Y CO-INVENTOR · 1940", t, t0 + 0.15, dur=2.8)
     elif t < t_c5_03 - 0.1:
         draw_text(cv, "SU OBRA «BALLET MÉCANIQUE»:", 240, 54, "silk", 8, GOLD, align="center")
         draw_text(cv, "16 PIANOLAS TOCANDO EN SINCRONÍA", 240, 74, "press", 8,

@@ -50,6 +50,8 @@ def c5_s01_keynote_2007(t):
         d.rectangle([223, 68, 257, 116], fill=(64, 168, 238, 255))
         d.ellipse([238, 117, 242, 121], outline=(188, 196, 212, 255))
         draw_text(cv, "SIN TECLADO · TODO PANTALLA", 240, 128, "press", 8, GOLD, align="center")
+        person_card(cv, "steve_jobs", "STEVE JOBS",
+                    "PRESENTACIÓN DEL IPHONE · ENERO DE 2007", t, t_c5_02, dur=3.0)
     elif t < t_c5_04:
         draw_text(cv, "TRES APARATOS EN UNO:", 240, 48, "silk", 8, GOLD, align="center")
         items = [("MÚSICA", 156, CHALK_GREEN), ("TELÉFONO", 240, TESLA_CYAN), ("INTERNET", 324, GOLD)]

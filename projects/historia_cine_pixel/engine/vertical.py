@@ -134,6 +134,7 @@ class VerticalContext:
         self.chars = []             # [("char"|"sil"|"robot", ...)]
         self.bubbles = []           # [(text, x, y, size, fname, tail, reveal, color, fill, tail_x)]
         self.emotes = []            # [(text, x, y, fname, size, color, alpha)]
+        self.person_cards = []      # [{key, name, sub, t, t0, frame}]
         self.mid_canvas = Image.new("RGBA", (core.W, core.H), (0, 0, 0, 0))
         self.active_x_shift = None  # mapeo x activo cuando una ventana ancha (w>254) se compacta
 
@@ -674,7 +675,7 @@ def compose_vertical_scene(vctx):
     # 3. ZONA MEDIA: PANELES, RETRATOS, DIAGRAMAS Y OBJETOS DE ESCENA (y = top_y_cursor .. 354)
     has_chars = len(vctx.chars) > 0
     mid_y_min = max(72, top_y_cursor)
-    mid_y_max = 352 if has_chars else 454
+    mid_y_max = 274 if vctx.person_cards else (352 if has_chars else 454)
     avail_h = max(80, mid_y_max - mid_y_min)
 
     # Extraer pisos procedurales de ancho completo (x=0..480 en y >= 150) y trasladarlos al piso vertical (y=350..480)
@@ -825,6 +826,33 @@ def compose_vertical_scene(vctx):
                                sil=ch_item["sil"], scale=vscale)
         elif ckind == "prop":
             ch_item["fn"](cv, vx, vfeet)
+
+    # Tarjetas de presentación de personaje con retrato 64x64 (person_card) en 9:16
+    for pc in vctx.person_cards[-1:]:
+        p_in = core.ease_out(core.prog(pc["t"], pc["t0"] - 0.15, pc["t0"] + 0.25))
+        off_x = int((1.0 - p_in) * -140)
+        py_c = 278
+        px_c = 8 + off_x
+        p_img = core._orig_portrait(pc["key"])
+        if p_img.size != (56, 56):
+            p_img = p_img.resize((56, 56), Image.NEAREST)
+        core._orig_window(cv, px_c, py_c, 64, 64, border=pc["frame"])
+        core.paste(cv, p_img, px_c + 4, py_c + 4)
+        bx_c = px_c + 66
+        bw_c = VW - 8 - bx_c + off_x
+        core._orig_window(cv, bx_c, py_c + 4, bw_c, 56, border=pc["frame"])
+        name_tr = tr(pc["name"], "press")
+        sub_tr = tr(pc["sub"], "silk")
+        name_lines = wrap_text_px(name_tr, "press", 8, bw_c - 12)[:2]
+        sub_lines = wrap_text_px(sub_tr, "silk", 8, bw_c - 12)[:2]
+        cur_ty = py_c + 11
+        for nl in name_lines:
+            core._orig_draw_text(cv, nl, bx_c + 6, cur_ty, "press", 8, core.CREAM)
+            cur_ty += 11
+        cur_ty = max(cur_ty + 1, py_c + 34)
+        for sl in sub_lines:
+            core._orig_draw_text(cv, sl, bx_c + 6, cur_ty, "silk", 8, core.GREY)
+            cur_ty += 10
 
     # Emotes ("!", "?") encima de las cabezas de los personajes
     for em in vctx.emotes:

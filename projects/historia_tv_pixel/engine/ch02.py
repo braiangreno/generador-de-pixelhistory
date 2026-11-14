@@ -87,6 +87,8 @@ def c2_s01_stooky_bill(t):
          look=-1 if t >= t_cor - 0.1 else 1,
          mood="happy" if t >= t_c2_03 else "neutral")
     draw_baird_rig_prop(cv, 298, 248, t, show_dummy=True)
+    person_card(cv, "john_logie_baird", "JOHN LOGIE BAIRD",
+                "INGENIERO ESCOCÉS · LONDRES, 1925", t, t0, dur=3.0)
 
     return vignette(cv, 0.36)
 
@@ -119,6 +121,8 @@ def c2_s02_taynton_and_1926(t):
         char(cv, "baird", 142, 248, t, scale=2, arms="point", look=1, mood="happy")
         draw_baird_rig_prop(cv, 248, 248, t, show_dummy=False)
         char(cv, "taynton", 342, 248, t, scale=2, arms="wave", look=-1, mood="happy")
+        person_card(cv, "william_taynton", "WILLIAM TAYNTON",
+                    "PRIMERA PERSONA TELEVISADA · 1925", t, t0, dur=3.0)
     else:
         # Enero de 1926: demostración ante 40 científicos; imagen chiquita, anaranjada y de 30 renglones
         draw_text(cv, "DEMOSTRACIÓN · ENERO DE 1926", 240, 52, "press", 8, GOLD, align="center")

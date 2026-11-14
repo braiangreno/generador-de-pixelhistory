@@ -32,6 +32,7 @@ def c3_s01_ship_and_mayer(t):
         draw_text(cv, "OFERTA INICIAL: CONTRATO CHICO", 240, 74, "silk", 8, CREAM, align="center")
         if t >= t_no - 0.25:
             draw_text(cv, "RESPUESTA DE ELLA: «NO»", 240, 92, "press", 8, CHALK_RED, align="center")
+        person_card(cv, "louis_b_mayer", "LOUIS B. MAYER", "JEFE DEL ESTUDIO MGM · 1937", t, t0 + 0.15, dur=2.8)
     elif t < t_c3_03 - 0.1:
         draw_text(cv, "EL PLAN EN ALTA MAR", 240, 56, "press", 8, LAMARR_CYAN, align="center")
         draw_text(cv, "SACÓ PASAJE EN EL MISMO BARCO", 240, 76, "silk", 8, CREAM, align="center")
@@ -41,6 +42,7 @@ def c3_s01_ship_and_mayer(t):
         draw_text(cv, "¡CONTRATO 4 VECES MEJOR!", 240, 74, "press", 8, CHALK_GREEN, align="center")
         if t >= t_nom - 0.35:
             draw_text(cv, "NUEVO NOMBRE: HEDY LAMARR", 240, 94, "press", 8, GOLD, align="center")
+        person_card(cv, "hedy_lamarr", "HEDY LAMARR", "ACTRIZ E INVENTORA · HOLLYWOOD, 1937", t, t_c3_03 + 0.15, dur=2.8)
     return vignette(cv, 0.35)
 
 
@@ -105,6 +107,7 @@ def c3_s03_hughes_and_wings(t):
         if t >= t_ala - 0.3:
             draw_text(cv, "= UN ALA DE AVIÓN MÁS RÁPIDA", 240, 92, "press", 8, LAMARR_CYAN, align="center")
             d.arc([168, 102, 312, 118], 185, 355, fill=(*LAMARR_CYAN, 255), width=2)
+        person_card(cv, "howard_hughes", "HOWARD HUGHES", "AVIADOR Y EMPRESARIO · HOLLYWOOD", t, t_c3_06 + 0.15, dur=2.8)
     elif t < t_c3_08 - 0.1:
         draw_text(cv, "HOWARD HUGHES:", 240, 56, "silk", 8, GOLD, align="center")
         draw_text(cv, "«ERES UN GENIO»", 240, 78, "press", 16 if False else 8, CHALK_GREEN, align="center")

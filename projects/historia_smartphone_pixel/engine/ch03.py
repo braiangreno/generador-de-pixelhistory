@@ -48,6 +48,8 @@ def c3_s01_digital_and_first_sms(t):
                   reveal=max(1, int((t - t_c3_03) * 14)))
         draw_text(cv, "DESDE UNA PC · SIN PODER CONTESTAR" if t >= t_c3_04 else "ESCRITO EN UNA COMPUTADORA",
                   240, 114, "silk", 8, CREAM, align="center")
+        person_card(cv, "neil_papworth", "NEIL PAPWORTH",
+                    "INGENIERO · PRIMER SMS DE LA HISTORIA (1992)", t, t_c3_03, dur=3.0)
     else:
         window(cv, 118, 44, 244, 96, fill=(18, 24, 42), border=TESLA_CYAN)
         draw_text(cv, "LÍMITE: 160 CARACTERES", 240, 54, "press", 8, TESLA_CYAN, align="center")
@@ -102,6 +104,8 @@ def c3_s02_first_camera_phone_1997(t):
         draw_text(cv, "CÁMARA + TELÉFONO + COMPUTADORA", 240, 72, "press", 8, GOLD, align="center")
         draw_text(cv, "UNIDOS CON CABLES EN LA SALA", 240, 96, "silk", 8, CREAM, align="center")
         draw_text(cv, "PHILIPPE KAHN ESPERA A SU HIJA", 240, 116, "silk", 8, SOFT_GRAY, align="center")
+        person_card(cv, "philippe_kahn", "PHILIPPE KAHN",
+                    "PRIMERA FOTO DESDE UN CELULAR · 1997", t, t0, dur=3.0)
     elif t < t_c3_08 - 0.1:
         draw_text(cv, "PRIMERA FOTO AL INSTANTE (1997)", 240, 50, "silk", 8, GOLD, align="center")
         # Retrato pixel-art de la bebé recién nacida transmitiéndose a 2.000 personas

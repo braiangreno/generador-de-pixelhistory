@@ -123,6 +123,7 @@ def c1_s01_vienna_walks(t):
         char(cv, "father_kiesler", 156, 248, t, scale=2, arms="down", look=1, mood="happy")
         char(cv, "hedy_child", 240, 248, t, scale=2, arms="wave", look=1, mood="happy")
         char(cv, "mother_pianist", 324, 248, t, scale=2, arms="down", look=-1, mood="happy")
+        person_card(cv, "hedy_lamarr", "HEDWIG KIESLER", "HEDY LAMARR · VIENA, 1914", t, t0 + 0.15, dur=2.8)
         return vignette(cv, 0.35)
 
     # c1_02: Caminata de padre e hija por Viena explicando tranvías, imprenta y electricidad
