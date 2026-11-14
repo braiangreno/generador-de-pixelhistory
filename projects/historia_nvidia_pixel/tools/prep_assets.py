@@ -3,7 +3,9 @@ import os
 
 BRAIN = r"C:\Users\Braian\.gemini\antigravity\brain\6d63fc15-c960-4290-9a2f-20573778b321"
 OUT = r"C:\Users\Braian\.gemini\antigravity\scratch\historia_nvidia_pixel\assets\bg"
+OUT_PORTRAITS = r"C:\Users\Braian\.gemini\antigravity\scratch\historia_nvidia_pixel\assets\portraits"
 os.makedirs(OUT, exist_ok=True)
+os.makedirs(OUT_PORTRAITS, exist_ok=True)
 
 MAPPING = {
     "diner_1993": "diner_1993_1794656482664.jpg",
@@ -15,7 +17,7 @@ MAPPING = {
     "science_gpu_lab": "science_gpu_lab_1794656494638.jpg",
     "wall_street_floor": "wall_street_floor_1794656504897.jpg",
     "green_bridge_fog": "green_bridge_fog_1794656515365.jpg",
-    "toronto_dorm_2012": "toronto_dorm_2012_1794656556249.jpg",
+    "toronto_dorm_2012": "toronto_dorm_2012_clean_1794660508940.jpg",
     "sf_ai_lab_2016": "sf_ai_lab_2016_1794656565161.jpg",
     "datacenter_gold": "datacenter_gold_1794656575602.jpg",
     "gold_rush_town": "gold_rush_town_1794656485485.jpg",
@@ -23,6 +25,15 @@ MAPPING = {
     "boardroom_night": "boardroom_night_1794656536990.jpg",
     "empty_ceo_office": "empty_ceo_office_1794656567837.jpg",
     "capitol_dome_night": "capitol_dome_night_1794656604606.jpg",
+}
+
+PORTRAIT_MAPPING = {
+    "jensen_huang_1993": "jensen_huang_1993_1794660349011.jpg",
+    "jensen_huang": "jensen_huang_1794660366355.jpg",
+    "chris_malachowsky": "chris_malachowsky_1794660386686.jpg",
+    "curtis_priem": "curtis_priem_1794660409435.jpg",
+    "shoichiro_irimajiri": "shoichiro_irimajiri_1794660437093.jpg",
+    "colette_kress": "colette_kress_1794660469750.jpg",
 }
 
 for name, fname in MAPPING.items():
@@ -34,3 +45,12 @@ for name, fname in MAPPING.items():
     out_path = os.path.join(OUT, f"{name}.png")
     final.save(out_path)
     print("Saved", out_path)
+
+for name, fname in PORTRAIT_MAPPING.items():
+    src = os.path.join(BRAIN, fname)
+    im = Image.open(src).convert("RGB")
+    # Downscale to 64x64 with crisp 32-color 16-bit quantization
+    small = im.resize((64, 64), Image.BOX).quantize(colors=32, method=Image.MEDIANCUT).convert("RGBA")
+    out_path = os.path.join(OUT_PORTRAITS, f"{name}.png")
+    small.save(out_path)
+    print("Saved portrait", out_path)

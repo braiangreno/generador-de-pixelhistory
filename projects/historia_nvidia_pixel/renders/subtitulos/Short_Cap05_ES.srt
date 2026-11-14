@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,689
+CAPÍTULO 5 — DOS PLACAS EN UN DORMITORIO
+
+2
+00:00:04,039 --> 00:00:14,731
+En 2012, un estudiante de Toronto llamado Alex Krizhevsky armó algo en su cuarto, en la casa de sus padres. Puso dos placas de video para juegos en su computadora.
+
+3
+00:00:14,951 --> 00:00:29,336
+Con su compañero Ilya Sutskever y su profesor Geoffrey Hinton —¿se acuerdan de estos personajes de nuestro primer episodio, la historia de la IA?—, entrenó una red neuronal para reconocer fotos. Tardó unos seis días.
+
+4
+00:00:29,556 --> 00:00:37,171
+Se presentó a un concurso de reconocimiento de imágenes y ganó con muchísima ventaja. La red se llamó AlexNet.
+
+5
+00:00:37,621 --> 00:00:44,852
+¿Por qué una placa de juegos? A la pizarra. Una red neuronal aprende multiplicando tablas enormes de números.
+
+6
+00:00:45,072 --> 00:00:52,380
+Son millones de multiplicaciones simples, todas a la vez. Lo mismo que hace una GPU para mover los triángulos de un juego.
+
+7
+00:00:52,600 --> 00:01:00,215
+El aula de miles de alumnos servía también para enseñarle a una máquina. Y gracias a CUDA, cualquiera podía darle la tarea.
+
+8
+00:01:01,065 --> 00:01:05,988
+Sin buscarlo, el chip de los videojuegos era el chip de la inteligencia artificial.

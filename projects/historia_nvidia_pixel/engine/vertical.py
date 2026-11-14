@@ -132,6 +132,7 @@ class VerticalContext:
         self.bigyears = []          # [(text, cx, y, t, t0, size, ramp)]
         self.mid_windows = []       # ventanas en la zona media/inferior
         self.chars = []             # [("char"|"sil"|"robot", ...)]
+        self.person_cards = []      # [{"key": ..., "name": ..., "sub": ..., "t": ..., "t0": ..., "frame": ...}]
         self.bubbles = []           # [(text, x, y, size, fname, tail, reveal, color, fill, tail_x)]
         self.emotes = []            # [(text, x, y, fname, size, color, alpha)]
         self.mid_canvas = Image.new("RGBA", (core.W, core.H), (0, 0, 0, 0))
@@ -686,8 +687,9 @@ def compose_vertical_scene(vctx):
 
     # 3. ZONA MEDIA: PANELES, RETRATOS, DIAGRAMAS Y OBJETOS DE ESCENA (y = top_y_cursor .. 354)
     has_chars = len(vctx.chars) > 0
+    has_pcards = len(vctx.person_cards) > 0
     mid_y_min = max(72, top_y_cursor)
-    mid_y_max = 352 if has_chars else 454
+    mid_y_max = (264 if has_pcards else 352) if has_chars else (380 if has_pcards else 454)
     avail_h = max(80, mid_y_max - mid_y_min)
 
     # Extraer pisos procedurales de ancho completo (x=0..480 en y >= 150) y trasladarlos al piso vertical (y=350..480)
@@ -782,7 +784,19 @@ def compose_vertical_scene(vctx):
         fs_resized = floor_strip.resize((fs_w, floor_strip.size[1]), Image.NEAREST)
         core.paste(cv, fs_resized, (VW - fs_w) // 2, 452 - (258 - floor_y_cut))
 
-    # 4. SPOTLIGHTS Y PERSONAJES EN EL PISO VERTICAL (feet ~ 452, x en 34..236)
+    # 4. SPOTLIGHTS, PERSON CARDS Y PERSONAJES EN EL PISO VERTICAL (feet ~ 452, x en 34..236)
+    if vctx.person_cards:
+        pc = vctx.person_cards[-1]
+        p_im = core.portrait(pc["key"]).resize((48, 48), Image.NEAREST)
+        py_card = 268 if has_chars else 388
+        core._orig_window(cv, 8, py_card, 56, 56, border=pc.get("frame", core.GOLD))
+        core.paste(cv, p_im, 12, py_card + 4)
+        core._orig_window(cv, 66, py_card + 4, VW - 74, 48, border=pc.get("frame", core.GOLD))
+        core._orig_draw_text(cv, pc["name"], 74, py_card + 12, "press", 8, core.CREAM)
+        sub_lines = wrap_text_px(tr(pc["sub"], "silk"), "silk", 8, VW - 90)
+        for s_i, s_line in enumerate(sub_lines[:2]):
+            core._orig_draw_text(cv, s_line, 74, py_card + 26 + s_i * 10, "silk", 8, core.GREY)
+
     def map_char_x(x_orig):
         return int(round(34 + (x_orig - 36) * (202.0 / 408.0)))
 

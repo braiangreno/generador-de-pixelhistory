@@ -241,8 +241,8 @@
     "id": "c5_02",
     "ch": 5,
     "pause": 0.45,
-    "speak": "With his colleague Ilya Sutskever and his professor Geoffrey Hinton, he trained a neural network to recognize photos. It took about six days.",
-    "sub": "With his colleague Ilya Sutskever and his professor Geoffrey Hinton, he trained a neural network to recognize photos. It took about six days."
+    "speak": "With his colleague Ilya Sutskever and his professor Geoffrey Hinton—remember these three characters from our very first episode on the history of artificial intelligence?—he trained a neural network to recognize photos. It took about six days.",
+    "sub": "With his colleague Ilya Sutskever and his professor Geoffrey Hinton—remember these characters from our first episode on the history of AI?—he trained a neural network to recognize photos. It took about six days."
   },
   {
     "id": "c5_03",

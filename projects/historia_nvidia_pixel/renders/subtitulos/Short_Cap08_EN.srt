@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:02,534
+CHAPTER 8 — THE WEEK
+
+2
+00:00:02,884 --> 00:00:12,961
+And people began to doubt. Since October, the stock had been falling. Concerns grew over the debt many companies are taking on to buy artificial intelligence chips.
+
+3
+00:00:13,611 --> 00:00:26,842
+Then, on a weekend in November, The New York Times published a story about Huang. According to the paper, he had been in a relationship with a woman whom U.S. intelligence considered a Chinese agent.
+
+4
+00:00:27,062 --> 00:00:40,524
+Huang acknowledged in a letter to employees that he had been unfaithful to his wife. The board opened an investigation into whether he had been a target of espionage, and said it had no reason to believe any secrets were leaked.
+
+5
+00:00:40,744 --> 00:00:49,590
+Afterward, The New York Times and Reuters reported other relationships between Huang and employees. One of them was an executive who reported to him.
+
+6
+00:00:50,440 --> 00:00:59,747
+On Thursday, November 12, NVIDIA announced his resignation. After thirty-three years, the founder stepped down as CEO and left the board.
+
+7
+00:00:59,967 --> 00:01:06,352
+Chief financial officer Colette Kress took over as interim CEO while the company searches for a replacement.
+
+8
+00:01:06,572 --> 00:01:15,726
+In addition, three U.S. House committees summoned him to testify behind closed doors. The hearing is set for December 1.
+
+9
+00:01:16,626 --> 00:01:20,318
+In a single week, NVIDIA was left without its founder.

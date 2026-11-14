@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,073
+CHAPTER 6 — THE GOLD RUSH
+
+2
+00:00:03,423 --> 00:00:16,192
+In 2016, Huang personally delivered a supercomputer to a small lab in San Francisco. It was NVIDIA's first for artificial intelligence. The lab was called OpenAI.
+
+3
+00:00:16,412 --> 00:00:24,951
+Six years later, that lab launched ChatGPT. And every company in the world wanted the same thing: NVIDIA chips.
+
+4
+00:00:25,171 --> 00:00:29,325
+It was a gold rush. And NVIDIA was selling the shovels.
+
+5
+00:00:29,545 --> 00:00:38,545
+In 2023 it passed one trillion dollars in value. And in 2025 it became the first company in history to pass five trillion.
+
+6
+00:00:39,195 --> 00:00:55,425
+There were scares. In January 2025, a cheaper Chinese model, DeepSeek, spooked investors. In a single day, NVIDIA lost nearly six hundred billion dollars in value. No company had ever lost that much in one day.
+
+7
+00:00:55,645 --> 00:01:01,338
+And NVIDIA kept climbing. In October 2026, it nearly touched six trillion.
+
+8
+00:01:02,188 --> 00:01:07,342
+Thirty-three years after that diner booth, it was the most valuable company on the planet.

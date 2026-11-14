@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:02,689
+CHAPTER 2 — THIRTY DAYS
+
+2
+00:00:03,039 --> 00:00:08,962
+Huang flew to Japan to meet Sega's president, Shoichiro Irimajiri. And he told him the truth.
+
+3
+00:00:09,182 --> 00:00:20,259
+He told him their chip wouldn't work and that Sega should find another partner. And he asked for one more thing: that the final payment of the contract, five million dollars, remain as an investment in NVIDIA.
+
+4
+00:00:20,479 --> 00:00:28,479
+According to Huang, he warned him that he would most likely lose that money. Irimajiri thought about it for a couple of days and agreed.
+
+5
+00:00:28,699 --> 00:00:40,699
+With that money they had about six months. They bet everything on a new chip built with triangles: the RIVA 128. It sold one million units in four months.
+
+6
+00:00:41,549 --> 00:00:49,857
+Ever since, Huang opened many meetings with the same line: we are thirty days from going out of business. Remember that phrase.
+
+7
+00:00:50,407 --> 00:00:58,022
+Sega sold its shares when NVIDIA went public. According to Huang, today they would be worth nearly one trillion dollars.

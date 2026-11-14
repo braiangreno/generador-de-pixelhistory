@@ -88,13 +88,14 @@ def main():
             print(f"Skipping {code}: {vpath} not found!", file=sys.stderr)
             continue
         print(f"=== MUXING {code} ({os.path.basename(vpath)}) ===")
+        v_codec = ["-c:v", "libx264", "-preset", "fast", "-crf", "22", "-pix_fmt", "yuv420p"]
         cmd = [
             "ffmpeg", "-y", "-loglevel", "error",
             "-i", vpath,
             "-i", item["audio"],
             "-map", "0:v",
             "-map", "1:a",
-            "-c:v", "copy",
+            *v_codec,
             "-af", "loudnorm=I=-14:TP=-1.0:LRA=11",
             "-ar", "48000",
             "-c:a", "aac",

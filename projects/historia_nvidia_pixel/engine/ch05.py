@@ -16,12 +16,12 @@ def c5_s01_toronto_alexnet(t):
     d = ImageDraw.Draw(cv)
     draw_place_only(cv, "TORONTO, CANADÁ · 2012 · DOS PLACAS DE JUEGOS", t, t0, border=GPU_GREEN)
 
-    # Dos placas de video brillando sobre el escritorio de trabajo
-    draw_nvidia_prop(cv, 240, 248, kind="gpu_pedestal", t=t, state=1.5)
-    char(cv, "krizhevsky", 138, 248, t, scale=2, arms="type" if t < t_c5_03 else "cheer", look=1, mood="happy")
+    # Dos placas de video brillando sobre la mesa en medio del piso despejado
+    draw_nvidia_prop(cv, 224, 248, kind="gpu_pedestal", t=t, state=1.5)
+    char(cv, "krizhevsky", 112, 248, t, scale=2, arms="type" if t < t_c5_03 else "cheer", look=1, mood="happy")
     if t >= t_c5_02 - 0.1:
-        char(cv, "sutskever", 322, 248, t, scale=2, arms="work" if t < t_c5_03 else "cheer", look=-1, mood="happy")
-        char(cv, "hinton12", 368, 248, t, scale=2, arms="point" if t < t_c5_03 else "cheer", look=-1, mood="happy")
+        char(cv, "sutskever", 332, 248, t, scale=2, arms="work" if t < t_c5_03 else "cheer", look=-1, mood="happy")
+        char(cv, "hinton12", 396, 248, t, scale=2, arms="point" if t < t_c5_03 else "cheer", look=-1, mood="happy")
 
     if t < t_c5_02 - 0.12:
         a, dy = pop(t, t0 + 0.1)
@@ -29,12 +29,17 @@ def c5_s01_toronto_alexnet(t):
         draw_text(cv, "ALEX KRIZHEVSKY · TORONTO (2012)", 240, 52 + dy, "press", 8, GPU_GREEN, align="center")
         draw_text(cv, "EN EL CUARTO DE LA CASA DE SUS PADRES", 240, 74 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "PUSO DOS PLACAS DE JUEGOS EN SU PC", 240, 94 + dy, "silk", 8, GOLD, align="center")
+        person_card(cv, "alex_krizhevsky", "ALEX KRIZHEVSKY", "EPISODIO 1: HISTORIA DE LA IA · TORONTO", t, t0 + 0.15, dur=2.4)
     elif t < t_c5_03 - 0.12:
         a, dy = pop(t, t_c5_02 - 0.1)
         window(cv, 98, 42 + dy, 284, 92, fill=(14, 24, 34), border=TESLA_CYAN, alpha=0.95)
         draw_text(cv, "SUTSKEVER Y GEOFFREY HINTON", 240, 52 + dy, "press", 8, TESLA_CYAN, align="center")
-        draw_text(cv, "ENTRENARON UNA RED PARA RECONOCER FOTOS", 240, 74 + dy, "silk", 8, CREAM, align="center")
-        draw_text(cv, "PERROS · AUTOS · FLORES (6 DÍAS)", 240, 94 + dy, "silk", 8, GOLD, align="center")
+        draw_text(cv, "¿LOS RECORDÁS DEL EP. 1 (HISTORIA DE LA IA)?", 240, 74 + dy, "silk", 8, GOLD, align="center")
+        draw_text(cv, "ENTRENARON LA RED EN 6 DÍAS CON 2 PLACAS", 240, 94 + dy, "silk", 8, CREAM, align="center")
+        if t < t_c5_02 + 2.7:
+            person_card(cv, "ilya_sutskever", "ILYA SUTSKEVER", "EPISODIO 1: HISTORIA DE LA IA · TORONTO", t, t_c5_02, dur=2.2)
+        else:
+            person_card(cv, "geoffrey_hinton_2012", "GEOFFREY HINTON", "EPISODIO 1: HISTORIA DE LA IA · PROFESOR", t, t_c5_02 + 2.7, dur=2.4)
     else:
         a, dy = pop(t, t_c5_03 - 0.1)
         window(cv, 98, 40 + dy, 284, 102, fill=(14, 28, 22), border=GOLD, alpha=0.96)

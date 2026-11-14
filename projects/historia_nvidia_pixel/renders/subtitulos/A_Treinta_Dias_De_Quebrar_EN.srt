@@ -1,0 +1,283 @@
+1
+00:00:00,750 --> 00:00:10,519
+In 1993, three engineers sit at a booth in a roadside diner in San Jose, California. They order coffee. Lots of coffee.
+
+2
+00:00:10,739 --> 00:00:18,278
+One of them, Jensen Huang, knows that chain well: at fifteen, he had washed dishes at one of its locations.
+
+3
+00:00:18,828 --> 00:00:25,366
+They want to build a chip so video games can be seen in three dimensions. They start with forty thousand dollars.
+
+4
+00:00:25,586 --> 00:00:33,817
+Thirty-three years later, that company reached nearly six trillion dollars in value. No company had ever been worth that much.
+
+5
+00:00:34,467 --> 00:00:37,544
+And this week, the man from that booth stepped down.
+
+6
+00:00:38,394 --> 00:00:43,855
+This is the story of NVIDIA. And of a question that no one can answer today.
+
+7
+00:00:44,705 --> 00:00:47,705
+CHAPTER 1 — THE WRONG CHIP
+
+8
+00:00:48,055 --> 00:00:57,132
+The name came from invidia, the Latin word for envy. And the first chip, in 1995, was called the NV1.
+
+9
+00:00:57,352 --> 00:01:04,660
+It had a problem. It drew objects using curved surfaces. And the rest of the industry chose triangles.
+
+10
+00:01:04,880 --> 00:01:12,880
+When Microsoft built its standard for Windows games, it built it around triangles. The NV1 was left on the wrong side.
+
+11
+00:01:13,100 --> 00:01:20,254
+NVIDIA had a contract with Sega for the chip in its next console. But it was still using the same wrong technology.
+
+12
+00:01:21,104 --> 00:01:24,488
+The company had enough cash left for about thirty days.
+
+13
+00:01:25,338 --> 00:01:27,877
+CHAPTER 2 — THIRTY DAYS
+
+14
+00:01:28,227 --> 00:01:34,150
+Huang flew to Japan to meet Sega's president, Shoichiro Irimajiri. And he told him the truth.
+
+15
+00:01:34,370 --> 00:01:45,447
+He told him their chip wouldn't work and that Sega should find another partner. And he asked for one more thing: that the final payment of the contract, five million dollars, remain as an investment in NVIDIA.
+
+16
+00:01:45,667 --> 00:01:53,667
+According to Huang, he warned him that he would most likely lose that money. Irimajiri thought about it for a couple of days and agreed.
+
+17
+00:01:53,887 --> 00:02:05,887
+With that money they had about six months. They bet everything on a new chip built with triangles: the RIVA 128. It sold one million units in four months.
+
+18
+00:02:06,737 --> 00:02:15,045
+Ever since, Huang opened many meetings with the same line: we are thirty days from going out of business. Remember that phrase.
+
+19
+00:02:15,595 --> 00:02:23,210
+Sega sold its shares when NVIDIA went public. According to Huang, today they would be worth nearly one trillion dollars.
+
+20
+00:02:24,060 --> 00:02:26,829
+CHAPTER 3 — THOUSANDS OF HANDS
+
+21
+00:02:27,179 --> 00:02:39,102
+In 1999, NVIDIA went public and launched the GeForce 256. They sold it as the world's first GPU. And what is a GPU?
+
+22
+00:02:39,552 --> 00:02:49,937
+Let's go to the chalkboard. A regular screen has about two million tiny dots, the pixels. And in a game, each one can change color sixty times per second.
+
+23
+00:02:50,157 --> 00:02:58,695
+A computer's processor, the CPU, is like a brilliant professor. It solves any problem, but only a few at a time.
+
+24
+00:02:58,915 --> 00:03:07,685
+A GPU is like a classroom with thousands of students. Each one only knows how to do simple math. But they all do it at the same time.
+
+25
+00:03:07,905 --> 00:03:13,443
+To paint millions of pixels you don't need a genius. You need thousands of hands.
+
+26
+00:03:14,293 --> 00:03:19,139
+A CPU thinks fast. A GPU thinks in parallel.
+
+27
+00:03:19,989 --> 00:03:23,528
+CHAPTER 4 — THE BET NOBODY WANTED
+
+28
+00:03:23,878 --> 00:03:33,493
+In 2006, Huang made an unusual bet. It was called CUDA, and it allowed graphics cards to be used for any calculation, not just games.
+
+29
+00:03:33,713 --> 00:03:41,482
+Scientists and programmers could put those thousands of hands to work on whatever they wanted: physics, weather, medicine.
+
+30
+00:03:41,702 --> 00:03:47,164
+Wall Street didn't like it. It cost a fortune, and nobody could see how it would make money.
+
+31
+00:03:47,384 --> 00:03:53,461
+For years, the company was worth around ten billion dollars, and barely moved.
+
+32
+00:03:54,311 --> 00:03:57,772
+It was a bridge toward a city that didn't exist yet.
+
+33
+00:03:58,622 --> 00:04:02,161
+CHAPTER 5 — TWO CARDS IN A BEDROOM
+
+34
+00:04:02,511 --> 00:04:13,203
+In 2012, a student in Toronto named Alex Krizhevsky built something in his bedroom at his parents' house. He put two gaming graphics cards into his computer.
+
+35
+00:04:13,423 --> 00:04:27,808
+With his colleague Ilya Sutskever and his professor Geoffrey Hinton—remember these characters from our first episode on the history of AI?—he trained a neural network to recognize photos. It took about six days.
+
+36
+00:04:28,028 --> 00:04:35,643
+He entered an image recognition competition and won by a massive margin. The network was called AlexNet.
+
+37
+00:04:36,093 --> 00:04:43,324
+Why a gaming card? To the chalkboard. A neural network learns by multiplying huge tables of numbers.
+
+38
+00:04:43,544 --> 00:04:50,852
+They are millions of simple multiplications, all at once. The exact same thing a GPU does to move the triangles in a game.
+
+39
+00:04:51,072 --> 00:04:58,687
+The classroom of thousands of students could also teach a machine. And thanks to CUDA, anyone could hand it the assignment.
+
+40
+00:04:59,537 --> 00:05:04,460
+Without looking for it, the video game chip was the artificial intelligence chip.
+
+41
+00:05:05,310 --> 00:05:08,233
+CHAPTER 6 — THE GOLD RUSH
+
+42
+00:05:08,583 --> 00:05:21,352
+In 2016, Huang personally delivered a supercomputer to a small lab in San Francisco. It was NVIDIA's first for artificial intelligence. The lab was called OpenAI.
+
+43
+00:05:21,572 --> 00:05:30,111
+Six years later, that lab launched ChatGPT. And every company in the world wanted the same thing: NVIDIA chips.
+
+44
+00:05:30,331 --> 00:05:34,485
+It was a gold rush. And NVIDIA was selling the shovels.
+
+45
+00:05:34,705 --> 00:05:43,705
+In 2023 it passed one trillion dollars in value. And in 2025 it became the first company in history to pass five trillion.
+
+46
+00:05:44,355 --> 00:06:00,585
+There were scares. In January 2025, a cheaper Chinese model, DeepSeek, spooked investors. In a single day, NVIDIA lost nearly six hundred billion dollars in value. No company had ever lost that much in one day.
+
+47
+00:06:00,805 --> 00:06:06,498
+And NVIDIA kept climbing. In October 2026, it nearly touched six trillion.
+
+48
+00:06:07,348 --> 00:06:12,502
+Thirty-three years after that diner booth, it was the most valuable company on the planet.
+
+49
+00:06:13,352 --> 00:06:16,582
+CHAPTER 7 — WHAT A COMPANY IS WORTH
+
+50
+00:06:16,932 --> 00:06:22,855
+Before the ending, one last chalkboard. What does it mean for a company to be worth six trillion dollars?
+
+51
+00:06:23,075 --> 00:06:30,922
+First, the word. In Spanish, a billón is a million millions. In English, it's called a trillion.
+
+52
+00:06:31,142 --> 00:06:40,065
+A publicly traded company is divided into tiny pieces, called shares. Its value is the price of one share multiplied by the total number of shares.
+
+53
+00:06:40,285 --> 00:06:47,438
+That price isn't cash locked inside a vault. It's what people believe the company will earn in the future.
+
+54
+00:06:47,658 --> 00:06:55,658
+That's why it can lose hundreds of billions without a single machine breaking. All it takes is a change in what people believe.
+
+55
+00:06:56,508 --> 00:07:01,278
+A company isn't worth what it has. It's worth what people believe it will have.
+
+56
+00:07:02,128 --> 00:07:04,512
+CHAPTER 8 — THE WEEK
+
+57
+00:07:04,862 --> 00:07:14,939
+And people began to doubt. Since October, the stock had been falling. Concerns grew over the debt many companies are taking on to buy artificial intelligence chips.
+
+58
+00:07:15,589 --> 00:07:28,820
+Then, on a weekend in November, The New York Times published a story about Huang. According to the paper, he had been in a relationship with a woman whom U.S. intelligence considered a Chinese agent.
+
+59
+00:07:29,040 --> 00:07:42,502
+Huang acknowledged in a letter to employees that he had been unfaithful to his wife. The board opened an investigation into whether he had been a target of espionage, and said it had no reason to believe any secrets were leaked.
+
+60
+00:07:42,722 --> 00:07:51,568
+Afterward, The New York Times and Reuters reported other relationships between Huang and employees. One of them was an executive who reported to him.
+
+61
+00:07:52,418 --> 00:08:01,725
+On Thursday, November 12, NVIDIA announced his resignation. After thirty-three years, the founder stepped down as CEO and left the board.
+
+62
+00:08:01,945 --> 00:08:08,330
+Chief financial officer Colette Kress took over as interim CEO while the company searches for a replacement.
+
+63
+00:08:08,550 --> 00:08:17,704
+In addition, three U.S. House committees summoned him to testify behind closed doors. The hearing is set for December 1.
+
+64
+00:08:18,604 --> 00:08:22,296
+In a single week, NVIDIA was left without its founder.
+
+65
+00:08:23,146 --> 00:08:25,377
+CHAPTER 9 — THE END?
+
+66
+00:08:25,727 --> 00:08:36,650
+Since October, NVIDIA has lost nearly 1.7 trillion dollars in value. Six straight weeks of decline: its worst streak since 2012.
+
+67
+00:08:36,870 --> 00:08:45,101
+Meanwhile, the chips keep selling. For this quarter, the company expected to bring in around 108 billion dollars in revenue.
+
+68
+00:08:45,851 --> 00:08:57,312
+For thirty-three years, Huang repeated that they were thirty days from going out of business. Since 1996, it was never true again. It was his way of never relaxing.
+
+69
+00:08:57,532 --> 00:09:04,532
+Today NVIDIA is not thirty days from going out of business. But for the first time since that diner booth, it doesn't have its founder.
+
+70
+00:09:05,432 --> 00:09:10,740
+Is this the end of the NVIDIA story? Or is it just another one of those thirty days?
+
+71
+00:09:11,690 --> 00:09:18,075
+What do you think? What other story would you like to see in the next episode? Leave it down in the comments.

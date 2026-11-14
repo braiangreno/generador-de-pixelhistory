@@ -1059,16 +1059,16 @@ def draw_gpu_card(cv, cx, cy, t, scale=1, fan_speed=14.0, led_col=GPU_GREEN, dua
     """Dibuja una placa de video (GPU) en pixel art con sus dos ventiladores giratorios
     y barra LED superior (sin logos de marca)."""
     d = ImageDraw.Draw(cv)
-    cards = [(-18 * scale, -10 * scale), (14 * scale, 8 * scale)] if dual else [(0, 0)]
+    cards = [(-26 * scale, 0), (26 * scale, 0)] if dual else [(0, 0)]
     for ox, oy in cards:
-        w = 48 * scale
+        w = 46 * scale
         h = 22 * scale
         x0 = int(cx + ox - w // 2)
         y0 = int(cy + oy - h // 2)
         if fan_speed > 0.1:
-            glow(cv, x0 + w // 2, y0 + h // 2, int(22 * scale), led_col, 0.35)
-        # Carcasa gris oscuro metálico + conector PCI dorado abajo
-        d.rectangle([x0 + 6 * scale, y0 + h, x0 + w - 8 * scale, y0 + h + 3 * scale],
+            glow(cv, x0 + w // 2, y0 + h // 2, int(20 * scale), led_col, 0.35)
+        # Carcasa gris oscuro metálico + conector PCI dorado abajo apoyado en la mesa
+        d.rectangle([x0 + 6 * scale, y0 + h, x0 + w - 8 * scale, y0 + h + 2 * scale],
                     fill=(218, 174, 64, 255), outline=(*INK, 255))
         for px in range(x0 + 8 * scale, x0 + w - 8 * scale, 3 * scale):
             d.line([(px, y0 + h), (px, y0 + h + 2 * scale)], fill=(*INK, 255))
@@ -1077,7 +1077,7 @@ def draw_gpu_card(cv, cx, cy, t, scale=1, fan_speed=14.0, led_col=GPU_GREEN, dua
         bar_c = led_col if fan_speed > 0.1 else (72, 78, 88)
         d.rectangle([x0 + 2 * scale, y0 + 2 * scale, x0 + w - 2 * scale, y0 + 4 * scale], fill=(*bar_c, 255))
         # Dos ventiladores circulares girando con fan_speed
-        for fx in (x0 + 14 * scale, x0 + w - 14 * scale):
+        for fx in (x0 + 13 * scale, x0 + w - 13 * scale):
             fy = y0 + 12 * scale
             r = 7 * scale
             d.ellipse([fx - r, fy - r, fx + r, fy + r], fill=(22, 26, 34, 255), outline=(74, 82, 96, 255))
@@ -1089,6 +1089,44 @@ def draw_gpu_card(cv, cx, cy, t, scale=1, fan_speed=14.0, led_col=GPU_GREEN, dua
                 d.line([(fx, fy), (bx, by)], fill=(120, 132, 148, 255), width=max(1, scale))
             hub_c = led_col if fan_speed > 0.1 else (90, 96, 108)
             d.ellipse([fx - 2 * scale, fy - 2 * scale, fx + 2 * scale, fy + 2 * scale], fill=(*hub_c, 255))
+    if dual:
+        # Puente SLI conectando las dos placas por arriba
+        d.rectangle([int(cx - 8 * scale), int(cy - 13 * scale), int(cx + 8 * scale), int(cy - 9 * scale)],
+                    fill=(*GPU_GREEN, 255), outline=(*INK, 255))
+
+
+def person_card(cv, portrait_key, name, subtitle, t, t0, y=166, frame=GOLD, dur=2.8):
+    """Dibuja la tarjeta clásica de presentación de personaje con retrato 64x64 a la izquierda
+    y ventana RPG de nombre + subtítulo a la derecha (idéntica al Episodio 1 de IA).
+    En 9:16 se registra en vctx.person_cards para redibujarse limpia sin dividirse."""
+    if t < t0 - 0.15:
+        return
+    if dur is not None and t > t0 + dur + 0.35:
+        return
+    vctx = getattr(sys.modules.get("core"), "_VCTX", None)
+    if vctx is not None and isinstance(cv, Image.Image) and cv.size == (W, H):
+        if hasattr(vctx, "person_cards"):
+            vctx.person_cards.append({
+                "key": portrait_key,
+                "name": name,
+                "sub": subtitle,
+                "t": t,
+                "t0": t0,
+                "frame": frame,
+            })
+            return
+    a = prog(t, t0 - 0.15, t0 + 0.25)
+    a_out = prog(t, t0 + dur, t0 + dur + 0.35) if dur is not None else 0.0
+    off = int((1 - ease_out(a)) * -140) + int(ease_in_out(a_out) * -380)
+    portrait_card(cv, portrait_key, 14 + off, y, frame=frame)
+    tw_name, _ = text_size(name, "press", 16)
+    tw_sub, _ = text_size(subtitle, "silk", 8)
+    tw = min(376, max(268, max(tw_name, tw_sub) + 24))
+    window(cv, 86 + off, y + 14, tw, 46, border=frame)
+    name_sz = 16 if tw_name <= (tw - 20) else 8
+    name_y = (y + 24) if name_sz == 16 else (y + 26)
+    draw_text(cv, name, 96 + off, name_y, "press", name_sz, CREAM)
+    draw_text(cv, subtitle, 96 + off, y + 44, "silk", 8, GREY)
 
 
 def draw_stock_chart(cv, x, y, w, h, pts_norm, progress=1.0, col_up=GPU_GREEN, col_down=STOCK_RED,
@@ -1199,10 +1237,12 @@ def draw_nvidia_prop(cv, x, feet=248, kind="diner_table", t=0.0, state=0.0):
 
         elif kind == "gpu_pedestal":
             # Mesa de laboratorio / escenario con una placa de video o supercomputadora apoyada
-            d.rectangle([cx - 28, top_y + 5, cx - 23, fy], fill=(48, 56, 72, 255), outline=(*INK, 255))
-            d.rectangle([cx + 23, top_y + 5, cx + 28, fy], fill=(48, 56, 72, 255), outline=(*INK, 255))
-            d.rectangle([cx - 32, top_y, cx + 32, top_y + 5], fill=(72, 82, 104, 255), outline=(*INK, 255))
-            draw_gpu_card(canvas, cx, top_y - 12, t, scale=1, fan_speed=(0.0 if state < 0 else 16.0),
+            half_w = 54 if state == 1.5 else 32
+            leg_x = half_w - 5
+            d.rectangle([cx - leg_x - 4, top_y + 5, cx - leg_x, fy], fill=(48, 56, 72, 255), outline=(*INK, 255))
+            d.rectangle([cx + leg_x, top_y + 5, cx + leg_x + 4, fy], fill=(48, 56, 72, 255), outline=(*INK, 255))
+            d.rectangle([cx - half_w, top_y, cx + half_w, top_y + 5], fill=(72, 82, 104, 255), outline=(*INK, 255))
+            draw_gpu_card(canvas, cx, top_y - 13, t, scale=1, fan_speed=(0.0 if state < 0 else 16.0),
                           led_col=(GOLD if state >= 2.0 else GPU_GREEN), dual=(state == 1.5))
 
         elif kind == "ceo_desk":

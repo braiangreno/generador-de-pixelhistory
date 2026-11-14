@@ -1,0 +1,23 @@
+1
+00:00:00,150 --> 00:00:03,150
+CHAPTER 1 — THE WRONG CHIP
+
+2
+00:00:03,500 --> 00:00:12,577
+The name came from invidia, the Latin word for envy. And the first chip, in 1995, was called the NV1.
+
+3
+00:00:12,797 --> 00:00:20,105
+It had a problem. It drew objects using curved surfaces. And the rest of the industry chose triangles.
+
+4
+00:00:20,325 --> 00:00:28,325
+When Microsoft built its standard for Windows games, it built it around triangles. The NV1 was left on the wrong side.
+
+5
+00:00:28,545 --> 00:00:35,699
+NVIDIA had a contract with Sega for the chip in its next console. But it was still using the same wrong technology.
+
+6
+00:00:36,549 --> 00:00:39,933
+The company had enough cash left for about thirty days.

@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:02,919
+CHAPTER 3 — THOUSANDS OF HANDS
+
+2
+00:00:03,269 --> 00:00:15,192
+In 1999, NVIDIA went public and launched the GeForce 256. They sold it as the world's first GPU. And what is a GPU?
+
+3
+00:00:15,642 --> 00:00:26,027
+Let's go to the chalkboard. A regular screen has about two million tiny dots, the pixels. And in a game, each one can change color sixty times per second.
+
+4
+00:00:26,247 --> 00:00:34,785
+A computer's processor, the CPU, is like a brilliant professor. It solves any problem, but only a few at a time.
+
+5
+00:00:35,005 --> 00:00:43,775
+A GPU is like a classroom with thousands of students. Each one only knows how to do simple math. But they all do it at the same time.
+
+6
+00:00:43,995 --> 00:00:49,533
+To paint millions of pixels you don't need a genius. You need thousands of hands.
+
+7
+00:00:50,383 --> 00:00:55,229
+A CPU thinks fast. A GPU thinks in parallel.

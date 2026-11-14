@@ -48,6 +48,7 @@ def c8_s01_doubts_and_newspapers(t):
         draw_text(cv, "HUANG RECONOCIÓ LA RELACIÓN EN UNA CARTA", 240, 70 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "LA JUNTA INVESTIGÓ CON ABOGADOS EXTERNOS:", 240, 88 + dy, "silk", 8, SOFT_GRAY, align="center")
         draw_text(cv, "«SIN FILTRACIÓN DE SECRETOS»", 240, 106 + dy, "press", 8, GPU_GREEN, align="center")
+        person_card(cv, "jensen_huang", "JENSEN HUANG", "FUNDADOR Y CEO (1993 - NOVIEMBRE 2026)", t, t_c8_03)
         return vignette(cv, 0.38)
 
     # c8_04: Se apilan más diarios (The New York Times y Reuters: relaciones con empleadas de la compañía)
@@ -99,6 +100,7 @@ def c8_s02_resignation_kress_and_congress(t):
         draw_text(cv, "COLETTE KRESS · DIRECTORA INTERINA", 240, 52 + dy, "press", 8, GOLD, align="center")
         draw_text(cv, "DIRECTORA DE FINANZAS DE LA EMPRESA", 240, 74 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "QUEDÓ A CARGO DE MANERA PROVISORIA", 240, 92 + dy, "silk", 8, SOFT_GRAY, align="center")
+        person_card(cv, "colette_kress", "COLETTE KRESS", "DIRECTORA EJECUTIVA INTERINA · NOV 2026", t, t_c8_06)
         return vignette(cv, 0.36)
 
     if t < t_c8_08 - 0.12:

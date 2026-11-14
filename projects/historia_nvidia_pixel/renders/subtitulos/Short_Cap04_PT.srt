@@ -1,0 +1,23 @@
+1
+00:00:00,150 --> 00:00:03,689
+CAPÍTULO 4 — A APOSTA QUE NINGUÉM QUERIA
+
+2
+00:00:04,039 --> 00:00:13,654
+Em 2006, Huang fez uma aposta estranha. Chamou-se CUDA, e permitia usar as placas de vídeo para qualquer cálculo, não apenas para jogos.
+
+3
+00:00:13,874 --> 00:00:21,643
+Cientistas e programadores podiam colocar essas milhares de mãos para trabalhar no que quisessem: física, clima, medicina.
+
+4
+00:00:21,863 --> 00:00:27,325
+Wall Street não gostou. Custava muito caro e ninguém via como aquilo daria dinheiro.
+
+5
+00:00:27,545 --> 00:00:33,622
+Durante anos, a empresa valeu cerca de dez bilhões de dólares, e quase não saía do lugar.
+
+6
+00:00:34,472 --> 00:00:37,933
+Era uma ponte para uma cidade que ainda não existia.

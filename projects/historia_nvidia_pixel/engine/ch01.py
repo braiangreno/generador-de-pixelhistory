@@ -32,12 +32,17 @@ def s0_s01_diner_and_napkin(t):
         draw_text(cv, "LA MESA DEL RESTAURANTE", 240, 52 + dy, "press", 8, GOLD, align="center")
         draw_text(cv, "TRES INGENIEROS · SAN JOSÉ, 1993", 240, 72 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "PIDEN CAFÉ. MUCHO CAFÉ.", 240, 92 + dy, "silk", 8, CHALK_YELLOW, align="center")
+        if t < t0 + 2.4:
+            person_card(cv, "chris_malachowsky", "CHRIS MALACHOWSKY", "COFUNDADOR DE NVIDIA · SAN JOSÉ, 1993", t, t0 + 0.2)
+        else:
+            person_card(cv, "curtis_priem", "CURTIS PRIEM", "COFUNDADOR DE NVIDIA · SAN JOSÉ, 1993", t, t0 + 2.4)
     elif t < t_s03 - 0.12:
         a, dy = pop(t, t_s02 - 0.1)
         window(cv, 108, 42 + dy, 264, 86, fill=(24, 18, 28), border=TESLA_CYAN, alpha=0.95)
         draw_text(cv, "JENSEN HUANG", 240, 52 + dy, "press", 8, TESLA_CYAN, align="center")
         draw_text(cv, "CONOCE BIEN ESA CADENA:", 240, 72 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "A LOS 15 AÑOS LAVÓ PLATOS AHÍ", 240, 92 + dy, "silk", 8, GOLD, align="center")
+        person_card(cv, "jensen_huang_1993", "JENSEN HUANG", "COFUNDADOR Y CEO · 30 AÑOS (1993)", t, t_s02)
     else:
         a, dy = pop(t, t_s03 - 0.1)
         window(cv, 108, 42 + dy, 264, 92, fill=(18, 26, 22), border=GPU_GREEN, alpha=0.95)

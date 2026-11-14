@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:02,919
+CAPÍTULO 3 — MILES DE MANOS
+
+2
+00:00:03,269 --> 00:00:15,192
+En 1999, NVIDIA salió a la bolsa y lanzó la GeForce 256. La vendió como la primera GPU del mundo. ¿Y qué es una GPU?
+
+3
+00:00:15,642 --> 00:00:26,027
+Vamos a la pizarra. Una pantalla común tiene unos dos millones de puntitos, los píxeles. Y en un juego, cada uno puede cambiar de color sesenta veces por segundo.
+
+4
+00:00:26,247 --> 00:00:34,785
+El procesador de una computadora, la CPU, es como un profesor brillante. Resuelve cualquier problema, pero pocos a la vez.
+
+5
+00:00:35,005 --> 00:00:43,775
+La GPU es como un aula con miles de alumnos. Cada uno solo sabe hacer cuentas simples. Pero las hacen todos al mismo tiempo.
+
+6
+00:00:43,995 --> 00:00:49,533
+Para pintar millones de píxeles no necesitas un genio. Necesitas miles de manos.
+
+7
+00:00:50,383 --> 00:00:55,229
+Una CPU piensa rápido. Una GPU piensa en paralelo.

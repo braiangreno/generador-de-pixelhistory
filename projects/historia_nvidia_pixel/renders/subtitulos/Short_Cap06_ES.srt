@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,073
+CAPÍTULO 6 — LA FIEBRE DEL ORO
+
+2
+00:00:03,423 --> 00:00:16,192
+En 2016, Huang llevó en persona una supercomputadora a un laboratorio chico de San Francisco. Era la primera de NVIDIA para inteligencia artificial. El laboratorio se llamaba OpenAI.
+
+3
+00:00:16,412 --> 00:00:24,951
+Seis años después, ese laboratorio lanzó ChatGPT. Y todas las empresas del mundo quisieron lo mismo: chips de NVIDIA.
+
+4
+00:00:25,171 --> 00:00:29,325
+Fue una fiebre del oro. Y NVIDIA vendía las palas.
+
+5
+00:00:29,545 --> 00:00:38,545
+En 2023 pasó el billón de dólares de valor. Y en 2025 fue la primera empresa de la historia en pasar los cinco billones.
+
+6
+00:00:39,195 --> 00:00:55,425
+Hubo sustos. En enero de 2025, un modelo chino más barato, DeepSeek, asustó a los inversores. En un solo día, NVIDIA perdió casi seiscientos mil millones de dólares de valor. Nunca una empresa había perdido tanto en un día.
+
+7
+00:00:55,645 --> 00:01:01,338
+Y NVIDIA siguió subiendo. En octubre de 2026 rozó los seis billones.
+
+8
+00:01:02,188 --> 00:01:07,342
+Treinta y tres años después de aquella mesa, era la empresa más valiosa del planeta.

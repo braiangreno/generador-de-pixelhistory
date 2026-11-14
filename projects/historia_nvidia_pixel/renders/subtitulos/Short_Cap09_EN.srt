@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:02,381
+CHAPTER 9 — THE END?
+
+2
+00:00:02,731 --> 00:00:13,654
+Since October, NVIDIA has lost nearly 1.7 trillion dollars in value. Six straight weeks of decline: its worst streak since 2012.
+
+3
+00:00:13,874 --> 00:00:22,105
+Meanwhile, the chips keep selling. For this quarter, the company expected to bring in around 108 billion dollars in revenue.
+
+4
+00:00:22,855 --> 00:00:34,316
+For thirty-three years, Huang repeated that they were thirty days from going out of business. Since 1996, it was never true again. It was his way of never relaxing.
+
+5
+00:00:34,536 --> 00:00:41,536
+Today NVIDIA is not thirty days from going out of business. But for the first time since that diner booth, it doesn't have its founder.
+
+6
+00:00:42,436 --> 00:00:47,744
+Is this the end of the NVIDIA story? Or is it just another one of those thirty days?
+
+7
+00:00:48,694 --> 00:00:55,079
+What do you think? What other story would you like to see in the next episode? Leave it down in the comments.

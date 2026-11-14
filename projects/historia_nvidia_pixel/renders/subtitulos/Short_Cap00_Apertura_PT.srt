@@ -1,0 +1,23 @@
+1
+00:00:00,750 --> 00:00:10,519
+Em 1993, três engenheiros sentam à mesa de uma lanchonete de estrada em San José, Califórnia. Pedem café. Muito café.
+
+2
+00:00:10,739 --> 00:00:18,278
+Um deles, Jensen Huang, conhece bem essa rede: aos quinze anos tinha lavado pratos em uma de suas lojas.
+
+3
+00:00:18,828 --> 00:00:25,366
+Eles querem fazer um chip para que os videogames sejam vistos em três dimensões. Começam com quarenta mil dólares.
+
+4
+00:00:25,586 --> 00:00:33,817
+Trinta e três anos depois, essa empresa chegou a valer quase seis trilhões de dólares. Nenhuma empresa jamais tinha valido tanto.
+
+5
+00:00:34,467 --> 00:00:37,544
+E nesta semana, o homem daquela mesa saiu.
+
+6
+00:00:38,394 --> 00:00:43,855
+Esta é a história da NVIDIA. E de uma pergunta que hoje ninguém consegue responder.

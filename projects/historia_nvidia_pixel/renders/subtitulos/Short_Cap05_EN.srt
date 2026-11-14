@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,689
+CHAPTER 5 — TWO CARDS IN A BEDROOM
+
+2
+00:00:04,039 --> 00:00:14,731
+In 2012, a student in Toronto named Alex Krizhevsky built something in his bedroom at his parents' house. He put two gaming graphics cards into his computer.
+
+3
+00:00:14,951 --> 00:00:29,336
+With his colleague Ilya Sutskever and his professor Geoffrey Hinton—remember these characters from our first episode on the history of AI?—he trained a neural network to recognize photos. It took about six days.
+
+4
+00:00:29,556 --> 00:00:37,171
+He entered an image recognition competition and won by a massive margin. The network was called AlexNet.
+
+5
+00:00:37,621 --> 00:00:44,852
+Why a gaming card? To the chalkboard. A neural network learns by multiplying huge tables of numbers.
+
+6
+00:00:45,072 --> 00:00:52,380
+They are millions of simple multiplications, all at once. The exact same thing a GPU does to move the triangles in a game.
+
+7
+00:00:52,600 --> 00:01:00,215
+The classroom of thousands of students could also teach a machine. And thanks to CUDA, anyone could hand it the assignment.
+
+8
+00:01:01,065 --> 00:01:05,988
+Without looking for it, the video game chip was the artificial intelligence chip.

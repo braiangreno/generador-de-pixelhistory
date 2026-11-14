@@ -1,0 +1,23 @@
+1
+00:00:00,150 --> 00:00:03,689
+CHAPTER 4 — THE BET NOBODY WANTED
+
+2
+00:00:04,039 --> 00:00:13,654
+In 2006, Huang made an unusual bet. It was called CUDA, and it allowed graphics cards to be used for any calculation, not just games.
+
+3
+00:00:13,874 --> 00:00:21,643
+Scientists and programmers could put those thousands of hands to work on whatever they wanted: physics, weather, medicine.
+
+4
+00:00:21,863 --> 00:00:27,325
+Wall Street didn't like it. It cost a fortune, and nobody could see how it would make money.
+
+5
+00:00:27,545 --> 00:00:33,622
+For years, the company was worth around ten billion dollars, and barely moved.
+
+6
+00:00:34,472 --> 00:00:37,933
+It was a bridge toward a city that didn't exist yet.

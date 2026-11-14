@@ -26,6 +26,10 @@ def c6_s01_openai_chatgpt_and_shovels(t):
         draw_text(cv, "2016 · ENTREGA EN PERSONA", 240, 52 + dy, "press", 8, GOLD, align="center")
         draw_text(cv, "PRIMERA SUPERCOMPUTADORA DE IA", 240, 74 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "EL LABORATORIO SE LLAMABA OPENAI", 240, 94 + dy, "silk", 8, GPU_GREEN, align="center")
+        if t < t0 + 2.8:
+            person_card(cv, "jensen_huang", "JENSEN HUANG", "ENTREGA LA PRIMERA SUPERCOMPUTADORA DE IA", t, t0 + 0.15)
+        else:
+            person_card(cv, "sam_altman", "SAM ALTMAN", "COFUNDADOR DE OPENAI · SAN FRANCISCO, 2016", t, t0 + 2.8)
         return vignette(cv, 0.32)
 
     if t < t_c6_03 - 0.12:

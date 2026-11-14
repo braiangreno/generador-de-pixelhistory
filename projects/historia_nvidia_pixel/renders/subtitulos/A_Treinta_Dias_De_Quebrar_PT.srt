@@ -1,0 +1,283 @@
+1
+00:00:00,750 --> 00:00:10,519
+Em 1993, três engenheiros sentam à mesa de uma lanchonete de estrada em San José, Califórnia. Pedem café. Muito café.
+
+2
+00:00:10,739 --> 00:00:18,278
+Um deles, Jensen Huang, conhece bem essa rede: aos quinze anos tinha lavado pratos em uma de suas lojas.
+
+3
+00:00:18,828 --> 00:00:25,366
+Eles querem fazer um chip para que os videogames sejam vistos em três dimensões. Começam com quarenta mil dólares.
+
+4
+00:00:25,586 --> 00:00:33,817
+Trinta e três anos depois, essa empresa chegou a valer quase seis trilhões de dólares. Nenhuma empresa jamais tinha valido tanto.
+
+5
+00:00:34,467 --> 00:00:37,544
+E nesta semana, o homem daquela mesa saiu.
+
+6
+00:00:38,394 --> 00:00:43,855
+Esta é a história da NVIDIA. E de uma pergunta que hoje ninguém consegue responder.
+
+7
+00:00:44,705 --> 00:00:47,705
+CAPÍTULO 1 — O CHIP ERRADO
+
+8
+00:00:48,055 --> 00:00:57,132
+O nome veio de invidia, a palavra em latim para inveja. E o primeiro chip, de 1995, chamou-se NV1.
+
+9
+00:00:57,352 --> 00:01:04,660
+Ele tinha um problema. Desenhava os objetos com superfícies curvas. E o resto da indústria escolheu os triângulos.
+
+10
+00:01:04,880 --> 00:01:12,880
+Quando a Microsoft criou seu padrão para jogos no Windows, usou triângulos. O NV1 ficou do lado errado.
+
+11
+00:01:13,100 --> 00:01:20,254
+A NVIDIA tinha um contrato com a Sega para o chip de seu próximo console. Mas continuava com a mesma tecnologia errada.
+
+12
+00:01:21,104 --> 00:01:24,488
+A empresa tinha dinheiro em caixa para uns trinta dias.
+
+13
+00:01:25,338 --> 00:01:27,877
+CAPÍTULO 2 — TRINTA DIAS
+
+14
+00:01:28,227 --> 00:01:34,150
+Huang voou ao Japão para ver o presidente da Sega, Shoichiro Irimajiri. E lhe disse a verdade.
+
+15
+00:01:34,370 --> 00:01:45,447
+Disse que seu chip não servia e que procurassem outro parceiro. E pediu mais uma coisa: que o último pagamento do contrato, cinco milhões de dólares, ficasse como investimento na NVIDIA.
+
+16
+00:01:45,667 --> 00:01:53,667
+Segundo contou Huang, ele avisou que o mais provável era perder aquele dinheiro. Irimajiri pensou por alguns dias e aceitou.
+
+17
+00:01:53,887 --> 00:02:05,887
+Com esse dinheiro tinham cerca de seis meses. Apostaram tudo em um chip novo, feito com triângulos: o RIVA 128. Vendeu um milhão de unidades em quatro meses.
+
+18
+00:02:06,737 --> 00:02:15,045
+Desde então, Huang abriu muitas reuniões com a mesma frase: estamos a trinta dias de quebrar. Lembre-se dessa frase.
+
+19
+00:02:15,595 --> 00:02:23,210
+A Sega vendeu suas ações quando a NVIDIA entrou na bolsa. Segundo Huang, hoje valeriam perto de um trilhão de dólares.
+
+20
+00:02:24,060 --> 00:02:26,829
+CAPÍTULO 3 — MILHARES DE MÃOS
+
+21
+00:02:27,179 --> 00:02:39,102
+Em 1999, a NVIDIA entrou na bolsa e lançou a GeForce 256. Vendeu-a como a primeira GPU do mundo. E o que é uma GPU?
+
+22
+00:02:39,552 --> 00:02:49,937
+Vamos ao quadro. Uma tela comum tem cerca de dois milhões de pontinhos, os pixels. E em um jogo, cada um pode mudar de cor sessenta vezes por segundo.
+
+23
+00:02:50,157 --> 00:02:58,695
+O processador de um computador, a CPU, é como um professor brilhante. Resolve qualquer problema, mas poucos de cada vez.
+
+24
+00:02:58,915 --> 00:03:07,685
+A GPU é como uma sala de aula com milhares de alunos. Cada um só sabe fazer contas simples. Mas todos as fazem ao mesmo tempo.
+
+25
+00:03:07,905 --> 00:03:13,443
+Para pintar milhões de pixels você não precisa de um gênio. Precisa de milhares de mãos.
+
+26
+00:03:14,293 --> 00:03:19,139
+Uma CPU pensa rápido. Uma GPU pensa em paralelo.
+
+27
+00:03:19,989 --> 00:03:23,528
+CAPÍTULO 4 — A APOSTA QUE NINGUÉM QUERIA
+
+28
+00:03:23,878 --> 00:03:33,493
+Em 2006, Huang fez uma aposta estranha. Chamou-se CUDA, e permitia usar as placas de vídeo para qualquer cálculo, não apenas para jogos.
+
+29
+00:03:33,713 --> 00:03:41,482
+Cientistas e programadores podiam colocar essas milhares de mãos para trabalhar no que quisessem: física, clima, medicina.
+
+30
+00:03:41,702 --> 00:03:47,164
+Wall Street não gostou. Custava muito caro e ninguém via como aquilo daria dinheiro.
+
+31
+00:03:47,384 --> 00:03:53,461
+Durante anos, a empresa valeu cerca de dez bilhões de dólares, e quase não saía do lugar.
+
+32
+00:03:54,311 --> 00:03:57,772
+Era uma ponte para uma cidade que ainda não existia.
+
+33
+00:03:58,622 --> 00:04:02,161
+CAPÍTULO 5 — DUAS PLACAS EM UM QUARTO
+
+34
+00:04:02,511 --> 00:04:13,203
+Em 2012, um estudante de Toronto chamado Alex Krizhevsky montou algo em seu quarto, na casa dos pais. Colocou duas placas de vídeo para jogos no computador.
+
+35
+00:04:13,423 --> 00:04:27,808
+Com seu colega Ilya Sutskever e seu professor Geoffrey Hinton — lembram desses personagens do nosso primeiro episódio, a história da IA? —, treinou uma rede neural para reconhecer fotos. Levou cerca de seis dias.
+
+36
+00:04:28,028 --> 00:04:35,643
+Inscreveu-se em um concurso de reconhecimento de imagens e venceu com enorme vantagem. A rede chamou-se AlexNet.
+
+37
+00:04:36,093 --> 00:04:43,324
+Por que uma placa de jogos? Vamos ao quadro. Uma rede neural aprende multiplicando tabelas enormes de números.
+
+38
+00:04:43,544 --> 00:04:50,852
+São milhões de multiplicações simples, todas ao mesmo tempo. Exatamente o que uma GPU faz para mover os triângulos de um jogo.
+
+39
+00:04:51,072 --> 00:04:58,687
+A sala de aula com milhares de alunos também servia para ensinar uma máquina. E graças ao CUDA, qualquer um podia lhe dar a tarefa.
+
+40
+00:04:59,537 --> 00:05:04,460
+Sem procurar, o chip dos videogames era o chip da inteligência artificial.
+
+41
+00:05:05,310 --> 00:05:08,233
+CAPÍTULO 6 — A CORRIDA DO OURO
+
+42
+00:05:08,583 --> 00:05:21,352
+Em 2016, Huang levou pessoalmente um supercomputador a um pequeno laboratório de São Francisco. Era o primeiro da NVIDIA para inteligência artificial. O laboratório se chamava OpenAI.
+
+43
+00:05:21,572 --> 00:05:30,111
+Seis anos depois, esse laboratório lançou o ChatGPT. E todas as empresas do mundo quiseram a mesma coisa: chips da NVIDIA.
+
+44
+00:05:30,331 --> 00:05:34,485
+Foi uma corrida do ouro. E a NVIDIA vendia as pás.
+
+45
+00:05:34,705 --> 00:05:43,705
+Em 2023 passou de um trilhão de dólares em valor. E em 2025 foi a primeira empresa da história a passar dos cinco trilhões.
+
+46
+00:05:44,355 --> 00:06:00,585
+Houve sustos. Em janeiro de 2025, um modelo chinês mais barato, o DeepSeek, assustou os investidores. Em um único dia, a NVIDIA perdeu quase seiscentos bilhões de dólares de valor. Nenhuma empresa jamais tinha perdido tanto em um dia.
+
+47
+00:06:00,805 --> 00:06:06,498
+E a NVIDIA continuou subindo. Em outubro de 2026 encostou nos seis trilhões.
+
+48
+00:06:07,348 --> 00:06:12,502
+Trinta e três anos depois daquela mesa, era a empresa mais valiosa do planeta.
+
+49
+00:06:13,352 --> 00:06:16,582
+CAPÍTULO 7 — QUANTO VALE UMA EMPRESA
+
+50
+00:06:16,932 --> 00:06:22,855
+Antes do final, um último quadro. O que significa uma empresa valer seis trilhões de dólares?
+
+51
+00:06:23,075 --> 00:06:30,922
+Primeiro, a palavra. Em espanhol dizem billón, e em português e inglês chamamos de trilhão: um milhão de milhões.
+
+52
+00:06:31,142 --> 00:06:40,065
+Uma empresa na bolsa é dividida em pedacinhos, as ações. Seu valor é o preço de uma ação multiplicado pela quantidade de ações.
+
+53
+00:06:40,285 --> 00:06:47,438
+Esse preço não é dinheiro guardado em um cofre. É o que as pessoas acreditam que a empresa vai ganhar no futuro.
+
+54
+00:06:47,658 --> 00:06:55,658
+Por isso ela pode perder centenas de bilhões sem que uma única máquina quebre. Basta mudar o que as pessoas acreditam.
+
+55
+00:06:56,508 --> 00:07:01,278
+Uma empresa não vale o que tem. Vale o que se acredita que vai ter.
+
+56
+00:07:02,128 --> 00:07:04,512
+CAPÍTULO 8 — A SEMANA
+
+57
+00:07:04,862 --> 00:07:14,939
+E as pessoas começaram a duvidar. Desde outubro, a ação vinha caindo. Preocupava a dívida que muitas empresas assumem para comprar chips de inteligência artificial.
+
+58
+00:07:15,589 --> 00:07:28,820
+Então, em um fim de semana de novembro, o The New York Times publicou uma reportagem sobre Huang. Segundo o jornal, ele teve um relacionamento com uma mulher que a inteligência dos Estados Unidos considerava uma agente chinesa.
+
+59
+00:07:29,040 --> 00:07:42,502
+Huang reconheceu em uma carta aos funcionários que tinha sido infiel à esposa. O conselho abriu uma investigação para saber se ele havia sido alvo de espionagem, e disse não ter motivos para acreditar que segredos tenham vazado.
+
+60
+00:07:42,722 --> 00:07:51,568
+Depois, o The New York Times e a Reuters publicaram outros relacionamentos de Huang com funcionárias. Uma delas era uma executiva subordinada a ele.
+
+61
+00:07:52,418 --> 00:08:01,725
+Na quinta-feira, 12 de novembro, a NVIDIA anunciou sua renúncia. Depois de trinta e três anos, o fundador deixou o comando da empresa e o conselho.
+
+62
+00:08:01,945 --> 00:08:08,330
+A diretora financeira, Colette Kress, assumiu de forma interina enquanto a empresa procura um substituto.
+
+63
+00:08:08,550 --> 00:08:17,704
+Além disso, três comissões da Câmara dos Representantes dos Estados Unidos o convocaram para depor a portas fechadas. A audiência está marcada para 1º de dezembro.
+
+64
+00:08:18,604 --> 00:08:22,296
+Em uma única semana, a NVIDIA ficou sem o seu fundador.
+
+65
+00:08:23,146 --> 00:08:25,377
+CAPÍTULO 9 — O FIM?
+
+66
+00:08:25,727 --> 00:08:36,650
+Desde outubro, a NVIDIA perdeu cerca de 1,7 trilhão de dólares em valor. Seis semanas seguidas de queda: a pior sequência desde 2012.
+
+67
+00:08:36,870 --> 00:08:45,101
+Enquanto isso, os chips continuam vendendo. Para este trimestre, a empresa esperava faturar cerca de 108 bilhões de dólares.
+
+68
+00:08:45,851 --> 00:08:57,312
+Durante trinta e três anos, Huang repetiu que estavam a trinta dias de quebrar. Desde 1996 nunca mais voltou a ser verdade. Era seu jeito de nunca relaxar.
+
+69
+00:08:57,532 --> 00:09:04,532
+Hoje a NVIDIA não está a trinta dias de quebrar. Mas pela primeira vez desde aquela mesa, não tem o seu fundador.
+
+70
+00:09:05,432 --> 00:09:10,740
+Será este o fim da história da NVIDIA? Ou é apenas mais um daqueles trinta dias?
+
+71
+00:09:11,690 --> 00:09:18,075
+E você, o que acha? Que outra história gostaria de ver no próximo episódio? Deixe aqui embaixo nos comentários.

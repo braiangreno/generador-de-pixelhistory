@@ -29,12 +29,14 @@ def c2_s01_tokyo_sega_meeting(t):
         draw_text(cv, "SHOICHIRO IRIMAJIRI · SEGA", 240, 52 + dy, "press", 8, GOLD, align="center")
         draw_text(cv, "HUANG VOLÓ A JAPÓN A VERLO", 240, 74 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "Y LE DIJO LA VERDAD DE FRENTE", 240, 94 + dy, "silk", 8, TESLA_CYAN, align="center")
+        person_card(cv, "shoichiro_irimajiri", "SHOICHIRO IRIMAJIRI", "EJECUTIVO DE SEGA · TOKIO, 1996", t, t0 + 0.15)
     elif t < t_c2_03 - 0.12:
         a, dy = pop(t, t_c2_02 - 0.1)
         window(cv, 98, 42 + dy, 284, 92, fill=(22, 18, 32), border=TESLA_CYAN, alpha=0.95)
         draw_text(cv, "EL PEDIDO IMPOSIBLE", 240, 50 + dy, "press", 8, TESLA_CYAN, align="center")
         draw_text(cv, "1. «NUESTRO CHIP NO SIRVE: BUSQUEN OTRO»", 240, 72 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "2. QUE LOS US$ 5.000.000 QUEDEN EN NVIDIA", 240, 92 + dy, "silk", 8, GOLD, align="center")
+        person_card(cv, "shoichiro_irimajiri", "SHOICHIRO IRIMAJIRI", "EJECUTIVO DE SEGA · TOKIO, 1996", t, t0 + 0.15)
     else:
         a, dy = pop(t, t_c2_03 - 0.1)
         window(cv, 104, 42 + dy, 272, 88, fill=(18, 28, 24), border=GPU_GREEN, alpha=0.95)
@@ -75,6 +77,7 @@ def c2_s02_riva128_motto_and_shares(t):
             draw_text(cv, "LA FRASE DE CADA REUNIÓN", 240, 52 + dy, "press", 8, GOLD, align="center")
             draw_text(cv, "«ESTAMOS A 30 DÍAS DE QUEBRAR»", 240, 74 + dy, "silk", 8, STOCK_RED, align="center")
             draw_text(cv, "RECUERDA ESA FRASE.", 240, 96 + dy, "silk", 8, CHALK_YELLOW, align="center")
+            person_card(cv, "jensen_huang_1993", "JENSEN HUANG", "«ESTAMOS A 30 DÍAS DE QUEBRAR»", t, t_c2_05)
         return vignette(cv, 0.34)
 
     # c2_06: En Tokio, Sega vende sus acciones al salir a la bolsa (hoy valdrían ~US$1 billón)

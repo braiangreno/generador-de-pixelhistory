@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:02,381
+CAPÍTULO 9 — ¿EL FINAL?
+
+2
+00:00:02,731 --> 00:00:13,654
+Desde octubre, NVIDIA perdió cerca de un billón setecientos mil millones de dólares de valor. Seis semanas seguidas de caída: la peor racha desde 2012.
+
+3
+00:00:13,874 --> 00:00:22,105
+Mientras tanto, los chips se siguen vendiendo. Para este trimestre, la empresa esperaba facturar unos ciento ocho mil millones de dólares.
+
+4
+00:00:22,855 --> 00:00:34,316
+Durante treinta y tres años, Huang repitió que estaban a treinta días de quebrar. Desde 1996 no volvió a ser cierto. Era su forma de no relajarse nunca.
+
+5
+00:00:34,536 --> 00:00:41,536
+Hoy NVIDIA no está a treinta días de quebrar. Pero por primera vez desde aquella mesa, no tiene a su fundador.
+
+6
+00:00:42,436 --> 00:00:47,744
+¿Es este el final de la historia de NVIDIA? ¿O es solo otro de esos treinta días?
+
+7
+00:00:48,694 --> 00:00:55,079
+¿Y a vos qué te parece? ¿Qué otra historia te gustaría ver en el próximo episodio? Déjalo abajo en los comentarios.

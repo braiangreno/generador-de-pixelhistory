@@ -1,0 +1,23 @@
+1
+00:00:00,750 --> 00:00:10,519
+In 1993, three engineers sit at a booth in a roadside diner in San Jose, California. They order coffee. Lots of coffee.
+
+2
+00:00:10,739 --> 00:00:18,278
+One of them, Jensen Huang, knows that chain well: at fifteen, he had washed dishes at one of its locations.
+
+3
+00:00:18,828 --> 00:00:25,366
+They want to build a chip so video games can be seen in three dimensions. They start with forty thousand dollars.
+
+4
+00:00:25,586 --> 00:00:33,817
+Thirty-three years later, that company reached nearly six trillion dollars in value. No company had ever been worth that much.
+
+5
+00:00:34,467 --> 00:00:37,544
+And this week, the man from that booth stepped down.
+
+6
+00:00:38,394 --> 00:00:43,855
+This is the story of NVIDIA. And of a question that no one can answer today.

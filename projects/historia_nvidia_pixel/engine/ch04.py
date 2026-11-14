@@ -23,6 +23,7 @@ def c4_s01_cuda_and_science(t):
         draw_text(cv, "2006 · LA APUESTA DE CUDA", 240, 52 + dy, "press", 8, GPU_GREEN, align="center")
         draw_text(cv, "USAR LAS PLACAS DE VIDEO", 240, 74 + dy, "silk", 8, CREAM, align="center")
         draw_text(cv, "PARA CUALQUIER CÁLCULO, NO SOLO JUEGOS", 240, 94 + dy, "silk", 8, GOLD, align="center")
+        person_card(cv, "jensen_huang", "JENSEN HUANG", "PRESENTACIÓN DE CUDA · 2006", t, t0 + 0.15)
         return vignette(cv, 0.32)
 
     # c4_02: Laboratorios con placas de juego simulando física, clima y medicina

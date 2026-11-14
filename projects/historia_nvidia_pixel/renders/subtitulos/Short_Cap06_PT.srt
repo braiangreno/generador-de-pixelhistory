@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,073
+CAPÍTULO 6 — A CORRIDA DO OURO
+
+2
+00:00:03,423 --> 00:00:16,192
+Em 2016, Huang levou pessoalmente um supercomputador a um pequeno laboratório de São Francisco. Era o primeiro da NVIDIA para inteligência artificial. O laboratório se chamava OpenAI.
+
+3
+00:00:16,412 --> 00:00:24,951
+Seis anos depois, esse laboratório lançou o ChatGPT. E todas as empresas do mundo quiseram a mesma coisa: chips da NVIDIA.
+
+4
+00:00:25,171 --> 00:00:29,325
+Foi uma corrida do ouro. E a NVIDIA vendia as pás.
+
+5
+00:00:29,545 --> 00:00:38,545
+Em 2023 passou de um trilhão de dólares em valor. E em 2025 foi a primeira empresa da história a passar dos cinco trilhões.
+
+6
+00:00:39,195 --> 00:00:55,425
+Houve sustos. Em janeiro de 2025, um modelo chinês mais barato, o DeepSeek, assustou os investidores. Em um único dia, a NVIDIA perdeu quase seiscentos bilhões de dólares de valor. Nenhuma empresa jamais tinha perdido tanto em um dia.
+
+7
+00:00:55,645 --> 00:01:01,338
+E a NVIDIA continuou subindo. Em outubro de 2026 encostou nos seis trilhões.
+
+8
+00:01:02,188 --> 00:01:07,342
+Trinta e três anos depois daquela mesa, era a empresa mais valiosa do planeta.
