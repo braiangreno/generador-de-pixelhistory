@@ -1,0 +1,499 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "In nineteen ninety-three, three engineers sit at a booth in a roadside diner in San Jose, California. They order coffee. Lots of coffee.",
+    "sub": "In 1993, three engineers sit at a booth in a roadside diner in San Jose, California. They order coffee. Lots of coffee."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.45,
+    "speak": "One of them, Jensen Huang, knows that chain well: at fifteen, he had washed dishes at one of its locations.",
+    "sub": "One of them, Jensen Huang, knows that chain well: at fifteen, he had washed dishes at one of its locations."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.50,
+    "speak": "They want to build a chip so video games can be seen in three dimensions. They start with forty thousand dollars.",
+    "sub": "They want to build a chip so video games can be seen in three dimensions. They start with forty thousand dollars."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 0.65,
+    "speak": "Thirty-three years later, that company reached nearly six trillion dollars in value. No company had ever been worth that much.",
+    "sub": "Thirty-three years later, that company reached nearly six trillion dollars in value. No company had ever been worth that much."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 0.85,
+    "speak": "And this week, the man from that booth stepped down.",
+    "sub": "And this week, the man from that booth stepped down."
+  },
+  {
+    "id": "s06",
+    "ch": 0,
+    "pause": 1.0,
+    "speak": "This is the story of NVIDIA. And of a question that no one can answer today.",
+    "sub": "This is the story of NVIDIA. And of a question that no one can answer today."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.65,
+    "speak": "Chapter one. The wrong chip.",
+    "sub": "CHAPTER 1 — THE WRONG CHIP"
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "The name came from invidia, the Latin word for envy. And the first chip, in nineteen ninety-five, was called the NV one.",
+    "sub": "The name came from invidia, the Latin word for envy. And the first chip, in 1995, was called the NV1."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "It had a problem. It drew objects using curved surfaces. And the rest of the industry chose triangles.",
+    "sub": "It had a problem. It drew objects using curved surfaces. And the rest of the industry chose triangles."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "When Microsoft built its standard for Windows games, it built it around triangles. The NV one was left on the wrong side.",
+    "sub": "When Microsoft built its standard for Windows games, it built it around triangles. The NV1 was left on the wrong side."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.65,
+    "speak": "NVIDIA had a contract with Sega for the chip in its next console. But it was still using the same wrong technology.",
+    "sub": "NVIDIA had a contract with Sega for the chip in its next console. But it was still using the same wrong technology."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 1.0,
+    "speak": "The company had enough cash left for about thirty days.",
+    "sub": "The company had enough cash left for about thirty days."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.65,
+    "speak": "Chapter two. Thirty days.",
+    "sub": "CHAPTER 2 — THIRTY DAYS"
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "Huang flew to Japan to meet Sega's president, Shoichiro Irimajiri. And he told him the truth.",
+    "sub": "Huang flew to Japan to meet Sega's president, Shoichiro Irimajiri. And he told him the truth."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "He told him their chip wouldn't work and that Sega should find another partner. And he asked for one more thing: that the final payment of the contract, five million dollars, remain as an investment in NVIDIA.",
+    "sub": "He told him their chip wouldn't work and that Sega should find another partner. And he asked for one more thing: that the final payment of the contract, five million dollars, remain as an investment in NVIDIA."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "According to Huang, he warned him that he would most likely lose that money. Irimajiri thought about it for a couple of days and agreed.",
+    "sub": "According to Huang, he warned him that he would most likely lose that money. Irimajiri thought about it for a couple of days and agreed."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.45,
+    "speak": "With that money they had about six months. They bet everything on a new chip built with triangles: the RIVA one twenty-eight. It sold one million units in four months.",
+    "sub": "With that money they had about six months. They bet everything on a new chip built with triangles: the RIVA 128. It sold one million units in four months."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.65,
+    "speak": "Ever since, Huang opened many meetings with the same line: we are thirty days from going out of business. Remember that phrase.",
+    "sub": "Ever since, Huang opened many meetings with the same line: we are thirty days from going out of business. Remember that phrase."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 1.0,
+    "speak": "Sega sold its shares when NVIDIA went public. According to Huang, today they would be worth nearly one trillion dollars.",
+    "sub": "Sega sold its shares when NVIDIA went public. According to Huang, today they would be worth nearly one trillion dollars."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.65,
+    "speak": "Chapter three. Thousands of hands.",
+    "sub": "CHAPTER 3 — THOUSANDS OF HANDS"
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.50,
+    "speak": "In nineteen ninety-nine, NVIDIA went public and launched the GeForce two fifty-six. They sold it as the world's first GPU. And what is a GPU?",
+    "sub": "In 1999, NVIDIA went public and launched the GeForce 256. They sold it as the world's first GPU. And what is a GPU?"
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "Let's go to the chalkboard. A regular screen has about two million tiny dots, the pixels. And in a game, each one can change color sixty times per second.",
+    "sub": "Let's go to the chalkboard. A regular screen has about two million tiny dots, the pixels. And in a game, each one can change color sixty times per second."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "A computer's processor, the CPU, is like a brilliant professor. It solves any problem, but only a few at a time.",
+    "sub": "A computer's processor, the CPU, is like a brilliant professor. It solves any problem, but only a few at a time."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.45,
+    "speak": "A GPU is like a classroom with thousands of students. Each one only knows how to do simple math. But they all do it at the same time.",
+    "sub": "A GPU is like a classroom with thousands of students. Each one only knows how to do simple math. But they all do it at the same time."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 0.65,
+    "speak": "To paint millions of pixels you don't need a genius. You need thousands of hands.",
+    "sub": "To paint millions of pixels you don't need a genius. You need thousands of hands."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "A CPU thinks fast. A GPU thinks in parallel.",
+    "sub": "A CPU thinks fast. A GPU thinks in parallel."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.65,
+    "speak": "Chapter four. The bet nobody wanted.",
+    "sub": "CHAPTER 4 — THE BET NOBODY WANTED"
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "In two thousand six, Huang made an unusual bet. It was called CUDA, and it allowed graphics cards to be used for any calculation, not just games.",
+    "sub": "In 2006, Huang made an unusual bet. It was called CUDA, and it allowed graphics cards to be used for any calculation, not just games."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Scientists and programmers could put those thousands of hands to work on whatever they wanted: physics, weather, medicine.",
+    "sub": "Scientists and programmers could put those thousands of hands to work on whatever they wanted: physics, weather, medicine."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Wall Street didn't like it. It cost a fortune, and nobody could see how it would make money.",
+    "sub": "Wall Street didn't like it. It cost a fortune, and nobody could see how it would make money."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.65,
+    "speak": "For years, the company was worth around ten billion dollars, and barely moved.",
+    "sub": "For years, the company was worth around ten billion dollars, and barely moved."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 1.0,
+    "speak": "It was a bridge toward a city that didn't exist yet.",
+    "sub": "It was a bridge toward a city that didn't exist yet."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.65,
+    "speak": "Chapter five. Two cards in a bedroom.",
+    "sub": "CHAPTER 5 — TWO CARDS IN A BEDROOM"
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "In two thousand twelve, a student in Toronto named Alex Krizhevsky built something in his bedroom at his parents' house. He put two gaming graphics cards into his computer.",
+    "sub": "In 2012, a student in Toronto named Alex Krizhevsky built something in his bedroom at his parents' house. He put two gaming graphics cards into his computer."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "With his colleague Ilya Sutskever and his professor Geoffrey Hinton, he trained a neural network to recognize photos. It took about six days.",
+    "sub": "With his colleague Ilya Sutskever and his professor Geoffrey Hinton, he trained a neural network to recognize photos. It took about six days."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.50,
+    "speak": "He entered an image recognition competition and won by a massive margin. The network was called AlexNet.",
+    "sub": "He entered an image recognition competition and won by a massive margin. The network was called AlexNet."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "Why a gaming card? To the chalkboard. A neural network learns by multiplying huge tables of numbers.",
+    "sub": "Why a gaming card? To the chalkboard. A neural network learns by multiplying huge tables of numbers."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "They are millions of simple multiplications, all at once. The exact same thing a GPU does to move the triangles in a game.",
+    "sub": "They are millions of simple multiplications, all at once. The exact same thing a GPU does to move the triangles in a game."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 0.65,
+    "speak": "The classroom of thousands of students could also teach a machine. And thanks to CUDA, anyone could hand it the assignment.",
+    "sub": "The classroom of thousands of students could also teach a machine. And thanks to CUDA, anyone could hand it the assignment."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "pause": 1.0,
+    "speak": "Without looking for it, the video game chip was the artificial intelligence chip.",
+    "sub": "Without looking for it, the video game chip was the artificial intelligence chip."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.65,
+    "speak": "Chapter six. The gold rush.",
+    "sub": "CHAPTER 6 — THE GOLD RUSH"
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "In two thousand sixteen, Huang personally delivered a supercomputer to a small lab in San Francisco. It was NVIDIA's first for artificial intelligence. The lab was called OpenAI.",
+    "sub": "In 2016, Huang personally delivered a supercomputer to a small lab in San Francisco. It was NVIDIA's first for artificial intelligence. The lab was called OpenAI."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "Six years later, that lab launched ChatGPT. And every company in the world wanted the same thing: NVIDIA chips.",
+    "sub": "Six years later, that lab launched ChatGPT. And every company in the world wanted the same thing: NVIDIA chips."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "It was a gold rush. And NVIDIA was selling the shovels.",
+    "sub": "It was a gold rush. And NVIDIA was selling the shovels."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "In two thousand twenty-three it passed one trillion dollars in value. And in two thousand twenty-five it became the first company in history to pass five trillion.",
+    "sub": "In 2023 it passed one trillion dollars in value. And in 2025 it became the first company in history to pass five trillion."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 0.45,
+    "speak": "There were scares. In January two thousand twenty-five, a cheaper Chinese model, DeepSeek, spooked investors. In a single day, NVIDIA lost nearly six hundred billion dollars in value. No company had ever lost that much in one day.",
+    "sub": "There were scares. In January 2025, a cheaper Chinese model, DeepSeek, spooked investors. In a single day, NVIDIA lost nearly six hundred billion dollars in value. No company had ever lost that much in one day."
+  },
+  {
+    "id": "c6_06",
+    "ch": 6,
+    "pause": 0.65,
+    "speak": "And NVIDIA kept climbing. In October two thousand twenty-six, it nearly touched six trillion.",
+    "sub": "And NVIDIA kept climbing. In October 2026, it nearly touched six trillion."
+  },
+  {
+    "id": "c6_07",
+    "ch": 6,
+    "pause": 1.0,
+    "speak": "Thirty-three years after that diner booth, it was the most valuable company on the planet.",
+    "sub": "Thirty-three years after that diner booth, it was the most valuable company on the planet."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.65,
+    "speak": "Chapter seven. What a company is worth.",
+    "sub": "CHAPTER 7 — WHAT A COMPANY IS WORTH"
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "Before the ending, one last chalkboard. What does it mean for a company to be worth six trillion dollars?",
+    "sub": "Before the ending, one last chalkboard. What does it mean for a company to be worth six trillion dollars?"
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "First, the word. In Spanish, a billón is a million millions. In English, it's called a trillion.",
+    "sub": "First, the word. In Spanish, a billón is a million millions. In English, it's called a trillion."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "A publicly traded company is divided into tiny pieces, called shares. Its value is the price of one share multiplied by the total number of shares.",
+    "sub": "A publicly traded company is divided into tiny pieces, called shares. Its value is the price of one share multiplied by the total number of shares."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.45,
+    "speak": "That price isn't cash locked inside a vault. It's what people believe the company will earn in the future.",
+    "sub": "That price isn't cash locked inside a vault. It's what people believe the company will earn in the future."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 0.65,
+    "speak": "That's why it can lose hundreds of billions without a single machine breaking. All it takes is a change in what people believe.",
+    "sub": "That's why it can lose hundreds of billions without a single machine breaking. All it takes is a change in what people believe."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "pause": 1.0,
+    "speak": "A company isn't worth what it has. It's worth what people believe it will have.",
+    "sub": "A company isn't worth what it has. It's worth what people believe it will have."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.65,
+    "speak": "Chapter eight. The week.",
+    "sub": "CHAPTER 8 — THE WEEK"
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "And people began to doubt. Since October, the stock had been falling. Concerns grew over the debt many companies are taking on to buy artificial intelligence chips.",
+    "sub": "And people began to doubt. Since October, the stock had been falling. Concerns grew over the debt many companies are taking on to buy artificial intelligence chips."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Then, on a weekend in November, The New York Times published a story about Huang. According to the paper, he had been in a relationship with a woman whom U.S. intelligence considered a Chinese agent.",
+    "sub": "Then, on a weekend in November, The New York Times published a story about Huang. According to the paper, he had been in a relationship with a woman whom U.S. intelligence considered a Chinese agent."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Huang acknowledged in a letter to employees that he had been unfaithful to his wife. The board opened an investigation into whether he had been a target of espionage, and said it had no reason to believe any secrets were leaked.",
+    "sub": "Huang acknowledged in a letter to employees that he had been unfaithful to his wife. The board opened an investigation into whether he had been a target of espionage, and said it had no reason to believe any secrets were leaked."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Afterward, The New York Times and Reuters reported other relationships between Huang and employees. One of them was an executive who reported to him.",
+    "sub": "Afterward, The New York Times and Reuters reported other relationships between Huang and employees. One of them was an executive who reported to him."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.50,
+    "speak": "On Thursday, November twelfth, NVIDIA announced his resignation. After thirty-three years, the founder stepped down as CEO and left the board.",
+    "sub": "On Thursday, November 12, NVIDIA announced his resignation. After thirty-three years, the founder stepped down as CEO and left the board."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Chief financial officer Colette Kress took over as interim CEO while the company searches for a replacement.",
+    "sub": "Chief financial officer Colette Kress took over as interim CEO while the company searches for a replacement."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 0.65,
+    "speak": "In addition, three U.S. House committees summoned him to testify behind closed doors. The hearing is set for December first.",
+    "sub": "In addition, three U.S. House committees summoned him to testify behind closed doors. The hearing is set for December 1."
+  },
+  {
+    "id": "c8_08",
+    "ch": 8,
+    "pause": 1.0,
+    "speak": "In a single week, NVIDIA was left without its founder.",
+    "sub": "In a single week, NVIDIA was left without its founder."
+  },
+  {
+    "id": "c9_00",
+    "ch": 9,
+    "pause": 0.65,
+    "speak": "Chapter nine. The end?",
+    "sub": "CHAPTER 9 — THE END?"
+  },
+  {
+    "id": "c9_01",
+    "ch": 9,
+    "pause": 0.45,
+    "speak": "Since October, NVIDIA has lost nearly one point seven trillion dollars in value. Six straight weeks of decline: its worst streak since two thousand twelve.",
+    "sub": "Since October, NVIDIA has lost nearly 1.7 trillion dollars in value. Six straight weeks of decline: its worst streak since 2012."
+  },
+  {
+    "id": "c9_02",
+    "ch": 9,
+    "pause": 0.45,
+    "speak": "Meanwhile, the chips keep selling. For this quarter, the company expected to bring in around one hundred eight billion dollars in revenue.",
+    "sub": "Meanwhile, the chips keep selling. For this quarter, the company expected to bring in around 108 billion dollars in revenue."
+  },
+  {
+    "id": "c9_03",
+    "ch": 9,
+    "pause": 0.50,
+    "speak": "For thirty-three years, Huang repeated that they were thirty days from going out of business. Since nineteen ninety-six, it was never true again. It was his way of never relaxing.",
+    "sub": "For thirty-three years, Huang repeated that they were thirty days from going out of business. Since 1996, it was never true again. It was his way of never relaxing."
+  },
+  {
+    "id": "c9_04",
+    "ch": 9,
+    "pause": 0.65,
+    "speak": "Today NVIDIA is not thirty days from going out of business. But for the first time since that diner booth, it doesn't have its founder.",
+    "sub": "Today NVIDIA is not thirty days from going out of business. But for the first time since that diner booth, it doesn't have its founder."
+  },
+  {
+    "id": "c9_05",
+    "ch": 9,
+    "pause": 0.90,
+    "speak": "Is this the end of the NVIDIA story? Or is it just another one of those thirty days?",
+    "sub": "Is this the end of the NVIDIA story? Or is it just another one of those thirty days?"
+  },
+  {
+    "id": "c9_06",
+    "ch": 9,
+    "pause": 1.1,
+    "speak": "What do you think? What other story would you like to see in the next episode? Leave it down in the comments.",
+    "sub": "What do you think? What other story would you like to see in the next episode? Leave it down in the comments."
+  }
+]
