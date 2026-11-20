@@ -87,16 +87,17 @@ def c6_s01_hand_painted_and_pizarra_rgb(t):
         # Tres círculos de luz RGB superpuestos en el centro
         r_c = 28
         circles = [
-            (222, 104, (242, 72, 72), "R"),
-            (258, 104, (72, 224, 112), "G"),
-            (240, 132, (78, 156, 252), "B"),
+            (222, 104, (242, 72, 72), "R", 204, 90),
+            (258, 104, (72, 224, 112), "G", 276, 90),
+            (240, 132, (78, 156, 252), "B", 240, 142),
         ]
-        for cx_c, cy_c, col_c, lbl_c in circles:
+        for cx_c, cy_c, col_c, lbl_c, lx_c, ly_c in circles:
             glow(cv, cx_c, cy_c, r_c + 4, col_c, 0.55)
             d.ellipse([cx_c - r_c, cy_c - r_c, cx_c + r_c, cy_c + r_c], outline=(*col_c, 255), width=2)
-            draw_text(cv, lbl_c, cx_c, cy_c - 4, "press", 8, col_c, align="center")
         # Centro blanco brillante donde se cruzan las 3 luces
         d.ellipse([231, 107, 249, 125], fill=(255, 252, 240, 255), outline=(*GOLD, 255))
+        for cx_c, cy_c, col_c, lbl_c, lx_c, ly_c in circles:
+            draw_text(cv, lbl_c, lx_c, ly_c, "press", 8, col_c, align="center")
         draw_text(cv, "MEZCLÁNDOLAS SE ARMA TODO COLOR", 240, 172, "silk", 8, CHALK_WHITE, align="center")
         return vignette(cv, 0.26)
 

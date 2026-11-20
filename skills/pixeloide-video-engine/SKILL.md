@@ -8,25 +8,27 @@ description: Framework y pipeline oficial de Pixeloide Studios para producir doc
 Este skill define el estándar de producción de **Pixeloide Studios** (`JUGAMOS EN SERIO.`) para transformar cualquier guion entregado por el usuario en un documental animado 16-bit (`1920x1080` a `30 fps`, lienzo lógico `480x270` escalado `4x` nearest-neighbor) en Español (`ES`), Inglés (`EN`) y Portugués (`PT`).
 
 > **Repositorios base / motores de referencia**:
+> - **Estándar de Oro (Audio, Voz `eleven_v4`, Pizarras, Props apoyados y CTA)**: `C:\Users\Braian\.gemini\antigravity\scratch\historia_tesla_pixel`
 > - Motor documental completo: `C:\Users\Braian\.gemini\antigravity\scratch\historia_videojuegos_pixel`
 > - Plataforma Web + API REST instalable en servidor: `C:\Users\Braian\.gemini\antigravity\scratch\pixeloide_studio_server` (`.\start_windows.ps1` o `docker compose up -d --build`)
 > - Proyecto original IA: `C:\Users\Braian\.gemini\antigravity\scratch\historia_ia_pixel`
 
 ---
 
-## 1. Reglas Innegociables de Marca y Audio
+## 1. Reglas Innegociables de Marca, Voz, Cajas de Texto y Diseño Sonoro
 
-1. **Narrador Oficial en Español (Fijo)**:
+1. **Narrador Oficial en Español (Fijo — OBLIGATORIO `eleven_v4` con `tools/tts.py`)**:
    - Nombre: **Carlos Aguilar** (ElevenLabs)
    - `VOICE_ID`: `"8MeTTgXVwMEhRVfblXOj"`
-   - Modelo: `"eleven_v4"` (o `"eleven_multilingual_v2"` con `with-timestamps`)
-   - Configuración: `stability=0.45`, `similarity_boost=0.80`, `style=0.35`, `use_speaker_boost=True`, `speed=1.08`.
-   - **Nunca cambies el narrador en español** a menos que el usuario lo pida explícitamente.
+   - **Modelo OBLIGATORIO para Español (`ES`)**: **`"eleven_v4"`** (ejecutado mediante `python tools/tts.py` con `speed=1.1`, `stability=0.50`, `similarity_boost=0.75`, `style=0.35`, `use_speaker_boost=True`).
+   - **PROHIBIDO generar la voz en español con `"eleven_multilingual_v2"`**: con `eleven_multilingual_v2`, la voz `8MeTTgXVwMEhRVfblXOj` pierde consistencia y cambia de timbre, acento y entonación entre una frase y otra.
+   - En `script_full.json`, escribe el texto `speak` en español limpio y natural (como en `historia_tesla_pixel/script_full.json`), sin deformar nombres propios con fonéticas forzadas antinaturales.
+   - **Nunca cambies el narrador ni el modelo `eleven_v4` en español** a menos que el usuario lo pida explícitamente.
 
 2. **Narradores en Inglés (`EN`) y Portugués (`PT`) — Cadencia Natural**:
    - Inglés (`EN`): `VOICE_ID = "pNInz6obpgDQGcFmaJgB"`
    - Portugués (`PT`): `VOICE_ID = "Rxw6ylGPvxzn3gsuOExL"`
-   - Modelo: `"eleven_multilingual_v2"`
+   - Modelo (solo para `EN` y `PT` en `tools/batch_tts_multilingual.py`): `"eleven_multilingual_v2"`
    - **Velocidad de generación (`speed`)**: **`1.0` (natural)**. **PROHIBIDO usar `speed=1.15`**, ya que acelera artificialmente la locución.
    - **Sincronización en mezcla (`tools/mix_multilingual.py`)**:
      - Al alinear cada línea `lid` con el timeline maestro en español, calcula siempre la ventana real disponible hasta la siguiente frase:
@@ -35,6 +37,33 @@ Este skill define el estándar de producción de **Pixeloide Studios** (`JUGAMOS
        avail_dur = max(slot_dur, next_start - slot_start - 0.08)
        ```
      - Solo comprime con `atempo` cuando `d_nat > avail_dur`, evitando que las voces en inglés o portugués suenen apresuradas.
+
+3. **Regla Innegociable de Cajas de Texto (`window` + `draw_text` — CERO Texto Fuera de Caja)**:
+   - **PROHIBIDO que cualquier texto toque o sobresalga de los bordes de una ventana (`window`)** en `16:9` o `9:16`, en cualquiera de los 3 idiomas (`ES`, `EN`, `PT`).
+   - En las escenas (`engine/ch01.py..ch08.py`):
+     - La fuente `"press"` (`PressStart2P`, `size=8`) mide `8px` por carácter (`28 chars = 224px`). Úsala **únicamente para titulares cortos (`<= 26` caracteres)**.
+     - Para líneas de más de 26 caracteres dentro de ventanas, usa siempre `"silk"` (`Silkscreen`, `size=8`, que mide `~5.5px` por carácter) o divide en 2 líneas.
+   - **Protección automática obligatoria en el motor (`engine/core.py` y `engine/vertical.py`)**:
+     - `window(canvas, x, y, w, h, ...)` debe registrar cada ventana dibujada en `canvas._windows` (y en `16:9` ensanchar automáticamente los paneles informativos centrales de `w=244..252` a `w=284, x=98`).
+     - `draw_text(...)` debe verificar si `(x, y)` cae dentro de alguna ventana de `canvas._windows` y calcular `max_tw = ww - 14`. Si el ancho del texto completo supera `max_tw`:
+       1. Baja `size` (`24 -> 16 -> 8`).
+       2. Si en `size=8` con `fname="press"` aún supera `max_tw`, cambia automáticamente a `fname="silk"`.
+       3. Si aún supera `max_tw`, comprime horizontalmente con `Image.NEAREST` a `max_tw` y restringe `x0` dentro de `[wx + 6, wx + ww - 6]`.
+
+4. **Regla Innegociable de Diseño Sonoro y Música (`engine/audio.py` + `ch01..ch08.py` — Balance Estándar Tesla)**:
+   - **PROHIBIDO dejar capítulos o escenas sin efectos de sonido o con SFX inaudibles**, y **PROHIBIDO saturar con pitidos constantes encima de la voz**. El balance exacto a seguir es el de `historia_tesla_pixel`:
+   - En cada `engine/ch01.py..ch08.py`:
+     - `def music(A):` **NO debe quedar vacío (`return`)**: debe sumar colchones armónicos suaves (`A.add_pad(t0, dur, freqs, amp=0.038..0.045)`) y bajos cálidos (`A.add_bass(...)`) que den cuerpo a la música de cada acto.
+     - `def sfx(A):` debe incluir efectos puntuales y con sentido narrativo en cada escena (`A.fx_pop`, `A.fx_chime`, `A.fx_sparkle`, `A.fx_thud`, `A.fx_sweep`), sincronizados con `TL.s(lid)` y `TL.word(lid, "...")`.
+   - En `engine/audio.py`:
+     - `design_sfx()` debe acompañar cada capítulo con sonidos diegéticos suaves (tiza `chalk` en las pizarras, brisa/lluvia `wind`/`rain_amb` en exteriores, zumbido eléctrico/radio `hum_1958`, sellos `stamp_hit`, acordes `sting` y `join_jingle`).
+     - Los helpers `fx_*` deben tener ganancia clara y perceptible: `fx_pop` (`vol=amp*0.65`), `fx_thud` (`vol=amp*0.65`), `fx_chime` (`vol=amp*0.55`), `fx_sweep` (`vol=amp*0.60`), `fx_sparkle` (`vol=amp*0.52`).
+     - En `main()` y `tools/mix_multilingual.py`, usar `s_warm = lowpass(sfx.buf, 2)`, `m_ducked = m_warm * (1.0 - 0.70 * duck) * 0.36` y `s_ducked = s_warm * (1.0 - 0.38 * duck) * 0.68`, logrando que los efectos se escuchen con nitidez y calidez sin tapar jamás al narrador.
+
+5. **Regla de Objetos Apoyados (`floor_prop`), Tarjetas de Capítulo y Llamado a Comentarios (`CTA`)**:
+   - **CERO objetos flotando**: ningún objeto (velas, lámparas, radios, patentes, cajas de música, proyectores, televisores, teléfonos) puede dibujarse suelto en el aire; todos deben apoyarse sobre una mesa, escritorio o pedestal en el piso (`y_feet = 248`).
+   - Todos los capítulos (`1..8`) deben abrir con la tarjeta clásica `make_card(num, lines, years)`.
+   - El último capítulo (`ch08.py`) debe incluir antes del cierre de Pixeloide Studios una escena de llamado a la acción (`c8_s04_comment_cta`) invitando a comentar qué historia quieren ver en el próximo episodio.
 
 3. **Traducción Total en Pantalla (`engine/i18n.py`)**:
    - No basta con cambiar el audio: **todos los textos visibles en las escenas** (títulos de capítulos, etiquetas, diagramas, tarjetas, diálogos, banners y créditos) deben traducirse a `en` y `pt` mediante el hook automático de `engine/i18n.py` integrado en `Frame.text()` y `Frame.text_wrap()`.
@@ -77,8 +106,8 @@ Convierte el guion en una lista JSON de líneas narrativas con:
 Genera a la vez `script_full_en.json` y `script_full_pt.json` con los mismos `id`, `ch` y `pause`, traduciendo `speak` y `sub` con tono documental natural.
 
 ### Paso 2 — Generar Locución + Timestamps (`audio/vo/`, `audio/vo_en/`, `audio/vo_pt/`)
-1. Ejecuta `python batch_tts.py` para generar `audio/vo/{id}.mp3` y `audio/vo/{id}.json` con **Carlos Aguilar** (`8MeTTgXVwMEhRVfblXOj`).
-2. Ejecuta `python tools/batch_tts_multilingual.py` para generar `audio/vo_en/` y `audio/vo_pt/` a velocidad natural (`speed=1.0`).
+1. Ejecuta `python tools/tts.py` para generar el español (`audio/vo/{id}.mp3` y `audio/vo/{id}.json`) con **Carlos Aguilar** (`8MeTTgXVwMEhRVfblXOj`), **`MODEL = "eleven_v4"`** y **`speed = 1.1`**. (**NUNCA** generes el español con `eleven_multilingual_v2`).
+2. Ejecuta `python tools/batch_tts_multilingual.py both` para generar únicamente `audio/vo_en/` y `audio/vo_pt/` a velocidad natural (`speed=1.0`).
 3. Verifica que `engine/timeline.py` construya el timeline maestro a partir de `script_full.json` + `audio/vo/*.json` con `TAIL = 12.0` para dar espacio al cierre de **Pixeloide Studios**.
 
 ### Paso 3 — Generar y Preparar Assets 16-Bit (`assets/bgs/` y `assets/portraits/`)
@@ -93,7 +122,17 @@ Genera a la vez `script_full_en.json` y `script_full_pt.json` con los mismos `id
    - `scenes()`: lista de tuplas `(t_inicio, funcion_escena, funcion_camara_opcional)` sincronizadas al milisegundo con `TL.s(lid)`, `TL.e(lid)` y `TL.word(lid, "palabra")`.
    - `music(A)`: composición chiptune procedural acorde al tono emocional del capítulo.
    - `sfx(A)`: efectos de sonido sincronizados con las apariciones de ventanas, golpes, alertas o revelaciones.
-2. **Reglas de Animación, Personajes y Coreografía con el Audio**:
+2. **Reglas de Animación, Personajes, Capas (Z-Order) y Coreografía con el Audio**:
+   - **Tarjeta de presentación con retrato RPG 16-bit (`person_card`) OBLIGATORIA al nombrar personajes y SIEMPRE EN CAPA SUPERIOR (Z-Order Top Layer)**: cada vez que el narrador introduce o nombra a un personaje histórico o protagonista en cualquier capítulo, se debe mostrar abajo a la izquierda su retrato `64x64` en marco RPG (`portrait_card`) junto a su ventana de nombre (`"press", 16`) y rol/año (`"silk", 8`) mediante `person_card(cv, portrait_key, name, subtitle, t, t0)` (y su equivalente vertical en `vctx.person_cards`).
+     - **PROHIBIDO dibujar `person_card` por detrás de personajes, muebles o paneles**: `person_card` se encola automáticamente en `cv._deferred_person_cards` y se compone dentro de `vignette(cv)` / `video.frame_at(t)` como la **última capa superior de UI** por encima de todos los `char(...)`, `floor_prop(...)` y `window(...)`. Además, en las funciones de escena debe invocarse al final de la función (fuera de bloques `if/elif` internos) para que su animación de entrada y salida nunca se corte abruptamente.
+   - **Orden estricto de capas (`Z-Order`: Fondo -> Ventanas centrales -> Personajes detrás de escritorios -> Objetos de piso/escritorios -> Personajes frontales -> `person_card`)**:
+     - Las ventanas centrales (`window`) deben dibujarse **ANTES** de los personajes (`char`), y si una ventana central supera `y + h > 152`, los personajes deben ubicarse a los lados fuera del ancho de la ventana (`x <= 84` o `x >= 396`) para que ninguna ventana tape jamás la cabeza de un personaje.
+     - Si un personaje está detrás de un escritorio, atril o podio con cartel frontal (ej. escritorio `"DOCTOR X"`), el `char(...)` debe dibujarse **ANTES** del `floor_prop(...)` del escritorio para que el escritorio y su cartel queden por delante de las piernas del personaje.
+   - **Protección automática de cajas (`window` y `d.rectangle`) — CERO texto fuera de cajas y CERO texto deformado**:
+     - `core.py` intercepta automáticamente todo `ImageDraw.Draw(cv).rectangle(..., outline=...)` y lo registra en `cv._windows` (ensanchando automáticamente en `16:9` los recuadros centrales de Pizarra y subtítulos), de modo que `core.draw_text` detecte tanto `window(...)` como `d.rectangle(...)` y cambie automáticamente de `"press"` 8 a `"silk"` 8 si el texto supera el ancho interior de la caja.
+     - Cuando se dibuja texto oscuro sobre fondo claro (`color == outline`, ej. `INK`), `core.draw_text` desactiva automáticamente `outline` y `shadow` para evitar que las letras se empasten.
+     - `core.grade(cv, ...)` muta `cv` in-place (`cv.paste(res, (0, 0))`) para que ningún `d = ImageDraw.Draw(cv)` creado antes de `grade(...)` quede obsoleto ni se pierdan `cv._windows` o `cv._deferred_person_cards`.
+   - **Cero personajes u objetos flotando (`Zero Floating Rule`)**: los fondos `480x270` deben tener el tercio inferior (`y = 70%..100%`) como piso despejado (con muebles contra la pared del fondo) para que los personajes en `feet=248` nunca queden parados sobre escritorios o muebles pintados en el fondo; y todo objeto o placa (`gpu_pedestal`, velas, lámparas, etc.) debe apoyar físicamente sobre una mesa o soporte. No agregues rótulos de texto sueltos sin caja encima de trípodes o muebles del piso.
    - **PROHIBIDO incluir `robot(...)` ("La Máquina")** en documentales cuya temática no sea Inteligencia Artificial.
    - **PROHIBIDO usar loops continuos sin sentido (`pace()` infinito, rebote continuo o rotación automática de brazos)**. Los personajes no deben moverse todo el tiempo sin motivo.
    - **Coreografía sincronizada con las palabras del narrador (`TL.word`)**: cada entrada caminando (`walk(t, t0, t1, x0, x1)` una sola vez para entrar o desplazarse a un punto), gesto de brazos (`arms="type"`, `"write"`, `"note"`, `"work"`, `"point"`, `"cheer"`, `"shrug"`, `"think"`, `"hold"`) y aparición de tarjetas (`pop(t, t_word)`) debe dispararse en el instante exacto en que el audio pronuncia la acción o concepto (`TL.word(lid, "...")` y `TL.s(lid)`).

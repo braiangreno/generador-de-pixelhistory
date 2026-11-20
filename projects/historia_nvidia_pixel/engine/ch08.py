@@ -17,8 +17,8 @@ def c8_s01_doubts_and_newspapers(t):
     draw_place_only(cv, "NOVIEMBRE DE 2026 · SALA DE DIRECTORIO", t, t0, border=STOCK_RED)
 
     if t < t_c8_02 - 0.12:
-        pts_down = [0.92, 0.84, 0.76, 0.68, 0.58, 0.48]
-        draw_stock_chart(cv, 98, 42, 284, 96, pts_down, progress=clamp01((t - t0) / 2.2),
+        pts_down = [0.58, 0.50, 0.42, 0.34, 0.24, 0.16]
+        draw_stock_chart(cv, 98, 42, 284, 102, pts_down, progress=clamp01((t - t0) / 2.2),
                          col_up=STOCK_RED, col_down=STOCK_RED, split_idx=0)
         draw_text(cv, "DESDE FINES DE OCTUBRE DE 2026:", 240, 50, "silk", 8, CREAM, align="center")
         draw_text(cv, "TEMOR POR LA DEUDA EN CHIPS DE IA", 240, 68, "press", 8, STOCK_RED, align="center")

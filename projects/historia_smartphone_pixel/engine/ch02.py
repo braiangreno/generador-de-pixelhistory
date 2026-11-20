@@ -17,11 +17,11 @@ def c2_s01_single_antenna_bottleneck(t):
     if t < t_c2_02:
         draw_text(cv, "UNA SOLA ANTENA GIGANTE", 240, 52, "press", 8, GOLD, align="center")
         # Torre central grande emitiendo ondas para toda la ciudad
-        d.line([(240, 76), (226, 134)], fill=(188, 196, 214, 255), width=2)
-        d.line([(240, 76), (254, 134)], fill=(188, 196, 214, 255), width=2)
-        d.line([(228, 104), (252, 104)], fill=(188, 196, 214, 255), width=2)
-        for r_w in (16, 28, 40):
-            d.arc([240 - r_w, 76 - r_w // 2, 240 + r_w, 76 + r_w // 2], 180, 360, fill=(*TESLA_CYAN, 200), width=2)
+        d.line([(240, 86), (226, 136)], fill=(188, 196, 214, 255), width=2)
+        d.line([(240, 86), (254, 136)], fill=(188, 196, 214, 255), width=2)
+        d.line([(229, 110), (251, 110)], fill=(188, 196, 214, 255), width=2)
+        for r_w in (14, 24, 34):
+            d.arc([240 - r_w, 86 - r_w // 2, 240 + r_w, 86 + r_w // 2], 180, 360, fill=(*TESLA_CYAN, 200), width=2)
         draw_text(cv, "PARA TODA LA CIUDAD", 240, 142, "silk", 8, CREAM, align="center")
     else:
         draw_text(cv, "2.000 ABONADOS · 12 CANALES", 240, 52, "press", 8, CHALK_RED, align="center")
@@ -113,9 +113,9 @@ def c2_s03_bell_labs_engel(t):
 
     window(cv, 118, 44, 244, 96, fill=(16, 26, 44), border=GOLD if t >= t_c2_09 else TESLA_CYAN)
     if t < t_c2_09 - 0.1:
-        draw_text(cv, "IDEA NACIDA EN BELL LABS (1947)", 240, 54, "silk", 8, TESLA_CYAN, align="center")
-        draw_honeycomb_grid(cv, 240, 92, r_cell=11, ring=1, t=t, color=TESLA_CYAN, highlight_idx=0)
-        draw_text(cv, "EQUIPO DE JOEL ENGEL", 240, 122, "press", 8, GOLD, align="center")
+        draw_text(cv, "IDEA NACIDA EN BELL LABS (1947)", 240, 52, "silk", 8, TESLA_CYAN, align="center")
+        draw_honeycomb_grid(cv, 240, 92, r_cell=9, ring=1, t=t, color=TESLA_CYAN, highlight_idx=0)
+        draw_text(cv, "EQUIPO DE JOEL ENGEL", 240, 124, "press", 8, GOLD, align="center")
         person_card(cv, "joel_engel", "JOEL ENGEL",
                     "DISEÑADOR DE LA RED CELULAR · BELL LABS", t, t0, dur=3.0)
     else:

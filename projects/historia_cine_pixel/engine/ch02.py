@@ -88,10 +88,10 @@ def c2_s02_salon_indien_1895(t):
     draw_place_only(cv, "PARÍS · 28 DE DICIEMBRE DE 1895", t, t0, border=GOLD)
 
     # Cinematógrafo proyectando en el sótano y espectadores sentados/de pie en el suelo
-    draw_cinematograph_tripod(cv, 92, 248, t, beam=(t >= t_c2_06 - 0.2), crank=True, facing=1)
-    char(cv, "louis_lumiere", 54, 248, t, scale=2, arms="work", look=1, mood="happy")
-    char(cv, "spectator", 356, 248, t, scale=2, arms="down", look=-1, mood="happy")
-    char(cv, "spectator_f", 406, 248, t, scale=2, arms="down", look=-1, mood="happy")
+    draw_cinematograph_tripod(cv, 82, 248, t, beam=(t >= t_c2_06 - 0.2), crank=True, facing=1)
+    char(cv, "louis_lumiere", 46, 248, t, scale=2, arms="work", look=1, mood="happy")
+    char(cv, "spectator", 392, 248, t, scale=2, arms="down", look=-1, mood="happy")
+    char(cv, "spectator_f", 434, 248, t, scale=2, arms="down", look=-1, mood="happy")
 
     if t < t_c2_05 - 0.12:
         a, dy = pop(t, t0 + 0.1)
@@ -123,6 +123,7 @@ def c2_s02_salon_indien_1895(t):
 
     # c2_06: Vieron diez películas cortitas (fábrica, bebé comiendo, broma al jardinero)
     cv = grade(cv, mul=(0.72, 0.70, 0.78))
+    d = ImageDraw.Draw(cv)
     window(cv, 118, 40, 244, 130, fill=(236, 230, 212), border=GOLD, alpha=0.96)
     draw_text(cv, "PROGRAMA: 10 PELÍCULAS CORTITAS", 240, 48, "silk", 8, INK, align="center",
               outline=None, shadow=False)
@@ -171,8 +172,8 @@ def c2_s03_train_myth_and_latam(t):
 
     if t < t_c2_08 - 0.12:
         draw_place_only(cv, "LA LEYENDA DEL TREN (1896)", t, t_c2_07, border=CHALK_RED)
-        char(cv, "spectator", 136, 248, t, scale=2, arms="down", look=1, mood="neutral")
-        char(cv, "spectator_f", 344, 248, t, scale=2, arms="down", look=-1, mood="neutral")
+        char(cv, "spectator", 76, 248, t, scale=2, arms="down", look=1, mood="neutral")
+        char(cv, "spectator_f", 404, 248, t, scale=2, arms="down", look=-1, mood="neutral")
 
         window(cv, 118, 42, 244, 124, fill=(22, 18, 28), border=CHALK_RED, alpha=0.96)
         draw_text(cv, "EL MITO DEL TREN EN PANTALLA", 240, 50, "press", 8, GOLD, align="center")

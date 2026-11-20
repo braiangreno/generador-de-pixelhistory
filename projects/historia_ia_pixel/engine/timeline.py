@@ -50,13 +50,23 @@ class Timeline:
         for ln in LINES:
             lid = ln["id"]
             mp3 = os.path.join(VO, f"{lid}.mp3")
-            if not os.path.exists(mp3):
-                continue
-            key = f"{lid}:{os.path.getmtime(mp3):.0f}"
-            if key not in durs:
-                durs[key] = _dur(mp3)
-                changed = True
-            d = durs[key] / TEMPO
+            js_file = os.path.join(VO, f"{lid}.json")
+            if os.path.exists(mp3):
+                key = f"{lid}:{os.path.getmtime(mp3):.0f}"
+                if key not in durs:
+                    durs[key] = _dur(mp3)
+                    changed = True
+                d = durs[key] / TEMPO
+            else:
+                cand = [v for k, v in durs.items() if k == lid or k.startswith(f"{lid}:")]
+                if cand:
+                    d = cand[-1] / TEMPO
+                elif os.path.exists(js_file):
+                    al_tmp = json.load(open(js_file, encoding="utf-8"))
+                    ends = al_tmp.get("character_end_times_seconds") or [3.0]
+                    d = (ends[-1] + 0.15) / TEMPO
+                else:
+                    continue
             if lid in CARDS:
                 gap = GAP_CARD
             elif prev in CARDS:

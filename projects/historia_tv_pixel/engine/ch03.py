@@ -48,8 +48,6 @@ def c3_s01_cabin_and_furrows(t):
         draw_text(cv, lbl_c, 240, 124, "silk", 8, CHALK_GREEN if t >= t_seis - 0.2 else CREAM, align="center")
         char(cv, "farnsworth_boy", 204, 248, t, scale=2,
              arms="cheer" if t >= t_seis - 0.2 else "think", look=1, mood="happy")
-        person_card(cv, "philo_farnsworth", "PHILO FARNSWORTH",
-                    "INVENTOR DE LA TV ELECTRÓNICA · IDAHO", t, t0, dur=3.2)
     else:
         # 14 años: arando con caballos -> haz de electrones barriendo renglón por renglón
         draw_text(cv, "14 AÑOS · CAMPO ARADO EN IDAHO", 240, 52, "silk", 8, AMBER, align="center")
@@ -63,6 +61,8 @@ def c3_s01_cabin_and_furrows(t):
         char(cv, "farnsworth_boy", 172, 248, t, scale=2, arms="point", look=1, mood="happy")
         draw_plow_prop(cv, 286, 248, t)
 
+    person_card(cv, "philo_farnsworth", "PHILO FARNSWORTH",
+                "INVENTOR DE LA TV ELECTRÓNICA · IDAHO", t, t0, dur=3.2)
     return vignette(cv, 0.35)
 
 

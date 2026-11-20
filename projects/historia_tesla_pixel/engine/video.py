@@ -50,6 +50,8 @@ def frame_at(t, final=False):
     idx = scene_index(t)
     st, fn, cam, _ = SCENES[idx]
     img = fn(t)
+    if 'flush_person_cards' in globals():
+        flush_person_cards(img)
     c = cam(t) if cam else None
     if idx > 0 and t < st + XFADE:
         pst, pfn, pcam, _ = SCENES[idx - 1]

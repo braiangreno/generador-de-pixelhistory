@@ -203,25 +203,26 @@ def c1_s02_sallie_gardner_and_wheel(t):
     if t < t_c1_05 - 0.12:
         # c1_04: Las cuatro patas en el aire, recogidas bajo la panza vs estiradas en los cuadros
         draw_place_only(cv, "EL DESCUBRIMIENTO DE MUYBRIDGE", t, t_c1_04, border=TESLA_CYAN)
-        char(cv, "muybridge", 118, 248, t, scale=2, arms="point", look=1, mood="happy")
-        char(cv, "stanford", 362, 248, t, scale=2, arms="cheer", look=-1, mood="happy")
-
         a, dy = pop(t, t_c1_04 - 0.1)
-        window(cv, 116, 42 + dy, 248, 128, fill=(20, 18, 30), border=TESLA_CYAN, alpha=0.96)
+        win_h = 122 if t >= t_panza - 0.2 else 72
+        window(cv, 116, 40 + dy, 248, win_h, fill=(20, 18, 30), border=TESLA_CYAN, alpha=0.96)
         d = ImageDraw.Draw(cv)
         # Arriba: la foto real de Muybridge (recogidas bajo la panza)
-        d.rectangle([126, 50 + dy, 354, 104 + dy], fill=(232, 220, 192, 255), outline=(*GOLD, 255))
-        draw_galloping_horse(cv, 178, 76 + dy, 0.0, scale=2, frame=2, rider=True, highlight_air=True)
-        draw_text(cv, "FOTO REAL:", 282, 62 + dy, "press", 8, INK, align="center", outline=None, shadow=False)
-        draw_text(cv, "RECOGIDAS BAJO", 282, 76 + dy, "silk", 8, (148, 32, 28), align="center", outline=None, shadow=False)
-        draw_text(cv, "LA PANZA", 282, 88 + dy, "silk", 8, (148, 32, 28), align="center", outline=None, shadow=False)
+        d.rectangle([126, 48 + dy, 354, 102 + dy], fill=(232, 220, 192, 255), outline=(*GOLD, 255))
+        draw_galloping_horse(cv, 178, 74 + dy, 0.0, scale=2, frame=2, rider=True, highlight_air=True)
+        draw_text(cv, "FOTO REAL:", 282, 60 + dy, "press", 8, INK, align="center", outline=None, shadow=False)
+        draw_text(cv, "RECOGIDAS BAJO", 282, 74 + dy, "silk", 8, (148, 32, 28), align="center", outline=None, shadow=False)
+        draw_text(cv, "LA PANZA", 282, 86 + dy, "silk", 8, (148, 32, 28), align="center", outline=None, shadow=False)
 
         # Abajo: comparación con los cuadros antiguos
         if t >= t_panza - 0.2:
-            d.rectangle([126, 110 + dy, 354, 160 + dy], fill=(42, 30, 26, 255), outline=(*CHALK_RED, 255))
-            draw_galloping_horse(cv, 178, 134 + dy, 0.0, scale=1, painting_spread=True, rider=False)
-            draw_text(cv, "NO ESTIRADAS", 282, 122 + dy, "silk", 8, CHALK_RED, align="center")
-            draw_text(cv, "COMO EN LOS CUADROS", 282, 138 + dy, "silk", 8, CREAM, align="center")
+            d.rectangle([126, 108 + dy, 354, 154 + dy], fill=(42, 30, 26, 255), outline=(*CHALK_RED, 255))
+            draw_galloping_horse(cv, 178, 130 + dy, 0.0, scale=1, painting_spread=True, rider=False)
+            draw_text(cv, "NO ESTIRADAS", 282, 118 + dy, "silk", 8, CHALK_RED, align="center")
+            draw_text(cv, "COMO EN LOS CUADROS", 282, 134 + dy, "silk", 8, CREAM, align="center")
+
+        char(cv, "muybridge", 76, 248, t, scale=2, arms="point", look=1, mood="happy")
+        char(cv, "stanford", 404, 248, t, scale=2, arms="cheer", look=-1, mood="happy")
         return vignette(cv, 0.34)
 
     # c1_05: Puso las fotos en una rueda (Zoopraxiscopio) y las proyectó en una pared

@@ -125,13 +125,13 @@ def c4_s03_first_line_and_dollar(t):
         draw_crt_tv(cv, 204, 66, 72, 52, t, mode="pem")
         lbl_end = "ANTES DE UNA CARA, MOSTRÓ DINERO ($)" if t >= t_c4_08 - 0.1 else "PEM FARNSWORTH EN PANTALLA"
         draw_text(cv, lbl_end, 240, 128, "silk", 8, GOLD if t >= t_c4_08 - 0.1 else CREAM, align="center")
-        person_card(cv, "pem_farnsworth", "PEM FARNSWORTH",
-                    "PRIMERA CARA EN LA TV ELECTRÓNICA · 1927", t, t_c4_07, dur=2.8)
 
     char(cv, "farnsworth_young", 146, 248, t, scale=2,
          arms="cheer" if (t_c4_05 <= t < t_c4_06) else "point", look=1, mood="happy")
     draw_sf_lab_bench_prop(cv, 244, 248, t, mode=tv_mode)
     char(cv, "pem", 338, 248, t, scale=2, arms="wave" if t >= t_c4_07 else "work", look=-1, mood="happy")
+    person_card(cv, "pem_farnsworth", "PEM FARNSWORTH",
+                "PRIMERA CARA EN LA TV ELECTRÓNICA · 1927", t, t_c4_07, dur=2.8)
 
     return vignette(cv, 0.35)
 

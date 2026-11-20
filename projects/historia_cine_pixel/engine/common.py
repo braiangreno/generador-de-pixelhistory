@@ -984,8 +984,7 @@ def draw_wooden_camera(cv, x, feet=248, t=0.0, scale=1, flash=False, facing=1, l
             fy_l = top_y + int(6 * s)
             glow(canvas, fx, fy_l, int(14 * s), GOLD, 0.7)
             sparkle(canvas, fx, fy_l, t * 5.0, int(4 * s), CREAM)
-        if label:
-            draw_text(canvas, str(label), cx, top_y - int(9 * s), "silk", 8, GOLD, align="center")
+        # Sin rótulo flotante sin caja sobre el trípode del piso
 
     floor_prop(cv, _draw, x, feet)
 
@@ -1152,15 +1151,25 @@ def person_card(cv, portrait_key, name, subtitle, t, t0, y=166, frame=GOLD, dur=
                 "frame": frame,
             })
             return
-    a = prog(t, t0 - 0.15, t0 + 0.25)
-    a_out = prog(t, t0 + dur, t0 + dur + 0.35) if dur is not None else 0.0
-    off = int((1 - ease_out(a)) * -140) + int(ease_in_out(a_out) * -380)
-    portrait_card(cv, portrait_key, 14 + off, y, frame=frame)
-    tw_name, _ = text_size(name, "press", 16)
-    tw_sub, _ = text_size(subtitle, "silk", 8)
-    tw = min(376, max(268, max(tw_name, tw_sub) + 24))
-    window(cv, 86 + off, y + 14, tw, 46, border=frame)
-    name_sz = 16 if tw_name <= (tw - 20) else 8
-    name_y = (y + 24) if name_sz == 16 else (y + 26)
-    draw_text(cv, name, 96 + off, name_y, "press", name_sz, CREAM)
-    draw_text(cv, subtitle, 96 + off, y + 44, "silk", 8, GREY)
+    def _draw_pc(target_cv):
+        a = prog(t, t0 - 0.15, t0 + 0.25)
+        a_out = prog(t, t0 + dur, t0 + dur + 0.35) if dur is not None else 0.0
+        off = int((1 - ease_out(a)) * -140) + int(ease_in_out(a_out) * -380)
+        portrait_card(target_cv, portrait_key, 14 + off, y, frame=frame)
+        tw_name, _ = text_size(name, "press", 16)
+        tw_sub, _ = text_size(subtitle, "silk", 8)
+        tw = min(376, max(268, max(tw_name, tw_sub) + 24))
+        window(target_cv, 86 + off, y + 14, tw, 46, border=frame)
+        name_sz = 16 if tw_name <= (tw - 20) else 8
+        name_y = (y + 24) if name_sz == 16 else (y + 26)
+        draw_text(target_cv, name, 96 + off, name_y, "press", name_sz, CREAM)
+        draw_text(target_cv, subtitle, 96 + off, y + 44, "silk", 8, GREY)
+
+    if isinstance(cv, Image.Image) and cv.size == (W, H):
+        q = getattr(cv, "_deferred_person_cards", None)
+        if q is None:
+            q = []
+            cv._deferred_person_cards = q
+        q.append(_draw_pc)
+    else:
+        _draw_pc(cv)

@@ -11,6 +11,49 @@ from i18n import tr
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 W, H = 480, 270
+
+_RECT_HOOKED = True
+_orig_imagedraw_draw = ImageDraw.Draw
+_orig_imagedraw_rect = ImageDraw.ImageDraw.rectangle
+
+def _hooked_draw(im, mode=None):
+    d = _orig_imagedraw_draw(im, mode)
+    try:
+        d._target_canvas = im
+    except Exception:
+        pass
+    return d
+
+def _hooked_rect(self, xy, fill=None, outline=None, width=1):
+    try:
+        cv = getattr(self, "_target_canvas", None)
+        if cv is not None and getattr(cv, "size", None) == (W, H) and outline is not None:
+            if isinstance(xy, (list, tuple)) and len(xy) == 4 and isinstance(xy[0], (int, float)):
+                x0, y0, x1, y1 = xy
+            else:
+                (x0, y0), (x1, y1) = xy[0], xy[1]
+            rw, rh = int(x1 - x0), int(y1 - y0)
+            if 64 <= rw <= 460 and 16 <= rh <= 220:
+                # En 16:9, si es un recuadro central de Pizarra o subtítulo (w=176..256 centrado en x=240),
+                # ensancharlo ligeramente si hace falta para que ningún texto quede apretado
+                cx = int(x0 + rw // 2)
+                if globals().get("_VCTX") is None and abs(cx - 240) <= 10 and 174 <= rw <= 248:
+                    rw = max(rw, 268 if rw >= 218 else 224)
+                    x0 = cx - rw // 2
+                    x1 = x0 + rw
+                    xy = [x0, y0, x1, y1]
+                wins = getattr(cv, "_windows", None)
+                if wins is None:
+                    wins = []
+                    cv._windows = wins
+                wins.append((int(x0), int(y0), int(rw), int(rh)))
+    except Exception:
+        pass
+    return _orig_imagedraw_rect(self, xy, fill=fill, outline=outline, width=width)
+
+ImageDraw.Draw = _hooked_draw
+ImageDraw.ImageDraw.rectangle = _hooked_rect
+
 FPS = 30
 
 GOLD = (233, 194, 122)
@@ -206,6 +249,9 @@ def draw_text(canvas, text, x, y, fname="press", size=8, color=CREAM, align="lef
               shadow=True, gradient=None, reveal=None, alpha=1.0, outline_w=1):
     """Dibuja texto. reveal = cantidad de caracteres visibles (efecto máquina de escribir).
     Incluye protección automática para que ningún texto desborde jamás una ventana (window) ni el lienzo."""
+    if outline is not None and tuple(color[:3]) == tuple(outline[:3]):
+        outline = None
+        shadow = False
     orig_len = len(text) if isinstance(text, str) else 0
     raw_text = text
 
@@ -357,7 +403,12 @@ def grade(img, mul=(1, 1, 1), add=(0, 0, 0), sat=1.0, k=1.0):
     g = g * np.array(mul) + np.array(add)
     out = rgb + (g - rgb) * k
     a[..., :3] = np.clip(out, 0, 255)
-    return Image.fromarray(a.astype(np.uint8), img.mode)
+    res = Image.fromarray(a.astype(np.uint8), img.mode)
+    try:
+        img.paste(res, (0, 0))
+        return img
+    except Exception:
+        return res
 
 
 def posterize_palette(img, levels=6):
@@ -377,8 +428,8 @@ def window(canvas, x, y, w, h, fill=(20, 24, 52), border=GOLD, alpha=0.92, inner
     # darle ancho cómodo (w=284) para que luzca proporcionado en 480px y nunca apriete el texto.
     if globals().get("_VCTX") is None and getattr(canvas, "size", None) == (W, H):
         cx = x + w // 2
-        if 236 <= w <= 256 and 38 <= y <= 56 and 50 <= h <= 120 and abs(cx - 240) <= 10:
-            w = 284
+        if 232 <= w <= 260 and 24 <= y <= 62 and 36 <= h <= 176 and abs(cx - 240) <= 12:
+            w = 292
             x = cx - w // 2
     wins = getattr(canvas, "_windows", None)
     if wins is None:
@@ -532,7 +583,15 @@ def shadow_ellipse(canvas, cx, cy, w=16, h=3, alpha=90):
     d.ellipse([cx - w // 2, cy - h // 2, cx + w // 2, cy + h // 2], fill=(0, 0, 0, alpha))
 
 
+def flush_person_cards(canvas):
+    cards = getattr(canvas, '_deferred_person_cards', None)
+    if cards:
+        canvas._deferred_person_cards = []
+        for fn_pc in cards:
+            fn_pc(canvas)
+
 def vignette(canvas, strength=0.35):
+    flush_person_cards(canvas)
     return _vignette(canvas, strength)
 
 

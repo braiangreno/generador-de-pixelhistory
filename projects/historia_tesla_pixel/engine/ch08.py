@@ -35,16 +35,16 @@ def c8_s01_pigeons_and_medal(t):
         draw_text(cv, "LA PALOMA BLANCA", 240, 78, "silk", 8, GOLD, align="center")
     elif t < t_c8_03:
         # Ceremonia de la Medalla Edison: estrado con medalla dorada y silla vacía
-        window(cv, 118, 48, 244, 126, fill=(24, 20, 32), border=GOLD)
-        draw_text(cv, "CEREMONIA · MEDALLA EDISON (1917)", 240, 56, "silk", 8, GOLD, align="center")
+        window(cv, 118, 42, 244, 112, fill=(24, 20, 32), border=GOLD)
+        draw_text(cv, "CEREMONIA · MEDALLA EDISON (1917)", 240, 50, "silk", 8, GOLD, align="center")
         # Medalla dorada en estuche sobre el atril
-        d.ellipse([226, 76, 254, 104], fill=(*GOLD, 255), outline=(*CREAM, 255))
-        draw_text(cv, "M", 240, 86, "press", 8, INK, align="center")
+        d.ellipse([226, 68, 254, 96], fill=(*GOLD, 255), outline=(*CREAM, 255))
+        draw_text(cv, "M", 240, 78, "press", 8, INK, align="center")
         # Silla del homenajeado vacía cuando dice "desapareció"
-        d.rectangle([222, 116, 258, 142], fill=(92, 36, 44, 255), outline=(*GOLD, 255))
+        d.rectangle([222, 104, 258, 128], fill=(92, 36, 44, 255), outline=(*GOLD, 255))
         draw_text(cv, "¿DÓNDE ESTÁ TESLA?" if t >= t_des - 0.25 else "EL PREMIO MÁS IMPORTANTE",
-                  240, 152, "silk", 8, CHALK_RED if t >= t_des - 0.25 else CREAM, align="center")
-        char(cv, "organizer", 152, 248, t, scale=2, arms="shrug" if t >= t_des - 0.2 else "offer",
+                  240, 136, "silk", 8, CHALK_RED if t >= t_des - 0.25 else CREAM, align="center")
+        char(cv, "organizer", 84, 248, t, scale=2, arms="shrug" if t >= t_des - 0.2 else "offer",
              look=1, mood="surprised" if t >= t_des - 0.2 else "happy")
     else:
         # Lo encuentran en la plaza cubierto de palomas

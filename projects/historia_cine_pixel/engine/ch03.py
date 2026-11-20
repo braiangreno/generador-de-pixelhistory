@@ -96,9 +96,9 @@ def c3_s02_stop_trick_and_moon(t):
 
     if t < t_c3_06 - 0.12:
         draw_place_only(cv, "PARÍS · EL TRUCO POR ACCIDENTE", t, t_c3_04, border=GOLD)
-        char(cv, "melies", 136, 248, t, scale=2,
+        char(cv, "melies", 74, 248, t, scale=2,
              arms="point" if t >= t_c3_05 else "work", look=1, mood="happy")
-        draw_wooden_camera(cv, 206, 248, t, scale=1, flash=(t >= t_fun - 0.15), facing=1)
+        draw_wooden_camera(cv, 404, 248, t, scale=1, flash=(t >= t_fun - 0.15), facing=-1)
 
         window(cv, 118, 42, 244, 124, fill=(20, 18, 36), border=GOLD, alpha=0.96)
         if t < t_c3_05 - 0.1:

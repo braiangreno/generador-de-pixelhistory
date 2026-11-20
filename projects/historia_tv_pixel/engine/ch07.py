@@ -86,9 +86,9 @@ def c7_s02_doctor_x_quiz_show(t):
     char(cv, "tv_host", 136, 248, t, scale=2,
          arms="offer" if t >= t_c7_05 else "point", look=1, mood="happy",
          talk=talk_v(t, t_c7_05 <= t < t_och))
-    draw_quiz_desk_prop(cv, 236, 248, t, label="DOCTOR X")
-    char(cv, "farnsworth_older", 236, 248, t, scale=2,
+    char(cv, "farnsworth_older", 236, 238, t, scale=2, shadow=False,
          arms="wave" if t >= t_och else "down", look=-1, mood="happy")
+    draw_quiz_desk_prop(cv, 236, 248, t, label="DOCTOR X")
     char(cv, "panelist", 348, 248, t, scale=2,
          arms="shrug" if t >= t_c7_05 else "think", look=-1, mood="neutral")
     person_card(cv, "philo_farnsworth", "PHILO FARNSWORTH",
