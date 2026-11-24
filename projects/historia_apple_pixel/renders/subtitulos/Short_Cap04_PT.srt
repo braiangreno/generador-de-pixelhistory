@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:03,842
+CAPÍTULO 4 — O COMPUTADOR QUE NÃO EXISTIA
+
+2
+00:00:04,192 --> 00:00:11,346
+Em 1977, em uma grande feira de computadores em São Francisco, a Apple apresentou o Apple II.
+
+3
+00:00:11,546 --> 00:00:23,546
+E Wozniak, em segredo, distribuiu milhares de folhetos de um computador espetacular: o Zaltair. Ele não existia. Era uma paródia do Altair.
+
+4
+00:00:23,746 --> 00:00:32,977
+Jobs acreditou. Comparou a tabela e ficou orgulhoso: o Apple II saía muito bem. Wozniak lhe contou a verdade anos depois.
+
+5
+00:00:33,177 --> 00:00:44,638
+Outras surpresas não foram de propósito. Em 1980 saiu o Apple III, sem ventoinha, como Jobs queria. Com o calor, os chips saltavam dos soquetes.
+
+6
+00:00:44,838 --> 00:00:53,915
+Segundo relatos da época, aconselharam alguns clientes a levantá-lo alguns centímetros e soltá-lo. Assim os chips voltavam ao lugar.
+
+7
+00:00:54,865 --> 00:00:59,096
+O suporte técnico cabia em uma única palavra: solte.

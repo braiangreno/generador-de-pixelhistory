@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:03,535
+CHAPTER 1 — A CALL TO THE VATICAN
+
+2
+00:00:03,885 --> 00:00:15,193
+It all begins with two Steves: Wozniak, an electronics genius, and Jobs, five years younger. In 1971 they read something incredible in a magazine.
+
+3
+00:00:15,643 --> 00:00:21,566
+Let's go to the chalkboard. Back then, telephone exchanges talked to each other using sounds.
+
+4
+00:00:21,766 --> 00:00:31,381
+A 2600 Hz tone meant: free line. And a toy whistle, a free prize inside a cereal box, made that exact tone.
+
+5
+00:00:31,581 --> 00:00:38,889
+If you blew it into the phone, the exchange handed you the line. And you could call anywhere in the world, for free.
+
+6
+00:00:39,839 --> 00:00:44,608
+The largest telephone network in the world was fooled by a cereal toy.
+
+7
+00:00:44,808 --> 00:00:54,962
+Wozniak built a little blue box that made those tones. One day he called the Vatican and, with a fake accent, claimed to be Henry Kissinger. He asked to speak to the Pope.
+
+8
+00:00:55,162 --> 00:01:02,162
+According to Jobs, they actually sent someone to wake up the Pope. Then they burst out laughing, and were caught.
+
+9
+00:01:03,112 --> 00:01:11,727
+Jobs sold about two hundred boxes. One built them and the other sold them. Apple already existed, even if it didn't have a name yet.

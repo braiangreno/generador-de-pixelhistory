@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,073
+CHAPTER 5 — BETTER TO BE A PIRATE
+
+2
+00:00:03,423 --> 00:00:11,038
+To keep Apple from turning bureaucratic, Jobs repeated a line: it's better to be a pirate than to join the navy.
+
+3
+00:00:11,238 --> 00:00:20,469
+The Macintosh team sewed a pirate flag and raised it on the roof. The rival team, building the Lisa computer, stole it and demanded a ransom.
+
+4
+00:00:20,669 --> 00:00:32,438
+At its unveiling in 1984, the Macintosh spoke on its own. And it mocked giant computers: never trust a computer you can't lift.
+
+5
+00:00:32,888 --> 00:00:40,504
+Who drew what appeared on that screen? Susan Kare. Let's go to the chalkboard, because this hits close to home for this channel.
+
+6
+00:00:40,704 --> 00:00:49,781
+The screen was a grid of tiny dots, black or white. One icon took up 32 by 32: 1,024 little squares.
+
+7
+00:00:49,981 --> 00:00:58,981
+Kare didn't have a computer to design on. She bought a $2.50 graph paper notebook and colored every icon, square by square.
+
+8
+00:00:59,931 --> 00:01:05,392
+The most famous icons of their era were pixel art. And they were drawn with a pencil.

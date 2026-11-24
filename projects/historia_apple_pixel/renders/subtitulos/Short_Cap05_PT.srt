@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:03,073
+CAPÍTULO 5 — MELHOR SER PIRATA
+
+2
+00:00:03,423 --> 00:00:11,038
+Para que a Apple não ficasse burocrática, Jobs repetia uma frase: é melhor ser pirata do que entrar para a marinha.
+
+3
+00:00:11,238 --> 00:00:20,469
+A equipe do Macintosh costurou uma bandeira pirata e a hasteou no telhado. A equipe rival, do Lisa, roubou a bandeira e pediu resgate.
+
+4
+00:00:20,669 --> 00:00:32,438
+Em sua apresentação, em 1984, o Macintosh falou sozinho. E zombou dos computadores gigantes: nunca confie em um computador que você não possa levantar.
+
+5
+00:00:32,888 --> 00:00:40,504
+Quem desenhou o que aparecia naquela tela? Susan Kare. Vamos ao quadro, porque isso toca bem de perto este canal.
+
+6
+00:00:40,704 --> 00:00:49,781
+A tela era uma grade de pontinhos, brancos ou pretos. Um ícone ocupava 32 por 32: 1.024 quadradinhos.
+
+7
+00:00:49,981 --> 00:00:58,981
+Kare não tinha computador para desenhar. Comprou um caderno quadriculado de US$ 2,50 e pintou cada ícone, quadradinho por quadradinho.
+
+8
+00:00:59,931 --> 00:01:05,392
+Os ícones mais famosos de sua época eram pixel art. E foram desenhados a lápis.

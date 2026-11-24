@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:03,842
+CHAPTER 4 — THE COMPUTER THAT DIDN'T EXIST
+
+2
+00:00:04,192 --> 00:00:11,346
+In 1977, at a major computer fair in San Francisco, Apple unveiled the Apple II.
+
+3
+00:00:11,546 --> 00:00:23,546
+And Wozniak, in secret, handed out thousands of brochures for a spectacular machine: the Zaltair. It didn't exist. It was a parody of the Altair.
+
+4
+00:00:23,746 --> 00:00:32,977
+Jobs fell for it. He checked the comparison chart and felt proud: the Apple II held its own. Wozniak told him the truth years later.
+
+5
+00:00:33,177 --> 00:00:44,638
+Other surprises weren't on purpose. In 1980 came the Apple III, with no fan, as Jobs wanted. From the heat, chips popped out of their sockets.
+
+6
+00:00:44,838 --> 00:00:53,915
+According to accounts from that era, some customers were advised to lift it a few inches and drop it. That pushed the chips back into place.
+
+7
+00:00:54,865 --> 00:00:59,096
+Tech support fit into a single word: drop it.

@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:03,073
+CHAPTER 8 — FOUR THOUSAND LATTES
+
+2
+00:00:03,423 --> 00:00:10,962
+January 2007. Jobs unveils the iPhone. The audience had no idea the prototype barely worked.
+
+3
+00:00:11,162 --> 00:00:21,239
+It crashed and dropped signal, so the signal bars were hardcoded to always show five. And in the fifth row, engineers passed around a flask of whisky.
+
+4
+00:00:21,689 --> 00:00:25,996
+Let's go to the chalkboard. Picture the phone's memory as a glass.
+
+5
+00:00:26,196 --> 00:00:34,427
+Every open app pours water into it. Unfinished apps didn't give the water back, and when the glass overflowed, the phone froze.
+
+6
+00:00:34,627 --> 00:00:44,089
+If you sent an email and then browsed, it worked. The other way around, it crashed. So they mapped out one exact sequence: the golden path.
+
+7
+00:00:45,039 --> 00:00:48,885
+The iPhone worked, as long as nobody stepped off the script.
+
+8
+00:00:49,085 --> 00:00:58,239
+To demo maps, Jobs called a real Starbucks live on stage. He ordered 4,000 lattes to go, and hung up: wrong number.
+
+9
+00:00:59,189 --> 00:01:04,881
+The first public phone call ever made on an iPhone was a prank call. Just like in the Vatican days.

@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:03,535
+CAPÍTULO 1 — UNA LLAMADA AL VATICANO
+
+2
+00:00:03,885 --> 00:00:15,193
+Todo empieza con dos Steves: Wozniak, un genio de la electrónica, y Jobs, cinco años menor. En 1971 leyeron algo increíble en una revista.
+
+3
+00:00:15,643 --> 00:00:21,566
+Vamos a la pizarra. En esa época, las centrales telefónicas se hablaban entre sí con sonidos.
+
+4
+00:00:21,766 --> 00:00:31,381
+Un tono de 2600 Hz quería decir: línea libre. Y un silbato de juguete, de regalo en una caja de cereales, hacía justo ese tono.
+
+5
+00:00:31,581 --> 00:00:38,889
+Si lo soplabas en el teléfono, la central te entregaba la línea. Y podías llamar a cualquier parte del mundo, gratis.
+
+6
+00:00:39,839 --> 00:00:44,608
+La red telefónica más grande del mundo se engañaba con un juguete de cereal.
+
+7
+00:00:44,808 --> 00:00:54,962
+Wozniak armó una cajita azul que hacía esos tonos. Un día llamó al Vaticano y, con acento falso, dijo ser Henry Kissinger. Pidió hablar con el Papa.
+
+8
+00:00:55,162 --> 00:01:02,162
+Según contó Jobs, llegaron a mandar a alguien a despertar al Papa. Ahí les ganó la risa, y los descubrieron.
+
+9
+00:01:03,112 --> 00:01:11,727
+Jobs vendió unas doscientas cajas. Uno fabricaba y el otro vendía. Apple ya existía, aunque todavía no tenía nombre.

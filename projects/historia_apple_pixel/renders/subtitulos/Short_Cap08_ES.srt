@@ -1,0 +1,35 @@
+1
+00:00:00,150 --> 00:00:03,073
+CAPÍTULO 8 — CUATRO MIL LATTES
+
+2
+00:00:03,423 --> 00:00:10,962
+Enero de 2007. Jobs presenta el iPhone. El público no sabía que el prototipo apenas funcionaba.
+
+3
+00:00:11,162 --> 00:00:21,239
+Se colgaba y perdía señal, así que las rayitas estaban programadas para mostrar siempre cinco. Y en la quinta fila, los ingenieros se pasaban una petaca de whisky.
+
+4
+00:00:21,689 --> 00:00:25,996
+Vamos a la pizarra. Imagina la memoria del teléfono como un vaso.
+
+5
+00:00:26,196 --> 00:00:34,427
+Cada programa abierto le echa agua. Los programas sin terminar no la devolvían, y cuando el vaso rebalsaba, el teléfono se colgaba.
+
+6
+00:00:34,627 --> 00:00:44,089
+Si mandabas un correo y después navegabas, funcionaba. Al revés, se colgaba. Así que armaron un recorrido exacto: el camino dorado.
+
+7
+00:00:45,039 --> 00:00:48,885
+El iPhone funcionaba, siempre que nadie se saliera del guion.
+
+8
+00:00:49,085 --> 00:00:58,239
+Para mostrar los mapas, Jobs llamó en vivo a una cafetería de Starbucks. Pidió cuatro mil lattes para llevar, y colgó: número equivocado.
+
+9
+00:00:59,189 --> 00:01:04,881
+La primera llamada pública de un iPhone fue una broma telefónica. Como en los tiempos del Vaticano.

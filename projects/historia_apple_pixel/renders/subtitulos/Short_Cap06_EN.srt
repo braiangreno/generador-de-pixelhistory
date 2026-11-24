@@ -1,0 +1,23 @@
+1
+00:00:00,150 --> 00:00:02,996
+CHAPTER 6 — SO SUE ME
+
+2
+00:00:03,346 --> 00:00:13,808
+In 1985, after a clash with the board, Jobs left his own company. He founded another, NeXT, and paid $100,000 for the logo.
+
+3
+00:00:14,008 --> 00:00:22,777
+Apple had another problem: the Beatles' company was also called Apple. To avoid lawsuits, it promised never to enter the music business.
+
+4
+00:00:22,977 --> 00:00:32,900
+But computers were making more and more sounds. In 1989 came another lawsuit, and lawyers vetted even the names of system sounds.
+
+5
+00:00:33,100 --> 00:00:44,562
+Engineer Jim Reekes was told one of his sound names wouldn't pass legal review. He replied: 'so sue me.' And he spelled the sound Sosumi.
+
+6
+00:00:45,512 --> 00:00:52,512
+The lawyers approved it without realizing. More than thirty years later, that joke is still chiming on Macs.

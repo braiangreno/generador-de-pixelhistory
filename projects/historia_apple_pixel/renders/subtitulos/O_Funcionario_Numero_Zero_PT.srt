@@ -1,0 +1,295 @@
+1
+00:00:00,750 --> 00:00:08,212
+1977. O primeiro gerente-geral de uma pequena empresa de computadores distribui números de funcionário.
+
+2
+00:00:08,412 --> 00:00:13,412
+O número um vai para o engenheiro que projetou o computador. O dois, para o sócio dele.
+
+3
+00:00:13,612 --> 00:00:19,458
+O sócio fica furioso. Quer ser o número um. Segundo contaram depois, chega a chorar.
+
+4
+00:00:19,658 --> 00:00:29,427
+O gerente, Mike Scott, lhe dá o zero: antes do um. Mas o banco não aceitava o zero, e no papel ele continuou sendo o dois.
+
+5
+00:00:30,377 --> 00:00:32,838
+O sócio se chamava Steve Jobs.
+
+6
+00:00:33,388 --> 00:00:41,542
+Hoje essa empresa vale cerca de cinco trilhões de dólares. Esta é a história da Apple, contada por suas histórias mais estranhas.
+
+7
+00:00:42,392 --> 00:00:45,777
+CAPÍTULO 1 — UMA LIGAÇÃO PARA O VATICANO
+
+8
+00:00:46,127 --> 00:00:57,435
+Tudo começa com dois Steves: Wozniak, um gênio da eletrônica, e Jobs, cinco anos mais novo. Em 1971, leram algo incrível em uma revista.
+
+9
+00:00:57,885 --> 00:01:03,808
+Vamos ao quadro. Naquela época, as centrais telefônicas conversavam entre si com sons.
+
+10
+00:01:04,008 --> 00:01:13,623
+Um tom de 2600 Hz significava: linha livre. E um apito de brinquedo, brinde de uma caixa de cereal, fazia exatamente esse tom.
+
+11
+00:01:13,823 --> 00:01:21,131
+Se você soprasse no telefone, a central entregava a linha. E dava para ligar para qualquer lugar do mundo, de graça.
+
+12
+00:01:22,081 --> 00:01:26,850
+A maior rede telefônica do mundo era enganada por um brinquedo de cereal.
+
+13
+00:01:27,050 --> 00:01:37,204
+Wozniak montou uma caixinha azul que emitia esses tons. Um dia ligou para o Vaticano e, com sotaque falso, disse ser Henry Kissinger. Pediu para falar com o Papa.
+
+14
+00:01:37,404 --> 00:01:44,404
+Segundo contou Jobs, chegaram a mandar alguém acordar o Papa. Aí eles não seguraram o riso, e foram descobertos.
+
+15
+00:01:45,354 --> 00:01:53,969
+Jobs vendeu umas duzentas caixas. Um fabricava e o outro vendia. A Apple já existia, embora ainda não tivesse nome.
+
+16
+00:01:54,819 --> 00:01:58,204
+CAPÍTULO 2 — DOIS STEVES, UM SALÁRIO
+
+17
+00:01:58,554 --> 00:02:05,015
+Em 1974, Jobs entrou como técnico na Atari, a empresa de videogames da moda.
+
+18
+00:02:05,215 --> 00:02:13,369
+Ele tinha uma teoria: como comia quase só frutas, não precisava tomar banho sempre. Os colegas não achavam o mesmo.
+
+19
+00:02:13,569 --> 00:02:24,723
+A Atari o passou para o turno da noite. Seu fundador, Nolan Bushnell, contou depois que saiu lucrando: Wozniak ia à noite para ajudá-lo. Dois Steves pelo preço de um.
+
+20
+00:02:24,923 --> 00:02:32,846
+A Atari encomendou a Jobs um jogo com poucos chips: Breakout. Wozniak o projetou em quatro noites, quase sem dormir.
+
+21
+00:02:33,046 --> 00:02:41,508
+Jobs lhe disse que tinham recebido 700 dólares, e lhe deu a metade. Segundo Wozniak, o prêmio real era de uns 5.000.
+
+22
+00:02:42,458 --> 00:02:51,227
+Ele descobriu uns dez anos depois, lendo um livro. Contou que chorou. E que, se Jobs tivesse pedido o dinheiro, ele teria dado.
+
+23
+00:02:52,077 --> 00:02:54,769
+CAPÍTULO 3 — DIA DA MENTIRA
+
+24
+00:02:55,119 --> 00:03:01,658
+A Apple foi fundada em 1.º de abril de 1976. Nos Estados Unidos, o dia da mentira.
+
+25
+00:03:01,858 --> 00:03:12,473
+Eram três sócios. O terceiro, Ronald Wayne, de 41 anos, tinha 10%. Ele desenhou o primeiro logo: Isaac Newton lendo sob uma macieira.
+
+26
+00:03:12,673 --> 00:03:20,519
+Doze dias depois, assustado com as dívidas, vendeu sua parte por 800 dólares. Sempre disse que não se arrependia.
+
+27
+00:03:20,719 --> 00:03:28,796
+Uma loja havia encomendado 50 computadores. Para comprar as peças, Jobs vendeu sua caminhonete e Wozniak, sua calculadora.
+
+28
+00:03:28,996 --> 00:03:36,765
+O preço de venda: 666,66 dólares. Muita gente viu o número do diabo.
+
+29
+00:03:37,715 --> 00:03:42,408
+Não havia nada satânico. Wozniak apenas gostava de números repetidos.
+
+30
+00:03:43,258 --> 00:03:46,950
+CAPÍTULO 4 — O COMPUTADOR QUE NÃO EXISTIA
+
+31
+00:03:47,300 --> 00:03:54,454
+Em 1977, em uma grande feira de computadores em São Francisco, a Apple apresentou o Apple II.
+
+32
+00:03:54,654 --> 00:04:06,654
+E Wozniak, em segredo, distribuiu milhares de folhetos de um computador espetacular: o Zaltair. Ele não existia. Era uma paródia do Altair.
+
+33
+00:04:06,854 --> 00:04:16,085
+Jobs acreditou. Comparou a tabela e ficou orgulhoso: o Apple II saía muito bem. Wozniak lhe contou a verdade anos depois.
+
+34
+00:04:16,285 --> 00:04:27,746
+Outras surpresas não foram de propósito. Em 1980 saiu o Apple III, sem ventoinha, como Jobs queria. Com o calor, os chips saltavam dos soquetes.
+
+35
+00:04:27,946 --> 00:04:37,023
+Segundo relatos da época, aconselharam alguns clientes a levantá-lo alguns centímetros e soltá-lo. Assim os chips voltavam ao lugar.
+
+36
+00:04:37,973 --> 00:04:42,204
+O suporte técnico cabia em uma única palavra: solte.
+
+37
+00:04:43,054 --> 00:04:45,977
+CAPÍTULO 5 — MELHOR SER PIRATA
+
+38
+00:04:46,327 --> 00:04:53,942
+Para que a Apple não ficasse burocrática, Jobs repetia uma frase: é melhor ser pirata do que entrar para a marinha.
+
+39
+00:04:54,142 --> 00:05:03,373
+A equipe do Macintosh costurou uma bandeira pirata e a hasteou no telhado. A equipe rival, do Lisa, roubou a bandeira e pediu resgate.
+
+40
+00:05:03,573 --> 00:05:15,342
+Em sua apresentação, em 1984, o Macintosh falou sozinho. E zombou dos computadores gigantes: nunca confie em um computador que você não possa levantar.
+
+41
+00:05:15,792 --> 00:05:23,408
+Quem desenhou o que aparecia naquela tela? Susan Kare. Vamos ao quadro, porque isso toca bem de perto este canal.
+
+42
+00:05:23,608 --> 00:05:32,685
+A tela era uma grade de pontinhos, brancos ou pretos. Um ícone ocupava 32 por 32: 1.024 quadradinhos.
+
+43
+00:05:32,885 --> 00:05:41,885
+Kare não tinha computador para desenhar. Comprou um caderno quadriculado de US$ 2,50 e pintou cada ícone, quadradinho por quadradinho.
+
+44
+00:05:42,835 --> 00:05:48,296
+Os ícones mais famosos de sua época eram pixel art. E foram desenhados a lápis.
+
+45
+00:05:49,146 --> 00:05:51,992
+CAPÍTULO 6 — ENTÃO ME PROCESSE
+
+46
+00:05:52,342 --> 00:06:02,804
+Em 1985, após uma briga com a diretoria, Jobs saiu de sua própria empresa. Fundou outra, a NeXT, e pagou US$ 100.000 pelo logo.
+
+47
+00:06:03,004 --> 00:06:11,773
+A Apple tinha outro problema: a empresa dos Beatles também se chamava Apple. Para evitar processos, prometeu não entrar na música.
+
+48
+00:06:11,973 --> 00:06:21,896
+Mas os computadores faziam cada vez mais sons. Em 1989 houve outro processo, e os advogados revisavam até os nomes dos sons do sistema.
+
+49
+00:06:22,096 --> 00:06:33,558
+Disseram ao engenheiro Jim Reekes que um nome dele não passaria pelo jurídico. Ele respondeu: «so sue me» (então me processe). E batizou o som de Sosumi.
+
+50
+00:06:34,508 --> 00:06:41,508
+Os advogados aprovaram sem perceber. Mais de trinta anos depois, essa piada continua tocando nos Macs.
+
+51
+00:06:42,358 --> 00:06:45,127
+CAPÍTULO 7 — UM DÓLAR POR ANO
+
+52
+00:06:45,477 --> 00:06:51,862
+Sem Jobs, a Apple foi de mal a pior. Em meados dos anos noventa estava à beira da falência.
+
+53
+00:06:52,062 --> 00:06:59,908
+Comprou a NeXT para conseguir um sistema operacional, e com a empresa voltou Jobs. Pediu um salário de um dólar por ano.
+
+54
+00:07:00,108 --> 00:07:12,492
+Em 1997 anunciou que a Microsoft, a grande rival, investiria US$ 150 milhões na Apple. Bill Gates apareceu em um telão, e o público vaiou.
+
+55
+00:07:12,692 --> 00:07:17,538
+Jobs também tinha suas manias. Seu carro esportivo prateado nunca tinha placa.
+
+56
+00:07:17,738 --> 00:07:27,508
+Segundo um ex-chefe de segurança da Apple, a lei dava um prazo para emplacar um carro novo. Jobs alugava um idêntico a cada seis meses.
+
+57
+00:07:28,458 --> 00:07:37,842
+As autoridades de trânsito da Califórnia disseram que não era bem assim. O certo é que ele havia salvado a Apple. E que a placa nunca apareceu.
+
+58
+00:07:38,692 --> 00:07:41,615
+CAPÍTULO 8 — QUATRO MIL LATTES
+
+59
+00:07:41,965 --> 00:07:49,504
+Janeiro de 2007. Jobs apresenta o iPhone. O público não sabia que o protótipo mal funcionava.
+
+60
+00:07:49,704 --> 00:07:59,781
+Ele travava e perdia sinal, então as barrinhas foram programadas para mostrar sempre cinco. E na quinta fileira, os engenheiros passavam um cantil de uísque.
+
+61
+00:08:00,231 --> 00:08:04,538
+Vamos ao quadro. Imagine a memória do telefone como um copo.
+
+62
+00:08:04,738 --> 00:08:12,969
+Cada programa aberto despeja água nele. Os programas inacabados não devolviam a água, e quando o copo transbordava, o telefone travava.
+
+63
+00:08:13,169 --> 00:08:22,631
+Se você mandasse um e-mail e depois navegasse, funcionava. Ao contrário, travava. Então montaram um roteiro exato: o caminho dourado.
+
+64
+00:08:23,581 --> 00:08:27,427
+O iPhone funcionava, desde que ninguém saísse do roteiro.
+
+65
+00:08:27,627 --> 00:08:36,781
+Para mostrar os mapas, Jobs ligou ao vivo para uma cafeteria Starbucks. Pediu quatro mil lattes para viagem, e desligou: número errado.
+
+66
+00:08:37,731 --> 00:08:43,423
+A primeira ligação pública de um iPhone foi um trote telefônico. Como nos tempos do Vaticano.
+
+67
+00:08:44,273 --> 00:08:47,119
+CAPÍTULO 9 — PIRATA OU MARINHA?
+
+68
+00:08:47,469 --> 00:08:54,546
+Jobs morreu em 2011, aos 56 anos. Tim Cook dirigiu a Apple pelos quinze anos seguintes.
+
+69
+00:08:54,746 --> 00:09:03,977
+Nos 50 anos da Apple, em 2026, Paul McCartney tocou na sede da empresa. Um Beatle, após quase trinta anos de processos pelo nome.
+
+70
+00:09:04,177 --> 00:09:11,485
+Nesse ano assumiu um novo chefe, o engenheiro John Ternus. E a Apple lançou seu primeiro iPhone dobrável.
+
+71
+00:09:11,685 --> 00:09:19,146
+Hoje vale cerca de cinco trilhões de dólares, disputando com a NVIDIA o título de empresa mais valiosa do mundo.
+
+72
+00:09:19,346 --> 00:09:25,423
+Jobs preferia os piratas. Mas a Apple já é uma das maiores marinhas do planeta.
+
+73
+00:09:26,373 --> 00:09:29,912
+A pergunta é se ainda lhe resta algo de pirata.
+
+74
+00:09:30,862 --> 00:09:37,323
+E você, o que acha? Qual outra história gostaria de ver no próximo episódio? Deixe aqui embaixo nos comentários.

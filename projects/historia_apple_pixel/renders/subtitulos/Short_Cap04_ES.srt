@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:03,842
+CAPÍTULO 4 — LA COMPUTADORA QUE NO EXISTÍA
+
+2
+00:00:04,192 --> 00:00:11,346
+En 1977, en una gran feria de computadoras de San Francisco, Apple presentó la Apple II.
+
+3
+00:00:11,546 --> 00:00:23,546
+Y Wozniak, en secreto, repartió miles de folletos de una computadora espectacular: la Zaltair. No existía. Era una parodia de la Altair, la más famosa de la época.
+
+4
+00:00:23,746 --> 00:00:32,977
+Jobs se la creyó. Comparó la tabla y quedó orgulloso: la Apple II salía bien parada. Wozniak le contó la verdad años después.
+
+5
+00:00:33,177 --> 00:00:44,638
+Otras sorpresas no fueron a propósito. En 1980 salió la Apple III, sin ventilador, como quería Jobs. Con el calor, los chips se salían de sus zócalos.
+
+6
+00:00:44,838 --> 00:00:53,915
+Según relatos de la época, a algunos clientes les aconsejaron levantarla unos centímetros y dejarla caer. Así los chips volvían a su lugar.
+
+7
+00:00:54,865 --> 00:00:59,096
+El soporte técnico cabía en una sola palabra: suéltala.

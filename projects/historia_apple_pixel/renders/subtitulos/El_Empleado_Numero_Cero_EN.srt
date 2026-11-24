@@ -1,0 +1,295 @@
+1
+00:00:00,750 --> 00:00:08,212
+1977. The first general manager of a small computer company hands out employee numbers.
+
+2
+00:00:08,412 --> 00:00:13,412
+Number one goes to the engineer who designed the computer. Number two, to his partner.
+
+3
+00:00:13,612 --> 00:00:19,458
+The partner gets angry. He wants to be number one. As it was told later, he even cries.
+
+4
+00:00:19,658 --> 00:00:29,427
+The manager, Mike Scott, gives him zero: before number one. But the payroll bank wouldn't accept zero, so on paper he remained number two.
+
+5
+00:00:30,377 --> 00:00:32,838
+The partner's name was Steve Jobs.
+
+6
+00:00:33,388 --> 00:00:41,542
+Today that company is worth around five trillion dollars. This is the story of Apple, told through its strangest anecdotes.
+
+7
+00:00:42,392 --> 00:00:45,777
+CHAPTER 1 — A CALL TO THE VATICAN
+
+8
+00:00:46,127 --> 00:00:57,435
+It all begins with two Steves: Wozniak, an electronics genius, and Jobs, five years younger. In 1971 they read something incredible in a magazine.
+
+9
+00:00:57,885 --> 00:01:03,808
+Let's go to the chalkboard. Back then, telephone exchanges talked to each other using sounds.
+
+10
+00:01:04,008 --> 00:01:13,623
+A 2600 Hz tone meant: free line. And a toy whistle, a free prize inside a cereal box, made that exact tone.
+
+11
+00:01:13,823 --> 00:01:21,131
+If you blew it into the phone, the exchange handed you the line. And you could call anywhere in the world, for free.
+
+12
+00:01:22,081 --> 00:01:26,850
+The largest telephone network in the world was fooled by a cereal toy.
+
+13
+00:01:27,050 --> 00:01:37,204
+Wozniak built a little blue box that made those tones. One day he called the Vatican and, with a fake accent, claimed to be Henry Kissinger. He asked to speak to the Pope.
+
+14
+00:01:37,404 --> 00:01:44,404
+According to Jobs, they actually sent someone to wake up the Pope. Then they burst out laughing, and were caught.
+
+15
+00:01:45,354 --> 00:01:53,969
+Jobs sold about two hundred boxes. One built them and the other sold them. Apple already existed, even if it didn't have a name yet.
+
+16
+00:01:54,819 --> 00:01:58,204
+CHAPTER 2 — TWO STEVES, ONE PAYCHECK
+
+17
+00:01:58,554 --> 00:02:05,015
+In 1974, Jobs joined Atari, the hottest video game company around, as a technician.
+
+18
+00:02:05,215 --> 00:02:13,369
+He had a theory: since he ate almost only fruit, he didn't need to shower often. His coworkers did not agree.
+
+19
+00:02:13,569 --> 00:02:24,723
+Atari moved him to the night shift. Its founder, Nolan Bushnell, later said he got a bonus out of it: Wozniak came in at night to help him. Two Steves for the price of one.
+
+20
+00:02:24,923 --> 00:02:32,846
+Atari asked Jobs for a game using very few chips: Breakout. Wozniak designed it in four nights, barely sleeping.
+
+21
+00:02:33,046 --> 00:02:41,508
+Jobs told him they had been paid 700 dollars, and gave him half. According to Wozniak, the real bonus was around 5,000.
+
+22
+00:02:42,458 --> 00:02:51,227
+He found out about ten years later, reading a book. He said he cried. And that if Jobs had just asked for the money, he would have given it to him.
+
+23
+00:02:52,077 --> 00:02:54,769
+CHAPTER 3 — APRIL FOOLS' DAY
+
+24
+00:02:55,119 --> 00:03:01,658
+Apple was founded on April 1, 1976. In the United States, April Fools' Day.
+
+25
+00:03:01,858 --> 00:03:12,473
+There were three partners. The third, Ronald Wayne, 41, held 10%. He drew the first logo: Isaac Newton reading under an apple tree.
+
+26
+00:03:12,673 --> 00:03:20,519
+Twelve days later, frightened by potential debts, he sold his share for 800 dollars. He always said he didn't regret it.
+
+27
+00:03:20,719 --> 00:03:28,796
+A local store had ordered 50 computers. To buy the parts, Jobs sold his van and Wozniak sold his calculator.
+
+28
+00:03:28,996 --> 00:03:36,765
+The retail price: 666.66 dollars. More than a few saw the number of the beast.
+
+29
+00:03:37,715 --> 00:03:42,408
+There was nothing satanic about it. Wozniak simply liked repeating digits.
+
+30
+00:03:43,258 --> 00:03:46,950
+CHAPTER 4 — THE COMPUTER THAT DIDN'T EXIST
+
+31
+00:03:47,300 --> 00:03:54,454
+In 1977, at a major computer fair in San Francisco, Apple unveiled the Apple II.
+
+32
+00:03:54,654 --> 00:04:06,654
+And Wozniak, in secret, handed out thousands of brochures for a spectacular machine: the Zaltair. It didn't exist. It was a parody of the Altair.
+
+33
+00:04:06,854 --> 00:04:16,085
+Jobs fell for it. He checked the comparison chart and felt proud: the Apple II held its own. Wozniak told him the truth years later.
+
+34
+00:04:16,285 --> 00:04:27,746
+Other surprises weren't on purpose. In 1980 came the Apple III, with no fan, as Jobs wanted. From the heat, chips popped out of their sockets.
+
+35
+00:04:27,946 --> 00:04:37,023
+According to accounts from that era, some customers were advised to lift it a few inches and drop it. That pushed the chips back into place.
+
+36
+00:04:37,973 --> 00:04:42,204
+Tech support fit into a single word: drop it.
+
+37
+00:04:43,054 --> 00:04:45,977
+CHAPTER 5 — BETTER TO BE A PIRATE
+
+38
+00:04:46,327 --> 00:04:53,942
+To keep Apple from turning bureaucratic, Jobs repeated a line: it's better to be a pirate than to join the navy.
+
+39
+00:04:54,142 --> 00:05:03,373
+The Macintosh team sewed a pirate flag and raised it on the roof. The rival team, building the Lisa computer, stole it and demanded a ransom.
+
+40
+00:05:03,573 --> 00:05:15,342
+At its unveiling in 1984, the Macintosh spoke on its own. And it mocked giant computers: never trust a computer you can't lift.
+
+41
+00:05:15,792 --> 00:05:23,408
+Who drew what appeared on that screen? Susan Kare. Let's go to the chalkboard, because this hits close to home for this channel.
+
+42
+00:05:23,608 --> 00:05:32,685
+The screen was a grid of tiny dots, black or white. One icon took up 32 by 32: 1,024 little squares.
+
+43
+00:05:32,885 --> 00:05:41,885
+Kare didn't have a computer to design on. She bought a $2.50 graph paper notebook and colored every icon, square by square.
+
+44
+00:05:42,835 --> 00:05:48,296
+The most famous icons of their era were pixel art. And they were drawn with a pencil.
+
+45
+00:05:49,146 --> 00:05:51,992
+CHAPTER 6 — SO SUE ME
+
+46
+00:05:52,342 --> 00:06:02,804
+In 1985, after a clash with the board, Jobs left his own company. He founded another, NeXT, and paid $100,000 for the logo.
+
+47
+00:06:03,004 --> 00:06:11,773
+Apple had another problem: the Beatles' company was also called Apple. To avoid lawsuits, it promised never to enter the music business.
+
+48
+00:06:11,973 --> 00:06:21,896
+But computers were making more and more sounds. In 1989 came another lawsuit, and lawyers vetted even the names of system sounds.
+
+49
+00:06:22,096 --> 00:06:33,558
+Engineer Jim Reekes was told one of his sound names wouldn't pass legal review. He replied: 'so sue me.' And he spelled the sound Sosumi.
+
+50
+00:06:34,508 --> 00:06:41,508
+The lawyers approved it without realizing. More than thirty years later, that joke is still chiming on Macs.
+
+51
+00:06:42,358 --> 00:06:45,127
+CHAPTER 7 — ONE DOLLAR A YEAR
+
+52
+00:06:45,477 --> 00:06:51,862
+Without Jobs, Apple did worse and worse. By the mid-nineties it stood on the brink of bankruptcy.
+
+53
+00:06:52,062 --> 00:06:59,908
+It bought NeXT to get an operating system, and with the company came Jobs. He asked for a salary of one dollar a year.
+
+54
+00:07:00,108 --> 00:07:12,492
+In 1997 he announced that Microsoft, the arch-rival, was investing $150 million in Apple. Bill Gates appeared on a giant screen, and the audience booed.
+
+55
+00:07:12,692 --> 00:07:17,538
+Jobs also had his quirks. His silver sports car never had a license plate.
+
+56
+00:07:17,738 --> 00:07:27,508
+According to a former Apple security chief, the law gave a grace period to put plates on a new car. Jobs leased an identical one every six months.
+
+57
+00:07:28,458 --> 00:07:37,842
+California traffic authorities said it didn't quite work that way. What's certain is that he had saved Apple. And that the plate never showed up.
+
+58
+00:07:38,692 --> 00:07:41,615
+CHAPTER 8 — FOUR THOUSAND LATTES
+
+59
+00:07:41,965 --> 00:07:49,504
+January 2007. Jobs unveils the iPhone. The audience had no idea the prototype barely worked.
+
+60
+00:07:49,704 --> 00:07:59,781
+It crashed and dropped signal, so the signal bars were hardcoded to always show five. And in the fifth row, engineers passed around a flask of whisky.
+
+61
+00:08:00,231 --> 00:08:04,538
+Let's go to the chalkboard. Picture the phone's memory as a glass.
+
+62
+00:08:04,738 --> 00:08:12,969
+Every open app pours water into it. Unfinished apps didn't give the water back, and when the glass overflowed, the phone froze.
+
+63
+00:08:13,169 --> 00:08:22,631
+If you sent an email and then browsed, it worked. The other way around, it crashed. So they mapped out one exact sequence: the golden path.
+
+64
+00:08:23,581 --> 00:08:27,427
+The iPhone worked, as long as nobody stepped off the script.
+
+65
+00:08:27,627 --> 00:08:36,781
+To demo maps, Jobs called a real Starbucks live on stage. He ordered 4,000 lattes to go, and hung up: wrong number.
+
+66
+00:08:37,731 --> 00:08:43,423
+The first public phone call ever made on an iPhone was a prank call. Just like in the Vatican days.
+
+67
+00:08:44,273 --> 00:08:47,119
+CHAPTER 9 — PIRATE OR NAVY?
+
+68
+00:08:47,469 --> 00:08:54,546
+Jobs passed away in 2011, at 56. Tim Cook led Apple for the next fifteen years.
+
+69
+00:08:54,746 --> 00:09:03,977
+For Apple's 50th anniversary in 2026, Paul McCartney played at its headquarters. A Beatle, after nearly thirty years of lawsuits over the name.
+
+70
+00:09:04,177 --> 00:09:11,485
+That year a new chief took over, engineer John Ternus. And Apple launched its first foldable iPhone.
+
+71
+00:09:11,685 --> 00:09:19,146
+Today it's worth around five trillion dollars, battling NVIDIA for the title of most valuable company on Earth.
+
+72
+00:09:19,346 --> 00:09:25,423
+Jobs preferred pirates. But Apple is now one of the largest navies on the planet.
+
+73
+00:09:26,373 --> 00:09:29,912
+The question is whether it still has any pirate left in it.
+
+74
+00:09:30,862 --> 00:09:37,323
+What do you think? What story would you like to see in the next episode? Let us know down in the comments.

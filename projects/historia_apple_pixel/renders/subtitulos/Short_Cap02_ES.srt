@@ -1,0 +1,27 @@
+1
+00:00:00,150 --> 00:00:03,535
+CAPÍTULO 2 — DOS STEVES, UN SUELDO
+
+2
+00:00:03,885 --> 00:00:10,346
+En 1974, Jobs entró como técnico en Atari, la empresa de videojuegos de moda.
+
+3
+00:00:10,546 --> 00:00:18,700
+Tenía una teoría: como comía casi solo fruta, no necesitaba bañarse seguido. Sus compañeros no opinaban lo mismo.
+
+4
+00:00:18,900 --> 00:00:30,054
+Atari lo pasó al turno noche. Su fundador, Nolan Bushnell, contó después que así ganaba algo: Wozniak venía de noche a ayudarlo. Dos Steves por el precio de uno.
+
+5
+00:00:30,254 --> 00:00:38,177
+Atari le encargó a Jobs un juego con pocos chips: Breakout. Wozniak lo diseñó en cuatro noches, casi sin dormir.
+
+6
+00:00:38,377 --> 00:00:46,839
+Jobs le dijo que les habían pagado 700 dólares, y le dio la mitad. Según Wozniak, el premio real era de unos 5.000.
+
+7
+00:00:47,789 --> 00:00:56,558
+Se enteró unos diez años después, leyendo un libro. Contó que lloró. Y que, si Jobs le hubiera pedido el dinero, se lo habría dado.

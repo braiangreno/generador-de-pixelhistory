@@ -1,0 +1,520 @@
+[
+  {
+    "id": "s01",
+    "ch": 0,
+    "pause": 0.35,
+    "speak": "Mil novecientos setenta y siete. El primer gerente general de una empresa chica de computadoras reparte números de empleado.",
+    "sub": "1977. El primer gerente general de una empresa chica de computadoras reparte números de empleado."
+  },
+  {
+    "id": "s02",
+    "ch": 0,
+    "pause": 0.35,
+    "speak": "El uno es para el ingeniero que diseñó la computadora. El dos, para su socio.",
+    "sub": "El uno es para el ingeniero que diseñó la computadora. El dos, para su socio."
+  },
+  {
+    "id": "s03",
+    "ch": 0,
+    "pause": 0.4,
+    "speak": "El socio se enoja. Quiere ser el uno. Según se contó después, hasta llora.",
+    "sub": "El socio se enoja. Quiere ser el uno. Según se contó después, hasta llora."
+  },
+  {
+    "id": "s04",
+    "ch": 0,
+    "pause": 0.9,
+    "speak": "El gerente, Mike Scott, le da el cero: antes que el uno. Pero el banco de los sueldos no aceptaba el cero, y en los papeles siguió siendo el dos.",
+    "sub": "El gerente, Mike Scott, le da el cero: antes que el uno. Pero el banco de los sueldos no aceptaba el cero, y en los papeles siguió siendo el dos."
+  },
+  {
+    "id": "s05",
+    "ch": 0,
+    "pause": 0.65,
+    "speak": "El socio se llamaba Steve Jobs.",
+    "sub": "El socio se llamaba Steve Jobs."
+  },
+  {
+    "id": "s06",
+    "ch": 0,
+    "pause": 0.95,
+    "speak": "Hoy esa empresa vale unos cinco billones de dólares. Esta es la historia de Apple, contada por sus anécdotas más raras.",
+    "sub": "Hoy esa empresa vale unos cinco billones de dólares. Esta es la historia de Apple, contada por sus anécdotas más raras."
+  },
+  {
+    "id": "c1_00",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Capítulo uno. Una llamada al Vaticano.",
+    "sub": "CAPÍTULO 1 — UNA LLAMADA AL VATICANO"
+  },
+  {
+    "id": "c1_01",
+    "ch": 1,
+    "pause": 0.45,
+    "speak": "Todo empieza con dos Steves: Wozniak, un genio de la electrónica, y Jobs, cinco años menor. En mil novecientos setenta y uno leyeron algo increíble en una revista.",
+    "sub": "Todo empieza con dos Steves: Wozniak, un genio de la electrónica, y Jobs, cinco años menor. En 1971 leyeron algo increíble en una revista."
+  },
+  {
+    "id": "c1_02",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Vamos a la pizarra. En esa época, las centrales telefónicas se hablaban entre sí con sonidos.",
+    "sub": "Vamos a la pizarra. En esa época, las centrales telefónicas se hablaban entre sí con sonidos."
+  },
+  {
+    "id": "c1_03",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Un tono de dos mil seiscientos hercios quería decir: línea libre. Y un silbato de juguete, de regalo en una caja de cereales, hacía justo ese tono.",
+    "sub": "Un tono de 2600 Hz quería decir: línea libre. Y un silbato de juguete, de regalo en una caja de cereales, hacía justo ese tono."
+  },
+  {
+    "id": "c1_04",
+    "ch": 1,
+    "pause": 0.9,
+    "speak": "Si lo soplabas en el teléfono, la central te entregaba la línea. Y podías llamar a cualquier parte del mundo, gratis.",
+    "sub": "Si lo soplabas en el teléfono, la central te entregaba la línea. Y podías llamar a cualquier parte del mundo, gratis."
+  },
+  {
+    "id": "c1_05",
+    "ch": 1,
+    "pause": 0.5,
+    "speak": "La red telefónica más grande del mundo se engañaba con un juguete de cereal.",
+    "sub": "La red telefónica más grande del mundo se engañaba con un juguete de cereal."
+  },
+  {
+    "id": "c1_06",
+    "ch": 1,
+    "pause": 0.35,
+    "speak": "Wozniak armó una cajita azul que hacía esos tonos. Un día llamó al Vaticano y, con acento falso, dijo ser Henry Kissinger. Pidió hablar con el Papa.",
+    "sub": "Wozniak armó una cajita azul que hacía esos tonos. Un día llamó al Vaticano y, con acento falso, dijo ser Henry Kissinger. Pidió hablar con el Papa."
+  },
+  {
+    "id": "c1_07",
+    "ch": 1,
+    "pause": 0.9,
+    "speak": "Según contó Jobs, llegaron a mandar a alguien a despertar al Papa. Ahí les ganó la risa, y los descubrieron.",
+    "sub": "Según contó Jobs, llegaron a mandar a alguien a despertar al Papa. Ahí les ganó la risa, y los descubrieron."
+  },
+  {
+    "id": "c1_08",
+    "ch": 1,
+    "pause": 1.0,
+    "speak": "Jobs vendió unas doscientas cajas. Uno fabricaba y el otro vendía. Apple ya existía, aunque todavía no tenía nombre.",
+    "sub": "Jobs vendió unas doscientas cajas. Uno fabricaba y el otro vendía. Apple ya existía, aunque todavía no tenía nombre."
+  },
+  {
+    "id": "c2_00",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Capítulo dos. Dos Steves, un sueldo.",
+    "sub": "CAPÍTULO 2 — DOS STEVES, UN SUELDO"
+  },
+  {
+    "id": "c2_01",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "En mil novecientos setenta y cuatro, Jobs entró como técnico en Atari, la empresa de videojuegos de moda.",
+    "sub": "En 1974, Jobs entró como técnico en Atari, la empresa de videojuegos de moda."
+  },
+  {
+    "id": "c2_02",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Tenía una teoría: como comía casi solo fruta, no necesitaba bañarse seguido. Sus compañeros no opinaban lo mismo.",
+    "sub": "Tenía una teoría: como comía casi solo fruta, no necesitaba bañarse seguido. Sus compañeros no opinaban lo mismo."
+  },
+  {
+    "id": "c2_03",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Atari lo pasó al turno noche. Su fundador, Nolan Bushnell, contó después que así ganaba algo: Wozniak venía de noche a ayudarlo. Dos Steves por el precio de uno.",
+    "sub": "Atari lo pasó al turno noche. Su fundador, Nolan Bushnell, contó después que así ganaba algo: Wozniak venía de noche a ayudarlo. Dos Steves por el precio de uno."
+  },
+  {
+    "id": "c2_04",
+    "ch": 2,
+    "pause": 0.35,
+    "speak": "Atari le encargó a Jobs un juego con pocos chips: Breakout. Wozniak lo diseñó en cuatro noches, casi sin dormir.",
+    "sub": "Atari le encargó a Jobs un juego con pocos chips: Breakout. Wozniak lo diseñó en cuatro noches, casi sin dormir."
+  },
+  {
+    "id": "c2_05",
+    "ch": 2,
+    "pause": 0.9,
+    "speak": "Jobs le dijo que les habían pagado setecientos dólares, y le dio la mitad. Según Wozniak, el premio real era de unos cinco mil.",
+    "sub": "Jobs le dijo que les habían pagado 700 dólares, y le dio la mitad. Según Wozniak, el premio real era de unos 5.000."
+  },
+  {
+    "id": "c2_06",
+    "ch": 2,
+    "pause": 1.0,
+    "speak": "Se enteró unos diez años después, leyendo un libro. Contó que lloró. Y que, si Jobs le hubiera pedido el dinero, se lo habría dado.",
+    "sub": "Se enteró unos diez años después, leyendo un libro. Contó que lloró. Y que, si Jobs le hubiera pedido el dinero, se lo habría dado."
+  },
+  {
+    "id": "c3_00",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Capítulo tres. Un día de bromas.",
+    "sub": "CAPÍTULO 3 — UN DÍA DE BROMAS"
+  },
+  {
+    "id": "c3_01",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Apple se fundó el primero de abril de mil novecientos setenta y seis. En Estados Unidos, el día de las bromas.",
+    "sub": "Apple se fundó el 1 de abril de 1976. En Estados Unidos, el día de las bromas."
+  },
+  {
+    "id": "c3_02",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Eran tres socios. El tercero, Ronald Wayne, de cuarenta y un años, tenía el diez por ciento. Dibujó el primer logo: Isaac Newton leyendo bajo un manzano.",
+    "sub": "Eran tres socios. El tercero, Ronald Wayne, de 41 años, tenía el 10 %. Dibujó el primer logo: Isaac Newton leyendo bajo un manzano."
+  },
+  {
+    "id": "c3_03",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "A los doce días, asustado por las deudas, vendió su parte en ochocientos dólares. Siempre dijo que no se arrepentía.",
+    "sub": "A los doce días, asustado por las deudas, vendió su parte en 800 dólares. Siempre dijo que no se arrepentía."
+  },
+  {
+    "id": "c3_04",
+    "ch": 3,
+    "pause": 0.35,
+    "speak": "Una tienda les había pedido cincuenta computadoras. Para comprar las piezas, Jobs vendió su camioneta y Wozniak, su calculadora.",
+    "sub": "Una tienda les había pedido 50 computadoras. Para comprar las piezas, Jobs vendió su camioneta y Wozniak, su calculadora."
+  },
+  {
+    "id": "c3_05",
+    "ch": 3,
+    "pause": 0.9,
+    "speak": "El precio de venta: seiscientos sesenta y seis dólares con sesenta y seis centavos. Más de uno vio el número del diablo.",
+    "sub": "El precio de venta: 666,66 dólares. Más de uno vio el número del diablo."
+  },
+  {
+    "id": "c3_06",
+    "ch": 3,
+    "pause": 1.0,
+    "speak": "No había nada satánico. A Wozniak le gustaban los números repetidos.",
+    "sub": "No había nada satánico. A Wozniak le gustaban los números repetidos."
+  },
+  {
+    "id": "c4_00",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Capítulo cuatro. La computadora que no existía.",
+    "sub": "CAPÍTULO 4 — LA COMPUTADORA QUE NO EXISTÍA"
+  },
+  {
+    "id": "c4_01",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "En mil novecientos setenta y siete, en una gran feria de computadoras de San Francisco, Apple presentó la Apple dos.",
+    "sub": "En 1977, en una gran feria de computadoras de San Francisco, Apple presentó la Apple II."
+  },
+  {
+    "id": "c4_02",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Y Wozniak, en secreto, repartió miles de folletos de una computadora espectacular: la Zaltair. No existía. Era una parodia de la Altair, la más famosa de la época.",
+    "sub": "Y Wozniak, en secreto, repartió miles de folletos de una computadora espectacular: la Zaltair. No existía. Era una parodia de la Altair, la más famosa de la época."
+  },
+  {
+    "id": "c4_03",
+    "ch": 4,
+    "pause": 0.45,
+    "speak": "Jobs se la creyó. Comparó la tabla y quedó orgulloso: la Apple dos salía bien parada. Wozniak le contó la verdad años después.",
+    "sub": "Jobs se la creyó. Comparó la tabla y quedó orgulloso: la Apple II salía bien parada. Wozniak le contó la verdad años después."
+  },
+  {
+    "id": "c4_04",
+    "ch": 4,
+    "pause": 0.35,
+    "speak": "Otras sorpresas no fueron a propósito. En mil novecientos ochenta salió la Apple tres, sin ventilador, como quería Jobs. Con el calor, los chips se salían de sus zócalos.",
+    "sub": "Otras sorpresas no fueron a propósito. En 1980 salió la Apple III, sin ventilador, como quería Jobs. Con el calor, los chips se salían de sus zócalos."
+  },
+  {
+    "id": "c4_05",
+    "ch": 4,
+    "pause": 0.9,
+    "speak": "Según relatos de la época, a algunos clientes les aconsejaron levantarla unos centímetros y dejarla caer. Así los chips volvían a su lugar.",
+    "sub": "Según relatos de la época, a algunos clientes les aconsejaron levantarla unos centímetros y dejarla caer. Así los chips volvían a su lugar."
+  },
+  {
+    "id": "c4_06",
+    "ch": 4,
+    "pause": 1.0,
+    "speak": "El soporte técnico cabía en una sola palabra: suéltala.",
+    "sub": "El soporte técnico cabía en una sola palabra: suéltala."
+  },
+  {
+    "id": "c5_00",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Capítulo cinco. Mejor ser pirata.",
+    "sub": "CAPÍTULO 5 — MEJOR SER PIRATA"
+  },
+  {
+    "id": "c5_01",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "Para que Apple no se volviera burocrática, Jobs repetía una frase: es mejor ser pirata que alistarse en la marina.",
+    "sub": "Para que Apple no se volviera burocrática, Jobs repetía una frase: es mejor ser pirata que alistarse en la marina."
+  },
+  {
+    "id": "c5_02",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "El equipo de la Macintosh cosió una bandera pirata y la subió al techo. El equipo rival, el de la computadora Lisa, se la robó y pidió rescate.",
+    "sub": "El equipo de la Macintosh cosió una bandera pirata y la subió al techo. El equipo rival, el de la computadora Lisa, se la robó y pidió rescate."
+  },
+  {
+    "id": "c5_03",
+    "ch": 5,
+    "pause": 0.45,
+    "speak": "En su presentación, en mil novecientos ochenta y cuatro, la Macintosh habló sola. Y se burló de las computadoras gigantes: nunca confíes en una computadora que no puedas levantar.",
+    "sub": "En su presentación, en 1984, la Macintosh habló sola. Y se burló de las computadoras gigantes: nunca confíes en una computadora que no puedas levantar."
+  },
+  {
+    "id": "c5_04",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "¿Quién dibujó lo que se veía en esa pantalla? Susan Kare. Vamos a la pizarra, que esto a este canal le toca de cerca.",
+    "sub": "¿Quién dibujó lo que se veía en esa pantalla? Susan Kare. Vamos a la pizarra, que esto a este canal le toca de cerca."
+  },
+  {
+    "id": "c5_05",
+    "ch": 5,
+    "pause": 0.35,
+    "speak": "La pantalla era una grilla de puntitos, blancos o negros. Un ícono ocupaba treinta y dos por treinta y dos: mil veinticuatro cuadraditos.",
+    "sub": "La pantalla era una grilla de puntitos, blancos o negros. Un ícono ocupaba 32 por 32: 1.024 cuadraditos."
+  },
+  {
+    "id": "c5_06",
+    "ch": 5,
+    "pause": 0.9,
+    "speak": "Kare no tenía computadora para diseñar. Compró un cuaderno cuadriculado de dos dólares y medio y pintó cada ícono, cuadrito por cuadrito.",
+    "sub": "Kare no tenía computadora para diseñar. Compró un cuaderno cuadriculado de dos dólares y medio y pintó cada ícono, cuadrito por cuadrito."
+  },
+  {
+    "id": "c5_07",
+    "ch": 5,
+    "pause": 1.0,
+    "speak": "Los íconos más famosos de su época eran pixel art. Y se dibujaron con lápiz.",
+    "sub": "Los íconos más famosos de su época eran pixel art. Y se dibujaron con lápiz."
+  },
+  {
+    "id": "c6_00",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Capítulo seis. Así que demándame.",
+    "sub": "CAPÍTULO 6 — ASÍ QUE DEMÁNDAME"
+  },
+  {
+    "id": "c6_01",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "En mil novecientos ochenta y cinco, tras una pelea con el directorio, Jobs se fue de su propia empresa. Fundó otra, NeXT, y pagó cien mil dólares por el logo.",
+    "sub": "En 1985, tras una pelea con el directorio, Jobs se fue de su propia empresa. Fundó otra, NeXT, y pagó 100.000 dólares por el logo."
+  },
+  {
+    "id": "c6_02",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Apple tenía otro problema: la empresa de los Beatles también se llamaba Apple. Para evitar juicios, prometió no meterse en la música.",
+    "sub": "Apple tenía otro problema: la empresa de los Beatles también se llamaba Apple. Para evitar juicios, prometió no meterse en la música."
+  },
+  {
+    "id": "c6_03",
+    "ch": 6,
+    "pause": 0.35,
+    "speak": "Pero las computadoras sonaban cada vez más. En mil novecientos ochenta y nueve hubo otra demanda, y los abogados revisaban hasta los nombres de los sonidos del sistema.",
+    "sub": "Pero las computadoras sonaban cada vez más. En 1989 hubo otra demanda, y los abogados revisaban hasta los nombres de los sonidos del sistema."
+  },
+  {
+    "id": "c6_04",
+    "ch": 6,
+    "pause": 0.9,
+    "speak": "Al ingeniero Jim Reekes le dijeron que un nombre suyo no pasaría el control legal. Respondió en inglés: so sue me. Así que demándame. Y bautizó el sonido Sosumi.",
+    "sub": "Al ingeniero Jim Reekes le dijeron que un nombre suyo no pasaría el control legal. Respondió en inglés: «so sue me» (así que demándame). Y bautizó el sonido Sosumi."
+  },
+  {
+    "id": "c6_05",
+    "ch": 6,
+    "pause": 1.0,
+    "speak": "Los abogados lo aprobaron sin darse cuenta. Más de treinta años después, ese chiste sigue sonando en las Mac.",
+    "sub": "Los abogados lo aprobaron sin darse cuenta. Más de treinta años después, ese chiste sigue sonando en las Mac."
+  },
+  {
+    "id": "c7_00",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Capítulo siete. Un dólar al año.",
+    "sub": "CAPÍTULO 7 — UN DÓLAR AL AÑO"
+  },
+  {
+    "id": "c7_01",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Sin Jobs, a Apple le fue cada vez peor. A mediados de los noventa estaba al borde de la quiebra.",
+    "sub": "Sin Jobs, a Apple le fue cada vez peor. A mediados de los noventa estaba al borde de la quiebra."
+  },
+  {
+    "id": "c7_02",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Compró NeXT para conseguir un sistema operativo, y con la empresa volvió Jobs. Pidió un sueldo de un dólar al año.",
+    "sub": "Compró NeXT para conseguir un sistema operativo, y con la empresa volvió Jobs. Pidió un sueldo de un dólar al año."
+  },
+  {
+    "id": "c7_03",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "En mil novecientos noventa y siete anunció que Microsoft, el gran rival, invertía ciento cincuenta millones en Apple. Bill Gates apareció en una pantalla gigante, y el público lo abucheó.",
+    "sub": "En 1997 anunció que Microsoft, el gran rival, invertía 150 millones en Apple. Bill Gates apareció en una pantalla gigante, y el público lo abucheó."
+  },
+  {
+    "id": "c7_04",
+    "ch": 7,
+    "pause": 0.35,
+    "speak": "Jobs también tenía sus mañas. Su auto plateado nunca llevaba placa.",
+    "sub": "Jobs también tenía sus mañas. Su auto plateado nunca llevaba placa."
+  },
+  {
+    "id": "c7_05",
+    "ch": 7,
+    "pause": 0.9,
+    "speak": "Según un ex jefe de seguridad de Apple, la ley daba un plazo para ponerle placa a un auto nuevo. Jobs alquilaba uno idéntico cada seis meses.",
+    "sub": "Según un ex jefe de seguridad de Apple, la ley daba un plazo para ponerle placa a un auto nuevo. Jobs alquilaba uno idéntico cada seis meses."
+  },
+  {
+    "id": "c7_06",
+    "ch": 7,
+    "pause": 1.0,
+    "speak": "Las autoridades de tránsito de California dijeron que no era tan así. Lo seguro es que había salvado a Apple. Y que la placa nunca apareció.",
+    "sub": "Las autoridades de tránsito de California dijeron que no era tan así. Lo seguro es que había salvado a Apple. Y que la placa nunca apareció."
+  },
+  {
+    "id": "c8_00",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Capítulo ocho. Cuatro mil lattes.",
+    "sub": "CAPÍTULO 8 — CUATRO MIL LATTES"
+  },
+  {
+    "id": "c8_01",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Enero de dos mil siete. Jobs presenta el iPhone. El público no sabía que el prototipo apenas funcionaba.",
+    "sub": "Enero de 2007. Jobs presenta el iPhone. El público no sabía que el prototipo apenas funcionaba."
+  },
+  {
+    "id": "c8_02",
+    "ch": 8,
+    "pause": 0.45,
+    "speak": "Se colgaba y perdía señal, así que las rayitas estaban programadas para mostrar siempre cinco. Y en la quinta fila, los ingenieros se pasaban una petaca de whisky.",
+    "sub": "Se colgaba y perdía señal, así que las rayitas estaban programadas para mostrar siempre cinco. Y en la quinta fila, los ingenieros se pasaban una petaca de whisky."
+  },
+  {
+    "id": "c8_03",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Vamos a la pizarra. Imagina la memoria del teléfono como un vaso.",
+    "sub": "Vamos a la pizarra. Imagina la memoria del teléfono como un vaso."
+  },
+  {
+    "id": "c8_04",
+    "ch": 8,
+    "pause": 0.35,
+    "speak": "Cada programa abierto le echa agua. Los programas sin terminar no la devolvían, y cuando el vaso rebalsaba, el teléfono se colgaba.",
+    "sub": "Cada programa abierto le echa agua. Los programas sin terminar no la devolvían, y cuando el vaso rebalsaba, el teléfono se colgaba."
+  },
+  {
+    "id": "c8_05",
+    "ch": 8,
+    "pause": 0.9,
+    "speak": "Si mandabas un correo y después navegabas, funcionaba. Al revés, se colgaba. Así que armaron un recorrido exacto: el camino dorado.",
+    "sub": "Si mandabas un correo y después navegabas, funcionaba. Al revés, se colgaba. Así que armaron un recorrido exacto: el camino dorado."
+  },
+  {
+    "id": "c8_06",
+    "ch": 8,
+    "pause": 0.5,
+    "speak": "El iPhone funcionaba, siempre que nadie se saliera del guion.",
+    "sub": "El iPhone funcionaba, siempre que nadie se saliera del guion."
+  },
+  {
+    "id": "c8_07",
+    "ch": 8,
+    "pause": 0.9,
+    "speak": "Para mostrar los mapas, Jobs llamó en vivo a una cafetería de Starbucks. Pidió cuatro mil lattes para llevar, y colgó: número equivocado.",
+    "sub": "Para mostrar los mapas, Jobs llamó en vivo a una cafetería de Starbucks. Pidió cuatro mil lattes para llevar, y colgó: número equivocado."
+  },
+  {
+    "id": "c8_08",
+    "ch": 8,
+    "pause": 1.0,
+    "speak": "La primera llamada pública de un iPhone fue una broma telefónica. Como en los tiempos del Vaticano.",
+    "sub": "La primera llamada pública de un iPhone fue una broma telefónica. Como en los tiempos del Vaticano."
+  },
+  {
+    "id": "c9_00",
+    "ch": 9,
+    "pause": 0.35,
+    "speak": "Capítulo nueve. ¿Pirata o marina?",
+    "sub": "CAPÍTULO 9 — ¿PIRATA O MARINA?"
+  },
+  {
+    "id": "c9_01",
+    "ch": 9,
+    "pause": 0.35,
+    "speak": "Jobs murió en dos mil once, a los cincuenta y seis años. Tim Cook dirigió Apple los quince años siguientes.",
+    "sub": "Jobs murió en 2011, a los 56 años. Tim Cook dirigió Apple los quince años siguientes."
+  },
+  {
+    "id": "c9_02",
+    "ch": 9,
+    "pause": 0.35,
+    "speak": "Para los cincuenta años de Apple, en dos mil veintiséis, tocó en su sede Paul McCartney. Un Beatle, tras casi treinta años de juicios por el nombre.",
+    "sub": "Para los 50 años de Apple, en 2026, tocó en su sede Paul McCartney. Un Beatle, tras casi treinta años de juicios por el nombre."
+  },
+  {
+    "id": "c9_03",
+    "ch": 9,
+    "pause": 0.35,
+    "speak": "Ese año asumió un nuevo jefe, el ingeniero John Ternus. Y Apple lanzó su primer iPhone plegable.",
+    "sub": "Ese año asumió un nuevo jefe, el ingeniero John Ternus. Y Apple lanzó su primer iPhone plegable."
+  },
+  {
+    "id": "c9_04",
+    "ch": 9,
+    "pause": 0.35,
+    "speak": "Hoy vale alrededor de cinco billones de dólares. Se pelea con NVIDIA el título de empresa más valiosa del mundo.",
+    "sub": "Hoy vale alrededor de cinco billones de dólares. Se pelea con NVIDIA el título de empresa más valiosa del mundo."
+  },
+  {
+    "id": "c9_05",
+    "ch": 9,
+    "pause": 0.9,
+    "speak": "Jobs prefería a los piratas. Pero Apple ya es una de las marinas más grandes del planeta.",
+    "sub": "Jobs prefería a los piratas. Pero Apple ya es una de las marinas más grandes del planeta."
+  },
+  {
+    "id": "c9_06",
+    "ch": 9,
+    "pause": 0.95,
+    "speak": "La pregunta es si todavía le queda algo de pirata.",
+    "sub": "La pregunta es si todavía le queda algo de pirata."
+  },
+  {
+    "id": "c9_07",
+    "ch": 9,
+    "pause": 1.1,
+    "speak": "¿Y tú qué opinas? ¿Qué otra historia te gustaría ver en el próximo episodio? Déjalo abajo en los comentarios.",
+    "sub": "¿Y tú qué opinas? ¿Qué otra historia te gustaría ver en el próximo episodio? Déjalo abajo en los comentarios."
+  }
+]
