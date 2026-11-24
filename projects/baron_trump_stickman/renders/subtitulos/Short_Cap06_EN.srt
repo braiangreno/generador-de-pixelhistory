@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:02,919
+Chapter 6: Traveling to the Future
+
+2
+00:00:03,269 --> 00:00:09,808
+Now, the real question. Can you travel in time? To the future, yes. Just a little bit.
+
+3
+00:00:10,258 --> 00:00:16,335
+To the chalkboard. Over a hundred years ago, Einstein showed that time doesn't pass the same for everyone.
+
+4
+00:00:16,535 --> 00:00:24,381
+The faster you move, the slower your time passes compared to someone standing still. It's called time dilation.
+
+5
+00:00:24,581 --> 00:00:32,196
+An astronaut spends six months on the Space Station. They return about five milliseconds younger than if they had stayed.
+
+6
+00:00:32,396 --> 00:00:43,396
+NASA saw it with twin astronauts. Scott Kelly spent nearly a year in space, while his brother Mark stayed on Earth. Scott came back a few milliseconds younger.
+
+7
+00:00:43,596 --> 00:00:52,519
+Sounds like a joke, but it's real. GPS satellites correct their clocks for this. Otherwise, your map would be off by miles.
+
+8
+00:00:53,469 --> 00:00:57,239
+We all travel to the future. At one second per second.
