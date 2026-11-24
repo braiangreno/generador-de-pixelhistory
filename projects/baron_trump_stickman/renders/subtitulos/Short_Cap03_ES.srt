@@ -1,0 +1,31 @@
+1
+00:00:00,150 --> 00:00:02,996
+Capítulo 3: Millones de libros
+
+2
+00:00:03,346 --> 00:00:09,115
+Igual, ¿cómo puede un libro de 1893 acertar tanto? Vamos a la pizarra.
+
+3
+00:00:09,565 --> 00:00:19,411
+Una pregunta. En una sala con 23 personas, ¿qué tan probable es que dos cumplan años el mismo día? Parece poquísimo. Es más de la mitad.
+
+4
+00:00:19,611 --> 00:00:26,842
+Porque no comparas una persona con otra. Comparas todas con todas. Son 253 parejas posibles.
+
+5
+00:00:27,042 --> 00:00:35,350
+Ahora piensa en todos los libros del siglo XIX. Miles de personajes con nombres raros. Y millones de personas buscando parecidos.
+
+6
+00:00:35,550 --> 00:00:45,242
+Pasa lo mismo con Los Simpson. En un episodio del año 2000, Lisa es presidenta y hereda los problemas de un presidente Trump. Era un chiste sobre algo absurdo.
+
+7
+00:00:45,442 --> 00:00:53,134
+Con tantas combinaciones, lo raro sería no encontrar ninguna. Y si dibujas el blanco después de tirar la flecha, siempre aciertas.
+
+8
+00:00:54,084 --> 00:00:57,238
+Entre millones de libros, alguno tenía que acertar.
